@@ -357,6 +357,62 @@ async def scene4_with_data(request: Request):
 
 
 # ---------------------------------------------------------------------------
+# Scene 5 — Business Transition Summary
+# ---------------------------------------------------------------------------
+@app.get("/api/scene5/bridge")
+async def scene5_bridge():
+    unresolved_rows = await query("""
+        SELECT COUNT(*) AS CNT
+        FROM CC_INTERACTIONS
+        WHERE CUSTOMER_ID = 'CUST-001'
+          AND OUTCOME IN ('unresolved', 'partial')
+    """)
+    verified_memory_rows = await query("""
+        SELECT COUNT(*) AS CNT
+        FROM CC_MEMORY
+        WHERE CUSTOMER_ID = 'CUST-001'
+          AND IS_VERIFIED = 'Y'
+    """)
+    official_policy_rows = await query("""
+        SELECT COUNT(*) AS CNT
+        FROM CC_POLICIES
+        WHERE ACTIVE = 'Y'
+          AND IS_OFFICIAL = 'Y'
+    """)
+    pending_review_rows = await query("""
+        SELECT COUNT(*) AS CNT
+        FROM CC_WORKFLOW_LOG
+        WHERE STATUS = 'pending'
+    """)
+
+    unresolved = unresolved_rows[0]["CNT"] if unresolved_rows else 0
+    verified_memory = verified_memory_rows[0]["CNT"] if verified_memory_rows else 0
+    official_policies = official_policy_rows[0]["CNT"] if official_policy_rows else 0
+    pending_reviews = pending_review_rows[0]["CNT"] if pending_review_rows else 0
+
+    return {
+        "title": "From Grounded Answers to Governed Operations",
+        "summary": (
+            "The first four scenes show response quality improvements. "
+            "Scene 5 bridges that story to enterprise readiness by showing how "
+            "memory quality, policy coverage, and review queues affect outcomes."
+        ),
+        "metrics": {
+            "repeatCaseRisk": unresolved,
+            "verifiedMemoryRecords": verified_memory,
+            "officialPolicies": official_policies,
+            "pendingManagerReviews": pending_reviews
+        },
+        "highlights": [
+            "Grounded responses reduce incorrect policy advice.",
+            "Verified memory supports consistent follow-up decisions.",
+            "Human review queues catch higher-risk actions before execution."
+        ],
+        "nextStep": "Continue to Scene 6 to inspect how memory types shape decision quality."
+    }
+
+
+# ---------------------------------------------------------------------------
 # Scene 6 — The 4 Memory Types
 # ---------------------------------------------------------------------------
 @app.get("/api/scene6/memory-types")

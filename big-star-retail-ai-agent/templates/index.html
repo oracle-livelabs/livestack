@@ -102,6 +102,10 @@ main{flex:1;max-width:1200px;width:100%;margin:0 auto;padding:2rem 1.5rem}
 /* Sections hidden by default */
 .scene{display:none;animation:slideUp .4s ease}
 .scene.active{display:block}
+
+.oracle-corner-logo{position:fixed;right:16px;bottom:0;width:60px;height:60px;object-fit:contain;z-index:999;pointer-events:none;opacity:.95}
+@media (max-width:640px){.oracle-corner-logo{width:60px;height:60px;right:10px;bottom:0}}
+
 </style>
 </head>
 <body>
@@ -114,11 +118,14 @@ main{flex:1;max-width:1200px;width:100%;margin:0 auto;padding:2rem 1.5rem}
     <a class="nav-link" href="#scene2" onclick="go('scene2')">2: Planning</a>
     <a class="nav-link" href="#scene3" onclick="go('scene3')">3: Memory</a>
     <a class="nav-link" href="#scene4" onclick="go('scene4')">4: Grounding</a>
+    <a class="nav-link" href="#scene5" onclick="go('scene5')">5: Bridge</a>
     <a class="nav-link" href="#scene6" onclick="go('scene6')">6: Types</a>
     <a class="nav-link" href="#scene7" onclick="go('scene7')">7: Governance</a>
     <a class="nav-link" href="#scene8" onclick="go('scene8')">8: Trace</a>
     <a class="nav-link" href="#scene9" onclick="go('scene9')">9: Dashboard</a>
     <a class="nav-link" href="#scene10" onclick="go('scene10')">10: Isolation</a>
+    <a class="nav-link" href="#scene11" onclick="go('scene11')">11: Architecture</a>
+    <a class="nav-link" href="#conclusion" onclick="go('conclusion')">Conclusion</a>
   </div>
 </nav>
 
@@ -165,6 +172,13 @@ main{flex:1;max-width:1200px;width:100%;margin:0 auto;padding:2rem 1.5rem}
 <div class="panels panels-2"><div class="card"><h3>⚠️ Generic LLM</h3><div id="s4-without"><p style="color:var(--muted)">Click "Run Without Data"</p></div></div><div class="card"><h3>✅ Grounded Agent</h3><div id="s4-with"><p style="color:var(--muted)">Click "Run With Data"</p></div></div></div>
 </section>
 
+<!-- SCENE 5 -->
+<section id="scene5" class="scene">
+<div class="scene-header"><h1>Scene 5: Business Transition Brief</h1><p>Bridge from answer quality to operational readiness before memory architecture and governance deep dive.</p></div>
+<div class="scene-actions"><button class="btn-primary" onclick="runScene5()">Load Transition Brief</button><button class="btn-secondary" onclick="resetScene('s5')">Reset</button></div>
+<div id="s5-brief"></div>
+</section>
+
 <!-- SCENE 6 -->
 <section id="scene6" class="scene">
 <div class="scene-header"><h1>Scene 6: The 4 Memory Types</h1><p>Elena's case mapped across sensory, working, episodic, semantic, and procedural memory.</p></div>
@@ -209,6 +223,20 @@ main{flex:1;max-width:1200px;width:100%;margin:0 auto;padding:2rem 1.5rem}
 </div>
 <div class="panels panels-3" id="s10-panels"></div>
 </section>
+
+<!-- SCENE 11 -->
+<section id="scene11" class="scene">
+<div class="scene-header"><h1>Scene 11: Architecture</h1><p>The production agent stack in four layers — planner, memory, tools, and governor — shown through Elena's case.</p></div>
+<div class="scene-actions"><button class="btn-primary" onclick="runScene11()">Load Architecture</button><button class="btn-secondary" onclick="resetScene('s11')">Reset</button></div>
+<div id="s11-content"></div>
+</section>
+
+<!-- CONCLUSION -->
+<section id="conclusion" class="scene">
+<div class="scene-header"><h1>Conclusion: From Escalations to Trusted Operations</h1><p>How memory, grounding, and governance changed the business outcome for Elena and reduced manual effort for Marcus.</p></div>
+<div class="scene-actions"><button class="btn-primary" onclick="runConclusion()">Load Conclusion</button><button class="btn-secondary" onclick="resetScene('conclusion')">Reset</button></div>
+<div id="conclusion-content"></div>
+</section>
 </main>
 </div>
 
@@ -223,8 +251,8 @@ main{flex:1;max-width:1200px;width:100%;margin:0 auto;padding:2rem 1.5rem}
 // =========================================================================
 // Navigation & State
 // =========================================================================
-const SCENES=['home','scene1','scene2','scene3','scene4','scene6','scene7','scene8','scene9','scene10'];
-const CUES={home:'Welcome! Set the stage — Marcus Webb, Big Star Collectibles.',scene1:'Demo the chatbot failure first, then the agent.',scene2:'Show the plan appearing step by step.',scene3:'Load the 3 sessions first. Then try with memory.',scene4:'Run without data first to show hallucination.',scene6:'Load all memory types. Walk through each quadrant.',scene7:'Run ungoverned first (scary!), then governed.',scene8:'Click View Trace. Steps appear one by one.',scene9:'Load dashboard. Walk through Green→Yellow→Red.',scene10:'Access support first, then try logistics (denied).'};
+const SCENES=['home','scene1','scene2','scene3','scene4','scene5','scene6','scene7','scene8','scene9','scene10','scene11','conclusion'];
+const CUES={home:'Welcome! Set the stage — Marcus Webb, Big Star Collectibles.',scene1:'Demo the chatbot failure first, then the agent.',scene2:'Show the plan appearing step by step.',scene3:'Load the 3 sessions first. Then try with memory.',scene4:'Run without data first to show hallucination.',scene5:'Use this bridge to connect response quality with operational readiness.',scene6:'Load all memory types. Walk through each quadrant.',scene7:'Run ungoverned first (scary!), then governed.',scene8:'Click View Trace. Steps appear one by one.',scene9:'Load dashboard. Walk through Green→Yellow→Red.',scene10:'Access support first, then try logistics (denied).',scene11:'Explain the 4-layer architecture, then run Elena through all layers.',conclusion:'Close with business outcomes: fewer repeats, faster approvals, higher trust.'};
 let current='home';
 let s2ExecutionSteps=[];
 
@@ -309,11 +337,14 @@ const chapters=[
   {id:'scene2',num:'Scene 2',title:'Agent Planning',desc:'Goal decomposition and step-by-step execution.'},
   {id:'scene3',num:'Scene 3',title:'The Forgetting Problem',desc:'Three sessions, zero memory — until now.'},
   {id:'scene4',num:'Scene 4',title:'Hallucination vs Data',desc:'Generic guesses vs enterprise-grounded answers.'},
+  {id:'scene5',num:'Scene 5',title:'Business Transition Brief',desc:'Connect response quality to operational readiness.'},
   {id:'scene6',num:'Scene 6',title:'Memory Types',desc:'Sensory, working, episodic, semantic, procedural.'},
   {id:'scene7',num:'Scene 7',title:'Governed Writes',desc:'Poisoned memory vs validated writes.'},
   {id:'scene8',num:'Scene 8',title:'Decision Trace',desc:'Full reasoning audit for a $400 refund.'},
   {id:'scene9',num:'Scene 9',title:'Approval Dashboard',desc:'Green, yellow, red — Marcus decides.'},
   {id:'scene10',num:'Scene 10',title:'Namespace Isolation',desc:'Validation, isolation, auto-expiry.'},
+  {id:'scene11',num:'Scene 11',title:'Architecture',desc:'Four-layer production blueprint for trusted agents.'},
+  {id:'conclusion',num:'Conclusion',title:'Business Outcome',desc:'Before vs after impact for operations and customers.'},
 ];
 document.getElementById('chapters').innerHTML=chapters.map(c=>`<div class="card chapter-card" onclick="go('${c.id}')"><div class="ch-num">${c.num}</div><h3>${c.title}</h3><p style="color:var(--muted);font-size:.85rem">${c.desc}</p></div>`).join('');
 
@@ -389,6 +420,15 @@ async function runScene4(type){
     if(d.problem)html+=`<div style="margin-top:.75rem;background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.3);border-radius:8px;padding:.75rem;font-size:.8rem;color:var(--red)">⚠ ${d.problem}</div>`;
     html+=`<div style="margin-top:.5rem"><span class="badge ${d.isGrounded?'badge-green':'badge-red'}">${d.isGrounded?'Grounded':'Ungrounded'}</span></div>`;
     el.innerHTML=html;
+  }catch(e){el.innerHTML=`<p style="color:var(--red)">Error: ${e.message}</p>`;}
+}
+
+async function runScene5(){
+  const el=document.getElementById('s5-brief');loading(el);
+  try{const d=await api('GET','/api/scene5/bridge');
+    const m=d.metrics||{};
+    const highlights=(d.highlights||[]).map(h=>`<li style="margin-bottom:.35rem">${h}</li>`).join('');
+    el.innerHTML=`<div class="card"><h3>${d.title||'Business Transition Brief'}</h3><p style="margin-bottom:1rem">${d.summary||''}</p><div class="panels panels-2"><div><div class="step"><div class="step-num">1</div><div class="step-content"><div class="step-label">Repeat Case Risk</div><div class="step-detail">${m.repeatCaseRisk??0}</div></div></div><div class="step"><div class="step-num">2</div><div class="step-content"><div class="step-label">Verified Memory Records</div><div class="step-detail">${m.verifiedMemoryRecords??0}</div></div></div></div><div><div class="step"><div class="step-num">3</div><div class="step-content"><div class="step-label">Official Policies</div><div class="step-detail">${m.officialPolicies??0}</div></div></div><div class="step"><div class="step-num">4</div><div class="step-content"><div class="step-label">Pending Manager Reviews</div><div class="step-detail">${m.pendingManagerReviews??0}</div></div></div></div></div><div class="response" style="margin-top:1rem"><strong>What to notice</strong><ul style="margin: .6rem 0 0 1rem">${highlights}</ul></div><div style="margin-top:.75rem"><span class="badge badge-blue">${d.nextStep||''}</span></div></div>`;
   }catch(e){el.innerHTML=`<p style="color:var(--red)">Error: ${e.message}</p>`;}
 }
 
@@ -469,6 +509,58 @@ async function runScene10(ns){
     el.innerHTML=html;
   }catch(e){el.innerHTML=`<p style="color:var(--red)">Error: ${e.message}</p>`;}
 }
+
+async function runScene11(){
+  const el=document.getElementById('s11-content');
+  loading(el);
+  const layers=[
+    {num:1,name:'LLM Core',focus:'Planner and reasoner',detail:"Breaks Elena's claim into a clear action plan before execution.",color:'var(--accent)'},
+    {num:2,name:'Memory Core',focus:'Episodic, semantic, procedural, working',detail:"Retrieves Elena's prior sessions, policy context, and verified case facts.",color:'var(--blue)'},
+    {num:3,name:'Toolset',focus:'Order, policy, and workflow checks',detail:'Confirms current order state, applicable exceptions, and execution readiness.',color:'var(--gold)'},
+    {num:4,name:'Governor',focus:'Validation, audit, human escalation',detail:'Applies thresholds, records decisions, and routes high-value actions to Marcus.',color:'var(--green)'}
+  ];
+  const flow=[
+    'Goal received: missing $400 vinyl case with police report on file.',
+    'Plan created: identify customer, verify order, validate exception, propose action.',
+    'Memory loaded: 3 prior sessions, VIP status, and policy exception evidence.',
+    'Tools executed: order status, policy retrieval, workflow routing.',
+    'Governance applied: refund threshold triggered human review.',
+    'Decision completed: Marcus approves with full trace and audit record.'
+  ];
+  let layersHtml='';
+  layers.forEach(l=>{
+    layersHtml+=`<div class="mem-card" style="border-color:${l.color}55"><h4 style="color:${l.color}">Layer ${l.num} — ${l.name}</h4><p style="font-size:.8rem;color:var(--muted);margin-bottom:.4rem">${l.focus}</p><p style="font-size:.85rem">${l.detail}</p></div>`;
+  });
+  const flowHtml=flow.map((f,i)=>`<div class="step"><div class="step-num">${i+1}</div><div class="step-content"><div class="step-label">${f}</div></div></div>`).join('');
+  el.innerHTML=`<div class="panels panels-2"><div><div class="card"><h3>Four-Layer Agent Architecture</h3><div class="mem-grid" style="grid-template-columns:1fr">${layersHtml}</div></div></div><div><div class="card"><h3>Elena's Case Through the Stack</h3>${flowHtml}<div class="response" style="margin-top:1rem"><strong>Business result:</strong> the same policies are enforced with faster decisions, clearer accountability, and better customer continuity.</div><div style="margin-top:.75rem"><button class="btn-primary" onclick="go('conclusion')">Go to Conclusion →</button></div></div></div></div>`;
+}
+
+async function runConclusion(){
+  const el=document.getElementById('conclusion-content');
+  loading(el);
+  const before=[
+    'Marcus spends 30-45 minutes rebuilding high-friction cases.',
+    'Customers repeat context across multiple contacts.',
+    'Policy exceptions are easy to miss without full case memory.'
+  ];
+  const after=[
+    "Agent retains Elena's full context across sessions.",
+    'Grounded policy checks reduce incorrect recommendations.',
+    'High-value actions route with traceability and human control.'
+  ];
+  let total='—',pending='—',refund='400',agent='47';
+  try{
+    const [trace,dash]=await Promise.all([api('GET','/api/scene8/trace'),api('GET','/api/scene9/dashboard')]);
+    total=dash.summary?.total ?? '—';
+    pending=dash.summary?.pending ?? '—';
+    refund=trace.caseHeader?.refundAmount ?? '400';
+    agent=trace.timings?.agentPrepSecs ?? '47';
+  }catch(_e){}
+  const beforeHtml=before.map(item=>`<li style="margin-bottom:.4rem">${item}</li>`).join('');
+  const afterHtml=after.map(item=>`<li style="margin-bottom:.4rem">${item}</li>`).join('');
+  el.innerHTML=`<div class="panels panels-2"><div class="card"><h3>Before</h3><ul style="margin-left:1rem;color:var(--muted)">${beforeHtml}</ul></div><div class="card" style="border-color:rgba(34,197,94,.4)"><h3 style="color:var(--green)">After</h3><ul style="margin-left:1rem">${afterHtml}</ul></div></div><div class="panels panels-3" style="margin-top:1rem"><div class="card"><h3>Workflow Queue</h3><p style="font-size:1.6rem;font-weight:800">${total}</p><p style="font-size:.8rem;color:var(--muted)">Total tracked approvals</p></div><div class="card"><h3>Pending Reviews</h3><p style="font-size:1.6rem;font-weight:800">${pending}</p><p style="font-size:.8rem;color:var(--muted)">Require human decision</p></div><div class="card"><h3>Agent Prep Time</h3><p style="font-size:1.6rem;font-weight:800">${agent}s</p><p style="font-size:.8rem;color:var(--muted)">$${refund} refund case readiness</p></div></div><div class="card" style="margin-top:1rem"><h3>Final Takeaway</h3><p>Scene 11 completes the story: trusted AI agents are not just model quality. They combine planning, memory, tools, and governance so teams move faster without giving up control.</p></div>`;
+}
 </script>
+<img class="oracle-corner-logo" src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/images/oracle-logo.png" alt="Oracle logo" loading="eager" decoding="async" />
 </body>
 </html>
