@@ -1,0 +1,70 @@
+{
+  "workshoptitle": "Big Star Memory Agent Workshop",
+  "help": "livelabs-help-database_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "filename": "../../introduction/introduction.md"
+    },
+    {
+      "title": "Get Started",
+      "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+    },
+    {
+      "title": "Scene 1: Chatbot vs Agent",
+      "filename": "../../scene-1-chatbot-vs-agent/scene-1-chatbot-vs-agent.md"
+    },
+    {
+      "title": "Scene 2: Agent Planning",
+      "filename": "../../scene-2-agent-planning/scene-2-agent-planning.md"
+    },
+    {
+      "title": "Scene 3: The Forgetting Problem",
+      "filename": "../../scene-3-forgetting-problem/scene-3-forgetting-problem.md"
+    },
+    {
+      "title": "Scene 4: Grounded Responses",
+      "filename": "../../scene-4-grounded-responses/scene-4-grounded-responses.md"
+    },
+    {
+      "title": "Scene 5: Business Transition Brief",
+      "filename": "../../scene-5-business-transition-brief/scene-5-business-transition-brief.md"
+    },
+    {
+      "title": "Scene 6: Memory Types",
+      "filename": "../../scene-6-memory-types/scene-6-memory-types.md"
+    },
+    {
+      "title": "Scene 7: Governed Memory Writes",
+      "filename": "../../scene-7-governed-memory-writes/scene-7-governed-memory-writes.md"
+    },
+    {
+      "title": "Scene 8: Decision Trace",
+      "filename": "../../scene-8-decision-trace/scene-8-decision-trace.md"
+    },
+    {
+      "title": "Scene 9: Approval Dashboard",
+      "filename": "../../scene-9-approval-dashboard/scene-9-approval-dashboard.md"
+    },
+    {
+      "title": "Scene 10: Lightweight Governance",
+      "filename": "../../scene-10-lightweight-governance/scene-10-lightweight-governance.md"
+    },
+    {
+      "title": "Scene 11: Architecture",
+      "filename": "../../scene-11-architecture/scene-11-architecture.md"
+    },
+    {
+      "title": "Conclusion: Business Outcomes",
+      "filename": "../../conclusion/conclusion.md"
+    },
+    {
+      "title": "Download the LiveStack",
+      "filename": "../../download-livestack/download-livestack.md"
+    },
+    {
+      "title": "Need Help?",
+      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+    }
+  ]
+}
