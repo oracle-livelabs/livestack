@@ -1,0 +1,42 @@
+{
+  "workshoptitle": "Seer Sporting Goods AI Vector Search LiveStack",
+  "help": "livelabs-help-database_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "filename": "../../introduction/introduction.md"
+    },
+    {
+      "title": "Access the Sandbox",
+      "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
+    },
+    {
+      "title": "Scene 1: Semantic Search",
+      "filename": "../../scene-1-semantic-search/scene-1-semantic-search.md"
+    },
+    {
+      "title": "Scene 2: Database X-Ray",
+      "filename": "../../scene-2-database-xray/scene-2-database-xray.md"
+    },
+    {
+      "title": "Scene 3: Semantic Cache",
+      "filename": "../../scene-3-semantic-cache/scene-3-semantic-cache.md"
+    },
+    {
+      "title": "Scene 4: Under The Hood",
+      "filename": "../../scene-4-under-the-hood/scene-4-under-the-hood.md"
+    },
+    {
+      "title": "Conclusion: Key Takeaways",
+      "filename": "../../conclusion/conclusion.md"
+    },
+    {
+      "title": "Run the LiveStack Yourself",
+      "filename": "../../download-livestack/download-livestack.md"
+    },
+    {
+      "title": "Need Help?",
+      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+    }
+  ]
+}

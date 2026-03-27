@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Seer Sporting Goods</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Georgia:ital@0;1&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="redwood-stripe" aria-hidden="true">
+        <span class="stripe-segment s1"></span>
+        <span class="stripe-segment s2"></span>
+        <span class="stripe-segment s3"></span>
+        <span class="stripe-segment s4"></span>
+        <span class="stripe-segment s5"></span>
+    </div>
+
+    <div class="hero">
+        <div class="hero-panel">
+            <h1>Seer Sporting Goods</h1>
+            <h3>Your database partner since 1977</h3>
+            <p class="hero-copy">Search the catalog with Oracle AI Vector Search. Use Database X-Ray to inspect the live Oracle AI Database path.</p>
+
+            <div id="productModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 id="modalTitle">Product Information</h2>
+                        <span class="close" onclick="closeModal()">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <div id="modalContent"></div>
+                    </div>
+                </div>
+            </div>
+
+            <form id="productSearchForm" method="POST" class="search-box mt-4">
+                <div class="search-shell">
+                    <input type="text" name="search" class="form-control" placeholder="Search for products..." value="{{ search_query }}">
+                    <input type="hidden" id="xraySearchFlag" name="xray" value="">
+                    <button type="submit" class="btn primary-redwood-btn">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    {% if products %}
+    <form id="buyForm" action="/buy" method="POST">
+        <div class="container product-section">
+            {% if search_query %}
+            <div class="section-heading">
+                <p class="section-kicker">Catalog Matches</p>
+                <h2>Recommended results for "{{ search_query }}"</h2>
+            </div>
+            {% endif %}
+            <div class="row justify-content-center g-4">
+                {% for product in products %}
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card product-card shadow-sm h-100">
+                        <img src="{{ url_for('static', filename='images/' + (product[0]|string) + '.jpeg') }}"
+                            class="card-img-top" alt="{{ product[1] }}">
+                        <div class="card-body product-card-body text-center">
+                            <div class="product-kicker">{{ product[2] }}</div>
+                            <h6 class="card-title" onclick='getProductInfo({{ product[1]|tojson }}, {{ product[1]|tojson }})'>{{ product[1] }}</h6>
+                            <p class="card-text product-price">${{ product[3] }}</p>
+                            <div class="form-check d-flex justify-content-center">
+                                <input class="form-check-input" type="checkbox" name="selected_products"
+                                    value="{{ product[0] }}" id="prod{{ loop.index }}">
+                                <label class="form-check-label ms-2" for="prod{{ loop.index }}">Select</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="text-center mt-4">
+                <button type="submit" class="btn primary-redwood-btn buy-button">Buy now!</button>
+            </div>
+        </div>
+    </form>
+    {% endif %}
+
+    <div class="footer">
+        <div class="footer-content">
+            <a href="https://www.oracle.com/database/free/" class="text-decoration-none">Powered by Oracle AI Database Free</a>
+            <span class="footer-separator" aria-hidden="true">|</span>
+            <a href="https://livelabs.oracle.com" class="text-decoration-none">Brought to you by Oracle LiveLabs</a>
+        </div>
+    </div>
+
+    <div class="bottom-brand-dock">
+        <div class="xray-toggle-wrap xray-brand-control">
+            <span class="xray-toggle-label">Database X-Ray</span>
+            <label class="xray-switch">
+                <input id="xrayToggle" type="checkbox" onchange="toggleXrayMode(this.checked)">
+                <span class="xray-slider"></span>
+            </label>
+        </div>
+        <a class="oracle-logo-badge" href="https://www.oracle.com/" target="_blank" rel="noopener noreferrer" aria-label="Oracle">
+            <img class="oracle-logo-mark" src="{{ url_for('static', filename='images/oracle-logo.png') }}" alt="Oracle logo">
+        </a>
+    </div>
+
+    <div id="xrayPopup" class="xray-panel xray-popup" style="display: none;"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const xrayProfile = {{ xray_profile|tojson }};
+        const initialXrayPayload = {{ initial_xray|tojson }};
+        const initialXrayEvent = {{ initial_xray_event|tojson }};
+        const serverXrayEnabled = {{ xray_enabled|tojson }};
+        const renderedProductCount = {{ products|length }};
+        const currentSearchQuery = {{ search_query|tojson }};
+
+        const XRAY_STORAGE_KEY = "simidemo.xrayMode";
+        const XRAY_PENDING_SEARCH_KEY = "simidemo.pendingSearch";
+        const xrayTerminalLines = [];
+        const XRAY_TERMINAL_MAX_LINES = 160;
+
+        let xrayMode = false;
+        let currentXrayEvent = null;
+
+        function showModal() {
+            document.getElementById("productModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("productModal").style.display = "none";
+            document.getElementById("modalContent").innerHTML = "";
+        }
+
+        window.onclick = function (event) {
+            const modal = document.getElementById("productModal");
+            if (event.target === modal) {
+                closeModal();
+            }
+        };
+
+        function truncateTerminalText(value, maxLen = 1400) {
+            const text = String(value ?? "");
+            return text.length <= maxLen ? text : `${text.slice(0, maxLen)}...<truncated>`;
+        }
+
+        function toTerminalJson(value, maxLen = 1800) {
+            try {
+                return truncateTerminalText(JSON.stringify(value, null, 2), maxLen);
+            } catch {
+                return truncateTerminalText(String(value), maxLen);
+            }
+        }
+
+        function escapeHtml(value) {
+            return String(value ?? "")
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#39;");
+        }
+
+        function renderXrayTerminal() {
+            const body = document.getElementById("xrayTerminalBody");
+            if (!body) {
+                return;
+            }
+
+            if (!xrayTerminalLines.length) {
+                body.textContent = "No activity yet. Run a search or open a product insight to capture Oracle AI Database activity.";
+                return;
+            }
+
+            body.textContent = xrayTerminalLines.join("\n\n");
+            body.scrollTop = body.scrollHeight;
+        }
+
+        function appendXrayTerminal(block) {
+            const text = String(block || "").trim();
+            if (!text) {
+                return;
+            }
+            xrayTerminalLines.push(text);
+            while (xrayTerminalLines.length > XRAY_TERMINAL_MAX_LINES) {
+                xrayTerminalLines.shift();
+            }
+            renderXrayTerminal();
+        }
+
+        function clearXrayTerminal() {
+            xrayTerminalLines.length = 0;
+            renderXrayTerminal();
+        }
+
+        async function copyXrayTerminal() {
+            const text = xrayTerminalLines.join("\n\n");
+            if (!text) {
+                return;
+            }
+            try {
+                await navigator.clipboard.writeText(text);
+                appendXrayTerminal(`[${new Date().toLocaleTimeString()}] Terminal copied to clipboard.`);
+            } catch {
+                appendXrayTerminal(`[${new Date().toLocaleTimeString()}] Clipboard copy failed.`);
+            }
+        }
+
+        function formatBackendXray(backendXray) {
+            if (!backendXray || !Array.isArray(backendXray.events)) {
+                return "BACKEND TRACE: (not captured for this request)";
+            }
+
+            const lines = [];
+            lines.push(`BACKEND TRACE (${backendXray.elapsed_ms || 0} ms)`);
+
+            backendXray.events.slice(0, 36).forEach((evt, idx) => {
+                const prefix = `  ${String(idx + 1).padStart(2, "0")}. ${evt.type || "event"}`;
+
+                if (evt.type === "db_query" || evt.type === "db_exec") {
+                    lines.push(prefix);
+                    lines.push(`      SQL: ${truncateTerminalText(evt.sql || "", 1500)}`);
+                    lines.push(`      BINDS: ${toTerminalJson(evt.binds || {}, 1200)}`);
+                    return;
+                }
+
+                if (evt.type === "db_result" || evt.type === "db_exec_result") {
+                    lines.push(`${prefix} row_count=${evt.row_count ?? 0}`);
+                    if (evt.preview) {
+                        lines.push(`      PREVIEW: ${toTerminalJson(evt.preview, 1200)}`);
+                    }
+                    return;
+                }
+
+                if (evt.type === "product_lookup") {
+                    lines.push(`${prefix} threshold=${evt.similarity_threshold ?? "n/a"}`);
+                    lines.push(`      PRODUCT: ${truncateTerminalText(evt.product_desc || "", 700)}`);
+                    return;
+                }
+
+                if (evt.type === "search_results") {
+                    lines.push(`${prefix} count=${evt.product_count ?? 0}`);
+                    lines.push(`      QUERY: ${truncateTerminalText(evt.query || "", 700)}`);
+                    return;
+                }
+
+                if (evt.type === "cache_hit") {
+                    lines.push(`${prefix} cache_id=${evt.cache_id ?? "n/a"} similarity=${evt.similarity_score ?? "n/a"}`);
+                    return;
+                }
+
+                if (evt.type === "cache_miss") {
+                    lines.push(`${prefix} threshold=${evt.similarity_threshold ?? "n/a"}`);
+                    return;
+                }
+
+                if (evt.type === "cache_store") {
+                    lines.push(`${prefix}`);
+                    lines.push(`      PRODUCT: ${truncateTerminalText(evt.product_desc || "", 700)}`);
+                    return;
+                }
+
+                if (evt.type === "llm_request") {
+                    lines.push(`${prefix} model=${evt.model || "n/a"}`);
+                    lines.push(`      PRODUCT: ${truncateTerminalText(evt.product_desc || "", 700)}`);
+                    return;
+                }
+
+                if (evt.type === "llm_response") {
+                    lines.push(`${prefix} status=${evt.status_code ?? "n/a"}`);
+                    if (evt.response) {
+                        lines.push(`      RESPONSE: ${truncateTerminalText(evt.response, 1200)}`);
+                    }
+                    if (evt.error) {
+                        lines.push(`      ERROR: ${truncateTerminalText(evt.error, 1200)}`);
+                    }
+                    return;
+                }
+
+                lines.push(`${prefix} ${toTerminalJson(evt, 900)}`);
+            });
+
+            if (backendXray.events.length > 36) {
+                lines.push(`  ... +${backendXray.events.length - 36} events`);
+            }
+
+            return lines.join("\n");
+        }
+
+        function updateSearchXrayInput() {
+            const xrayInput = document.getElementById("xraySearchFlag");
+            if (xrayInput) {
+                xrayInput.value = xrayMode ? "1" : "";
+            }
+        }
+
+        function setCurrentXrayEvent(event) {
+            if (!event) {
+                return;
+            }
+            currentXrayEvent = {
+                ...event,
+                timestamp: event.timestamp || new Date().toLocaleTimeString()
+            };
+            updateXrayPanel();
+        }
+
+        function renderXrayPanel() {
+            const baseline = xrayProfile?.baseline || {};
+            const event = currentXrayEvent || baseline;
+            const features = (xrayProfile?.features || [])
+                .map((feature) => `<li>${escapeHtml(feature)}</li>`)
+                .join("");
+
+            return `
+                <h4>${escapeHtml(xrayProfile?.title || "Oracle AI Database X-Ray")}</h4>
+                <p class="xray-caption">${escapeHtml(xrayProfile?.caption || "")}</p>
+                <div class="xray-item">
+                    <strong>Current Focus</strong>
+                    ${escapeHtml(event.label || baseline.label || "Storefront baseline")}
+                </div>
+                <div class="xray-item">
+                    <strong>What Oracle AI Database Is Doing</strong>
+                    ${escapeHtml(event.dbActivity || baseline.dbActivity || "")}
+                </div>
+                <div class="xray-item">
+                    <strong>Oracle AI Database Operation</strong>
+                    <div class="xray-code">${escapeHtml(event.dbCommand || baseline.dbCommand || "")}</div>
+                    <div>Last capture: ${escapeHtml(event.timestamp || "Waiting for activity")}</div>
+                </div>
+                <div class="xray-item">
+                    <strong>Oracle AI Database Features In This Demo</strong>
+                    <ul class="xray-feature-list">${features}</ul>
+                </div>
+                <div class="xray-item">
+                    <strong>Request/Response Terminal</strong>
+                    <div class="xray-terminal-embed">
+                        <div class="xray-terminal-header">
+                            <div class="xray-terminal-actions">
+                                <button class="xray-terminal-btn" type="button" onclick="copyXrayTerminal()">Copy</button>
+                                <button class="xray-terminal-btn" type="button" onclick="clearXrayTerminal()">Clear</button>
+                            </div>
+                        </div>
+                        <pre id="xrayTerminalBody" class="xray-terminal-body"></pre>
+                    </div>
+                </div>
+            `;
+        }
+
+        function updateXrayPanel() {
+            const panel = document.getElementById("xrayPopup");
+            if (!panel) {
+                return;
+            }
+
+            if (!xrayMode) {
+                panel.style.display = "none";
+                return;
+            }
+
+            panel.style.display = "block";
+            panel.innerHTML = renderXrayPanel();
+            renderXrayTerminal();
+        }
+
+        function toggleXrayMode(enabled) {
+            xrayMode = !!enabled;
+            localStorage.setItem(XRAY_STORAGE_KEY, xrayMode ? "true" : "false");
+
+            const toggle = document.getElementById("xrayToggle");
+            if (toggle) {
+                toggle.checked = xrayMode;
+            }
+
+            updateSearchXrayInput();
+
+            if (xrayMode && xrayTerminalLines.length === 0) {
+                appendXrayTerminal(`[${new Date().toLocaleTimeString()}] X-Ray terminal enabled.`);
+            }
+
+            updateXrayPanel();
+        }
+
+        function readPendingSearchTrace() {
+            const raw = sessionStorage.getItem(XRAY_PENDING_SEARCH_KEY);
+            if (!raw) {
+                return null;
+            }
+
+            sessionStorage.removeItem(XRAY_PENDING_SEARCH_KEY);
+
+            try {
+                return JSON.parse(raw);
+            } catch {
+                return null;
+            }
+        }
+
+        function seedInitialXray() {
+            const pendingSearch = readPendingSearchTrace();
+
+            if (pendingSearch) {
+                setCurrentXrayEvent(pendingSearch.event);
+                appendXrayTerminal([
+                    `[${pendingSearch.timestamp || new Date().toLocaleTimeString()}] REQUEST POST /`,
+                    `SEARCH: ${pendingSearch.query || "(empty)"}`,
+                    `DB COMMAND (UI): ${pendingSearch.event?.dbCommand || xrayProfile?.searchDbCommand || ""}`,
+                ].join("\n"));
+            }
+
+            if (!initialXrayPayload || !Array.isArray(initialXrayPayload.events) || initialXrayPayload.events.length === 0) {
+                return;
+            }
+
+            setCurrentXrayEvent(initialXrayEvent || pendingSearch?.event || null);
+            appendXrayTerminal([
+                `[${new Date().toLocaleTimeString()}] RESPONSE 200 POST /`,
+                `SEARCH: ${currentSearchQuery || "(empty)"}`,
+                `OUTPUT: ${renderedProductCount} product match${renderedProductCount === 1 ? "" : "es"} rendered.`,
+                formatBackendXray(initialXrayPayload),
+            ].join("\n"));
+        }
+
+        function getProductInfo(productDesc, productTitle) {
+            showModal();
+            document.getElementById("modalTitle").textContent = productTitle;
+            document.getElementById("modalContent").innerHTML = `
+                <div class="loading">
+                    <div class="spinner"></div>
+                    Finding testimonials...
+                </div>
+            `;
+
+            const headers = {
+                "Content-Type": "application/json",
+            };
+            const payload = {
+                product_desc: productDesc
+            };
+
+            if (xrayMode) {
+                headers["x-demo-xray"] = "1";
+                payload._xray = true;
+
+                const event = {
+                    label: `Product insight: ${productTitle}`,
+                    dbActivity: "Generates an embedding, probes the semantic cache for nearby matches, and stores a fresh response when needed.",
+                    dbCommand: xrayProfile?.productInfoDbCommand || "",
+                    timestamp: new Date().toLocaleTimeString()
+                };
+
+                setCurrentXrayEvent(event);
+                appendXrayTerminal([
+                    `[${event.timestamp}] REQUEST POST /get_product_info`,
+                    `PRODUCT: ${productTitle}`,
+                    `DB COMMAND (UI): ${event.dbCommand}`,
+                    `INPUT: ${toTerminalJson({ product_desc: productDesc }, 1200)}`,
+                ].join("\n"));
+            }
+
+            fetch("/get_product_info", {
+                method: "POST",
+                headers,
+                body: JSON.stringify(payload)
+            })
+                .then(async (response) => {
+                    const data = await response.json();
+                    let backendXray = null;
+
+                    if (data && typeof data === "object" && !Array.isArray(data) && data._xray) {
+                        backendXray = data._xray;
+                        delete data._xray;
+                    }
+
+                    if (!backendXray) {
+                        const headerXray = response.headers.get("x-demo-xray");
+                        if (headerXray) {
+                            try {
+                                backendXray = JSON.parse(headerXray);
+                            } catch {
+                                backendXray = null;
+                            }
+                        }
+                    }
+
+                    if (xrayMode) {
+                        appendXrayTerminal([
+                            `[${new Date().toLocaleTimeString()}] RESPONSE ${response.status} POST /get_product_info`,
+                            `OUTPUT: ${toTerminalJson(data, 1600)}`,
+                            formatBackendXray(backendXray),
+                        ].join("\n"));
+                        updateXrayPanel();
+                    }
+
+                    return data;
+                })
+                .then((data) => {
+                    if (data.error) {
+                        document.getElementById("modalContent").innerHTML = `
+                            <div class="error">Error: ${data.error}</div>
+                        `;
+                        return;
+                    }
+
+                    let cacheInfo = "";
+
+                    if (data.cached) {
+                        cacheInfo = `
+                            <div class="cache-info">
+                                <small>From semantic cache (similarity: ${(data.similarity_score * 100).toFixed(1)}%)</small>
+                            </div>
+                        `;
+                    } else {
+                        cacheInfo = `
+                            <div class="cache-info">
+                                <small>New response (now cached for similar future queries)</small>
+                            </div>
+                        `;
+                    }
+
+                    document.getElementById("modalContent").innerHTML = `
+                        ${cacheInfo}
+                        <div class="product-description">
+                            ${data.response}
+                        </div>
+                    `;
+                })
+                .catch((error) => {
+                    if (xrayMode) {
+                        appendXrayTerminal(
+                            `[${new Date().toLocaleTimeString()}] ERROR POST /get_product_info\nDETAIL: ${truncateTerminalText(error?.message || error, 1600)}`
+                        );
+                    }
+
+                    document.getElementById("modalContent").innerHTML = `
+                        <div class="error">Error: ${error.message}</div>
+                    `;
+                });
+        }
+
+        function wireSearchForm() {
+            const searchForm = document.getElementById("productSearchForm");
+            if (!searchForm) {
+                return;
+            }
+
+            searchForm.addEventListener("submit", () => {
+                updateSearchXrayInput();
+
+                if (!xrayMode) {
+                    sessionStorage.removeItem(XRAY_PENDING_SEARCH_KEY);
+                    return;
+                }
+
+                const queryInput = searchForm.querySelector('input[name="search"]');
+                const query = queryInput ? queryInput.value.trim() : "";
+                const event = {
+                    label: "Vector product search",
+                    dbActivity: query
+                        ? `Ranks the closest catalog products for the shopper query '${query}'.`
+                        : xrayProfile?.baseline?.dbActivity || "",
+                    dbCommand: xrayProfile?.searchDbCommand || xrayProfile?.baseline?.dbCommand || "",
+                    timestamp: new Date().toLocaleTimeString()
+                };
+
+                sessionStorage.setItem(XRAY_PENDING_SEARCH_KEY, JSON.stringify({
+                    timestamp: event.timestamp,
+                    query,
+                    event
+                }));
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            wireSearchForm();
+            seedInitialXray();
+
+            const storedValue = localStorage.getItem(XRAY_STORAGE_KEY);
+            const shouldEnableXray = storedValue === null ? serverXrayEnabled : storedValue === "true";
+
+            if (!currentXrayEvent && xrayProfile?.baseline) {
+                currentXrayEvent = xrayProfile.baseline;
+            }
+
+            toggleXrayMode(shouldEnableXray);
+        });
+    </script>
+</body>
+
+</html>

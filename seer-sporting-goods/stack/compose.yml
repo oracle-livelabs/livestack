@@ -1,0 +1,171 @@
+# =============================================================================
+# Simi Demo — Single compose stack
+# Aligned to /Users/mkowalik/projects/codey/demo-factory/Retail/non-technical/compose.yml pattern.
+# =============================================================================
+
+volumes:
+  oracle-data:
+  ords-config:
+  ollama-models:
+  onnx-models:
+
+services:
+  db:
+    image: container-registry.oracle.com/database/free:latest
+    environment:
+      ORACLE_PWD: ${ORACLE_PWD:-oracle}
+      ORACLE_CHARACTERSET: AL32UTF8
+    ports:
+      - "1521:1521"
+    volumes:
+      - oracle-data:/opt/oracle/oradata
+      - onnx-models:/opt/oracle/ext-models
+    networks:
+      default:
+        aliases:
+          - aidb
+    healthcheck:
+      test: ["CMD-SHELL", "echo 'SELECT 1 FROM dual;' | sqlplus -s system/${ORACLE_PWD:-oracle}@localhost:1521/FREEPDB1 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 20
+      start_period: 120s
+    restart: unless-stopped
+
+  db-init:
+    image: container-registry.oracle.com/database/free:latest
+    user: "0:0"
+    environment:
+      ORACLE_PWD: ${ORACLE_PWD:-oracle}
+      DBPASSWORD: ${DBPASSWORD:-oracle}
+    volumes:
+      - ./:/workspace
+      - onnx-models:/opt/oracle/ext-models
+    entrypoint: ["bash", "-lc"]
+    command:
+      - |
+        set -eu
+        MODEL_PATH=/opt/oracle/ext-models/all_MiniLM_L12_v2.onnx
+        MODEL_TEMP=/opt/oracle/ext-models/all_MiniLM_L12_v2.onnx.part
+        MODEL_URL='https://adwc4pm.objectstorage.us-ashburn-1.oci.customer-oci.com/p/eLddQappgBJ7jNi6Guz9m9LOtYe2u8LWY19GfgU8flFK4N9YgP4kTlrE9Px3pE12/n/adwc4pm/b/OML-Resources/o/all_MiniLM_L12_v2.onnx'
+        EXPECTED_BYTES="$$(curl -fsSI "$${MODEL_URL}" | tr -d '\r' | awk '/^Content-Length:/ {print $$2}')"
+        CURRENT_BYTES="$$(stat -c %s "$${MODEL_PATH}" 2>/dev/null || echo 0)"
+        if [ "$${CURRENT_BYTES}" != "$${EXPECTED_BYTES}" ]; then
+          echo ">>> Downloading ONNX model..."
+          rm -f "$${MODEL_PATH}" "$${MODEL_TEMP}"
+          curl -fL \
+            --retry 5 \
+            --retry-delay 2 \
+            "$${MODEL_URL}" \
+            -o "$${MODEL_TEMP}"
+          test "$$(stat -c %s "$${MODEL_TEMP}")" = "$${EXPECTED_BYTES}"
+          mv "$${MODEL_TEMP}" "$${MODEL_PATH}"
+        else
+          echo ">>> ONNX model already present."
+        fi
+        chmod 644 "$${MODEL_PATH}"
+        ls -lh "$${MODEL_PATH}"
+        sqlplus -s system/"$${ORACLE_PWD}"@db:1521/FREEPDB1 @/workspace/sql/bootstrap.sql "$${DBPASSWORD}"
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: "no"
+
+  ords:
+    image: container-registry.oracle.com/database/ords:latest
+    environment:
+      CONN_STRING: db:1521/FREEPDB1
+      DBHOST: db
+      DBPORT: 1521
+      DBSERVICENAME: FREEPDB1
+      ORACLE_PWD: ${ORACLE_PWD:-oracle}
+    ports:
+      - "8181:8080"
+    volumes:
+      - ords-config:/etc/ords/config
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:8080/ords/ || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 10
+      start_period: 60s
+    restart: unless-stopped
+
+  ollama:
+    image: docker.io/ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-models:/root/.ollama
+    healthcheck:
+      test: ["CMD-SHELL", "ollama list > /dev/null 2>&1 || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 20s
+    restart: unless-stopped
+
+  init-brain:
+    image: docker.io/curlimages/curl:latest
+    environment:
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-llama3.2}
+    entrypoint: ["sh", "-c"]
+    command:
+      - |
+        echo ">>> Waiting for Ollama API..."
+        until curl -sf http://ollama:11434/api/tags > /dev/null 2>&1; do
+          sleep 2
+        done
+        echo ">>> Ollama ready. Pulling $${OLLAMA_MODEL}..."
+        curl -sfS \
+          --retry 5 \
+          --retry-delay 2 \
+          http://ollama:11434/api/pull \
+          -H 'Content-Type: application/json' \
+          -d "{\"name\":\"$${OLLAMA_MODEL}\",\"stream\":false}" > /dev/null
+        echo ">>> Warming up $${OLLAMA_MODEL}..."
+        curl -sfS \
+          --retry 5 \
+          --retry-delay 2 \
+          http://ollama:11434/api/generate \
+          -H 'Content-Type: application/json' \
+          -d "{\"model\":\"$${OLLAMA_MODEL}\",\"prompt\":\"ping\",\"stream\":false,\"keep_alive\":\"30m\"}" > /dev/null
+        echo ">>> Model pull complete."
+    depends_on:
+      ollama:
+        condition: service_healthy
+    restart: "no"
+
+  app:
+    image: docker.io/python:3.11-slim
+    working_dir: /app
+    volumes:
+      - ./:/app
+    environment:
+      DBPASSWORD: ${DBPASSWORD:-oracle}
+      PUBLIC_IP: ${PUBLIC_IP:-localhost}
+      PYTHONUNBUFFERED: "1"
+    command: sh -c "pip install --no-cache-dir -r requirements.txt && python app.py"
+    ports:
+      - "5500:8181"
+    depends_on:
+      db:
+        condition: service_healthy
+      ords:
+        condition: service_healthy
+      ollama:
+        condition: service_healthy
+      init-brain:
+        condition: service_completed_successfully
+      db-init:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import urllib.request; urllib.request.urlopen('http://localhost:8181/', timeout=5)\" >/dev/null || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+    restart: unless-stopped
