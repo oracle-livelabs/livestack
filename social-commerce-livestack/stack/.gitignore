@@ -1,0 +1,21 @@
+node_modules/
+.env
+frontend/dist/
+*.log
+.DS_Store
+Thumbs.db
+
+# ONNX model files — large binary assets, not tracked in source control
+# Extract from all_MiniLM_L12_v2_augmented.zip or download separately
+db/data/onnx/*.onnx
+db/data/onnx/*.zip
+
+# Database wallet — contains credentials, never commit
+db/wallet/*
+!db/wallet/.gitkeep
+
+# Environment files
+.env*
+
+# Local stack runtime state
+.data/

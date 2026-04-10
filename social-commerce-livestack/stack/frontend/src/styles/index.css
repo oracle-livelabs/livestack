@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Oracle Redwood — neutral dark theme */
+  --color-bg: #161616;
+  --color-surface: #1E1E1E;
+  --color-surface-hover: #2A2A2A;
+  --color-border: #3A3A3A;
+  --color-text: #F5F4F2;
+  --color-text-dim: #999999;
+  --color-accent: #C74634;
+  --color-oracle: #C74634;
+}
+
+body {
+  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-text-dim); }
+
+.glass-card {
+  background: rgba(30, 30, 30, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+}
+
+.stat-card {
+  @apply glass-card p-5 transition-all duration-200;
+}
+.stat-card:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 20px rgba(199, 70, 52, 0.15);
+}
+
+.momentum-badge {
+  @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium;
+}
+.momentum-mega_viral { @apply bg-red-500/20 text-red-300; }
+.momentum-viral { @apply bg-orange-500/20 text-orange-300; }
+.momentum-rising { @apply bg-yellow-500/20 text-yellow-300; }
+.momentum-normal { @apply bg-slate-500/20 text-slate-400; }
+
+.platform-badge {
+  @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium;
+}
+.platform-instagram { @apply bg-pink-500/20 text-pink-300; }
+.platform-tiktok { @apply bg-cyan-500/20 text-cyan-300; }
+.platform-twitter { @apply bg-blue-500/20 text-blue-300; }
+.platform-youtube { @apply bg-red-600/20 text-red-300; }
+.platform-threads { @apply bg-purple-500/20 text-purple-300; }
+
+.nav-link {
+  @apply flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-150;
+  color: var(--color-text-dim);
+}
+.nav-link:hover { background: var(--color-surface-hover); color: var(--color-text); }
+.nav-link.active { background: var(--color-accent); color: white; }
+
+.btn-primary {
+  @apply px-4 py-2 rounded-lg text-sm font-medium transition-all duration-150;
+  background: var(--color-accent);
+  color: white;
+}
+.btn-primary:hover { filter: brightness(1.1); transform: translateY(-1px); }
+
+.btn-ghost {
+  @apply px-3 py-1.5 rounded-lg text-sm font-medium transition-colors duration-150;
+  color: var(--color-text-dim);
+  border: 1px solid var(--color-border);
+}
+.btn-ghost:hover { background: var(--color-surface-hover); color: var(--color-text); }
+
+/* Leaflet overrides for dark theme */
+.leaflet-container { background: #161616; border-radius: 12px; }
+.leaflet-popup-content-wrapper { background: var(--color-surface); color: var(--color-text); border-radius: 8px; }
+.leaflet-popup-tip { background: var(--color-surface); }
+.leaflet-tooltip-custom { background: transparent !important; border: none !important; box-shadow: none !important; padding: 0 !important; }
+.leaflet-tooltip-custom::before { display: none !important; }
+/* Route map tooltips in chat */
+.route-map-tooltip { background: rgba(22,22,22,0.92) !important; border: 1px solid rgba(255,255,255,0.15) !important; border-radius: 6px !important; color: #F5F4F2 !important; padding: 4px 8px !important; box-shadow: 0 4px 12px rgba(0,0,0,0.4) !important; }
+.route-map-tooltip::before { border-top-color: rgba(22,22,22,0.92) !important; }
+/* Demand region tooltip — prominent with high z-index */
+.demand-tooltip { background: rgba(18,18,18,0.96) !important; border: 1px solid rgba(232,123,26,0.4) !important; border-radius: 10px !important; color: #F5F4F2 !important; padding: 8px 12px !important; box-shadow: 0 8px 24px rgba(0,0,0,0.6), 0 0 0 1px rgba(232,123,26,0.15) !important; z-index: 9999 !important; }
+.demand-tooltip::before { border-top-color: rgba(18,18,18,0.96) !important; }
+/* Aerial tiles: no filter — show true satellite colors */
+.aerial-tiles img { filter: none !important; }
+
+/* Recharts overrides */
+.recharts-cartesian-grid line { stroke: var(--color-border); stroke-opacity: 0.3; }
+.recharts-text { fill: var(--color-text-dim); font-size: 11px; }
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 8px rgba(199, 70, 52, 0.4); }
+  50% { box-shadow: 0 0 20px rgba(199, 70, 52, 0.7); }
+}
+.pulse-glow { animation: pulse-glow 2s infinite; }
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-in { animation: fade-in 0.3s ease-out; }

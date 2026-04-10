@@ -1,0 +1,164 @@
+volumes:
+  oracle-data:
+  ords-config:
+  ollama-models:
+  app-node-modules:
+  frontend-node-modules:
+  frontend-dist:
+
+services:
+  db:
+    image: ${ORACLE_DB_IMAGE:-container-registry.oracle.com/database/free:23.26.1.0}
+    environment:
+      ORACLE_PWD: ${ORACLE_PWD:-oracle}
+      ORACLE_CHARACTERSET: ${ORACLE_CHARACTERSET:-AL32UTF8}
+      APP_SCHEMA_PASSWORD: ${APP_SCHEMA_PASSWORD:-socialcommerce}
+      ONNX_MODEL_FILENAME: ${ONNX_MODEL_FILENAME:-all_MiniLM_L12_v2.onnx}
+      ONNX_MODEL_URL: ${ONNX_MODEL_URL:-https://adwc4pm.objectstorage.us-ashburn-1.oci.customer-oci.com/p/eLddQappgBJ7jNi6Guz9m9LOtYe2u8LWY19GfgU8flFK4N9YgP4kTlrE9Px3pE12/n/adwc4pm/b/OML-Resources/o/all_MiniLM_L12_v2.onnx}
+    ports:
+      - "${PUBLISH_HOST:-127.0.0.1}:${DB_PORT:-1521}:1521"
+    volumes:
+      - oracle-data:/opt/oracle/oradata
+      - ./:/workspace/app:ro,z
+      - ./scripts/bootstrap_db.sh:/opt/oracle/scripts/startup/20-bootstrap_db.sh:ro,z
+    healthcheck:
+      test: ["CMD-SHELL", "[ -f /opt/oracle/oradata/.socialcommerce_bootstrap_done ] && echo 'SELECT 1 FROM dual;' | sqlplus -L -s system/${ORACLE_PWD:-oracle}@localhost:1521/FREEPDB1 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 40
+      start_period: 180s
+    restart: unless-stopped
+
+  ords:
+    image: ${ORDS_IMAGE:-container-registry.oracle.com/database/ords:25.4.0}
+    environment:
+      CONN_STRING: db:1521/FREEPDB1
+      DBHOST: db
+      DBPORT: 1521
+      DBSERVICENAME: FREEPDB1
+      ORACLE_PWD: ${ORACLE_PWD:-oracle}
+    ports:
+      - "${PUBLISH_HOST:-127.0.0.1}:${ORDS_PORT:-8181}:8080"
+    volumes:
+      - ords-config:/etc/ords/config
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:8080/ords/ || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 20
+      start_period: 120s
+    restart: unless-stopped
+
+  ollama:
+    image: ${OLLAMA_IMAGE:-docker.io/ollama/ollama:latest}
+    environment:
+      OLLAMA_HOST: 0.0.0.0:11434
+    ports:
+      - "${PUBLISH_HOST:-127.0.0.1}:${OLLAMA_PORT:-11434}:11434"
+    volumes:
+      - ollama-models:/root/.ollama
+    healthcheck:
+      test: ["CMD-SHELL", "ollama list > /dev/null 2>&1 || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
+    restart: unless-stopped
+
+  ollama-init:
+    image: docker.io/curlimages/curl:latest
+    environment:
+      OLLAMA_MODEL_PRIMARY: ${OLLAMA_MODEL_PRIMARY:-llama3.2}
+      OLLAMA_MODEL_SECONDARY: ${OLLAMA_MODEL_SECONDARY:-gemma:2b}
+      OLLAMA_KEEP_ALIVE: ${OLLAMA_KEEP_ALIVE:-30m}
+    entrypoint: ["sh", "-c"]
+    command:
+      - |
+        set -eu
+
+        echo ">>> Waiting for Ollama API..."
+        until curl -fsS http://ollama:11434/api/tags > /dev/null 2>&1; do
+          sleep 2
+        done
+
+        for model in "$${OLLAMA_MODEL_PRIMARY}" "$${OLLAMA_MODEL_SECONDARY}"; do
+          echo ">>> Pulling $${model}..."
+          curl -fsS \
+            --retry 5 \
+            --retry-all-errors \
+            --retry-delay 2 \
+            http://ollama:11434/api/pull \
+            -H 'Content-Type: application/json' \
+            -d "{\"model\":\"$${model}\",\"stream\":false}" > /dev/null
+
+          echo ">>> Warming $${model}..."
+          curl -fsS \
+            --retry 5 \
+            --retry-all-errors \
+            --retry-delay 2 \
+            http://ollama:11434/api/generate \
+            -H 'Content-Type: application/json' \
+            -d "{\"model\":\"$${model}\",\"prompt\":\"ping\",\"stream\":false,\"keep_alive\":\"$${OLLAMA_KEEP_ALIVE}\"}" > /dev/null
+        done
+
+        echo ">>> Ollama models are ready."
+    depends_on:
+      ollama:
+        condition: service_healthy
+    restart: "no"
+
+  app:
+    image: docker.io/node:20-bookworm
+    working_dir: /workspace/app
+    volumes:
+      - ./:/workspace/app:z
+      - app-node-modules:/workspace/app/node_modules
+      - frontend-node-modules:/workspace/app/frontend/node_modules
+      - frontend-dist:/workspace/app/frontend/dist
+    environment:
+      NODE_ENV: production
+      PORT: 3001
+      FRONTEND_URL: http://localhost:${APP_PORT:-5500}
+      ORACLE_USER: SOCIALCOMMERCE
+      ORACLE_PASSWORD: ${APP_SCHEMA_PASSWORD:-socialcommerce}
+      ORACLE_CONNECTION_STRING: db:1521/FREEPDB1
+      ORACLE_POOL_MIN: ${ORACLE_POOL_MIN:-2}
+      ORACLE_POOL_MAX: ${ORACLE_POOL_MAX:-10}
+      ORACLE_POOL_INCREMENT: ${ORACLE_POOL_INCREMENT:-1}
+      OLLAMA_BASE_URL: http://ollama:11434
+      OLLAMA_MODEL_PRIMARY: ${OLLAMA_MODEL_PRIMARY:-llama3.2}
+      OLLAMA_MODEL_SECONDARY: ${OLLAMA_MODEL_SECONDARY:-gemma:2b}
+    command:
+      - bash
+      - -lc
+      - |
+        set -euo pipefail
+        [ -d node_modules/oracledb ] || npm ci --include=dev
+        [ -d frontend/node_modules/react ] || (cd frontend && npm ci --include=dev)
+        cd frontend && npm run build && cd ..
+        npm start
+    ports:
+      - 5500:3001
+    depends_on:
+      db:
+        condition: service_healthy
+      ords:
+        condition: service_healthy
+      ollama:
+        condition: service_healthy
+      ollama-init:
+        condition: service_completed_successfully
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "node -e \"require('http').get('http://127.0.0.1:3001/api/health', (res) => process.exit(res.statusCode === 200 ? 0 : 1)).on('error', () => process.exit(1))\""
+        ]
+      interval: 15s
+      timeout: 5s
+      retries: 15
+      start_period: 180s
+    restart: unless-stopped

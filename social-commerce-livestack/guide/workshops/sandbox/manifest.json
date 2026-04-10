@@ -1,0 +1,66 @@
+{
+  "workshoptitle": "Converged Social Commerce LiveStack",
+  "help": "livelabs-help-database_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "filename": "../../introduction/introduction.md"
+    },
+    {
+      "title": "Access the Sandbox",
+      "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
+    },
+    {
+      "title": "Scene 1: Welcome & Navigation",
+      "filename": "../../scene-1-semantic-search/scene-1-semantic-search.md"
+    },
+    {
+      "title": "Scene 2: Schema & Data",
+      "filename": "../../scene-2-database-xray/scene-2-database-xray.md"
+    },
+    {
+      "title": "Scene 3: Dashboard & Product Details",
+      "filename": "../../scene-3-semantic-cache/scene-3-semantic-cache.md"
+    },
+    {
+      "title": "Scene 4: Social Vector Trends",
+      "filename": "../../scene-4-under-the-hood/scene-4-under-the-hood.md"
+    },
+    {
+      "title": "Scene 5: Influencer Graph",
+      "filename": "../../scene-5-influencer-graph/scene-5-influencer-graph.md"
+    },
+    {
+      "title": "Scene 6: Fulfillment Map",
+      "filename": "../../scene-6-fulfillment-map/scene-6-fulfillment-map.md"
+    },
+    {
+      "title": "Scene 7: Orders",
+      "filename": "../../scene-7-orders/scene-7-orders.md"
+    },
+    {
+      "title": "Scene 8: OML Analytics",
+      "filename": "../../scene-8-oml-analytics/scene-8-oml-analytics.md"
+    },
+    {
+      "title": "Scene 9: Ask Your Data",
+      "filename": "../../scene-9-ask-your-data/scene-9-ask-your-data.md"
+    },
+    {
+      "title": "Scene 10: Agent Console",
+      "filename": "../../scene-10-agent-console/scene-10-agent-console.md"
+    },
+    {
+      "title": "Run the LiveStack Locally",
+      "filename": "../../download-livestack/download-livestack.md"
+    },
+    {
+      "title": "Conclusion: Key Takeaways",
+      "filename": "../../conclusion/conclusion.md"
+    },
+    {
+      "title": "Need Help?",
+      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+    }
+  ]
+}
