@@ -1,0 +1,51 @@
+{
+  "workshoptitle": "Oracle-Augmented Card Authorisation LiveStack",
+  "help": "livelabs-help-database_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "filename": "../../introduction/introduction.md"
+    },
+    {
+      "title": "Access the Sandbox",
+      "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
+    },    
+    {
+      "title": "Scene 1: Authorisation Control Tower",
+      "filename": "../../scene-01-authorisation-control-tower/scene-01-authorisation-control-tower.md",
+      "description": "Validate the hero cards, Case Command Deck, and Oracle augmentation payload that illustrate Authentic, DRE/DRG, and Oracle working together."
+    },
+    {
+      "title": "Scene 2: Oracle Signal Breakdown",
+      "filename": "../../scene-02-oracle-signal-breakdown/scene-02-oracle-signal-breakdown.md",
+      "description": "Open the Oracle signal panel, read the ORDS augmentation payload, and surface the Oracle Internals evidence for the chosen transaction."
+    },
+    {
+      "title": "Scene 3: Scenario Lab",
+      "filename": "../../scene-03-scenario-lab/scene-03-scenario-lab.md",
+      "description": "Run shadow/advisory scenarios, review the Signal Delta Studio, and confirm the replay queue entries from Oracle."
+    },
+    {
+      "title": "Scene 4: Investigation Workbench",
+      "filename": "../../scene-04-investigation-workbench/scene-04-investigation-workbench.md",
+      "description": "Use hybrid/vector search, read the graph evidence, and trace the Oracle Internals rail for the pinned case."
+    },
+    {
+      "title": "Scene 5: Dataset Admin & Audit",
+      "filename": "../../scene-05-dataset-admin/scene-05-dataset-admin.md",
+      "description": "Exercise the dataset validation, restore-job ledger, and Audit Trail workflow powered by Oracle."
+    },
+    {
+      "title": "Take it home",
+      "filename": "../../download-livestack/download-livestack.md"
+    },
+    {
+      "title": "Conclusion: Key Takeaways",
+      "filename": "../../conclusion/conclusion.md"
+    },
+    {
+      "title": "Need Help?",
+      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+    }
+  ]
+}
