@@ -51,7 +51,7 @@ Expected result:
 3. Click `Restore Demo`.
 4. Watch the status text and progress bar update while the restore job runs.
 5. In `Oracle Job Ledger`, locate the newest row and note the job ID, status, transaction count, and version chips.
-6. Return to `Active Dataset State` and confirm it shows `Lloyds Demo Baseline`.
+6. Return to `Active Dataset State` and confirm it shows `The Demo Baseline`.
 
 ![Close-up of the Oracle Job Ledger after a restore-demo run completes](images/scene-05-job-ledger-detail.png)
 

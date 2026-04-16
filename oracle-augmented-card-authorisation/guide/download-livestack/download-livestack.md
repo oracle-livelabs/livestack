@@ -1,15 +1,15 @@
-# Download the Lloyds Bank LiveStack
+# Download the LiveStack
 
 ## Introduction
 
-This lab shows how to run the Lloyds Bank LiveStack in your own environment using the portable stack package and Podman Compose.
+This lab shows how to run the Bank LiveStack in your own environment using the portable stack package and Podman Compose.
 
 Estimated Time: 30 minutes
 
 ### Objectives
 
 In this lab, you will:
-- Download the portable Lloyds Bank package.
+- Download the portable Bank package.
 - Extract it into a clean local working directory.
 - Create the local runtime environment file.
 - Start the full stack with Podman Compose.
@@ -18,16 +18,16 @@ In this lab, you will:
 ## Task 1: Download the portable package
 
 1. Download the package from:
-    [lloyds-bank-livestack.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/uDxOqph2yWR1SqN7FFs00ZL2NFTdYXpA2HTqD-RAJwej_J93bmZh5LoRaxkR-KKQ/n/c4u04/b/livelabsfiles/o/livestack/lloyds-bank-livestack.zip)
+    [bank-livestack.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/uDxOqph2yWR1SqN7FFs00ZL2NFTdYXpA2HTqD-RAJwej_J93bmZh5LoRaxkR-KKQ/n/c4u04/b/livelabsfiles/o/livestack/lloyds-bank-livestack.zip)
 
 2. Save the file to your machine.
 
 Expected result:
-- You have `lloyds-bank-livestack.zip` available on your machine.
+- You have `bank-livestack.zip` available on your machine.
 
 ## Task 2: Move the package and prepare environment settings
 
-> **Note:** Do not extract or run the stack from your `Downloads` folder. Create a new empty working directory and move `lloyds-bank-livestack.zip` there first. This package extracts its files directly into the current folder, so a clean directory keeps the LiveStack contents organized and avoids Podman issues caused by working from `Downloads`.
+> **Note:** Do not extract or run the stack from your `Downloads` folder. Create a new empty working directory and move `bank-livestack.zip` there first. This package extracts its files directly into the current folder, so a clean directory keeps the LiveStack contents organized and avoids Podman issues caused by working from `Downloads`.
 
 ### For macOS or Linux
 
@@ -36,28 +36,28 @@ Expected result:
 2. Create a new working directory outside of `Downloads`:
     ```bash
     <copy>
-    mkdir -p ~/livestack-lloyds-bank
+    mkdir -p ~/livestack-bank
     </copy>
     ```
 
 3. Move into the new working directory:
     ```bash
     <copy>
-    cd ~/livestack-lloyds-bank
+    cd ~/livestack-bank
     </copy>
     ```
 
 4. Move the downloaded package from `Downloads` into this directory:
     ```bash
     <copy>
-    mv ~/Downloads/lloyds-bank-livestack.zip .
+    mv ~/Downloads/bank-livestack.zip .
     </copy>
     ```
 
 5. Extract the package:
     ```bash
     <copy>
-    unzip lloyds-bank-livestack.zip
+    unzip bank-livestack.zip
     </copy>
     ```
 
@@ -75,28 +75,28 @@ Expected result:
 2. Create a new working directory outside of `Downloads`:
     ```powershell
     <copy>
-    New-Item -ItemType Directory -Force -Path "$HOME\livestack-lloyds-bank" | Out-Null
+    New-Item -ItemType Directory -Force -Path "$HOME\livestack-bank" | Out-Null
     </copy>
     ```
 
 3. Move into the new working directory:
     ```powershell
     <copy>
-    Set-Location "$HOME\livestack-lloyds-bank"
+    Set-Location "$HOME\livestack-bank"
     </copy>
     ```
 
 4. Move the downloaded package from `Downloads` into this directory:
     ```powershell
     <copy>
-    Move-Item "$HOME\Downloads\lloyds-bank-livestack.zip" .
+    Move-Item "$HOME\Downloads\bank-livestack.zip" .
     </copy>
     ```
 
 5. Extract the package:
     ```powershell
     <copy>
-    tar -xf .\lloyds-bank-livestack.zip
+    tar -xf .\bank-livestack.zip
     </copy>
     ```
 
@@ -177,7 +177,7 @@ Expected result:
 Expected result:
 - `db`, `ords`, `ollama`, and `app` are running.
 - The health endpoint returns `status: ok`.
-- The Lloyds Bank UI loads locally.
+- The Bank UI loads locally.
 
 ## Task 4: Stop the stack when finished
 
@@ -193,7 +193,7 @@ Expected result:
 
 ## Task 5: Why this matters?
 
-A portable LiveStack runbook turns this guide into something teams can reproduce instead of just read. By shipping Lloyds Bank as a Podman Compose package with a clear startup flow, you reduce environment drift, make scene validation repeatable, and give teams a practical way to explore the same Oracle-backed experience on macOS, Linux, and Windows.
+A portable LiveStack runbook turns this guide into something teams can reproduce instead of just read. By shipping Bank as a Podman Compose package with a clear startup flow, you reduce environment drift, make scene validation repeatable, and give teams a practical way to explore the same Oracle-backed experience on macOS, Linux, and Windows.
 
 ## Acknowledgements
 

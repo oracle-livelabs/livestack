@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This closing lab summarizes what you validated across the Lloyds Bank scenes and how to continue from a stable, Oracle-backed LiveStack baseline.
+This closing lab summarizes what you validated across the Bank scenes and how to continue from a stable, Oracle-backed LiveStack baseline.
 
 Estimated Time: 6 minutes
 

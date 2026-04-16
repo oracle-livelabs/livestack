@@ -2,14 +2,14 @@
 
 ## Introduction
 
-This scene introduces the Lloyds Bank application shell and the Control Tower workflow. You will open the app, pin a live transaction, and use the case brief the same way an operator would during a live fraud review.
+This scene introduces the Bank application shell and the Control Tower workflow. You will open the app, pin a live transaction, and use the case brief the same way an operator would during a live fraud review.
 
 Estimated Time: 10 minutes
 
 ### Objectives
 
 In this lab, you will:
-- Open the Lloyds Bank shell and confirm the main navigation.
+- Open the Bank shell and confirm the main navigation.
 - Pin a live transaction from the Control Tower.
 - Expand the case brief and follow the first guided handoff into the rest of the app.
 
@@ -55,7 +55,7 @@ Expected result:
 
 ## Task 4: Why this matters?
 
-The Control Tower is the fastest way to explain the Lloyds fraud story to an operator. If you can pin a transaction, read the brief, and carry that same case into the next scene, the rest of the application becomes a guided workflow instead of a disconnected set of screens.
+The Control Tower is the fastest way to explain the fraud story to an operator. If you can pin a transaction, read the brief, and carry that same case into the next scene, the rest of the application becomes a guided workflow instead of a disconnected set of screens.
 
 ## Credits & Build Notes
 
