@@ -7,33 +7,33 @@
       "filename": "../../introduction/introduction.md"
     },
     {
-      "title": "Run the LiveStack Locally",
+      "title": "The LiveStack",
       "filename": "../../download-livestack/download-livestack.md"
     },
     {
       "title": "Scene 1: Authorisation Control Tower",
       "filename": "../../scene-01-authorisation-control-tower/scene-01-authorisation-control-tower.md",
-      "description": "Validate the hero cards, Case Command Deck, and Oracle augmentation payload that illustrate Authentic, DRE/DRG, and Oracle working together."
+      "description": "Start with one live case, review the fallback path, and carry the same transaction forward through the guided operator story."
     },
     {
-      "title": "Scene 2: Oracle Signal Breakdown",
+      "title": "Scene 2: Oracle Internals Evidence Rail",
       "filename": "../../scene-02-oracle-signal-breakdown/scene-02-oracle-signal-breakdown.md",
-      "description": "Open the Oracle signal panel, read the ORDS augmentation payload, and surface the Oracle Internals evidence for the chosen transaction."
+      "description": "Open Oracle Internals, inspect runtime and focused-record evidence, and keep the same case synchronized with the briefing shell."
     },
     {
-      "title": "Scene 3: Scenario Lab",
-      "filename": "../../scene-03-scenario-lab/scene-03-scenario-lab.md",
-      "description": "Run shadow/advisory scenarios, review the Signal Delta Studio, and confirm the replay queue entries from Oracle."
+      "title": "Scene 3: Investigation Workbench",
+      "filename": "../../scene-03-investigation-workbench/scene-03-investigation-workbench.md",
+      "description": "Continue the current case first, use Oracle search only when needed, and inspect the same transaction inside the property graph."
     },
     {
-      "title": "Scene 4: Investigation Workbench",
-      "filename": "../../scene-04-investigation-workbench/scene-04-investigation-workbench.md",
-      "description": "Use hybrid/vector search, read the graph evidence, and trace the Oracle Internals rail for the pinned case."
+      "title": "Scene 4: Scenario Lab",
+      "filename": "../../scene-04-scenario-lab/scene-04-scenario-lab.md",
+      "description": "Follow the active baseline, compare Oracle-scored variants, and use replay only as a supporting decision tool."
     },
     {
-      "title": "Scene 5: Dataset Admin & Audit",
+      "title": "Scene 5: Dataset Admin & Audit Trail",
       "filename": "../../scene-05-dataset-admin/scene-05-dataset-admin.md",
-      "description": "Exercise the dataset validation, restore-job ledger, and Audit Trail workflow powered by Oracle."
+      "description": "Use Dataset Admin as a side utility for data stewardship, then close the story in Audit Trail with Oracle-backed governance evidence."
     },
     {
       "title": "Conclusion: Key Takeaways",

@@ -4,19 +4,20 @@
 
 LiveLabs LiveStacks are real-working demos! 
 
-In this LiveStacks watch as Oracle AI Database 26ai transforms real-time card payment processing with in-database AI that augments fraud and risk decisioning using graph relationships, vector search, behavioral patterns, and historical transaction intelligence. This LiveStack demonstrates how payment providers can enhance live authorization flows with richer fraud context, improved explainability, and faster AI-driven insights—all from a single converged database. The result is a more scalable and governed architecture that reduces complexity, improves fraud outcomes, and modernizes card payment intelligence without disrupting existing authorization and decisioning systems.
+In this LiveStack, Oracle AI Database 26ai turns a live authorisation into one continuous operator story. The app now leads with a single high-priority case in the Control Tower, keeps Oracle Internals aligned to that same record, opens the case into Investigation before any broader branching, lets Scenario Lab rehearse decisions from the active baseline, and closes with governance in Audit Trail. Dataset Admin remains available as an operator utility on the side, so the main walkthrough stays focused on the live fraud narrative instead of jumping between unrelated tools.
 
 Estimated Workshop Time: 1 hour 20 minutes
 
-![Lloyds Bank Control Tower showing Oracle augmentation, DRE/DRG recommendation, and Authentic response](images/lloyds-control-tower.png)
+![Augmented Bank Control Tower showing the case-led story shell, active case briefing, and operator journey](images/lloyds-control-tower.png)
 
 ### Objectives
 
 In this workshop, you will:
-- Navigate the full Augmented Card Authorization scene flow: Authorisation Control Tower, Oracle Signal Breakdown, Scenario Lab, Investigation Workbench, and Dataset Admin & Audit.
-- Connect each scene to the Oracle evidence surfaced through ORDS, PL/SQL, Oracle Internals, and the dataset-admin job ledger.
+- Navigate the full case-led scene flow: Authorisation Control Tower, Oracle Internals Evidence Rail, Investigation Workbench, Scenario Lab, and Dataset Admin & Audit Trail.
+- Follow one live transaction across the app instead of reopening the case in each scene.
+- Connect each scene to the Oracle evidence surfaced through ORDS, PL/SQL, Oracle Internals, SQL Property Graph, Oracle Text, AI Vector Search, and the dataset-job ledger.
 - Run the LiveStack locally with Podman Compose and bootstrap the required Ollama models.
-- Validate the augmentation contract end to end: Oracle signal, DRE/DRG recommendation, Authentic final response, and analyst overlay.
+- Validate the end-to-end augmentation contract: Oracle signal, DRE/DRG recommendation, Authentic final response, analyst controls, and governance replay.
 
 ### Prerequisites (If run locally)
 
@@ -30,10 +31,10 @@ This workshop assumes you have:
 
 - Run the LiveStack locally with Podman Compose.
 - Scene 1: Authorisation Control Tower
-- Scene 2: Oracle Signal Breakdown
-- Scene 3: Scenario Lab
-- Scene 4: Investigation Workbench
-- Scene 5: Dataset Admin & Audit
+- Scene 2: Oracle Internals Evidence Rail
+- Scene 3: Investigation Workbench
+- Scene 4: Scenario Lab
+- Scene 5: Dataset Admin & Audit Trail
 - Conclusion and key takeaways
 
 ## Learn More

@@ -1,64 +1,49 @@
-# Scene 5: Dataset Admin & Audit
+# Scene 5: Dataset Admin & Audit Trail
 
 ## Introduction
 
-Scene 5 covers the two governance surfaces that operators use after the core fraud scenes: Dataset Admin and Audit Trail. You will open the dataset overlay directly from the app, then move into Audit Trail to review the same transaction as a governance record with Oracle event history.
+Scene 5 covers the supporting operator and governance surfaces that sit beside the core fraud story. Dataset Admin remains a side utility for data stewardship, while Audit Trail is the place where the same transaction becomes a governed case record with Oracle event history.
 
 Estimated Time: 15 minutes
 
 ### Objectives
 
 In this lab, you will:
-- Open the Dataset Admin overlay directly from the application shell.
-- Validate a dataset package without changing the active dataset.
-- Restore the demo baseline and confirm the ledger updates in the UI.
+- Open the Dataset Admin overlay from the application shell.
+- Review active dataset state and recent Oracle job history without interrupting the main fraud story.
 - Review one transaction in Audit Trail and inspect its chronological Oracle event history.
 
 ## Task 1: Open Dataset Admin
 
 1. Click `Operator Dataset Admin` in the lower-left rail.
-2. Confirm the overlay opens immediately without requiring an operator code.
+2. Confirm the overlay opens as a modal utility without forcing you out of the main app narrative.
 3. Review the main sections inside the overlay:
     - `Active Dataset State`
     - `Import Controls`
-    - `Oracle Preflight Preview`
     - `Restore Demo Baseline`
-    - `Restore Scope`
     - `Oracle Job Ledger`
+    - `Activity Feed`
 
-![Operator Dataset Admin overlay showing the live dataset state and import controls](images/scene-05-dataset-admin.png)
+![Dataset Admin overlay showing the operator utility surface, live dataset state, and restore controls](images/scene-05-dataset-admin.png)
 
-![Close-up of Dataset Admin with active dataset state, import controls, and restore actions](images/scene-05-dataset-state-detail.png)
-
-Expected result:
-- The overlay opens directly, and the user can see the current dataset status, import controls, restore actions, and recent Oracle jobs in one place.
-
-## Task 2: Validate a dataset package
-
-1. In `Import Controls`, click `Template`.
-2. When the ZIP file downloads, choose it with the file picker.
-3. Click `Validate`.
-4. Watch `Oracle Preflight Preview` fill in with the dataset summary, scenario variety, likely fraud signals, and sample transactions.
-5. Confirm `Active Dataset State` does not change after a validate-only run.
+![Dataset Admin detail showing the active dataset state and import controls tracked by Oracle](images/scene-05-dataset-state-detail.png)
 
 Expected result:
-- The overlay previews the dataset on screen before anything is imported, so the user can inspect the package without altering the active environment.
+- The overlay opens directly, and the operator can inspect current data state without leaving the guided fraud story.
 
-## Task 3: Restore the demo baseline and watch the ledger update
+## Task 2: Review the data-control surfaces
 
-1. In `Restore Demo Baseline`, click `Validate Restore`.
-2. Review the contents shown in `Restore Scope`.
-3. Click `Restore Demo`.
-4. Watch the status text and progress bar update while the restore job runs.
-5. In `Oracle Job Ledger`, locate the newest row and note the job ID, status, transaction count, and version chips.
-6. Return to `Active Dataset State` and confirm it shows `The Demo Baseline`.
+1. In `Active Dataset State`, review the current dataset label, version, transaction count, and last update time.
+2. In `Import Controls`, note that `Template`, `Validate`, and `Upload` are available for operator use, but they are intentionally kept outside the primary case journey.
+3. In `Restore Demo Baseline`, note that the demo can be reset when needed.
+4. Scroll to `Oracle Job Ledger` and review the latest recorded import or restore job.
 
-![Close-up of the Oracle Job Ledger after a restore-demo run completes](images/scene-05-job-ledger-detail.png)
+![Oracle Job Ledger detail showing recent dataset operations tracked and replayed through Oracle](images/scene-05-job-ledger-detail.png)
 
 Expected result:
-- The overlay shows the restore progressing in real time, the ledger records the completed Oracle job, and the active dataset returns to the demo baseline.
+- Dataset Admin reads as a controlled side utility: operators can inspect, validate, upload, or reset data, but the main fraud story remains elsewhere.
 
-## Task 4: Review the Audit Trail for the same case
+## Task 3: Review the Audit Trail for the same case
 
 1. Close the overlay.
 2. Click `Audit Trail` in the left navigation.
@@ -72,16 +57,16 @@ Expected result:
 6. Click `Open in Investigation` if you want to pivot the same case back into the graph workbench.
 7. Scroll to `Chronological Audit Steps` and expand one `Raw audit payload` section to inspect the recorded event body.
 
-![Audit Trail showing the governance ledger, focused case, and chronological Oracle event history](images/scene-05-audit-trail.png)
+![Audit Trail showing the governance ledger, focused case, and Oracle event history for the selected transaction](images/scene-05-audit-trail.png)
 
-![Close-up of the Chronological Audit Steps stack with raw payload detail expanded](images/scene-05-audit-chronology-detail.png)
+![Chronological audit detail showing parsed event steps and raw payload expansion for the selected case](images/scene-05-audit-chronology-detail.png)
 
 Expected result:
 - Audit Trail turns the same transaction into a readable governance record, with ledger filters, a focused-case summary, and raw Oracle event payloads all available from one screen.
 
-## Task 5: Why this matters?
+## Task 4: Why this matters?
 
-Dataset changes and fraud decisions both need governance, not just runtime flair. Scene 5 proves the app can both manage customer-shaped data safely and replay Oracle-backed audit evidence clearly enough for an operator, reviewer, or stakeholder walkthrough.
+Dataset controls and governance evidence are both necessary, but they should not compete with the core fraud journey. Scene 5 proves the app can keep data stewardship on the side while still closing the main story with a readable Oracle-backed audit record.
 
 ## Credits & Build Notes
 
