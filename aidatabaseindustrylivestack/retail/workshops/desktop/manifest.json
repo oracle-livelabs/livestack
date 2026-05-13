@@ -1,0 +1,66 @@
+{
+  "workshoptitle": "Retail Returns Intelligence LiveStack Guide",
+  "help": "livelabs-help-database_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "filename": "../../introduction/introduction.md"
+    },
+    {
+      "title": "Download and Run the LiveStack",
+      "filename": "../../download-livestack/download-livestack.md"
+    },
+    {
+      "title": "Scene 1: Welcome and Demo Orientation",
+      "filename": "../../scene-1-welcome-and-demo-orientation/scene-1-welcome-and-demo-orientation.md"
+    },
+    {
+      "title": "Scene 2: Retail Data Foundation",
+      "filename": "../../scene-2-retail-data-foundation/scene-2-retail-data-foundation.md"
+    },
+    {
+      "title": "Scene 3: Retail Command Center",
+      "filename": "../../scene-3-retail-command-center/scene-3-retail-command-center.md"
+    },
+    {
+      "title": "Scene 4: Returns Intelligence",
+      "filename": "../../scene-4-returns-intelligence/scene-4-returns-intelligence.md"
+    },
+    {
+      "title": "Scene 5: Customer Trend Signals",
+      "filename": "../../scene-5-customer-trend-signals/scene-5-customer-trend-signals.md"
+    },
+    {
+      "title": "Scene 6: Creator Community Graph",
+      "filename": "../../scene-6-creator-community-graph/scene-6-creator-community-graph.md"
+    },
+    {
+      "title": "Scene 7: Smart Fulfillment Map",
+      "filename": "../../scene-7-smart-fulfillment-map/scene-7-smart-fulfillment-map.md"
+    },
+    {
+      "title": "Scene 8: Customer and Partner Orders",
+      "filename": "../../scene-8-customer-and-partner-orders/scene-8-customer-and-partner-orders.md"
+    },
+    {
+      "title": "Scene 9: Retail OML Analytics",
+      "filename": "../../scene-9-retail-oml-analytics/scene-9-retail-oml-analytics.md"
+    },
+    {
+      "title": "Scene 10: Ask Retail Data",
+      "filename": "../../scene-10-ask-retail-data/scene-10-ask-retail-data.md"
+    },
+    {
+      "title": "Scene 11: Retail AI Agent Console",
+      "filename": "../../scene-11-retail-ai-agent-console/scene-11-retail-ai-agent-console.md"
+    },
+    {
+      "title": "Conclusion: Business Outcomes",
+      "filename": "../../conclusion/conclusion.md"
+    },
+    {
+      "title": "Need Help?",
+      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+    }
+  ]
+}
