@@ -1,0 +1,70 @@
+{
+  "workshoptitle": "Media & Entertainment Content Intelligence LiveStack",
+  "help": "livelabs-help-database_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "filename": "../../introduction/introduction.md"
+    },
+    {
+      "title": "Get Started",
+      "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+    },
+    {
+      "title": "Scene 1: Seer Media Control Tower",
+      "filename": "../../scene-1-seer-media-control-tower/scene-1-seer-media-control-tower.md"
+    },
+    {
+      "title": "Scene 2: Seer 26ai Media Data Foundation",
+      "filename": "../../scene-2-seer-26ai-media-data-foundation/scene-2-seer-26ai-media-data-foundation.md"
+    },
+    {
+      "title": "Scene 3: Content Revenue and Operations Dashboard",
+      "filename": "../../scene-3-content-revenue-and-operations-dashboard/scene-3-content-revenue-and-operations-dashboard.md"
+    },
+    {
+      "title": "Scene 4: Audience and Market Signals",
+      "filename": "../../scene-4-audience-and-market-signals/scene-4-audience-and-market-signals.md"
+    },
+    {
+      "title": "Scene 5: Creator Influence Network",
+      "filename": "../../scene-5-creator-influence-network/scene-5-creator-influence-network.md"
+    },
+    {
+      "title": "Scene 6: Rights and Distribution Coverage",
+      "filename": "../../scene-6-rights-and-distribution-coverage/scene-6-rights-and-distribution-coverage.md"
+    },
+    {
+      "title": "Scene 7: Campaign Orders and Rights Cases",
+      "filename": "../../scene-7-campaign-orders-and-rights-cases/scene-7-campaign-orders-and-rights-cases.md"
+    },
+    {
+      "title": "Scene 8: Predictive Demand and Revenue Analytics",
+      "filename": "../../scene-8-predictive-demand-and-revenue-analytics/scene-8-predictive-demand-and-revenue-analytics.md"
+    },
+    {
+      "title": "Scene 9: Ask Seer Media Data",
+      "filename": "../../scene-9-ask-seer-media-data/scene-9-ask-seer-media-data.md"
+    },
+    {
+      "title": "Scene 10: Seer Media Agent Console",
+      "filename": "../../scene-10-seer-media-agent-console/scene-10-seer-media-agent-console.md"
+    },
+    {
+      "title": "Scene 11: Use Your Own Data",
+      "filename": "../../scene-11-use-your-own-data/scene-11-use-your-own-data.md"
+    },
+    {
+      "title": "Conclusion: Business Outcomes",
+      "filename": "../../conclusion/conclusion.md"
+    },
+    {
+      "title": "Download the LiveStack",
+      "filename": "../../download-livestack/download-livestack.md"
+    },
+    {
+      "title": "Need Help?",
+      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+    }
+  ]
+}
