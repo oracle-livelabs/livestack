@@ -1,0 +1,66 @@
+{
+  "workshoptitle": "Seer Lifesciences LiveStack Demo Guide",
+  "help": "livelabs-help-database_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "filename": "../../introduction/introduction.md"
+    },
+    {
+      "title": "Get Started",
+      "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+    },
+    {
+      "title": "Scene 1: Seer Lifesciences Control Tower",
+      "filename": "../../scene-1-seer-lifesciences-control-tower/scene-1-seer-lifesciences-control-tower.md"
+    },
+    {
+      "title": "Scene 2: Seer 26ai Data Foundation",
+      "filename": "../../scene-2-seer-26ai-data-foundation/scene-2-seer-26ai-data-foundation.md"
+    },
+    {
+      "title": "Scene 3: Quality and Supply Operations Dashboard",
+      "filename": "../../scene-3-quality-and-supply-operations-dashboard/scene-3-quality-and-supply-operations-dashboard.md"
+    },
+    {
+      "title": "Scene 4: Regulatory and Quality Signals",
+      "filename": "../../scene-4-regulatory-and-quality-signals/scene-4-regulatory-and-quality-signals.md"
+    },
+    {
+      "title": "Scene 5: Quality Propagation Network",
+      "filename": "../../scene-5-quality-propagation-network/scene-5-quality-propagation-network.md"
+    },
+    {
+      "title": "Scene 6: Cold-Chain Service Coverage",
+      "filename": "../../scene-6-cold-chain-service-coverage/scene-6-cold-chain-service-coverage.md"
+    },
+    {
+      "title": "Scene 7: Clinical Supply Orders and Deviations",
+      "filename": "../../scene-7-clinical-supply-orders-and-deviations/scene-7-clinical-supply-orders-and-deviations.md"
+    },
+    {
+      "title": "Scene 8: Predictive Quality and Supply Analytics",
+      "filename": "../../scene-8-predictive-quality-and-supply-analytics/scene-8-predictive-quality-and-supply-analytics.md"
+    },
+    {
+      "title": "Scene 9: Ask Seer Lifesciences Data",
+      "filename": "../../scene-9-ask-seer-lifesciences-data/scene-9-ask-seer-lifesciences-data.md"
+    },
+    {
+      "title": "Scene 10: Agent Console",
+      "filename": "../../scene-10-agent-console/scene-10-agent-console.md"
+    },
+    {
+      "title": "Conclusion: Business Outcomes",
+      "filename": "../../conclusion/conclusion.md"
+    },
+    {
+      "title": "Download the LiveStack",
+      "filename": "../../download-livestack/download-livestack.md"
+    },
+    {
+      "title": "Need Help?",
+      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+    }
+  ]
+}

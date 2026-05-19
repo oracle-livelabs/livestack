@@ -1,0 +1,66 @@
+{
+  "workshoptitle": "Seer Transport Fleet Logistics LiveStack",
+  "help": "livelabs-help-database_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "filename": "../../introduction/introduction.md"
+    },
+    {
+      "title": "Get Started",
+      "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+    },
+    {
+      "title": "Scene 1: Seer Transport Control Tower",
+      "filename": "../../scene-1-control-tower-welcome/scene-1-control-tower-welcome.md"
+    },
+    {
+      "title": "Scene 2: Seer 26ai Transportation Data Foundation",
+      "filename": "../../scene-2-transportation-data-foundation/scene-2-transportation-data-foundation.md"
+    },
+    {
+      "title": "Scene 3: Fleet Risk and Operations Dashboard",
+      "filename": "../../scene-3-fleet-risk-operations-dashboard/scene-3-fleet-risk-operations-dashboard.md"
+    },
+    {
+      "title": "Scene 4: Shipper, Port, and Lane Signals",
+      "filename": "../../scene-4-shipper-port-lane-signals/scene-4-shipper-port-lane-signals.md"
+    },
+    {
+      "title": "Scene 5: Shipper Signal Network",
+      "filename": "../../scene-5-shipper-signal-network/scene-5-shipper-signal-network.md"
+    },
+    {
+      "title": "Scene 6: Terminal Coverage and Capacity Routing",
+      "filename": "../../scene-6-terminal-coverage-capacity-routing/scene-6-terminal-coverage-capacity-routing.md"
+    },
+    {
+      "title": "Scene 7: Transport Orders and Exception Cases",
+      "filename": "../../scene-7-transport-orders-exception-cases/scene-7-transport-orders-exception-cases.md"
+    },
+    {
+      "title": "Scene 8: Predictive Logistics Risk and Capacity Analytics",
+      "filename": "../../scene-8-predictive-logistics-analytics/scene-8-predictive-logistics-analytics.md"
+    },
+    {
+      "title": "Scene 9: Ask Seer Transport Data",
+      "filename": "../../scene-9-ask-seer-transport-data/scene-9-ask-seer-transport-data.md"
+    },
+    {
+      "title": "Scene 10: Agent Console",
+      "filename": "../../scene-10-agent-console/scene-10-agent-console.md"
+    },
+    {
+      "title": "Conclusion: Business Outcomes",
+      "filename": "../../conclusion/conclusion.md"
+    },
+    {
+      "title": "Download the LiveStack",
+      "filename": "../../download-livestack/download-livestack.md"
+    },
+    {
+      "title": "Need Help?",
+      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "workshoptitle": "Oracle Healthcare Operations LiveStack Guide",
+  "help": "livelabs-help-database_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "filename": "../../introduction/introduction.md"
+    },
+    {
+      "title": "Download and Run the LiveStack",
+      "filename": "../../download-livestack/download-livestack.md"
+    },
+    {
+      "title": "Scene 1: Healthcare Data Foundation",
+      "filename": "../../scene-1-healthcare-data-foundation/scene-1-healthcare-data-foundation.md"
+    },
+    {
+      "title": "Scene 2: Operations Command Center",
+      "filename": "../../scene-2-operations-command-center/scene-2-operations-command-center.md"
+    },
+    {
+      "title": "Scene 3: Quality and Capacity Signals",
+      "filename": "../../scene-3-quality-and-capacity-signals/scene-3-quality-and-capacity-signals.md"
+    },
+    {
+      "title": "Scene 4: Care Pathway Graph",
+      "filename": "../../scene-4-care-pathway-graph/scene-4-care-pathway-graph.md"
+    },
+    {
+      "title": "Scene 5: Care Logistics Map",
+      "filename": "../../scene-5-care-logistics-map/scene-5-care-logistics-map.md"
+    },
+    {
+      "title": "Scene 6: Care Service Requests",
+      "filename": "../../scene-6-care-service-requests/scene-6-care-service-requests.md"
+    },
+    {
+      "title": "Scene 7: Risk and Capacity Analytics",
+      "filename": "../../scene-7-risk-and-capacity-analytics/scene-7-risk-and-capacity-analytics.md"
+    },
+    {
+      "title": "Scene 8: Ask Healthcare Data",
+      "filename": "../../scene-8-ask-healthcare-data/scene-8-ask-healthcare-data.md"
+    },
+    {
+      "title": "Scene 9: Healthcare AI Agent Console",
+      "filename": "../../scene-9-healthcare-ai-agent-console/scene-9-healthcare-ai-agent-console.md"
+    },
+    {
+      "title": "Scene 10: Bring Your Own Healthcare Data",
+      "filename": "../../scene-10-bring-your-own-healthcare-data/scene-10-bring-your-own-healthcare-data.md"
+    },
+    {
+      "title": "Conclusion: Business Outcomes",
+      "filename": "../../conclusion/conclusion.md"
+    },
+    {
+      "title": "Need Help?",
+      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+    }
+  ]
+}

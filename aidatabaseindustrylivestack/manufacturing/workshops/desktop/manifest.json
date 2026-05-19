@@ -1,0 +1,62 @@
+{
+  "workshoptitle": "Manufacturing Operations LiveStack Demo Guide",
+  "help": "livelabs-help-database_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "filename": "../../introduction/introduction.md"
+    },
+    {
+      "title": "Download and Run the LiveStack",
+      "filename": "../../download-livestack/download-livestack.md"
+    },
+    {
+      "title": "Scene 1: Control Tower Orientation",
+      "filename": "../../scene-1-control-tower-orientation/scene-1-control-tower-orientation.md"
+    },
+    {
+      "title": "Scene 2: Manufacturing Data Foundation",
+      "filename": "../../scene-2-manufacturing-data-foundation/scene-2-manufacturing-data-foundation.md"
+    },
+    {
+      "title": "Scene 3: Operations Command Center",
+      "filename": "../../scene-3-operations-command-center/scene-3-operations-command-center.md"
+    },
+    {
+      "title": "Scene 4: Production Signal Monitor",
+      "filename": "../../scene-4-production-signal-monitor/scene-4-production-signal-monitor.md"
+    },
+    {
+      "title": "Scene 5: Supplier and Signal Network Graph",
+      "filename": "../../scene-5-supplier-and-signal-network-graph/scene-5-supplier-and-signal-network-graph.md"
+    },
+    {
+      "title": "Scene 6: Plant Capacity and Routing Map",
+      "filename": "../../scene-6-plant-capacity-and-routing-map/scene-6-plant-capacity-and-routing-map.md"
+    },
+    {
+      "title": "Scene 7: Work Orders and JSON Duality",
+      "filename": "../../scene-7-work-orders-and-json-duality/scene-7-work-orders-and-json-duality.md"
+    },
+    {
+      "title": "Scene 8: OML Demand and Capacity Analytics",
+      "filename": "../../scene-8-oml-demand-and-capacity-analytics/scene-8-oml-demand-and-capacity-analytics.md"
+    },
+    {
+      "title": "Scene 9: Ask Manufacturing Data",
+      "filename": "../../scene-9-ask-manufacturing-data/scene-9-ask-manufacturing-data.md"
+    },
+    {
+      "title": "Scene 10: Manufacturing Agent Console",
+      "filename": "../../scene-10-manufacturing-agent-console/scene-10-manufacturing-agent-console.md"
+    },
+    {
+      "title": "Conclusion: Business Outcomes",
+      "filename": "../../conclusion/conclusion.md"
+    },
+    {
+      "title": "Need Help?",
+      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+    }
+  ]
+}

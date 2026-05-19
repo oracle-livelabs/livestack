@@ -1,0 +1,70 @@
+{
+  "workshoptitle": "State and Local Government Service Operations LiveStack",
+  "help": "livelabs-help-database_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "filename": "../../introduction/introduction.md"
+    },
+    {
+      "title": "Get Started",
+      "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+    },
+    {
+      "title": "Scene 1: SLED Operations Brief",
+      "filename": "../../scene-1-sled-operations-brief/scene-1-sled-operations-brief.md"
+    },
+    {
+      "title": "Scene 2: Seer 26ai Data Foundation",
+      "filename": "../../scene-2-seer-26ai-data-foundation/scene-2-seer-26ai-data-foundation.md"
+    },
+    {
+      "title": "Scene 3: Public Service Command Center",
+      "filename": "../../scene-3-public-service-command-center/scene-3-public-service-command-center.md"
+    },
+    {
+      "title": "Scene 4: Resident Demand Signals",
+      "filename": "../../scene-4-resident-demand-signals/scene-4-resident-demand-signals.md"
+    },
+    {
+      "title": "Scene 5: Community Partner Network",
+      "filename": "../../scene-5-community-partner-network/scene-5-community-partner-network.md"
+    },
+    {
+      "title": "Scene 6: Service Access and Coverage Map",
+      "filename": "../../scene-6-service-access-and-coverage-map/scene-6-service-access-and-coverage-map.md"
+    },
+    {
+      "title": "Scene 7: Service Request Workbench",
+      "filename": "../../scene-7-service-request-workbench/scene-7-service-request-workbench.md"
+    },
+    {
+      "title": "Scene 8: Demand and Capacity Analytics",
+      "filename": "../../scene-8-demand-and-capacity-analytics/scene-8-demand-and-capacity-analytics.md"
+    },
+    {
+      "title": "Scene 9: Ask Seer Operations Data",
+      "filename": "../../scene-9-ask-seer-operations-data/scene-9-ask-seer-operations-data.md"
+    },
+    {
+      "title": "Scene 10: Public Service AI Agent Console",
+      "filename": "../../scene-10-public-service-ai-agent-console/scene-10-public-service-ai-agent-console.md"
+    },
+    {
+      "title": "Scene 11: Use Your Own Public Service Data",
+      "filename": "../../scene-11-use-your-own-public-service-data/scene-11-use-your-own-public-service-data.md"
+    },
+    {
+      "title": "Conclusion: Business Outcomes",
+      "filename": "../../conclusion/conclusion.md"
+    },
+    {
+      "title": "Download the LiveStack",
+      "filename": "../../download-livestack/download-livestack.md"
+    },
+    {
+      "title": "Need Help?",
+      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+    }
+  ]
+}

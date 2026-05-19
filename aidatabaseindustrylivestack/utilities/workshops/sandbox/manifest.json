@@ -1,0 +1,66 @@
+{
+  "workshoptitle": "Energy and Utilities Grid Operations LiveStack",
+  "help": "livelabs-help-database_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Get Started",
+      "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
+    },
+    {
+      "title": "Introduction",
+      "filename": "../../introduction/introduction.md"
+    },
+    {
+      "title": "Scene 1: Welcome and Demo Flow",
+      "filename": "../../scene-1-welcome-and-demo-flow/scene-1-welcome-and-demo-flow.md"
+    },
+    {
+      "title": "Scene 2: Schema and Data Model",
+      "filename": "../../scene-2-schema-and-data-model/scene-2-schema-and-data-model.md"
+    },
+    {
+      "title": "Scene 3: Command Center Dashboard",
+      "filename": "../../scene-3-command-center-dashboard/scene-3-command-center-dashboard.md"
+    },
+    {
+      "title": "Scene 4: Outage Signal Trends and Vector Search",
+      "filename": "../../scene-4-outage-signal-trends-and-vector-search/scene-4-outage-signal-trends-and-vector-search.md"
+    },
+    {
+      "title": "Scene 5: Field Crew Graph",
+      "filename": "../../scene-5-field-crew-graph/scene-5-field-crew-graph.md"
+    },
+    {
+      "title": "Scene 6: Service Restoration Map",
+      "filename": "../../scene-6-service-restoration-map/scene-6-service-restoration-map.md"
+    },
+    {
+      "title": "Scene 7: Service Tickets and JSON Duality",
+      "filename": "../../scene-7-service-tickets-and-json-duality/scene-7-service-tickets-and-json-duality.md"
+    },
+    {
+      "title": "Scene 8: OML Analytics",
+      "filename": "../../scene-8-oml-analytics/scene-8-oml-analytics.md"
+    },
+    {
+      "title": "Scene 9: Ask Your Data",
+      "filename": "../../scene-9-ask-your-data/scene-9-ask-your-data.md"
+    },
+    {
+      "title": "Scene 10: Agent Console and Operational Actions",
+      "filename": "../../scene-10-agent-console-and-operational-actions/scene-10-agent-console-and-operational-actions.md"
+    },
+    {
+      "title": "Conclusion: Business Outcomes",
+      "filename": "../../conclusion/conclusion.md"
+    },
+    {
+      "title": "Take it home",
+      "filename": "../../download-livestack/download-livestack.md"
+    },
+    {
+      "title": "Need Help?",
+      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+    }
+  ]
+}

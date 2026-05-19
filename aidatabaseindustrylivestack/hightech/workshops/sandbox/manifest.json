@@ -1,0 +1,66 @@
+{
+  "workshoptitle": "High Tech Product Intelligence LiveStack Guide",
+  "help": "livelabs-help-database_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Get Started",
+      "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
+    },
+    {
+      "title": "Introduction",
+      "filename": "../../introduction/introduction.md"
+    },
+    {
+      "title": "Scene 1: Seer Tech Control Tower",
+      "filename": "../../scene-1-seer-tech-control-tower/scene-1-seer-tech-control-tower.md"
+    },
+    {
+      "title": "Scene 2: Seer Tech 26ai Data Foundation",
+      "filename": "../../scene-2-seer-tech-26ai-data-foundation/scene-2-seer-tech-26ai-data-foundation.md"
+    },
+    {
+      "title": "Scene 3: Product Intelligence Command Center",
+      "filename": "../../scene-3-product-intelligence-command-center/scene-3-product-intelligence-command-center.md"
+    },
+    {
+      "title": "Scene 4: Enterprise Buyer Signal Monitor",
+      "filename": "../../scene-4-enterprise-buyer-signal-monitor/scene-4-enterprise-buyer-signal-monitor.md"
+    },
+    {
+      "title": "Scene 5: Developer Ecosystem Graph",
+      "filename": "../../scene-5-developer-ecosystem-graph/scene-5-developer-ecosystem-graph.md"
+    },
+    {
+      "title": "Scene 6: Product Availability and Capacity Map",
+      "filename": "../../scene-6-product-availability-and-capacity-map/scene-6-product-availability-and-capacity-map.md"
+    },
+    {
+      "title": "Scene 7: Solution Orders",
+      "filename": "../../scene-7-solution-orders/scene-7-solution-orders.md"
+    },
+    {
+      "title": "Scene 8: OML Product Intelligence",
+      "filename": "../../scene-8-oml-product-intelligence/scene-8-oml-product-intelligence.md"
+    },
+    {
+      "title": "Scene 9: Ask Seer Tech Data",
+      "filename": "../../scene-9-ask-seer-tech-data/scene-9-ask-seer-tech-data.md"
+    },
+    {
+      "title": "Scene 10: AI Agent Console",
+      "filename": "../../scene-10-ai-agent-console/scene-10-ai-agent-console.md"
+    },
+    {
+      "title": "Conclusion: Business Outcomes",
+      "filename": "../../conclusion/conclusion.md"
+    },
+    {
+      "title": "Take it home",
+      "filename": "../../download-livestack/download-livestack.md"
+    },
+    {
+      "title": "Need Help?",
+      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+    }
+  ]
+}
