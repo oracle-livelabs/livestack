@@ -16,7 +16,7 @@ In this lab, you will:
 ## Task 1: Review the final outcome
 
 1. Return to **Retail Command Center**.
-2. Use the sidebar to revisit **Returns Intelligence**, **Customer Trend Signals**, **Smart Fulfillment Map**, and **Retail AI Agent Console**.
+2. Use the sidebar to revisit **Customer Trend Signals**, **Intelligent Fulfillment Network**, **Unified Order Intelligence**, and **Retail AI Agent Console**.
 3. Summarize what each scene contributed to the final retail operating picture.
 
 Expected result:

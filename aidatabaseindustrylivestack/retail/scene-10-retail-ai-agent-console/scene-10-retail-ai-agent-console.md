@@ -1,4 +1,4 @@
-# Scene 11 Retail AI Agent Console
+# Scene 10 Retail AI Agent Console
 
 ## Introduction
 

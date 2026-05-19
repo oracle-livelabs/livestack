@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab shows how to run the Retail Returns Intelligence LiveStack from the portable package. The stack includes an Oracle database service, ORDS, Ollama, the Express API, and the React frontend served by the app container.
+This lab shows how to run the Seer Sporting Goods Retail LiveStack from the portable package. The stack includes an Oracle database service, ORDS, Ollama, the Express API, and the React frontend served by the app container.
 
 Estimated Time: 30 minutes
 
@@ -131,7 +131,7 @@ Expected result:
 Expected result:
 - Database, ORDS, Ollama, and the app services start successfully.
 - The health route returns a healthy JSON response.
-- The Retail Returns Intelligence UI loads in the browser.
+- The Seer Sporting Goods Retail LiveStack UI loads in the browser.
 
 ## Task 5: Stop the stack when finished
 

@@ -2,43 +2,32 @@
 
 ## Introduction
 
-This opening scene frames the Retail Returns Intelligence story. The welcome page positions PeakGear as a retailer using Oracle AI Database 26ai to connect returns, social trend signals, creator graph analysis, fulfillment routing, OML predictions, natural-language SQL, and AI agent workflows.
+This opening scene orients users to the Seer Sporting Goods Retail LiveStack Demo. The welcome page introduces the retail intelligence story and uses a carousel to preview the eight use cases available in the demo.
 
-Estimated Time: 8 minutes
+Estimated Time: 5 minutes
 
-![Welcome and demo orientation page](images/welcome-and-demo-orientation.png)
+![Welcome page with the use case carousel highlighted](images/welcome-and-demo-orientation.png)
 
 ### Objectives
 
-In this lab, you will:
-- Open the LiveStack welcome page.
-- Review the business story, workload map, and quick routes.
-- Use the first route to begin the guided demo.
+In this scene, you will:
+- Review the use case carousel on the welcome page.
+- Learn which eight retail use cases are available to explore in the LiveStack Demo.
+- Use the carousel controls to move through the use case tiles.
+- Click **Start the demo** to continue to the next page.
 
-## Task 1: Open the welcome page
+## Task 1: Review the use case carousel
 
-1. Open the running LiveStack application.
-2. Confirm the sidebar shows the visible retail scenes.
-3. Review the hero message and the quick routes for **Open Retail Command Center**, **Triage Return Cases**, and **Review Retail Data Foundation**.
+1. Read the three visible use case tiles.
+2. Click the right carousel arrow to move forward.
+3. Continue until you have reviewed all eight use cases.
+4. Use the left carousel arrow if you want to return to earlier tiles.
 
-Expected result:
-- The audience sees a single retail intelligence workspace rather than a disconnected set of demos.
-- The page explains that the same governed Oracle data foundation supports multiple operational views.
+## Task 2: Continue the demo
 
-## Task 2: Set the demo narrative
-
-1. Review the **Converged capabilities** section.
-2. Point out the workload areas: relational, JSON, graph, vector, spatial, and ML/AI.
-3. Click **Open Retail Command Center** to move into the first operational scene.
-
-Expected result:
-- The audience understands the core claim: one Oracle platform supports the retail data and AI workflow.
-- The demo moves from orientation into operational signals.
-
-## Task 3: Why this matters?
-
-The welcome page gives the presenter a clean talk track. It makes the LiveStack about a retail decision loop first, then uses each later scene to reveal the Oracle capability supporting that loop.
+1. Click **Start the demo**.
+2. Confirm the demo moves to the next page.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveStack Team
-- **Last Updated By/Date** - Oracle LiveStack Team, 2026-05-13
+- **Last Updated By/Date** - Oracle LiveStack Team, 2026-05-19

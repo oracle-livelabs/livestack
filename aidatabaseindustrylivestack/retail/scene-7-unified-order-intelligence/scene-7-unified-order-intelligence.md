@@ -1,4 +1,4 @@
-# Scene 8 Customer and Partner Orders
+# Scene 7 Unified Order Intelligence
 
 ## Introduction
 
@@ -6,18 +6,18 @@ This scene demonstrates operational order data through relational tables, JSON r
 
 Estimated Time: 10 minutes
 
-![Customer and partner orders page](images/customer-and-partner-orders.png)
+![Unified order intelligence page](images/customer-and-partner-orders.png)
 
 ### Objectives
 
 In this lab, you will:
-- Open **Customer and Partner Orders**.
+- Open **Unified Order Intelligence**.
 - Inspect order rows, order details, and JSON document views.
 - Explain how the same data supports relational and document access.
 
 ## Task 1: Review the orders workspace
 
-1. Click **Customer and Partner Orders** in the sidebar.
+1. Click **Unified Order Intelligence** in the sidebar.
 2. Review the order table and visible filters.
 3. Select or expand an order row.
 

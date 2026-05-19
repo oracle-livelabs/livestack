@@ -1,4 +1,4 @@
-# Scene 7 Smart Fulfillment Map
+# Scene 6 Intelligent Fulfillment Network
 
 ## Introduction
 
@@ -6,18 +6,18 @@ This scene shows spatial fulfillment intelligence. It combines fulfillment cente
 
 Estimated Time: 10 minutes
 
-![Smart fulfillment map page](images/smart-fulfillment-map.png)
+![Intelligent fulfillment network page](images/smart-fulfillment-map.png)
 
 ### Objectives
 
 In this lab, you will:
-- Open **Smart Fulfillment Map**.
+- Open **Intelligent Fulfillment Network**.
 - Review the fulfillment center and demand overlays.
 - Use customer, product, or routing controls to inspect a spatial decision.
 
 ## Task 1: Open the fulfillment map
 
-1. Click **Smart Fulfillment Map** in the sidebar.
+1. Click **Intelligent Fulfillment Network** in the sidebar.
 2. Review the map, fulfillment centers, inventory alerts, and demand regions.
 3. Inspect the Oracle Spatial badges and SQL evidence.
 
