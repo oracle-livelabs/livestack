@@ -8,7 +8,7 @@ Dashboards like this are difficult to implement when retail data is split across
 
 Oracle AI Database helps address that challenge by keeping operational, analytical, JSON, in-memory, and AI-ready data close to the same governed data foundation. In this scene, the dashboard brings together live retail KPIs, customer signal velocity, product trend data, and product-level detail without sending the user to a different application.
 
-Estimated Time: 12 minutes
+Dashboards like this are difficult to implement when retail data is split across commerce systems, fulfillment platforms, social listening tools, customer service applications, and analytics pipelines. Teams often need copied data, ETL jobs, separate search indexes, and reconciliation logic before a dashboard can show a trustworthy view.
 
 ![Retail Command Center dashboard with KPI cards, charts, and trending products highlighted](images/retail-command-center.png)
 
@@ -61,5 +61,5 @@ The point of this view is to show that the same data can support different appli
 You can move to the next scene.
 
 ## Credits & Build Notes
-- **Author** - Oracle LiveStack Team
-- **Last Updated By/Date** - Oracle LiveStack Team, 2026-05-19
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-19

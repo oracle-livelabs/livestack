@@ -1,3 +1,8 @@
 .github/.DS_Store
 sample-workshop/.DS_Store
 .DS_Store
+sample-workshop/data-load/.DS_Store
+sample-workshop/provision/.DS_Store
+sample-workshop/query/.DS_Store
+sample-workshop/setup/.DS_Store
+sample-workshop/workshops/.DS_Store

@@ -8,7 +8,7 @@ Secure semantic search is difficult to implement when product data, customer con
 
 Oracle AI Database helps address these challenges by keeping vector search, SQL, row-level security, and operational retail data together. In this scene, Oracle AI Database can create embeddings inside the database, so sensitive product and customer signal data does not need to be sent to external AI services or exposed through another processing layer. Oracle Vector Search can embed a business query, compare it against product or post embeddings, and return ranked matches while Oracle security policies continue to govern which data the user can see.
 
-Estimated Time: 12 minutes
+Estimated Time: 10 minutes
 
 ![Customer Trend Signals page with Semantic Product Discovery, Social Trend Intelligence, and the Oracle Internals sidebar collapsed](images/customer-trend-signals.png)
 
@@ -63,5 +63,5 @@ The result view changes from the default feed to vector search results for the q
 You can move to the next scene.
 
 ## Credits & Build Notes
-- **Author** - Oracle LiveStack Team
-- **Last Updated By/Date** - Oracle LiveStack Team, 2026-05-19
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-19
