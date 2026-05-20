@@ -160,6 +160,5 @@ Expected result:
 The download lab makes the LiveStack repeatable. A presenter can start the same Oracle-backed retail story, verify it with a health route, open the same app URL, and shut it down cleanly without rebuilding the demo by hand.
 
 ## Credits & Build Notes
-- **Author** - Oracle LiveStack Team
-- **Last Updated By/Date** - Oracle LiveStack Team, 2026-05-13
-- **Source package** - `livestack-retail.zip`
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-13

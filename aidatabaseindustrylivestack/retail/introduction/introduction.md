@@ -10,6 +10,8 @@ In the demo, Seer Sporting Goods uses Oracle AI Database to connect inventory, p
 
 Estimated Demo Time: 90 minutes
 
+Each scene is designed to take between 5 and 10 minutes.
+
 ![Retail LiveStack welcome page](images/welcome-and-demo-orientation.png)
 
 ### Objectives
@@ -28,7 +30,6 @@ This LiveStack Demo assumes you have:
 
 ## Demo Flow
 
-- Download and run the LiveStack package.
 - Scene 1: Welcome and Demo Orientation.
 - Scene 2: Data Foundation.
 - Scene 3: Retail Command Center.
@@ -39,18 +40,17 @@ This LiveStack Demo assumes you have:
 - Scene 8: Retail OML Analytics.
 - Scene 9: Ask Retail Data.
 - Scene 10: Retail AI Agent Console.
-- Conclusion and business outcomes.
 
 ## Learn More
 
-- Oracle AI Database 26ai documentation
-- Oracle Spatial and Graph documentation
-- Oracle Machine Learning for SQL documentation
-- Oracle REST Data Services documentation
-- Oracle LiveLabs catalog
+- [Oracle AI Database 26ai documentation](https://docs.oracle.com/en/database/oracle/oracle-database/26/index.html)
+- [Oracle AI Agent Memory](https://www.oracle.com/database/ai-agent-memory/)
+- [Oracle AI Vector Search](https://www.oracle.com/database/ai-vector-search/)
+- Oracle Spatial and Graph documentation: [Oracle Spatial](https://docs.oracle.com/en/database/oracle/oracle-database/26/spatl/toc.htm) and [Oracle Property Graph](https://docs.oracle.com/en/database/oracle/property-graph/26.2/index.html)
+- [Oracle Machine Learning for SQL documentation](https://docs.oracle.com/en/database/oracle/machine-learning/oml4sql/tasks.html)
+- [Oracle REST Data Services documentation](https://docs.oracle.com/en/database/oracle/oracle-rest-data-services/25.4/orddg/index.html)
+- [Oracle LiveLabs catalog](https://livelabs.oracle.com/)
 
 ## Credits & Build Notes
-- **Author** - Oracle LiveStack Team
-- **Last Updated By/Date** - Oracle LiveStack Team, 2026-05-19
-- **Source package** - `livestack-retail.zip`
-- **Guide build note** - Screenshots were captured from the deployed Seer Sporting Goods Retail LiveStack.
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-19

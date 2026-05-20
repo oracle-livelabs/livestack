@@ -29,5 +29,5 @@ In this scene, you will:
 2. Confirm the demo moves to the next page.
 
 ## Credits & Build Notes
-- **Author** - Oracle LiveStack Team
-- **Last Updated By/Date** - Oracle LiveStack Team, 2026-05-19
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-19

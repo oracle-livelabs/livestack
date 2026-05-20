@@ -8,7 +8,7 @@ This is difficult to implement when creator data, brand relationships, social po
 
 Oracle AI Database helps address these challenges by modeling creator, brand, product, and post relationships as a property graph over governed retail data. SQL/PGQ graph queries can traverse relationship paths, calculate reach, identify community hubs, and expose influence patterns without moving the data into a separate graph database. The same database security model can continue to govern which graph records each user can see.
 
-Estimated Time: 15 minutes
+Estimated Time: 10 minutes
 
 ![Creator Influence Network page with the graph workspace highlighted](images/creator-influence-network.png)
 
@@ -42,6 +42,8 @@ This is the data point to focus on during the demo: a creator may have a strong 
 
 ## Task 3: Run Influence Reach
 
+![Influence Reach query results](images/influence-reach-results.png)
+
 1. Scroll to **Graph Query Explorer**.
 2. Select **Influence Reach (N-Hop Traversal)**.
 3. Use the default starting handle **@crystal_cleo** and set **Max Hops** to **2**.
@@ -51,6 +53,8 @@ This is the data point to focus on during the demo: a creator may have a strong 
 Focus on the top result. In the current demo dataset, the query returns **16** reachable creators and identifies **@onyx_ava** as the top reachable creator with an influence score of **100** on TikTok. Also notice that **@jade_nina** has more than **4.2M** followers but a lower influence score. This is the point of the graph query: reach is not only about follower count. It is about which creators can be reached through relationship paths and how influential those reachable creators are.
 
 ## Task 4: Run Mutual Connections
+
+![Mutual Connections query results](images/mutual-connections-results.png)
 
 1. Click **Back to queries** if you are still viewing the previous query result.
 2. Select **Mutual Connections (Triangle Pattern)**.
@@ -62,6 +66,8 @@ Focus on **@glow_maya**. The query shows **@glow_maya** as a mutual connector be
 
 ## Task 5: Run Brand Propagation
 
+![Brand Propagation query results](images/brand-propagation-results.png)
+
 1. Click **Back to queries**.
 2. Select **Brand Propagation Network**.
 3. Use the default brand name **UrbanPulse**.
@@ -71,6 +77,8 @@ Focus on **@glow_maya**. The query shows **@glow_maya** as a mutual connector be
 Focus on the strongest propagation path. In the current demo dataset, **@frost_ivy** reaches **@bold_lily** through an **organic** relationship and a **reshared** connection with strength **0.992**. This tells the user which creator-to-creator relationship may carry a brand signal most strongly through the network. A retail team can use this to plan creator activations, brand launches, or follow-up engagement after a social signal starts to spread.
 
 ## Task 6: Run Cross-Platform Bridge Influencers
+
+![Cross-Platform Bridge Influencers query results](images/cross-platform-bridge-results.png)
 
 1. Click **Back to queries**.
 2. Select **Cross-Platform Bridge Influencers**.
@@ -82,7 +90,7 @@ Focus on **@prism_omar**. The query identifies this creator as a YouTube-based b
 
 ## Task 7: Run Community Hub Detection
 
-![Community Hub Detection query results](images/graph-query-results.png)
+![Community Hub Detection query results](images/community-hub-detection-results.png)
 
 1. Click **Back to queries**.
 2. Select **Community Hub Detection (Degree Centrality)**.
@@ -96,5 +104,5 @@ The query runs against the `INFLUENCER_NETWORK` property graph using SQL/PGQ-sty
 You can move to the next scene.
 
 ## Credits & Build Notes
-- **Author** - Oracle LiveStack Team
-- **Last Updated By/Date** - Oracle LiveStack Team, 2026-05-19
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-19

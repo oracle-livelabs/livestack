@@ -4,7 +4,7 @@
 
 This scene prepares the Seer Sporting Goods dataset that powers the rest of the LiveStack Demo. The page loads or restores the governed Oracle AI Database 26ai data foundation, then shows the main data domains and data types used across the retail use cases.
 
-Estimated Time: 7 minutes
+Estimated Time: 5 minutes
 
 ![Data Foundation page with the load action, data carousel, and Oracle Internals sidebar highlighted](images/data-foundation.png)
 
@@ -37,5 +37,5 @@ The load prepares products, customers, orders, returns, customer signals, fulfil
 You can move to the next scene.
 
 ## Credits & Build Notes
-- **Author** - Oracle LiveStack Team
-- **Last Updated By/Date** - Oracle LiveStack Team, 2026-05-19
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-19
