@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "Retail Returns Intelligence LiveStack Guide",
+  "workshoptitle": "Seer Sporting Goods Retail LiveStack Guide",
   "help": "livelabs-help-database_us@oracle.com",
   "tutorials": [
     {
@@ -15,52 +15,40 @@
       "filename": "../../scene-1-welcome-and-demo-orientation/scene-1-welcome-and-demo-orientation.md"
     },
     {
-      "title": "Scene 2: Retail Data Foundation",
-      "filename": "../../scene-2-retail-data-foundation/scene-2-retail-data-foundation.md"
+      "title": "Scene 2: Data Foundation",
+      "filename": "../../scene-2-data-foundation/scene-2-data-foundation.md"
     },
     {
       "title": "Scene 3: Retail Command Center",
       "filename": "../../scene-3-retail-command-center/scene-3-retail-command-center.md"
     },
     {
-      "title": "Scene 4: Returns Intelligence",
-      "filename": "../../scene-4-returns-intelligence/scene-4-returns-intelligence.md"
+      "title": "Scene 4: Customer Trend Signals",
+      "filename": "../../scene-4-customer-trend-signals/scene-4-customer-trend-signals.md"
     },
     {
-      "title": "Scene 5: Customer Trend Signals",
-      "filename": "../../scene-5-customer-trend-signals/scene-5-customer-trend-signals.md"
+      "title": "Scene 5: Creator Influence Network",
+      "filename": "../../scene-5-creator-influence-network/scene-5-creator-influence-network.md"
     },
     {
-      "title": "Scene 6: Creator Community Graph",
-      "filename": "../../scene-6-creator-community-graph/scene-6-creator-community-graph.md"
+      "title": "Scene 6: Intelligent Fulfillment Network",
+      "filename": "../../scene-6-intelligent-fulfillment-network/scene-6-intelligent-fulfillment-network.md"
     },
     {
-      "title": "Scene 7: Smart Fulfillment Map",
-      "filename": "../../scene-7-smart-fulfillment-map/scene-7-smart-fulfillment-map.md"
+      "title": "Scene 7: Unified Order Intelligence",
+      "filename": "../../scene-7-unified-order-intelligence/scene-7-unified-order-intelligence.md"
     },
     {
-      "title": "Scene 8: Customer and Partner Orders",
-      "filename": "../../scene-8-customer-and-partner-orders/scene-8-customer-and-partner-orders.md"
+      "title": "Scene 8: Retail OML Analytics",
+      "filename": "../../scene-8-retail-oml-analytics/scene-8-retail-oml-analytics.md"
     },
     {
-      "title": "Scene 9: Retail OML Analytics",
-      "filename": "../../scene-9-retail-oml-analytics/scene-9-retail-oml-analytics.md"
+      "title": "Scene 9: Ask Retail Data",
+      "filename": "../../scene-9-ask-retail-data/scene-9-ask-retail-data.md"
     },
     {
-      "title": "Scene 10: Ask Retail Data",
-      "filename": "../../scene-10-ask-retail-data/scene-10-ask-retail-data.md"
-    },
-    {
-      "title": "Scene 11: Retail AI Agent Console",
-      "filename": "../../scene-11-retail-ai-agent-console/scene-11-retail-ai-agent-console.md"
-    },
-    {
-      "title": "Conclusion: Business Outcomes",
-      "filename": "../../conclusion/conclusion.md"
-    },
-    {
-      "title": "Take it home",
-      "filename": "../../download-livestack/download-livestack.md"
+      "title": "Scene 10: Retail AI Agent Console",
+      "filename": "../../scene-10-retail-ai-agent-console/scene-10-retail-ai-agent-console.md"
     },
     {
       "title": "Need Help?",
