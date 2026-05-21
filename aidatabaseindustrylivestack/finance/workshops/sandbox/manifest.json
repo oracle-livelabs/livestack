@@ -1,66 +1,62 @@
 {
-  "workshoptitle": "Seer Equity Bank Finance LiveStack",
+  "workshoptitle": "Seer Bank Finance LiveStack Guide",
   "help": "livelabs-help-database_us@oracle.com",
   "tutorials": [
     {
-      "title": "Get Started: Run or Access the LiveStack",
-      "filename": "../../download-livestack/download-livestack.md"
+      "title": "Get Started",
+      "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
     },
     {
       "title": "Introduction",
       "filename": "../../introduction/introduction.md"
     },
     {
-      "title": "Scene 1: Seer 26ai Data Foundation",
-      "filename": "../../scene-1-data-foundation/scene-1-data-foundation.md"
+      "title": "Scene 1: Welcome and Demo Orientation",
+      "filename": "../../scene-1-welcome-and-demo-orientation/scene-1-welcome-and-demo-orientation.md"
     },
     {
-      "title": "Scene 2: Risk & Operations Dashboard",
-      "filename": "../../scene-2-risk-operations-dashboard/scene-2-risk-operations-dashboard.md"
+      "title": "Scene 2: Data Foundation",
+      "filename": "../../scene-2-data-foundation/scene-2-data-foundation.md"
     },
     {
-      "title": "Scene 3: Regulatory & Market Signals",
-      "filename": "../../scene-3-regulatory-market-signals/scene-3-regulatory-market-signals.md"
+      "title": "Scene 3: Risk & Operations Dashboard",
+      "filename": "../../scene-3-risk-operations-dashboard/scene-3-risk-operations-dashboard.md"
     },
     {
-      "title": "Scene 4: Financial Crime Network",
-      "filename": "../../scene-4-financial-crime-network/scene-4-financial-crime-network.md"
+      "title": "Scene 4: Regulatory & Market Signals",
+      "filename": "../../scene-4-regulatory-market-signals/scene-4-regulatory-market-signals.md"
     },
     {
-      "title": "Scene 5: Client Service Coverage",
-      "filename": "../../scene-5-client-service-coverage/scene-5-client-service-coverage.md"
+      "title": "Scene 5: Financial Crime Network",
+      "filename": "../../scene-5-financial-crime-network/scene-5-financial-crime-network.md"
     },
     {
-      "title": "Scene 6: Client Transactions & Cases",
-      "filename": "../../scene-6-client-transactions-cases/scene-6-client-transactions-cases.md"
+      "title": "Scene 6: Client Service Coverage",
+      "filename": "../../scene-6-client-service-coverage/scene-6-client-service-coverage.md"
     },
     {
-      "title": "Scene 7: Predictive Risk & Revenue Analytics",
-      "filename": "../../scene-7-predictive-risk-revenue-analytics/scene-7-predictive-risk-revenue-analytics.md"
+      "title": "Scene 7: Client Transactions & Cases",
+      "filename": "../../scene-7-client-transactions-cases/scene-7-client-transactions-cases.md"
     },
     {
-      "title": "Scene 8: Ask Seer Equity Data",
-      "filename": "../../scene-8-ask-seer-equity-data/scene-8-ask-seer-equity-data.md"
+      "title": "Scene 8: Predictive Risk & Revenue Analytics",
+      "filename": "../../scene-8-predictive-risk-revenue-analytics/scene-8-predictive-risk-revenue-analytics.md"
     },
     {
-      "title": "Scene 9: Agent Console",
-      "filename": "../../scene-9-agent-console/scene-9-agent-console.md"
+      "title": "Scene 9: Ask Seer Bank Data",
+      "filename": "../../scene-9-ask-seer-equity-data/scene-9-ask-seer-equity-data.md"
     },
     {
-      "title": "Scene 10: Use Your Own Data",
-      "filename": "../../scene-10-use-your-own-data/scene-10-use-your-own-data.md"
+      "title": "Scene 10: Agent Console",
+      "filename": "../../scene-10-agent-console/scene-10-agent-console.md"
     },
     {
-      "title": "Conclusion",
-      "filename": "../../conclusion/conclusion.md"
-    },
-    {
-      "title": "Take It Home",
-      "filename": "../../download-livestack/download-livestack.md"
+      "title": "Scene 11: Use Your Own Data",
+      "filename": "../../scene-11-use-your-own-data/scene-11-use-your-own-data.md"
     },
     {
       "title": "Need Help?",
-      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
     }
   ]
 }
