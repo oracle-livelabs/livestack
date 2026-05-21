@@ -8,7 +8,7 @@ This runbook supports the Seer Bank Finance LiveStack Demo. The demo shows how O
 
 In the demo, Seer Bank uses Oracle AI Database to connect financial products, client transactions, regulatory and market signals, fraud networks, service coverage, predictive analytics, conversational data access, and agent-assisted operations. Each scene is designed to help you explain a practical finance challenge and then show how a converged Oracle database capability supports a clearer decision path.
 
-Estimated Demo Time: 95 minutes
+Estimated Demo Time: 90 minutes
 
 Each scene is designed to take between 5 and 10 minutes.
 
@@ -40,7 +40,6 @@ This LiveStack Demo assumes you have:
 - Scene 8: Predictive Risk & Revenue Analytics.
 - Scene 9: Ask Seer Bank Data.
 - Scene 10: Agent Console.
-- Scene 11: Use Your Own Data.
 
 ## Learn More
 

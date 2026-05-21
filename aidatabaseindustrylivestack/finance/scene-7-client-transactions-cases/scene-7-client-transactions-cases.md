@@ -1,45 +1,72 @@
-# Scene 7: Client Transactions & Cases
+# Scene 7 Client Transactions & Cases
 
 ## Introduction
 
-A finance application owner needs transaction data that works for operations teams and modern APIs at the same time. Relational tables are needed for integrity and reporting, while application teams often want document-shaped payloads. This scene shows Oracle JSON Relational Duality views over the same governed transaction data.
+A finance application owner, service operations manager, customer support lead, or partner integration architect uses this page to understand a client transaction from multiple angles. This persona needs a reliable operational view for service teams, a transactional view for case management, an API-friendly document view for applications and partners, and spatial context for service routing.
+
+This is difficult to implement when transaction headers, service line items, client data, service centers, route records, and API payloads are handled in separate systems. Financial institutions often duplicate the same transaction data into a relational database, a document store, a search index, and integration payloads. Each copy creates synchronization risk, stale service answers, and extra engineering work whenever the transaction model changes.
+
+Oracle AI Database helps address these challenges by keeping the transaction record in one governed data platform while exposing it through the shape each workflow needs. Relational tables provide ACID transactions, foreign keys, and operational SQL. JSON Relational Duality Views expose the same transaction as a nested JSON document for application and API use cases. Oracle Spatial adds route and distance context for service visibility, and VPD policies can control which transactions each user can see.
 
 Estimated Time: 10 minutes
 
-![Client Transactions and Cases with a transaction detail expanded](images/orders.png)
+![Client Transactions and Cases list with transaction 112224 highlighted](images/client-transactions-cases.png)
 
 ### Objectives
 
 In this scene, you will:
-- Open **Client Transactions & Cases**.
-- Expand a client transaction.
-- Compare relational, JSON duality, and routing views.
-- Explain why document APIs and relational integrity can share one Oracle source of truth.
+- Review the **Client Transactions & Cases** page and the active transaction workspace.
+- Inspect a specific transaction row in the table.
+- Open the same transaction as relational operational detail.
+- Compare that same transaction with the JSON document returned by `ORDERS_DV`.
+- Review the service route and service-center context for the transaction.
 
-## Task 1: Expand a live transaction
+## Task 1: Review the transaction workspace
 
-1. Click **Client Transactions & Cases**.
-2. Expand transaction `#112224` if it is visible, or expand the first transaction in the table.
-3. Use the verified transaction as your evidence point: order `112224` for **Penelope Mendoza** in Charlotte, North Carolina, completed for $943.89 and routed to **Etna Midwest Specialty Finance Desk**.
-4. Point out the service mix in the expanded transaction, including **Robo Advisory Portfolio Series C**, **AML Screening Package Series C**, **Wire Transfer Service Series B**, **Escrow Account Service**, and **Loan Portfolio Review Series B**.
+1. Click **Client Transactions & Cases** in the sidebar.
+2. Review the VPD banner below the page subtitle. It shows the active demo user and whether the user has full access or a region-filtered transaction view.
+3. Review the status filter and the transaction table.
+4. Focus on transaction **#112224**.
 
-This lets the presenter show a real finance case instead of a generic JSON example.
+In the current demo dataset, transaction **#112224** is for **Penelope Mendoza** in **Charlotte, North Carolina**. It is marked **completed**, contains **5** service line items, totals **$943.89**, and is handled by **Etna Midwest Specialty Finance Desk**. This transaction will be the data point used through the rest of the scene.
 
-## Task 2: Compare relational and JSON views
+## Task 2: Inspect the relational transaction detail
 
-1. In the expanded panel, select **Relational** and review the normalized transaction and line-item fields.
-2. Select **JSON Duality View** and show the `ORDERS_DV` document projection.
-3. Use the live JSON document as evidence: it exposes `_id`, `customerId`, `status`, `total`, `shippingCost`, `demandScore`, `createdAt`, and nested `items`.
+![Relational transaction detail for transaction 112224](images/transaction-relational-detail.png)
 
-The story is that app teams can serve document-shaped APIs while Oracle remains the ACID system of record.
+1. Click transaction **#112224**.
+2. Confirm the **Relational** tab is selected.
+3. Review the client, location, total, service cost, and line-item table.
+4. Review the services in the transaction, such as **Loan Portfolio Review Series B**, **Robo Advisory Portfolio Series C**, **AML Screening Package Series C**, **Escrow Account Service**, and **Wire Transfer Service Series B**.
 
-## Task 3: Review transaction routing context
+This view is useful for operations and service teams because it shows normalized transactional data in a format that is easy to validate. The transaction header, client, financial product, category, quantity, unit price, and line total are connected through relational joins while preserving ACID consistency.
 
-1. Select **Transaction Routing**.
-2. Point out any visible distance, status, processing cost, route, or service-center details.
-3. Explain that transaction routing connects the same order to Oracle Spatial service context from Scene 6.
+## Task 3: Compare the JSON Duality View
+
+![JSON Duality View for transaction 112224](images/transaction-json-duality-view.png)
+
+1. Click **JSON Duality View** in the expanded transaction panel.
+2. Review the source label **ORDERS_DV**.
+3. Review the JSON document for transaction **112224**.
+4. Notice that the document contains the transaction id, client id, status, total, service cost, demand score, created date, nested line items, and metadata.
+
+This is the key point of the page. The JSON document is not a separate copy of the transaction. It is the same transaction data exposed through an Oracle JSON Relational Duality View. Application teams and partner APIs can work with a transaction-shaped JSON document, while operations teams can continue to use relational tables and SQL. Both interfaces read from the same governed transaction model.
+
+## Task 4: Review service route and fulfillment context
+
+![Transaction routing and service-center context for transaction 112224](images/transaction-routing-context.png)
+
+1. Click **Transaction Routing** in the expanded transaction panel.
+2. Review the service center and client locations on the map.
+3. Review the route context below the map: distance, estimated completion time, processing cost, and transaction status.
+4. Review the service route progress timeline.
+
+For transaction **#112224**, the page shows a route from **Etna Midwest Specialty Finance Desk** to **Penelope Mendoza** in **Charlotte, North Carolina**. The transaction is completed, the distance is about **340 miles**, the estimated completion time is about **6.2 hours**, and the processing cost is **$18.69**. This connects the transaction record to service visibility, not just API payloads or transaction totals.
+
+The value of Oracle AI Database is that the same transaction can support client service, operations, partner integration, and route analysis without splitting the story across separate persistence layers. Relational data, JSON Duality documents, spatial distance, route state, and row-level access controls all work from the same connected finance data foundation.
+
+You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-20
-- **Build Notes** - Transaction evidence was verified with `/api/orders/112224` and `/api/orders/112224/duality`.
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-21

@@ -8,6 +8,8 @@ Dashboards like this are difficult to implement when finance data is split acros
 
 Oracle AI Database helps address that challenge by keeping operational, analytical, JSON, in-memory, and AI-ready data close to the same governed data foundation. In this scene, the dashboard brings together live finance KPIs, risk signal velocity, revenue exposure by product category, and product-level detail without sending the user to a different application.
 
+Estimated Time: 10 minutes
+
 ![Risk and Operations Dashboard with KPI cards, charts, and monitored financial products highlighted](images/dashboard.png)
 
 ### Objectives
