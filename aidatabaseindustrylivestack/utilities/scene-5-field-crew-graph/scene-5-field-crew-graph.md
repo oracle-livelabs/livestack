@@ -1,43 +1,61 @@
-# Scene 5 Field Crew Graph
+# Scene 5 Service Restoration Graph
 
 ## Introduction
 
-This scene shows relationship analysis for field crews, service advocates, and propagated grid signals. It uses graph concepts to explain why some signals travel faster or matter more operationally.
+A restoration manager, reliability engineer, asset operations analyst, or data architect uses this page to understand grid relationships that are hard to see in isolated rows. The persona needs to reason across service points, outage events, substations, feeders, meter events, field crews, demand response actions, reliability gaps, and root causes.
 
-Estimated Time: 8 minutes
+This is difficult when relationship analysis requires data movement into a separate graph database or offline notebook. Utility users may know there is a repeat outage risk, but they need to see how service points, assets, crews, root causes, and reliability gaps connect without losing governance.
 
-![Field Crew Graph page showing graph controls and Oracle Internals evidence.](images/scene-05-field-crew-graph.png)
+Oracle AI Database helps address these challenges by supporting graph analysis over the operational utility schema. In this scene, the application exposes service restoration relationships while the sidebar explains the Oracle Property Graph and SQL/PGQ pattern behind the view.
+
+Estimated Time: 10 minutes
+
+![Service Restoration Graph page with graph depth controls and utility restoration nodes](images/scene-05-field-crew-graph.png)
 
 ### Objectives
 
-In this lab, you will:
-- Open the graph workflow and inspect the network controls.
-- Search or select a field crew or influencer node.
-- Run example graph queries to explain propagation paths.
+In this scene, you will:
+- Review the **Service Restoration Graph** workspace.
+- Inspect graph depth controls and the restoration graph node list.
+- Focus on concrete repeat-outage and reliability-gap nodes.
+- Explain how graph relationships help identify connected restoration risk.
+- Connect the user-facing graph to Oracle Property Graph and SQL/PGQ.
 
-## Task 1: Inspect the graph network
+## Task 1: Review the graph workspace
 
-1. Click **Field Crew Graph** in the sidebar.
-2. Use the search box to find a handle, niche, or crew name when graph data is loaded.
-3. Select a node and change the network depth to compare one-hop and multi-hop context.
+1. Click **Service Restoration Graph** in the sidebar.
+2. Review the graph depth controls: **1 Hop**, **2 Hops**, **3 Hops**, **4 Hops**, and **5 Hops**.
+3. Review the search field for service point, outage event, asset, root cause, or field crew lookup.
+4. Review **Restoration Graph Nodes**.
+5. Open or review the **Oracle Internals** sidebar on the right.
 
-Expected result:
-- The graph view focuses on relationship context rather than only individual records.
-- The selected network helps explain who can amplify or resolve an outage signal.
-## Task 2: Run graph examples
+    ![Service Restoration Graph workspace with search, graph depth controls, node list, selected node metrics, and graph canvas highlighted](images/graph-workspace-controls.png)
 
-1. Review the example graph query area.
-2. Select an available example and click its run action.
-3. Compare the result with the visible network and the SQL evidence panel.
+In the captured demo dataset, the page shows **50** restoration graph nodes. Visible nodes include **Feeder Fault on NV-12**, **7-Day Repeat Outage Risk**, **North Valley Critical Pump Station**, **Restoration ETA Outreach Gap**, **North Valley Feeder Lockout OUT-1042**, **Feeder NV-12**, **Regional Field Supervisor Team**, and **AMI Voltage Event 5582**.
 
-Expected result:
-- The audience sees graph traversal as an operator tool, not an abstract model.
-- The Oracle Internals panel highlights SQL/PGQ, GRAPH_TABLE, PGQL traversal, and vertex or edge tables.
+## Task 2: Explore a restoration-risk example
 
-## Task 3: Why this matters?
+1. In the node list, locate **7-Day Repeat Outage Risk** or another high-risk restoration node.
+2. Review the node type, identifier, pathway volume, risk score, and link count.
+3. Compare it with nearby reliability-gap and asset nodes such as **7-Day Repeat Outage Risk**, **Feeder NV-12**, and **North Valley Feeder Lockout OUT-1042**.
+4. Change the graph depth from **1 Hop** to **2 Hops** or **3 Hops** to explain how relationship scope changes.
 
-Outage response depends on relationships: crews, regions, advocates, and signal paths. Graph analysis helps the operator understand influence and propagation while staying in the same database platform.
+    ![Service point restoration-risk node, graph depth control, and graph relationships highlighted](images/restoration-risk-node-example.png)
+
+Use this example to explain why graph context matters. A service point, feeder, substation, meter event, crew, and root cause are more informative together than as independent records. The graph view helps the operator see the restoration pathway as connected evidence.
+
+## Task 3: Explain the Oracle graph pattern
+
+1. Review the **Graph Query Explorer** area.
+2. Review the Oracle Internals content that references property graph and SQL/PGQ.
+3. Explain that the graph is an analysis view over governed utility data rather than a disconnected copy.
+
+    ![Graph relationship canvas, edge type legend, and Graph Query Explorer options highlighted](images/graph-query-explorer.png)
+
+The value of Oracle AI Database is that utility teams can ask relationship-aware questions inside the same governed platform that stores the operational data. That reduces data movement and lets the graph story stay connected to the rest of the demo.
+
+You can move to the next scene.
 
 ## Credits & Build Notes
-- **Author** - Oracle LiveStack Team
-- **Last Updated By/Date** - Oracle LiveStack Team, 2026-05-13
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-26

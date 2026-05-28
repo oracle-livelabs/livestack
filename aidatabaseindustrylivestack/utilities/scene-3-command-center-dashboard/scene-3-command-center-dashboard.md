@@ -1,43 +1,63 @@
-# Scene 3 Command Center Dashboard
+# Scene 3 Grid Operations Command Center
 
 ## Introduction
 
-This scene is the operator command center. It combines service ticket volume, operational value, viral outage signals, high-demand services, and agent actions into a single executive view.
+The Grid Operations Command Center is built for a utility operations leader, control center manager, reliability planner, customer operations lead, or field service coordinator who needs a daily operating view of service demand, operational value, critical signals, watched utility services, and AI-assisted actions. The goal is to see where the service territory is under pressure before the issue becomes a separate outage, customer escalation, or field crew bottleneck.
 
-Estimated Time: 8 minutes
+Dashboards like this are difficult to implement when customer accounts, service points, smart meter events, reliability bulletins, service requests, field crew capacity, and agent activity live in different systems. Teams often need copied extracts, separate BI models, and reconciliation logic before a dashboard can show a trustworthy view.
 
-![Dashboard page showing grid operations KPI cards and command center panels.](images/scene-03-dashboard.png)
+Oracle AI Database helps address that challenge by keeping operational, analytical, JSON, in-memory, and AI-ready data close to the same governed data foundation. In this scene, the dashboard brings together utility KPIs, signal velocity, operational value, and watched services without sending the user to another application.
+
+Estimated Time: 10 minutes
+
+![Grid Operations Command Center with KPI cards, signal velocity, value chart, and watched services](images/scene-03-dashboard.png)
 
 ### Objectives
 
-In this lab, you will:
-- Open the dashboard and read the KPI cards.
-- Refresh the view and inspect signal velocity and high-demand services.
-- Use the Oracle Internals panel to explain the combined SQL workloads.
+In this scene, you will:
+- Review the command center as a utility operations user.
+- Interpret the KPI cards, grid operations signal velocity chart, operational value chart, and watched services table.
+- Change the signal velocity time window.
+- Search or filter watched utility services and supplies.
+- Use the **Oracle Internals** sidebar to explain why this dashboard can stay connected to governed Oracle data.
 
-## Task 1: Open the command center
+## Task 1: Review the command center dashboard
 
-1. Click **Dashboard** in the sidebar.
+1. Click **Grid Operations Command Center** in the sidebar.
 2. Review the KPI cards across the top of the page.
-3. Inspect **Signal Velocity**, **Operational Value by Category**, and **High-Demand Services**.
+3. Review **Grid Operations Signal Velocity**.
+4. Review **Operational Value by Utility Category**.
+5. Review **Watched Services and Supplies - Quality and Capacity Trend**.
 
-Expected result:
-- The command center gives a quick operational health readout.
-- The right panel explains that the dashboard combines relational SQL, JSON, spatial, graph, Select AI, vector, and in-memory workloads.
-## Task 2: Refresh and filter the operational view
+    ![Grid Operations Command Center KPI cards, signal velocity, and service value areas highlighted](images/command-center-kpis-overview.png)
 
-1. Click **Refresh**.
-2. Select a signal velocity window such as **7d** or **30d**.
-3. Search the high-demand services list for a grid service or program term.
+6. Open or review the **Oracle Internals** sidebar on the right.
 
-Expected result:
-- The visible panels update or hold their current empty state if the backend is not connected.
-- With the full stack running, the search narrows high-demand grid services and supports service-planning discussion.
+Use the opening view to frame the command center as a triage surface. The user can see service request volume, operational value, critical reliability signals, watched utility services, and AI activity in one place. In the captured hosted app, the dashboard shows service request volume, more than $4.9M in operational value tracked, 459 critical signals, seven watched utility services, and five completed agent actions.
 
-## Task 3: Why this matters?
+## Task 2: Interpret signal velocity and operational value
 
-The dashboard lets a presenter start from business urgency. It shows how multiple Oracle workloads can answer one command-center question without moving data into separate systems.
+1. Click a signal velocity time range such as **24h**, **48h**, **7d**, **30d**, or **1y**.
+2. Review how the signal chart changes by time bucket.
+3. Review the operational value chart by utility category.
+4. Focus the conversation on utility categories such as advanced metering, distribution automation, reliability, field operations, gas utility, and critical load support.
+
+    ![Signal velocity time controls and operational value chart highlighted](images/signal-velocity-and-operational-value.png)
+
+This is the business story to emphasize: utility users need to know where value, volume, and risk are moving together. A category with high operational value and rising reliability signals may need a different response than a lower-value category with stable capacity.
+
+## Task 3: Review watched services and supplies
+
+1. Scroll to **Watched Services and Supplies**.
+2. Use the watched services search box when rows are available.
+3. Review the table columns for utility service, operator or partner, signal count, network impact, trend, and next step.
+
+    ![Watched services table with search filters and current utility service state highlighted](images/watched-services-and-supplies.png)
+
+The watched services table turns the KPI story into a set of operating decisions. A utility leader can move from "critical signals are high" to the specific service, asset program, field partner, or customer operation that needs review.
+
+You can move to the next scene.
 
 ## Credits & Build Notes
-- **Author** - Oracle LiveStack Team
-- **Last Updated By/Date** - Oracle LiveStack Team, 2026-05-13
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-26

@@ -11,48 +11,48 @@
       "filename": "../../introduction/introduction.md"
     },
     {
-      "title": "Scene 1: Welcome and Demo Flow",
+      "title": "Scene 1: Welcome and Demo Orientation",
       "filename": "../../scene-1-welcome-and-demo-flow/scene-1-welcome-and-demo-flow.md"
     },
     {
-      "title": "Scene 2: Schema and Data Model",
+      "title": "Scene 2: Energy and Utilities Data Foundation",
       "filename": "../../scene-2-schema-and-data-model/scene-2-schema-and-data-model.md"
     },
     {
-      "title": "Scene 3: Command Center Dashboard",
+      "title": "Scene 3: Grid Operations Command Center",
       "filename": "../../scene-3-command-center-dashboard/scene-3-command-center-dashboard.md"
     },
     {
-      "title": "Scene 4: Outage Signal Trends and Vector Search",
+      "title": "Scene 4: Reliability and Load Signal Intelligence",
       "filename": "../../scene-4-outage-signal-trends-and-vector-search/scene-4-outage-signal-trends-and-vector-search.md"
     },
     {
-      "title": "Scene 5: Field Crew Graph",
+      "title": "Scene 5: Service Restoration Graph",
       "filename": "../../scene-5-field-crew-graph/scene-5-field-crew-graph.md"
     },
     {
-      "title": "Scene 6: Service Restoration Map",
+      "title": "Scene 6: Field Crew Logistics Map",
       "filename": "../../scene-6-service-restoration-map/scene-6-service-restoration-map.md"
     },
     {
-      "title": "Scene 7: Service Tickets and JSON Duality",
+      "title": "Scene 7: Utility Service Requests",
       "filename": "../../scene-7-service-tickets-and-json-duality/scene-7-service-tickets-and-json-duality.md"
     },
     {
-      "title": "Scene 8: OML Analytics",
+      "title": "Scene 8: Asset Risk and Capacity Analytics",
       "filename": "../../scene-8-oml-analytics/scene-8-oml-analytics.md"
     },
     {
-      "title": "Scene 9: Ask Your Data",
+      "title": "Scene 9: Ask Utility Data",
       "filename": "../../scene-9-ask-your-data/scene-9-ask-your-data.md"
     },
     {
-      "title": "Scene 10: Agent Console and Operational Actions",
+      "title": "Scene 10: Utilities AI Agent Console",
       "filename": "../../scene-10-agent-console-and-operational-actions/scene-10-agent-console-and-operational-actions.md"
     },
     {
-      "title": "Conclusion: Business Outcomes",
-      "filename": "../../conclusion/conclusion.md"
+      "title": "Scene 11: Bring Your Own Utility Data",
+      "filename": "../../scene-11-bring-your-own-utility-data/scene-11-bring-your-own-utility-data.md"
     },
     {
       "title": "Take it home",

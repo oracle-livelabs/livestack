@@ -1,43 +1,62 @@
-# Scene 6 Service Restoration Map
+# Scene 6 Field Crew Logistics Map
 
 ## Introduction
 
-This scene uses spatial data to plan restoration and capacity routing. The map brings together service depots, service zones, customer risk tiers, demand regions, inventory alerts, and shipment status.
+A field crew logistics manager, outage response lead, distribution operations planner, or customer operations coordinator uses this page to understand where service demand, field crew capacity, supply availability, route coverage, and customer risk intersect. This persona needs a geographic operating view, not just a list of depots.
 
-Estimated Time: 8 minutes
+Location-aware utility decisions are difficult when service points, logistics sites, routes, service zones, density grids, and demand regions live outside the operational data platform. Teams may export to a GIS tool, but then lose the connection to current service requests, capacity levels, access controls, and operational status.
 
-![Service Restoration Map page showing map layers and restoration planning controls.](images/scene-06-restoration-map.png)
+Oracle AI Database helps address these challenges by keeping spatial geometry and operational records together. In this scene, Oracle Spatial powers field crew logistics sites, routes, service zones, service territory demand regions, and proximity context in the same application that manages the rest of the utility data.
+
+Estimated Time: 10 minutes
+
+![Field Crew Logistics Map with spatial layers, logistics priorities, and site table](images/scene-06-restoration-map.png)
 
 ### Objectives
 
-In this lab, you will:
-- Open the restoration map workflow.
-- Toggle spatial layers and compare service coverage.
-- Use the map to explain where restoration capacity or routing pressure appears.
+In this scene, you will:
+- Review the **Field Crew Logistics Map** as a geographic operating view.
+- Interpret the capacity, pending request, and alert cards.
+- Toggle map layers for service points, logistics sites, routes, zones, density, and demand regions.
+- Compare map evidence with the field crew logistics site table.
+- Explain how Oracle Spatial supports location-aware utility decisions.
 
-## Task 1: Review service coverage layers
+## Task 1: Review logistics priorities
 
-1. Click **Service Restoration Map** in the sidebar.
-2. Inspect the map and the layer controls.
-3. Toggle service depots, service zones, customer tiers, H3 density, and demand regions when they are available.
+1. Click **Field Crew Logistics Map** in the sidebar.
+2. Review the stat cards across the top of the page.
+3. Review **Logistics priorities** to the right of the cards.
+4. Review the active user and VPD banner.
 
-Expected result:
-- The map gives the operator a geospatial view of restoration coverage.
-- The right panel explains Oracle Spatial, SDO_GEOMETRY, SDO_DISTANCE, SDO_BUFFER, spatial indexes, and H3 demand grids.
-## Task 2: Use the map for routing discussion
+    ![Field crew logistics priority cards, priority recommendations, and VPD context highlighted](images/logistics-priorities.png)
 
-1. Review **Service Depots** and demand-region panels.
-2. Compare inventory or capacity alerts with the visible geography.
-3. Explain which region should receive attention first and why.
+In the captured demo dataset, the page shows **12** active field crew logistics sites visible to the current user, about **62.8K** available capacity or supply units, **750** pending logistics requests, and **19** active capacity and supply alerts. The priority panel flags high-priority alerts, demand concentration in **Bay Area (SF)** and **New York Metro**, and a recommendation to review capacity and supply alerts before checking route coverage.
 
-Expected result:
-- The operator can connect location, risk, and capacity into a routing decision.
-- With the full stack running, spatial data and forecast joins supply the evidence behind the recommendation.
+## Task 2: Toggle spatial layers
 
-## Task 3: Why this matters?
+1. Review the map and its layer controls.
+2. Toggle **Service Point Tiers**.
+3. Toggle **Field Crew Logistics Sites**, **Field Crew Logistics Routes**, and **Field Crew Logistics Zones**.
+4. Toggle **Service Point Density Grid** and **Service Territory Demand Regions**.
+5. Review how the map changes as layers are added or removed.
 
-Restoration is a location problem as much as a ticket problem. Spatial analysis gives the team a way to balance proximity, capacity, and customer risk.
+    ![Field crew logistics map layer controls, spatial map context, and site table preview highlighted](images/field-crew-logistics-map-layers.png)
+
+The layer controls make the same map useful for different questions. A control center user may start with service territory demand regions and density. A field coordinator may focus on logistics sites and routes. A reliability user may compare service zones with capacity alerts.
+
+## Task 3: Compare site data with the map
+
+1. Scroll to the **Field Crew Logistics Sites** table.
+2. Review columns for site location, site type, services supported, capacity or supply units, pending requests, alerts, current load, and status.
+3. Focus on visible sites such as **Atlanta Field Dispatch Depot**, **Bay Area DERMS Hub**, **Boston Water Response Center**, **Chicago Midwest Restoration Hub**, and **Dallas Distribution Operations Center**.
+4. Use the table to connect map markers to concrete operating records.
+
+    ![Field crew logistics sites table and selected operating rows highlighted](images/field-crew-logistics-sites-table.png)
+
+The value of Oracle AI Database is that location intelligence is not detached from the operational data. Oracle Spatial can support route coverage and proximity analysis while the application still shows capacity, requests, alerts, and VPD-aware access from the same data foundation.
+
+You can move to the next scene.
 
 ## Credits & Build Notes
-- **Author** - Oracle LiveStack Team
-- **Last Updated By/Date** - Oracle LiveStack Team, 2026-05-13
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-26

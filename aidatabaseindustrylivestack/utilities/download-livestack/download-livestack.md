@@ -2,150 +2,133 @@
 
 ## Introduction
 
-This lab shows how to run the Energy and Utilities Grid Operations LiveStack locally from the portable archive.
+This lab shows how to run the Energy and Utilities Grid Operations LiveStack in your own environment using the portable stack package and Podman Compose. The local stack starts the database, ORDS, Ollama, and web application services so you can replay the same utility operations demo outside the hosted environment.
 
-Estimated Time: 35 minutes
+Estimated Time: 30 minutes
 
 ### Objectives
 
 In this lab, you will:
-- Download the `livestack-utilities.zip` archive.
-- Extract the `utilities` solution folder.
-- Prepare the environment file and align the app port.
-- Start the database, ORDS, Ollama, and application services with Podman Compose.
-- Validate the app health endpoint and stop the stack cleanly.
+- Download the portable Energy and Utilities LiveStack package.
+- Extract the package into a clean working directory.
+- Prepare the runtime environment file.
+- Start the full application stack with Podman Compose.
+- Validate the application health endpoint and open the UI.
+- Stop the stack cleanly after the demo.
 
 ## Task 1: Download the portable package
 
-1. Download `livestack-utilities.zip` from the LiveStack distribution location.
-2. Save it in a working folder dedicated to this demo.
-3. Do not run the stack directly from your Downloads folder.
+1. Download the package named `livestack-utilities.zip` from the provided LiveStack distribution location.
+2. Save the file to your machine.
 
-Expected result:
-- The file `livestack-utilities.zip` is available in a clean working directory.
+The package contains the Energy and Utilities LiveStack application, compose configuration, database initialization assets, and supporting runtime files needed to run the demo locally.
 
-## Task 2: Extract the LiveStack
+## Task 2: Prepare the working directory
 
-### macOS or Linux
+Do not extract or run the stack from your `Downloads` folder. Create a new working directory and move `livestack-utilities.zip` there first.
 
-1. Create and enter a working folder:
-   ```bash
-<copy>
-mkdir -p ~/livestack-utilities-demo
-cd ~/livestack-utilities-demo
-<copy>
-```
+### For macOS or Linux
 
-2. Move or copy the archive into this folder, then extract it:
-   ```bash
-<copy>
-unzip livestack-utilities.zip
-cd utilities
-<copy>
-```
+1. Open a terminal.
 
-### Windows PowerShell
+2. Create a new working directory outside of `Downloads`:
+    ```bash
+    <copy>
+    mkdir -p ~/livestack-utilities-demo
+    </copy>
+    ```
 
-1. Create and enter a working folder:
-   ```powershell
-<copy>
-New-Item -ItemType Directory -Force -Path C:\LiveStack\utilities-demo
-Set-Location C:\LiveStack\utilities-demo
-<copy>
-```
+3. Move into the new working directory:
+    ```bash
+    <copy>
+    cd ~/livestack-utilities-demo
+    </copy>
+    ```
 
-2. Copy the archive into this folder, then extract it:
-   ```powershell
-<copy>
-Expand-Archive -LiteralPath .\livestack-utilities.zip -DestinationPath . -Force
-Set-Location .\utilities
-<copy>
-```
+4. Move the downloaded package from `Downloads` into this directory:
+    ```bash
+    <copy>
+    mv ~/Downloads/livestack-utilities.zip .
+    </copy>
+    ```
 
-Expected result:
-- You are inside the extracted `utilities` folder.
-- The folder contains `compose.yml`, `.env.example`, `.env`, `frontend`, `backend`, `db`, and `scripts`.
+5. Extract the package:
+    ```bash
+    <copy>
+    unzip livestack-utilities.zip
+    </copy>
+    ```
 
-## Task 3: Prepare environment settings
+6. Move into the extracted folder:
+    ```bash
+    <copy>
+    cd utilities
+    </copy>
+    ```
 
-1. If `.env` does not exist, create it from the example file:
-   ```bash
-<copy>
-cp .env.example .env
-<copy>
-```
+7. Create your runtime environment file:
+    ```bash
+    <copy>
+    cp .env.example .env
+    </copy>
+    ```
 
-2. Open `.env` and confirm these app URL settings:
-   ```text
-<copy>
-APP_PORT=8509
-FRONTEND_URL=http://localhost:8509
-<copy>
-```
+Confirm that the folder contains `compose.yml` or `compose.yaml`, `.env`, and the required application files.
 
-3. Leave database, ORDS, Ollama, and schema settings at their demo defaults unless your environment requires different ports.
-
-Expected result:
-- The public application URL is `http://localhost:8509`.
-- The health route is `http://localhost:8509/api/health`.
-- The app container still listens on internal port `3001`.
-
-## Task 4: Start the demo with Podman Compose
+## Task 3: Start the demo with Podman Compose
 
 1. Start the stack:
-   ```bash
-<copy>
-podman compose up -d --build
-<copy>
-```
+    ```bash
+    <copy>
+    podman compose up -d --build
+    </copy>
+    ```
 
 2. Check container status:
-   ```bash
-<copy>
-podman compose ps
-<copy>
-```
+    ```bash
+    <copy>
+    podman compose ps
+    </copy>
+    ```
 
 3. Validate application health:
-   ```bash
-<copy>
-curl http://localhost:8509/api/health
-<copy>
-```
+    ```bash
+    <copy>
+    curl http://localhost:8505/api/health
+    </copy>
+    ```
 
-4. Open the app in a browser:
-   `http://localhost:8509`
+4. Verify Select AI and runtime health:
+    ```bash
+    <copy>
+    curl http://localhost:8505/api/selectai/health
+    </copy>
+    ```
 
-Expected result:
-- The database, ORDS, Ollama, and app services start successfully.
-- The health endpoint returns a healthy response.
-- The Energy and Utilities Grid Operations LiveStack loads in the browser.
+5. Open the demo in a browser:
+    ```text
+    http://localhost:8505
+    ```
 
-## Task 5: Stop the stack when finished
+The UI should load as **Seer Utility Network LiveStack**. The sidebar should show the Energy and Utilities scenes, the active dataset should show demo data, and the Ask Utility Data page should report the configured runtime profile.
+
+## Task 4: Stop the stack when finished
 
 1. Stop and remove the running containers:
-   ```bash
-<copy>
-podman compose down
-<copy>
-```
+    ```bash
+    <copy>
+    podman compose down
+    </copy>
+    ```
 
-2. To remove volumes as well, run this only when you want to reset database state:
-   ```bash
-<copy>
-podman compose down -v
-<copy>
-```
+The local LiveStack is stopped cleanly.
 
-Expected result:
-- The LiveStack is stopped cleanly.
-- Demo volumes remain available unless you chose the `-v` reset command.
+## Task 5: Why this matters?
 
-## Task 6: Why this matters?
-
-The download lab turns the guide into a repeatable field asset. It gives every presenter the same archive name, extracted layout, app URL, health route, startup command, and clean shutdown command.
+1. Use the download lab to turn the guide into a repeatable field asset.
+2. Confirm that every presenter can use the same archive name, extracted layout, app URL, health routes, startup command, and clean shutdown command.
+3. Restore or reset the demo dataset from the application if you need to return the local environment to a known baseline after a custom utility-data walkthrough.
 
 ## Credits & Build Notes
-- **Author** - Oracle LiveStack Team
-- **Last Updated By/Date** - Oracle LiveStack Team, 2026-05-13
-- **Port note** - The README describes `http://localhost:8509`; confirm `.env` uses `APP_PORT=8509` and `FRONTEND_URL=http://localhost:8509` before startup.
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-26
