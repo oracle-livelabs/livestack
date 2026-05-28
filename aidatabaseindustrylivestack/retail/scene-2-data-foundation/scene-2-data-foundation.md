@@ -22,7 +22,6 @@ The load prepares sporting-goods products, brands, customers, orders, service ca
 4. Wait for the progress indicator to finish and review the refreshed record counts.
 
 
-
 ## Task 2: Review what gets loaded
 
 Review what gets loaded to show that the demo uses recognizable retail data: products, customers, orders, returns, inventory, fulfillment locations, customer signals, predictions, and AI action history.
