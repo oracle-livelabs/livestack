@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Retailers are under pressure to make faster decisions while their data is spread across commerce systems, fulfillment networks, customer engagement platforms, social channels, analytics tools, and AI experiments. Merchandising teams need to understand emerging demand before shelves run empty. Operations teams need inventory and fulfillment visibility across regions. Digital teams need order records that work for both transactional systems and API-driven applications. Business users want answers without waiting for custom reports, and leaders want AI recommendations that remain grounded in governed enterprise data.
+Retailers need to make faster decisions while their data is spread across commerce systems, fulfillment networks, customer engagement platforms, social channels, analytics tools, and AI experiments. Merchandising teams need to understand emerging demand before shelves run empty. Operations teams need inventory and fulfillment visibility across regions. Digital teams need order records that work for both transactional systems and API-driven applications. Business users want answers without waiting for custom reports, and leaders want AI recommendations that remain grounded in governed enterprise data.
 
 This runbook supports the Seer Sporting Goods Retail LiveStack Demo. The demo shows how Oracle AI Database 26ai can help retail teams bring those workloads together on one connected data foundation. Instead of splitting relational transactions, JSON documents, graph relationships, spatial analysis, vector search, machine learning, natural-language SQL, and AI agent workflows across separate systems, the LiveStack shows how those capabilities can work against the same governed Oracle data model.
 
@@ -17,17 +17,17 @@ Each scene is designed to take between 5 and 10 minutes.
 ### Objectives
 
 In this LiveStack Demo, you will:
-- Explore the key retail use cases featured in the Seer Sporting Goods demo, from data foundation and command center visibility to fulfillment, order intelligence, analytics, conversational data access, and AI agent workflows.
-- Follow the AllTerrain Hiking Boots story across the eight active retail use cases: sensing demand, explaining influence, moving and selling inventory, forecasting risk, asking live data questions, and guiding AI-assisted actions.
-- Understand how common retail challenges such as fragmented data, fast-changing demand, inventory risk, fulfillment complexity, limited self-service analytics, and governed AI adoption are addressed in the demo flow.
-- See how Oracle AI Database 26ai supports each use case with converged capabilities including relational data, JSON, graph, spatial, vector search, machine learning, natural-language SQL, and AI-assisted operations.
-- Connect each scene to a practical business outcome, so the demo shows not only what the application does, but why the Oracle data platform matters for modern retail.
+
+- See how retailers can reduce lost sales, minimize return exposure, improve fulfillment decisions, and respond faster to changing customer demand using a unified AI-driven retail data platform.
+- Follow the AllTerrain Hiking Boots business journey to understand how teams move from reactive operations to proactive, data-driven decision-making across merchandising, inventory, fulfillment, and customer service.
+- Experience how retailers can identify demand shifts earlier, optimize inventory placement, improve sell-through, forecast operational risk, and accelerate issue resolution through connected intelligence and AI-assisted workflows.
+- Understand how Oracle AI Database 26ai enables faster and more trusted retail decisions by unifying operational, analytical, and AI capabilities within a single converged platform.
+- Learn how conversational analytics, explainable insights, and governed AI agents empower both business users and technical teams to take action faster with confidence and control.
+- Connect each demo scene to measurable retail business outcomes such as higher revenue capture, lower inventory risk, reduced operational friction, improved customer experience, faster analyst productivity, and more scalable AI adoption.
 
 ### Prerequisites
 
-This LiveStack Demo assumes you have:
-- Access to the running Seer Sporting Goods Retail LiveStack.
-- A modern browser open to the application URL.
+Before you begin, confirm that you can open the running Seer Sporting Goods LiveStack in a modern browser. No database or coding knowledge is required to follow the business workflow.
 
 ## Demo Flow
 

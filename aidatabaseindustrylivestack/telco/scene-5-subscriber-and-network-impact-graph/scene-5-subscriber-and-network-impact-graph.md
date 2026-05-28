@@ -1,54 +1,70 @@
-# Scene 5: Subscriber and Network Impact Graph
+# Scene 5 Subscriber and Network Impact Graph
 
 ## Introduction
 
-This scene shows account, advocate, service, case, region, and network-site relationships as an interactive impact graph. It helps Seer Comms explain which subscribers and services are connected to a network issue.
+A network operations analyst, service assurance investigator, enterprise account lead, or care escalation manager uses this page to understand how a subscriber-impact event propagates through services, sites, tickets, accounts, and field crews. This persona is not only asking which incident exists. They need to know which subscribers are affected, which network dependencies matter, which cases are related, and where intervention will reduce the most impact.
+
+This is difficult when subscriber, service, case, site, and crew relationships are split across OSS, BSS, CRM, NOC, and field-service systems. Teams may know that an outage exists, but not how it connects to enterprise accounts, mobile service lines, shared network sites, and open trouble tickets.
+
+Oracle AI Database helps address these challenges with property graph and SQL/PGQ on top of the same governed operational data. In this scene, the graph uses telecom impact entities and relationships to let users explore connected impact and run business-facing graph queries without moving the data into a separate graph-only platform.
 
 Estimated Time: 10 minutes
 
+![Subscriber and Network Impact Graph with impact entities and SQL/PGQ explorer](images/subscriber-and-network-impact-graph.png)
+
 ### Objectives
 
-In this lab, you will:
-- Open the impact graph.
-- Search or select an entity.
-- Explore one-hop and multi-hop relationships.
-- Review the SQL/PGQ and VPD explanation in the Oracle panel.
+In this scene, you will:
+- Review the **Subscriber and Network Impact Graph** workspace.
+- Search for impact entities such as outage events, subscriber clusters, support cases, service lines, and crews.
+- Explore the graph radius around a selected entity.
+- Run SQL/PGQ examples in the **Impact Query Explorer**.
+- Connect the graph result to service assurance investigation.
 
-![Subscriber and Network Impact Graph screen](images/scene-05-graph.png)
+## Task 1: Review the graph workspace
 
-## Task 1: Select an impact entity
+![Impact entity workspace and graph canvas](images/impact-entity-workspace.png)
 
 1. Click **Subscriber and Network Impact Graph** in the sidebar.
-2. Search for an entity, case, or region using the search box.
-3. Select one of the visible network entities.
+2. Review the search field, **Impact Radius** control, **Impact Entities** list, relationship legend, and graph canvas.
+3. Review the metric labels in the selected entity panel: **Affected Subscribers**, **Impact Risk**, **Experience Score**, and **Impact Radius**.
 
-Expected result:
-- The graph centers on the selected entity.
-- The detail panel shows affected count, risk, experience, hop level, and relationship context.
+In the current demo dataset, the graph contains **36** telecom impact entities and **50** telecom graph relationships. The top entities include **Game-day 5G congestion spike**, **Fiber cut affecting enterprise corridor**, and trouble tickets such as **ATL-77109** and **NY-77831**.
 
-## Task 2: Explore relationship depth
+## Task 2: Investigate a high-impact outage event
 
-1. Use the depth controls to switch between available hop levels.
-2. Click **Explore Impact Network** from a node detail panel.
-3. Review the updated graph, node counts, edge counts, and connected context.
+![High-impact outage event detail](images/high-impact-entity.png)
 
-Expected result:
-- The graph expands or refocuses around the selected entity.
-- The operator can explain how an account, service, region, or network site connects to wider subscriber impact.
+1. Search for or select **Game-day 5G congestion spike**.
+2. Review the entity detail panel.
+3. Note the affected subscribers, impact risk, experience score, region, and connected relationships.
+4. Click **Explore** if the graph is not already centered on that entity.
 
-## Task 3: Review graph query evidence
+In the current demo dataset, **Game-day 5G congestion spike** affects **31,200** subscribers, carries **96** impact risk, and has a low **35** experience score. That is the data point to emphasize: the graph lets the operator move from a named event to subscriber impact and connected operational dependencies.
 
-1. Open the graph query explorer area if it is visible.
-2. Select a prepared graph query.
-3. Click the run control and inspect the returned results or SQL evidence.
+## Task 3: Run a SQL/PGQ impact query
 
-Expected result:
-- The scene demonstrates Oracle Property Graph and SQL/PGQ as part of the same application workflow.
+![SQL/PGQ Impact Query Explorer](images/sql-pgq-query-explorer.png)
 
-## Task 4: Why this matters?
+1. Scroll to **SQL/PGQ Impact Query Explorer**.
+2. Select **Subscriber Impact Reach**.
+3. Keep the seed entity **OUT-EVENT-501** and the default max hops.
+4. Click **Run Query**.
+5. Review the query result table.
 
-Network incidents rarely affect only one subscriber. The graph view helps Seer Comms find relationship blast radius and prioritize response using connected context while VPD keeps access aligned to user scope.
+The query traces subscribers, service lines, network sites, cases, and crews reachable from a signal or outage seed. This is useful because the seller can show property graph value in business terms: service assurance teams can identify where an incident touches subscribers, sites, and response teams without leaving Oracle AI Database.
+
+## Task 4: Explain the investigation pattern
+
+Use the completed graph exploration to explain the pattern:
+
+1. Impact entities are stored as governed telecom data.
+2. SQL/PGQ traverses relationships among subscribers, service lines, sites, cases, and crews.
+3. The UI turns graph results into operational labels such as affected subscribers and impact risk.
+4. The graph helps teams prioritize response based on connected impact, not only ticket order.
+
+You can move to the next scene.
 
 ## Credits & Build Notes
-- **Author** - LiveLabs Team
-- **Last Updated By/Date** - LiveLabs Team, 2026-05-13
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-28

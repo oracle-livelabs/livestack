@@ -10,12 +10,7 @@ Estimated Time: 5 minutes
 
 ### Objectives
 
-In this scene, you will:
-- Review how the top panel connects the eight use cases to the AllTerrain Hiking Boots story.
-- Review the use case carousel on the welcome page.
-- Learn which eight retail use cases are available to explore in the LiveStack Demo.
-- Use the carousel controls to move through the use case tiles.
-- Click **Start the demo** to continue to the next page.
+In this scene, you will learn what retail decision the page supports, what evidence the user should inspect, and what action the business may take next.
 
 ## Task 1: Review the AllTerrain story and use case carousel
 
