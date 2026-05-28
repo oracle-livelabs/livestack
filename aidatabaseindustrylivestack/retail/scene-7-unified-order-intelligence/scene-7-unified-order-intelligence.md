@@ -10,7 +10,7 @@ Oracle AI Database helps address these challenges by keeping the order record in
 
 Estimated Time: 10 minutes
 
-![Unified Order Intelligence order list with order 276764 highlighted](images/unified-order-intelligence.png)
+![Unified Order Intelligence order list with order 334424 highlighted](images/unified-order-intelligence.png)
 
 ### Objectives
 
@@ -26,42 +26,42 @@ In this scene, you will:
 1. Click **Unified Order Intelligence** in the sidebar.
 2. Review the VPD banner below the page subtitle. It shows the active demo user and whether the user has full access or a region-filtered order view.
 3. Review the status filter and the order table.
-4. Focus on order **#276764**.
+4. Focus on order **#334424**.
 
-In the current demo dataset, order **#276764** is for **Penelope Mendoza** in **Charlotte, North Carolina**. It is marked **delivered**, contains **5** line items, totals **$943.89**, and is fulfilled by **Columbus Midwest**. This order will be the data point used through the rest of the scene.
+In the current demo dataset, order **#334424** is for **Penelope Mendoza** in **Charlotte, North Carolina**. It is marked **delivered**, contains **5** line items, totals **$943.89**, and is fulfilled by **Columbus Midwest**. This order will be the data point used through the rest of the scene.
 
 ## Task 2: Inspect the relational order detail
 
-![Relational order detail for order 276764](images/order-relational-detail.png)
+![Relational order detail for order 334424](images/order-relational-detail.png)
 
-1. Click order **#276764**.
+1. Click order **#334424**.
 2. Confirm the **Relational** tab is selected.
 3. Review the customer, location, total, shipping cost, and line-item table.
-4. Review the products in the order, such as **BlueShield Computer Glasses**, **HoloLens Dock**, **Smart Food Scale**, **Artisan Granola Trio**, and **Impact Driver 20V**.
+4. Review the products in the order, such as **BlueShield Training Glasses**, **TrailRun Sport Earbuds**, **Organic Protein Bars 12pk**, **Bike Shop Impact Driver 20V**, and **Smart Grill Thermometer**.
 
 This view is useful for order operations and customer service because it shows normalized transactional data in a format that is easy to validate. The order header, customer, product, brand, category, quantity, unit price, and line total are connected through relational joins while preserving ACID consistency.
 
 ## Task 3: Compare the JSON Duality View
 
-![JSON Duality View for order 276764](images/order-json-duality-view.png)
+![JSON Duality View for order 334424](images/order-json-duality-view.png)
 
 1. Click **JSON Duality View** in the expanded order panel.
 2. Review the source label **ORDERS_DV**.
-3. Review the JSON document for order **276764**.
+3. Review the JSON document for order **334424**.
 4. Notice that the document contains the order id, customer id, status, total, shipping cost, demand score, created date, and nested line items.
 
 This is the key point of the page. The JSON document is not a separate copy of the order. It is the same order data exposed through an Oracle JSON Relational Duality View. Application teams and partner APIs can work with an order-shaped JSON document, while operations teams can continue to use relational tables and SQL. Both interfaces read from the same governed transaction model.
 
 ## Task 4: Review shipment and fulfillment context
 
-![Shipment route and fulfillment context for order 276764](images/order-shipment-route.png)
+![Shipment route and fulfillment context for order 334424](images/order-shipment-route.png)
 
 1. Click **Shipment Route** in the expanded order panel.
 2. Review the fulfillment center and customer locations on the map.
 3. Review the shipment context below the map: distance, estimated transit time, ship cost, and shipment status.
 4. Review the shipment progress timeline.
 
-For order **#276764**, the page shows a route from **Columbus Midwest** to **Penelope Mendoza** in **Charlotte, North Carolina**. The shipment is delivered, the distance is about **340 miles**, the estimated transit time is **6.2 hours**, and the ship cost is **$18.69**. This connects the order record to fulfillment visibility, not just API payloads or order totals.
+For order **#334424**, the page shows a route from **Columbus Midwest** to **Penelope Mendoza** in **Charlotte, North Carolina**. The shipment is delivered, the straight-line spatial distance is about **340 miles**, the estimated transit time is about **6.2 hours**, and the ship cost is **$18.69**. This connects the order record to fulfillment visibility, not just API payloads or order totals.
 
 The value of Oracle AI Database is that the same order can support customer service, order operations, partner integration, and fulfillment analysis without splitting the story across separate persistence layers. Relational data, JSON Duality documents, spatial distance, shipment state, and row-level access controls all work from the same connected retail data foundation.
 
@@ -69,4 +69,4 @@ You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-19
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-28

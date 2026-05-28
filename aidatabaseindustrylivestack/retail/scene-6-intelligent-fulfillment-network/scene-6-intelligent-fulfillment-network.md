@@ -28,7 +28,7 @@ In this scene, you will:
 3. Review the VPD banner below the tiles. It shows which demo user is active and whether the page is using full access or a region-filtered fulfillment view.
 4. Review the map workspace. This is where fulfillment centers, service zones, customer geography, routes, density, and demand regions can be layered together.
 
-In the current demo dataset, the page shows **30** active centers, about **495.7K** units of inventory, **750** pending shipments, and **50** inventory alerts. Use those numbers to set the operational scene: this is not a single warehouse decision, but a network decision across inventory, geography, and active demand.
+In the current demo dataset, the page shows **30** active centers, about **495.7K** units of inventory, **750** pending shipments, and a live set of inventory alerts. Use those numbers to set the operational scene: this is not a single warehouse decision, but a network decision across inventory, geography, and active demand.
 
 ## Task 2: Explore spatial demand and service coverage
 
@@ -54,14 +54,14 @@ This table helps the user move from a map-level network view to a center-level o
 
 ## Task 4: Investigate an inventory alert
 
-![Inventory alert data point for Retro Wave Tee at Portland Pacific](images/inventory-alert-data-point.png)
+![Inventory alert data point for Summit Graphic Training Tee at Portland Pacific](images/inventory-alert-data-point.png)
 
 1. Scroll to **Inventory Alerts - Social Demand Surge**.
 2. Review the top alert rows. Red rows indicate products with a demand signal, while yellow rows indicate low-stock items without the same projected demand pressure.
-3. Focus on **Retro Wave Tee** at **Portland Pacific**.
+3. Focus on **Summit Graphic Training Tee** at **Portland Pacific**.
 4. Interpret the row: **23** units are in stock, predicted demand is **104** units, and the social demand factor is **1.6x**.
 
-This is the data point to emphasize during the demo. The story is that a fashion product is receiving amplified demand signals while one fulfillment center has limited available stock. The operational response could be to replenish Portland Pacific, reroute fulfillment from another center, adjust promotion timing, or alert the merchandising team before the shortage becomes visible to customers.
+This is the data point to emphasize during the demo. The story is that a sporting-goods apparel product is receiving amplified demand signals while one fulfillment center has limited available stock. The operational response could be to replenish Portland Pacific, reroute fulfillment from another center, adjust promotion timing, or alert the merchandising team before the shortage becomes visible to customers.
 
 The value of Oracle AI Database is that the alert is not calculated in isolation. It combines product, brand, inventory, fulfillment center, forecast, and social signal data in one governed data platform, then presents the result in the same interface as spatial coverage and center load.
 
@@ -69,4 +69,4 @@ You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-19
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-28
