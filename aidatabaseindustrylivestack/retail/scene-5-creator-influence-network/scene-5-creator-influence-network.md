@@ -38,7 +38,7 @@ The page helps a retail user move from a flat creator list to a relationship vie
 3. Compare the creator row on the left with the graph on the right. The row tells you the creator's direct business metrics; the graph shows how that creator is connected to the broader community.
 4. Click a node in the graph if you want to inspect another connected creator and understand how the network changes.
 
-This is the data point to focus on during the demo: a creator may have a strong influence score and a meaningful number of links, but the value comes from how those links connect to other creators, platforms, brands, and communities. Oracle Property Graph makes that relationship context queryable, not just visual.
+This is the data point to focus on during the demo: in the current demo dataset, a creator such as **@climb_lily_7** has a **100** influence score, more than **82K** followers, and a multi-hop network that reaches outdoor, training, and sporting-goods communities. Oracle Property Graph makes that relationship context queryable, not just visual.
 
 ## Task 3: Run Influence Reach
 
@@ -46,11 +46,11 @@ This is the data point to focus on during the demo: a creator may have a strong 
 
 1. Scroll to **Graph Query Explorer**.
 2. Select **Influence Reach (N-Hop Traversal)**.
-3. Use the default starting handle **@crystal_cleo** and set **Max Hops** to **2**.
+3. Use **@climb_lily_7** as the starting handle and set **Max Hops** to **2**.
 4. Click **Run Query**.
 5. Review the returned creators.
 
-Focus on the top result. In the current demo dataset, the query returns **16** reachable creators and identifies **@onyx_ava** as the top reachable creator with an influence score of **100** on TikTok. Also notice that **@jade_nina** has more than **4.2M** followers but a lower influence score. This is the point of the graph query: reach is not only about follower count. It is about which creators can be reached through relationship paths and how influential those reachable creators are.
+Focus on the top result. In the current demo dataset, the query returns **25** reachable creators and identifies **@summit_alex_260** as a reachable TikTok creator with an influence score of **100**. This is the point of the graph query: reach is not only about follower count. It is about which creators can be reached through relationship paths and how influential those reachable creators are.
 
 ## Task 4: Run Mutual Connections
 
@@ -58,11 +58,11 @@ Focus on the top result. In the current demo dataset, the query returns **16** r
 
 1. Click **Back to queries** if you are still viewing the previous query result.
 2. Select **Mutual Connections (Triangle Pattern)**.
-3. Replace the default handles with **@travel_vince** and **@drift_tess**.
+3. Replace the default handles with **@hydration_jen_223** and **@cycle_aria_170**.
 4. Click **Run Query**.
 5. Review the mutual connector returned by the graph query.
 
-Focus on **@glow_maya**. The query shows **@glow_maya** as a mutual connector between the two creators, with **875,656** followers, a mutual score of **88.48**, and relationship paths described as **reshared** and **duet**. This helps a retail user identify a bridge creator who could connect two otherwise separate creator paths or communities.
+Focus on **@climb_lily_7**. The query shows **@climb_lily_7** as a mutual connector between the two creators, with **82,123** followers, an influence score of **100**, and relationship paths described as **reshared** and **collaborates**. This helps a retail user identify a bridge creator who could connect two otherwise separate creator paths or communities.
 
 ## Task 5: Run Brand Propagation
 
@@ -74,7 +74,7 @@ Focus on **@glow_maya**. The query shows **@glow_maya** as a mutual connector be
 4. Click **Run Query**.
 5. Review the promoter, reached creator, relationship type, connection type, and strength columns.
 
-Focus on the strongest propagation path. In the current demo dataset, **@frost_ivy** reaches **@bold_lily** through an **organic** relationship and a **reshared** connection with strength **0.992**. This tells the user which creator-to-creator relationship may carry a brand signal most strongly through the network. A retail team can use this to plan creator activations, brand launches, or follow-up engagement after a social signal starts to spread.
+Focus on the strongest propagation path. In the current demo dataset, **@hike_ella_233** reaches **@fit_tyler_134** through an **organic** relationship and a **reshared** connection with strength **0.992**. This tells the user which creator-to-creator relationship may carry a brand signal most strongly through the network. A retail team can use this to plan creator activations, brand launches, or follow-up engagement after a social signal starts to spread.
 
 ## Task 6: Run Cross-Platform Bridge Influencers
 
@@ -86,7 +86,7 @@ Focus on the strongest propagation path. In the current demo dataset, **@frost_i
 4. Click **Run Query**.
 5. Review the platform reach and total connection counts.
 
-Focus on **@prism_omar**. The query identifies this creator as a YouTube-based bridge with an influence score of **100**, reach into **4** platforms, and **8** total cross-platform connections. This result helps show which creators can move demand across platform boundaries rather than staying inside a single social channel.
+Focus on **@fit_jace_477**. The query identifies this creator as a YouTube-based bridge with an influence score of **100**, reach into **4** platforms, and **8** total cross-platform connections. This result helps show which creators can move demand across platform boundaries rather than staying inside a single social channel.
 
 ## Task 7: Run Community Hub Detection
 
@@ -97,7 +97,7 @@ Focus on **@prism_omar**. The query identifies this creator as a YouTube-based b
 3. Click **Run Query**.
 4. Review the returned rows.
 
-Focus on the top result. In the current demo dataset, the query identifies **@travel_dev** as a high-degree community hub with **16** graph connections, **6** edge types, and an average relationship strength of about **0.568**. This result is useful because it shows a graph-based decision signal: the best community hub is not determined only by follower count, but by how many meaningful relationship paths the creator can activate.
+Focus on the top result. In the current demo dataset, the query identifies **@climb_lily_67** as a high-degree community hub with **16** graph connections, **6** edge types, and an average relationship strength of about **0.568**. This result is useful because it shows a graph-based decision signal: the best community hub is not determined only by follower count, but by how many meaningful relationship paths the creator can activate.
 
 The query runs against the `INFLUENCER_NETWORK` property graph using SQL/PGQ-style traversal and aggregation. A retailer can use the same approach to identify creators for launches, detect cross-community amplification paths, or understand where a brand message is likely to spread.
 
@@ -105,4 +105,4 @@ You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-19
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-28

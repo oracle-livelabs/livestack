@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This scene prepares the Seer Sporting Goods dataset that powers the rest of the LiveStack Demo. The page loads or restores the governed Oracle AI Database 26ai data foundation, then shows the main data domains and data types used across the retail use cases.
+This scene prepares the Seer Sporting Goods dataset that powers the rest of the LiveStack Demo. The page loads or restores the governed Oracle AI Database 26ai data foundation, then shows the main data domains and data types used across the AllTerrain Hiking Boots story and the eight active retail use cases.
 
 Estimated Time: 5 minutes
 
@@ -24,7 +24,7 @@ In this scene, you will:
 3. If the dataset is already loaded, click **Restore Demo Data** to reset the demo data to a clean state.
 4. Wait for the progress indicator to finish and review the refreshed record counts.
 
-The load prepares products, customers, orders, returns, customer signals, fulfillment geography, vector embeddings, machine learning outputs, and agent audit history. These records become the shared foundation for every later scene.
+The load prepares sporting-goods products, brands, customers, orders, service cases, customer demand signals, fulfillment geography, vector embeddings, graph relationships, machine learning outputs, and agent audit history. These records become the shared foundation for every later scene.
 
 ## Task 2: Review what gets loaded
 
@@ -38,4 +38,4 @@ You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-19
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-28
