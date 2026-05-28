@@ -6,7 +6,7 @@ A service assurance analytics manager, churn-risk analyst, network capacity plan
 
 This is difficult when predictive work is split across notebooks, exported CSV files, BI extracts, external ML services, and separate operational systems. Telecom teams can lose trust in predictions when model features are stale, scoring jobs run away from the live data, or the explanation behind a forecast is disconnected from the service orders, subscribers, services, and capacity records that business users rely on.
 
-Oracle AI Database helps address these challenges by keeping machine learning close to governed telecom data. Oracle Machine Learning models can be trained, persisted, and scored in the database with `DBMS_DATA_MINING`, `PREDICTION()`, `PREDICTION_PROBABILITY()`, and `CLUSTER_ID()`. Demand surge prediction, retention segmentation, service revenue forecasting, service behavior clustering, and network access risk scoring can run from the same connected data foundation that powers the rest of the LiveStack Demo.
+Oracle AI Database helps address these challenges by keeping machine learning close to governed telecom data. Oracle Machine Learning models can be trained, persisted, and scored in the database with `DBMS_DATA_MINING`, `PREDICTION()`, `PREDICTION_PROBABILITY()`, and `CLUSTER_ID()`. Demand surge prediction, retention segmentation, service revenue forecasting, service behavior clustering, and network access risk scoring can run from the same connected data foundation that powers the rest of the LiveStack Demo. The demand-surge model uses 13 telecom service features, including subscriber signals, service-order activity, service value, and a demand-pressure score.
 
 Estimated Time: 10 minutes
 
@@ -39,9 +39,9 @@ Use this opening view to set the scene: this page is not a separate data science
 1. Stay on the **Demand Surge** tab.
 2. Use the scoring window selector if you want to change the time window, then click **Refresh**.
 3. Review the bar chart and service table.
-4. Focus on the first row, such as **Fixed Wireless Home Internet**.
+4. Focus on a top surge row, such as **Device Upgrade Enrollment** or **Fixed Wireless Home Internet**.
 
-In the current demo dataset, **Fixed Wireless Home Internet** shows **131** recent mentions, **290** recent service orders, **1,008** predicted demand, **90%** demand surge, and about **$70.6K** service revenue opportunity. The same table also shows services such as **Premium International Roaming Pass**, **Device Upgrade Enrollment**, and **Fleet Telematics SIM Pack**. This gives the service assurance user a concrete question to answer: should the provider add capacity, adjust field dispatch, prioritize outreach, or prepare care teams before demand pressure turns into churn?
+In the current demo dataset, **Device Upgrade Enrollment** shows **107** recent mentions, **260** recent service orders, **869** predicted demand, **85.5%** raw demand-surge probability, and about **$47.8K** service revenue opportunity. **Fixed Wireless Home Internet** is also a strong surge example with **131** recent mentions, **287** recent service orders, **966** predicted demand, **85.5%** raw demand-surge probability, and about **$67.6K** service revenue opportunity. The same table also shows services such as **Fleet Telematics SIM Pack**, **Field Technician Evaluation**, and **5G Business Consultation**. This gives the service assurance user a concrete question to answer: should the provider add capacity, adjust field dispatch, prioritize outreach, or prepare care teams before demand pressure turns into churn?
 
 ## Task 3: Filter retention segments
 
@@ -84,8 +84,10 @@ In the current demo dataset, **K = 5** clusters group **32** telecom services. O
 
 1. Click **Access Risk**.
 2. Review the access-risk summary cards.
-3. Scroll to **Capacity Risks by OML Surge Probability**.
+3. Scroll to **Capacity Risks by Demand Surge Probability**.
 4. Focus on a high-risk service and site combination.
+
+In the current demo dataset, the access-risk table uses raw `PREDICTION_PROBABILITY()` values from `DEMAND_SURGE_MODEL` rather than a display-only calibrated score. For example, **Device Upgrade Enrollment** at **Boston Family Plan Support Center** shows **85.5%** demand-surge probability and a critical capacity status with **13** available capacity units. **Fixed Wireless Home Internet** also appears at **Seattle Customer Experience Center** and **Boston Family Plan Support Center** with **85.5%** demand-surge probability and critical capacity status. Use these rows to explain that Oracle AI Database is scoring current demand pressure and then joining that score to live capacity context.
 
 The value of Oracle AI Database is that the access-risk signal combines demand forecasts, service-order patterns, inventory or capacity, subscriber signals, and service data in one governed system. The same data foundation supports predictive scoring, operational joins, and business-facing workflow decisions.
 

@@ -6,7 +6,7 @@ Financial institutions are under pressure to make faster, better-governed decisi
 
 This runbook supports the Seer Bank Finance LiveStack Demo. The demo shows how Oracle AI Database 26ai can help financial-services teams bring those workloads together on one connected data foundation. Instead of splitting relational transactions, JSON documents, graph relationships, spatial analysis, vector search, machine learning, natural-language SQL, and AI agent workflows across separate systems, the LiveStack shows how those capabilities can work against the same governed Oracle data model.
 
-In the demo, Seer Bank uses Oracle AI Database to connect financial products, client transactions, regulatory and market signals, fraud networks, service coverage, predictive analytics, conversational data access, and agent-assisted operations. Each scene is designed to help you explain a practical finance challenge and then show how a converged Oracle database capability supports a clearer decision path.
+In the demo, Seer Bank uses Oracle AI Database to connect financial products, client transactions, fraud and Anti-Money Laundering (AML) signals, regulatory and market monitoring, financial crime networks, client service coverage, predictive risk analytics, governed conversational data access, and agent-assisted operations. The demo follows one financial-intelligence journey: risk signals emerge, products and institutions are tied to exposure, fraud networks reveal connected evidence, service and transaction workflows show operational impact, and analytics, natural-language SQL, and AI agents help teams act from the same governed data foundation.
 
 Estimated Demo Time: 90 minutes
 
@@ -33,13 +33,13 @@ This LiveStack Demo assumes you have:
 - Scene 1: Welcome and Demo Orientation.
 - Scene 2: Data Foundation.
 - Scene 3: Risk & Operations Dashboard.
-- Scene 4: Regulatory & Market Signals.
+- Scene 4: Risk Signal Intelligence.
 - Scene 5: Financial Crime Network.
-- Scene 6: Client Service Coverage.
-- Scene 7: Client Transactions & Cases.
-- Scene 8: Predictive Risk & Revenue Analytics.
-- Scene 9: Ask Seer Bank Data.
-- Scene 10: Agent Console.
+- Scene 6: Client Service & SLA Coverage.
+- Scene 7: Transaction & Case Operations.
+- Scene 8: Predictive Risk, Capacity & Revenue.
+- Scene 9: Governed Data Copilot.
+- Scene 10: AI Operations Agent Console.
 
 ## Learn More
 
@@ -53,4 +53,4 @@ This LiveStack Demo assumes you have:
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-21
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-28

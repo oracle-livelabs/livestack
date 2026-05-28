@@ -16,36 +16,36 @@ Estimated Time: 10 minutes
 
 In this scene, you will:
 - Review the Risk & Operations Dashboard as a risk or operations user.
-- Interpret the KPI cards, risk signal velocity chart, revenue exposure chart, and financial products monitored table.
+- Interpret the KPI cards, risk signal velocity chart, revenue exposure chart, and financial products under risk review table.
 - Click a monitored financial product to inspect service-capacity and signal details.
 - Compare the operational detail view with the **JSON Duality View** to see how the same data can serve multiple application needs.
 
 ## Task 1: Review the risk and operations dashboard
 
 1. Click **Risk & Operations Dashboard** in the sidebar.
-2. Review the KPI cards across the top of the page. These summarize the current operating picture: client transactions, revenue exposure, critical signals, monitored financial products, and AI decisions logged.
+2. Review the KPI cards across the top of the page. These summarize the current operating picture: client transactions, revenue exposure, critical fraud signals, products under risk review, and AI decisions logged.
 3. Review **Risk Signal Velocity**. This chart measures the rate and intensity of regulatory, market, and operational risk activity.
 4. Review **Revenue Exposure by Product Category** to see which finance categories are contributing most to exposure.
 5. Open or review the **Oracle Internals** sidebar on the right. It shows the Oracle AI Database capabilities behind the page, including relational SQL, native JSON, Oracle Spatial, property graph, Select AI, vector search, and the in-memory column store.
 
 Use the dashboard as a triage view. For example, a risk leader may notice elevated signal velocity, then move to the financial products table to see which products and institutions are driving that activity.
 
-## Task 2: Review financial products monitored
+## Task 2: Review financial products under risk review
 
-![Financial products monitored table with a mortgage product row highlighted](images/financial-products-table.png)
+![Financial Products Under Risk Review table with high-severity product rows highlighted](images/financial-products-table.png)
 
-1. Scroll to **Financial Products Monitored**.
+1. Scroll to **Financial Products Under Risk Review**.
 2. Review the product rows. The table ranks monitored financial products by recent regulatory and market signal severity and shows product name, institution, risk events, exposure, risk severity, and risk trend.
-3. Use the search field to search for `Mortgage`.
-4. Click **Adjustable Rate Mortgage Series B**.
+3. Review the highest-risk rows, such as **Secure Document Vault**, **Open Banking API Access Series B**, and **Digital Wallet Account**.
+4. Click **Secure Document Vault**.
 
-The table helps the user move from dashboard-level signals to product-level evidence. A high-ranking product may represent revenue exposure, compliance pressure, underwriting capacity risk, or a client-service action.
+In the current live stack, the table surfaces products such as **Secure Document Vault**, **Open Banking API Access Series B**, and **Digital Wallet Account** with elevated risk severity. The table helps the user move from dashboard-level signals to product-level evidence. A high-ranking product may represent revenue exposure, compliance pressure, underwriting capacity risk, or a client-service action.
 
 ## Task 3: Inspect the financial product detail modal
 
 ![Financial product detail modal](images/financial-product-detail.png)
 
-After you click a product, the detail modal opens. The default **Details** view shows the selected financial product, institution, category, unit price, operational throughput, active processing load, and compliance signal count.
+After you click a product, the detail modal opens. The default **Details** view shows the selected financial product, institution, category, product value metadata, operational throughput, active processing load, and compliance signal count.
 
 Review the service-capacity table to see where the product is supported, which regional operations centers are involved, how much processing capacity is available, and how much active workload is already reserved. Then review the recent compliance and market signals to connect the product's operational status with regulatory or market activity.
 
@@ -64,4 +64,4 @@ You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-21
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-28
