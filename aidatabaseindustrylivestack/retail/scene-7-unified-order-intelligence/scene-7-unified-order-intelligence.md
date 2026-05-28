@@ -2,11 +2,14 @@
 
 ## Introduction
 
-An ecommerce operations manager, customer service lead, order platform owner, or partner integration architect uses this page to understand an order from multiple angles. This persona needs a reliable operational view for customer support, a transactional view for order management, an API-friendly document view for applications and partners, and fulfillment visibility for shipment follow-up.
+**Unified Order Intelligence** gives service, operations, fulfillment, and application teams one consistent order story.
+The same order can be reviewed as operational detail, used as an application-friendly JSON document, and connected to shipment context without creating separate, conflicting copies.
 
-This is difficult to implement when order headers, line items, customer data, fulfillment centers, shipment records, and API payloads are handled in separate systems. Retail teams often duplicate the same order data into a relational database, a document store, a search index, and integration payloads. Each copy creates synchronization risk, stale customer service answers, and extra engineering work whenever the order model changes.
+Retail teams struggle when this information lives in separate tools. That separation makes it harder to act quickly and trust the result.
 
-Oracle AI Database helps address these challenges by keeping the order record in one governed data platform while exposing it through the shape each workflow needs. Relational tables provide ACID transactions, foreign keys, and operational SQL. JSON Relational Duality Views expose the same order as a nested JSON document for application and API use cases. Oracle Spatial adds route and distance context for fulfillment visibility, and VPD policies can control which orders each user can see.
+Oracle AI Database helps address these challenges by keeping the order record in one governed data platform while exposing it through the shape each workflow needs. Relational tables provide ACID transactions, foreign keys, and operational SQL.
+
+JSON Relational Duality Views expose the same order as a nested JSON document for application and API use cases. Oracle Spatial adds route and distance context for fulfillment visibility, and VPD policies can control which orders each user can see.
 
 Estimated Time: 10 minutes
 
@@ -14,14 +17,11 @@ Estimated Time: 10 minutes
 
 ### Objectives
 
-In this scene, you will:
-- Review the **Unified Order Intelligence** page and the active order workspace.
-- Inspect a specific order row in the table.
-- Open the same order as relational operational detail.
-- Compare that same order with the JSON document returned by `ORDERS_DV`.
-- Review the shipment route and fulfillment context for the order.
+In this scene, you will learn what retail decision the page supports, what evidence the user should inspect, and what action the business may take next.
 
 ## Task 1: Review the order workspace
+
+Review the order workspace to confirm both order visibility and access control. Retailers need fast order insight, but users should only see the orders they are allowed to view.
 
 1. Click **Unified Order Intelligence** in the sidebar.
 2. Review the VPD banner below the page subtitle. It shows the active demo user and whether the user has full access or a region-filtered order view.
@@ -34,27 +34,33 @@ In the current demo dataset, order **#334424** is for **Penelope Mendoza** in **
 
 ![Relational order detail for order 334424](images/order-relational-detail.png)
 
+Inspect the relational order detail to see the precise customer, product, quantity, price, and line-item information that service and operations teams need for validation.
+
 1. Click order **#334424**.
 2. Confirm the **Relational** tab is selected.
 3. Review the customer, location, total, shipping cost, and line-item table.
 4. Review the products in the order, such as **BlueShield Training Glasses**, **TrailRun Sport Earbuds**, **Organic Protein Bars 12pk**, **Bike Shop Impact Driver 20V**, and **Smart Grill Thermometer**.
 
-This view is useful for order operations and customer service because it shows normalized transactional data in a format that is easy to validate. The order header, customer, product, brand, category, quantity, unit price, and line total are connected through relational joins while preserving ACID consistency.
+This view helps service and operations teams answer customer questions quickly because order header, customer, product, quantity, price, and shipment context are visible from one place.
 
 ## Task 3: Compare the JSON Duality View
 
 ![JSON Duality View for order 334424](images/order-json-duality-view.png)
+
+Compare the **JSON Duality View** to show that the same order can support both internal operations and application needs without creating separate versions of the order.
 
 1. Click **JSON Duality View** in the expanded order panel.
 2. Review the source label **ORDERS_DV**.
 3. Review the JSON document for order **334424**.
 4. Notice that the document contains the order id, customer id, status, total, shipping cost, demand score, created date, and nested line items.
 
-This is the key point of the page. The JSON document is not a separate copy of the order. It is the same order data exposed through an Oracle JSON Relational Duality View. Application teams and partner APIs can work with an order-shaped JSON document, while operations teams can continue to use relational tables and SQL. Both interfaces read from the same governed transaction model.
+The key point is that the order is not copied into a separate document store. The same trusted order can be shown as operational detail or as a document shape for applications.
 
 ## Task 4: Review shipment and fulfillment context
 
 ![Shipment route and fulfillment context for order 334424](images/order-shipment-route.png)
+
+Review shipment and fulfillment context to connect the order record to delivery distance, cost, progress, and status. This helps the retailer understand the customer promise behind the order.
 
 1. Click **Shipment Route** in the expanded order panel.
 2. Review the fulfillment center and customer locations on the map.
@@ -63,7 +69,7 @@ This is the key point of the page. The JSON document is not a separate copy of t
 
 For order **#334424**, the page shows a route from **Columbus Midwest** to **Penelope Mendoza** in **Charlotte, North Carolina**. The shipment is delivered, the straight-line spatial distance is about **340 miles**, the estimated transit time is about **6.2 hours**, and the ship cost is **$18.69**. This connects the order record to fulfillment visibility, not just API payloads or order totals.
 
-The value of Oracle AI Database is that the same order can support customer service, order operations, partner integration, and fulfillment analysis without splitting the story across separate persistence layers. Relational data, JSON Duality documents, spatial distance, shipment state, and row-level access controls all work from the same connected retail data foundation.
+Retail teams can see which products, brands, and locations need attention before availability or fulfillment suffers. Oracle AI Database supports this by combining inventory, fulfillment center, forecast, spatial coverage, center load, and social signal data in one governed data platform, then presenting the alert in the same operational interface.
 
 You can move to the next scene.
 

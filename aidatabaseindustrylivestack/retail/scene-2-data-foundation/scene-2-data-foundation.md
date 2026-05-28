@@ -14,17 +14,18 @@ In this scene, you will learn what retail decision the page supports, what evide
 
 ## Task 1: Prepare the dataset
 
-The load prepares sporting-goods products, brands, customers, orders, service cases, customer demand signals, fulfillment geography, vector embeddings, graph relationships, machine learning outputs, and agent audit history. These records become the shared foundation for every later scene.
+Prepare the dataset so every later scene starts from the same trusted retail baseline. This helps the audience compare dashboards, search results, predictions, and AI actions without wondering whether the data changed between scenes.
 
 1. Click **Data Foundation** in the sidebar.
 2. In **Prepare the Dataset**, click **Load Demo Data**.
 3. If the dataset is already loaded, click **Restore Demo Data** to reset the demo data to a clean state.
 4. Wait for the progress indicator to finish and review the refreshed record counts.
 
+These records give every later scene a shared business context, so product demand, inventory risk, order activity, and AI actions can be explained together. 
 
 ## Task 2: Review what gets loaded
 
-Review what gets loaded to show that the demo uses recognizable retail data: products, customers, orders, returns, inventory, fulfillment locations, customer signals, predictions, and AI action history.
+Review **What Gets Loaded** to show that the demo uses recognizable retail data: products, customers, orders, returns, inventory, fulfillment locations, customer signals, predictions, and AI action history.
 
 1. Scroll to **What Gets Loaded**.
 2. Read the three visible carousel tiles.
