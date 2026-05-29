@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The **Network Experience Operations Center** helps telecom teams answer a daily service-assurance question: **where is subscriber experience under pressure right now?* The page brings together service orders, revenue exposure, subscriber signals, demand-pressure services, dispatches, and AI-assisted interventions so teams can decide where to investigate first.
+The **Network Experience Operations Center** helps telecom teams answer a daily service-assurance question: *where is subscriber experience under pressure right now?* The page brings together service orders, revenue exposure, subscriber signals, demand-pressure services, dispatches, and AI-assisted interventions so teams can decide where to investigate first.
 
 Dashboards like this are difficult to implement when telecom data is split across OSS, BSS, NOC tools, care systems, outage portals, field dispatch systems, and analytics pipelines. Teams often need copied data, ETL jobs, separate search indexes, and reconciliation logic before a dashboard can show a trustworthy view.
 
