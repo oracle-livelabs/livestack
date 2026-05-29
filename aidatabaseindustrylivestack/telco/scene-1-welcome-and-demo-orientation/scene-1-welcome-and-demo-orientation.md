@@ -2,27 +2,22 @@
 
 ## Introduction
 
-This opening scene orients users to the Seer Comms Telecom Operations Intelligence LiveStack Demo. The welcome page summarizes the eight active use cases in the top panel and connects each one to the South Florida 5G demand-surge scenario, then uses a carousel to preview the same use cases in more detail.
+This opening scene frames the demo around a **South Florida 5G** demand-surge story. The top panel and carousel show how the use cases connect into one service-assurance journey: demand pressure appears, subscriber signals explain urgency, network and field views show impact, service orders capture response, predictive assurance quantifies risk, and AI-assisted workflows recommend next actions.
 
-Estimated Time: 5 minutes
+Estimated Time: **5 minutes**
 
 ![Welcome page with the South Florida 5G demand-surge story and use case carousel](images/welcome-and-demo-orientation.png)
 
 ### Objectives
 
-In this scene, you will:
-- Review how the top panel connects the eight use cases to the South Florida 5G demand-surge story.
-- Review the use case carousel on the welcome page.
-- Learn which eight telecom use cases are available to explore in the LiveStack Demo.
-- Use the carousel controls to move through the use case tiles.
-- Click **Start the demo** to continue to the next page.
+In this scene, you will learn what telecom decision the page supports, what evidence the user should inspect, and what action the team may take next.
 
 ## Task 1: Review the South Florida 5G demand-surge story
 
 ![Eight connected use cases in the top panel](images/use-case-summary.png)
 
-1. Review **How the 8 use cases connect** in the top panel. It connects each page to the same operational journey: demand pressure appears, subscriber signals explain urgency, graph and spatial views show impact, service orders and field work respond, predictive assurance scores risk, and AI-assisted teams act.
-2. Read the eight numbered use case summaries. The point is to make the demo easy to tell as one connected telecom service-assurance story rather than eight disconnected pages.
+1. Review the **South Florida 5G** demand-surge story first so the audience understands the full service-assurance journey. The scenario connects demand pressure, subscriber urgency, graph impact, field capacity, service orders, predictive risk, and AI-assisted action into one narrative.
+2. Use the welcome page to make the demo feel like one connected telecom service-assurance story, not eight separate feature stops.
 3. Read the three visible use case tiles in **Core Mobile Service Assurance Use Cases**.
 4. Click the right carousel arrow to move forward.
 5. Continue until you have reviewed all eight use cases.
@@ -31,6 +26,8 @@ In this scene, you will:
 ## Task 2: Continue the demo
 
 ![Start the demo button](images/start-demo-button.png)
+
+After the audience understands the **South Florida 5G** demand-surge storyline, continue to **Data Foundation** to prepare the governed telecom dataset that powers the rest of the demo.
 
 1. Click **Start the demo**.
 2. Confirm the demo moves to **Data Foundation**.
