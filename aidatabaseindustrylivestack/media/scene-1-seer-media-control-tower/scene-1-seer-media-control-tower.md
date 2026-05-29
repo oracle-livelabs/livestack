@@ -2,44 +2,56 @@
 
 ## Introduction
 
-This scene orients the user to the Seer Media LiveStack. The opening screen frames Oracle AI Database 26ai as the platform behind media data products, audience signals, graph and spatial analytics, vector search, REST access, and natural-language SQL.
+This opening scene orients users to the Seer Media LiveStack Demo. The welcome page introduces the Midnight Harbor launch story and uses a carousel to preview the Media and Entertainment use cases available in the demo.
 
-Estimated Time: 8 minutes
+The page is useful at the start of a customer walkthrough because it frames the demo as a connected media operations story rather than a set of isolated product features. A studio, streaming platform, sports network, game publisher, or ad-sales team can see how the same Oracle data foundation supports launch planning, audience engagement, rights capacity, content monetization, and AI-assisted actions.
 
-![Seer Media Control Tower](images/seer-media-control-tower.png)
+Estimated Time: 5 minutes
+
+![Seer Media welcome page with Midnight Harbor launch story](images/seer-media-control-tower.png)
 
 ### Objectives
 
-In this lab, you will:
-- Open the Seer Media landing scene.
-- Identify the major Oracle capability areas.
-- Use the primary actions to move into the data model, dashboard, or Ask Data workflow.
+In this scene, you will:
+- Review the Media and Entertainment welcome page.
+- Explore the use case carousel for the Midnight Harbor launch story.
+- Identify the major workflows available in the LiveStack Demo.
+- Click **Start the demo** to continue to the data foundation page.
 
-## Task 1: Open the control tower
+## Task 1: Review the launch story
 
-1. Open the running LiveStack application.
-2. Confirm the header says **One platform for media data, audience signals, and AI.**
-3. Review the workflow stages and the capability cards.
+1. Open the running Seer Media LiveStack application.
+2. Review the headline **Media & Entertainment intelligence on one governed Oracle data platform**.
+3. Read the opening copy about Seer Media and the Midnight Harbor premiere weekend.
+4. Explain that the demo connects studios, streamers, sports media teams, game publishers, ad-sales teams, and operations teams on one governed platform.
 
-Expected result:
-- The landing scene explains the end-to-end Seer Media story.
-- The user sees the main entry points: data model, dashboard, and Ask Data.
+    ![Seer Media control tower overview with launch story and primary action highlighted](images/launch-story-callout.png)
 
-## Task 2: Use the primary navigation
+Callout 1 highlights the Midnight Harbor launch narrative. Callout 2 highlights the primary action that moves the user into the guided demo.
 
-1. Click **Explore Data Model**.
-2. Return to the landing scene from the left navigation.
-3. Click **Start Dashboard**.
-4. Return again and click **Ask Your Data**.
+Use this page to set the audience's expectation. The demo will show how content operations, audience insight, monetization, rights capacity, and AI analytics can share the same Oracle AI Database 26ai foundation.
 
-Expected result:
-- The app changes scenes without leaving the single application shell.
-- Each click moves to a real workflow backed by the same Oracle data foundation.
+## Task 2: Review the use case carousel
 
-## Task 3: Why this matters?
+1. Scroll to **Key Media & Entertainment Use Cases Featured**.
+2. Review the visible carousel cards for **Launch Operations Command Center**, **Audience Momentum & Safety Signals**, and **Creator & Community Graph**.
+3. Click the right carousel arrow to review the remaining use case groups.
+4. Use the carousel dots or arrows to return to the first group if needed.
 
-The opening scene keeps the demo from feeling like disconnected point features. It establishes the business narrative: Seer Media can run content intelligence, engagement analysis, operational coverage, predictive analytics, and agent-assisted decisions on one governed Oracle-backed platform.
+    ![Media use case carousel with launch, audience, and creator workflows](images/use-case-carousel.png)
+
+The carousel introduces the full media operating model: launch KPIs, campaign performance, audience momentum, content demand, trust and safety signals, creator influence, rights capacity, campaign requests, predictive forecasts, conversational data access, and agent-assisted actions.
+
+## Task 3: Continue the demo
+
+1. Click **Start the demo**.
+
+    ![Welcome page Start the demo button](images/start-the-demo-button.png)
+
+2. Confirm the demo moves to **Data Foundation**.
+
+Use this transition to explain that the welcome page is the orientation layer. The next scene prepares the governed Seer Media dataset that powers every later workflow.
 
 ## Credits & Build Notes
-- **Author** - Oracle LiveStack Team
-- **Last Updated By/Date** - Oracle LiveStack Team, 2026-05-13
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-29

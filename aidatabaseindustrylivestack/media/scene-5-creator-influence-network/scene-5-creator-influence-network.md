@@ -2,53 +2,65 @@
 
 ## Introduction
 
-This scene demonstrates Oracle Property Graph and SQL/PGQ style exploration for media creator relationships. The user can search creators, change network depth, inspect connected nodes, and run example graph queries.
+A creator partnership lead, social programming manager, campaign strategist, or data architect uses this page to understand media relationships that are hard to see in isolated rows. The persona needs to reason across creators, fan communities, studios, labels, platforms, content assets, reposts, collaborations, mentions, and campaign influence paths.
+
+This is difficult when relationship analysis requires data movement into a separate graph database or offline notebook. Media users may know there is a creator or community opportunity, but they need to see how influence connects to content propagation, creator partnerships, and audience reach without losing governance.
+
+Oracle AI Database helps address these challenges by supporting graph analysis over the operational media schema. In this scene, the application exposes creator and community relationships while the implementation reference explains the Oracle Property Graph and SQL/PGQ pattern behind the view.
 
 Estimated Time: 10 minutes
 
-![Creator Influence Network](images/creator-influence-network.png)
+![Creator Influence Network with creator list and graph workspace](images/creator-influence-network.png)
 
 ### Objectives
 
-In this lab, you will:
-- Search and select a creator.
-- Explore a graph neighborhood.
-- Run a graph query and inspect the SQL evidence.
+In this scene, you will:
+- Review the **Creator & Community Graph** workspace.
+- Inspect graph depth controls and the creator node list.
+- Focus on a concrete creator-influence example.
+- Explain how graph relationships help identify connected audience reach.
+- Connect the user-facing graph to Oracle Property Graph and SQL/PGQ.
 
-## Task 1: Select a creator network
+## Task 1: Review the graph workspace
 
-1. Open **Creator Influence Network**.
-2. Use the search box labeled **Search creator, platform, or niche...**.
-3. Select a creator from the creator list.
-4. Change the graph depth using the depth controls.
+1. Click **Creator & Community Graph** in the sidebar.
+2. Review the graph depth controls: **1 Hop**, **2 Hops**, **3 Hops**, **4 Hops**, and **5 Hops**.
+3. Review the creator list and influence metrics.
+4. Review the selected creator summary and graph canvas.
 
-Expected result:
-- The graph updates to show the selected creator and connected creators, studios, labels, or audience relationships.
-- The selected depth changes the visible neighborhood.
+    ![Creator graph workspace with depth controls, creator list, metrics, and graph canvas](images/graph-workspace-controls.png)
 
-## Task 2: Run a graph query
+Callout 1 highlights the search, graph-depth controls, and creator list. Callout 2 highlights the selected creator metrics and the rendered creator relationship graph.
 
-1. Locate the SQL/PGQ query explorer.
-2. Select an example query.
-3. Click **Run Query**.
-4. Expand **Show SQL** if available.
+In the current seeded dataset, the page shows **50** visible creators in the list. Visible examples include **@fanbase_020**, **@streaming_482**, **@premiere_461**, **@fanbase_440**, **@sportsreel_419**, and **@fastchannel_398**. The selected creator **@fanbase_020** has about **170.4K** followers, an influence score around **82.6**, **13** connections, and a connected creator neighborhood.
 
-Expected result:
-- The result table shows graph-derived creator or reach information.
-- The SQL block shows how Oracle graph queries are grounded in database objects rather than a separate graph store.
+## Task 2: Explore a creator-network example
 
-## Task 3: Inspect the Oracle internals
+1. Select a creator such as **@retention_314**.
+2. Review the platform, niche, follower count, influence score, engagement, and connection count.
+3. Change graph depth from **1 Hop** to **2 Hops** or **3 Hops**.
+4. Review how the visible neighborhood changes as the relationship scope expands.
 
-1. Open or review **How Oracle Powers This**.
-2. Note the property graph badges, vertex and edge tables, influence scoring, and region filtering.
+    ![Selected creator node and connected community network](images/creator-node-network-example.png)
 
-Expected result:
-- The user can explain how creator influence is represented as graph relationships and queried with Oracle.
+Callout 1 highlights the selected **@retention_314** creator row and hop control. Callout 2 highlights the recalculated creator network for that selection.
 
-## Task 4: Why this matters?
+Use this example to explain why graph context matters. A creator, platform, studio, label, fan community, and content campaign are more informative together than as independent records. The graph view helps the operator see influence as connected evidence.
 
-Media companies make programming, campaign, and creator decisions based on relationship context. A graph scene turns individual signals into network evidence, making it easier to identify who can amplify demand and where audience reach may spread next.
+## Task 3: Explain the Oracle graph pattern
+
+1. Scroll to **Graph Query Explorer**.
+2. Review the edge-type legend, graph query area, and SQL/PGQ reference.
+3. Explain that the graph is an analysis view over governed media data rather than a disconnected copy.
+
+    ![Graph Query Explorer and creator relationship evidence](images/graph-query-explorer.png)
+
+Callout 1 highlights relationship evidence and edge context for the selected creator. Callout 2 highlights the SQL/PGQ query templates in **Graph Query Explorer**.
+
+The value of Oracle AI Database is that media teams can ask relationship-aware questions inside the same governed platform that stores the operational data. That reduces data movement and keeps the graph story connected to the rest of the demo.
+
+You can move to the next scene.
 
 ## Credits & Build Notes
-- **Author** - Oracle LiveStack Team
-- **Last Updated By/Date** - Oracle LiveStack Team, 2026-05-13
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-29
