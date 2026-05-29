@@ -1,52 +1,50 @@
-# Higher Education Student Success LiveStack Guide
+# Seer Higher Education Student Success LiveStack Guide
 
 ## Introduction
 
-This workshop is the field runbook for the Higher Education Student Success LiveStack. The demo follows Seer Higher Education as it turns student signals, service requests, capacity, support networks, predictive analytics, and AI-assisted operations into one governed student-success workflow on Oracle AI Database 26ai.
+Higher education teams need to make faster decisions while enrollment, advising, retention, student support, financial aid, advancement, campus operations, and student signals are spread across many systems. The Seer Higher Education LiveStack shows how an institution can bring those signals together, understand where students need help, and move from insight to action with more confidence.
 
-Estimated Demo Time: 1 hour 30 minutes
+This runbook supports the Seer Higher Education Student Success LiveStack Demo. The demo shows how Oracle AI Database 26ai can help higher education teams bring those workloads together on one connected data foundation. Instead of splitting student records, service requests, JSON documents, support networks, campus geography, vector search, machine learning, natural-language SQL, and AI agent workflows across separate systems, the LiveStack shows how those capabilities can work against the same governed Oracle data model.
+
+In the demo, Seer Higher Education uses Oracle AI Database to connect students, academic programs, campus services, advising requests, community and alumni signals, support networks, capacity, predictive analytics, conversational data access, and agent-assisted operations. The demo follows **Campus Shuttle Pass** as the opening service-demand thread: student demand is visible in the command center, signal evidence explains why, service coverage shows where capacity is available, and analytics, natural-language SQL, and AI agents help teams act from the same governed student-success foundation.
+
+Estimated Demo Time: 90 minutes
+
+Each scene is designed to take between 5 and 10 minutes.
+
+![Higher Education LiveStack welcome page](images/welcome-and-demo-orientation.png)
 
 ### Objectives
 
-In this workshop, you will:
-- Walk through each visible scene in the LiveStack application.
-- Use the left navigation and top-bar dataset workflow to operate the demo in the same order a customer would see it.
-- Connect each interaction to a concrete student-success business signal.
-- Inspect the Oracle-backed evidence panels that explain JSON Duality, vector search, graph, spatial, OML, Select AI-style question answering, VPD, ORDS, and agent audit flows.
-- Download and run the portable LiveStack package with Podman Compose.
+In this LiveStack demo, you will see how a college, university, community college, public system, private institution, online learning provider, or student success team can use connected data and AI-assisted workflows to improve enrollment, retention, advising, student support, service access, and institutional performance.
 
 ### Prerequisites
 
-This workshop assumes you have:
-- Access to the running Higher Education Student Success LiveStack.
-- A browser open to the application URL.
-- For the local run lab, Podman or a compatible Compose runtime with enough resources for Oracle Database Free, ORDS, Ollama, and the Node application.
-- The package `livestack-highered.zip` when replaying the LiveStack outside the hosted demo.
+Before you begin, confirm that you can open the running Seer Higher Education LiveStack in a modern browser. No database or coding knowledge is required to follow the business workflow.
 
-## Workshop Flow
+## Demo Flow
 
-- Scene 1: Seer 26ai Student Success Foundation.
-- Scene 2: Student Success Command Center.
-- Scene 3: Student Need Signals.
-- Scene 4: Student Support Network.
-- Scene 5: Campus Service Coverage.
-- Scene 6: Student Requests and Cases.
-- Scene 7: Predictive Student Success Analytics.
-- Scene 8: Ask Seer Higher Ed Data.
-- Scene 9: Student Success Agent Console.
-- Scene 10: Use Your Own Student Success Data.
-- Conclusion and business outcomes.
-- Download the LiveStack and run the portable stack with Podman Compose.
+- Scene 1: Welcome and Demo Orientation.
+- Scene 2: Data Foundation.
+- Scene 3: Student Success Command Center.
+- Scene 4: Student Intent and Support Signals.
+- Scene 5: Advisor, Program, and Support Network.
+- Scene 6: Campus Service Coverage.
+- Scene 7: Student Requests and Cases.
+- Scene 8: Predictive Student Success Analytics.
+- Scene 9: Ask Seer Higher Ed Data.
+- Scene 10: Student Success Agent Console.
 
 ## Learn More
 
-- Oracle AI Database 26ai for converged data, AI, graph, spatial, vector, and in-database machine learning patterns.
-- Oracle REST Data Services for database-backed application APIs.
-- Oracle JSON Relational Duality Views for document-shaped application data over normalized tables.
-- Oracle Virtual Private Database for transparent row-level security.
+- [Oracle AI Database 26ai documentation](https://docs.oracle.com/en/database/oracle/oracle-database/26/index.html)
+- [Oracle AI Agent Memory](https://www.oracle.com/database/ai-agent-memory/)
+- [Oracle AI Vector Search](https://www.oracle.com/database/ai-vector-search/)
+- Oracle Spatial and Graph documentation: [Oracle Spatial](https://docs.oracle.com/en/database/oracle/oracle-database/26/spatl/toc.htm) and [Oracle Property Graph](https://docs.oracle.com/en/database/oracle/property-graph/26.2/index.html)
+- [Oracle Machine Learning for SQL documentation](https://docs.oracle.com/en/database/oracle/machine-learning/oml4sql/tasks.html)
+- [Oracle REST Data Services documentation](https://docs.oracle.com/en/database/oracle/oracle-rest-data-services/25.4/orddg/index.html)
+- [Oracle LiveLabs catalog](https://livelabs.oracle.com/)
 
 ## Credits & Build Notes
-- **Author** - Oracle LiveStack Team
-- **Last Updated By/Date** - Oracle LiveStack Team, 2026-05-13
-- **Source Bundle** - `livestack-highered.zip`
-- **Screenshot Source** - Captured from the running LiveStack at `http://158.178.155.39:8505`.
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-29

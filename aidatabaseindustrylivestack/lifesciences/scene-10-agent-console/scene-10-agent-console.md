@@ -1,46 +1,75 @@
-# Scene 10 Agent Console
-
-## Introduction
-
-The Agent Console shows AI-assisted operational teams for regulatory and quality signals, cold-chain service routing, and clinical supply value. It combines an Ollama runtime with Oracle SQL and PL/SQL tools and writes actions into audit tables.
-
-Estimated Time: 10 minutes
-
-![Agent Console screenshot](images/agent-console.png)
-
-### Objectives
-
-In this lab, you will:
-- Ask an agent runtime question.
-- Use example prompts to route the question to the right specialist team.
-- Review actions, events, tool history, and audit evidence.
-
-## Task 1: Ask an agent question
-
-1. Select **Agent Console**.
-2. Choose a runtime profile if more than one is available.
-3. Click an example prompt or enter a question such as `Which critical products have low inventory and need allocation review?`.
-4. Click **Send**.
-
-Expected result:
-- The agent runtime responds with an operational recommendation or analysis.
-- The recommendation is connected to Oracle SQL or PL/SQL tool execution rather than a detached chat response.
-
-## Task 2: Review audit evidence
-
-1. Inspect the action, event, team history, or tool history panels after an agent cycle or question has run.
-2. Compare the recommendation to the related inventory, routing, quality signal, or order data shown elsewhere in the app.
-3. Use the Oracle information panel to explain the agent teams and audit tables.
-
-Expected result:
-- The audience sees how AI recommendations can be traced through actions and events.
-- The scene demonstrates an agent workflow that can be explained, reviewed, and governed.
-
-## Task 3: Why this matters?
-
-AI agents in regulated settings need traceability. This scene shows how an assistant-style workflow can still leave evidence through Oracle-backed tools, JSON events, and audit records.
-
-## Credits & Build Notes
-- **Author** - LiveLabs Team
-- **Last Updated By/Date** - LiveLabs Team, 2026-05-13
-- **Source LiveStack** - livestack-lifesciences.zip
+# Scene 10 Governed Agent Console
+
+## Introduction
+
+**Governed Agent Console** shows how AI-assisted workflows can answer regulated supply questions while keeping Oracle data, SQL tools, and action logging visible. The page routes user questions to agent paths for quality signals, cold-chain service routing, and clinical supply exposure.
+
+This is difficult to implement in a regulated environment because AI recommendations need traceability. Teams need to know which question was asked, which tool path was used, what data was returned, and whether the action was logged for later review.
+
+Oracle AI Database helps address these challenges by keeping agent tools close to governed operational data. In this LiveStack Demo, the agent runtime reasons over the question, Oracle SQL and PL/SQL tools retrieve or act on data, and the app records auditable activity.
+
+Estimated Time: 10 minutes
+
+![Governed Agent Console workspace with runtime, example questions, and recent actions highlighted](images/agent-console.png)
+
+### Objectives
+
+In this scene, you will learn what life sciences decision the page supports, what evidence the user should inspect, and what action the business may take next.
+
+## Task 1: Review the agent console workspace
+
+![Governed Agent Console overview with runtime profile, example questions, and recent actions highlighted](images/agent-console.png)
+
+Review the workspace to show how AI-assisted operations can remain tied to governed data and audit evidence.
+
+1. Click **Governed Agent Console** in the sidebar.
+2. Review the runtime profile selector in the top right.
+3. Review the example questions in the chat panel.
+4. Review **Recent Agent Actions** below the chat panel.
+
+The page helps the seller explain governed AI as an operational assistant, not an untraceable chatbot.
+
+## Task 2: Run the clinical supply exposure agent question
+
+![Agent response with clinical supply exposure table and tool badges highlighted](images/agent-clinical-supply-response.png)
+
+Run a question that connects natural language, agent routing, SQL tooling, and returned clinical supply data.
+
+1. Click **Ask** on **Show clinical supply exposure by regulated product category**.
+2. Review the agent response at the top of the chat output.
+3. Review the clinical supply exposure table.
+4. Review the tool badges below the response.
+
+In the current demo dataset, the agent summarizes the last **30** days: **1,514** orders, **$40,329,169** revenue, **31.0%** signal-driven exposure, and **1,066** unique trial sites. The table shows **Cell and Gene Therapy** with **221** orders and **$13,499,200** in revenue.
+
+## Task 3: Interpret the operational story
+
+![Agent response with clinical supply exposure data highlighted](images/agent-clinical-supply-response.png)
+
+Use the response to explain why governed agent workflows matter in regulated operations.
+
+1. The question narrows the analysis to clinical supply exposure by regulated product category.
+2. Oracle data identifies category-level orders and revenue.
+3. The agent summarizes exposure and displays the supporting rows.
+4. The business user can compare whether the exposure pattern aligns with the quality signals, cold-chain coverage, and OML risk views from earlier scenes.
+
+This is the operational point of the scene: the agent is useful because it returns governed evidence and keeps the tool path visible.
+
+## Task 4: Review the agent action audit trail
+
+![Recent Agent Actions audit trail highlighted](images/agent-action-audit-trail.png)
+
+Review the audit trail to show how the demo supports traceability.
+
+1. Scroll to **Recent Agent Actions**.
+2. Review the top action row.
+3. Confirm that the row shows a **chat query** routed to the **commerce** agent path.
+4. Review the confidence value.
+
+This is the compliance moment in the scene. Regulated organizations can use AI-assisted workflows only when the actions, tool paths, and decision evidence are reviewable.
+
+You have completed the Seer Lifesciences Clinical Supply LiveStack Demo.
+
+## Credits & Build Notes
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-29

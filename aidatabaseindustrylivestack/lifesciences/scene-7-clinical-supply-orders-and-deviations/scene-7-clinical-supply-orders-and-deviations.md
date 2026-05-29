@@ -1,45 +1,73 @@
-# Scene 7 Clinical Supply Orders and Deviations
-
-## Introduction
-
-The orders scene focuses on clinical supply transactions, deviations, route status, JSON duality views, and VPD behavior that limits which orders a user can see.
-
-Estimated Time: 10 minutes
-
-![Clinical Supply Orders and Deviations screenshot](images/orders-deviations.png)
-
-### Objectives
-
-In this lab, you will:
-- Filter and page through clinical supply orders.
-- Open an order and compare relational, JSON, and route views.
-- Use the user switcher to discuss row-level security behavior.
-
-## Task 1: Review clinical supply orders
-
-1. Select **Clinical Supply Orders & Deviations**.
-2. Use the status filter to narrow the order table by fulfillment or deviation state.
-3. Use **Prev** and **Next** to page through the order list if enough rows are loaded.
-
-Expected result:
-- The operator sees clinical supply orders with trial site, status, supply value, product, and fulfillment site context.
-- The page provides a transaction-level view of the same regulated operations story introduced in the dashboard.
-
-## Task 2: Open order detail
-
-1. Select an order row when the data-backed stack is running.
-2. Review the **Relational**, **JSON Document**, and **Cold-Chain Route** tabs in the detail panel.
-3. Use the **Driving Route** control when route geometry is available to compare straight-line and routed distance.
-
-Expected result:
-- The audience sees that the order can be inspected as normalized relational data, JSON document data, and spatial route evidence.
-- The route tab turns Oracle Spatial results into operational context for cold-chain delivery decisions.
-
-## Task 3: Why this matters?
-
-Regulated supply teams need both transaction detail and access control. This scene demonstrates how JSON duality, spatial routing, and VPD can support application workflows without creating separate data copies.
-
-## Credits & Build Notes
-- **Author** - LiveLabs Team
-- **Last Updated By/Date** - LiveLabs Team, 2026-05-13
-- **Source LiveStack** - livestack-lifesciences.zip
+# Scene 7 Clinical Supply Orders and Deviations
+
+## Introduction
+
+**Clinical Supply Orders and Deviations** gives clinical supply, quality, and operations users a single order workspace. The page shows order status, trial site, supply exposure, signal linkage, fulfillment site, relational detail, JSON Duality View, and cold-chain route evidence.
+
+This matters because clinical supply teams must trace order and deviation evidence quickly. If an order is signal-linked or a shipment is delayed, the team needs to know the trial site, product lines, fulfillment site, exposure value, and route context without waiting for separate reports.
+
+Oracle AI Database helps address these challenges by keeping relational order data and JSON document access aligned through JSON Relational Duality. Business users can inspect structured order detail, while applications can use the same order as a JSON document.
+
+Estimated Time: 10 minutes
+
+![Clinical Supply Orders table with filter, order rows, and selected order area highlighted](images/orders-deviations.png)
+
+### Objectives
+
+In this scene, you will learn what life sciences decision the page supports, what evidence the user should inspect, and what action the business may take next.
+
+## Task 1: Review the order workspace
+
+![Clinical Supply Orders table with status filter and order rows highlighted](images/orders-deviations.png)
+
+Use the order workspace to show how regulated supply records stay connected to trial sites, signal linkage, and fulfillment evidence.
+
+1. Click **Clinical Supply Orders & Deviations** in the sidebar.
+2. Review the VPD banner below the page subtitle. It shows the active demo user and whether the user has full access or a region-filtered order view.
+3. Review the status filter and the order table.
+4. Focus on order **#72491**.
+
+In the current demo dataset, order **#72491** is a cancelled clinical supply order for **Richard Miller** in **Austin, Texas**, with **$6,360.00** supply exposure and a signal-linked status.
+
+## Task 2: Inspect the relational order detail
+
+![Relational order detail with selected order and line items highlighted](images/order-relational-detail.png)
+
+Open the relational detail to show the operational system of record.
+
+1. Click order **#72491**.
+2. Confirm the **Relational** tab is selected.
+3. Review the trial site, location, supply exposure, shipping cost, and line-item table.
+4. Review the products in the order, including **Endotoxin Removal Cartridge** and **High-Concentration Formulation Buffer**.
+
+This view is useful for clinical supply operations because the order, line items, fulfillment site, and signal linkage are visible in one place.
+
+## Task 3: Compare the JSON Duality View
+
+![Order JSON Duality View with source and JSON document highlighted](images/order-json-duality-view.png)
+
+Compare the JSON Duality View to show that the same trusted order data can support application and API access.
+
+1. Click **JSON Duality View** in the expanded order panel.
+2. Review the source label **ORDERS_DV**.
+3. Review the JSON document for order **72491**.
+4. Notice that the document contains the order id, trial site, status, total, shipping cost, created date, and nested line items.
+
+## Task 4: Review shipment and cold-chain route context
+
+![Cold-chain route tab with shipment context highlighted](images/order-shipment-route.png)
+
+Review the route tab to connect the order to cold-chain execution.
+
+1. Click **Cold-Chain Route** in the expanded order panel.
+2. Review the fulfillment site and trial-site context.
+3. Review the shipment context: route status, distance, estimated transit time, route cost, and delivery timing.
+4. Review the shipment progress timeline if it is visible.
+
+The seller should emphasize traceability: the same order can be shown as relational rows, as a JSON document, and as route evidence without changing the underlying operational source.
+
+You can move to the next scene.
+
+## Credits & Build Notes
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-29
