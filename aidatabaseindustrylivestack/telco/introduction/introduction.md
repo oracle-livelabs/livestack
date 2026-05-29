@@ -1,51 +1,50 @@
-# Seer Comms Network Experience LiveStack
+# Seer Comms Telecom Operations Intelligence LiveStack Guide
 
 ## Introduction
 
-This guide is the runbook for the Seer Comms Network Experience LiveStack. The demo follows a telecommunications operations team as it turns subscriber signals into governed network actions using Oracle AI Database 26ai, ORDS-backed APIs, Oracle Spatial, Property Graph, Vector Search, JSON Relational Duality Views, Oracle Machine Learning, and AI Agent orchestration.
+Communications service providers need to keep subscribers connected while demand pressure, care signals, field capacity, service orders, and churn risk change quickly. The Seer Comms LiveStack shows how those signals can come together so network, care, field, and retention teams can spot service pressure earlier, understand the evidence behind it, and act with more confidence.
 
-Estimated Demo Time: 1 hour 30 minutes
+This runbook supports the Seer Comms Telecom Operations Intelligence LiveStack Demo. The demo shows how Oracle AI Database 26ai helps communications service providers bring service orders, JSON documents, graph relationships, spatial context, vector search, machine learning, natural-language SQL, and AI-assisted action logging together on one governed data foundation.
+
+The demo follows a **South Florida 5G** mobile demand surge. Subscriber signals appear first. Graph and spatial views show who and what is affected. Service orders and field dispatches show the operational response. Predictive models quantify churn and revenue exposure, and AI-assisted workflows recommend governed next actions.
+
+Estimated Demo Time: **90 minutes**
+
+Each scene is designed to take between **5 and 10 minutes**.
+
+![Seer Comms welcome page](images/welcome-and-demo-orientation.png)
 
 ### Objectives
 
-In this workshop, you will:
-- Walk through the visible Seer Comms application scenes in the same order as the sidebar navigation.
-- Use the app controls to inspect subscriber signals, network impact, service-order routing, and capacity pressure.
-- Connect each UI scene to the Oracle data capability behind it.
-- Use the download lab to run the portable LiveStack with Podman Compose.
+In this LiveStack demo, you will see how connected telecom data can help teams detect demand pressure, prioritize subscriber signals, investigate network impact, coordinate field capacity, manage service orders, use predictive assurance, and apply AI with stronger governance.
 
 ### Prerequisites
 
-This workshop assumes you have:
-- Access to the running Seer Comms Network Experience LiveStack.
-- A browser open to the LiveStack application.
-- Basic familiarity with telecom customer care, network operations, or field-service workflows.
-- For the download lab, Podman and Podman Compose available on your workstation.
+Before you begin, confirm that you can open the running Seer Comms Telecom Operations Intelligence LiveStack in a modern browser. No coding or database administration knowledge is required for the guided demo scenes.
 
-## Workshop Flow
+## Demo Flow
 
-- Scene 1: Seer Comms Control Tower.
-- Scene 2: Seer 26ai Data Foundation.
-- Scene 3: Network Experience Dashboard.
-- Scene 4: Subscriber Signal Intelligence.
+- Scene 1: Welcome and Demo Orientation.
+- Scene 2: Data Foundation.
+- Scene 3: Network Experience Operations Center.
+- Scene 4: Subscriber Experience Signal Feed.
 - Scene 5: Subscriber and Network Impact Graph.
-- Scene 6: Coverage and Field Capacity Map.
-- Scene 7: Service Orders and Duality.
-- Scene 8: OML Network Intelligence.
-- Scene 9: Ask Seer Comms Data.
-- Scene 10: Seer Comms AI Agent Console.
-- Conclusion and business outcomes.
-- Download the LiveStack and run the portable stack with Podman Compose.
+- Scene 6: Network Access and Field Operations.
+- Scene 7: Subscriber Service Orders.
+- Scene 8: Predictive Service Assurance.
+- Scene 9: Ask Telecom Operations Data.
+- Scene 10: AI-Assisted Service Assurance.
 
 ## Learn More
 
-- Oracle AI Database 26ai
-- Oracle Machine Learning for SQL
-- Oracle Spatial
-- Oracle Property Graph and SQL/PGQ
-- Oracle JSON Relational Duality Views
-- Oracle REST Data Services
+- [Oracle AI Database 26ai documentation](https://docs.oracle.com/en/database/oracle/oracle-database/26/index.html)
+- [Oracle AI Agent Memory](https://www.oracle.com/database/ai-agent-memory/)
+- [Oracle AI Vector Search](https://www.oracle.com/database/ai-vector-search/)
+- Oracle Spatial and Graph documentation: [Oracle Spatial](https://docs.oracle.com/en/database/oracle/oracle-database/26/spatl/toc.htm) and [Oracle Property Graph](https://docs.oracle.com/en/database/oracle/property-graph/26.2/index.html)
+- [Oracle Machine Learning for SQL documentation](https://docs.oracle.com/en/database/oracle/machine-learning/oml4sql/tasks.html)
+- [Oracle REST Data Services documentation](https://docs.oracle.com/en/database/oracle/oracle-rest-data-services/25.4/orddg/index.html)
+- [Oracle LiveLabs catalog](https://livelabs.oracle.com/)
 
 ## Credits & Build Notes
-- **Author** - LiveLabs Team
-- **Last Updated By/Date** - LiveLabs Team, 2026-05-13
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-28

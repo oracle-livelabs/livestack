@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This scene prepares the Seer Sporting Goods dataset that powers the rest of the LiveStack Demo. The page loads or restores the governed Oracle AI Database 26ai data foundation, then shows the main data domains and data types used across the retail use cases.
+This scene prepares the trusted retail dataset used throughout the demo. Loading or restoring the data gives every later screen the same clean starting point, so dashboards, product signals, fulfillment views, predictions, and AI responses all reflect the same version of the business.
 
 Estimated Time: 5 minutes
 
@@ -10,32 +10,31 @@ Estimated Time: 5 minutes
 
 ### Objectives
 
-In this scene, you will:
-- Load the Seer Sporting Goods demo dataset, or restore it if data is already loaded.
-- Understand what data is prepared for the LiveStack Demo.
-- Review the **What Gets Loaded** carousel to see the data domains and data types used across the demo.
-- Use the expandable **Oracle Internals** sidebar to connect the page to the Oracle AI Database features behind it.
-- Continue to the next scene after the dataset is ready.
+In this scene, you will learn what retail decision the page supports, what evidence the user should inspect, and what action the business may take next.
 
 ## Task 1: Prepare the dataset
+
+Prepare the dataset so every later scene starts from the same trusted retail baseline. This helps the audience compare dashboards, search results, predictions, and AI actions without wondering whether the data changed between scenes.
 
 1. Click **Data Foundation** in the sidebar.
 2. In **Prepare the Dataset**, click **Load Demo Data**.
 3. If the dataset is already loaded, click **Restore Demo Data** to reset the demo data to a clean state.
 4. Wait for the progress indicator to finish and review the refreshed record counts.
 
-The load prepares products, customers, orders, returns, customer signals, fulfillment geography, vector embeddings, machine learning outputs, and agent audit history. These records become the shared foundation for every later scene.
+These records give every later scene a shared business context, so product demand, inventory risk, order activity, and AI actions can be explained together. 
 
 ## Task 2: Review what gets loaded
+
+Review **What Gets Loaded** to show that the demo uses recognizable retail data: products, customers, orders, returns, inventory, fulfillment locations, customer signals, predictions, and AI action history.
 
 1. Scroll to **What Gets Loaded**.
 2. Read the three visible carousel tiles.
 3. Use the right carousel arrow to review the remaining tiles.
 4. Look for the major data types used in the demo: relational tables, JSON duality views, graph relationships, spatial geometry, vector embeddings, machine learning results, and agent audit records.
-5. Expand or review the **Oracle Internals** sidebar on the right. It summarizes why the page matters, which Oracle AI Database capabilities are being used, and which tables or data structures support the scene.
+5. Review the **Oracle Internals** sidebar after the business flow is clear. Use it to connect the visible retail outcome to the database capabilities behind the page.
 
 You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-19
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-28

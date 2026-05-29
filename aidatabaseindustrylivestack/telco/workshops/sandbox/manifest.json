@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "Seer Comms Network Experience LiveStack",
+  "workshoptitle": "Seer Comms Telecom Operations Intelligence LiveStack Guide",
   "help": "livelabs-help-database_us@oracle.com",
   "tutorials": [
     {
@@ -11,52 +11,44 @@
       "filename": "../../introduction/introduction.md"
     },
     {
-      "title": "Scene 1: Seer Comms Control Tower",
-      "filename": "../../scene-1-seer-comms-control-tower/scene-1-seer-comms-control-tower.md"
+      "title": "Scene 1: Welcome and Demo Orientation",
+      "filename": "../../scene-1-welcome-and-demo-orientation/scene-1-welcome-and-demo-orientation.md"
     },
     {
-      "title": "Scene 2: Seer 26ai Data Foundation",
-      "filename": "../../scene-2-seer-26ai-data-foundation/scene-2-seer-26ai-data-foundation.md"
+      "title": "Scene 2: Data Foundation",
+      "filename": "../../scene-2-data-foundation/scene-2-data-foundation.md"
     },
     {
-      "title": "Scene 3: Network Experience Dashboard",
-      "filename": "../../scene-3-network-experience-dashboard/scene-3-network-experience-dashboard.md"
+      "title": "Scene 3: Network Experience Operations Center",
+      "filename": "../../scene-3-network-experience-operations-center/scene-3-network-experience-operations-center.md"
     },
     {
-      "title": "Scene 4: Subscriber Signal Intelligence",
-      "filename": "../../scene-4-subscriber-signal-intelligence/scene-4-subscriber-signal-intelligence.md"
+      "title": "Scene 4: Subscriber Experience Signal Feed",
+      "filename": "../../scene-4-subscriber-experience-signal-feed/scene-4-subscriber-experience-signal-feed.md"
     },
     {
       "title": "Scene 5: Subscriber and Network Impact Graph",
       "filename": "../../scene-5-subscriber-and-network-impact-graph/scene-5-subscriber-and-network-impact-graph.md"
     },
     {
-      "title": "Scene 6: Coverage and Field Capacity Map",
-      "filename": "../../scene-6-coverage-and-field-capacity-map/scene-6-coverage-and-field-capacity-map.md"
+      "title": "Scene 6: Network Access and Field Operations",
+      "filename": "../../scene-6-network-access-and-field-operations/scene-6-network-access-and-field-operations.md"
     },
     {
-      "title": "Scene 7: Service Orders and Duality",
-      "filename": "../../scene-7-service-orders-and-duality/scene-7-service-orders-and-duality.md"
+      "title": "Scene 7: Subscriber Service Orders",
+      "filename": "../../scene-7-subscriber-service-orders/scene-7-subscriber-service-orders.md"
     },
     {
-      "title": "Scene 8: OML Network Intelligence",
-      "filename": "../../scene-8-oml-network-intelligence/scene-8-oml-network-intelligence.md"
+      "title": "Scene 8: Predictive Service Assurance",
+      "filename": "../../scene-8-predictive-service-assurance/scene-8-predictive-service-assurance.md"
     },
     {
-      "title": "Scene 9: Ask Seer Comms Data",
-      "filename": "../../scene-9-ask-seer-comms-data/scene-9-ask-seer-comms-data.md"
+      "title": "Scene 9: Ask Telecom Operations Data",
+      "filename": "../../scene-9-ask-telecom-operations-data/scene-9-ask-telecom-operations-data.md"
     },
     {
-      "title": "Scene 10: Seer Comms AI Agent Console",
-      "filename": "../../scene-10-seer-comms-ai-agent-console/scene-10-seer-comms-ai-agent-console.md"
-    },
-    {
-      "title": "Conclusion: Business Outcomes",
-      "filename": "../../conclusion/conclusion.md"
-    },
-    {
-      "title": "Take it home",
-      "filename": "../../download-livestack/download-livestack.md"
+      "title": "Scene 10: AI-Assisted Service Assurance",
+      "filename": "../../scene-10-ai-assisted-service-assurance/scene-10-ai-assisted-service-assurance.md"
     },
     {
       "title": "Need Help?",

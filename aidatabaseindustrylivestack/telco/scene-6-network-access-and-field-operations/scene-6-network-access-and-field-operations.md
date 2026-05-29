@@ -1,0 +1,77 @@
+# Scene 6 Network Access and Field Operations
+
+## Introduction
+
+**Network Access and Field Operations** helps teams see where subscriber demand intersects with network sites, service zones, field dispatch routes, and capacity constraints. The map gives a geographic operating view so users can compare demand pressure, site capacity, dispatch routes, and subscriber priority in one place.
+
+Telecom teams struggle when the information needed for one service-assurance decision lives in separate OSS, BSS, care, NOC, field, and analytics tools. That separation slows action, increases reconciliation work, and makes it harder to trust the result.
+
+Oracle AI Database helps address these challenges by keeping spatial data, service orders, capacity forecasts, subscriber locations, and operational metrics together. In this scene, Oracle Spatial supports service-zone visualization, proximity analysis, demand density, and field dispatch routing from the same data foundation used by the rest of the LiveStack Demo.
+
+Estimated Time: **10 minutes**
+
+![Network Access and Field Operations map with sites, routes, demand layers, and alerts](images/network-access-and-field-operations.png)
+
+### Objectives
+
+In this scene, you will learn what telecom decision the page supports, what evidence the user should inspect, and what action the team may take next.
+
+## Task 1: Review the field operations map
+
+![Network access metrics and map layer controls](images/field-operations-metrics-and-layers.png)
+
+Review the field operations map to understand where network access, subscriber demand, demand regions, field dispatch routes, and capacity constraints intersect.
+
+1. Click **Network Access and Field Operations** in the sidebar.
+2. Review the top metric tiles: **Active Network Sites**, **Available Field / Service Capacity**, **Open Field Dispatches**, and **Capacity Risk Alerts**.
+3. Review the map legend and active layers.
+4. Toggle the layer controls if you want to isolate **Network Sites**, **Field Dispatch Routes**, **Service Zones**, **Subscriber Demand Density**, or **Demand Pressure Regions**.
+
+The map is not just showing points; it connects demand pressure, network access, field capacity, demand regions, and subscriber density to the same service-assurance story.
+
+## Task 2: Inspect network sites and field capacity
+
+![Network site map and route workspace](images/network-sites-and-routes-map.png)
+
+Inspect network sites and field capacity to compare current load, available units, stocked services, and pending dispatches before deciding where field support or capacity relief may be needed.
+
+1. Review the active network site markers on the map.
+2. Focus on sites such as **Atlanta Home Internet Dispatch**, **Dallas 5G Dispatch Center**, and **Miami Connected Life Hub**.
+3. Compare current load, products stocked, total units, and pending dispatches.
+
+In the current demo dataset, the page uses **12** active network sites. Examples include **Atlanta Home Internet Dispatch** with **5,850** total capacity units and **76** pending dispatches, **Dallas 5G Dispatch Center** with **5,500** units and **60** pending dispatches, and **Chicago Midwest NOC** with **4,295** units and **56** pending dispatches.
+
+**Note:** These are sample values from the current demo dataset and may change after a refresh, seed update, or custom dataset import. Treat these numbers as an example of the current operating pattern. Verify the live values in the UI before presenting, then explain the business takeaway: what demand, subscriber impact, capacity, revenue, dispatch, or risk pattern the values reveal.
+
+
+## Task 3: Review capacity risk alerts
+
+![Network Sites table with capacity and dispatch context](images/capacity-risk-alerts.png)
+
+Review capacity risk alerts to identify where forecast demand exceeds available capacity and where field teams may need to rebalance resources, adjust dispatch, or prioritize service recovery.
+
+1. Scroll to **Capacity Risk Alerts**.
+2. Review the services, network sites, available capacity, forecast demand, and subscriber signal factor.
+3. Focus on a service such as **Gigabit Fiber Install** at **Houston Roaming Operations Hub**.
+
+Spatial context becomes operational action when teams can see where forecast demand, capacity, and field dispatch options are misaligned.
+
+In the current demo dataset, **Gigabit Fiber Install** at **Houston Roaming Operations Hub** shows **55** available capacity units against **141** forecast demand and is marked low capacity. **Number Port-In Activation** appears as a critical example in the NYC Network Command Center, with **37** units on hand and **62** predicted demand.
+
+**Note:** These are sample values from the current demo dataset and may change after a refresh, seed update, or custom dataset import. Treat these numbers as an example of the current operating pattern. Verify the live values in the UI before presenting, then explain the business takeaway: what demand, subscriber impact, capacity, revenue, dispatch, or risk pattern the values reveal.
+
+
+## Task 4: Explain the spatial pattern
+
+Explain the spatial pattern as field-aware service assurance: network sites, subscriber locations, demand forecasts, and dispatch routes stay connected to the same governed telecom data foundation.
+
+1. Network site and subscriber locations are stored with spatial coordinates.
+2. Demand forecasts and subscriber signals add operational pressure to geography.
+3. Field dispatch routes show how the business responds.
+4. Oracle Spatial keeps the map, proximity, route, and zone context connected to transactional service data.
+
+You can move to the next scene.
+
+## Credits & Build Notes
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-28
