@@ -63,7 +63,7 @@ Review the audit trail to show how the demo supports traceability.
 
 1. Scroll to **Recent Agent Actions**.
 2. Review the top action row.
-3. Confirm that the row shows a **chat query** routed to the **commerce** agent path.
+3. Confirm that the row shows a **chat query** routed to the **clinical supply exposure** agent path.
 4. Review the confidence value.
 
 This is the compliance moment in the scene. Regulated organizations can use AI-assisted workflows only when the actions, tool paths, and decision evidence are reviewable.
