@@ -6,7 +6,7 @@
 
 Telecom teams struggle when the information needed for one service-assurance decision lives in separate OSS, BSS, care, NOC, field, and analytics tools. That separation slows action, increases reconciliation work, and makes it harder to trust the result.
 
-Oracle AI Database helps address these challenges by keeping machine learning close to governed telecom data. Oracle Machine Learning models can be trained, persisted, and scored in the database with `DBMS_DATA_MINING`, `PREDICTION()`, `PREDICTION_PROBABILITY()`, and `CLUSTER_ID()`. Demand surge prediction, retention segmentation, service revenue forecasting, service behavior clustering, and network access risk scoring can run from the same connected data foundation that powers the rest of the LiveStack Demo.
+Oracle AI Database helps address these challenges by keeping machine learning close to governed telecom data. Oracle Machine Learning models can be trained, persisted, and scored in the database with `DBMS_DATA_MINING`, `PREDICTION()`, `PREDICTION_PROBABILITY()`, and `CLUSTER_ID()`. Demand surge prediction, retention segmentation, service revenue forecasting, service behavior clustering, and network access risk scoring can run from the same connected data foundation that powers the rest of the LiveStack Demo. The demand-surge model uses 13 telecom service features, including subscriber signals, service-order activity, service value, and a demand-pressure score.
 
 Estimated Time: **10 minutes**
 
@@ -37,7 +37,7 @@ Inspect mobile demand surge prediction to identify services where predicted dema
 1. Stay on the **Demand Surge** tab.
 2. Use the scoring window selector if you want to change the time window, then click **Refresh**.
 3. Review the bar chart and service table.
-4. Focus on the first row, such as **Fixed Wireless Home Internet**.
+4. Focus on a top surge row, such as **Device Upgrade Enrollment** or **Fixed Wireless Home Internet**.
 
 In the current demo dataset, **Fixed Wireless Home Internet** shows **131** recent mentions, **290** recent service orders, **1,008** predicted demand, **90%** demand surge, and about **$70.6K** service revenue opportunity. The same table also shows services such as **Premium International Roaming Pass**, **Device Upgrade Enrollment**, and **Fleet Telematics SIM Pack**. 
 
@@ -106,7 +106,7 @@ Review network access risk to connect predicted demand with site capacity, avail
 
 1. Click **Access Risk**.
 2. Review the access-risk summary cards.
-3. Scroll to **Capacity Risks by OML Surge Probability**.
+3. Scroll to **Capacity Risks by Demand Surge Probability**.
 4. Focus on a high-risk service and site combination.
 
 The business value is that teams can make the decision from connected, governed data. Oracle AI Database provides the shared foundation that keeps operational data, analytics, and AI workflows aligned.
