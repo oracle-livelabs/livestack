@@ -1,55 +1,62 @@
-# Scene 11 Use Your Own Data
+# Scene 11 Use Your Own Media Data
 
 ## Introduction
 
-This operator workflow lets a user download a dataset template, validate a completed ZIP, load replacement data, or restore the bundled demo data. It is the handoff point between a polished demo and a customer-specific proof path.
+This operator workflow shows how a demo user can replace or restore the media dataset through the application. The workflow supports downloading a template ZIP, selecting a completed ZIP, validating it, uploading it, previewing the seeded restore, and restoring the bundled demo data.
+
+This scene matters because a media LiveStack is most useful when teams can map the demo pattern to their own terminology and sample data. A streaming platform might bring content titles, subscriber segments, and viewing signals. A studio might bring release windows, campaign orders, and rights regions. A sports network might bring highlight packages, ad inventory, and market demand. The application makes that workflow explicit while keeping the seeded Seer Media data available as a known-good baseline.
 
 Estimated Time: 10 minutes
 
-![Use Your Own Data workflow](images/use-your-own-data.png)
+![Use Your Own Media Data modal with template, upload, validation, and restore controls](images/use-your-own-data.png)
 
 ### Objectives
 
-In this lab, you will:
-- Open the data import overlay.
-- Download the import template.
-- Validate a completed dataset ZIP or restore demo data.
+In this scene, you will:
+- Open the dataset tool from the application top bar.
+- Review the active dataset label.
+- Download the canonical media dataset template.
+- Review the completed ZIP upload and validation path.
+- Preview or restore the seeded media demo dataset.
+- Explain the data safety expectation for synthetic, masked, or approved sample media data.
 
-## Task 1: Open the import workflow
+## Task 1: Open the dataset tool
 
-1. From any main app scene, click **Use Your Own Data** in the top bar.
-2. Review the modal workflow.
-3. Note the current active dataset label in the sidebar.
+1. From any application scene, click **Use Your Own Media Data** in the top bar.
+2. Review the modal title and active dataset line.
+3. Review the main sections: **Download Template ZIP**, **Select Completed ZIP**, **Validate or Restore**, and **Restore Demo Data**.
 
-Expected result:
-- The import overlay opens without leaving the current app context.
-- The workflow shows template download, ZIP selection, validation, upload, and restore controls.
+    ![Use Your Own Media Data modal opened from the application top bar](images/open-dataset-tool.png)
 
-## Task 2: Download and validate a template
+In the current demo, the modal shows the active dataset as **Demo Data** and provides a workflow for a v1 ZIP that contains `manifest.json` and media table CSV files.
 
-1. Click **Download Template ZIP**.
-2. Open the template outside the app and review the required and optional CSV structure.
-3. Return to the app and choose a completed ZIP with **Select Completed ZIP**.
-4. Click **Validate** before loading data.
+## Task 2: Review the template and upload workflow
 
-Expected result:
-- The app performs dry-run checks before any replacement data is loaded.
-- Validation messages report missing files, header issues, foreign-key issues, or warnings.
+1. Click **Download Template ZIP** to download the canonical schema package.
+2. Review **Select Completed ZIP**. The control expects a `.zip` containing `manifest.json` and media table CSV files.
+3. Review the **Validate Upload** and **Import Media Data** actions.
+4. Explain that validation should run before data replacement.
 
-## Task 3: Restore demo data
+    ![Dataset template download, ZIP selection, validate, and import controls](images/template-and-upload-workflow.png)
 
-1. If you do not have a completed ZIP, click **Preview Restore** if available.
-2. Click **Restore Demo Data** on a disposable or demo environment.
-3. Watch the progress status until it completes.
+The template includes required and optional CSV structures for content assets, audience accounts, campaign requests, distribution hubs, audience signals, creator relationships, and demand forecasts. This workflow helps keep custom demos repeatable: the template sets the expected structure, validation checks the completed ZIP before import, and import remains an explicit action.
 
-Expected result:
-- The active Seer Media demo data returns to a known good state.
-- The sidebar active dataset label updates after the restore completes.
+## Task 3: Preview or restore the seeded dataset
 
-## Task 4: Why this matters?
+1. In **Restore Demo Data**, click **Preview Restore**.
+2. Review the dry-run validation result.
+3. If you need to return the demo to the seeded baseline, click **Restore Demo Data** only in a disposable or demo environment.
+4. Close the dataset manager when finished.
 
-Customer demos become more credible when users can bring their own controlled dataset. This workflow protects the app with validation first, then lets the same Oracle schema, vector refresh, graph data, and dashboards run against customer-shaped media data.
+    ![Preview Restore result for the seeded media demo dataset](images/preview-restore-seeded-dataset.png)
+
+In the hosted demo captured for this runbook, **Preview Restore** returned **Validation passed. Dry run completed successfully.** The restore preview validates the seeded media package before replacing anything.
+
+Use this scene to explain the operating guardrail. Teams can bring their own synthetic, masked, or approved sample media data into the LiveStack, but the seeded dataset remains available so the demo can always return to a known baseline.
+
+You can move to the conclusion or the download lab when you want to run the Media LiveStack locally.
 
 ## Credits & Build Notes
-- **Author** - Oracle LiveStack Team
-- **Last Updated By/Date** - Oracle LiveStack Team, 2026-05-13
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-29
+- **Screenshot source** - Captured from `http://141.148.236.195:8505/`.
