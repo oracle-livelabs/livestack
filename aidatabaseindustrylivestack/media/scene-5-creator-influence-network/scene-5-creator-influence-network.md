@@ -30,7 +30,7 @@ In this scene, you will:
 
     ![Creator graph workspace with depth controls, creator list, metrics, and graph canvas](images/graph-workspace-controls.png)
 
-Callout 1 highlights the search, graph-depth controls, and creator list. Callout 2 highlights the selected creator metrics and the rendered creator relationship graph.
+Callout 1 highlights the search, graph-depth controls, and creator list. Callout 2 highlights the selected creator metrics. Callout 3 highlights the rendered creator relationship graph.
 
 In the current seeded dataset, the page shows **50** visible creators in the list. Visible examples include **@fanbase_020**, **@streaming_482**, **@premiere_461**, **@fanbase_440**, **@sportsreel_419**, and **@fastchannel_398**. The selected creator **@fanbase_020** has about **170.4K** followers, an influence score around **82.6**, **13** connections, and a connected creator neighborhood.
 
@@ -43,7 +43,7 @@ In the current seeded dataset, the page shows **50** visible creators in the lis
 
     ![Selected creator node and connected community network](images/creator-node-network-example.png)
 
-Callout 1 highlights the selected **@retention_314** creator row and hop control. Callout 2 highlights the recalculated creator network for that selection.
+Callout 1 highlights the selected **@retention_314** creator row and hop control. Callout 2 highlights the selected creator metrics. Callout 3 highlights the recalculated creator network for that selection.
 
 Use this example to explain why graph context matters. A creator, platform, studio, label, fan community, and content campaign are more informative together than as independent records. The graph view helps the operator see influence as connected evidence.
 
@@ -55,7 +55,7 @@ Use this example to explain why graph context matters. A creator, platform, stud
 
     ![Graph Query Explorer and creator relationship evidence](images/graph-query-explorer.png)
 
-Callout 1 highlights relationship evidence and edge context for the selected creator. Callout 2 highlights the SQL/PGQ query templates in **Graph Query Explorer**.
+Callout 1 highlights relationship evidence and edge context for the selected creator. Callout 2 highlights studio, label, and content-line relationship evidence. Callout 3 highlights the SQL/PGQ query templates in **Graph Query Explorer**.
 
 The value of Oracle AI Database is that media teams can ask relationship-aware questions inside the same governed platform that stores the operational data. That reduces data movement and keeps the graph story connected to the rest of the demo.
 
