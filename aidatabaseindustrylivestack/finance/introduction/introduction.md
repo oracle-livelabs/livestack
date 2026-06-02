@@ -2,7 +2,9 @@
 
 ## Introduction
 
-Financial institutions are under pressure to make faster, better-governed decisions while their data is spread across core banking systems, transaction platforms, client service tools, compliance queues, fraud investigation systems, analytics environments, and AI experiments. Risk leaders need to understand emerging exposure before it becomes a loss event. Operations teams need service coverage and case visibility across regions. Application teams need transaction records that work for both relational systems and API-driven experiences. Business users want answers without waiting for custom reports, and executives want AI recommendations that remain grounded in governed enterprise data.
+Financial institutions are under increasing pressure to identify risk, respond to fraud, meet regulatory obligations, and deliver consistent client experiences while operating across a growing number of systems and data sources. When critical information is fragmented across core banking platforms, transaction systems, compliance workflows, fraud investigations, client service applications, and analytics environments, institutions can miss emerging risks, increase operational costs, delay investigations, and expose themselves to financial losses, regulatory penalties, and reputational damage. Leaders need timely, trusted visibility into customer exposure, transaction activity, service performance, and risk signals before issues become material events.
+
+At the same time, business users expect faster access to insights, operations teams need visibility across regions and service channels, and executives want AI-assisted recommendations that remain grounded in governed enterprise data. Financial institutions need a way to connect these data domains so they can make faster, more informed decisions while maintaining compliance, reducing risk, and protecting customer trust.
 
 This runbook supports the Seer Bank Finance LiveStack Demo. The demo shows how Oracle AI Database 26ai can help financial-services teams bring those workloads together on one connected data foundation. Instead of splitting relational transactions, JSON documents, graph relationships, spatial analysis, vector search, machine learning, natural-language SQL, and AI agent workflows across separate systems, the LiveStack shows how those capabilities can work against the same governed Oracle data model.
 
@@ -16,11 +18,7 @@ Each scene is designed to take between 5 and 10 minutes.
 
 ### Objectives
 
-In this LiveStack Demo, you will:
-- Explore the key finance use cases featured in the Seer Bank demo, from data foundation and risk dashboard visibility to regulatory signals, fraud investigation, client service coverage, transaction intelligence, analytics, conversational data access, and AI agent workflows.
-- Understand how common financial-services challenges such as fragmented data, fast-changing risk signals, fraud complexity, service coverage pressure, limited self-service analytics, and governed AI adoption are addressed in the demo flow.
-- See how Oracle AI Database 26ai supports each use case with converged capabilities including relational data, JSON, graph, spatial, vector search, machine learning, natural-language SQL, and AI-assisted operations.
-- Connect each scene to a practical business outcome, so the demo shows not only what the application does, but why the Oracle data platform matters for modern finance.
+Explore the key banking use cases featured in the Seer Bank demo, including fraud detection and investigation, Anti-Money Laundering (AML) and compliance monitoring, customer and product exposure management, transaction and case operations, client service and SLA performance, operational capacity planning, revenue forecasting, and AI-assisted decision making. See how these capabilities help financial institutions reduce risk, improve customer outcomes, increase operational efficiency, and make more informed business decisions.
 
 ### Prerequisites
 

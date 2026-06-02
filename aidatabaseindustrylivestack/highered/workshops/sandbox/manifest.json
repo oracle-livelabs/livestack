@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "Higher Education Student Success LiveStack Guide",
+  "workshoptitle": "Seer Higher Education Student Success LiveStack Guide",
   "help": "livelabs-help-database_us@oracle.com",
   "tutorials": [
     {
@@ -11,52 +11,44 @@
       "filename": "../../introduction/introduction.md"
     },
     {
-      "title": "Scene 1: Seer 26ai Student Success Foundation",
-      "filename": "../../scene-1-seer-26ai-student-success-foundation/scene-1-seer-26ai-student-success-foundation.md"
+      "title": "Scene 1: Welcome and Demo Orientation",
+      "filename": "../../scene-1-welcome-and-demo-orientation/scene-1-welcome-and-demo-orientation.md"
     },
     {
-      "title": "Scene 2: Student Success Command Center",
-      "filename": "../../scene-2-student-success-command-center/scene-2-student-success-command-center.md"
+      "title": "Scene 2: Data Foundation",
+      "filename": "../../scene-2-data-foundation/scene-2-data-foundation.md"
     },
     {
-      "title": "Scene 3: Student Need Signals",
-      "filename": "../../scene-3-student-need-signals/scene-3-student-need-signals.md"
+      "title": "Scene 3: Student Success Command Center",
+      "filename": "../../scene-3-student-success-command-center/scene-3-student-success-command-center.md"
     },
     {
-      "title": "Scene 4: Student Support Network",
-      "filename": "../../scene-4-student-support-network/scene-4-student-support-network.md"
+      "title": "Scene 4: Student Intent and Support Signals",
+      "filename": "../../scene-4-student-intent-and-support-signals/scene-4-student-intent-and-support-signals.md"
     },
     {
-      "title": "Scene 5: Campus Service Coverage",
-      "filename": "../../scene-5-campus-service-coverage/scene-5-campus-service-coverage.md"
+      "title": "Scene 5: Advisor, Program, and Support Network",
+      "filename": "../../scene-5-advisor-program-and-support-network/scene-5-advisor-program-and-support-network.md"
     },
     {
-      "title": "Scene 6: Student Requests and Cases",
-      "filename": "../../scene-6-student-requests-and-cases/scene-6-student-requests-and-cases.md"
+      "title": "Scene 6: Campus Service Coverage",
+      "filename": "../../scene-6-campus-service-coverage/scene-6-campus-service-coverage.md"
     },
     {
-      "title": "Scene 7: Predictive Student Success Analytics",
-      "filename": "../../scene-7-predictive-student-success-analytics/scene-7-predictive-student-success-analytics.md"
+      "title": "Scene 7: Student Requests and Cases",
+      "filename": "../../scene-7-student-requests-and-cases/scene-7-student-requests-and-cases.md"
     },
     {
-      "title": "Scene 8: Ask Seer Higher Ed Data",
-      "filename": "../../scene-8-ask-seer-higher-ed-data/scene-8-ask-seer-higher-ed-data.md"
+      "title": "Scene 8: Predictive Student Success Analytics",
+      "filename": "../../scene-8-predictive-student-success-analytics/scene-8-predictive-student-success-analytics.md"
     },
     {
-      "title": "Scene 9: Student Success Agent Console",
-      "filename": "../../scene-9-student-success-agent-console/scene-9-student-success-agent-console.md"
+      "title": "Scene 9: Ask Seer Higher Ed Data",
+      "filename": "../../scene-9-ask-seer-higher-ed-data/scene-9-ask-seer-higher-ed-data.md"
     },
     {
-      "title": "Scene 10: Use Your Own Student Success Data",
-      "filename": "../../scene-10-use-your-own-student-success-data/scene-10-use-your-own-student-success-data.md"
-    },
-    {
-      "title": "Conclusion: Business Outcomes",
-      "filename": "../../conclusion/conclusion.md"
-    },
-    {
-      "title": "Take it home",
-      "filename": "../../download-livestack/download-livestack.md"
+      "title": "Scene 10: Student Success Agent Console",
+      "filename": "../../scene-10-student-success-agent-console/scene-10-student-success-agent-console.md"
     },
     {
       "title": "Need Help?",

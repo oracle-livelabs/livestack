@@ -1,45 +1,71 @@
-# Scene 6 Cold-Chain Service Coverage
-
-## Introduction
-
-The cold-chain scene uses Oracle Spatial-backed data to show service centers, trial sites, shipment activity, demand regions, H3-style heat, and SLA zones for regulated supply routing.
-
-Estimated Time: 10 minutes
-
-![Cold-Chain Service Coverage screenshot](images/cold-chain-coverage.png)
-
-### Objectives
-
-In this lab, you will:
-- Inspect cold-chain service centers and shipment overlays.
-- Toggle map layers for trial sites, demand regions, service zones, and heat indicators.
-- Explain how spatial distance and governed row policies support fulfillment decisions.
-
-## Task 1: Inspect service coverage
-
-1. Select **Cold-Chain Service Coverage**.
-2. Review the service center list and the map overlays.
-3. Toggle layers such as cold-chain centers, trial sites, demand regions, SLA zones, and shipment paths to show different operational views.
-
-Expected result:
-- The map shows where clinical supply can be served and which geographies may need attention.
-- The presenter can connect visible coverage to Oracle Spatial capabilities and VPD-aware access.
-
-## Task 2: Use the nearest-site workflow
-
-1. Use the nearest fulfillment or routing controls when the full backend is running.
-2. Select or enter a trial site and a product where the UI allows it.
-3. Compare the proposed service center, inventory status, distance, and expected delivery signal.
-
-Expected result:
-- The operator sees which cold-chain site can serve a trial site with the least operational risk.
-- The scene demonstrates spatial routing as a practical decision aid, not just a map.
-
-## Task 3: Why this matters?
-
-Cold-chain logistics decisions need geography, capacity, inventory, and compliance context together. This scene shows how Oracle Spatial can help guide service coverage and routing while remaining part of the same application data model.
-
-## Credits & Build Notes
-- **Author** - LiveLabs Team
-- **Last Updated By/Date** - LiveLabs Team, 2026-05-13
-- **Source LiveStack** - livestack-lifesciences.zip
+# Scene 6 Cold-Chain Service Coverage
+
+## Introduction
+
+**Cold-Chain Service Coverage** helps life sciences supply teams understand where controlled inventory, trial sites, service zones, demand regions, and open routes sit on the same map. It brings spatial context to regulated supply decisions.
+
+Clinical supply and quality teams need to protect temperature-sensitive products, high-value therapies, trial kits, and controlled materials. That is difficult when depot capacity, trial-site geography, route status, and regional demand indicators are managed in separate tools.
+
+Oracle AI Database helps address these challenges with Oracle Spatial. The app stores sites, zones, routes, and demand regions in Oracle and presents them as one governed operational view with VPD context.
+
+Estimated Time: 10 minutes
+
+![Cold-Chain Service Coverage map with KPIs, VPD banner, layers, and service geography highlighted](images/cold-chain-coverage.png)
+
+### Objectives
+
+In this scene, you will learn what life sciences decision the page supports, what evidence the user should inspect, and what action the business may take next.
+
+## Task 1: Review the cold-chain coverage context
+
+![Cold-chain coverage map with service layers and route geography highlighted](images/cold-chain-coverage.png)
+
+Use the map as the operational geography view for controlled clinical supply.
+
+1. Click **Cold-Chain Service Coverage** in the sidebar.
+2. Review the KPI tiles at the top of the page. They summarize active sites, available controlled inventory, open cold-chain routes, and compliance or release-risk inventory alerts.
+3. Review the VPD banner below the tiles. It shows which demo user is active and whether the page is using full access or a region-filtered view.
+4. Review the map workspace. This is where trial sites, cold-chain service centers, cold-chain routes, service zones, trial demand density, and demand regions can be layered together.
+
+In the current demo dataset, the page shows **30** active sites, about **204.8K** available controlled inventory units, **750** open cold-chain routes, and **50** inventory alerts.
+
+## Task 2: Explore spatial demand and service coverage
+
+![Map layer controls and service geography highlighted](images/cold-chain-coverage.png)
+
+Spatial context helps the seller explain how the business can evaluate service reach, regional pressure, and route exposure together.
+
+1. In **Map Layers**, turn on **Service Zones** and **Demand Regions** if they are not already active.
+2. Review the service-zone shapes around fulfillment locations.
+3. Review the demand-region polygons. The demand index color scale helps identify regions where supply pressure is higher.
+4. Use the visible map layers to explain how spatial data supports service coverage and demand-region analysis.
+
+## Task 3: Inspect cold-chain site load
+
+![Cold-chain site table with site load section highlighted](images/cold-chain-sites-load.png)
+
+Inspect the site table to connect the map with operational capacity.
+
+1. Scroll to **Cold-chain Service Centers**.
+2. Review the site name, location, type, products, inventory, pending routes, and load percentage.
+3. Focus on **Fall River Northeast Safety Hub** as one example. In the current dataset, it carries **34** stocked products, about **9.7K** inventory units, **35** pending shipments, and about **4.4%** load.
+4. Compare this row with other sites to understand where there may be available capacity or regional pressure.
+
+## Task 4: Investigate an inventory alert
+
+![Cold-chain inventory alert section highlighted](images/cold-chain-inventory-alerts.png)
+
+Review the alert table to connect capacity with regulated supply risk.
+
+1. Scroll to **Inventory Alerts - Compliance and Release Risk**.
+2. Review the top alert rows.
+3. Focus on **Clean Steam Integrity Audit** at **Fall River Northeast Safety Hub**.
+4. Interpret the row: **18** units are on hand against a reorder point of **38**, with **25** reserved units and a critical stock status.
+
+This is the operational point of the scene: spatial coverage and supply alerts are not separate views. The regulated supply team can reason about sites, routes, capacity, and risk from one Oracle-backed view.
+
+You can move to the next scene.
+
+## Credits & Build Notes
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-29

@@ -1,45 +1,47 @@
-# Scene 2 Seer 26ai Data Foundation
-
-## Introduction
-
-The data foundation scene shows how regulated product, manufacturer, trial site, order, quality signal, graph, spatial, vector, ML, and agent audit data are loaded and organized in Oracle AI Database 26ai.
-
-Estimated Time: 10 minutes
-
-![Seer 26ai Data Foundation screenshot](images/data-foundation.png)
-
-### Objectives
-
-In this lab, you will:
-- Inspect the data products and converged database capabilities behind the demo.
-- Use the demo data control to verify or refresh the seed dataset.
-- Connect each visible data domain to the downstream operator workflows.
-
-## Task 1: Review the foundation status
-
-1. Select **Seer 26ai Data Foundation** in the sidebar.
-2. Review the status cards for products, trial sites, orders, signal bulletins, semantic matches, and graph edges.
-3. Open the Oracle information panel if it is available and use it to explain the relational, JSON, graph, spatial, vector, ML, and agent audit surfaces.
-
-Expected result:
-- The audience understands that multiple application experiences are using one Oracle database foundation.
-- The presenter can point to the specific tables, views, and features that back the rest of the demo.
-
-## Task 2: Verify or refresh demo data
-
-1. Click **Verify & Refresh Demo** when the full backend stack is running.
-2. Watch the progress events as products, trial sites, orders, signal posts, embeddings, graph data, and fulfillment zones are checked or refreshed.
-3. If the backend is unavailable, explain that the page will show the app shell while data status calls wait for the API.
-
-Expected result:
-- With the full stack running, the seed data refresh completes and the status cards reflect loaded data.
-- The operator has confidence that the downstream scenes are using the intended demo dataset.
-
-## Task 3: Why this matters?
-
-This matters because regulated operations teams need a trustworthy data product foundation before they can automate quality, allocation, routing, and compliance decisions. The scene makes the Oracle Database 26ai foundation visible before the presenter moves into higher-level workflows.
-
-## Credits & Build Notes
-- **Author** - LiveLabs Team
-- **Last Updated By/Date** - LiveLabs Team, 2026-05-13
-- **Source LiveStack** - livestack-lifesciences.zip
+# Scene 2 Data Foundation
+
+## Introduction
+
+**Data Foundation** prepares and verifies the governed Seer Lifesciences dataset before the seller moves into the clinical-supply journey. It shows that regulated products, quality signals, clinical supply orders, product vectors, signal vectors, and semantic matches are available for the demo.
+
+Life sciences data is often fragmented across clinical operations, quality management, regulatory systems, manufacturing operations, depots, and logistics partners. That fragmentation makes it harder to show one trusted answer when teams ask which products, sites, orders, and quality signals are connected.
+
+Oracle AI Database helps address this challenge by keeping transactional, JSON, graph, spatial, vector, machine learning, and agent audit data close to the same governed schema. In this scene, the dataset preparation view gives the seller a quick proof point that the demo is running against live connected data.
+
+Estimated Time: 5 minutes
+
+![Data Foundation page with restore action, record counts, and loaded data domains highlighted](images/data-foundation.png)
+
+### Objectives
+
+In this scene, you will learn what data powers the demo, how to verify the environment, and how the connected data foundation supports the later scenes.
+
+## Task 1: Prepare the dataset
+
+![Data Foundation page with the Restore Demo Data button and record counts highlighted](images/data-foundation.png)
+
+Use this page to confirm that the data footprint is ready before presenting the rest of the demo.
+
+1. Click **Data Foundation** in the sidebar.
+2. In **Prepare the Dataset**, review the live record counts.
+3. If the dataset needs to be reset, click **Restore Demo Data**.
+4. Wait for the progress indicator to finish and review the refreshed counts.
+
+In the current demo dataset, the page shows **14,622** tracked records, including **79** regulated products, **5,000** quality signals, **3,000** clinical supply orders, **79** product vectors, **5,000** signal vectors, and **1,464** semantic matches.
+
+## Task 2: Review what gets loaded
+
+![Data Foundation page with What Gets Loaded carousel highlighted](images/data-foundation.png)
+
+The data domains explain why the rest of the demo can move from signal to action without switching platforms.
+
+1. Scroll to **What Gets Loaded**.
+2. Read the three visible carousel tiles.
+3. Use the right carousel arrow to review the remaining tiles.
+4. Look for the major data types used in the demo: regulated supply core records, quality and regulatory signals, graph relationships, spatial coverage, vector embeddings, machine learning outputs, and agent audit records.
+
+You can move to the next scene.
+
+## Credits & Build Notes
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-29

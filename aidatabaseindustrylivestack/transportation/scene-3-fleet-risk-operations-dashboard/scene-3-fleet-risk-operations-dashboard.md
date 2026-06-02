@@ -1,54 +1,63 @@
-# Scene 3: Fleet Risk and Operations Dashboard
+# Scene 3 Fleet Risk & Operations Dashboard
 
 ## Introduction
 
-This scene is the fleet operations command center. It combines order counts, service value, urgent signals, high-demand services, agent actions, signal velocity, service value by category, and searchable high-demand transportation services.
+**Fleet Risk & Operations Dashboard** gives transportation leaders, dispatch planners, and service operations managers a daily view of the logistics network. It tracks shipment orders, freight value exposure, urgent operational signals, services at surge risk, in-transit shipments, signal velocity, category value, and service-level detail in one place.
+
+This team must see shifts in demand, capacity, and service risk as they emerge, not after they become separate escalations. The dashboard helps leaders spot patterns early, act faster, and keep dispatch, terminal, and customer teams aligned around the same recovery decision.
+
+Dashboards like this are difficult to implement when transportation data is split across order systems, fleet tools, terminal spreadsheets, social or partner signal feeds, and analytics pipelines. Oracle AI Database helps address that challenge by keeping operational, analytical, JSON, in-memory, and AI-ready data close to the same governed data foundation.
+
+The **White Glove Delivery Crew** row gives the seller a clear opening example: demand is visible at the dashboard level and then traceable down to freight value, service category, signal exposure, and JSON application shape.
 
 Estimated Time: 10 minutes
 
-![Fleet risk and operations dashboard](images/fleet-risk-dashboard.png)
+![Fleet Risk & Operations Dashboard with KPI cards, charts, and services at surge risk highlighted](images/fleet-risk-operations-dashboard.png)
 
 ### Objectives
 
-In this lab, you will:
-- Review the operational KPI cards.
-- Compare signal velocity and service value charts.
-- Search and filter high-demand services.
-- Open a transport service detail modal and compare details with JSON duality data.
+In this scene, you will learn what transportation decision the page supports, what evidence the user should inspect, and what action the business may take next.
 
-## Task 1: Inspect the command center KPIs
+## Task 1: Review the control tower dashboard
 
-1. Click **Fleet Risk & Operations Dashboard** in the navigation rail.
-2. Review the KPI cards for **Transport Orders**, **Service Value**, **Urgent Signals**, **High-Demand Services**, and **Agent Actions**.
-3. Click **Refresh** to update the dashboard data.
+Use the dashboard as a triage view. In the current demo dataset, the opening KPI row shows **3,000** shipment orders, about **$4.7M** in freight value at risk, **464** urgent signals, **31** services at surge risk, and **375** shipments in transit.
 
-Expected result:
-- The user sees a current operating picture for order volume, service value, signal urgency, and agent activity.
+1. Click **Fleet Risk & Operations Dashboard** in the sidebar.
+2. Review the KPI cards across the top of the page.
+3. Review **Signal Velocity** to see the rate and intensity of operational signals.
+4. Review **Freight Value by Service Category** to see where value exposure is concentrated.
+5. Review Oracle Internals after the business flow is clear. Use it to connect the visible logistics outcome to the database capabilities behind the page.
 
-## Task 2: Compare trend and value signals
+## Task 2: Review services at surge risk
 
-1. In **Signal Velocity**, select at least two time windows such as **24h** and **7d**.
-2. Review how the chart changes as the time window changes.
-3. Inspect **Service Value by Category** to identify which service categories carry the largest value.
+![Services at surge risk table with White Glove Delivery Crew highlighted](images/services-at-surge-risk.png)
 
-Expected result:
-- The user can compare demand signals with the value at stake in transportation services.
+The table helps the user move from dashboard-level signals to service-level evidence. In the current demo dataset, **White Glove Delivery Crew** appears as a leading VitalRoute Logistics service with **61** recent mentions, more than **21M** views, and **viral** peak momentum.
 
-## Task 3: Search high-demand services
+1. Scroll to **Services at Surge Risk**.
+2. Review the service rows. The table ranks services by recent operational signal momentum and shows service name, service line, mentions, views, average urgency, and signal label.
+3. Use the search field or service-line chips if you want to narrow the table.
+4. Click the **White Glove Delivery Crew** row.
 
-1. In **High-Demand Services**, type a transportation service or program term into the search field.
-2. Select a visible service line chip if one is available.
-3. Click a row in the service table.
-4. In the detail modal, switch between **Details** and **JSON Duality View**.
+## Task 3: Inspect the service detail modal
 
-Expected result:
-- The selected service opens a modal with capacity and signal context.
-- The JSON duality tab shows how the same service and capacity data can be exposed as a nested document projection.
+![Transport service detail modal](images/transport-service-detail.png)
 
-## Task 4: Why this matters?
+Open the service detail modal to connect demand momentum with operational readiness. The user can see whether the selected service has enough terminal capacity and whether recent signals support further action.
 
-The dashboard turns raw fleet, order, signal, and service data into an operating picture. A user can move from "what is happening" to "which service is affected" without exporting data or opening a second analytics system.
+After you click **White Glove Delivery Crew**, the detail modal opens. The default **Details** view shows the selected service, VitalRoute Logistics service line, Final Mile category, contract rate, terminal capacity locations, and operational signal evidence.
+
+## Task 4: Review the JSON Duality View
+
+![Transport service JSON Duality view](images/transport-service-json-duality.png)
+
+Review the JSON Duality View to show that the same trusted service and capacity data can support different users. Business users see service details in the interface, while applications can use the same information as a structured document.
+
+1. In the service modal, click **JSON Duality View**.
+2. Review the JSON document that represents the selected transportation service and terminal capacity data.
+
+You can move to the next scene.
 
 ## Credits & Build Notes
-- **Author** - LiveLabs Team
-- **Last Updated By/Date** - LiveLabs Team, 2026-05-13
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-29

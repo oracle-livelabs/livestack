@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "Seer Lifesciences LiveStack Demo Guide",
+  "workshoptitle": "Seer Lifesciences Clinical Supply LiveStack Guide",
   "help": "livelabs-help-database_us@oracle.com",
   "tutorials": [
     {
@@ -11,11 +11,11 @@
       "filename": "../../introduction/introduction.md"
     },
     {
-      "title": "Scene 1: Seer Lifesciences Control Tower",
+      "title": "Scene 1: Welcome and Demo Orientation",
       "filename": "../../scene-1-seer-lifesciences-control-tower/scene-1-seer-lifesciences-control-tower.md"
     },
     {
-      "title": "Scene 2: Seer 26ai Data Foundation",
+      "title": "Scene 2: Data Foundation",
       "filename": "../../scene-2-seer-26ai-data-foundation/scene-2-seer-26ai-data-foundation.md"
     },
     {
@@ -27,7 +27,7 @@
       "filename": "../../scene-4-regulatory-and-quality-signals/scene-4-regulatory-and-quality-signals.md"
     },
     {
-      "title": "Scene 5: Quality Propagation Network",
+      "title": "Scene 5: Signal Propagation Network",
       "filename": "../../scene-5-quality-propagation-network/scene-5-quality-propagation-network.md"
     },
     {
@@ -43,20 +43,12 @@
       "filename": "../../scene-8-predictive-quality-and-supply-analytics/scene-8-predictive-quality-and-supply-analytics.md"
     },
     {
-      "title": "Scene 9: Ask Seer Lifesciences Data",
+      "title": "Scene 9: Ask Seer Regulated Supply Data",
       "filename": "../../scene-9-ask-seer-lifesciences-data/scene-9-ask-seer-lifesciences-data.md"
     },
     {
-      "title": "Scene 10: Agent Console",
+      "title": "Scene 10: Governed Agent Console",
       "filename": "../../scene-10-agent-console/scene-10-agent-console.md"
-    },
-    {
-      "title": "Conclusion: Business Outcomes",
-      "filename": "../../conclusion/conclusion.md"
-    },
-    {
-      "title": "Take it home",
-      "filename": "../../download-livestack/download-livestack.md"
     },
     {
       "title": "Need Help?",
