@@ -2,26 +2,21 @@
 
 ## Introduction
 
-A care coordination leader, clinical operations analyst, population health user, or data architect uses this page to understand healthcare relationships that are hard to see in isolated rows. The persona needs to reason across de-identified patient journeys, encounters, providers, facilities, conditions, medications, lab results, procedures, care gaps, and quality signals.
+**Care Pathway Graph** helps users understand healthcare relationships that are difficult to see in isolated rows. The page connects de-identified patient journeys, encounters, providers, facilities, care gaps, medications, lab results, and quality signals so teams can reason across the pathway, not just one record at a time.
 
-This is difficult when relationship analysis requires data movement into a separate graph database or offline notebook. Healthcare users may know there is a pathway risk, but they need to see how a patient journey connects to care gaps, care teams, facilities, and quality signals without losing governance.
+Healthcare teams struggle when the information needed for one decision lives in separate tools. That separation slows action, increases reconciliation work, and makes it harder to trust the result. Oracle AI Database helps answer relationship questions, such as how a patient journey connects to care gaps, encounters, providers, and quality signals.
 
-Oracle AI Database helps address these challenges by supporting graph analysis over the operational healthcare schema. In this scene, the application exposes care pathway relationships while the sidebar explains the Oracle Property Graph and SQL/PGQ pattern behind the view.
-
-Estimated Time: 10 minutes
+Estimated Time: **10 minutes**
 
 ![Care Pathway Graph page with graph depth controls and healthcare nodes](images/scene-5-care-pathway-graph.png)
 
 ### Objectives
 
-In this scene, you will:
-- Review the **Care Pathway Graph** workspace.
-- Inspect graph depth controls and the care graph node list.
-- Focus on concrete pathway-risk nodes.
-- Explain how graph relationships help identify connected care risk.
-- Connect the user-facing graph to Oracle Property Graph and SQL/PGQ.
+In this scene, you will learn what healthcare decision the page supports, what evidence the user should inspect, and what action the team may take next.
 
 ## Task 1: Review the graph workspace
+
+Perform the following set of steps to see how pathway relationships connect patient journeys, encounters, care gaps, providers, facilities, and quality signals.
 
 1. Click **Care Pathway Graph** in the sidebar.
 2. Review the graph depth controls: **1 Hop**, **2 Hops**, **3 Hops**, **4 Hops**, and **5 Hops**.
@@ -33,7 +28,11 @@ In this scene, you will:
 
 In the current demo dataset, the page shows **48** care graph nodes. Visible nodes include **Sepsis**, **Readmission Risk**, **Patient 1001 - Sepsis Readmission Risk**, **48-Hour Follow-Up**, **Inpatient Encounter 4412**, **Central Line Infection Risk**, **Nurse Care Team**, **Piperacillin/Tazobactam**, and **Dr. Hannah Lee - Hospitalist**.
 
+**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
+
 ## Task 2: Explore a pathway-risk example
+
+Perform the following set of steps to show how connected evidence can reveal care gaps, follow-up needs, provider context, and facility relationships that are hard to understand from isolated records.
 
 1. In the node list, locate **Patient 1001 - Sepsis Readmission Risk**.
 2. Review the node type, identifier, pathway volume, risk score, and link count.
@@ -42,9 +41,11 @@ In the current demo dataset, the page shows **48** care graph nodes. Visible nod
 
     ![Patient 1001 pathway-risk node, 2-hop depth control, pathway findings, and graph relationships highlighted](images/pathway-risk-node-example.png)
 
-Use this example to explain why graph context matters. A patient journey, readmission-risk care gap, encounter, medication, provider, and facility are more informative together than as independent records. The graph view helps the operator see the pathway as connected evidence.
+Use this example to show why graph context matters: a patient journey, care gap, encounter, medication, provider, and facility are more informative together than as isolated records.
 
 ## Task 3: Explain the Oracle graph pattern
+
+Perform the following set of steps to explain that the graph is an analysis view over governed healthcare data. It helps users ask relationship-aware questions while keeping the data connected to the same operational foundation.
 
 1. Review the **Graph Query Explorer** area.
 2. Review the Oracle Internals content that references property graph and SQL/PGQ.
@@ -52,9 +53,9 @@ Use this example to explain why graph context matters. A patient journey, readmi
 
     ![Graph relationship canvas, edge type legend, and Graph Query Explorer options highlighted](images/graph-query-explorer.png)
 
-The value of Oracle AI Database is that healthcare teams can ask relationship-aware questions inside the same governed platform that stores the operational data. That reduces data movement and lets the graph story stay connected to the rest of the demo.
+The business value is that teams can make the decision from connected, governed data. Oracle AI Database provides the shared foundation that keeps operational data, analytics, and AI workflows aligned.
 
-You can move to the next scene.
+*You can move to the next scene.*
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team

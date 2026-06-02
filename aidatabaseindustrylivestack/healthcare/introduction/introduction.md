@@ -2,13 +2,15 @@
 
 ## Introduction
 
-Healthcare organizations need to coordinate patient flow, provider capacity, care logistics, quality signals, service requests, analytics, and AI-assisted decisions while keeping operational data governed. Those workflows often live in separate applications, data marts, document stores, search systems, mapping tools, notebooks, and AI experiments. The result is a slower operating model: users can see part of the picture, but they cannot easily trace a decision back to the same trusted healthcare data foundation.
+Healthcare organizations need to coordinate care demand, site capacity, service requests, logistics, quality signals, analytics, and AI-assisted decisions while keeping operational data governed. The **Seer Health Network LiveStack** shows how those signals can come together so teams can spot pressure earlier, understand the evidence behind a decision, and act with more confidence.
 
-This runbook supports the Seer Health Network Healthcare LiveStack Demo. The demo shows how Oracle AI Database 26ai can bring healthcare operations workloads together on one connected data platform. Instead of splitting relational transactions, JSON documents, graph relationships, spatial analysis, vector search, in-database machine learning, natural-language SQL, and AI agent workflows across different systems, the LiveStack shows how those capabilities can work against the same governed Oracle data model.
+This runbook supports the **Seer Health Network Healthcare LiveStack Demo**. The demo shows how Oracle AI Database 26ai can bring healthcare operations workloads together on one connected data platform. Instead of splitting relational transactions, JSON documents, graph relationships, spatial analysis, vector search, in-database machine learning, natural-language SQL, and AI agent workflows across different systems, the LiveStack shows how those capabilities can work against the same governed Oracle data model.
 
-In the demo, Seer Health Network uses Oracle AI Database to connect care services, care sites, service requests, quality and capacity bulletins, patient pathway relationships, logistics geography, predictive analytics, conversational data access, and agent-assisted operations. Each scene is designed to help you explain a practical healthcare operations challenge and then show how a converged Oracle database capability supports a clearer decision path.
+In the demo, Seer Health Network uses Oracle AI Database to connect care services, care sites, service requests, quality and capacity bulletins, patient pathway relationships, logistics geography, predictive analytics, conversational data access, and agent-assisted operations.
 
-Estimated Demo Time: 90 minutes
+Each scene is designed to help you explain a practical healthcare operations challenge and then show how a converged Oracle database capability supports a clearer decision path.
+
+Estimated Demo Time: **90 minutes**
 
 Each scene is designed to take between 5 and 10 minutes.
 
@@ -16,33 +18,27 @@ Each scene is designed to take between 5 and 10 minutes.
 
 ### Objectives
 
-In this LiveStack Demo, you will:
-- Explore the key healthcare use cases featured in the Seer Health Network demo, from the data foundation and command center to quality signals, care pathways, logistics, service requests, analytics, conversational data access, and AI agent workflows.
-- Understand how common healthcare operations challenges such as fragmented data, capacity pressure, quality signal triage, service request tracking, limited self-service analytics, and governed AI adoption are addressed in the demo flow.
-- See how Oracle AI Database 26ai supports each use case with converged capabilities including relational data, JSON, graph, spatial, vector search, machine learning, natural-language SQL, and AI-assisted operations.
-- Connect each scene to a practical business outcome, so the demo shows not only what the application does, but why the Oracle data platform matters for healthcare operations.
+In this LiveStack demo, you will see how connected healthcare data can help teams monitor operations, discover signals, analyze pathways, coordinate logistics, review service requests, use predictive analytics, and apply AI with stronger governance.
 
 ### Prerequisites
 
-This LiveStack Demo assumes you have:
-- Access to the running Seer Health Network Healthcare LiveStack.
-- A modern browser open to the application URL.
-- The seeded Seer Health Network demo dataset loaded, or an imported synthetic or de-identified healthcare dataset loaded through the application dataset tool.
-- For the download lab, Podman and Podman Compose available on the machine where you run the portable stack.
+Before you begin, confirm that you can open the running Seer Health Network Healthcare LiveStack in a modern browser. No coding or database administration knowledge is required for the guided demo scenes.
+
+**Podman** and **Podman Compose** are required only if you plan to run the portable LiveStack locally in the download lab.
 
 ## Demo Flow
 
-- Scene 1: Welcome and Demo Orientation.
-- Scene 2: Healthcare Data Foundation.
-- Scene 3: Operations Command Center.
-- Scene 4: Quality and Capacity Signals.
-- Scene 5: Care Pathway Graph.
-- Scene 6: Care Logistics Map.
-- Scene 7: Care Service Requests.
-- Scene 8: Risk and Capacity Analytics.
-- Scene 9: Ask Healthcare Data.
-- Scene 10: Healthcare AI Agent Console.
-- Scene 11: Bring Your Own Healthcare Data.
+- **Scene 1:** Welcome and Demo Orientation.
+- **Scene 2:** Healthcare Data Foundation.
+- **Scene 3:** Operations Command Center.
+- **Scene 4:** Quality and Capacity Signals.
+- **Scene 5:** Care Pathway Graph.
+- **Scene 6:** Care Logistics Map.
+- **Scene 7:** Care Service Requests.
+- **Scene 8: **Risk and Capacity Analytics.
+- **Scene 9:** Ask Healthcare Data.
+- **Scene 10:** Healthcare AI Agent Console.
+- **Scene 11:** Use Your Own Healthcare Data.
 - Download and run the portable Healthcare LiveStack.
 
 ## Learn More
