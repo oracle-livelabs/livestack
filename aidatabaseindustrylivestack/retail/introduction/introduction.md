@@ -9,9 +9,9 @@ This runbook supports the Seer Sporting Goods Retail LiveStack Demo. The demo sh
 
 In the demo, Seer Sporting Goods uses Oracle AI Database to connect inventory, products, orders, service cases, customer signals, creator influence, fulfillment geography, predictive analytics, conversational data access, and agent-assisted operations. The demo follows **AllTerrain Hiking Boots** as the hero product thread: demand builds, customer and creator signals explain why, fulfillment and order views show how the business responds, and analytics, natural-language SQL, and AI agents help teams act from the same governed data foundation.
 
-Estimated Demo Time: 90 minutes
+Estimated Demo Time: **90 minutes**
 
-Each scene is designed to take between 5 and 10 minutes.
+Each scene is designed to take between **5 and 10 minutes**.
 
 ![Retail LiveStack welcome page](images/welcome-and-demo-orientation.png)
 
@@ -25,16 +25,16 @@ Before you begin, confirm that you can open the running Seer Sporting Goods Live
 
 ## Demo Flow
 
-- Scene 1: Welcome and Demo Orientation.
-- Scene 2: Data Foundation.
-- Scene 3: Retail Command Center.
-- Scene 4: Customer Trend Signals.
-- Scene 5: Creator Influence Network.
-- Scene 6: Intelligent Fulfillment Network.
-- Scene 7: Unified Order Intelligence.
-- Scene 8: Retail OML Analytics.
-- Scene 9: Ask Retail Data.
-- Scene 10: Retail AI Agent Console.
+- **Scene 1:** Welcome and Demo Orientation.
+- **Scene 2:** Data Foundation.
+- **Scene 3:** Retail Command Center.
+- **Scene 4:** Customer Trend Signals.
+- **Scene 5:** Creator Influence Network.
+- **Scene 6:** Intelligent Fulfillment Network.
+- **Scene 7:** Unified Order Intelligence.
+- **Scene 8:** Retail OML Analytics.
+- **Scene 9:** Ask Retail Data.
+- **Scene 10:** Retail AI Agent Console.
 
 ## Learn More
 

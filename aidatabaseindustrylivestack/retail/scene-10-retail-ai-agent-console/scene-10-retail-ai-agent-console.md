@@ -12,7 +12,7 @@ Oracle AI Database helps address these challenges by keeping the source data, SQ
 
 In this LiveStack Demo, the app orchestrates the agent workflow, Ollama provides reasoning, and Oracle AI Database 26ai executes the governed data operations. Agent actions are written back to `agent_actions`, while the UI shows the response, tool badges, and recent audit trail.
 
-Estimated Time: 10 minutes
+Estimated Time: **10 minutes**
 
 ![Retail AI Agent Console overview with runtime profile, examples, and recent actions highlighted](images/retail-ai-agent-console-overview.png)
 
@@ -36,7 +36,7 @@ Use this opening view to explain that the page is an operational agent console. 
 
 ![Fulfillment response for AllTerrain Hiking Boots](images/agent-fulfillment-route-response.png)
 
-Run the fulfillment-routing question to show how the agent compares customer location, product inventory, route distance, transit time, and available alternatives before recommending a fulfillment option.
+Perform the following set of steps to show how the agent compares customer location, product inventory, route distance, transit time, and available alternatives before recommending a fulfillment option.
 
 1. Click **Ask** on **Check inventory for AllTerrain Hiking Boots**.
 2. Review the agent response at the top of the chat output.
@@ -44,6 +44,8 @@ Run the fulfillment-routing question to show how the agent compares customer loc
 4. Review the tool badges below the response.
 
 In the current demo dataset, the agent routes the request to the **Fulfillment Optimization** path and returns inventory for **AllTerrain Hiking Boots** across **12** fulfillment centers, with **3,183** total units. The response lists centers such as **Honolulu Pacific**, **Memphis Logistics**, **Houston Gulf Coast**, **Anchorage Alaska**, **Chicago Midwest Hub**, and **Miami Southeast**, with on-hand and reserved quantities.
+
+**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
 
 This is the data point to emphasize during the demo. The agent did more than answer a text question: it looked up a customer in Miami, found fulfillment centers with available AirBud inventory, calculated route options, rendered the map, and exposed tool badges such as customer_lookup and find_best_fulfillment().
 
@@ -72,11 +74,15 @@ Review the audit trail to show that AI actions do not disappear after the chat. 
 3. Confirm that the row shows a **chat query** routed to the **fulfillment** agent path.
 4. Review the confidence value.
 
-In the current demo dataset, the completed chat action is logged with **90%** confidence and routed to the **fulfillment** path. This is the governance point of the scene: agent decisions should be observable after the conversation. The page shows that agent interactions are not just transient chat messages. They are written into the action history so an operator, architect, or auditor can understand what happened.
+In the current demo dataset, the completed chat action is logged with **90%** confidence and routed to the **fulfillment** path.
+
+**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
+
+This is the governance point of the scene: agent decisions should be observable after the conversation. The page shows that agent interactions are not just transient chat messages. They are written into the action history so an operator, architect, or auditor can understand what happened.
 
 The value of Oracle AI Database is that the agent workflow stays connected to governed operational data. The AI runtime can reason and orchestrate, while Oracle remains responsible for data access, SQL and PL/SQL execution, spatial calculations, and durable audit records.
 
-You can move to the next scene.
+*You can move to the next scene.*
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
