@@ -2,24 +2,23 @@
 
 ## Introduction
 
-This scene prepares the Seer Health Network dataset that powers the rest of the LiveStack Demo. The page loads or restores the governed Oracle AI Database 26ai data foundation, then shows the major healthcare domains and data types used across the application.
+This scene prepares the trusted **Seer Health Network** dataset used throughout the demo. Loading or restoring the data gives every later screen the same governed starting point, so dashboards, searches, graph views, logistics maps, analytics, and AI actions all reflect the same healthcare data foundation.
 
-The scene is useful at the start of a customer walkthrough because it establishes that the later pages are not separate demos. Care services, signal bulletins, service requests, service vectors, signal vectors, semantic matches, spatial logistics data, graph relationships, machine learning outputs, and agent audit records are all prepared from the same Oracle-backed foundation.
+Use this scene to show that later pages are not separate demos. They are different healthcare workflows running on one governed data foundation.
 
-Estimated Time: 5 minutes
+Estimated Time: **5 minutes**
 
 ![Healthcare Data Foundation page with dataset restore controls and loaded data domains](images/scene-2-healthcare-data-foundation.png)
 
 ### Objectives
 
-In this scene, you will:
-- Load or restore the Seer Health Network demo dataset.
-- Review the live record counts that confirm the demo foundation is ready.
-- Understand what healthcare data domains are prepared for downstream scenes.
-- Use the **What Gets Loaded** carousel to connect each domain to the rest of the demo.
-- Use the **Oracle Internals** sidebar to connect the page to Oracle AI Database capabilities.
+In this scene, you will learn what healthcare decision the page supports, what evidence the user should inspect, and what action the team may take next.
+
+**Note:** Review the Oracle Internals sidebar after the business flow is clear. Use it to connect the visible healthcare outcome to the database capabilities behind the page.
 
 ## Task 1: Prepare the dataset
+
+Perform the following set of steps to so every later scene starts from the same trusted healthcare baseline. This makes the dashboard, signal search, graph, map, analytics, Ask Data, and agent results easier to compare and trust.
 
 1. From the welcome page, click **Start the demo**, or click **Data Foundation** in the sidebar.
 2. In **Prepare the Dataset**, click **Restore Demo Data** if the dataset needs to be reset to the seeded baseline.
@@ -30,9 +29,13 @@ In this scene, you will:
 
 In the current demo dataset, the page shows **14,796** tracked records across the major demo layers, including **187** care services, **5,000** signal bulletins, **3,000** service requests, **187** service vectors, **5,000** signal vectors, and **1,422** semantic matches.
 
-Use these counts to frame the demo. The user is not loading a single table for a dashboard. The page prepares the operational, analytical, spatial, graph, vector, and audit data that each later scene uses.
+Use these counts to show that the dataset supports operational, analytical, spatial, graph, vector, and audit workflows, not just a single dashboard.
+
+**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
 
 ## Task 2: Review what gets loaded
+
+Perform the following set of steps to show that the demo uses recognizable healthcare data: care services, care sites, service requests, quality signals, logistics geography, graph relationships, vectors, machine learning outputs, and agent actions.
 
 1. Scroll to **What Gets Loaded**.
 2. Review the first three carousel cards: **Healthcare Data Foundation**, **Healthcare Operations**, and **Quality and Capacity Signals**.
@@ -45,17 +48,13 @@ The carousel explains the shared data model in business terms: provider networks
 
 ## Task 3: Connect the foundation to the rest of the demo
 
-Use this page as the handoff into the operating story:
-
-1. Explain that the command center will summarize the foundation as healthcare operating indicators.
-2. Explain that quality and capacity signals will use vector search over the signal data prepared here.
-3. Explain that care pathway, logistics, service request, analytics, Ask Data, and agent pages all read from the same governed foundation.
+Use this page as the bridge into the operating story. The same governed foundation will support the command center, signal search, care pathway graph, logistics map, service requests, analytics, natural-language questions, and AI agent workflows.
 
     ![Downstream healthcare scenes and loaded data domains highlighted from the Data Foundation page](images/foundation-downstream-handoff.png)
 
-The value of Oracle AI Database is that the demo can move across these workloads without sending the audience to separate systems or asking them to trust copied data. The later scenes show different interfaces over one governed healthcare data platform.
+The business value is that teams can make the decision from connected, governed data. Oracle AI Database provides the shared foundation that keeps operational data, analytics, and AI workflows aligned.
 
-You can move to the next scene.
+*You can move to the next scene.*
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team

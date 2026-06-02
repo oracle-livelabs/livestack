@@ -2,26 +2,23 @@
 
 ## Introduction
 
-A quality leader, capacity planner, service line manager, or supply operations analyst uses this page to understand what healthcare signals are saying before the risk is obvious in request volume alone. This persona is looking for patterns in quality bulletins, supply constraints, partner updates, compliance notes, logistics alerts, and care-service mentions. The goal is to connect operational language to affected services quickly enough to act.
+**Quality and Capacity Signals** helps operations, quality, and supply teams understand what healthcare signals are saying before the risk is obvious in request volume alone. The page connects operational language from bulletins, partner updates, logistics alerts, and quality notes to affected services and supplies quickly enough to act.
 
 Semantic search is difficult to implement when signals, care-service catalogs, embeddings, search indexes, and access policies live in separate systems. Healthcare teams often have to move sensitive operational text into external search services, synchronize vector indexes, and then rebuild access control outside the database.
 
 Oracle AI Database helps address these challenges by keeping vector search close to the governed healthcare data. In this LiveStack Demo, the page uses natural-language search over service and signal embeddings, shows match evidence, and keeps the operating feed tied to database access policies.
 
-Estimated Time: 10 minutes
+Estimated Time: **10 minutes**
 
 ![Quality and Capacity Signals page with semantic search controls and signal feed](images/scene-4-quality-and-capacity-signals.png)
 
 ### Objectives
 
-In this scene, you will:
-- Review the **Quality & Capacity Signals** workspace.
-- Run a semantic search for an oncology capacity phrase.
-- Inspect matched care services and supplies.
-- Review the signal summary and matched quality and capacity signal cards.
-- Understand why vector search and governed access matter for healthcare signal discovery.
+In this scene, you will learn what healthcare decision the page supports, what evidence the user should inspect, and what action the team may take next.
 
 ## Task 1: Review the signal feed
+
+Perform the following set of steps to see how quality, capacity, supply, and logistics signals are being summarized for healthcare operations teams.
 
 1. Click **Quality & Capacity Signals** in the sidebar.
 2. Review **Semantic Care Signal Search** at the top of the page.
@@ -33,7 +30,11 @@ In this scene, you will:
 
 In the current demo dataset, the signal summary shows **5.0K** indexed signals, **474** elevated or critical signals, **cold-chain excursion risks** as the top concern, **Formulation Tracker** as the highest impact source, and **Check logistics impact** as the recommended next step.
 
+**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
+
 ## Task 2: Run semantic care-service search
+
+Perform the following set of steps to show how a healthcare user can search by operational intent, not only by exact service names or keywords.
 
 1. Click the **oncology infusion slot capacity** example query chip, or enter that phrase in the search field.
 2. Click **Search**.
@@ -43,9 +44,15 @@ In the current demo dataset, the signal summary shows **5.0K** indexed signals, 
 3. Review the matched services and supplies returned above the signal summary.
 4. Focus on the top matches: **Infusion Center Slot Bundle - Continuity Lot 2**, **Infusion Center Slot Bundle - Continuity Lot 3**, and **Infusion Center Slot Bundle**.
 
-In the current demo dataset, the search returns **8** matched services and supplies for `oncology infusion slot capacity`. The top result is **Infusion Center Slot Bundle - Continuity Lot 2** from **Regional Oncology Network**, in **Specialty Care**, with a visible similarity score of about **70%**. This is the data point to emphasize: the search is not simply matching a keyword. It is finding semantically related care services and supplies by comparing vector embeddings.
+**Note:** The search turns operational language into relevant services and supplies, even when the wording does not exactly match a catalog term.
+
+In the current demo dataset, the search returns **8** matched services and supplies for `oncology infusion slot capacity`. The top result is **Infusion Center Slot Bundle - Continuity Lot 2** from **Regional Oncology Network**, in **Specialty Care**, with a visible similarity score of about **70%**.
+
+**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
 
 ## Task 3: Interpret the signal cards
+
+Perform the following set of steps to identify the affected services, severity, evidence, and possible next actions, such as checking logistics impact, opening related services, reviewing the care pathway graph, or routing a follow-up.
 
 1. Scroll to **Matched Quality & Capacity Signals**.
 2. Review the signal type, criticality, source, network impact, match score, related signals, affected services, and open follow-ups.
@@ -53,9 +60,9 @@ In the current demo dataset, the search returns **8** matched services and suppl
 
     ![Matched Quality and Capacity Signal cards with evidence metrics and action labels highlighted](images/matched-signal-cards.png)
 
-The value of Oracle AI Database is that operational text can become searchable healthcare intelligence without leaving the governed data platform. Vector search helps users find related signals by meaning, while the Oracle-backed application still shows source, score, and operating context.
+The business value is that teams can make the decision from connected, governed data. Oracle AI Database provides the shared foundation that keeps operational data, analytics, and AI workflows aligned. Additionally, operational text becomes searchable healthcare intelligence when users can find related signals by meaning while still seeing source, score, and operating context.
 
-You can move to the next scene.
+*You can move to the next scene.*
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team

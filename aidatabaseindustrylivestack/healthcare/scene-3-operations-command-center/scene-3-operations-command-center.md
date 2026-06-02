@@ -2,7 +2,9 @@
 
 ## Introduction
 
-The Healthcare Operations Command Center is built for a healthcare operations leader, service line owner, capacity planner, or provider-network analyst who needs a daily operating view of care demand, service value, quality signals, logistics pressure, and AI-assisted actions. The goal is to see where the network is under pressure before the issue becomes a separate escalation.
+The **Operations Command Center** helps healthcare leaders answer a daily operating question: *Where does the network need attention right now?*
+
+The page brings together service demand, value, quality signals, watched services, logistics pressure, and AI activity so teams can decide where to investigate first.
 
 Dashboards like this are difficult to implement when care sites, service requests, signal bulletins, supply data, logistics networks, and agent activity live in different systems. Teams often need copied extracts, separate BI models, and reconciliation logic before a dashboard can show a trustworthy view.
 
@@ -14,14 +16,13 @@ Estimated Time: 10 minutes
 
 ### Objectives
 
-In this scene, you will:
-- Review the command center as a healthcare operations user.
-- Interpret the KPI cards, care operations signal velocity chart, service value chart, and watched services table.
-- Change the signal velocity time window.
-- Search or filter watched services and supplies.
-- Use the **Oracle Internals** sidebar to explain why this dashboard can stay connected to governed Oracle data.
+In this scene, you will learn what healthcare decision the page supports, what evidence the user should inspect, and what action the team may take next.
+
+**Note:** Review the Oracle Internals sidebar after the business flow is clear. Use it to connect the visible healthcare outcome to the database capabilities behind the page.
 
 ## Task 1: Review the command center dashboard
+
+Use the dashboard as a daily triage view. The goal is to see where service demand, value, quality signals, logistics pressure, or AI activity suggests the network needs attention.
 
 1. Click **Operations Command Center** in the sidebar.
 2. Review the KPI cards across the top of the page.
@@ -29,13 +30,19 @@ In this scene, you will:
 4. Review **Service Value by Care Category**.
 5. Review **Watched Services and Supplies - Quality and Capacity Trend**.
 
+
+
     ![Operations Command Center KPI cards, signal velocity, and service value areas highlighted](images/command-center-kpis-overview.png)
 
-6. Open or review the **Oracle Internals** sidebar on the right.
+6. Review the Oracle Internals sidebar after the business flow is clear. Use it to connect the visible healthcare outcome to the database capabilities behind the page.
 
 In the current demo dataset, the page shows **3.0K** service requests logged, about **$4.21M** in tracked service value, **474** critical signals flagged, **156** care services under watch, and **1** completed agent action. Use those numbers to frame the command center as a triage surface: the user can see demand, value, signal pressure, watched services, and AI activity in one place.
 
+**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
+
 ## Task 2: Interpret signal velocity and service value
+
+Perform the following set of steps to understand where operational importance and risk are moving at the same time. This helps leaders decide which categories may need review, staffing, supply action, or follow-up.
 
 1. Click a signal velocity time range such as **24h**, **48h**, or **7d**.
 2. Review how the signal chart changes by time bucket.
@@ -44,9 +51,11 @@ In the current demo dataset, the page shows **3.0K** service requests logged, ab
 
     ![Signal velocity time controls, chart, and service value breakdown highlighted](images/signal-velocity-and-service-value.png)
 
-This is the business story to emphasize: healthcare users need to know where value, volume, and risk are moving together. A category with high service value and rising quality signals may need a different operating response than a low-value category with stable capacity.
+The key business story is that healthcare users need to know where value, volume, and risk are moving together so they can choose the right operating response.
 
 ## Task 3: Review watched services and supplies
+
+Perform the following set of steps to move from dashboard-level pressure to specific services, suppliers, or quality processes that may need attention.
 
 1. Use the watched services search box to filter for a care service, supply, or partner.
 2. Review the top watched rows.
@@ -58,7 +67,7 @@ This is the business story to emphasize: healthcare users need to know where val
 
 The watched services table turns the KPI story into a set of operating decisions. A healthcare leader can move from "critical signals are high" to a specific care service, supplier, or quality process that needs review.
 
-You can move to the next scene.
+*You can move to the next scene.*
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team

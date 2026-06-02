@@ -2,21 +2,19 @@
 
 ## Introduction
 
-This opening scene orients users to the Seer Health Network Healthcare LiveStack Demo. The welcome page introduces the healthcare intelligence story and uses a carousel to preview the use cases available in the demo.
+This opening scene gives users a quick roadmap for the healthcare demo. The carousel previews the use cases covered in the LiveStack, so the audience can see how the walkthrough moves from data foundation to operations, quality signals, care pathways, logistics, analytics, natural-language access, and AI-assisted decisions.
 
-Estimated Time: 5 minutes
+Estimated Time: **5 minutes**
 
 ![Welcome page with the healthcare use case carousel](images/welcome-and-demo-orientation.png)
 
 ### Objectives
 
-In this scene, you will:
-- Review the use case carousel on the welcome page.
-- Learn which healthcare use cases are available to explore in the LiveStack Demo.
-- Use the carousel controls to move through the use case tiles.
-- Click **Start the demo** to continue to the data foundation page.
+In this scene, you will learn what healthcare decision the page supports, what evidence the user should inspect, and what action the team may take next.
 
 ## Task 1: Review the use case carousel
+
+Review the carousel first so the audience understands the full healthcare operations journey. Each tile previews a business problem the demo will address, such as capacity pressure, quality signals, care logistics, service requests, analytics, or AI-assisted action.
 
 1. Read the three visible use case tiles.
 2. Click the right carousel arrow to move forward.
@@ -28,6 +26,8 @@ In this scene, you will:
 The welcome page frames the demo as healthcare intelligence on one governed Oracle data platform. The carousel introduces how the LiveStack connects care operations, capacity and service demand, quality and capacity signals, care pathway relationships, care logistics, service requests, analytics, natural-language data access, and AI-assisted operations.
 
 ## Task 2: Continue the demo
+
+After the audience understands the demo themes, continue to the data foundation page to begin the guided healthcare workflow.
 
 1. Click **Start the demo**.
 
