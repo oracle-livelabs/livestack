@@ -2,42 +2,42 @@
 
 ## Introduction
 
-Financial institutions are under increasing pressure to identify risk, respond to fraud, meet regulatory obligations, and deliver consistent client experiences while operating across a growing number of systems and data sources. When critical information is fragmented across core banking platforms, transaction systems, compliance workflows, fraud investigations, client service applications, and analytics environments, institutions can miss emerging risks, increase operational costs, delay investigations, and expose themselves to financial losses, regulatory penalties, and reputational damage. Leaders need timely, trusted visibility into customer exposure, transaction activity, service performance, and risk signals before issues become material events.
+Financial institutions need faster, better-governed decisions while risk, client, transaction, service, and compliance data often live in separate systems. The **Seer Bank Finance LiveStack** shows how those signals can come together so teams can spot exposure, investigate risk, improve service coverage, and act with more confidence.
 
 At the same time, business users expect faster access to insights, operations teams need visibility across regions and service channels, and executives want AI-assisted recommendations that remain grounded in governed enterprise data. Financial institutions need a way to connect these data domains so they can make faster, more informed decisions while maintaining compliance, reducing risk, and protecting customer trust.
 
-This runbook supports the Seer Bank Finance LiveStack Demo. The demo shows how Oracle AI Database 26ai can help financial-services teams bring those workloads together on one connected data foundation. Instead of splitting relational transactions, JSON documents, graph relationships, spatial analysis, vector search, machine learning, natural-language SQL, and AI agent workflows across separate systems, the LiveStack shows how those capabilities can work against the same governed Oracle data model.
+This runbook supports the **Seer Bank Finance LiveStack Demo**. The demo shows how **Oracle AI Database 26ai** can help financial-services teams bring those workloads together on one connected data foundation. Instead of splitting relational transactions, JSON documents, graph relationships, spatial analysis, vector search, machine learning, natural-language SQL, and AI agent workflows across separate systems, the LiveStack shows how those capabilities can work against the same governed Oracle data model.
 
-In the demo, Seer Bank uses Oracle AI Database to connect financial products, client transactions, fraud and Anti-Money Laundering (AML) signals, regulatory and market monitoring, financial crime networks, client service coverage, predictive risk analytics, governed conversational data access, and agent-assisted operations. The demo follows one financial-intelligence journey: risk signals emerge, products and institutions are tied to exposure, fraud networks reveal connected evidence, service and transaction workflows show operational impact, and analytics, natural-language SQL, and AI agents help teams act from the same governed data foundation.
+In the demo, Seer Bank uses Oracle AI Database to connect financial products, client transactions, fraud and Anti-Money Laundering (AML) signals, regulatory and market monitoring, financial crime networks, client service coverage, predictive risk analytics, governed conversational data access, and agent-assisted operations.
 
-Estimated Demo Time: 90 minutes
+The demo follows one financial-intelligence journey: risk signals emerge, products and institutions are tied to exposure, fraud networks reveal connected evidence, service and transaction workflows show operational impact, and analytics, natural-language SQL, and AI agents help teams act from the same governed data foundation.
 
-Each scene is designed to take between 5 and 10 minutes.
+Estimated Demo Time: **90 minutes**
+
+Each scene is designed to take between **5 and 10 minutes**.
 
 ![Finance LiveStack welcome page](images/welcome-and-demo-orientation.png)
 
 ### Objectives
 
-Explore the key banking use cases featured in the Seer Bank demo, including fraud detection and investigation, Anti-Money Laundering (AML) and compliance monitoring, customer and product exposure management, transaction and case operations, client service and SLA performance, operational capacity planning, revenue forecasting, and AI-assisted decision making. See how these capabilities help financial institutions reduce risk, improve customer outcomes, increase operational efficiency, and make more informed business decisions.
+In this LiveStack demo, you will see how connected finance data can help teams monitor risk, investigate financial crime, improve client-service coverage, understand transactions, use predictive analytics, and apply AI with stronger governance.
 
 ### Prerequisites
 
-This LiveStack Demo assumes you have:
-- Access to the running Seer Bank Finance LiveStack.
-- A modern browser open to the application URL.
+Before you begin, confirm that you can open the running Seer Bank Finance LiveStack in a modern browser. No coding or database administration knowledge is required to follow the business workflow.
 
 ## Demo Flow
 
-- Scene 1: Welcome and Demo Orientation.
-- Scene 2: Data Foundation.
-- Scene 3: Risk & Operations Dashboard.
-- Scene 4: Risk Signal Intelligence.
-- Scene 5: Financial Crime Network.
-- Scene 6: Client Service & SLA Coverage.
-- Scene 7: Transaction & Case Operations.
-- Scene 8: Predictive Risk, Capacity & Revenue.
-- Scene 9: Governed Data Copilot.
-- Scene 10: AI Operations Agent Console.
+- **Scene 1:** Welcome and Demo Orientation.
+- **Scene 2:** Data Foundation.
+- **Scene 3:** Risk & Operations Dashboard.
+- **Scene 4:** Risk Signal Intelligence.
+- **Scene 5:** Financial Crime Network.
+- **Scene 6:** Client Service & SLA Coverage.
+- **Scene 7:** Transaction & Case Operations.
+- **Scene 8:** Predictive Risk, Capacity & Revenue.
+- **Scene 9:** Governed Data Copilot.
+- **Scene 10:** AI Operations Agent Console.
 
 ## Learn More
 
