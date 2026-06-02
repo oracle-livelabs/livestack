@@ -38,7 +38,7 @@ Before you begin, confirm that you can open the running Seer Health Network Heal
 - **Scene 8: **Risk and Capacity Analytics.
 - **Scene 9:** Ask Healthcare Data.
 - **Scene 10:** Healthcare AI Agent Console.
-- **Scene 11:** Bring Your Own Healthcare Data.
+- **Scene 11:** Use Your Own Healthcare Data.
 - Download and run the portable Healthcare LiveStack.
 
 ## Learn More
