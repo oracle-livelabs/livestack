@@ -2,24 +2,21 @@
 
 ## Introduction
 
-This closing lab consolidates the Seer Media LiveStack story. The demo starts with a media data foundation, then shows how launch operations, audience signals, creator influence, rights coverage, campaign requests, predictive models, natural-language questions, and agents all operate from the same Oracle-backed system of record.
+This closing section connects the individual workflows into a single operating model, showing how audience intelligence, content operations, monetization, rights planning, analytics, and AI assistance work together on one governed platform.
 
-Estimated Time: 10 minutes
+Estimated Time: **10 minutes**
 
 ### Objectives
 
-In this lab, you will:
-- Review the evidence created across the scenes.
-- Connect the app workflows to business outcomes.
-- Capture the stakeholder narrative for a Media and Entertainment customer conversation.
+Connect each workflow to a business outcome and explain how the combined experience supports faster, more confident media decisions.
 
 ## Task 1: Review the final operating model
 
 1. Open **Seer Media Control Tower**.
 2. Use the left navigation to revisit the scenes that matter most to your audience.
-3. Summarize the story in one sentence: Seer Media detects audience demand, evaluates creator influence, checks rights and capacity, predicts revenue and retention risk, and routes decisions through governed Oracle data and agent workflows.
+3. Summarize the story in one sentence: **Seer Media** connects audience demand, creator influence, monetization, rights planning, analytics, and AI-assisted operations through one governed data foundation.
 
-Expected result:
+**Expected results:**
 - You can explain how the demo moves from signal detection to operational action.
 - You can point to the scene that supports each part of the story.
 
@@ -32,8 +29,7 @@ Expected result:
 5. In **Campaign & Rights Requests**, connect relational, JSON duality, and activation-route views to the same governed campaign record.
 6. In **Engagement, Revenue & Retention Forecasts** and **Media & Gaming Action Console**, connect predictions and agent decisions to auditable Oracle-backed actions.
 
-Expected result:
-- You can describe concrete operational improvements: faster demand detection, more grounded content recommendations, clearer rights coverage, better campaign and revenue forecasting, stronger retention actions, and more auditable AI-assisted decisions.
+**Expected result:** Connect the workflows to outcomes such as faster demand detection, improved retention targeting, better rights utilization, stronger monetization planning, and more transparent AI-assisted decisions.
 
 ## Task 3: Connect the demo to Oracle value
 
