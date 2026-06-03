@@ -1,53 +1,56 @@
-# Scene 1 Control Tower Orientation
+# Scene 1 Welcome and Demo Orientation
 
 ## Introduction
 
-This scene introduces Acme Precision Manufacturing and frames the LiveStack as one control tower for production, demand, supplier, inventory, routing, work order, analytics, and agent workflows. Use it to set the audience context before moving into the individual operator screens.
+This opening scene orients users to the Seer Manufacturing LiveStack Demo. The welcome page introduces the manufacturing operations story and uses a carousel to preview the use cases available in the demo.
 
-Estimated Time: 8 minutes
+The story follows the Servo Drive Controller AX-400 production plan as Seer Manufacturing works through constrained PCB material, supplier delay, work-order schedule variance, plant-capacity pressure, scrap risk, and AI-assisted corrective action. Use this scene to establish the user role: an operations leader, plant manager, production supervisor, maintenance planner, quality engineer, or supply chain analyst who needs one governed view of factory operations.
 
-![Acme Precision Manufacturing control tower orientation](images/scene-1-control-tower-orientation.png)
+Estimated Time: 5 minutes
+
+![Welcome page with the manufacturing use case carousel](images/scene-1-control-tower-orientation.png)
 
 ### Objectives
 
-In this lab, you will:
-- Open the control tower landing screen.
-- Review the converged Oracle workload lenses.
-- Use the quick routes to move into the first operational workflow.
+In this scene, you will:
+- Review the use case carousel on the welcome page.
+- Learn which manufacturing use cases are available to explore in the LiveStack Demo.
+- Connect the use cases to the AX-400 recovery story.
+- Use the carousel controls to move through the use case tiles.
+- Click **Start the demo** to continue to the data foundation page.
 
-## Task 1: Open the Control Tower
+## Task 1: Review the use case carousel
 
-1. Open the Manufacturing Operations LiveStack application.
-2. Confirm the left navigation shows the Acme Precision Manufacturing LiveStack brand.
-3. Review the landing page sections for runtime focus, converged capabilities, runtime architecture, and quick routes.
+1. Read the three visible use case tiles.
+2. Click the right carousel arrow to move forward.
+3. Continue until you have reviewed all visible manufacturing use cases.
+4. Use the left carousel arrow if you want to return to earlier tiles.
 
-Expected result:
-- The page describes a manufacturing operations demo centered on production signals, plant capacity, routing, and AI-assisted action.
-- The architecture panel shows Browser UI, Express API, Oracle AI Database 26ai, and REST plus local AI services.
+    ![Welcome page use case carousel with navigation controls highlighted](images/use-case-carousel.png)
 
-## Task 2: Review the Oracle Workload Lenses
+The welcome page frames the demo as manufacturing intelligence on one governed Oracle data platform. The carousel introduces how the LiveStack connects the data foundation, operations command center, production and quality signals, supplier and production-risk graph, plant capacity map, work orders, OML analytics, Ask Manufacturing Data, and agent-assisted operations.
 
-1. Inspect the capability cards for Relational, JSON, Graph, Vector, Spatial, and ML / AI.
-2. Explain that the application uses one database platform to support operational transactions, documents, relationships, semantic search, geospatial routing, and analytics.
-3. Point out that each subsequent scene uses the same application shell but emphasizes a different workload.
+## Task 2: Connect the story to AX-400 recovery
 
-Expected result:
-- The audience understands that the demo is not a collection of disconnected point tools.
-- The control tower becomes the story map for the rest of the walkthrough.
+1. Review the main welcome story.
+2. Focus on the line that explains the Servo Drive Controller AX-400 recovery plan.
+3. Explain that the same production issue will move through supplier risk, production signals, work orders, plant capacity, predictive analytics, natural-language exploration, and AI agent action.
 
-## Task 3: Move Into the Demo
+    ![Welcome page AX-400 recovery story and demo orientation highlighted](images/scene-1-control-tower-orientation.png)
 
-1. Click **Open command center** or select **Operations Command Center** in the left navigation.
-2. Return to the control tower when needed by selecting **Acme Precision Manufacturing Control Tower**.
+Use this as the narrative anchor for the rest of the runbook. The demo is not a feature checklist. It is a manufacturing operations investigation that starts with a production plan under pressure and ends with auditable corrective action.
 
-Expected result:
-- The active navigation item changes and the app moves to the selected workflow.
-- The browser URL updates with the selected page when a workflow is opened.
+## Task 3: Continue the demo
 
-## Task 4: Why this matters?
+1. Click **Start the demo**.
 
-Manufacturing operations leaders need a concise way to understand how demand, production signals, plant capacity, supplier relationships, and AI actions connect. The control tower gives the presenter a shared map before asking the audience to inspect individual screens.
+    ![Welcome page Start the demo button highlighted](images/start-the-demo-button.png)
+
+2. Confirm the demo moves to **Data Foundation**.
+
+Use this transition to explain that the welcome page is the orientation layer. The next scene prepares the governed manufacturing dataset that powers every later workflow.
 
 ## Credits & Build Notes
-- **Author** - LiveLabs Team
-- **Last Updated By/Date** - LiveLabs Team, 2026-05-13
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-02
+- **Screenshot source** - Captured from `http://143.47.191.163:8505/`.

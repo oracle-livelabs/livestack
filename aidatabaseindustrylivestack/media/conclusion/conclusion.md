@@ -12,7 +12,7 @@ Connect each workflow to a business outcome and explain how the combined experie
 
 ## Task 1: Review the final operating model
 
-1. Open **Seer Media Control Tower**.
+1. Open **Welcome**.
 2. Use the left navigation to revisit the scenes that matter most to your audience.
 3. Summarize the story in one sentence: **Seer Media** connects audience demand, creator influence, monetization, rights planning, analytics, and AI-assisted operations through one governed data foundation.
 
@@ -27,7 +27,7 @@ Connect each workflow to a business outcome and explain how the combined experie
 3. In **Creator & Community Graph**, connect creator relationships to audience reach and influence paths.
 4. In **Rights, Capacity & Live Event Coverage**, connect spatial overlays and VPD context to regional execution.
 5. In **Campaign & Rights Requests**, connect relational, JSON duality, and activation-route views to the same governed campaign record.
-6. In **Engagement, Revenue & Retention Forecasts** and **Media & Gaming Action Console**, connect predictions and agent decisions to auditable Oracle-backed actions.
+6. In **Engagement, Revenue & Retention Forecasts** and **Media and Entertainment Action Console**, connect predictions and agent decisions to auditable Oracle-backed actions.
 
 **Expected result:** Connect the workflows to outcomes such as faster demand detection, improved retention targeting, better rights utilization, stronger monetization planning, and more transparent AI-assisted decisions.
 
@@ -50,4 +50,4 @@ Connect each workflow to a business outcome and explain how the combined experie
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-29
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-02

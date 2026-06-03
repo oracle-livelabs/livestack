@@ -2,53 +2,78 @@
 
 ## Introduction
 
-This scene demonstrates work order operations and JSON Duality. Use it to show how an operator can inspect structured work order records, route details, and JSON document views without maintaining a separate document database.
+A production supervisor, order operations manager, plant planner, supply chain analyst, or application architect uses this page to understand the same manufacturing transaction from multiple angles. The persona needs a reliable operational list, relational line-item detail, API-friendly JSON document access, and route context.
+
+This is difficult to implement when work-order headers, line items, customer accounts, plant assignments, route state, and API payloads are handled in separate systems. Each copy creates synchronization risk and extra engineering work when the work-order model changes.
+
+Oracle AI Database helps address these challenges by keeping the work-order record in one governed platform while exposing it through the shape each workflow needs. Relational tables provide transactional detail. JSON Relational Duality Views expose the same work order as a nested JSON document. Oracle Spatial adds plant route and distance context.
 
 Estimated Time: 10 minutes
 
-![Work orders and JSON duality scene](images/scene-7-work-orders-and-json-duality.png)
+![Work Orders page with VPD banner, status filter, and work-order table](images/scene-7-work-orders-and-json-duality.png)
 
 ### Objectives
 
-In this lab, you will:
-- Open the Work Orders screen.
-- Filter or inspect work order rows.
-- Open the JSON Duality panel for a selected work order.
+In this scene, you will:
+- Review the **Work Orders** page and active work-order table.
+- Inspect a specific work-order row.
+- Open the same work order as relational operational detail.
+- Compare that same work order with the JSON document returned by `ORDERS_DV`.
+- Review the work-order route context for the record.
 
-## Task 1: Open Work Orders
+## Task 1: Review the work-order workspace
 
-1. Select **Work Orders** in the left navigation.
-2. Review the workload tags for JSON Duality and VPD.
-3. Inspect the visible work order list, route or map context, and VPD explanation.
+1. Click **Work Orders** in the sidebar.
+2. Review the active user banner. The current demo user is **Jessica Chen**, with **Admin** access and **20** visible work orders on the page.
+3. Review the status filter.
+4. Review the table columns: work order number, customer, location, status, line items, total, production signal, plant, and created time.
+5. Focus on work order **#95251**.
 
-Expected result:
-- The scene presents work orders as an operational list with security and document-view context.
-- The audience can connect work order visibility to region or role-based access.
+    ![Work Orders workspace with active user banner, status filter, table, and work order 95251 highlighted](images/work-order-workspace.png)
 
-## Task 2: Inspect a Work Order
+In the current demo dataset, work order **#95251** is for **Aster Robotics** in **Kansas City, Missouri**. It is **Delivered**, has **3** line items, totals **$22,984.13**, and is fulfilled by **Chicago Precision Machining Plant**. This work order will be the data point used through the rest of the scene.
 
-1. Select a work order row when data is loaded.
-2. Review customer, product, status, routing, and shipment details.
-3. Open the JSON Duality or document action for that order.
+## Task 2: Inspect the relational work-order detail
 
-Expected result:
-- The selected work order opens with a nested JSON-style representation.
-- The same business object can be explained as both relational data and an application-friendly document.
+1. Click work order **#95251**.
 
-## Task 3: Compare VPD and Document Evidence
+    ![Relational detail for work order 95251](images/work-order-relational-detail.png)
 
-1. Review the VPD policy explanation or SQL shown in the scene.
-2. Compare which records are visible for the active demo user.
-3. Use the JSON document view to show how application payloads can stay consistent with relational truth.
+2. Confirm the **Relational** tab is selected.
+3. Review customer, location, work-order value, plant assignment, and route cost.
+4. Review the line-item table.
 
-Expected result:
-- The presenter can explain governed access and document APIs in the same scene.
-- The audience sees JSON Duality as an operational simplification, not a separate data silo.
+For work order **#95251**, the relational view shows line items such as **High-Cycle PLC Module X420-101**, **Low-Variance Composite Panel S200-120**, and **Cleanroom Maintenance Kit L880-139**. This view is useful for operations because the work-order header and item detail remain normalized and easy to validate.
 
-## Task 4: Why this matters?
+## Task 3: Compare the JSON Duality View
 
-Manufacturing teams need work order payloads that are easy for applications to consume while still preserving transactional consistency and security. JSON Duality lets the demo show both without duplicating the data model.
+1. Click **JSON Duality View** in the expanded work-order panel.
+
+    ![JSON Duality View for work order 95251](images/work-order-json-duality.png)
+
+2. Review the source label **ORDERS_DV**.
+3. Review the JSON document for work order **95251**.
+4. Notice that the document contains `_id`, `customerId`, `status`, `total`, `shippingCost`, `demandScore`, `createdAt`, and nested `items`.
+
+This is the key point of the page. The JSON document is not a separate copy of the work order. It is the same governed work-order data exposed through an Oracle JSON Relational Duality View. Application teams can use document-shaped access while operations teams continue to work with relational tables and SQL.
+
+## Task 4: Review route context
+
+1. Click **Work Order Route** in the expanded work-order panel.
+
+    ![Work-order route context for work order 95251](images/work-order-routing-context.png)
+
+2. Review the assigned plant and customer location.
+3. Review distance, shipping or route cost, status, and work-order progress.
+4. Use the route view to explain how spatial context stays connected to the same governed work-order record.
+
+For work order **#95251**, the page connects **Chicago Precision Machining Plant** to **Aster Robotics** in **Kansas City, Missouri**. The page shows how Oracle Spatial can provide route context while JSON Duality and relational views expose the same work-order truth.
+
+The value of Oracle AI Database is that the same work order can support operations, API access, and route analysis without splitting the story across separate persistence layers.
+
+You can move to the next scene.
 
 ## Credits & Build Notes
-- **Author** - LiveLabs Team
-- **Last Updated By/Date** - LiveLabs Team, 2026-05-13
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-02
+- **Screenshot source** - Captured from `http://143.47.191.163:8505/`.
