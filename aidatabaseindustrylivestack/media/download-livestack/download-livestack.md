@@ -9,7 +9,7 @@ Estimated Time: 30 minutes
 ### Objectives
 
 In this lab, you will:
-- Download the portable Media LiveStack package.
+- Download the portable Media and Entertainment LiveStack package.
 - Extract the package into a clean working directory.
 - Prepare the runtime environment file.
 - Start the full application stack with Podman Compose.
@@ -21,7 +21,7 @@ In this lab, you will:
 1. Download the package named `livestack-media.zip` from the provided LiveStack distribution location.
 2. Save the file to your machine.
 
-The package contains the Media LiveStack application, compose configuration, database initialization assets, and supporting runtime files needed to run the demo locally.
+The package contains the Media and Entertainment LiveStack application, compose configuration, database initialization assets, and supporting runtime files needed to run the demo locally.
 
 ## Task 2: Prepare the working directory
 
@@ -204,8 +204,7 @@ Expected result:
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-29
-- **Archive Name** - `livestack-media.zip`
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-02
 - **Application URL** - `http://localhost:8505`
 - **Health URL** - `http://localhost:8505/api/health`
 - **Select AI Health URL** - `http://localhost:8505/api/selectai/health`

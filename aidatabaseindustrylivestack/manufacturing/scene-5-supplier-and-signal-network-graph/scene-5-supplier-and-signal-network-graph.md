@@ -2,53 +2,62 @@
 
 ## Introduction
 
-This scene visualizes supplier, influencer, and production-signal relationships as a graph. Use it to explain how the demo follows relationship paths rather than treating each signal as an isolated row.
+A supply chain analyst, plant manager, production supervisor, maintenance planner, quality engineer, or data architect uses this page to understand manufacturing relationships that are hard to see in isolated rows. The persona needs to reason across suppliers, constrained materials, manufactured parts, work orders, production lines, machines, maintenance events, quality issues, production signals, and risk cases.
+
+This is difficult when relationship analysis requires data movement into a separate graph database or offline notebook. Manufacturing users may know that a supplier delay is creating schedule risk, but they need to see how CircuitForge, PCB Rev C, AX-400, WO-4501, Detroit Line A, machine telemetry, and scrap-risk findings connect without losing governance.
+
+Oracle AI Database helps address these challenges by supporting graph analysis over the operational manufacturing schema. In this scene, the application exposes supplier and production-risk relationships while the sidebar explains the Oracle Property Graph and SQL/PGQ pattern behind the view.
 
 Estimated Time: 10 minutes
 
-![Supplier and signal network graph scene](images/scene-5-supplier-and-signal-network-graph.png)
+![Supplier and Production-Risk Graph page with graph depth controls and manufacturing nodes](images/scene-5-supplier-and-signal-network-graph.png)
 
 ### Objectives
 
-In this lab, you will:
-- Open the Supplier and Signal Network Graph.
-- Explore graph depth and node details.
-- Run graph query examples and inspect SQL/PGQ evidence.
+In this scene, you will:
+- Review the **Supplier and Production-Risk Graph** workspace.
+- Inspect graph depth controls and the graph entity list.
+- Focus on the **Supplier Delay Signal - PCB Rev C** risk node.
+- Explain how graph relationships help identify connected production risk.
+- Connect the user-facing graph to Oracle Property Graph and SQL/PGQ.
 
-## Task 1: Open the Network Graph
+## Task 1: Review the graph workspace
 
-1. Select **Supplier & Signal Network Graph** in the left navigation.
-2. Review the workload tags for Property Graph and SQL/PGQ.
-3. Locate the graph canvas, search control, depth selector, and graph query explorer.
+1. Click **Supplier & Signal Network Graph** in the sidebar.
+2. Review the graph depth controls: **1 Hop**, **2 Hops**, **3 Hops**, **4 Hops**, and **5 Hops**.
+3. Review the search field for supplier, work order, machine, or risk lookup.
+4. Review **Graph Entities**.
+5. Open or review the **Oracle Internals** sidebar on the right.
 
-Expected result:
-- The scene presents a relationship-oriented view of manufacturing signal propagation.
-- The graph tools let the presenter move from a visible node to connected suppliers, signals, or related entities.
+    ![Supplier and production-risk graph workspace with depth controls, entity list, selected node metrics, findings, and graph canvas highlighted](images/graph-workspace-controls.png)
 
-## Task 2: Explore Nodes and Depth
+In the current demo dataset, the page shows **39** graph entities. Visible nodes include **Supplier Delay Signal - PCB Rev C**, **Servo Drive Controller PCB Rev C**, **WO-4501 - AX-400 Servo Drive Build**, **AX-400 High Scrap Rate**, **AX-400 Servo Drive Controller**, **CircuitForge Electronics Supplier Desk**, **CNC Mill 17**, **Line A - Servo Drive Assembly**, and **Detroit Final Assembly Plant**.
 
-1. Search for an available supplier, signal, or influencer node when data is loaded.
-2. Change the depth selector from a shallow view to a deeper graph traversal.
-3. Click a node to open its detail panel, then use **Explore Network** if available.
+## Task 2: Explore a production-risk example
 
-Expected result:
-- The graph expands or refocuses around the selected node.
-- The detail panel gives enough context to explain why the relationship matters.
+1. In the entity list, locate **Supplier Delay Signal - PCB Rev C**.
+2. Review the node type, signal reach, risk score, link count, connected nodes, and production relationships.
+3. Compare it with nearby risk nodes such as **Servo Drive Controller PCB Rev C**, **WO-4501 - AX-400 Servo Drive Build**, **AX-400 High Scrap Rate**, and **CircuitForge Electronics Supplier Desk**.
+4. Change the graph depth from **1 Hop** to **2 Hops**, **3 Hops**, or **5 Hops** to explain how relationship scope changes.
 
-## Task 3: Run a Graph Query Example
+    ![Supplier Delay Signal PCB Rev C node, risk findings, and connected production relationships highlighted](images/production-risk-node-example.png)
 
-1. Select an example from the Graph Query Explorer.
-2. Click the run action.
-3. Open the SQL or query evidence if the panel provides a toggle.
+Use this example to explain why graph context matters. A supplier delay, constrained material, manufactured part, work order, production line, quality issue, and maintenance signal are more informative together than as independent records. The graph view helps the operator see the recovery path as connected evidence.
 
-Expected result:
-- The app returns graph results and displays the query pattern that produced them.
-- The presenter can explain how SQL/PGQ supports path and relationship analysis inside Oracle Database.
+## Task 3: Explain the Oracle graph pattern
 
-## Task 4: Why this matters?
+1. Scroll to the **Graph Query Explorer** area.
+2. Review example questions such as **Supplier Delay Paths**, **Work Order Schedule Risk**, **Downtime Risk Paths**, **Constrained Material Paths**, **Quality Escape Paths**, **Risk Case Evidence Map**, and **Production Hub Detection**.
+3. Review the Oracle Internals content that references property graph and SQL/PGQ.
+4. Explain that the graph is an analysis view over governed manufacturing data rather than a disconnected copy.
 
-Supplier risk, production signal propagation, and operational influence rarely follow simple one-table logic. Graph traversal helps teams find connected risk paths and explain why one signal can affect multiple parts, suppliers, or regions.
+    ![Graph Query Explorer SQL/PGQ options highlighted](images/graph-query-explorer.png)
+
+The value of Oracle AI Database is that manufacturing teams can ask relationship-aware questions inside the same governed platform that stores the operational data. That reduces data movement and lets the graph story stay connected to the rest of the demo.
+
+You can move to the next scene.
 
 ## Credits & Build Notes
-- **Author** - LiveLabs Team
-- **Last Updated By/Date** - LiveLabs Team, 2026-05-13
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-02
+- **Screenshot source** - Captured from `http://143.47.191.163:8505/`.

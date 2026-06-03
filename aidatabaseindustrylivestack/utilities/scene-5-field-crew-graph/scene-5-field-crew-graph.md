@@ -1,55 +1,53 @@
-# Scene 5 Service Restoration Graph
+# Scene 5 Operational Event Graph
 
 ## Introduction
 
-**Service Restoration Graph** helps users understand grid relationships that are hard to see in isolated rows. The page connects service points, outage events, substations, feeders, meter events, field crews, reliability gaps, and root causes so teams can reason across the restoration pathway, not just one record at a time.
+**Operational Event Graph** helps users understand relationships that are hard to see in isolated rows. The page connects electric outage events, gas leak events, water main breaks, wastewater overflow events, pipeline anomalies, well production issues, refinery unit constraints, LNG logistics delays, emissions excursions, HSE incidents, affected customers, affected assets, field crews, inspections, work orders, root causes, compliance records, and resolution milestones.
 
-Utility teams struggle when the information needed for one decision lives in separate tools. That separation slows action, increases reconciliation work, and makes it harder to trust the result.
-
-Oracle AI Database helps answer relationship questions, such as how service points connect to outages, feeders, crews, root causes, and restoration risks.
+Energy and Utilities teams struggle when the information needed for one decision lives in separate tools. Oracle AI Database helps answer relationship questions across structured, spatial, graph, vector, and operational data so teams can reason across the event path instead of one record at a time.
 
 Estimated Time: **10 minutes**
 
-![Service Restoration Graph page with graph depth controls and utility restoration nodes](images/scene-05-field-crew-graph.png)
+![Operational Event Graph page with graph depth controls and cross-sector event nodes](images/scene-05-field-crew-graph.png)
 
 ### Objectives
 
-In this scene, you will learn what utility decision the page supports, what evidence the user should inspect, and what action the team may take next.
+In this scene, you will learn how graph relationships connect events, assets, customers, crews, root causes, work orders, compliance records, and resolution milestones across the Gulf Coast event.
 
 ## Task 1: Review the graph workspace
 
-Perform the following set of steps to see how restoration relationships connect service points, outage events, feeders, substations, meter events, field crews, root causes, and reliability gaps.
+Perform the following steps to see how the event graph connects records across subsectors.
 
-1. Click **Service Restoration Graph** in the sidebar.
+1. Click **Operational Event Graph** in the sidebar.
 2. Review the graph depth controls: **1 Hop**, **2 Hops**, **3 Hops**, **4 Hops**, and **5 Hops**.
-3. Review the search field for service point, outage event, asset, root cause, or field crew lookup.
-4. Review **Restoration Graph Nodes**.
-5. Review the **Oracle Internals** sidebar after the business flow is clear. Use it to connect the visible utility operations outcome to the database capabilities behind the page.
+3. Review the search field for event, asset, customer impact, crew, root cause, or compliance lookup.
+4. Review **Operational Event Graph Nodes**.
+5. Expand **Oracle Internals** after the business flow is clear and review the property graph and SQL/PGQ evidence.
 
-    ![Service Restoration Graph workspace with search, graph depth controls, node list, selected node metrics, and graph canvas highlighted](images/graph-workspace-controls.png)
+    ![Operational Event Graph workspace with search, graph depth controls, node list, selected node metrics, and graph canvas highlighted](images/graph-workspace-controls.png)
 
-In the captured demo dataset, the page shows **50** restoration graph nodes. Visible nodes include **Feeder Fault on NV-12**, **7-Day Repeat Outage Risk**, **North Valley Critical Pump Station**, **Restoration ETA Outreach Gap**, **North Valley Feeder Lockout OUT-1042**, **Feeder NV-12**, **Regional Field Supervisor Team**, and **AMI Voltage Event 5582**.
+The graph should include records such as **OUT-1042**, **GLK-2208**, **WMB-4417**, **WWC-9031**, **PIPE-17A**, **WELL-NB-014**, **RFY-HCU-02**, **LNG-7842**, **EMS-1190**, **HSE-3364**, affected customers, affected assets, crews, inspections, root causes, work orders, and compliance records.
 
 **Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
 
-## Task 2: Explore a restoration-risk example
+## Task 2: Explore a cross-sector event example
 
-Perform the following set of steps to show how connected evidence can reveal repeat-outage risk, asset context, crew involvement, and root-cause relationships that are hard to understand from isolated records.
+Perform the following steps to show how connected evidence can reveal shared root causes, shared crew constraints, affected assets, customer impact, and compliance exposure.
 
-1. In the node list, locate **7-Day Repeat Outage Risk** or another high-risk restoration node.
+1. In the node list, locate **GLK-2208**, **PIPE-17A**, **OUT-1042**, or another high-priority event node.
 2. Review the node type, identifier, pathway volume, risk score, and link count.
-3. Compare it with nearby reliability-gap and asset nodes such as **7-Day Repeat Outage Risk**, **Feeder NV-12**, and **North Valley Feeder Lockout OUT-1042**.
+3. Compare it with nearby event, asset, HSE, emissions, work order, or compliance nodes.
 4. Change the graph depth from **1 Hop** to **2 Hops** or **3 Hops** to explain how relationship scope changes.
 
-    ![Service point restoration-risk node, graph depth control, and graph relationships highlighted](images/restoration-risk-node-example.png)
+    ![Cross-sector event node, graph depth control, and graph relationships highlighted](images/restoration-risk-node-example.png)
 
-Use this example to show why graph context matters: a service point, feeder, substation, meter event, crew, and root cause are more informative together than as isolated records.
+Use this example to show why graph context matters: a pipeline pressure anomaly, gas leak response, HSE incident, crew assignment, customer impact, and compliance record are more informative together than as isolated records.
 
 ## Task 3: Explain the Oracle graph pattern
 
 1. Review the **Graph Query Explorer** area.
 2. Review the Oracle Internals content that references property graph and SQL/PGQ.
-3. Explain that the graph is an analysis view over governed utility data rather than a disconnected copy.
+3. Explain that the graph is an analysis view over governed Energy and Utilities data rather than a disconnected copy.
 
     ![Graph relationship canvas, edge type legend, and Graph Query Explorer options highlighted](images/graph-query-explorer.png)
 
@@ -59,4 +57,4 @@ The business value is that teams can make the decision from connected, governed 
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-26
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-03

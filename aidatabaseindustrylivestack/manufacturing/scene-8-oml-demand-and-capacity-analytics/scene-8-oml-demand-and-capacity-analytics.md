@@ -2,53 +2,87 @@
 
 ## Introduction
 
-This scene demonstrates Oracle Machine Learning and vector clustering for manufacturing demand and capacity intelligence. Use it to connect forecasts, segments, semantic part clusters, and capacity risk into one analytics workflow.
+A manufacturing analytics manager, capacity planner, quality engineer, maintenance planner, or data science stakeholder uses this page to understand which predictive signals should drive action. This persona needs to know which manufactured parts have demand surge risk, how customers and OEMs segment by ordering pattern, whether order value is trending, which parts cluster semantically, and where capacity risk needs attention.
+
+This is difficult when predictive work is split across notebooks, exported CSV files, BI extracts, external ML services, and separate operational systems. Manufacturing teams can lose trust in predictions when model features are stale, scoring jobs run away from live data, or the explanation behind a forecast is disconnected from the work-order and capacity records that business users rely on.
+
+Oracle AI Database helps address these challenges by keeping machine learning close to governed manufacturing data. Oracle Machine Learning models and SQL analytics can run from the same connected data foundation that powers the rest of the LiveStack Demo.
 
 Estimated Time: 12 minutes
 
-![OML demand and capacity analytics scene](images/scene-8-oml-demand-and-capacity-analytics.png)
+![OML Demand and Capacity Analytics page with KPI cards and five analytics tabs](images/scene-8-oml-demand-and-capacity-analytics.png)
 
 ### Objectives
 
-In this lab, you will:
-- Open OML Demand and Capacity Analytics.
-- Review the available analytic tabs and model evidence.
-- Run or inspect demand forecasts, segment filters, vector clusters, and capacity intelligence.
+In this scene, you will:
+- Review the **OML Demand and Capacity Analytics** workspace, KPI cards, and five analytics tabs.
+- Inspect **Demand Surge** predictions.
+- Review **Customer Segments**.
+- Interpret the **Order Value Forecast**.
+- Explore **Part Clusters**.
+- Review **Capacity Risk** intelligence and risk indicators.
 
-## Task 1: Open OML Analytics
+## Task 1: Inspect Demand Surge predictions
 
-1. Select **OML Demand & Capacity Analytics** in the left navigation.
-2. Review the workload tags for OML and Vector K-Means.
-3. Inspect the summary metrics and analytic tabs.
+1. Click **OML Demand & Capacity Analytics** in the sidebar.
+2. Review the four KPI cards at the top of the page: **Manufactured Parts with Demand Surge**, **Customers / OEMs Segmented**, **Order Value Model R2**, and **Active In-DB ML Models**.
+3. Review the five analytics tabs: **Demand Surge**, **Customer Segments**, **Order Value Forecast**, **Part Clusters**, and **Capacity Risk**.
+4. Confirm that **Demand Surge** is selected.
+5. Review the scoring window, **Refresh** control, bar chart, and prediction table.
 
-Expected result:
-- The scene presents OML as an in-database analytics workflow tied to manufacturing demand and capacity.
-- The presenter can point to specific tabs rather than describing analytics abstractly.
+    ![Demand Surge predictions with active tab, chart, and prediction table highlighted](images/demand-surge-predictions.png)
 
-## Task 2: Review Forecast and Segmentation Workflows
+Use this opening view to set the scene: this page is not a separate data science notebook. It is a business-facing analytics surface backed by in-database analytics. The demand predictions help the team decide which parts, suppliers, and plant-capacity decisions deserve attention before schedule risk becomes missed output.
 
-1. Open the demand forecast tab or section.
-2. Review forecasted demand, revenue opportunity, model details, and time windows when data is available.
-3. Open customer or account segmentation and use available segment filters.
+## Task 2: Review Customer Segments
 
-Expected result:
-- The analytics view explains how demand and account patterns can influence production decisions.
-- The model evidence remains visible enough to support a credible technical discussion.
+1. Click **Customer Segments**.
+2. Review the **Segment Distribution** chart.
+3. Review the repeat-order risk distribution.
+4. Review **Segment Summary** and **Top customer accounts by RFM score**.
+5. Optionally click a segment filter to focus the account list.
 
-## Task 3: Inspect Vector Clusters and Capacity Intelligence
+    ![Customer Segments tab with segment distribution and top accounts highlighted](images/customer-segments.png)
 
-1. Open the manufactured-part vector clustering view.
-2. Adjust the cluster count if the K control is available, then run or refresh the cluster workflow.
-3. Open capacity intelligence and review critical, at-risk, surge, and margin-at-risk indicators.
+This is useful for manufacturing operations teams because segmentation becomes operational. The team can move from a model result to the accounts, OEMs, or demand patterns that need follow-up, production planning, or capacity allocation.
 
-Expected result:
-- The app groups manufactured parts by semantic similarity using vector distance.
-- Capacity intelligence translates forecast and inventory signals into operational risk indicators.
+## Task 3: Interpret Order Value Forecast
 
-## Task 4: Why this matters?
+1. Click **Order Value Forecast**.
+2. Review the forecast horizon selector and **Refresh** control.
+3. Review the model quality cards: **R² (fit quality)**, **Daily Slope**, **Mean Daily Order Value**, and **Observations**.
+4. Review the order value trend chart and forecast band.
 
-Manufacturing analytics only matter when they influence action. This scene shows how OML forecasts, vector clusters, and capacity scoring can move the conversation from reporting to capacity planning and risk mitigation.
+    ![Order Value Forecast tab with model quality cards and forecast chart highlighted](images/order-value-forecast.png)
+
+Use this forecast as a trust discussion. The page does not hide model quality. It shows the fit, slope, and observation window so a planner can treat the forecast as operational context instead of over-trusting a black-box prediction.
+
+## Task 4: Explore Part Clusters
+
+1. Click **Part Clusters**.
+2. Review the **K =** controls.
+3. Review the cluster count, parts clustered, embedding dimensions, and distance metric.
+4. Review a cluster card and its related manufactured parts.
+
+    ![Part Clusters tab with vector K-Means controls and cluster cards highlighted](images/part-clusters.png)
+
+This helps users understand how vector similarity can group manufactured parts without leaving the governed data platform. The same vector infrastructure that supports production-signal search can also support manufacturing analytics.
+
+## Task 5: Review Capacity Risk
+
+1. Click **Capacity Risk**.
+2. Review the summary cards.
+3. Review the capacity status distribution.
+4. Review monitored capacity by plant or capacity center.
+5. Scan the highest risk indicators for parts or plants that need attention.
+
+    ![Capacity Risk Intelligence tab with risk counts and monitored capacity highlighted](images/capacity-risk-intelligence.png)
+
+This turns model output into an operating view: the user can see which parts, plants, and capacity centers need attention before a constraint affects the AX-400 recovery plan.
+
+You can move to the next scene.
 
 ## Credits & Build Notes
-- **Author** - LiveLabs Team
-- **Last Updated By/Date** - LiveLabs Team, 2026-05-13
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-02
+- **Screenshot source** - Captured from `http://143.47.191.163:8505/`.

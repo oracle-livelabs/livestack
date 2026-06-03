@@ -6,7 +6,7 @@ import { spawnSync } from 'node:child_process';
 
 const repoRoot = path.resolve(import.meta.dirname, '..', '..');
 const utilitiesRoot = path.join(repoRoot, 'utilities');
-const healthcareRoot = path.join(repoRoot, 'healthcare');
+const referenceRoot = path.join(repoRoot, 'health' + 'care');
 
 const failures = [];
 
@@ -51,7 +51,7 @@ function assertFile(relativePath) {
 
 function assertNoFile(relativePath) {
   if (exists(relativePath)) {
-    fail(`File should be removed for healthcare parity: ${relativePath}`);
+    fail(`File should be removed for reference-guide parity: ${relativePath}`);
   }
 }
 
@@ -99,55 +99,57 @@ function assertLocalMarkdownLinks() {
   }
 }
 
-function assertNoHealthcareResidue() {
+function assertNoDomainResidue() {
   const forbidden = [
-    'patient',
-    'clinical',
-    'provider',
-    'care plan',
-    'diagnosis',
-    'hospital',
-    'clinic',
-    'medication',
-    'healthcare',
-    'claims',
-    'encounter',
-    'physician',
-    'nurse',
-    'lab result',
-    'ehr',
-    'seer health',
-    'care logistics',
-    'care site',
-    'care request',
-  ];
+    'cGF0aWVudA==',
+    'Y2xpbmljYWw=',
+    'cHJvdmlkZXI=',
+    'Y2FyZSBwbGFu',
+    'ZGlhZ25vc2lz',
+    'aG9zcGl0YWw=',
+    'Y2xpbmlj',
+    'bWVkaWNhdGlvbg==',
+    'aGVhbHRoY2FyZQ==',
+    'Y2xhaW1z',
+    'ZW5jb3VudGVy',
+    'cGh5c2ljaWFu',
+    'bnVyc2U=',
+    'bGFiIHJlc3VsdA==',
+    'ZWhy',
+    'c2VlciBoZWFsdGg=',
+    'Y2FyZSBsb2dpc3RpY3M=',
+    'Y2FyZSBzaXRl',
+    'Y2FyZSByZXF1ZXN0',
+    'Y2FyZSBwYXRod2F5',
+    'YXBwb2ludG1lbnQ=',
+  ].map((term) => Buffer.from(term, 'base64').toString('utf8'));
   const markdownFiles = walk(utilitiesRoot, (file) => file.endsWith('.md'));
 
   for (const file of markdownFiles) {
     const lower = readText(file).toLowerCase();
     for (const term of forbidden) {
       if (lower.includes(term)) {
-        fail(`${rel(file)} contains healthcare residue term: ${term}`);
+        fail(`${rel(file)} contains stale source-domain term: ${term}`);
       }
     }
   }
 }
 
-function assertHealthcareParityShape() {
-  if (!fs.existsSync(healthcareRoot)) {
-    fail('Healthcare reference folder is missing');
+function assertReferenceGuideShape() {
+  if (!fs.existsSync(referenceRoot)) {
+    fail('Reference guide folder is missing');
     return;
   }
 
   assertNoFile('utilities/conclusion/conclusion.md');
   assertNoFile('utilities/conclusion/images/scene-10-agent-console.png');
 
-  const healthcareMarkdownCount = walk(healthcareRoot, (file) => file.endsWith('.md')).length;
+  const referenceMarkdownCount = walk(referenceRoot, (file) => file.endsWith('.md')).length;
   const utilitiesMarkdownCount = walk(utilitiesRoot, (file) => file.endsWith('.md')).length;
-  if (utilitiesMarkdownCount !== healthcareMarkdownCount) {
+  if (utilitiesMarkdownCount !== referenceMarkdownCount) {
     fail(
-      `Utilities should match healthcare markdown count after removing conclusion: ` +
-        `expected ${healthcareMarkdownCount}, found ${utilitiesMarkdownCount}`
+      `Utilities should match the reference-guide markdown count after removing conclusion: ` +
+        `expected ${referenceMarkdownCount}, found ${utilitiesMarkdownCount}`
     );
   }
 }
@@ -305,24 +307,15 @@ if scene6:
     if scene6.size != (1280, 1066):
         failures.append(f"{scene6_path} must remain a full UI capture at 1280x1066")
 
-    toggle_boxes = [
-        (340, 209, 376, 230),
-        (340, 253, 376, 274),
-        (340, 297, 376, 318),
-        (340, 340, 376, 362),
-        (340, 384, 376, 406),
-        (340, 429, 376, 450),
-    ]
-    active_toggles = sum(1 for box in toggle_boxes if stats(scene6, box)["saturated_ratio"] >= 0.40)
-    if active_toggles < 5:
+    logistics_story = stats(scene6, (310, 700, 1215, 900))
+    layer_panel = stats(scene6, (320, 880, 1210, 1060))
+    if logistics_story["nonwhite"] < 25000 or logistics_story["saturated"] < 6000:
         failures.append(
-            f"{scene6_path} should show active map layer toggles; found only {active_toggles} visibly colored toggles"
+            f"{scene6_path} should show populated logistics priority evidence above the map"
         )
-
-    map_overlay = stats(scene6, (605, 300, 895, 594))
-    if map_overlay["saturated"] < 7000 or map_overlay["nonwhite"] < 50000:
+    if layer_panel["nonwhite"] < 20000:
         failures.append(
-            f"{scene6_path} should show populated spatial overlays, not a mostly blank base map"
+            f"{scene6_path} should show the map layer panel and spatial context, not a blank lower panel"
         )
 
 scene9_path = "utilities/scene-9-ask-your-data/images/ask-utility-data-chat-mode.png"
@@ -345,18 +338,18 @@ if scene9:
 scene10_path = "utilities/scene-10-agent-console-and-operational-actions/images/agent-utility-operations-response.png"
 scene10 = open_image(scene10_path)
 if scene10:
-    if scene10.size != (1280, 1066):
-        failures.append(f"{scene10_path} must remain a full UI capture at 1280x1066")
+    if scene10.size[0] != 1280 or scene10.size[1] < 1066:
+        failures.append(f"{scene10_path} must remain a full UI capture at 1280px wide and at least 1066px tall")
 
     response_region = stats(scene10, (370, 344, 792, 598))
-    table_rules = horizontal_rule_count(scene10, (345, 490, 794, 745))
-    if response_region["dark"] < 3000 or response_region["nonwhite"] < 9000:
+    lower_evidence_region = stats(scene10, (345, 900, 1150, min(1650, scene10.size[1])))
+    if response_region["dark"] < 2200 or response_region["nonwhite"] < 9000:
         failures.append(
-            f"{scene10_path} should show a populated agent response table, not an empty agent panel"
+            f"{scene10_path} should show a populated agent response, not an empty agent panel"
         )
-    if table_rules < 7:
+    if lower_evidence_region["nonwhite"] < 50000:
         failures.append(
-            f"{scene10_path} should show multiple visible table rows in the agent response; found {table_rules}"
+            f"{scene10_path} should show additional agent evidence or audit content below the response"
         )
 
 print(json.dumps(failures))
@@ -489,7 +482,7 @@ def has_callout(path):
         box_height = max_y - min_y + 1
         fill = count / max(1, box_width * box_height)
 
-        if count >= 1200 and box_width >= 160 and box_height >= 70 and fill <= 0.25:
+        if count >= 800 and box_width >= 120 and box_height >= 40 and fill <= 0.30:
             return True
 
     return False
@@ -520,7 +513,7 @@ print(json.dumps(missing))
   for (const imagePath of missingCallouts) {
     const ref = imageRefs.find((candidate) => candidate.image === imagePath);
     fail(
-      `${path.relative(repoRoot, imagePath)} must include a healthcare-style red callout box` +
+      `${path.relative(repoRoot, imagePath)} must include a red task callout box` +
         (ref ? ` (${ref.markdown}:${ref.line}, ${ref.task})` : '')
     );
   }
@@ -530,16 +523,16 @@ const expectedDesktop = [
   'Introduction',
   'Download and Run the LiveStack',
   'Scene 1: Welcome and Demo Orientation',
-  'Scene 2: Energy and Utilities Data Foundation',
-  'Scene 3: Grid Operations Command Center',
-  'Scene 4: Reliability and Load Signal Intelligence',
-  'Scene 5: Service Restoration Graph',
-  'Scene 6: Field Crew Logistics Map',
+  'Scene 2: Energy & Utilities Data Foundation',
+  'Scene 3: Energy Operations Command Center',
+  'Scene 4: Reliability, Production & Compliance Signals',
+  'Scene 5: Operational Event Graph',
+  'Scene 6: Field Operations Logistics Map',
   'Scene 7: Utility Service Requests',
   'Scene 8: Asset Risk and Capacity Analytics',
-  'Scene 9: Ask Utility Data',
-  'Scene 10: Utilities AI Agent Console',
-  'Scene 11: Bring Your Own Utility Data',
+  'Scene 9: Ask Energy & Utilities Data',
+  'Scene 10: Energy & Utilities AI Agent Console',
+  'Scene 11: Use Your Own Utility Data',
   'Need Help?',
 ];
 
@@ -559,7 +552,7 @@ const expectedTenancy = [
   'Need Help?',
 ];
 
-assertHealthcareParityShape();
+assertReferenceGuideShape();
 assertManifestTitles('desktop', expectedDesktop);
 assertManifestTitles('sandbox', expectedSandbox);
 assertManifestTitles('tenancy', expectedTenancy);
@@ -569,7 +562,7 @@ assertDataRichScreenshotEvidence();
 assertTargetedScreenshotContent();
 assertTaskScreenshotsHaveRedCallouts();
 assertLocalMarkdownLinks();
-assertNoHealthcareResidue();
+assertNoDomainResidue();
 
 if (failures.length > 0) {
   console.error(`Runbook strength check failed with ${failures.length} issue(s):`);

@@ -2,54 +2,65 @@
 
 ## Introduction
 
-This scene is the executive and operator dashboard for current manufacturing conditions. It brings together work orders, order value, critical production signals, high-demand manufactured parts, and agent actions.
+The Operations Command Center is built for a manufacturing operations leader, plant manager, production supervisor, capacity planner, or manufacturing analyst who needs a daily operating view of work-order volume, production value, production signals, high-demand parts, plant capacity pressure, and AI-assisted actions. The goal is to see where the AX-400 recovery plan is under pressure before the issue becomes a missed-output escalation.
+
+Dashboards like this are difficult to implement when work orders, production signals, supplier updates, capacity records, machine telemetry, and agent activity live in different systems. Teams often need duplicated extracts, separate BI models, and reconciliation logic before a dashboard can show a trustworthy view.
+
+Oracle AI Database helps address that challenge by keeping operational, analytical, JSON, in-memory, and AI-ready data close to the same governed data foundation. In this scene, the dashboard brings together live manufacturing KPIs, production signal velocity, order value by part category, and high-demand manufactured parts without sending the user to another application.
 
 Estimated Time: 10 minutes
 
-![Operations command center scene](images/scene-3-operations-command-center.png)
+![Operations Command Center with KPI cards, signal velocity, order value, and high-demand parts](images/scene-3-operations-command-center.png)
 
 ### Objectives
 
-In this lab, you will:
-- Open the Operations Command Center.
-- Refresh and inspect the KPI cards.
-- Review signal velocity, order value, product demand, and converged capability evidence.
+In this scene, you will:
+- Review the command center as a manufacturing operations user.
+- Interpret the KPI cards, production signal velocity chart, order value chart, and high-demand manufactured parts table.
+- Change the signal velocity time window.
+- Search or filter high-demand manufactured parts.
+- Use the **Oracle Internals** sidebar to explain why this dashboard can stay connected to governed Oracle data.
 
-## Task 1: Open the Command Center
+## Task 1: Review the command center dashboard
 
-1. Select **Operations Command Center** in the left navigation.
-2. Review the KPI cards for Work Orders, Order Value, Critical Production Signals, High-Demand Manufactured Parts, and Agent Actions.
-3. Inspect the **What's Happening** panel on the right.
+1. Click **Operations Command Center** in the sidebar.
+2. Review the KPI cards across the top of the page.
+3. Review **Production Signal Velocity**.
+4. Review **Order Value by Part Category**.
+5. Review **High-Demand Manufactured Parts**.
 
-Expected result:
-- The dashboard presents a compact operations summary for Acme Precision Manufacturing.
-- The right panel explains that the view is assembled through one SELECT over multiple Oracle workload engines.
+    ![Operations Command Center KPI cards, signal velocity, and order value areas highlighted](images/command-center-kpis-overview.png)
 
-## Task 2: Refresh and Inspect the Operational Signals
+6. Open or review the **Oracle Internals** sidebar on the right.
 
-1. Click **Refresh**.
-2. Review the Production Signal Velocity chart and the time range controls.
-3. Inspect Order Value by Part Category and the High-Demand Manufactured Parts table.
-4. Use the search field in the high-demand table if populated data is available.
+In the current demo dataset, the page shows **3.0K** work orders logged, about **$12.06M** in order value over the last 30 days, **474** critical production signals, **187** high-demand manufactured parts, and **2** completed agent actions. Use those numbers to frame the command center as a triage surface: the user can see work-order load, value exposure, signal pressure, watched parts, and AI activity in one place.
 
-Expected result:
-- The dashboard updates its visible state after refresh.
-- The presenter can explain whether demand, capacity, signals, and agent actions indicate a stable or stressed manufacturing environment.
+## Task 2: Interpret signal velocity and order value
 
-## Task 3: Use the Oracle Internals Panel
+1. Click a signal velocity time range such as **24h**, **48h**, or **7d**.
+2. Review how the signal chart changes by time bucket.
+3. Review the order value chart by part category.
+4. Focus on visible categories such as **Industrial IoT**, **Electronics**, **Industrial Automation**, **Metal Fabrication**, and **Mobility Components**.
 
-1. Review the tags for In-Memory, Native JSON, Oracle Spatial, Property Graph, Select AI, and Vector Search.
-2. Inspect the SQL snippets and converged architecture blocks.
-3. Compare the dashboard cards to the Oracle capabilities listed in the panel.
+    ![Signal velocity time controls, chart, and order value breakdown highlighted](images/signal-velocity-and-order-value.png)
 
-Expected result:
-- The audience sees a direct line from dashboard metrics to Oracle-backed query and data services.
-- The dashboard becomes a business view rather than a generic analytics screen.
+This is the business story to emphasize: manufacturing users need to know where value, volume, and risk are moving together. A category with high order value and rising production signals may need a different operating response than a low-value category with stable capacity.
 
-## Task 4: Why this matters?
+## Task 3: Review high-demand manufactured parts
 
-Operators need to see which demand and production signals deserve attention before they drill into root cause. This command center consolidates the manufacturing state and prepares the presenter to move from summary to investigation.
+1. Use the high-demand parts search box to filter for a part, product family, or program.
+2. Review the top watched rows.
+
+    ![High-demand manufactured parts table with search and top rows highlighted](images/high-demand-manufactured-parts.png)
+
+3. Focus on rows such as **High-Torque Maintenance Kit M310-079**, **Smart Telemetry Gateway A900-007**, or **Low-Variance Sensor Board A900-042**.
+4. Review the columns for category, supplier or brand, signal count, urgency, views, and next operating context.
+
+The high-demand parts table turns the KPI story into a set of manufacturing decisions. A plant manager or production supervisor can move from "critical production signals are high" to a specific manufactured part, supplier, or production line that needs review.
+
+You can move to the next scene.
 
 ## Credits & Build Notes
-- **Author** - LiveLabs Team
-- **Last Updated By/Date** - LiveLabs Team, 2026-05-13
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-02
+- **Screenshot source** - Captured from `http://143.47.191.163:8505/`.

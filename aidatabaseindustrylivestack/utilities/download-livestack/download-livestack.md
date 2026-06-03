@@ -108,7 +108,7 @@ Start the stack with **Podman Compose** to launch the database, ORDS, Ollama run
     http://localhost:8505
     ```
 
-A successful local start means the UI loads, the Energy and Utilities scenes appear in the sidebar, the active dataset shows demo data, and the Ask Utility Data page reports the configured runtime profile.
+A successful local start means the UI loads, the Energy & Utilities scenes appear in the sidebar, the active dataset shows demo data, and the Ask Energy & Utilities Data page reports the configured runtime profile.
 
 ## Task 4: Stop the stack when finished
 
@@ -131,4 +131,4 @@ The local LiveStack is stopped cleanly.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-26
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-03

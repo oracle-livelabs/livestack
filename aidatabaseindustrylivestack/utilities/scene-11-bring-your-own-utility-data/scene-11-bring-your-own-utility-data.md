@@ -2,67 +2,56 @@
 
 ## Introduction
 
-**Use Your Own Utility Data** shows how users can replace or restore the dataset through the application while keeping the demo safe and repeatable.
+**Use Your Own Utility Data** shows how a team can map the LiveStack pattern to its own Energy and Utilities operating data while preserving the seeded Seer Utility Network baseline as a known-good demo state.
 
-The workflow supports template download, ZIP validation, upload, seeded-data restore, and the expectation that only synthetic or non-sensitive utility data is used.
+This workflow matters because customers may bring electric utility, gas utility, water/wastewater, upstream, midstream, downstream, customer, field, HSE, emissions, maintenance, and regulatory data. The dataset tool makes the import path explicit while keeping destructive actions controlled and reinforcing that demo uploads should use synthetic, de-identified, or anonymized data.
 
-This scene matters because an Energy and Utilities LiveStack is most useful when teams can map the demo pattern to their own service territory, meter, customer, asset, outage, and field operations terminology. The application makes that workflow explicit while keeping the seeded Seer Utility Network data available as a known-good baseline.
+Estimated Time: **8 minutes**
 
-Estimated Time: **10 minutes**
-
-![Bring Your Own Utility Data modal with template, upload, validation, and restore controls](images/scene-11-bring-your-own-utility-data.png)
+![Use Your Own Utility Data entry point in the current Energy and Utilities app shell](images/scene-11-bring-your-own-utility-data.png)
 
 ### Objectives
 
-In this scene, you will:
-- Open the dataset tool from the application top bar.
-- Review the active dataset label.
-- Download the canonical utility dataset template.
-- Review the completed ZIP upload and validation path.
-- Preview or restore the seeded utility demo dataset.
-- Explain the data safety expectation for synthetic or non-sensitive utility data.
+In this scene, you will learn how the dataset tool supports template ZIP download, completed ZIP upload/replace, validation, restore-demo preview, restore-demo execution, active dataset state, and data-safety expectations.
 
 ## Task 1: Open the dataset tool
 
-Perform the following set of steps to show where users can manage datasets and to reinforce the key safety rule: use only synthetic or non-sensitive utility data, never protected customer data, account secrets, grid security details, or regulated operational records.
+Perform the following steps to open the dataset workflow from the app shell.
 
-1. From any application scene, click **Use Your Own Utility Data** in the top bar.
-2. Review the modal title and active dataset line.
-3. Use only synthetic or non-sensitive utility data. Do not upload protected customer data, account secrets, grid security details, or regulated operational records into the demo environment.
-4. Review the main sections: **Download Template ZIP**, **Select Completed ZIP**, **Validate or Restore**, and **Restore Utility Demo Data**.
+1. Click **Use Your Own Utility Data** in the top bar.
+2. In the live application, review the active dataset state when the tool opens.
+3. In the live application, review the available actions for template ZIP download, completed ZIP upload/replace, validation, and restore-demo.
 
-    ![Use Your Own Utility Data top-bar control highlighted](images/open-dataset-tool.png)
+    ![Use Your Own Utility Data top-bar entry point highlighted](images/open-dataset-tool.png)
 
-In the current demo, treat the displayed values as examples. Verify them before presenting, then use the result to explain the operational takeaway rather than relying on the exact numbers alone.
+Use this first view to explain that the dataset tool is part of the demo workflow, not a separate admin-only appendix.
 
 ## Task 2: Review the template and upload workflow
 
-Perform the following set of steps to show how custom utility datasets stay repeatable. The template defines the expected structure, validation checks the completed ZIP, and upload remains a deliberate action.
+Perform the following steps to explain what a customer would replace when they bring their own data.
 
-1. Click **Download Template ZIP** to download the canonical schema package.
-2. Review **Select Completed ZIP**. The control expects a `.zip` containing `manifest.json` and table CSV files.
-3. Review the **Validate Upload** and **Upload Data** actions.
-4. Explain that validation should run before data replacement.
+1. Review the template ZIP download action.
+2. Review the completed ZIP upload area.
+3. Explain that replacement data should preserve the required schema shape while using synthetic or de-identified customer-specific Energy and Utilities records.
+4. Emphasize that the same workflow can represent electric assets, gas pipeline records, water/wastewater facilities, oil and gas production data, refinery or LNG records, customer accounts, service requests, work orders, maintenance plans, HSE incidents, emissions events, and compliance records.
 
-    ![Dataset template download, ZIP selection, validate, and upload controls highlighted](images/template-and-upload-workflow.png)
+    ![Dataset workflow entry context highlighted for template and upload discussion](images/template-and-upload-workflow.png)
 
-This workflow keeps custom demos repeatable and safe: the template defines the structure, validation checks the package, upload is explicit, and seeded data remains available for reset.
+The key point is that customers can map their own terminology to the same Oracle AI Database capability pattern without changing the runbook story, while preserving data-safety expectations for demo environments.
 
 ## Task 3: Preview or restore the seeded dataset
 
-Perform the following set of steps to return the demo to a known-good baseline after testing custom synthetic utility data.
+Perform the following steps to show the demo-safe reset path.
 
-1. In **Restore Utility Demo Data**, click **Preview Restore**.
-2. Review the row counts, warnings, or issues returned by the preview.
-3. If you need to return the demo to the seeded baseline, click **Restore Utility Demo Data** after the preview enables the action.
-4. Close the dataset manager when finished.
+1. Review the restore-demo preview or validation action.
+2. Confirm that the restore action describes what will be replaced.
+3. Run the restore only when the demo should return to the seeded Seer Utility Network baseline.
+4. Confirm the active dataset state after the operation completes.
 
-    ![Preview Restore, Restore Utility Demo Data, and validation result highlighted](images/preview-restore-seeded-dataset.png)
+    ![Seeded dataset state and dataset tool entry highlighted for restore discussion](images/preview-restore-seeded-dataset.png)
 
-Use this scene to explain the operating guardrail: teams can bring synthetic utility data into the LiveStack, but the seeded dataset remains available as a known baseline.
-
-You can move to the download lab when you want to run the **Energy and Utilities LiveStack** locally.
+Use this scene to close the runbook with a practical adoption point: the same LiveStack can tell the seeded Gulf Coast story or help customers reason about their own Energy and Utilities operating data.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-26
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-03

@@ -1,24 +1,22 @@
-# Seer Utility Network Energy and Utilities LiveStack Guide
+# Seer Utility Network Energy & Utilities LiveStack Guide
 
 ## Introduction
 
-Energy and utilities teams need to coordinate customer operations, smart meter data, reliability signals, outage response, field work, asset risk, capacity planning, and AI-assisted decisions while keeping operational data governed.
+Energy and utilities organizations operate across electric reliability, gas safety, water and wastewater continuity, upstream production, midstream pipeline and LNG logistics, downstream refinery operations, customer service, field execution, HSE, emissions, and regulatory reporting. Those teams need the same trusted operating picture when severe weather, asset constraints, customer demand, production variance, and compliance exposure happen at the same time.
 
-The **Seer Utility Network LiveStack** shows how those signals can come together so teams can spot grid pressure earlier, understand the evidence behind a decision, and act with more confidence.
+The **Seer Utility Network LiveStack** demonstrates how **Oracle AI Database 26ai** can bring those Energy & Utilities workflows together on one governed data platform. The demo follows a severe Gulf Coast operating event that connects electric outage **OUT-1042**, gas leak **GLK-2208**, pipeline segment **PIPE-17A**, water main break **WMB-4417**, wastewater compliance event **WWC-9031**, well **WELL-NB-014**, refinery unit **RFY-HCU-02**, LNG cargo **LNG-7842**, emissions event **EMS-1190**, HSE incident **HSE-3364**, work order **WO-23891**, maintenance plan **MP-6082**, and compliance record **CMP-4420**.
 
-This runbook supports the **Seer Utility Network Energy and Utilities LiveStack Demo**. The demo shows how Oracle AI Database 26ai can bring utility operations workloads together on one connected data platform. Instead of splitting relational transactions, JSON documents, graph relationships, spatial analysis, vector search, in-database machine learning, natural-language SQL, and AI agent workflows across different systems, the LiveStack shows how those capabilities can work against the same governed Oracle data model.
-
-In the demo, Seer Utility Network uses **Oracle AI Database** to connect utility services, service points, field crew logistics, service requests, reliability and load signals, meter and asset relationships, spatial restoration coverage, predictive analytics, conversational data access, dataset import, and agent-assisted operations. Each scene is designed to help you explain a practical utility operations challenge and then show how a converged Oracle database capability supports a clearer decision path.
+The runbook is a story-led walkthrough, not a feature checklist. Each scene shows how relational transactions, JSON documents, property graph, Oracle Spatial, vector search, in-database machine learning, natural-language SQL, PL/SQL tools, and auditable AI agent actions work against the same governed Energy and Utilities foundation.
 
 Estimated Workshop Time: **90 minutes**
 
 Each scene is designed to take between **5 and 10 minutes**.
 
-![Energy and Utilities LiveStack welcome page](images/scene-01-welcome.png)
+![Energy and Utilities LiveStack welcome page with the cross-sector resilience story](images/scene-01-welcome.png)
 
 ### Objectives
 
-In this LiveStack demo, you will see how connected utility data can help teams monitor grid operations, discover reliability signals, analyze restoration pathways, coordinate field logistics, review service requests, use predictive analytics, and apply AI with stronger governance.
+In this LiveStack demo, you will learn how Oracle AI Database supports operational resilience, asset integrity, field execution, customer operations, production optimization, regulatory compliance, HSE, emissions reporting, and AI-assisted decision-making across electric, gas, water/wastewater, upstream, midstream, and downstream workflows.
 
 ### Prerequisites
 
@@ -29,17 +27,17 @@ Before you begin, confirm that you can open the running Seer Utility Network Ene
 ## Demo Flow
 
 - **Scene 1:** Welcome and Demo Orientation.
-- **Scene 2:** Energy and Utilities Data Foundation.
-- **Scene 3:** Grid Operations Command Center.
-- **Scene 4:** Reliability and Load Signal Intelligence.
-- **Scene 5:** Service Restoration Graph.
-- **Scene 6:** Field Crew Logistics Map.
+- **Scene 2:** Energy & Utilities Data Foundation.
+- **Scene 3:** Energy Operations Command Center.
+- **Scene 4:** Reliability, Production & Compliance Signals.
+- **Scene 5:** Operational Event Graph.
+- **Scene 6:** Field Operations Logistics Map.
 - **Scene 7:** Utility Service Requests.
-- **Scene 8:** Asset Risk and Capacity Analytics.
-- **Scene 9:** Ask Utility Data.
-- **Scene 10:** Utilities AI Agent Console.
+- **Scene 8:** Asset Risk & Capacity Analytics.
+- **Scene 9:** Ask Energy & Utilities Data.
+- **Scene 10:** Energy & Utilities AI Agent Console.
 - **Scene 11:** Use Your Own Utility Data.
-- **Download and run the portable Energy and Utilities LiveStack.**
+- **Download and run the portable Energy & Utilities LiveStack.**
 
 ## Learn More
 
@@ -53,4 +51,4 @@ Before you begin, confirm that you can open the running Seer Utility Network Ene
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-26
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-03

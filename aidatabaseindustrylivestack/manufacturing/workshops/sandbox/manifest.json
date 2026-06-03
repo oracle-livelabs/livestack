@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "Manufacturing Operations LiveStack Demo Guide",
+  "workshoptitle": "Seer Manufacturing LiveStack Guide",
   "help": "livelabs-help-database_us@oracle.com",
   "tutorials": [
     {
@@ -11,7 +11,7 @@
       "filename": "../../introduction/introduction.md"
     },
     {
-      "title": "Scene 1: Control Tower Orientation",
+      "title": "Scene 1: Welcome and Demo Orientation",
       "filename": "../../scene-1-control-tower-orientation/scene-1-control-tower-orientation.md"
     },
     {
@@ -51,8 +51,8 @@
       "filename": "../../scene-10-manufacturing-agent-console/scene-10-manufacturing-agent-console.md"
     },
     {
-      "title": "Conclusion: Business Outcomes",
-      "filename": "../../conclusion/conclusion.md"
+      "title": "Scene 11: Use Your Own Manufacturing Data",
+      "filename": "../../scene-11-use-your-own-manufacturing-data/scene-11-use-your-own-manufacturing-data.md"
     },
     {
       "title": "Take it home",

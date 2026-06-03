@@ -1,68 +1,66 @@
-# Scene 4 Reliability and Load Signal Intelligence
+# Scene 4 Reliability, Production & Compliance Signals
 
 ## Introduction
 
-**Reliability and Load Signal Intelligence** helps utility teams understand what operational signals are saying before the risk is obvious in service request volume alone.
+**Reliability, Production & Compliance Signals** helps teams understand why the Gulf Coast event matters before the risk is obvious in service request volume alone.
 
-The page connects capacity alerts, outage notes, smart meter anomalies, field constraints, compliance updates, and service mentions to affected utility services quickly enough to act.
+The page connects SAIDI/SAIFI, feeder utilization, gas pipeline pressure variance, leak response SLA, water pressure anomalies, wastewater discharge compliance, well production variance, refinery throughput, equipment vibration and temperature anomalies, emissions threshold alerts, HSE incident rates, maintenance backlog, crew capacity, and regulatory reporting status.
 
-Semantic search is difficult to implement when signals, utility-service catalogs, embeddings, search indexes, and access policies live in separate systems. Utility teams often have to move operational text into external search services, synchronize vector indexes, and then rebuild access control outside the database.
-
-Oracle AI Database helps address these challenges by keeping vector search close to the governed utility data. In this LiveStack Demo, the page uses natural-language search over service and signal embeddings, shows match evidence, and keeps the operating feed tied to database access policies.
+Semantic search is difficult when bulletins, sensor notes, asset descriptions, production updates, regulatory records, embeddings, search indexes, and access policies live in separate systems. Oracle AI Database keeps vector search close to governed operational data so the search stays tied to live schema context and database access policies.
 
 Estimated Time: **10 minutes**
 
-![Reliability and Load Signal Intelligence page with semantic search controls and signal feed](images/scene-04-outage-signals.png)
+![Reliability, Production & Compliance Signals page with semantic search controls and signal feed](images/scene-04-outage-signals.png)
 
 ### Objectives
 
-In this scene, you will learn what utility decision the page supports, what evidence the user should inspect, and what action the team may take next.
+In this scene, you will learn how vector search connects operating signals to affected Energy and Utilities services, assets, facilities, customers, and compliance records.
 
 ## Task 1: Review the signal feed
 
-Perform the following set of steps to see how reliability, load, capacity, field access, and customer operation signals are summarized for utility teams.
+Perform the following steps to see how reliability, production, compliance, safety, emissions, field, and customer signals are summarized for the operator.
 
-1. Click **Reliability & Load Signals** in the sidebar.
-2. Review **Semantic Utility Signal Search** at the top of the page.
-3. Review the example query chips, including **critical load substation switching slot capacity**, **field access constraints for storm restoration**, **transformer sensor supply alternative**, and **smart meter voltage anomaly follow-up**.
+1. Click **Reliability, Production & Compliance Signals** in the sidebar.
+2. Review **Semantic Reliability, Production & Compliance Signal Search** at the top of the page.
+3. Review example query chips such as pipeline pressure anomaly, water leak recurrence, wastewater compliance threshold, refinery throughput constraint, well production variance, emissions follow-up, HSE incident triage, and storm outage risk.
 4. Review the **Signal Summary** cards.
-5. Review **Matched Quality & Load Signals** below the summary.
+5. Review the matched signal feed below the summary.
 
-    ![Reliability and Load Signals search workspace, signal summary, and matched signal feed highlighted](images/signal-feed-overview.png)
+    ![Reliability, production, and compliance signal search workspace with summary and feed highlighted](images/signal-feed-overview.png)
 
-In the captured hosted app, the page reports **5.0K** indexed signal bulletins, **459** elevated or critical signals, capacity escalation as the top concern, and a matched signal feed with affected services, open follow-ups, and action labels. Use this as the bridge between raw operational text and governed utility intelligence.
+Use this opening view as the bridge between raw operational text and governed Energy and Utilities intelligence. The same search pattern can support electric reliability, gas safety, water/wastewater operations, upstream production, midstream integrity, downstream throughput, HSE, emissions, and regulatory status.
 
 **Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
 
-## Task 2: Run semantic utility-service search
+## Task 2: Run semantic signal search
 
-Perform the following set of steps to show how a utility user can search by operational intent, not only by exact service names or keywords.
+Perform the following steps to show how an operator can search by operational intent, not only by exact service names or keywords.
 
-1. Click the **critical load substation switching slot capacity** example query chip, or enter that phrase in the search field.
+1. Click an example query chip such as **gas pipeline pressure variance and leak response SLA**, or enter a similar phrase in the search field.
 2. Click **Search** when the search action is enabled.
 
-    ![Semantic search example for critical load and substation switching capacity](images/semantic-utility-service-results.png)
+    ![Semantic search example for pipeline pressure, leak response, and compliance evidence](images/semantic-utility-service-results.png)
 
-3. Review the service and supply match count returned above the signal summary.
-4. Review the matched signal cards below the filters.
-5. Use examples such as transformer load assessment, smart meter exchange, field access constraint, and vegetation clearance to explain that this is semantic matching, not simple keyword matching.
+3. Review the service, asset, facility, or signal match count returned above the signal summary.
+4. Review matched signal cards below the filters.
+5. Use examples such as **PIPE-17A**, **GLK-2208**, **WMB-4417**, **WWC-9031**, **WELL-NB-014**, **RFY-HCU-02**, **LNG-7842**, **EMS-1190**, and **HSE-3364** to explain semantic matching across subsectors.
 
-The operator can search using real operational language and still find related services, supplies, and signals even when the records use different wording.
+The operator can search using real operational language and still find related records even when the source records use different wording.
 
 ## Task 3: Interpret the signal cards
 
-Perform the following set of steps to identify the affected services, severity, evidence, and possible next actions, such as checking logistics impact, opening the restoration graph, or routing a compliance follow-up.
+Perform the following steps to identify affected services, severity, evidence, and possible next actions, such as opening the operational event graph, checking logistics impact, routing compliance follow-up, or preparing an agent action.
 
-1. Scroll to **Matched Quality & Load Signals**.
-2. Review signal type, criticality, source, network impact, match score, related signals, affected services, and open follow-ups when cards are populated.
-3. Use action labels such as checking logistics impact, opening the restoration graph, or routing compliance follow-up to explain where the operator could go next.
+1. Scroll to the matched signal cards.
+2. Review signal type, criticality, source, operating impact, match score, related signals, affected services or assets, and open follow-ups when cards are populated.
+3. Use action labels to explain where the operator could go next.
 
-    ![Matched Reliability and Load Signal cards with current signal state highlighted](images/matched-load-signal-cards.png)
+    ![Matched reliability, production, and compliance signal cards with current signal state highlighted](images/matched-load-signal-cards.png)
 
-The business value is that teams can make the decision from connected, governed data. Oracle AI Database provides the shared foundation that keeps operational data, analytics, and AI workflows aligned.
+The business value is that teams can make the decision from connected, governed data. Oracle AI Database provides the shared foundation that keeps operational data, analytics, search, and AI workflows aligned.
 
 *You can move to the next scene.*
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-26
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-03
