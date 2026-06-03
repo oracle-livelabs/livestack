@@ -1,27 +1,26 @@
-# Scene 4 Audience and Market Signals
+# Scene 4 Audience Momentum & Safety Signals
 
 ## Introduction
 
-An audience engagement analyst, content personalization lead, programming manager, trust and safety analyst, or ad-sales strategist uses this page to understand what viewers, subscribers, fans, and players are signaling before demand is obvious in campaign orders alone. The persona is looking for patterns in watch-time comments, creator posts, moderation queues, social sentiment, churn risk, ARPU signals, and content mentions.
+**Audience Momentum & Safety Signals** helps media teams understand what viewers, subscribers, fans, and players are signaling before demand, churn, or brand risk becomes obvious in campaign orders or viewing metrics alone.
 
-Semantic search is difficult to implement when audience signals, content catalogs, embeddings, search indexes, and access policies live in separate systems. Media teams often have to move audience text into external search services, synchronize vector indexes, and then rebuild governance outside the database.
+Media teams struggle when audience conversations, creator activity, moderation signals, content catalogs, and recommendation workflows live in separate systems. That separation slows response time and makes it harder to understand what is actually driving audience behavior.
 
-Oracle AI Database helps address these challenges by keeping vector search close to the governed media data. In this LiveStack Demo, the page uses natural-language search over content and audience-signal embeddings, shows match evidence, and keeps the operating feed tied to database access policies.
+The persona is looking for patterns in watch-time comments, creator posts, moderation queues, social sentiment, churn risk, ARPU signals, content mentions, brand-safety concerns, piracy and leak discussions, spoilers, creator backlash, misinformation, and live-event trust signals.
 
-Estimated Time: 10 minutes
+**Oracle AI Database** helps turn audience conversations into actionable media intelligence while keeping search, governance, and operational context connected.
+
+Estimated Time: **10 minutes**
 
 ![Audience Momentum and Safety Signals page with vector search and signal feed](images/audience-market-signals.png)
 
 ### Objectives
 
-In this scene, you will:
-- Review the **Audience Momentum & Safety Signals** workspace.
-- Run semantic search for a media demand phrase.
-- Inspect matched content assets.
-- Review the audience signal feed and momentum cards.
-- Understand why vector search and governed access matter for audience intelligence.
+In this scene, you will learn what audience decision the page supports, what evidence the user should inspect, and what action the business may take next.
 
 ## Task 1: Review the signal feed
+
+Perform the following set of steps to understand how audience momentum, engagement, trust and safety concerns, creator activity, and retention signals are summarized for media teams.
 
 1. Click **Audience Momentum & Safety Signals** in the sidebar.
 2. Review **Content Asset Vector Search** at the top of the page.
@@ -32,7 +31,11 @@ In this scene, you will:
 
 In the current seeded dataset, the feed contains **5.0K** posts across platforms such as YouTube, Twitter, TikTok, Instagram, and Threads. Visible examples include signals about sports media buyers, moderation queues, in-game purchase demand, ARPU lift, churn risk, creator momentum, watch time, and live-event planning.
 
+**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
+
 ## Task 2: Run content asset vector search
+
+Perform the following set of steps to show how media users can search by audience intent rather than exact asset names or metadata.
 
 1. Click the **sports rights highlight clips** example query chip, or enter that phrase in the search field.
 2. Click **Search**.
@@ -40,9 +43,11 @@ In the current seeded dataset, the feed contains **5.0K** posts across platforms
 
     ![Content asset vector search results for sports rights highlight clips](images/content-asset-vector-search-results.png)
 
-Use this moment to explain that the search is not simply matching a keyword. Oracle Vector Search compares embeddings so a programming manager can find related assets, rights windows, audience segments, or campaign opportunities by meaning.
+Use this moment to explain that the search is not simply matching a keyword. The key point is that users can describe what they are looking for in business language and still find related content, campaigns, rights opportunities, or audience segments.
 
 ## Task 3: Interpret audience signal cards
+
+Perform the following set of steps to identify audience momentum, trust-and-safety concerns, retention opportunities, creator-impact signals, and campaign actions.
 
 1. Scroll through the audience signal feed.
 2. Review platform, virality, author, follower count, signal text, engagement metrics, views, and sentiment.
@@ -50,9 +55,9 @@ Use this moment to explain that the search is not simply matching a keyword. Ora
 
     ![Audience signal cards with platform, virality, engagement, and sentiment evidence highlighted](images/audience-signal-cards-callout.png)
 
-The value of Oracle AI Database is that audience text can become searchable media intelligence without leaving the governed data platform. Vector search helps users find related signals by meaning, while the Oracle-backed application still shows source, score, and operating context.
+The business value is that teams can make faster decisions from connected audience evidence. Oracle AI Database provides the foundation that keeps audience signals, content assets, analytics, and AI workflows aligned.
 
-You can move to the next scene.
+*You can move to the next scene.*
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
