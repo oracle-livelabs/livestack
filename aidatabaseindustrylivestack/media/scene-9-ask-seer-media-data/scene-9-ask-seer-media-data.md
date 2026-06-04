@@ -12,7 +12,7 @@ Media organizations want faster answers, but they also need visibility into how 
 
 Estimated Time: **10 minutes**
 
-![Ask Gaming and Media Data workspace with modes, schema metadata, and example questions](images/ask-seer-media-data.png)
+![Ask Media and Entertainment Data workspace with modes, schema metadata, and example questions](images/ask-seer-media-data.png)
 
 ### Objectives
 
@@ -22,12 +22,12 @@ In this scene, you will learn what business decision the page supports, what evi
 
 Perform the following set of steps to see how media users can ask business questions in plain language while keeping the query path visible and controlled.
 
-1. Click **Ask Media & Entertainment Data** in the sidebar.
+1. Click **Ask Media and Entertainment Data** in the sidebar.
 2. Review the runtime profile in the top right of the assistant card. The current demo uses **llama3.2** through the local Ollama runtime.
 3. Review the queryable schema summary. The current page shows **7** domains and **16** queryable objects.
 4. Review example question categories such as **Launch Risk**, **Content Performance**, **Audience Segments**, **Audience Signals**, **Live Events**, **Studios**, **Monetization**, **Personalization**, and **Creator Analytics**.
 
-    ![Ask Gaming and Media Data workspace with modes, schema domains, and example questions highlighted](images/assistant-workspace-callout.png)
+    ![Ask Media and Entertainment Data workspace with modes, schema domains, and example questions highlighted](images/assistant-workspace-callout.png)
 
 The key idea is balance: users get conversational access to data while Oracle remains the trusted execution and governance layer.
 
@@ -54,7 +54,7 @@ Perform the following set of steps when the user wants to explore the data inter
 
     ![Chat mode response for the launch risk question](images/ask-seer-media-data-chat-mode.png)
 
-**Expected result:** The assistant returns a conversational response and follow-up prompts. Chat mode keeps the answer grounded in the live media schema, but it is shaped for exploration, such as breaking risk down by audience region, coverage desk, or audience tier.
+**Expected result:** The assistant returns a conversational response and follow-up prompts. Chat mode keeps the answer grounded in the live media schema, prioritizes the current question over stale chat context, and is shaped for exploration such as breaking risk down by audience region, coverage desk, or audience tier.
 
 
 ## Task 4: Use Show SQL mode to inspect the query path
@@ -95,10 +95,10 @@ Use the four completed mode examples to explain the governance pattern behind th
 4. Oracle AI Database executes authorized SQL against the live schema.
 5. The UI returns visible SQL, rows, or a narrated answer depending on the selected mode.
 
-This pattern matters because media users want faster answers, but they also need visible query logic, governed access, and a trusted execution layer. **Ask Media & Entertainment Data** shows how natural-language analytics can support self-service exploration without hiding the query path or replacing the database as the trusted execution layer.
+This pattern matters because media users want faster answers, but they also need visible query logic, governed access, and a trusted execution layer. **Ask Media and Entertainment Data** shows how natural-language analytics can support self-service exploration without hiding the query path or replacing the database as the trusted execution layer.
 
 *You can move to the next scene.*
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-29
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-04

@@ -70,7 +70,7 @@ Perform the following set of steps to identify where audience demand may exceed 
 
 1. Scroll to **Rights and Capacity Alerts - Audience Surge**.
 2. Review the content asset, studio or label, coverage hub, available capacity, required capacity, and social multiplier.
-3. Use examples such as **Championship Highlights Rights** or **Esports Finals Watch Party** to discuss how demand can exceed available rights or activation capacity.
+3. Use examples such as **Championship Highlights Rights**, **Premiere Window Packages**, or **Live Event Reminder Journeys** to discuss how demand can exceed available rights or activation capacity.
 
     ![Rights and capacity alerts for audience-surge scenarios](images/rights-capacity-alerts.png)
 
@@ -80,4 +80,4 @@ The business value is that teams can make rights and coverage decisions from con
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-29
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-04

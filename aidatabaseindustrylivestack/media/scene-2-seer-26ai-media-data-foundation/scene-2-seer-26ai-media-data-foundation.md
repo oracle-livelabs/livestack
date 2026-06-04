@@ -38,7 +38,7 @@ Use these counts to frame the demo. The user is not loading a single table for a
 Perform the following set of steps to show that the demo uses recognizable media data: content assets, audience accounts, campaign requests, creator relationships, live events, audience signals, rights coverage, vectors, machine learning outputs, and agent actions.
 
 1. Scroll to **What Gets Loaded**.
-2. Review the first carousel cards: **Gaming & Media Data Foundation**, **Launch Operations Intelligence**, and **Audience Momentum & Safety Signals**.
+2. Review the first carousel cards: **Media and Entertainment Data Foundation**, **Launch Operations Intelligence**, and **Audience Momentum & Safety Signals**.
 3. Use the carousel arrow to review the remaining data groups.
 4. Review implementation details only after the business story is clear. Use the **Oracle Internals** rail to connect visible outcomes to database capabilities.
 
@@ -64,4 +64,4 @@ The business value is that teams can make decisions from connected, governed dat
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-29
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-04

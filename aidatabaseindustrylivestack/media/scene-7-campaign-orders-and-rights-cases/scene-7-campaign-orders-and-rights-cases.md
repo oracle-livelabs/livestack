@@ -24,16 +24,16 @@ Perform the following set of steps to establish the operational context: who req
 2. Review the active user banner. The current demo user is **Jessica Chen**, with 8*Admin*8 access and **20** visible requests on the page.
 3. Review the status filter.
 4. Review the request table columns: request id, audience account, location, status, line items, total, audience signal, coverage hub, and created time.
-5. Focus on request **#77816**.
+5. Focus on request **#127476**.
 
-    ![Campaign request workspace with request 77816 visible](images/campaign-request-workspace.png)
+    ![Campaign request workspace with request 127476 visible](images/campaign-request-workspace.png)
 
 **Notes:**
 - **Callout 1** highlights the governed user and VPD access banner.
 - **Callout 2** highlights the status filter used to narrow the operations queue. 
 - **Callout 3** highlights the request row that will be inspected through the rest of the scene.
 
-In the current seeded dataset, request **#77816** is for **Ava Martinez** in **Edison, New Jersey**. It is in **Building Package** status, has **3** line items, totals **$348,250.00**, and uses **Seattle Gaming Live Ops Hub** as the coverage hub. This request will be the data point used through the rest of the scene.
+In the current seeded dataset, request **#127476** is for **Ava Martinez** in **Edison, New Jersey**. It is in **Processing** status, has **3** line items, totals **$348,250.00**, and uses **Seattle Live Event Operations Hub** as the coverage hub. This request will be the data point used through the rest of the scene.
 
 **Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
 
@@ -41,13 +41,13 @@ In the current seeded dataset, request **#77816** is for **Ava Martinez** in **E
 
 Perform the following set of steps to validate the campaign request header, content assets, activation cost, audience account, and operational status needed for fulfillment and support workflows.
 
-1. Click request **#77816**.
+1. Click request **#127476**.
 
-    ![Relational detail for campaign request 77816](images/campaign-request-relational-detail.png)
+    ![Relational detail for campaign request 127476](images/campaign-request-relational-detail.png)
 
 2. Confirm the **Relational** tab is selected.
 3. Review audience account, location, total, activation cost, and line items.
-4. Review content assets such as **Game Trailer Premiere Takeover**, **International Fandom Watch Party**, and **Lunar Kitchen Live Ops Quest Reset**.
+4. Review content assets such as **Premiere Window Packages**, **International Fandom Watch Party**, and **Lunar Kitchen Live Event Experiences**.
 
 This view helps operations teams answer campaign, activation, and support questions quickly because request, audience, content, and fulfillment details remain connected and easy to validate.
 
@@ -57,10 +57,10 @@ Perform the following set of steps to show how the same campaign request can sup
 
 1. Click **JSON Duality View** in the expanded request panel.
 
-    ![JSON Duality View for campaign request 77816](images/campaign-request-json-duality.png)
+    ![JSON Duality View for campaign request 127476](images/campaign-request-json-duality.png)
 
 2. Review the source label **ORDERS_DV**.
-3. Review the JSON document for request **77816**.
+3. Review the JSON document for request **127476**.
 4. Notice that the document contains `_id`, `customerId`, `status`, `total`, `demandScore`, `createdAt`, and nested `items`.
 
 **Notes:**
@@ -76,7 +76,7 @@ Perform the following set of steps to connect the campaign request to the covera
 
 1. Click **Activation Route** in the expanded request panel.
 
-    ![Activation route for campaign request 77816](images/campaign-request-activation-route.png)
+    ![Activation route for campaign request 127476](images/campaign-request-activation-route.png)
 2. Review the coverage hub and audience account.
 3. Review distance, estimated activation time, activation cost, route status, and activation progress.
 4. Review the Oracle Spatial SQL example.
@@ -86,7 +86,7 @@ Perform the following set of steps to connect the campaign request to the covera
 - **Callout 2** highlights the activation status and progress indicators.
 - **Callout 3** highlights the Oracle Spatial SQL used to calculate distance from governed location data.
 
-For request **#77816**, the page shows an activation route from **Seattle Gaming Live Ops Hub** to **Ava Martinez - Edison, New Jersey**. The route distance is about **2,394 miles** and the estimated activation time is about **43.5 hours**. The page explains that Oracle Spatial calculates distance between governed `SDO_GEOMETRY` points.
+For request **#127476**, the page shows an activation route from **Seattle Live Event Operations Hub** to **Ava Martinez - Edison, New Jersey**. The route distance and estimated activation time are calculated from the live spatial records after each data refresh. The page explains that Oracle Spatial calculates distance between governed `SDO_GEOMETRY` points.
 
 **Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
 
@@ -96,4 +96,4 @@ The workflow value is that one governed campaign request can support operations,
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-29
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-04
