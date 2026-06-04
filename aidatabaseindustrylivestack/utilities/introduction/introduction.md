@@ -29,11 +29,11 @@ Before you begin, confirm that you can open the running Seer Utility Network Ene
 - **Scene 1:** Welcome and Demo Orientation.
 - **Scene 2:** Energy & Utilities Data Foundation.
 - **Scene 3:** Energy Operations Command Center.
-- **Scene 4:** Reliability, Production & Compliance Signals.
+- **Scene 4:** Reliability, Production & Compliance Signal Intelligence.
 - **Scene 5:** Operational Event Graph.
 - **Scene 6:** Field Operations Logistics Map.
 - **Scene 7:** Utility Service Requests.
-- **Scene 8:** Asset Risk & Capacity Analytics.
+- **Scene 8:** Energy and Utilities Asset Risk & Capacity Analytics.
 - **Scene 9:** Ask Energy & Utilities Data.
 - **Scene 10:** Energy & Utilities AI Agent Console.
 - **Scene 11:** Use Your Own Utility Data.
