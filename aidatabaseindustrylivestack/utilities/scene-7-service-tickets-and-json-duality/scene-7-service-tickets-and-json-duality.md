@@ -2,71 +2,74 @@
 
 ## Introduction
 
-A service request operations manager, field logistics coordinator, customer support lead, or application architect uses this page to understand the same utility transaction from multiple angles. The persona needs a reliable operational list, relational line-item detail, API-friendly JSON document access, and spatial logistics route context.
+**Utility Service Requests** shows how customer operations connect to the Gulf Coast event. It can represent a wide range of requests across electric, gas, and water service, including outages, billing and payment issues, safety incidents, leaks, service changes, repairs, and new service requests.
 
-This is difficult to implement when request headers, line items, service points, logistics sites, shipment state, and API payloads are handled in separate systems. Each copy creates synchronization risk and extra engineering work when the request model changes.
+**Oracle AI Database** keeps each service request in a single governed platform while presenting it in the format each workflow needs. Relational data supports operational processing, JSON duality views support application workflows, and Oracle Spatial adds field context such as routing and distance.
 
-Oracle AI Database helps address these challenges by keeping the utility service request record in one governed platform while exposing it through the shape each workflow needs. Relational tables provide transactional detail. JSON Relational Duality Views expose the same request as a nested JSON document. Oracle Spatial adds logistics route and distance context.
-
-Estimated Time: 10 minutes
+Estimated Time: **10 minutes**
 
 ![Utility Service Requests page with VPD banner, status filter, and request table](images/scene-07-service-tickets.png)
 
 ### Objectives
 
-In this scene, you will:
-- Review the **Utility Service Requests** page and active request table.
-- Inspect a specific request row.
-- Open the same request as relational operational detail when the detail panel finishes loading.
-- Compare that same request with the JSON document returned by the utility service request duality view.
-- Review the logistics route and spatial context for the request.
+In this scene, you will learn how one customer or service request can support customer operations, field dispatch, compliance follow-up, and application integration without creating disconnected copies of the record.
 
 ## Task 1: Review the service request workspace
 
+Perform the following set of steps to establish customer impact: who requested help, what status the request is in, which subsector is affected, what priority or value is involved, and which field operations site is responsible:
+
 1. Click **Utility Service Requests** in the sidebar.
-2. Review the active user banner. The current demo user is **Jessica Chen**, with **Admin** access and **20** visible service requests on the page.
+2. Review the active user banner and VPD context.
 3. Review the status filter.
-4. Review the request table columns: request id, requesting service point, service point location, request status, line items, request priority value, reliability or load signal, field crew logistics site, and created time.
-5. Focus on the first visible request in the table.
+4. Review the request table columns for request id, customer or service point, location, status, line items, priority value, related signal, field site, and created time.
+5. Focus on a visible request such as **SR-77120** when available, or use the first visible request as the example.
 
     ![Utility Service Requests workspace with active user banner, status filter, and request table highlighted](images/service-request-workspace.png)
 
-In the captured hosted app, the first visible request is **#134625** for **Michelle Martin** in **Phoenix, Arizona**. It is **Delivered**, has **5** line items, totals **$3,940.00**, and appears in the VPD-visible request list for the admin user. Use the visible first row as the data point for the rest of the scene.
+Use visible rows to explain how customer operations connect to the broader event. A gas odor call, water leak report, billing concern, outage report, or industrial service request can become part of the same governed operating story.
+
+**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
 
 ## Task 2: Inspect the relational request detail
 
-1. Click the first visible request row.
+Perform the following set of steps to validate the request header, customer or service point, line items, priority value, field cost, and item-level information that operations teams need for follow-up:
+
+1. Click a visible request row.
 2. Confirm the **Relational** tab is selected.
-3. Review requesting service point, service point location, request priority value, logistics cost, and line items when the detail panel loads.
+3. Review customer or service point, location, request priority value, field or logistics cost, and line items when the detail panel loads.
 
     ![Utility service request relational detail with request header fields and line items](images/utility-request-relational-detail.png)
 
-Expected result: The relational view should show the normalized request header and line-item records. This view is useful for operations because the request header and item detail remain structured and easy to validate.
+**Expected result:** The UI returns the same type of result shown here. Exact rows, scores, or counts may vary by dataset, so verify the current values and focus the explanation on the operational pattern.
 
 ## Task 3: Compare the JSON Duality View
+
+Perform the following set of steps to show that the same governed request can support both operations users and application teams without creating a separate document store:
 
 1. Click **JSON Duality View** in the expanded request panel.
 2. Review the source label for the utility service request duality view.
 3. Review the JSON document for the selected request.
-4. Notice that the document should include request identifiers, service point identifiers, request status, request value, logistics cost, demand score, created timestamp, and nested line items.
+4. Notice that the document should include identifiers, customer or service point context, request status, request value, logistics or field cost, demand or risk score, created timestamp, and nested line items.
 
     ![Utility service request JSON Duality View document for the selected request](images/utility-request-json-duality.png)
 
-This is the key point of the page. The JSON document is not a separate copy of the request. It is the same governed request data exposed through an Oracle JSON Relational Duality View. Application teams can use document-shaped access while operations teams continue to work with relational tables and SQL.
+The key point is that the request is not copied into a separate document store. The same governed request can appear as operational detail or as a JSON document shape for applications.
 
-## Task 4: Review logistics route context
+## Task 4: Review field route context
+
+Perform the following set of steps to connect the service request to the field operations site, service point, distance, travel time, field cost, route status, and request progress:
 
 1. Click **Logistics Route** in the expanded request panel.
-2. Review the field crew logistics site and service point.
+2. Review the field operations site and service point.
 3. Review distance, estimated transit, logistics cost, route status, and request progress.
 4. Review the Oracle Spatial SQL example.
 
-    ![Utility service request logistics route with field crew site and route metrics](images/utility-request-logistics-route.png)
+    ![Utility service request route context with field operations site and route metrics](images/utility-request-logistics-route.png)
 
-The value of Oracle AI Database is that the same request can support operations, API access, and logistics analysis without splitting the story across separate persistence layers.
+The business value is that customer operations, field execution, JSON application access, and spatial context stay connected to the same governed service request.
 
-You can move to the next scene.
+*You can move to the next scene.*
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-26
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-03

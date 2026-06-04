@@ -1,33 +1,38 @@
-# Manufacturing Operations LiveStack Demo Guide
+# Seer Manufacturing LiveStack Guide
 
 ## Introduction
 
-This guide is the scene-by-scene runbook for the Manufacturing Operations LiveStack. The demo follows Acme Precision Manufacturing as operators connect production signals, plant capacity, supplier networks, work orders, machine learning, and agent-assisted decisions in one Oracle AI Database 26ai backed application.
+Manufacturing teams need to coordinate plant performance, work orders, supplier risk, quality inspections, machine telemetry, inventory constraints, predictive maintenance, production variance, and AI-assisted decisions while keeping operational data governed. Those workflows often live in separate execution systems, planning tools, quality systems, spreadsheets, analytics marts, search services, mapping tools, notebooks, and AI experiments. The result is a slower operating model: users can see part of the factory picture, but they cannot easily trace a corrective action back to the same trusted manufacturing data foundation.
 
-Estimated Demo Time: 1 hour 30 minutes
+This runbook supports the Seer Manufacturing LiveStack Demo. The demo shows how Oracle AI Database 26ai can bring manufacturing operations workloads together on one connected data platform. Instead of splitting relational work orders, JSON documents, supplier and production-risk graphs, plant spatial analysis, vector search, in-database machine learning, natural-language SQL, and AI agent workflows across different systems, the LiveStack shows how those capabilities can work against the same governed Oracle data model.
 
-![Manufacturing Operations LiveStack control tower](../scene-1-control-tower-orientation/images/scene-1-control-tower-orientation.png)
+In the demo, Seer Manufacturing uses Oracle AI Database to recover the Servo Drive Controller AX-400 production plan from constrained PCB material, work-order schedule variance, supplier delay, plant-capacity pressure, scrap risk, and machine telemetry signals. Each scene is designed to help you explain a practical manufacturing operations challenge and then show how a converged Oracle database capability supports a clearer decision path.
+
+Estimated Demo Time: 90 minutes
+
+Each scene is designed to take between 5 and 10 minutes.
+
+![Manufacturing LiveStack welcome page](images/welcome-and-demo-orientation.png)
 
 ### Objectives
 
-In this workshop, you will:
-- Orient the audience to the Acme Precision Manufacturing control tower and the converged Oracle architecture behind it.
-- Walk through each visible operator workflow in the LiveStack navigation.
-- Demonstrate how relational, JSON, graph, vector, spatial, OML, Select AI style natural language, and PL/SQL agent workflows support one manufacturing operations story.
-- Use expected results and business signals to narrate what changed on screen and why it matters.
-- Download and run the portable LiveStack bundle with Podman Compose.
+In this LiveStack Demo, you will:
+- Explore the key manufacturing use cases featured in the Seer Manufacturing demo, from the data foundation and command center to production signals, supplier graph analysis, plant routing, work orders, predictive analytics, conversational data access, and AI agent workflows.
+- Understand how common manufacturing operations challenges such as fragmented production data, supplier delay, capacity pressure, quality inspection failures, scrap risk, downtime risk, limited self-service analytics, and governed AI adoption are addressed in the demo flow.
+- See how Oracle AI Database 26ai supports each use case with converged capabilities including relational data, JSON, graph, spatial, vector search, machine learning, natural-language SQL, and AI-assisted operations.
+- Connect each scene to a practical business outcome, so the demo shows not only what the application does, but why the Oracle data platform matters for manufacturing operations.
 
 ### Prerequisites
 
-This workshop assumes you have:
-- Access to the running Manufacturing Operations LiveStack application.
-- A browser session open to the application.
-- Podman and Podman Compose available if you plan to run the downloadable stack locally.
-- Enough local resources for Oracle Database Free, ORDS, Ollama, and the Node application containers when running the full stack.
+This LiveStack Demo assumes you have:
+- Access to the running Seer Manufacturing LiveStack.
+- A modern browser open to the application URL.
+- The seeded Seer Manufacturing demo dataset loaded, or an imported synthetic manufacturing dataset loaded through the application dataset tool.
+- For the download lab, Podman and Podman Compose available on the machine where you run the portable stack.
 
-## Workshop Flow
+## Demo Flow
 
-- Scene 1: Control Tower Orientation.
+- Scene 1: Welcome and Demo Orientation.
 - Scene 2: Manufacturing Data Foundation.
 - Scene 3: Operations Command Center.
 - Scene 4: Production Signal Monitor.
@@ -37,21 +42,20 @@ This workshop assumes you have:
 - Scene 8: OML Demand and Capacity Analytics.
 - Scene 9: Ask Manufacturing Data.
 - Scene 10: Manufacturing Agent Console.
-- Conclusion and stakeholder narrative.
-- Download the LiveStack and run the portable stack with Podman Compose.
+- Scene 11: Use Your Own Manufacturing Data.
+- Download and run the portable Manufacturing LiveStack.
 
 ## Learn More
 
-- Oracle AI Database
-- Oracle Database JSON Duality Views
-- Oracle Property Graph and SQL/PGQ
-- Oracle AI Vector Search
-- Oracle Spatial
-- Oracle Machine Learning for SQL
-- Oracle REST Data Services
+- [Oracle AI Database 26ai documentation](https://docs.oracle.com/en/database/oracle/oracle-database/26/index.html)
+- [Oracle AI Agent Memory](https://www.oracle.com/database/ai-agent-memory/)
+- [Oracle AI Vector Search](https://www.oracle.com/database/ai-vector-search/)
+- Oracle Spatial and Graph documentation: [Oracle Spatial](https://docs.oracle.com/en/database/oracle/oracle-database/26/spatl/toc.htm) and [Oracle Property Graph](https://docs.oracle.com/en/database/oracle/property-graph/26.2/index.html)
+- [Oracle Machine Learning for SQL documentation](https://docs.oracle.com/en/database/oracle/machine-learning/oml4sql/tasks.html)
+- [Oracle REST Data Services documentation](https://docs.oracle.com/en/database/oracle/oracle-rest-data-services/25.4/orddg/index.html)
+- [Oracle LiveLabs catalog](https://livelabs.oracle.com/)
 
 ## Credits & Build Notes
-- **Author** - LiveLabs Team
-- **Last Updated By/Date** - LiveLabs Team, 2026-05-13
-- **Source package** - `livestack-manufacturing.zip`
-- **Screenshot note** - Screenshots were captured from the local React application shell at `http://127.0.0.1:5173`. The full database-backed compose stack was not started during guide authoring, so some captured data panels show empty, loading, or fallback states.
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-02
+- **Screenshot source** - Captured from `http://143.47.191.163:8505/`.

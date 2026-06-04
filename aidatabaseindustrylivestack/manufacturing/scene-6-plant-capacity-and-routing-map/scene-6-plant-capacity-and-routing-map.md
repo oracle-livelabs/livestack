@@ -2,53 +2,62 @@
 
 ## Introduction
 
-This scene uses spatial data to connect demand regions, plant capacity centers, shipments, and inventory alerts. Use it to show how manufacturing operations can reason about geography, service coverage, and routing decisions inside the same application.
+A plant capacity planner, production supervisor, supply chain analyst, field operations lead, or manufacturing operations leader uses this page to understand where plant capacity, demand regions, work-order routes, inventory constraints, and customer risk intersect. This persona needs a geographic operating view, not just a list of plants.
+
+Location-aware manufacturing decisions are difficult when plant sites, work-order routes, demand regions, capacity zones, and customer risk tiers live outside the operational data platform. Teams may export to a GIS tool, but then lose the connection to current work orders, capacity levels, access controls, and operational status.
+
+Oracle AI Database helps address these challenges by keeping spatial geometry and operational records together. In this scene, Oracle Spatial powers plant locations, routes, coverage zones, density grids, demand regions, and proximity context in the same application that manages the rest of the manufacturing data.
 
 Estimated Time: 10 minutes
 
-![Plant capacity and routing map scene](images/scene-6-plant-capacity-and-routing-map.png)
+![Plant Capacity and Routing Map with spatial layers, capacity cards, and plant table](images/scene-6-plant-capacity-and-routing-map.png)
 
 ### Objectives
 
-In this lab, you will:
-- Open the Plant Capacity and Routing Map.
-- Inspect capacity centers, demand regions, shipments, and inventory alerts.
-- Use routing controls to evaluate nearest or best-fit capacity options.
+In this scene, you will:
+- Review the **Plant Capacity and Routing Map** as a geographic operating view.
+- Interpret the active plant, available capacity, pending work order, and capacity alert cards.
+- Toggle map layers for customer risk, plants, routes, coverage zones, density, and demand regions.
+- Compare map evidence with the plant table.
+- Explain how Oracle Spatial supports location-aware manufacturing decisions.
 
-## Task 1: Open the Routing Map
+## Task 1: Review plant capacity priorities
 
-1. Select **Plant Capacity & Routing Map** in the left navigation.
-2. Review the workload tags for Oracle Spatial and VPD.
-3. Inspect the map, capacity center cards, demand regions, and alert panels.
+1. Click **Plant Capacity & Routing Map** in the sidebar.
+2. Review the stat cards across the top of the page.
+3. Review the current user and VPD banner.
+4. Review the map and the plant-capacity summary before changing layers.
 
-Expected result:
-- The scene presents plant capacity and routing as a geographic decision workflow.
-- The right-side evidence connects the visible map to Oracle Spatial and governed access.
+    ![Plant capacity priority cards, active user, and VPD context highlighted](images/plant-capacity-priorities.png)
 
-## Task 2: Evaluate a Routing Scenario
+Use this opening view to explain the manufacturing problem. The AX-400 recovery plan needs to know where production can be shifted, which plants have available capacity, how many work orders are pending, and where capacity alerts may block a schedule recovery action.
 
-1. Select or review a customer, product, or demand region when controls are populated.
-2. Run the nearest-capacity or routing action if available.
-3. Compare the recommended route to inventory alerts, in-transit shipments, and regional demand.
+## Task 2: Toggle spatial layers
 
-Expected result:
-- The map highlights the relevant plant or fulfillment center decision.
-- Operators can explain why the selected route is operationally attractive or risky.
+1. Review the map and its layer controls.
+2. Toggle **Customer Risk Tiers**.
+3. Toggle **Plants** and **Work Order Routes**.
+4. Toggle **Coverage Zones**, **H3 Density Grid**, and **Production Demand Regions**.
+5. Review how the map changes as layers are added or removed.
 
-## Task 3: Inspect Capacity and Demand Evidence
+    ![Plant capacity map layers with active spatial overlays highlighted](images/plant-capacity-map-layers.png)
 
-1. Review any H3, zone, or region heat indicators shown in the scene.
-2. Compare capacity center utilization against production signal or demand-pressure indicators.
-3. Use the Oracle internals panel to connect spatial calculations to the visible route.
+The layer controls make the same map useful for different questions. A plant manager may start with plant locations and coverage zones. A supply chain analyst may focus on work-order routes. A capacity planner may compare demand regions and density with available production capacity.
 
-Expected result:
-- The user sees geography and capacity as part of the same operating decision.
-- The scene sets up downstream work order and analytics conversations.
+## Task 3: Compare plant data with the map
 
-## Task 4: Why this matters?
+1. Scroll to the **Plants** table.
+2. Review columns for center, location, type, supported products, capacity, pending work orders, load, and status.
+3. Use the table to connect map markers to concrete operating records.
+4. Explain how the same plant records can support both operational planning and spatial routing.
 
-Manufacturing decisions depend on where inventory, plant capacity, and demand are located. Spatial analysis helps operators route work and shipments with better context than a flat order list can provide.
+    ![Plants table and selected operating rows highlighted](images/plants-table.png)
+
+The value of Oracle AI Database is that location intelligence is not detached from the operational data. Oracle Spatial can support route coverage and proximity analysis while the application still shows capacity, pending work, alerts, and VPD-aware access from the same data foundation.
+
+You can move to the next scene.
 
 ## Credits & Build Notes
-- **Author** - LiveLabs Team
-- **Last Updated By/Date** - LiveLabs Team, 2026-05-13
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-02
+- **Screenshot source** - Captured from `http://143.47.191.163:8505/`.

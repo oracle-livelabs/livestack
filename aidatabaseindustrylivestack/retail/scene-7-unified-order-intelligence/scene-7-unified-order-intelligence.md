@@ -11,7 +11,7 @@ Oracle AI Database helps address these challenges by keeping the order record in
 
 JSON Relational Duality Views expose the same order as a nested JSON document for application and API use cases. Oracle Spatial adds route and distance context for fulfillment visibility, and VPD policies can control which orders each user can see.
 
-Estimated Time: 10 minutes
+Estimated Time: **10 minutes**
 
 ![Unified Order Intelligence order list with order 334424 highlighted](images/unified-order-intelligence.png)
 
@@ -21,7 +21,7 @@ In this scene, you will learn what retail decision the page supports, what evide
 
 ## Task 1: Review the order workspace
 
-Review the order workspace to confirm both order visibility and access control. Retailers need fast order insight, but users should only see the orders they are allowed to view.
+Perform the following set of steps to confirm both order visibility and access control. Retailers need fast order insight, but users should only see the orders they are allowed to view.
 
 1. Click **Unified Order Intelligence** in the sidebar.
 2. Review the VPD banner below the page subtitle. It shows the active demo user and whether the user has full access or a region-filtered order view.
@@ -30,11 +30,13 @@ Review the order workspace to confirm both order visibility and access control. 
 
 In the current demo dataset, order **#334424** is for **Penelope Mendoza** in **Charlotte, North Carolina**. It is marked **delivered**, contains **5** line items, totals **$943.89**, and is fulfilled by **Columbus Midwest**. This order will be the data point used through the rest of the scene.
 
+**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
+
 ## Task 2: Inspect the relational order detail
 
 ![Relational order detail for order 334424](images/order-relational-detail.png)
 
-Inspect the relational order detail to see the precise customer, product, quantity, price, and line-item information that service and operations teams need for validation.
+Perform the following set of steps to see the precise customer, product, quantity, price, and line-item information that service and operations teams need for validation.
 
 1. Click order **#334424**.
 2. Confirm the **Relational** tab is selected.
@@ -47,7 +49,7 @@ This view helps service and operations teams answer customer questions quickly b
 
 ![JSON Duality View for order 334424](images/order-json-duality-view.png)
 
-Compare the **JSON Duality View** to show that the same order can support both internal operations and application needs without creating separate versions of the order.
+Perform the following set of steps to show that the same order can support both internal operations and application needs without creating separate versions of the order.
 
 1. Click **JSON Duality View** in the expanded order panel.
 2. Review the source label **ORDERS_DV**.
@@ -60,7 +62,7 @@ The key point is that the order is not copied into a separate document store. Th
 
 ![Shipment route and fulfillment context for order 334424](images/order-shipment-route.png)
 
-Review shipment and fulfillment context to connect the order record to delivery distance, cost, progress, and status. This helps the retailer understand the customer promise behind the order.
+Perform the following set of steps to connect the order record to delivery distance, cost, progress, and status. This helps the retailer understand the customer promise behind the order.
 
 1. Click **Shipment Route** in the expanded order panel.
 2. Review the fulfillment center and customer locations on the map.
@@ -69,9 +71,11 @@ Review shipment and fulfillment context to connect the order record to delivery 
 
 For order **#334424**, the page shows a route from **Columbus Midwest** to **Penelope Mendoza** in **Charlotte, North Carolina**. The shipment is delivered, the straight-line spatial distance is about **340 miles**, the estimated transit time is about **6.2 hours**, and the ship cost is **$18.69**. This connects the order record to fulfillment visibility, not just API payloads or order totals.
 
+**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
+
 Retail teams can see which products, brands, and locations need attention before availability or fulfillment suffers. Oracle AI Database supports this by combining inventory, fulfillment center, forecast, spatial coverage, center load, and social signal data in one governed data platform, then presenting the alert in the same operational interface.
 
-You can move to the next scene.
+*You can move to the next scene.*
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team

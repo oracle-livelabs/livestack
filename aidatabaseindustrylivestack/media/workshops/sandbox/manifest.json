@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "Media & Entertainment Content Intelligence LiveStack",
+  "workshoptitle": "Media and Entertainment Content Intelligence LiveStack Guide",
   "help": "livelabs-help-database_us@oracle.com",
   "tutorials": [
     {
@@ -11,47 +11,47 @@
       "filename": "../../introduction/introduction.md"
     },
     {
-      "title": "Scene 1: Seer Media Control Tower",
+      "title": "Scene 1: Welcome and Midnight Harbor Story Orientation",
       "filename": "../../scene-1-seer-media-control-tower/scene-1-seer-media-control-tower.md"
     },
     {
-      "title": "Scene 2: Seer 26ai Media Data Foundation",
+      "title": "Scene 2: Media and Entertainment Data Foundation",
       "filename": "../../scene-2-seer-26ai-media-data-foundation/scene-2-seer-26ai-media-data-foundation.md"
     },
     {
-      "title": "Scene 3: Content Revenue and Operations Dashboard",
+      "title": "Scene 3: Launch Operations Command Center",
       "filename": "../../scene-3-content-revenue-and-operations-dashboard/scene-3-content-revenue-and-operations-dashboard.md"
     },
     {
-      "title": "Scene 4: Audience and Market Signals",
+      "title": "Scene 4: Audience Momentum and Safety Signals",
       "filename": "../../scene-4-audience-and-market-signals/scene-4-audience-and-market-signals.md"
     },
     {
-      "title": "Scene 5: Creator Influence Network",
+      "title": "Scene 5: Creator and Community Graph",
       "filename": "../../scene-5-creator-influence-network/scene-5-creator-influence-network.md"
     },
     {
-      "title": "Scene 6: Rights and Distribution Coverage",
+      "title": "Scene 6: Rights, Capacity and Live Event Coverage",
       "filename": "../../scene-6-rights-and-distribution-coverage/scene-6-rights-and-distribution-coverage.md"
     },
     {
-      "title": "Scene 7: Campaign Orders and Rights Cases",
+      "title": "Scene 7: Campaign and Rights Requests",
       "filename": "../../scene-7-campaign-orders-and-rights-cases/scene-7-campaign-orders-and-rights-cases.md"
     },
     {
-      "title": "Scene 8: Predictive Demand and Revenue Analytics",
+      "title": "Scene 8: Engagement, Revenue and Retention Forecasts",
       "filename": "../../scene-8-predictive-demand-and-revenue-analytics/scene-8-predictive-demand-and-revenue-analytics.md"
     },
     {
-      "title": "Scene 9: Ask Seer Media Data",
+      "title": "Scene 9: Ask Media and Entertainment Data",
       "filename": "../../scene-9-ask-seer-media-data/scene-9-ask-seer-media-data.md"
     },
     {
-      "title": "Scene 10: Seer Media Agent Console",
+      "title": "Scene 10: Media and Entertainment Action Console",
       "filename": "../../scene-10-seer-media-agent-console/scene-10-seer-media-agent-console.md"
     },
     {
-      "title": "Scene 11: Use Your Own Data",
+      "title": "Scene 11: Use Your Own Media Data",
       "filename": "../../scene-11-use-your-own-data/scene-11-use-your-own-data.md"
     },
     {

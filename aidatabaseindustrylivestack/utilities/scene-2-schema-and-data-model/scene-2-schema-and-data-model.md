@@ -2,61 +2,66 @@
 
 ## Introduction
 
-This scene prepares the Seer Utility Network dataset that powers the rest of the LiveStack Demo. The page loads or restores the governed Oracle AI Database 26ai data foundation, then shows the major energy and utilities domains and data types used across the application.
+**Data Foundation** prepares the trusted **Seer Utility Network** dataset used across the demo. Whether the data is loaded or restored, every subsequent screen starts from the same governed baseline.
 
-The scene is useful at the start of a customer walkthrough because it establishes that the later pages are not separate demos. Utility services, service points, reliability signals, service requests, service vectors, signal vectors, semantic matches, field crew logistics geography, graph relationships, machine learning outputs, and agent audit records are all prepared from the same Oracle-backed foundation.
+That baseline includes electric utility assets and meter events; gas pipeline and leak-response data; water and wastewater network and compliance data; oil and gas wells, production facilities, pipelines, refineries, and LNG logistics; emissions and HSE incidents; and customer, billing, service, workforce, inspection, maintenance, compliance, regulatory, sensor, and operations records.
 
-Estimated Time: 5 minutes
+This page makes clear that the runbook is a connected end-to-end workflow, not a series of isolated mini-demos. The same Oracle-backed records power the command center, signal search, operational graph, field map, service requests, analytics, Ask Data, data import, and agent workflows.
 
-![Energy and Utilities Data Foundation page with dataset restore controls and loaded data domains](images/scene-02-schema-data.png)
+Estimated Time: **5 minutes**
+
+![Energy and Utilities Data Foundation page with dataset restore controls and cross-sector data domains](images/scene-02-schema-data.png)
 
 ### Objectives
 
-In this scene, you will:
-- Load or restore the Seer Utility Network demo dataset.
-- Review the live record counts that confirm the demo foundation is ready.
-- Understand what utility data domains are prepared for downstream scenes.
-- Use the **What Gets Loaded** carousel to connect each domain to the rest of the demo.
-- Use the **Oracle Internals** sidebar to connect the page to Oracle AI Database capabilities.
+In this scene, you will confirm that the demo has a governed baseline for electric, gas, water/wastewater, upstream, midstream, downstream, customer operations, field work, HSE, emissions, and regulatory workflows.
+
+**Note:** Oracle Internals is collapsed by default. Expand it only after the business flow is clear so you can connect the visible data foundation to the database capabilities behind the page.
 
 ## Task 1: Prepare the dataset
+
+Perform the following set of steps so every later scene starts from the same trusted Energy and Utilities baseline:
 
 1. From the welcome page, click **Start the demo**, or click **Data Foundation** in the sidebar.
 2. In **Prepare the Dataset**, click **Restore Demo Data** only if the dataset needs to be reset to the seeded baseline.
 3. Wait for the operation to complete if you run the restore.
 4. Review the record counts below the action.
 
-    ![Prepare the Dataset restore action and utility record counts highlighted](images/prepare-dataset-counts.png)
+    ![Prepare the Dataset restore action and Energy and Utilities record counts highlighted](images/prepare-dataset-counts.png)
 
-In the captured demo dataset, the page shows **14,439** tracked records across the major demo layers, including **31** utility services, **5,000** signal bulletins, **3,000** service requests, **31** service vectors, **5,000** signal vectors, and **1,377** semantic matches.
+The seeded baseline should support named records such as **OUT-1042**, **GLK-2208**, **PIPE-17A**, **WMB-4417**, **WWC-9031**, **WELL-NB-014**, **FAC-DELTA-03**, **RFY-HCU-02**, **LNG-7842**, **EMS-1190**, **HSE-3364**, **WO-23891**, **MP-6082**, and **CMP-4420**.
 
-Use these counts to frame the demo. The user is not loading a single table for a dashboard. The page prepares the operational, analytical, spatial, graph, vector, and audit data that each later scene uses.
+**Notes:**
+- Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
+- Use these counts to show that the dataset supports operational, analytical, spatial, graph, vector, machine learning, natural-language SQL, and audit workflows.
 
 ## Task 2: Review what gets loaded
 
+Perform the following set of steps to show that the demo uses recognizable Energy and Utilities data, not only electric grid records:
+
 1. Scroll to **What Gets Loaded**.
-2. Review the first three carousel cards: **Energy & Utilities Data Foundation**, **Energy & Utilities Operations**, and **Reliability and Load Signals**.
-3. Use the right carousel arrow to review the remaining data groups.
+2. Review the data cards for assets, meters, work orders, crews, service requests, customer accounts, pipeline segments, wells, production facilities, compressor stations, refineries, LNG terminals, storage facilities, water treatment plants, wastewater facilities, emissions events, HSE incidents, maintenance plans, compliance records, regulatory reports, inspections, sensor readings, operating events, and billing or collections records.
+3. Use the carousel controls to review the remaining data groups.
 4. Click the **Oracle Internals** icon on the far-right rail to expand the sidebar, then review the Oracle capability notes.
 
     ![What Gets Loaded carousel and Oracle Internals data foundation notes highlighted](images/what-gets-loaded-carousel.png)
 
-The carousel explains the shared data model in business terms: utility operator networks, utility services, service points, service requests, reliability and load signals, logistics geography, restoration graph links, vectors, ML outputs, and agent actions. The sidebar ties that story to Oracle capabilities such as relational data, JSON Duality Views, property graph, Oracle Spatial, vector search, in-database ML, and the agent audit trail.
+The carousel should make the shared data model concrete: electric reliability data, gas safety data, water/wastewater data, oil and gas operations data, customer data, field work data, HSE and emissions data, compliance data, vectors, graph relationships, ML outputs, and agent actions are all prepared from one foundation.
 
 ## Task 3: Connect the foundation to the rest of the demo
 
-Use this page as the handoff into the operating story:
+Use this page as the bridge into the operating story. The same governed foundation supports the command center, reliability and production signal search, operational event graph, field operations map, service requests, analytics, Ask Data, data import, and AI agent workflows.
 
-1. Explain that the command center will summarize the foundation as grid operating indicators.
-2. Explain that reliability and load signals will use vector search over signal data prepared here.
-3. Explain that restoration graph, field logistics, service request, analytics, Ask Data, BYO data, and agent pages all read from the same governed foundation.
+1. Explain that the command center will summarize the foundation as cross-sector operating indicators.
+2. Explain that vector search will connect reliability, production, and compliance signals to affected services and assets.
+3. Explain that graph, spatial, JSON duality, OML, Ask Data, BYO data, and agent pages all read from the same governed records.
 
-    ![Downstream utility scenes and loaded data domains highlighted from the Data Foundation page](images/foundation-downstream-handoff.png)
+    ![Downstream Energy and Utilities scenes and loaded data domains highlighted from the Data Foundation page](images/foundation-downstream-handoff.png)
 
-The value of Oracle AI Database is that the demo can move across these workloads without sending the audience to separate systems or asking them to trust copied data. The later scenes show different interfaces over one governed energy and utilities data platform.
+The business value is that teams can move from a single trusted data foundation to operational resilience, asset integrity, field execution, customer operations, production optimization, regulatory compliance, HSE, emissions reporting, and AI-assisted decision-making.
 
-You can move to the next scene.
+*You can move to the next scene.*
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-26
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-03

@@ -2,114 +2,132 @@
 
 ## Introduction
 
-This lab shows how to run the Media & Entertainment Content Intelligence LiveStack in your own environment using the portable package and Podman Compose. The stack includes Oracle Database Free, ORDS, Ollama, and the Seer Media application.
+This lab shows how to run the Media and Entertainment Content Intelligence LiveStack in your own environment using the portable stack package and Podman Compose. The local stack starts the database, ORDS, Ollama, and web application services so you can replay the same Seer Media demo outside the hosted environment.
 
 Estimated Time: 30 minutes
 
 ### Objectives
 
 In this lab, you will:
-- Download the portable LiveStack package.
-- Extract the package into a working folder.
-- Create the runtime environment file.
-- Start the database, ORDS, Ollama, and application services.
-- Validate the app and stop the stack cleanly.
+- Download the portable Media and Entertainment LiveStack package.
+- Extract the package into a clean working directory.
+- Prepare the runtime environment file.
+- Start the full application stack with Podman Compose.
+- Validate the application health endpoint and the Select AI runtime endpoint.
+- Open the UI and stop the stack cleanly after the demo.
 
 ## Task 1: Download the portable package
 
 1. Download the package named `livestack-media.zip` from the provided LiveStack distribution location.
 2. Save the file to your machine.
-3. Confirm the archive contains a top-level `media` folder.
 
-Expected result:
-- You have `livestack-media.zip` available on your machine.
-- The archive expands into a `media` solution root that contains `compose.yml`, `.env.example`, `Containerfile`, `frontend`, `backend`, `db`, and `scripts`.
+The package contains the Media and Entertainment LiveStack application, compose configuration, database initialization assets, and supporting runtime files needed to run the demo locally.
 
 ## Task 2: Prepare the working directory
 
-> **Note:** Do not extract or run the stack from your `Downloads` folder. Create a new working directory and move the archive there first.
+Do not extract or run the stack from your `Downloads` folder. Create a new working directory and move `livestack-media.zip` there first.
 
 ### For macOS or Linux
 
-1. Create a working directory:
+1. Open a terminal.
+
+2. Create a new working directory outside of `Downloads`:
 
     ```bash
     <copy>
     mkdir -p ~/livestack-demo
-    <copy>
+    </copy>
     ```
 
-2. Move into the working directory:
+3. Move into the new working directory:
 
     ```bash
     <copy>
     cd ~/livestack-demo
-    <copy>
+    </copy>
     ```
 
-3. Move the downloaded package into this directory:
+4. Move the downloaded package from `Downloads` into this directory:
 
     ```bash
     <copy>
     mv ~/Downloads/livestack-media.zip .
-    <copy>
+    </copy>
     ```
 
-4. Extract the package and enter the solution root:
+5. Extract the package:
 
     ```bash
     <copy>
     unzip livestack-media.zip
-    cd media
-    <copy>
+    </copy>
     ```
 
-5. Create your runtime environment file:
+6. Move into the extracted folder:
+
+    ```bash
+    <copy>
+    cd media
+    </copy>
+    ```
+
+7. Create your runtime environment file:
 
     ```bash
     <copy>
     cp .env.example .env
-    <copy>
+    </copy>
     ```
+
+Confirm that the folder contains `compose.yml` or `compose.yaml`, `.env`, and the required application files.
 
 ### For Windows PowerShell
 
-1. Create a working directory:
+1. Open PowerShell.
+
+2. Create a new working directory:
 
     ```powershell
     <copy>
     New-Item -ItemType Directory -Force -Path C:\LiveStack\media | Out-Null
-    <copy>
+    </copy>
     ```
 
-2. Copy the package into the working directory:
+3. Copy the package into this directory:
 
     ```powershell
     <copy>
     Copy-Item "$env:USERPROFILE\Downloads\livestack-media.zip" C:\LiveStack\media\
-    <copy>
+    </copy>
     ```
 
-3. Extract the package and enter the solution root:
+4. Extract the package:
 
     ```powershell
     <copy>
     Expand-Archive C:\LiveStack\media\livestack-media.zip -DestinationPath C:\LiveStack\media -Force
-    Set-Location C:\LiveStack\media\media
-    <copy>
+    </copy>
     ```
 
-4. Create your runtime environment file:
+5. Move into the extracted folder:
+
+    ```powershell
+    <copy>
+    Set-Location C:\LiveStack\media\media
+    </copy>
+    ```
+
+6. Create your runtime environment file:
 
     ```powershell
     <copy>
     Copy-Item .env.example .env
-    <copy>
+    </copy>
     ```
 
 Expected result:
 - You are inside the `media` directory.
-- The folder contains `compose.yml`, `.env`, and the required app files.
+- The folder contains `compose.yml` or `compose.yaml`, `.env`, and the required app files.
 
 ## Task 3: Start the demo with Podman Compose
 
@@ -118,7 +136,7 @@ Expected result:
     ```bash
     <copy>
     podman compose up -d --build
-    <copy>
+    </copy>
     ```
 
 2. Check service status:
@@ -126,7 +144,7 @@ Expected result:
     ```bash
     <copy>
     podman compose ps
-    <copy>
+    </copy>
     ```
 
 3. Verify application health:
@@ -134,16 +152,27 @@ Expected result:
     ```bash
     <copy>
     curl http://localhost:8505/api/health
-    <copy>
+    </copy>
     ```
 
-4. Open the demo in a browser:
+4. Verify Select AI and runtime health:
 
-    `http://localhost:8505`
+    ```bash
+    <copy>
+    curl http://localhost:8505/api/selectai/health
+    </copy>
+    ```
+
+5. Open the demo in a browser:
+
+    ```text
+    http://localhost:8505
+    ```
 
 Expected result:
 - The `db`, `ords`, `ollama`, and `app` services start successfully.
 - The health check returns a JSON response with `status` set to `healthy`.
+- The Select AI health check returns the configured runtime profile and model status.
 - The Seer Media LiveStack UI loads locally at `http://localhost:8505`.
 
 ## Task 4: Stop the stack when finished
@@ -153,7 +182,7 @@ Expected result:
     ```bash
     <copy>
     podman compose down
-    <copy>
+    </copy>
     ```
 
 2. If you need to remove local database and ORDS state for a clean rebuild, remove volumes intentionally:
@@ -161,20 +190,21 @@ Expected result:
     ```bash
     <copy>
     podman compose down -v
-    <copy>
+    </copy>
     ```
 
 Expected result:
 - The local LiveStack is stopped cleanly.
 - Re-running `podman compose up -d --build` starts the same portable demo again.
 
-## Task 5: Why this matters?
+## Task 5: Why this matters
 
-The portable package turns the Seer Media demo into a repeatable field asset. A user can run the same Oracle-backed content-intelligence story locally, validate the health endpoint, and replay the workflow without relying on a shared demo instance.
+1. Use the local run to explain that the portable package turns the Seer Media demo into a repeatable field asset.
+2. Emphasize that a user can run the same Oracle-backed content-intelligence story locally, validate the health endpoint, and replay the workflow without relying on a shared hosted demo instance.
 
 ## Credits & Build Notes
-- **Author** - Oracle LiveStack Team
-- **Last Updated By/Date** - Oracle LiveStack Team, 2026-05-13
-- **Archive Name** - `livestack-media.zip`
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-04
 - **Application URL** - `http://localhost:8505`
 - **Health URL** - `http://localhost:8505/api/health`
+- **Select AI Health URL** - `http://localhost:8505/api/selectai/health`

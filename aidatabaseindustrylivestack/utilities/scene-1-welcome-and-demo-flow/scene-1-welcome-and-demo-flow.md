@@ -2,32 +2,46 @@
 
 ## Introduction
 
-This opening scene orients users to the Seer Utility Network Energy and Utilities LiveStack Demo. The welcome page introduces the utility intelligence story and uses a carousel to preview the use cases available in the demo.
+The **Welcome** scene establishes the demo story: **nine use cases, one cross-sector resilience story**. Seer Utility Network is managing a severe Gulf Coast operating event that touches electric reliability, gas safety, water and wastewater continuity, upstream production, midstream pipeline and LNG logistics, downstream refinery throughput, customer operations, HSE, emissions, field dispatch, and regulatory reporting.
 
-Estimated Time: 5 minutes
+Use this scene to make clear that the LiveStack is broader than electric grid operations. The electric outage story remains, but it is now one part of a connected Energy and Utilities operating picture.
 
-![Welcome page with the energy and utilities use case carousel](images/scene-01-welcome.png)
+Estimated Time: **5 minutes**
+
+![Welcome page with the Energy and Utilities cross-sector resilience story](images/scene-01-welcome.png)
 
 ### Objectives
 
-In this scene, you will:
-- Review the use case carousel on the welcome page.
-- Learn which energy and utilities use cases are available to explore in the LiveStack Demo.
-- Use the carousel controls to move through the use case tiles.
-- Click **Start the demo** to continue to the data foundation page.
+In this scene, you will learn how the demo story is organized, which Energy and Utilities subsectors are represented, and how the rest of the runbook follows one operating event through Oracle AI Database capabilities.
 
-## Task 1: Review the use case carousel
+## Task 1: Review the cross-sector story
 
-1. Read the three visible use case tiles.
-2. Click the right carousel arrow to move forward.
-3. Continue until you have reviewed all visible utility use cases.
-4. Use the left carousel arrow if you want to return to earlier tiles.
+Perform the following set of steps to orient the audience to the headline and story rail and show that the demo follows one Gulf Coast operating event across multiple Energy and Utilities domains:
 
-    ![Welcome page use case carousel with navigation controls highlighted](images/use-case-carousel.png)
+1. Read the welcome headline.
+2. Review the story copy that describes the Gulf Coast operating event.
+3. Point out the subsector coverage: electric, gas, water/wastewater, upstream, midstream, downstream, customer operations, HSE, emissions, field dispatch, and regulatory reporting.
 
-The welcome page frames the demo as energy and utilities intelligence on one governed Oracle data platform. The carousel introduces how the LiveStack connects data foundation, grid operations, reliability and load signals, restoration graph analysis, field crew logistics, utility service requests, analytics, natural-language data access, and AI-assisted operations.
+Use this first screen to anchor the business conversation before you move into the data model or Oracle capability details.
 
-## Task 2: Continue the demo
+![Welcome page with the cross-sector resilience story highlighted](images/scene-01-welcome.png)
+
+## Task 2: Review the nine use cases
+
+Perform the following set of steps to show how the same governed **Oracle AI Database** foundation supports the entire demo flow:
+
+1. Review **Data Foundation**.
+2. Review **Energy Operations Command Center**.
+3. Review **Reliability, Production and Compliance Signals**.
+4. Continue through the rail until you have reviewed all nine use cases.
+
+    ![Welcome page use case story rail with the nine cross-sector use cases highlighted](images/use-case-carousel.png)
+
+Each page is a different operating lens on the same event: the command center detects pressure, signals explain it, the graph connects records, the map coordinates field response, service requests show customer impact, analytics predict the next constraint, Ask Data supports governed questions, and agents coordinate audited action.
+
+## Task 3: Continue the demo
+
+After the audience understands the story, continue to the data foundation page to load or verify the governed baseline.
 
 1. Click **Start the demo**.
 
@@ -35,8 +49,10 @@ The welcome page frames the demo as energy and utilities intelligence on one gov
 
 2. Confirm the demo moves to **Data Foundation**.
 
-Use this transition to explain that the welcome page is the orientation layer. The next scene prepares the governed utility dataset that powers every later workflow.
+Use this transition to explain that every later scene uses the same Energy and Utilities dataset, including records such as **OUT-1042**, **GLK-2208**, **PIPE-17A**, **WMB-4417**, **WWC-9031**, **WELL-NB-014**, **RFY-HCU-02**, **LNG-7842**, **EMS-1190**, and **HSE-3364**.
+
+**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-26
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-03

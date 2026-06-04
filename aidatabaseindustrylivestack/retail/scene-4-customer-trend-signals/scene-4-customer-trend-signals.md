@@ -10,7 +10,7 @@ Oracle AI Database helps address these challenges by keeping vector search, SQL,
 
 Oracle Vector Search can embed a business query, compare it against product or post embeddings, and return ranked matches while Oracle security policies continue to govern which data the user can see.
 
-Estimated Time: 10 minutes
+Estimated Time: **10 minutes**
 
 ![Customer Trend Signals page with Semantic Product Discovery, Customer Demand Intelligence, and the Oracle Internals sidebar collapsed](images/customer-trend-signals.png)
 
@@ -20,7 +20,7 @@ In this scene, you will learn what retail decision the page supports, what evide
 
 ## Task 1: Review the Customer Trend Signals page
 
-Review this page to show how the retailer can search by shopper intent, not only by exact product names or keywords.
+Perform the following set of steps to show how the retailer can search by shopper intent, not only by exact product names or keywords.
 
 1. Click **Customer Trend Signals** in the sidebar.
 2. Review **Semantic Product Discovery** at the top of the page. This section searches the product catalog by meaning, not only by exact keywords.
@@ -47,7 +47,7 @@ This helps merchandising teams turn vague shopper language into a product list t
 
 ![Customer Demand Intelligence feed](images/social-trend-intelligence.png)
 
-Review **Customer Demand Intelligence** to see where customer attention is increasing across posts, creators, platforms, engagement, and sentiment.
+Perform the following set of steps to see where customer attention is increasing across posts, creators, platforms, engagement, and sentiment.
 
 1. Scroll to **Customer Demand Intelligence**.
 2. Review the default feed. Each post shows platform, momentum label, creator handle, follower count, influence score, post text, engagement metrics, and sentiment.
@@ -59,15 +59,17 @@ This section helps the user monitor where customer attention is building. A high
 
 ![Customer Demand Intelligence query results](images/social-trend-query-results.png)
 
-Run a customer demand query to investigate a specific demand theme across posts that may use different wording. This helps the retailer find relevant customer and creator signals faster.
+Perform the following set of steps to investigate a specific demand theme across posts that may use different wording. This helps the retailer find relevant customer and creator signals faster.
 
 1. In the Customer Demand Intelligence search field, enter a demo query such as **damaged packaging complaints hiking footwear**.
 2. Click **Go**.
 3. Review the ranked post matches.
 
-The result view changes from the default feed to vector search results for the query. Each result shows a match rank and similarity percentage, platform, momentum label, creator context, post text, engagement metrics, and sentiment. In the current demo dataset, the search returns **AllTerrain**-related customer conversation posts near the top of the ranked list. This shows how Oracle AI Database can search unstructured customer and creator language semantically while still keeping the search tied to governed retail data.
+The result view changes from the default feed to vector search results for the query. Each result shows a match rank and similarity percentage, platform, momentum label, creator context, post text, engagement metrics, and sentiment. In the current demo dataset, the search returns **AllTerrain**-related customer conversation posts near the top of the ranked list.
 
-You can move to the next scene.
+This shows how Oracle AI Database can search unstructured customer and creator language semantically while still keeping the search tied to governed retail data.
+
+*You can move to the next scene.*
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team

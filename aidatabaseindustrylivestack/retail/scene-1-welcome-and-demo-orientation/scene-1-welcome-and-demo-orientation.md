@@ -4,7 +4,7 @@
 
 This opening scene orients users to the Seer Sporting Goods Retail LiveStack Demo. The welcome page summarizes the eight active use cases in the top panel and connects each one to the **AllTerrain Hiking Boots** story, then uses a carousel to preview the same use cases in more detail.
 
-Estimated Time: 5 minutes
+Estimated Time: **5 minutes**
 
 ![Welcome page with the eight-use-case AllTerrain story and use case carousel highlighted](images/welcome-and-demo-orientation.png)
 
@@ -14,7 +14,7 @@ In this scene, you will learn what retail decision the page supports, what evide
 
 ## Task 1: Review the AllTerrain story and use case carousel
 
-Review the carousel first so the audience understands the full retail journey. Each card previews a business problem the demo will address, such as demand sensing, fulfillment, order visibility, analytics, or AI-assisted action.
+Perform the following set of steps so the audience understands the full retail journey. Each card previews a business problem the demo will address, such as demand sensing, fulfillment, order visibility, analytics, or AI-assisted action.
 
 1. Review **Eight use cases, one AllTerrain story** in the top panel. It connects each page to the same product journey: demand appears, customer intent and creator influence explain it, fulfillment and order workflows respond, analytics forecast risk, and AI-assisted teams act.
 2. Read the eight numbered use case summaries. The point is to make the demo easy to tell as one connected AllTerrain Hiking Boots story rather than eight disconnected pages.

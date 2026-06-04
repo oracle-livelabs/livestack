@@ -8,7 +8,7 @@ This team must see shifts in customer demand, product availability, and operatio
 
 Dashboards like this are difficult to implement when retail data is split across commerce systems, fulfillment platforms, social listening tools, customer service applications, and analytics pipelines. Teams often need copied data, ETL jobs, separate search indexes, and reconciliation logic before a dashboard can show a trustworthy view.
 
-Oracle AI Database helps address that challenge by keeping operational, analytical, JSON, in-memory, and AI-ready data close to the same governed data foundation. In this scene, the dashboard brings together live retail KPIs, customer signal velocity, product trend data, and product-level detail without sending the user to a different application. 
+**Oracle AI Database** helps address that challenge by keeping operational, analytical, JSON, in-memory, and AI-ready data close to the same governed data foundation. In this scene, the dashboard brings together live retail KPIs, customer signal velocity, product trend data, and product-level detail without sending the user to a different application.
 
 The **AllTerrain Hiking Boots** row gives the seller a clear opening example: demand is visible at the dashboard level and then traceable down to inventory, social signals, and JSON application shape.
 
@@ -22,7 +22,7 @@ In this scene, you will learn what retail decision the page supports, what evide
 
 ## Task 1: Review the command center dashboard
 
-Use the dashboard as a triage view. In the current demo dataset, the opening KPI row shows **3,000** total orders, about **$4.2M** in retail revenue, **474** demand signal spikes, **156** demand signals, and the current agent action count. A merchandising user can start with those metrics, then move to the trending products table to see which products are driving the demand story.
+Use the dashboard as a daily triage view. The goal is to see which part of the business needs attention first, such as demand spikes, revenue shifts, return exposure, or AI-assisted actions.
 
 1. Click **Retail Command Center** in the sidebar.
 2. Review the KPI cards across the top of the page. These summarize the current operating picture: total orders, retail revenue, open service cases, service value exposure, demand signal spikes, demand signals, and AI agent actions.
@@ -30,17 +30,24 @@ Use the dashboard as a triage view. In the current demo dataset, the opening KPI
 4. Review **Revenue by Category** to see which categories are contributing most to sales.
 5. Review the Oracle Internals sidebar after the business flow is clear. Use it to connect the visible retail outcome to the database capabilities behind the page.
 
+In the current demo dataset, the opening KPI row shows **3,000** total orders, about **$4.2M** in retail revenue, **474** demand signal spikes, **156** demand signals, and the current agent action count. A merchandising user can start with those metrics, then move to the trending products table to see which products are driving the demand story.
+
+**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
 
 ## Task 2: Review trending products
 
 ![Trending products table with a product row highlighted](images/trending-products-table.png)
 
-The table helps the user move from dashboard-level signals to product-level evidence. In the current demo dataset, **AllTerrain Hiking Boots** appears as a leading TrailBlaze outdoor product with **12** recent mentions, more than **31M** views, and **viral** peak momentum. That row gives the seller a concrete way to connect the home-page story to live operating data.
+Perform the following set of steps to identify where customer interest is building. A high-momentum product may require an inventory check, a promotion decision, a fulfillment review, or a customer-service follow-up.
 
 1. Scroll to **Trending Products**.
 2. Review the product rows. The table ranks products by recent social momentum and shows product name, brand, mentions, views, average momentum score, and momentum label.
 3. Use the search field or brand chips if you want to narrow the table.
 4. Click the **AllTerrain Hiking Boots** row.
+
+The table helps the user move from dashboard-level signals to product-level evidence. In the current demo dataset, **AllTerrain Hiking Boots** appears as a leading TrailBlaze outdoor product with **12** recent mentions, more than **31M** views, and **viral** peak momentum. That row gives the seller a concrete way to connect the home-page story to live operating data.
+
+**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
 
 ## Task 3: Inspect the product detail modal
 
@@ -61,7 +68,7 @@ Review the JSON Duality View to show that the same trusted product data can supp
 1. In the product modal, click **JSON Duality View**.
 2. Review the JSON Duality View to show that the same trusted product data can support different users. Business users see product details in the interface, while applications can use the same information as a structured document.
 
-You can move to the next scene.
+*You can move to the next scene.*
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team

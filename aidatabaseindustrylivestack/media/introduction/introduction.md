@@ -1,55 +1,56 @@
-# Media & Entertainment Content Intelligence LiveStack
+# Media & Entertainment Content Intelligence LiveStack Guide
 
 ## Introduction
 
-This workshop is the demo runbook for the Seer Media LiveStack. The application shows how a media and entertainment operator can use Oracle AI Database 26ai as one governed foundation for content intelligence, audience signals, creator relationships, rights coverage, campaign orders, predictive analytics, natural-language data access, and agent-assisted operations.
+As streaming, advertising, creator-led discovery, live sports, and fandom engagement continue to converge, media organizations need faster ways to connect audience signals, rights, content, campaigns, and monetization decisions.
+The **Seer Media LiveStack** shows how those signals can come together so teams can spot demand shifts earlier, understand the evidence behind a decision, and act with more confidence.
 
-Estimated Demo Time: 1 hour 45 minutes
+This runbook supports the **Seer Media LiveStack Demo**. The demo shows how media organizations can connect audience intelligence, content operations, monetization, rights management, analytics, and AI workflows through one governed data foundation.
 
-![Seer Media Control Tower](../scene-1-seer-media-control-tower/images/seer-media-control-tower.png)
+In the demo, Seer Media follows the **Midnight Harbor** launch weekend. Business users and technical stakeholders move from launch planning into audience engagement, content recommendation, creator and community analysis, rights and live-event capacity, campaign request operations, predictive revenue and retention analytics, conversational data access, and AI-assisted media operations.
+
+Estimated Demo Time: **90 minutes**
+
+Each scene is designed to take between **5 and 10 minutes**.
+
+![Seer Media LiveStack welcome page](images/welcome-and-demo-orientation.png)
 
 ### Objectives
 
-In this workshop, you will:
-- Navigate the Seer Media application scene by scene.
-- Observe how each workflow changes the visible state of the application.
-- Connect every workflow to the Oracle capability behind it: JSON duality, property graph, vector search, spatial, VPD, OML, Select AI style SQL generation, ORDS, and agent tooling.
-- Use the download lab to run the same portable LiveStack with Podman Compose.
+In this LiveStack demo, you will see how connected media data can help teams understand audience behavior, improve monetization, manage rights and distribution, identify creator influence, predict demand, and apply AI with stronger governance.
 
 ### Prerequisites
 
-This workshop assumes you have:
-- Access to the running Seer Media LiveStack application.
-- A browser session open to the application.
-- Basic familiarity with media operations, audience engagement, rights or distribution planning, or campaign revenue workflows.
-- Podman and Podman Compose if you plan to run the portable package locally.
+Before you begin, confirm that you can open the running **Seer Media LiveStack** in a modern browser. No coding or database administration knowledge is required for the guided business workflow.
 
-## Workshop Flow
+**Note:** **Podman** and **Podman Compose** are required only if you plan to run the portable LiveStack locally in the download lab.
 
-- Download and run the LiveStack.
-- Scene 1: Seer Media Control Tower.
-- Scene 2: Seer 26ai Media Data Foundation.
-- Scene 3: Content Revenue and Operations Dashboard.
-- Scene 4: Audience and Market Signals.
-- Scene 5: Creator Influence Network.
-- Scene 6: Rights and Distribution Coverage.
-- Scene 7: Campaign Orders and Rights Cases.
-- Scene 8: Predictive Demand and Revenue Analytics.
-- Scene 9: Ask Seer Media Data.
-- Scene 10: Seer Media Agent Console.
-- Scene 11: Use Your Own Data.
-- Conclusion and business outcomes.
+## Demo Flow
+
+- **Scene 1:** Seer Media Control Tower.
+- **Scene 2:** Seer 26ai Media Data Foundation.
+- **Scene 3:** Content Revenue and Operations Dashboard.
+- **Scene 4:** Audience and Market Signals.
+- **Scene 5:** Creator Influence Network.
+- **Scene 6:** Rights and Distribution Coverage.
+- **Scene 7:** Campaign Orders and Rights Cases.
+- **Scene 8:** Predictive Demand and Revenue Analytics.
+- **Scene 9:** Ask Seer Media Data.
+- **Scene 10:** Seer Media Agent Console.
+- **Scene 11:** Use Your Own Media Data.
+- **Conclusion and business outcomes.**
+- **Download and run the portable Media LiveStack.**
 
 ## Learn More
 
-- Oracle AI Database documentation: https://docs.oracle.com/en/database/oracle/oracle-database/
-- Oracle Database JSON Relational Duality documentation: https://docs.oracle.com/en/database/oracle/oracle-database/23/jsnvu/
-- Oracle Spatial documentation: https://docs.oracle.com/en/database/oracle/oracle-database/23/spatl/
-- Oracle Machine Learning documentation: https://docs.oracle.com/en/database/oracle/machine-learning/
-- Oracle Graph documentation: https://docs.oracle.com/en/database/oracle/property-graph/
+- [Oracle AI Database 26ai documentation](https://docs.oracle.com/en/database/oracle/oracle-database/26/index.html)
+- [Oracle AI Agent Memory](https://www.oracle.com/database/ai-agent-memory/)
+- [Oracle AI Vector Search](https://www.oracle.com/database/ai-vector-search/)
+- Oracle Spatial and Graph documentation: [Oracle Spatial](https://docs.oracle.com/en/database/oracle/oracle-database/26/spatl/toc.htm) and [Oracle Property Graph](https://docs.oracle.com/en/database/oracle/property-graph/26.2/index.html)
+- [Oracle Machine Learning for SQL documentation](https://docs.oracle.com/en/database/oracle/machine-learning/oml4sql/tasks.html)
+- [Oracle REST Data Services documentation](https://docs.oracle.com/en/database/oracle/oracle-rest-data-services/25.4/orddg/index.html)
+- [Oracle LiveLabs catalog](https://livelabs.oracle.com/)
 
 ## Credits & Build Notes
-- **Author** - Oracle LiveStack Team
-- **Last Updated By/Date** - Oracle LiveStack Team, 2026-05-13
-- **Source Package** - `livestack-media.zip`
-- **Screenshot Source** - Live Seer Media deployment verified at guide build time.
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-04

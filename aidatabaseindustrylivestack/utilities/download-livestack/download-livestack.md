@@ -2,26 +2,22 @@
 
 ## Introduction
 
-This lab shows how to run the Energy and Utilities Grid Operations LiveStack in your own environment using the portable stack package and Podman Compose. The local stack starts the database, ORDS, Ollama, and web application services so you can replay the same utility operations demo outside the hosted environment.
+This lab explains how to run the **Seer Utility Network Energy and Utilities LiveStack** locally using the portable package and Podman Compose. It is intended for users who want to replay the demo outside the hosted environment and are comfortable running local container commands.
 
-Estimated Time: 30 minutes
+Estimated Time: **30 minutes**
 
 ### Objectives
 
-In this lab, you will:
-- Download the portable Energy and Utilities LiveStack package.
-- Extract the package into a clean working directory.
-- Prepare the runtime environment file.
-- Start the full application stack with Podman Compose.
-- Validate the application health endpoint and open the UI.
-- Stop the stack cleanly after the demo.
+In this lab, you will prepare and run the portable Energy and Utilities LiveStack locally, validate that the services are healthy, open the UI, and stop the stack cleanly when finished.
 
 ## Task 1: Download the portable package
+
+Perform the following set of steps so the **Energy and Utilities LiveStack** can be run locally with the application, compose configuration, database initialization assets, and supporting runtime files.
 
 1. Download the package named `livestack-utilities.zip` from the provided LiveStack distribution location.
 2. Save the file to your machine.
 
-The package contains the Energy and Utilities LiveStack application, compose configuration, database initialization assets, and supporting runtime files needed to run the demo locally.
+The package contains the **Energy and Utilities LiveStack **application, compose configuration, database initialization assets, and supporting runtime files needed to run the demo locally.
 
 ## Task 2: Prepare the working directory
 
@@ -77,6 +73,8 @@ Confirm that the folder contains `compose.yml` or `compose.yaml`, `.env`, and th
 
 ## Task 3: Start the demo with Podman Compose
 
+Start the stack with **Podman Compose** to launch the database, ORDS, Ollama runtime, and web application services needed for the local Energy and Utilities LiveStack.
+
 1. Start the stack:
     ```bash
     <copy>
@@ -110,9 +108,11 @@ Confirm that the folder contains `compose.yml` or `compose.yaml`, `.env`, and th
     http://localhost:8505
     ```
 
-The UI should load as **Seer Utility Network LiveStack**. The sidebar should show the Energy and Utilities scenes, the active dataset should show demo data, and the Ask Utility Data page should report the configured runtime profile.
+A successful local start means the UI loads, the Energy & Utilities scenes appear in the sidebar, the active dataset shows demo data, and the Ask Energy & Utilities Data page reports the configured runtime profile.
 
 ## Task 4: Stop the stack when finished
+
+Stop the stack cleanly when the demo is finished so local containers and network resources are removed in an orderly way.
 
 1. Stop and remove the running containers:
     ```bash
@@ -131,4 +131,4 @@ The local LiveStack is stopped cleanly.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-26
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-03

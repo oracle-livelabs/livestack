@@ -12,7 +12,7 @@ The Oracle Internals sidebar shows the SQL evidence behind the page, including `
 
 Access controls help ensure users see only the data they are allowed to see, which matters for regional order access, customer data, and governed AI use.
 
-Estimated Time: 10 minutes
+Estimated Time: **10 minutes**
 
 ![Intelligent Fulfillment Network overview with KPIs and map highlighted](images/intelligent-fulfillment-network.png)
 
@@ -22,7 +22,7 @@ In this scene, you will learn what retail decision the page supports, what evide
 
 ## Task 1: Review the fulfillment network context
 
-Review the fulfillment network to understand where demand can be served without increasing delivery cost, delay, or inventory risk.
+Perform the following set of steps to understand where demand can be served without increasing delivery cost, delay, or inventory risk.
 
 1. Click **Intelligent Fulfillment Network** in the sidebar.
 2. Review the KPI tiles at the top of the page. They summarize active fulfillment centers, total inventory, pending shipments, and inventory alerts.
@@ -31,11 +31,13 @@ Review the fulfillment network to understand where demand can be served without 
 
 In the current demo dataset, the page shows **30** active centers, about **495.7K** units of inventory, **750** pending shipments, and a live set of inventory alerts. Use those numbers to set the operational scene: this is not a single warehouse decision, but a network decision across inventory, geography, and active demand.
 
+**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
+
 ## Task 2: Explore spatial demand and service coverage
 
 ![Spatial demand and service-zone layers highlighted](images/spatial-demand-layers.png)
 
-Explore spatial demand and service coverage to see how customer location affects shipping speed, fulfillment cost, center workload, and the customer promise.
+Perform the following set of steps to see how customer location affects shipping speed, fulfillment cost, center workload, and the customer promise.
 
 1. In **Map Layers**, turn on **Service Zones** and **Demand Regions** if they are not already active.
 2. Review the dashed service-zone rings around fulfillment locations. These show how delivery coverage changes by service tier.
@@ -49,7 +51,7 @@ Use the map to explain how the same database can serve operational and spatial q
 ![Fulfillment-center load table with Charlotte Southeast highlighted](images/fulfillment-centers-load.png)
 
 
-Inspect fulfillment-center load to identify centers that may be overloaded or underused. This helps the retailer consider routing changes, rebalancing, or replenishment.
+Perform the following set of steps to identify centers that may be overloaded or underused. This helps the retailer consider routing changes, rebalancing, or replenishment.
 
 1. Scroll to **Fulfillment Centers**.
 2. Review the center name, location, type, products stocked, total inventory, pending shipments, and load percentage.
@@ -62,18 +64,20 @@ This table helps the user move from a map-level network view to a center-level o
 
 ![Inventory alert data point for Summit Graphic Training Tee at Portland Pacific](images/inventory-alert-data-point.png)
 
-Investigate inventory alerts to decide whether the business should replenish stock, rebalance inventory, adjust promotions, or protect units for higher-priority demand.
+Perform the following set of steps to decide whether the business should replenish stock, rebalance inventory, adjust promotions, or protect units for higher-priority demand.
 
 1. Scroll to **Inventory Alerts - Social Demand Surge**.
 2. Review the top alert rows. Red rows indicate products with a demand signal, while yellow rows indicate low-stock items without the same projected demand pressure.
 3. Focus on **Summit Graphic Training Tee** at **Portland Pacific**.
 4. Interpret the row: **23** units are in stock, predicted demand is **104** units, and the social demand factor is **1.6x**.
 
-This is the data point to emphasize during the demo. The story is that a sporting-goods apparel product is receiving amplified demand signals while one fulfillment center has limited available stock. The operational response could be to replenish Portland Pacific, reroute fulfillment from another center, adjust promotion timing, or alert the merchandising team before the shortage becomes visible to customers.
+This is the data point to emphasize during the demo. The story is that a sporting-goods apparel product is receiving amplified demand signals while one fulfillment center has limited available stock.
+
+The operational response could be to replenish Portland Pacific, reroute fulfillment from another center, adjust promotion timing, or alert the merchandising team before the shortage becomes visible to customers.
 
 Retail teams can see which products, brands, and locations need attention before availability or fulfillment suffers. Oracle AI Database supports this by combining inventory, fulfillment center, forecast, spatial coverage, center load, and social signal data in one governed data platform, then presenting the alert in the same operational interface.
 
-You can move to the next scene.
+*You can move to the next scene.*
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team

@@ -2,53 +2,63 @@
 
 ## Introduction
 
-This scene focuses on production signals and semantic manufactured-part search. Use it to show how operators can inspect production chatter, supplier context, and demand-related signal patterns with vector search and governed access.
+A quality engineer, production supervisor, maintenance planner, supplier manager, or manufacturing analyst uses this page to understand what production signals are saying before the risk is obvious in work-order volume alone. This persona is looking for patterns in machine telemetry, quality inspection findings, supplier updates, procurement alerts, rework notes, scrap risk, and work-order mentions. The goal is to connect operational language to affected manufactured parts quickly enough to act.
+
+Semantic search is difficult to implement when signals, part catalogs, embeddings, search indexes, and access policies live in separate systems. Manufacturing teams often have to move operational text into external search services, synchronize vector indexes, and then rebuild access control outside the database.
+
+Oracle AI Database helps address these challenges by keeping vector search close to governed manufacturing data. In this LiveStack Demo, the page uses natural-language search over manufactured-part and signal embeddings, shows match evidence, and keeps the operating feed tied to database access policies.
 
 Estimated Time: 10 minutes
 
-![Production signal monitor scene](images/scene-4-production-signal-monitor.png)
+![Production Signal Monitor page with semantic search controls and signal feed](images/scene-4-production-signal-monitor.png)
 
 ### Objectives
 
-In this lab, you will:
-- Open the Production Signal Monitor.
-- Use manufactured-part vector search examples.
-- Review production signal filters, pagination, and result cards.
+In this scene, you will:
+- Review the **Production Signal Monitor** workspace.
+- Run a semantic search for an AX-400 or servo controller capacity phrase.
+- Inspect matched manufactured parts and production signals.
+- Review the signal summary and matched production signal cards.
+- Understand why vector search and governed access matter for manufacturing signal discovery.
 
-## Task 1: Open the Production Signal Monitor
+## Task 1: Review the signal feed
 
-1. Select **Production Signal Monitor** in the left navigation.
-2. Review the page title, vector search workload tag, and VPD tag.
-3. Locate the **Manufactured Part Vector Search** panel.
+1. Click **Production Signal Monitor** in the sidebar.
+2. Review **Manufactured Part Vector Search** at the top of the page.
+3. Review the example query chips, including **servo drive controller capacity**, **supplier delay for industrial automation parts**, and **line changeover scheduling**.
+4. Review the signal count and active signal cards.
+5. Review urgency, source channel, reach, score, and signal text on the visible cards.
 
-Expected result:
-- The scene opens to a production-signal workflow that connects semantic search to manufacturing operations.
-- The audience can see where vector search complements normal filters.
+    ![Production Signal Monitor search workspace, signal count, and signal feed highlighted](images/signal-feed-overview.png)
 
-## Task 2: Run a Manufactured-Part Search
+In the current demo dataset, the page shows **5.0K** indexed production signals. Visible examples include quality inspection scrap findings, machine telemetry vibration alerts, procurement risk updates, and rework notes. Use this opening view to explain that the AX-400 recovery story is driven by many operational signals, not by a single dashboard number.
 
-1. Type a manufacturing-oriented phrase into the vector search input, such as `precision spindle vibration` or use one of the example buttons if visible.
-2. Click the search action.
-3. Review the returned similarity scores, part names, categories, or related signal evidence when the full stack is running.
+## Task 2: Run manufactured-part semantic search
 
-Expected result:
-- The search interaction sends the phrase to the semantic search endpoint.
-- Returned results are ranked by meaning rather than exact keyword matching when database services are available.
+1. Click the **servo drive controller capacity** example query chip, or enter `servo drive controller capacity` in the search field.
+2. Click **Search**.
 
-## Task 3: Review Production Signal Cards
+    ![Semantic search results for servo drive controller capacity](images/manufactured-part-vector-search-results.png)
 
-1. Use the signal search controls and filters to narrow the feed.
-2. Move between pages with **Prev** and **Next** if enough results are present.
-3. Inspect urgency, source channel, momentum, and supplier or part references on the visible cards.
+3. Review the matched manufactured parts or related signal evidence returned above the feed.
+4. Connect the result to the AX-400 story: the search is looking for semantically related part-capacity and production-risk language, not only exact keyword matches.
 
-Expected result:
-- The feed helps the presenter explain what production or supplier signal should trigger action.
-- VPD and Oracle vector search can be tied back to governed signal monitoring.
+This is the data point to emphasize. A production supervisor can search for the operating concept they want to investigate, such as servo controller capacity, and the system can find related parts and signal evidence by vector similarity.
 
-## Task 4: Why this matters?
+## Task 3: Interpret the signal cards
 
-Manufacturing signals are messy and often use different words for the same issue. Vector search helps operators find semantically related part and production risk signals without building brittle keyword lists.
+1. Scroll through the production signal cards.
+2. Review signal source, urgency, reach, score, sentiment, and the production issue described in each card.
+3. Focus on examples such as elevated scrap, abnormal vibration, constrained raw material allocation, or pending quality engineering corrective action.
+4. Use the action labels and scene transition to explain where the operator could go next: supplier graph, plant capacity map, work orders, OML analytics, Ask Data, or the agent console.
+
+    ![Production signal cards with urgency and manufacturing evidence highlighted](images/production-signal-cards.png)
+
+The value of Oracle AI Database is that operational text can become searchable manufacturing intelligence without leaving the governed data platform. Vector search helps users find related signals by meaning, while the Oracle-backed application still shows source, score, and operating context.
+
+You can move to the next scene.
 
 ## Credits & Build Notes
-- **Author** - LiveLabs Team
-- **Last Updated By/Date** - LiveLabs Team, 2026-05-13
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-02
+- **Screenshot source** - Captured from `http://143.47.191.163:8505/`.

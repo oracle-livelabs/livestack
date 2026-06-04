@@ -1,53 +1,99 @@
-# Scene 7 Campaign Orders and Rights Cases
+# Scene 7 Campaign & Rights Requests
 
 ## Introduction
 
-This scene demonstrates campaign order operations and Oracle JSON Relational Duality. The same campaign can be inspected as relational order data, a JSON document, and a route or rights case.
+**Campaign & Rights Requests** shows how one governed campaign request can support several workflows at once. Operations teams need request and fulfillment detail, rights teams need activation context, application teams need document-shaped access, and coverage teams need geographic activation visibility. The persona needs a reliable operational list, relational line-item detail, API-friendly JSON document access, and spatial activation context.
 
-Estimated Time: 10 minutes
+Media teams struggle when the information needed for one decision lives in separate tools. That separation slows response time, increases reconciliation effort, and makes it harder to trust the result. Each copy creates synchronization risk and extra engineering work when the request model changes.
 
-![Campaign Orders and Rights Cases](images/campaign-orders-rights-cases.png)
+**Oracle AI Database** helps keep the same governed campaign request available to operations users, application developers, activation teams, and analysts without creating separate copies of the record.Relational tables provide transactional detail. JSON Relational Duality Views expose the same request as a nested JSON document. Oracle Spatial adds activation route and distance context.
+
+Estimated Time: **10 minutes**
+
+![Campaign and Rights Requests page with VPD banner, status filter, and request table](images/campaign-orders-rights-cases.png)
 
 ### Objectives
 
-In this lab, you will:
-- Review campaign order rows.
-- Open an order detail.
-- Compare relational, JSON duality, and route views.
+In this scene, you will learn what operational decision the page supports, what evidence the user should inspect, and what action the business may take next.
 
-## Task 1: Open a campaign order
+## Task 1: Review the campaign request workspace
 
-1. Open **Campaign Orders & Rights Cases**.
-2. Use status filters or pagination if needed.
-3. Select a campaign order row.
+Perform the following set of steps to establish the operational context: who requested activation, what status the request is in, what value is involved, and which coverage hub is responsible.
 
-Expected result:
-- The order detail opens with the selected campaign context.
-- The user sees audience account, order status, line items, revenue, and rights or routing information.
+1. Click **Campaign & Rights Requests** in the sidebar.
+2. Review the active user banner. The current demo user is **Jessica Chen**, with **Admin** access and **20** visible requests on the page.
+3. Review the status filter.
+4. Review the request table columns: request id, audience account, location, status, line items, total, audience signal, coverage hub, and created time.
+5. Focus on request **#127476**.
 
-## Task 2: Compare detail tabs
+    ![Campaign request workspace with request 127476 visible](images/campaign-request-workspace.png)
 
-1. In the detail panel, click **Relational**.
-2. Click **JSON Duality View**.
-3. Click **Campaign Route**.
-4. Use **Copy** on the JSON view if you need to share the document shape.
+**Notes:**
+- **Callout 1** highlights the governed user and VPD access banner.
+- **Callout 2** highlights the status filter used to narrow the operations queue. 
+- **Callout 3** highlights the request row that will be inspected through the rest of the scene.
 
-Expected result:
-- The same operational case appears through multiple interfaces.
-- The JSON document is a projection of governed relational data, not a separate synchronization copy.
+In the current seeded dataset, request **#127476** is for **Ava Martinez** in **Edison, New Jersey**. It is in **Processing** status, has **3** line items, totals **$348,250.00**, and uses **Seattle Live Event Operations Hub** as the coverage hub. This request will be the data point used through the rest of the scene.
 
-## Task 3: Inspect the Oracle evidence
+**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
 
-1. Open or review **How Oracle Powers This**.
-2. Look for `ORDERS_DV`, `PRODUCTS_INVENTORY_DV`, `CREATE JSON RELATIONAL DUALITY VIEW`, and VPD policy examples.
+## Task 2: Inspect the relational request detail
 
-Expected result:
-- The user can explain how Oracle lets application teams work with JSON while preserving relational integrity and access control.
+Perform the following set of steps to validate the campaign request header, content assets, activation cost, audience account, and operational status needed for fulfillment and support workflows.
 
-## Task 4: Why this matters?
+1. Click request **#127476**.
 
-Media operations often require both transactional correctness and application-friendly JSON. This scene shows how campaign cases can be served to modern apps while still preserving ACID transactions, foreign keys, and policy enforcement in Oracle.
+    ![Relational detail for campaign request 127476](images/campaign-request-relational-detail.png)
+
+2. Confirm the **Relational** tab is selected.
+3. Review audience account, location, total, activation cost, and line items.
+4. Review content assets such as **Premiere Window Packages**, **International Fandom Watch Party**, and **Lunar Kitchen Live Event Experiences**.
+
+This view helps operations teams answer campaign, activation, and support questions quickly because request, audience, content, and fulfillment details remain connected and easy to validate.
+
+## Task 3: Compare the JSON Duality View
+
+Perform the following set of steps to show how the same campaign request can support both operational workflows and application or partner integrations without creating duplicate records.
+
+1. Click **JSON Duality View** in the expanded request panel.
+
+    ![JSON Duality View for campaign request 127476](images/campaign-request-json-duality.png)
+
+2. Review the source label **ORDERS_DV**.
+3. Review the JSON document for request **127476**.
+4. Notice that the document contains `_id`, `customerId`, `status`, `total`, `demandScore`, `createdAt`, and nested `items`.
+
+**Notes:**
+- **Callout 1** highlights the **JSON Duality View** selection.
+- **Callout 2** highlights the `ORDERS_DV` source query.
+- **Callout 3** highlights the document-shaped JSON view of the same campaign request.
+
+The key point is that the campaign request is not copied into a separate document store. The same governed request can appear as operational detail for business users or as a document shape for applications.
+
+## Task 4: Review activation route context
+
+Perform the following set of steps to connect the campaign request to the coverage hub, audience location, activation effort, timing, and operational status.
+
+1. Click **Activation Route** in the expanded request panel.
+
+    ![Activation route for campaign request 127476](images/campaign-request-activation-route.png)
+2. Review the coverage hub and audience account.
+3. Review distance, estimated activation time, activation cost, route status, and activation progress.
+4. Review the Oracle Spatial SQL example.
+
+**Notes:**
+- **Callout 1** highlights the route map from the coverage hub to the audience account.
+- **Callout 2** highlights the activation status and progress indicators.
+- **Callout 3** highlights the Oracle Spatial SQL used to calculate distance from governed location data.
+
+For request **#127476**, the page shows an activation route from **Seattle Live Event Operations Hub** to **Ava Martinez - Edison, New Jersey**. The route distance and estimated activation time are calculated from the live spatial records after each data refresh. The page explains that Oracle Spatial calculates distance between governed `SDO_GEOMETRY` points.
+
+**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
+
+The workflow value is that one governed campaign request can support operations, applications, rights workflows, and activation planning without splitting the story across separate systems.
+
+*You can move to the next scene.*
 
 ## Credits & Build Notes
-- **Author** - Oracle LiveStack Team
-- **Last Updated By/Date** - Oracle LiveStack Team, 2026-05-13
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-04

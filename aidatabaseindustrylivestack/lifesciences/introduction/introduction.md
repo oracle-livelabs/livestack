@@ -3,13 +3,15 @@
 ## Introduction
 
 Life sciences teams need to protect clinical supply, quality, and regulated operations while data is spread across trial systems, quality systems, manufacturing records, cold-chain logistics, regulatory workflows, and commercial operations.
-The Seer Lifesciences LiveStack shows how a life sciences organization can connect those signals, understand what needs attention, and move from quality issue to auditable operational action with more confidence.
+The **Seer Lifesciences LiveStack** shows how a life sciences organization can connect those signals, understand what needs attention, and move from quality issue to auditable operational action with more confidence.
 
-This runbook supports the Seer Lifesciences Clinical Supply LiveStack Demo. The demo shows how Oracle AI Database 26ai can help life sciences teams bring regulated workloads together on one connected data foundation. Instead of splitting relational transactions, JSON documents, graph relationships, spatial analysis, vector search, machine learning, natural-language SQL, and AI agent workflows across separate systems, the LiveStack shows how those capabilities can work against the same governed Oracle data model.
+This runbook guides the **Seer Lifesciences Clinical Supply LiveStack Demo** and shows how **Oracle AI Database 26ai** helps life sciences teams bring regulated supply, quality, logistics, analytics, and AI-assisted workflows together on one governed data foundation.
 
-In the demo, Seer Lifesciences uses Oracle AI Database to connect regulated products, manufacturers, trial sites, clinical supply orders, quality signals, cold-chain service coverage, release-risk predictions, conversational data access, and governed agent-assisted operations. The demo follows a clinical-supply risk thread: a quality or regulatory signal appears, semantic search identifies affected products, graph analytics traces connected manufacturers and sources, spatial views show cold-chain coverage, orders expose supply value at risk, predictive analytics scores release and replenishment risk, and AI-assisted workflows recommend auditable next actions.
+In the demo, **Seer Lifesciences** uses **Oracle AI Database** to connect regulated products, manufacturers, trial sites, clinical supply orders, quality signals, cold-chain service coverage, release-risk predictions, conversational data access, and governed agent-assisted operations.
 
-Estimated Demo Time: 90 minutes
+The demo follows a clinical-supply risk thread: a quality or regulatory signal appears, semantic search identifies affected products, graph analytics traces connected manufacturers and sources, spatial views show cold-chain coverage, orders expose supply value at risk, predictive analytics scores release and replenishment risk, and AI-assisted workflows recommend auditable next actions.
+
+Estimated Demo Time: **90 minutes**
 
 Each scene is designed to take between 5 and 10 minutes.
 
@@ -17,7 +19,7 @@ Each scene is designed to take between 5 and 10 minutes.
 
 ### Objectives
 
-In this LiveStack demo, you will see how a life sciences organization can use connected data and AI-assisted workflows to identify regulated supply risk, protect trial continuity, improve quality traceability, and make governed operational decisions easier to explain.
+In this LiveStack demo, you will learn how connected data and AI-assisted workflows help life sciences teams identify regulated supply risk, trace connected evidence, protect trial continuity, and explain governed next actions.
 
 ### Prerequisites
 
@@ -25,16 +27,16 @@ Before you begin, confirm that you can open the running Seer Lifesciences LiveSt
 
 ## Demo Flow
 
-- Scene 1: Welcome and Demo Orientation.
-- Scene 2: Data Foundation.
-- Scene 3: Quality and Supply Operations Dashboard.
-- Scene 4: Regulatory and Quality Signals.
-- Scene 5: Signal Propagation Network.
-- Scene 6: Cold-Chain Service Coverage.
-- Scene 7: Clinical Supply Orders and Deviations.
-- Scene 8: Predictive Quality and Supply Analytics.
-- Scene 9: Ask Seer Regulated Supply Data.
-- Scene 10: Governed Agent Console.
+- **Scene 1:** Welcome and Demo Orientation.
+- **Scene 2:** Data Foundation.
+- **Scene 3:** Quality and Supply Operations Dashboard.
+- **Scene 4:** Regulatory and Quality Signals.
+- **Scene 5:** Signal Propagation Network.
+- **Scene 6:** Cold-Chain Service Coverage.
+- **Scene 7:** Clinical Supply Orders and Deviations.
+- **Scene 8:** Predictive Quality and Supply Analytics.
+- **Scene 9:** Ask Seer Regulated Supply Data.
+- **Scene 10:** Governed Agent Console.
 
 ## Learn More
 

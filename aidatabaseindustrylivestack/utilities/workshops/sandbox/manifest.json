@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "Energy and Utilities Grid Operations LiveStack",
+  "workshoptitle": "Seer Energy & Utilities LiveStack Guide",
   "help": "livelabs-help-database_us@oracle.com",
   "tutorials": [
     {
@@ -15,23 +15,23 @@
       "filename": "../../scene-1-welcome-and-demo-flow/scene-1-welcome-and-demo-flow.md"
     },
     {
-      "title": "Scene 2: Energy and Utilities Data Foundation",
+      "title": "Scene 2: Energy & Utilities Data Foundation",
       "filename": "../../scene-2-schema-and-data-model/scene-2-schema-and-data-model.md"
     },
     {
-      "title": "Scene 3: Grid Operations Command Center",
+      "title": "Scene 3: Energy Operations Command Center",
       "filename": "../../scene-3-command-center-dashboard/scene-3-command-center-dashboard.md"
     },
     {
-      "title": "Scene 4: Reliability and Load Signal Intelligence",
+      "title": "Scene 4: Reliability, Production & Compliance Signals",
       "filename": "../../scene-4-outage-signal-trends-and-vector-search/scene-4-outage-signal-trends-and-vector-search.md"
     },
     {
-      "title": "Scene 5: Service Restoration Graph",
+      "title": "Scene 5: Operational Event Graph",
       "filename": "../../scene-5-field-crew-graph/scene-5-field-crew-graph.md"
     },
     {
-      "title": "Scene 6: Field Crew Logistics Map",
+      "title": "Scene 6: Field Operations Logistics Map",
       "filename": "../../scene-6-service-restoration-map/scene-6-service-restoration-map.md"
     },
     {
@@ -43,15 +43,15 @@
       "filename": "../../scene-8-oml-analytics/scene-8-oml-analytics.md"
     },
     {
-      "title": "Scene 9: Ask Utility Data",
+      "title": "Scene 9: Ask Energy & Utilities Data",
       "filename": "../../scene-9-ask-your-data/scene-9-ask-your-data.md"
     },
     {
-      "title": "Scene 10: Utilities AI Agent Console",
+      "title": "Scene 10: Energy & Utilities AI Agent Console",
       "filename": "../../scene-10-agent-console-and-operational-actions/scene-10-agent-console-and-operational-actions.md"
     },
     {
-      "title": "Scene 11: Bring Your Own Utility Data",
+      "title": "Scene 11: Use Your Own Utility Data",
       "filename": "../../scene-11-bring-your-own-utility-data/scene-11-bring-your-own-utility-data.md"
     },
     {
