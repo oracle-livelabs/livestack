@@ -6,7 +6,7 @@
 
 Media teams struggle when the information needed for one decision lives in separate tools. That separation slows response time, increases reconciliation effort, and makes it harder to trust the result. Each copy creates synchronization risk and extra engineering work when the request model changes.
 
-**Oracle AI Database** helps keep the same governed campaign request available to operations users, application developers, activation teams, and analysts without creating separate copies of the record.Relational tables provide transactional detail. JSON Relational Duality Views expose the same request as a nested JSON document. Oracle Spatial adds activation route and distance context.
+**Oracle AI Database** helps keep the same governed campaign request available to operations users, application developers, activation teams, and analysts without creating separate copies of the record. Relational tables provide transactional detail. JSON Relational Duality Views expose the same request as a nested JSON document. Oracle Spatial adds activation route and distance context.
 
 Estimated Time: **10 minutes**
 
@@ -21,7 +21,7 @@ In this scene, you will learn what operational decision the page supports, what 
 Perform the following set of steps to establish the operational context: who requested activation, what status the request is in, what value is involved, and which coverage hub is responsible.
 
 1. Click **Campaign & Rights Requests** in the sidebar.
-2. Review the active user banner. The current demo user is **Jessica Chen**, with **Admin** access and **20** visible requests on the page.
+2. Review the active user banner. The current demo user is **Jessica Chen**, with 8*Admin*8 access and **20** visible requests on the page.
 3. Review the status filter.
 4. Review the request table columns: request id, audience account, location, status, line items, total, audience signal, coverage hub, and created time.
 5. Focus on request **#77816**.

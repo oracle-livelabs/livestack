@@ -12,7 +12,7 @@ Estimated Time: **5 minutes**
 
 ### Objectives
 
-In this scene, you will learn what media decision the page supports, what evidence the user should inspect, and what action the business may take next.
+In this scene, you will learn how the media story is organized, which business functions the page introduces, and how the rest of the runbook follows one connected launch-weekend operating thread.
 
 ## Task 1: Review the launch story
 

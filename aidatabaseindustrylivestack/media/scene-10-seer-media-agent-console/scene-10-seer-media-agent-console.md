@@ -4,7 +4,7 @@
 
 **Media and Entertainment Action Console** shows how AI assistance can support media operations without becoming a black box. When an agent helps with audience intelligence, monetization, rights planning, retention, or campaign workflows, users need to see the routing decision, tools used, data returned, confidence level, and audit history.
 
-This persona is not only interested in whether an AI agent can answer a question. They need to know which specialist path handled the request, which tools were used, what data was returned, and whether the action was recorded for later review.Media teams struggle when recommendations arrive without context. If users cannot see how an AI recommendation was generated, it becomes difficult to trust the result or explain the decision to stakeholders.
+This persona is not only interested in whether an AI agent can answer a question. They need to know which specialist path handled the request, which tools were used, what data was returned, and whether the action was recorded for later review. Media teams struggle when recommendations arrive without context. If users cannot see how an AI recommendation was generated, it becomes difficult to trust the result or explain the decision to stakeholders.
 
 **Oracle AI Database** helps keep AI recommendations connected to governed operational data so users can understand not only the answer, but how the answer was produced. In this **LiveStack Demo**, the app orchestrates the agent workflow, Ollama provides reasoning, and Oracle AI Database 26ai executes the governed data operations.
 
@@ -18,9 +18,9 @@ In this scene, you will learn what operational decision the page supports, what 
 
 ## Task 1: Review the agent console workspace
 
-Review the agent console as an operational workspace. The user should notice routing, runtime information, confidence indicators, tool usage, and action history before running an agent task.
+Perform the following set of steps to review the agent console as an operational workspace before running an agent task.
 
-1. Click **Media & Gaming Action Console** in the sidebar.
+1. Click **Media and Entertainment Action Console** in the sidebar.
 2. Review the runtime profile selector. The current demo uses **llama3.2** through Ollama-backed reasoning.
 3. Review the example questions in the agent workspace.
 4. Review **Recent Agent Actions** below the workspace.

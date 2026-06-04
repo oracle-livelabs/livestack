@@ -17,7 +17,7 @@ Each scene is designed to take between **5 and 10 minutes**.
 
 ### Objectives
 
-In this LiveStack demo, you will see how connected media data can help teams understand audience behavior, improve monetization, manage rights and distribution, identify creator influence, predict demand, and apply AI with stronger governance.
+In this scene, you will learn how the media story is organized, which business functions the page introduces, and how the rest of the runbook follows one connected launch-weekend operating thread.
 
 ### Prerequisites
 

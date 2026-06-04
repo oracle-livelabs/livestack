@@ -19,7 +19,7 @@ In this scene, you will learn what media decision the page supports, what eviden
 
 ## Task 1: Review the command center dashboard
 
-Use the dashboard as a daily triage view. The goal is to identify where audience demand, revenue opportunity, rights pressure, retention risk, or AI activity suggests the business needs attention.
+Perform the following set of steps to use the dashboard as a daily triage view and identify where audience demand, revenue opportunity, rights pressure, retention risk, or AI activity suggests the business needs attention.
 
 1. Click **Launch Operations Command Center** in the sidebar.
 2. Review the KPI cards across the top of the page.
@@ -29,7 +29,7 @@ Use the dashboard as a daily triage view. The goal is to identify where audience
 
     ![Command center KPI cards, signal velocity, and revenue summary](images/command-center-kpis-overview.png)
 
-In the current seeded dataset, the page shows **3.0K** campaign requests, about **$854.5M** in tracked content revenue, **474** audience momentum signals, **187** launch demand alerts, and the current AI action count. Use those numbers to frame the command center as a triage surface: the user can see demand, value, signal pressure, rights capacity, and AI activity in one place.
+In the current seeded dataset, the page shows **3.0K** campaign requests, about **$854.5M** in tracked content revenue, **474** audience momentum signals, **187** launch demand alerts, and the current AI action count. Use those numbers to frame the command center as a triage surface where the user can see demand, value, signal pressure, rights capacity, and AI activity in one place.
 
 **Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
 

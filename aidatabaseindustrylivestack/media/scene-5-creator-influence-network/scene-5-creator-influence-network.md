@@ -6,7 +6,7 @@
 
 Media teams struggle when creator data, audience communities, campaign activity, and content performance live in separate systems. That separation makes it harder to understand who is influencing whom and where audience attention is moving.
 
-**Oracle AI Database** helps address these challenges by supporting graph analysis over the operational media schema. Graph analysis helps answer relationship questions such as which creators influence the same audience, which communities amplify content, and where campaigns spread across platforms.
+**Oracle AI Database** helps address that challenge by supporting graph analysis over the operational media schema. Graph analysis helps answer relationship questions such as which creators influence the same audience, which communities amplify content, and where campaigns spread across platforms.
 
 In this scene, the application exposes creator and community relationships while the implementation reference explains the Oracle Property Graph and SQL/PGQ pattern behind the view.
 
@@ -54,7 +54,7 @@ Perform the following set of steps to show how influence travels across communit
 - **Callout 2** highlights the selected creator metrics.
 - **Callout 3** highlights the recalculated creator network for that selection.
 
-A creator, platform, studio, label, community, and campaign are more informative together than as isolated records. The graph helps teams see influence as connected evidence.
+A creator, platform, studio, label, community, and campaign are more informative together than as isolated records. The graph helps teams see influence as connected evidence rather than disconnected social metrics.
 
 ## Task 3: Explain the Oracle graph pattern
 

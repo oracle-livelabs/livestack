@@ -6,7 +6,7 @@
 
 Media teams struggle when audience conversations, creator activity, moderation signals, content catalogs, and recommendation workflows live in separate systems. That separation slows response time and makes it harder to understand what is actually driving audience behavior.
 
-The persona is looking for patterns in watch-time comments, creator posts, moderation queues, social sentiment, churn risk, ARPU signals, content mentions, brand-safety concerns, piracy and leak discussions, spoilers, creator backlash, misinformation, and live-event trust signals.
+The user is looking for patterns in watch-time comments, creator posts, moderation queues, social sentiment, churn risk, ARPU signals, content mentions, brand-safety concerns, piracy and leak discussions, spoilers, creator backlash, misinformation, and live-event trust signals.
 
 **Oracle AI Database** helps turn audience conversations into actionable media intelligence while keeping search, governance, and operational context connected.
 

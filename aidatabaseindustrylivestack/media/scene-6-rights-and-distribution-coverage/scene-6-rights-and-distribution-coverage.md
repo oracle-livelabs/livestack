@@ -60,7 +60,7 @@ Perform the following set of steps to connect geographic context with operationa
 1. Scroll to **Rights & Live Event Hubs**.
 2. Review columns for operations hub, location, type, content assets, available rights capacity, pending activations, and load.
 3. Focus on visible hubs such as **Atlanta Theatrical Launch Desk**, **Austin Game Creator Hub**, **Boston Premium Originals Hub**, **Charlotte Matchday Operations Hub**, and **Chicago Midwest Ad Ops Hub**.
-4. Use the table to connect map markers to concrete operating records.
+4. Use the table to connect map markers to concrete operating records such as rights capacity, pending activations, audience demand, and operational load.
 
     ![Rights and live event hubs table with capacity and load data](images/rights-live-event-hubs-table.png)
 

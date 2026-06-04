@@ -20,7 +20,7 @@ In this scene, you will learn what planning decision the page supports, what evi
 
 ## Task 1: Inspect Audience Demand Predictions
 
-Review the predictive analytics workspace as a collection of decision tools supporting audience growth, monetization, retention, programming, and rights planning.
+Perform the following set of steps to review the predictive analytics workspace as a collection of decision tools supporting audience growth, monetization, retention, programming, and rights planning.
 
 1. Click **Engagement, Revenue & Retention Forecasts** in the sidebar.
 2. Review the four KPI cards at the top of the page: **Content Assets with Signal Surge**, **Audience Accounts Segmented**, **Content Revenue Model R-squared**, and **Active ML Models**.
@@ -61,7 +61,7 @@ Segmentation becomes operational when teams can move directly from a model resul
 
 ## Task 3: Interpret Content Revenue Forecast
 
-Perform the following set of steps to so planners understand both the projection and how much confidence to place in it.
+Perform the following set of steps so planners understand both the projection and how much confidence to place in it.
 
 1. Click **Forecast**.
 2. Review the forecast horizon selector and **Refresh** control.
