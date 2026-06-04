@@ -2,9 +2,11 @@
 
 ## Introduction
 
-This scene prepares the trusted **Seer Utility Network** dataset used throughout the demo. Loading or restoring the data gives every later screen the same governed starting point for electric utility assets and meter events, gas pipeline and leak response data, water and wastewater network and compliance data, oil and gas wells, production facilities, pipelines, refineries, LNG logistics, emissions events, HSE incidents, customer accounts, billing, service requests, work orders, crews, inspections, maintenance plans, compliance records, regulatory reports, sensor readings, and operating events.
+**Data Foundation** prepares the trusted **Seer Utility Network** dataset used across the demo. Whether the data is loaded or restored, every subsequent screen starts from the same governed baseline.
 
-The page establishes that the runbook is not a set of disconnected mini-demos. The same Oracle-backed records support the command center, signal search, operational graph, field map, service requests, analytics, Ask Data, data import, and agent workflows.
+That baseline includes electric utility assets and meter events; gas pipeline and leak-response data; water and wastewater network and compliance data; oil and gas wells, production facilities, pipelines, refineries, and LNG logistics; emissions and HSE incidents; and customer, billing, service, workforce, inspection, maintenance, compliance, regulatory, sensor, and operations records.
+
+This page makes clear that the runbook is a connected end-to-end workflow, not a series of isolated mini-demos. The same Oracle-backed records power the command center, signal search, operational graph, field map, service requests, analytics, Ask Data, data import, and agent workflows.
 
 Estimated Time: **5 minutes**
 
@@ -18,7 +20,7 @@ In this scene, you will confirm that the demo has a governed baseline for electr
 
 ## Task 1: Prepare the dataset
 
-Perform the following steps so every later scene starts from the same trusted Energy and Utilities baseline.
+Perform the following set of steps so every later scene starts from the same trusted Energy and Utilities baseline:
 
 1. From the welcome page, click **Start the demo**, or click **Data Foundation** in the sidebar.
 2. In **Prepare the Dataset**, click **Restore Demo Data** only if the dataset needs to be reset to the seeded baseline.
@@ -35,7 +37,7 @@ The seeded baseline should support named records such as **OUT-1042**, **GLK-220
 
 ## Task 2: Review what gets loaded
 
-Perform the following steps to show that the demo uses recognizable Energy and Utilities data, not only electric grid records.
+Perform the following set of steps to show that the demo uses recognizable Energy and Utilities data, not only electric grid records:
 
 1. Scroll to **What Gets Loaded**.
 2. Review the data cards for assets, meters, work orders, crews, service requests, customer accounts, pipeline segments, wells, production facilities, compressor stations, refineries, LNG terminals, storage facilities, water treatment plants, wastewater facilities, emissions events, HSE incidents, maintenance plans, compliance records, regulatory reports, inspections, sensor readings, operating events, and billing or collections records.

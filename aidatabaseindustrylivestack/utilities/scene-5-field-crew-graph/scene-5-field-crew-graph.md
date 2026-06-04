@@ -2,7 +2,7 @@
 
 ## Introduction
 
-**Operational Event Graph** helps users understand relationships that are hard to see in isolated rows. The page connects electric outage events, gas leak events, water main breaks, wastewater overflow events, pipeline anomalies, well production issues, refinery unit constraints, LNG logistics delays, emissions excursions, HSE incidents, affected customers, affected assets, field crews, inspections, work orders, root causes, compliance records, and resolution milestones.
+**Operational Event Graph** helps users understand relationships that are hard to see in isolated rows. The page connects events, assets, customers, crews, work orders, root causes, compliance records, and resolution milestones so teams can follow the Gulf Coast event as a connected operating path.
 
 Energy and Utilities teams struggle when the information needed for one decision lives in separate tools. Oracle AI Database helps answer relationship questions across structured, spatial, graph, vector, and operational data so teams can reason across the event path instead of one record at a time.
 
@@ -16,7 +16,7 @@ In this scene, you will learn how graph relationships connect events, assets, cu
 
 ## Task 1: Review the graph workspace
 
-Perform the following steps to see how the event graph connects records across subsectors.
+Perform the following set of steps to see how the event graph connects records across subsectors:
 
 1. Click **Operational Event Graph** in the sidebar.
 2. Review the graph depth controls: **1 Hop**, **2 Hops**, **3 Hops**, **4 Hops**, and **5 Hops**.
@@ -32,7 +32,7 @@ The graph should include records such as **OUT-1042**, **GLK-2208**, **WMB-4417*
 
 ## Task 2: Explore a cross-sector event example
 
-Perform the following steps to show how connected evidence can reveal shared root causes, shared crew constraints, affected assets, customer impact, and compliance exposure.
+Perform the following set of steps to show how connected evidence can reveal shared root causes, shared crew constraints, affected assets, customer impact, and compliance exposure:
 
 1. In the node list, locate **GLK-2208**, **PIPE-17A**, **OUT-1042**, or another high-priority event node.
 2. Review the node type, identifier, pathway volume, risk score, and link count.
@@ -43,7 +43,11 @@ Perform the following steps to show how connected evidence can reveal shared roo
 
 Use this example to show why graph context matters: a pipeline pressure anomaly, gas leak response, HSE incident, crew assignment, customer impact, and compliance record are more informative together than as isolated records.
 
+**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
+
 ## Task 3: Explain the Oracle graph pattern
+
+Perform the following set of steps to explain how the graph remains an analysis view over governed Energy and Utilities data rather than a disconnected copy:
 
 1. Review the **Graph Query Explorer** area.
 2. Review the Oracle Internals content that references property graph and SQL/PGQ.

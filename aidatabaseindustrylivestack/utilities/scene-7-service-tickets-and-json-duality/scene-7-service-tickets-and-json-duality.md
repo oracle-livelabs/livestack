@@ -2,9 +2,9 @@
 
 ## Introduction
 
-**Utility Service Requests** shows how customer operations fit the Gulf Coast event. The page can represent electric outage reports, billing inquiries, collections or payment arrangements, high-usage concerns, move-in and move-out requests, gas odor reports, gas leak safety calls, water leak reports, low-pressure complaints, sewer overflow complaints, streetlight repairs, solar interconnection requests, EV charger service upgrades, vegetation management requests, industrial customer requests, and retail energy plan inquiries.
+**Utility Service Requests** shows how customer operations connect to the Gulf Coast event. It can represent a wide range of requests across electric, gas, and water service, including outages, billing and payment issues, safety incidents, leaks, service changes, repairs, and new service requests.
 
-Oracle AI Database keeps the service request record in one governed platform while exposing it through the shape each workflow needs. Relational tables provide operational detail. JSON Relational Duality Views expose the same request as a nested JSON document. Oracle Spatial adds field route and distance context.
+**Oracle AI Database** keeps each service request in a single governed platform while presenting it in the format each workflow needs. Relational data supports operational processing, JSON duality views support application workflows, and Oracle Spatial adds field context such as routing and distance.
 
 Estimated Time: **10 minutes**
 
@@ -16,7 +16,7 @@ In this scene, you will learn how one customer or service request can support cu
 
 ## Task 1: Review the service request workspace
 
-Perform the following steps to establish customer impact: who requested help, what status the request is in, which subsector is affected, what priority or value is involved, and which field operations site is responsible.
+Perform the following set of steps to establish customer impact: who requested help, what status the request is in, which subsector is affected, what priority or value is involved, and which field operations site is responsible:
 
 1. Click **Utility Service Requests** in the sidebar.
 2. Review the active user banner and VPD context.
@@ -32,7 +32,7 @@ Use visible rows to explain how customer operations connect to the broader event
 
 ## Task 2: Inspect the relational request detail
 
-Perform the following steps to validate the request header, customer or service point, line items, priority value, field cost, and item-level information that operations teams need for follow-up.
+Perform the following set of steps to validate the request header, customer or service point, line items, priority value, field cost, and item-level information that operations teams need for follow-up:
 
 1. Click a visible request row.
 2. Confirm the **Relational** tab is selected.
@@ -44,7 +44,7 @@ Perform the following steps to validate the request header, customer or service 
 
 ## Task 3: Compare the JSON Duality View
 
-Perform the following steps to show that the same governed request can support both operations users and application teams without creating a separate document store.
+Perform the following set of steps to show that the same governed request can support both operations users and application teams without creating a separate document store:
 
 1. Click **JSON Duality View** in the expanded request panel.
 2. Review the source label for the utility service request duality view.
@@ -57,7 +57,7 @@ The key point is that the request is not copied into a separate document store. 
 
 ## Task 4: Review field route context
 
-Perform the following steps to connect the service request to the field operations site, service point, distance, travel time, field cost, route status, and request progress.
+Perform the following set of steps to connect the service request to the field operations site, service point, distance, travel time, field cost, route status, and request progress:
 
 1. Click **Logistics Route** in the expanded request panel.
 2. Review the field operations site and service point.

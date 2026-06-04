@@ -1,10 +1,10 @@
-# Scene 8 Asset Risk & Capacity Analytics
+# Scene 8 Energy and Utilities Asset Risk & Capacity Analytics
 
 ## Introduction
 
-**Asset Risk & Capacity Analytics** helps teams decide which predictive signals should become operational action. The page brings together transformer overload risk, feeder congestion, pipeline integrity risk, corrosion risk, gas regulator station risk, pump station capacity, treatment plant capacity, wastewater compliance risk, well production decline, refinery unit constraints, compressor station reliability, LNG logistics capacity, maintenance backlog, turnaround readiness, emissions compliance risk, HSE risk, crew capacity forecast, and replacement priority.
+**Energy and Utilities Asset Risk & Capacity Analytics** helps teams decide which predictive signals should become operational action. The page brings together risk, demand, capacity, compliance, HSE, emissions, maintenance, and crew forecasts so planners can act before the next constraint becomes visible in operations.
 
-Oracle AI Database keeps machine learning close to governed Energy and Utilities data. Oracle Machine Learning models and SQL analytics can run from the same connected foundation that powers the rest of the LiveStack demo.
+**Oracle AI Database** keeps machine learning close to governed Energy and Utilities data. Oracle Machine Learning models and SQL analytics can run from the same connected foundation that powers the rest of the LiveStack demo.
 
 Estimated Time: **12 minutes**
 
@@ -16,7 +16,7 @@ In this scene, you will learn how in-database analytics can score asset, capacit
 
 ## Task 1: Inspect demand and asset risk
 
-Perform the following steps to identify services, assets, or facilities where predicted demand or risk may require field capacity planning, supply review, customer outreach, maintenance planning, production follow-up, or compliance response.
+Perform the following set of steps to identify services, assets, or facilities where predicted demand or risk may require field capacity planning, supply review, customer outreach, maintenance planning, production follow-up, or compliance response:
 
 1. Click **Asset Risk & Capacity Analytics** in the sidebar.
 2. Review the KPI cards at the top of the page.
@@ -28,11 +28,9 @@ Perform the following steps to identify services, assets, or facilities where pr
 
 Use the visible predictions to explain how the same analytics pattern can support transformer overload, pipeline integrity, water pressure, wastewater compliance, well production, refinery throughput, LNG logistics, emissions, HSE, maintenance, and crew capacity decisions.
 
-**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
-
 ## Task 2: Review service or customer segments
 
-Perform the following steps to turn model output into groups of service points, customers, or assets that may need follow-up, targeted outreach, maintenance planning, demand response, billing support, or regulatory attention.
+Perform the following set of steps to turn model output into groups of service points, customers, or assets that may need follow-up, targeted outreach, maintenance planning, demand response, billing support, or regulatory attention:
 
 1. Click the segmentation tab.
 2. Review the segmentation model note for K-Means and pattern quartiles.
@@ -44,7 +42,7 @@ Segmentation becomes operational when teams can turn groups into follow-up actio
 
 ## Task 3: Interpret operational value forecast
 
-Perform the following steps to understand the expected value trend and how much confidence planners should place in it.
+Perform the following set of steps to understand the expected value trend and how much confidence planners should place in it:
 
 1. Click **Operational Value Forecast**.
 2. Review the forecast horizon selector and **Refresh** control.
@@ -57,7 +55,7 @@ This page helps a user connect business value and operational volume to a govern
 
 ## Task 4: Explore signal clusters
 
-Perform the following steps to see how related services, assets, facilities, and signals group together by meaning.
+Perform the following set of steps to see how related services, assets, facilities, and signals group together by meaning:
 
 1. Click the signal cluster tab.
 2. Review the **K =** controls.
@@ -70,7 +68,7 @@ Use this tab to explain how vector similarity can group Energy and Utilities rec
 
 ## Task 5: Review capacity and supply intelligence
 
-Perform the following steps to connect predicted demand with available capacity, supply status, surge probability, site pressure, crew availability, and operational value at risk.
+Perform the following set of steps to connect predicted demand with available capacity, supply status, surge probability, site pressure, crew availability, and operational value at risk:
 
 1. Click **Capacity and Supply** or the equivalent capacity tab.
 2. Review the summary cards.

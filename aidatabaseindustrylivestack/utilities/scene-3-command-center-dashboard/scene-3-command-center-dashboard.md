@@ -20,7 +20,7 @@ In this scene, you will learn how a cross-sector command center detects operatio
 
 ## Task 1: Review the command center dashboard
 
-Use the dashboard as a daily triage view for the Gulf Coast event. The goal is to see where customer, asset, production, safety, compliance, and field execution pressure is accumulating.
+Perform the following set of steps to use the dashboard as a daily triage view for the Gulf Coast event and show where customer, asset, production, safety, compliance, and field-execution pressure is accumulating:
 
 1. Click **Energy Operations Command Center** in the sidebar.
 2. Review the KPI cards across the top of the page.
@@ -38,7 +38,7 @@ The user should see one cross-sector operating picture instead of separate dashb
 
 ## Task 2: Interpret signal velocity and operational value
 
-Perform the following steps to understand where event volume, operational value, reliability risk, production pressure, and compliance exposure are moving at the same time.
+Perform the following set of steps to understand where event volume, operational value, reliability risk, production pressure, and compliance exposure are moving at the same time:
 
 1. Click a signal velocity time range such as **24h**, **48h**, **7d**, **30d**, or **1y**.
 2. Review how the signal chart changes by time bucket.
@@ -47,11 +47,13 @@ Perform the following steps to understand where event volume, operational value,
 
     ![Signal velocity time controls and cross-sector operational value chart highlighted](images/signal-velocity-and-operational-value.png)
 
-The key business story is that Energy and Utilities users need to know where value, volume, safety, reliability, production, and compliance risk are moving together so they can choose the right operating response.
+**Notes:**
+- Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
+- The key business story is that **Energy** and **Utilities** users need to know where value, volume, safety, reliability, production, and compliance risk are moving together so they can choose the right operating response.
 
 ## Task 3: Review watched services, assets, and events
 
-Perform the following steps to move from dashboard-level pressure to the specific service, asset program, facility, field partner, customer operation, or compliance record that may need attention.
+Perform the following set of steps to move from dashboard-level pressure to the specific service, asset program, facility, field partner, customer operation, or compliance record that may need attention:
 
 1. Scroll to the watched services, assets, and operating events table.
 2. Use the search box when rows are available.
@@ -61,6 +63,8 @@ Perform the following steps to move from dashboard-level pressure to the specifi
     ![Watched services and operating events table with search filters and current state highlighted](images/watched-services-and-supplies.png)
 
 The watched table turns the KPI story into operating decisions. A leader can move from "critical signals are high" to the specific asset, event, customer segment, facility, crew, or compliance workflow that needs review.
+
+**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
 
 *You can move to the next scene.*
 

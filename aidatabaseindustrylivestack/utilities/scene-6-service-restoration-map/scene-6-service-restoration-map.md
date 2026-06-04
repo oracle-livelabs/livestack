@@ -2,7 +2,9 @@
 
 ## Introduction
 
-**Field Operations Logistics Map** helps teams decide where crews, depots, priority customers, restricted access areas, safety zones, environmental zones, and repair-priority areas intersect. The page compares electric outage locations, gas leak locations, water main break locations, wastewater overflow locations, pipeline segments, pump stations, substations, compressor stations, refineries, wells, LNG terminals, crew locations, depot locations, and estimated travel time.
+**Field Operations Logistics Map** helps teams decide where crews, depots, priority customers, restricted access areas, safety zones, environmental zones, and repair-priority areas intersect.
+
+The page turns location context into an operating decision across electric, gas, water/wastewater, pipeline, refinery, LNG, and field-response workflows.
 
 Location-aware decisions are difficult when field sites, routes, service zones, safety constraints, environmental areas, and operating events live outside the operational data platform. Oracle AI Database keeps spatial geometry and operational records together so the map can support dispatch, restoration, repair, safety, and compliance decisions.
 
@@ -16,7 +18,7 @@ In this scene, you will learn how Oracle Spatial supports cross-sector field exe
 
 ## Task 1: Review logistics priorities
 
-Perform the following steps to understand where demand, repair priority, field access, safety, environmental constraints, and route coverage may require attention.
+Perform the following set of steps to understand where demand, repair priority, field access, safety, environmental constraints, and route coverage may require attention:
 
 1. Click **Field Operations Logistics Map** in the sidebar.
 2. Review the stat cards across the top of the page.
@@ -33,7 +35,7 @@ Use the priority panel to connect field execution to the story: crews may need t
 
 ## Task 2: Toggle spatial layers
 
-Perform the following steps to compare different field operations questions: where incidents are located, where crews and depots are available, how routes connect, which zones are covered, which assets are nearby, and which areas have safety or environmental constraints.
+Perform the following set of steps to compare different field operations questions: where incidents are located, where crews and depots are available, how routes connect, which zones are covered, which assets are nearby, and which areas have safety or environmental constraints:
 
 1. Review the map and its layer controls.
 2. Toggle service point or customer-priority layers.
@@ -47,7 +49,7 @@ The layer controls let different users answer different operating questions, suc
 
 ## Task 3: Compare site data with the map
 
-Perform the following steps to connect visual location context with concrete operating records such as capacity, pending requests, alerts, current load, travel time, and status.
+Perform the following set of steps to connect visual location context with concrete operating records such as capacity, pending requests, alerts, current load, travel time, and status:
 
 1. Scroll to the field operations sites table.
 2. Review columns for site location, site type, services supported, capacity or supply units, pending requests, alerts, current load, and status.

@@ -1,8 +1,8 @@
-# Scene 4 Reliability, Production & Compliance Signals
+# Scene 4 Reliability, Production & Compliance Signal Intelligence
 
 ## Introduction
 
-**Reliability, Production & Compliance Signals** helps teams understand why the Gulf Coast event matters before the risk is obvious in service request volume alone.
+**Reliability, Production & Compliance Signal Intelligence** helps teams understand why the Gulf Coast event matters before the risk is obvious in service request volume alone.
 
 The page connects SAIDI/SAIFI, feeder utilization, gas pipeline pressure variance, leak response SLA, water pressure anomalies, wastewater discharge compliance, well production variance, refinery throughput, equipment vibration and temperature anomalies, emissions threshold alerts, HSE incident rates, maintenance backlog, crew capacity, and regulatory reporting status.
 
@@ -18,7 +18,7 @@ In this scene, you will learn how vector search connects operating signals to af
 
 ## Task 1: Review the signal feed
 
-Perform the following steps to see how reliability, production, compliance, safety, emissions, field, and customer signals are summarized for the operator.
+Perform the following set of steps to see how reliability, production, compliance, safety, emissions, field, and customer signals are summarized for the operator:
 
 1. Click **Reliability, Production & Compliance Signals** in the sidebar.
 2. Review **Semantic Reliability, Production & Compliance Signal Search** at the top of the page.
@@ -30,11 +30,9 @@ Perform the following steps to see how reliability, production, compliance, safe
 
 Use this opening view as the bridge between raw operational text and governed Energy and Utilities intelligence. The same search pattern can support electric reliability, gas safety, water/wastewater operations, upstream production, midstream integrity, downstream throughput, HSE, emissions, and regulatory status.
 
-**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
-
 ## Task 2: Run semantic signal search
 
-Perform the following steps to show how an operator can search by operational intent, not only by exact service names or keywords.
+Perform the following set of steps to show how an operator can search by operational intent, not only by exact service names or keywords:
 
 1. Click an example query chip such as **gas pipeline pressure variance and leak response SLA**, or enter a similar phrase in the search field.
 2. Click **Search** when the search action is enabled.
@@ -45,11 +43,13 @@ Perform the following steps to show how an operator can search by operational in
 4. Review matched signal cards below the filters.
 5. Use examples such as **PIPE-17A**, **GLK-2208**, **WMB-4417**, **WWC-9031**, **WELL-NB-014**, **RFY-HCU-02**, **LNG-7842**, **EMS-1190**, and **HSE-3364** to explain semantic matching across subsectors.
 
-The operator can search using real operational language and still find related records even when the source records use different wording.
+**Notes:**
+- Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
+- The operator can search using real operational language and still find related records even when the source records use different wording.
 
 ## Task 3: Interpret the signal cards
 
-Perform the following steps to identify affected services, severity, evidence, and possible next actions, such as opening the operational event graph, checking logistics impact, routing compliance follow-up, or preparing an agent action.
+Perform the following set of steps to identify affected services, severity, evidence, and possible next actions, such as opening the operational event graph, checking logistics impact, routing compliance follow-up, or preparing an agent action:
 
 1. Scroll to the matched signal cards.
 2. Review signal type, criticality, source, operating impact, match score, related signals, affected services or assets, and open follow-ups when cards are populated.

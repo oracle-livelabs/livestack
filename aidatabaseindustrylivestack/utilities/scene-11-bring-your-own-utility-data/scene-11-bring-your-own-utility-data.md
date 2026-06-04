@@ -16,7 +16,7 @@ In this scene, you will learn how the dataset tool supports template ZIP downloa
 
 ## Task 1: Open the dataset tool
 
-Perform the following steps to open the dataset workflow from the app shell.
+Perform the following set of steps to open the dataset workflow from the app shell:
 
 1. Click **Use Your Own Utility Data** in the top bar.
 2. In the live application, review the active dataset state when the tool opens.
@@ -28,7 +28,7 @@ Use this first view to explain that the dataset tool is part of the demo workflo
 
 ## Task 2: Review the template and upload workflow
 
-Perform the following steps to explain what a customer would replace when they bring their own data.
+Perform the following set of steps to explain what a customer would replace when they bring their own data:
 
 1. Review the template ZIP download action.
 2. Review the completed ZIP upload area.
@@ -41,7 +41,7 @@ The key point is that customers can map their own terminology to the same Oracle
 
 ## Task 3: Preview or restore the seeded dataset
 
-Perform the following steps to show the demo-safe reset path.
+Perform the following set of steps to show the demo-safe reset path:
 
 1. Review the restore-demo preview or validation action.
 2. Confirm that the restore action describes what will be replaced.
@@ -50,7 +50,7 @@ Perform the following steps to show the demo-safe reset path.
 
     ![Seeded dataset state and dataset tool entry highlighted for restore discussion](images/preview-restore-seeded-dataset.png)
 
-Use this scene to close the runbook with a practical adoption point: the same LiveStack can tell the seeded Gulf Coast story or help customers reason about their own Energy and Utilities operating data.
+Use this scene to close the runbook with a practical adoption point: the same LiveStack can tell the seeded Gulf Coast story or help customers reason about their own Energy and Utilities operating data while preserving a known-good demo baseline.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team

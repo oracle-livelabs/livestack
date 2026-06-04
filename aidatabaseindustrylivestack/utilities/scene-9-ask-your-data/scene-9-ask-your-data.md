@@ -18,7 +18,7 @@ In this scene, you will learn how governed natural-language SQL can support cros
 
 ## Task 1: Review the assistant workspace
 
-Perform the following steps to show how Energy and Utilities users can ask questions in plain language while still keeping the query path visible and controlled.
+Perform the following set of steps to show how Energy and Utilities users can ask questions in plain language while still keeping the query path visible and controlled:
 
 1. Click **Ask Energy & Utilities Data** in the sidebar.
 2. Review the runtime profile in the top right of the assistant card.
@@ -32,10 +32,13 @@ Use this opening view to explain that the assistant is not a generic chatbot. It
 
 ## Task 2: Use Explain mode for a narrated answer
 
-Perform the following steps when the user wants a business-readable answer first.
+Perform the following set of steps when the user wants a business-readable answer first:
 
 1. Click **Explain**.
-2. Ask a cross-sector question such as **Which gas pipeline segments show pressure anomalies or integrity risk?**, **Which wastewater facilities are approaching compliance thresholds?**, or **Which assets should be prioritized before the storm arrives?**
+2. Ask a cross-sector question such a:
+- *Which gas pipeline segments show pressure anomalies or integrity risk?*
+- *Which wastewater facilities are approaching compliance thresholds?*
+- *Which assets should be prioritized before the storm arrives?*
 
     ![Ask Energy & Utilities Data Explain mode answer with key findings for a cross-sector question](images/ask-utility-data-explain-mode.png)
 
@@ -48,7 +51,7 @@ Perform the following steps when the user wants a business-readable answer first
 
 ## Task 3: Use Chat mode for a conversational answer
 
-Perform the following steps when the user is exploring the data interactively and may want follow-up questions, regional breakdowns, or a more conversational explanation.
+Perform the following set of steps when the user is exploring the data interactively and may want follow-up questions, regional breakdowns, or a more conversational explanation:
 
 1. Click **Clear** if the Explain result is still visible.
 2. Click **Chat**.
@@ -60,7 +63,7 @@ Perform the following steps when the user is exploring the data interactively an
 
 ## Task 4: Use Show SQL mode to inspect the query path
 
-Perform the following steps when a data steward, operator, or reviewer needs to see the query path before rows are returned.
+Perform the following set of steps when a data steward, operator, or reviewer needs to see the query path before rows are returned:
 
 1. Click **Clear** if the Chat result is still visible.
 2. Click **Show SQL**.
@@ -73,7 +76,7 @@ This is the governance moment: the user can inspect the generated SQL before ask
 
 ## Task 5: Use Run SQL mode to inspect returned rows
 
-Perform the following steps to inspect the live rows behind the answer. This helps the user connect a plain-English question to specific assets, facilities, customers, service requests, emissions events, or compliance records.
+Perform the following set of steps to inspect the live rows behind the answer. This helps the user connect a plain-English question to specific assets, facilities, customers, service requests, emissions events, or compliance records:
 
 1. Click **Clear** if the generated SQL result is still visible.
 2. Click **Run SQL**.
