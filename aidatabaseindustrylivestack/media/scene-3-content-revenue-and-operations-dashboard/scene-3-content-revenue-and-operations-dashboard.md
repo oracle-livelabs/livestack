@@ -63,4 +63,4 @@ Use the demand alerts table to move from "audience momentum is rising" to the sp
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-02
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-04

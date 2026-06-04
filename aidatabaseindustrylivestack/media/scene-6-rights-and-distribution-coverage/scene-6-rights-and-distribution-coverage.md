@@ -59,7 +59,7 @@ Perform the following set of steps to connect geographic context with operationa
 
 1. Scroll to **Rights & Live Event Hubs**.
 2. Review columns for operations hub, location, type, content assets, available rights capacity, pending activations, and load.
-3. Focus on visible hubs such as **Atlanta Theatrical Launch Desk**, **Austin Game Creator Hub**, **Boston Premium Originals Hub**, **Charlotte Matchday Operations Hub**, and **Chicago Midwest Ad Ops Hub**.
+3. Focus on visible hubs such as **Atlanta Theatrical Launch Desk**, **Austin Creator Monetization Hub**, **Boston Premium Originals Hub**, **Charlotte Matchday Operations Hub**, and **Chicago Midwest Ad Ops Hub**.
 4. Use the table to connect map markers to concrete operating records.
 
     ![Rights and live event hubs table with capacity and load data](images/rights-live-event-hubs-table.png)
@@ -70,7 +70,7 @@ Perform the following set of steps to identify where audience demand may exceed 
 
 1. Scroll to **Rights and Capacity Alerts - Audience Surge**.
 2. Review the content asset, studio or label, coverage hub, available capacity, required capacity, and social multiplier.
-3. Use examples such as **Championship Highlights Rights** or **Esports Finals Watch Party** to discuss how demand can exceed available rights or activation capacity.
+3. Use examples such as **Championship Highlights Rights**, **Premiere Window Packages**, or **Live Event Reminder Journeys** to discuss how demand can exceed available rights or activation capacity.
 
     ![Rights and capacity alerts for audience-surge scenarios](images/rights-capacity-alerts.png)
 
@@ -80,4 +80,4 @@ The business value is that teams can make rights and coverage decisions from con
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-29
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-04

@@ -204,7 +204,7 @@ Expected result:
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-02
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-04
 - **Application URL** - `http://localhost:8505`
 - **Health URL** - `http://localhost:8505/api/health`
 - **Select AI Health URL** - `http://localhost:8505/api/selectai/health`

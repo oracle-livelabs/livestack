@@ -9,7 +9,7 @@ The LiveStack becomes more relevant when organizations can map the demo pattern 
  - A studio might bring release windows, campaign orders, and rights regions.
  - A sports network might bring highlight packages, ad inventory, and market demand.
 
-The application makes that workflow explicit while keeping the seeded Seer Media data available as a known-good baseline.
+The application makes that workflow explicit while keeping the seeded Seer Media data available as a known-good baseline. When a refresh succeeds, the backend also records one immutable usage telemetry event through Object Storage so demo refresh usage can be measured without changing the user workflow or relying on a shared counter file.
 
 Estimated Time: **10 minutes**
 
@@ -61,11 +61,11 @@ Perform the following set of steps to return the environment to a known-good bas
 
 In the hosted demo captured for this runbook, **Preview Restore** returned **Validation passed. Dry run completed successfully.** The restore preview validates the seeded media package before replacing anything.
 
-Teams can experiment with custom datasets while retaining a trusted baseline that allows demonstrations to be repeated consistently.
+Teams can experiment with custom datasets while retaining a trusted baseline that allows demonstrations to be repeated consistently. The refresh workflow remains fail-open: if telemetry is unavailable, the dataset restore still completes and the demo remains usable.
 
 You can move to the **Conclusion** or the **Download** lab when you want to run the Media LiveStack locally.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-29
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-04
 - **Screenshot source** - Captured from `http://141.148.236.195:8505/`.
