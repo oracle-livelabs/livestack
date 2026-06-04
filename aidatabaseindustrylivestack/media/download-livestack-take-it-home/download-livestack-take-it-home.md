@@ -44,6 +44,7 @@ Before starting, confirm that you have:
 - The required local application port available:
   - `8505` for the LiveStack application.
 
+
 ## New to Podman?
 
 Podman is the local container runtime used by this LiveStack package. Podman Compose reads the `compose.yml` file and starts the required services together, including Oracle Database, ORDS, Ollama, and the LiveStack application.
@@ -225,7 +226,25 @@ Do not extract or run the stack from your `Downloads` folder. Create a new empty
     </copy>
     ```
 
-6. Confirm that you are in the directory that contains the compose file.
+6. Move into the extracted LiveStack application folder.
+
+    The folder name can vary by package, such as `finance`, `healthcare`, or another industry name. Replace `<extracted-folder-name>` with the folder name created when you extracted `livestack.zip`.
+
+    ```powershell
+    <copy>
+    Set-Location .\<extracted-folder-name>
+    </copy>
+    ```
+
+    Example:
+
+    ```powershell
+    <copy>
+    Set-Location .\media
+    </copy>
+    ```
+
+7. Confirm that you are in the directory that contains the compose file.
 
     ```powershell
     <copy>
@@ -237,7 +256,7 @@ Do not extract or run the stack from your `Downloads` folder. Create a new empty
 
     - You see `compose.yml` or `compose.yaml` in the current directory.
 
-7. Create or refresh the runtime environment file.
+8. Create or refresh the runtime environment file.
 
     ```powershell
     <copy>

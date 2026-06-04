@@ -122,7 +122,7 @@ If this test fails, fix Podman setup before continuing with LiveStack.
 
 ## Task 1: Download the portable package
 
-1. Download the LiveStack package using this [link](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/livestack-healthcare.zip).
+1. Download the LiveStack package using this [link](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/livestack-sled.zip).
 
 2. Save or rename the file as `livestack.zip`.
 
@@ -240,7 +240,7 @@ Do not extract or run the stack from your `Downloads` folder. Create a new empty
 
     ```powershell
     <copy>
-    Set-Location .\healthcare
+    Set-Location .\sled
     </copy>
     ```
 
