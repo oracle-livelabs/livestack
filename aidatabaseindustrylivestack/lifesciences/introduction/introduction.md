@@ -2,14 +2,14 @@
 
 ## Introduction
 
-Life sciences teams need to protect clinical supply, quality, and regulated operations while data is spread across trial systems, quality systems, manufacturing records, cold-chain logistics, regulatory workflows, and commercial operations.
-The **Seer Lifesciences LiveStack** shows how a life sciences organization can connect those signals, understand what needs attention, and move from quality issue to auditable operational action with more confidence.
+Life sciences organizations need an operational intelligence layer that connects the transactional systems managing trial supply to risk detection, governed analytics, and auditable AI-assisted action. CTMS, RTSM/IRT, EDC, QMS, manufacturing, depot, logistics, and regulatory systems each manage critical parts of clinical supply operations. The business value comes from connecting the signals from those systems into one governed decision layer so sponsors, CROs, clinical supply teams, quality teams, and operations leaders can minimize trial interruptions and compliance risk.
 
-This runbook guides the **Seer Lifesciences Clinical Supply LiveStack Demo** and shows how **Oracle AI Database 26ai** helps life sciences teams bring regulated supply, quality, logistics, analytics, and AI-assisted workflows together on one governed data foundation.
+The Seer Lifesciences Clinical Supply LiveStack Demo shows that connected decision layer. It does not position Oracle AI Database as a replacement for source systems. Instead, it shows how Oracle AI Database 26ai can help bring regulated supply, quality, logistics, trial-site, and audit signals together so teams can detect risk earlier, inspect the evidence behind a decision, and move from signal to reviewable action with more control.
 
-In the demo, **Seer Lifesciences** uses **Oracle AI Database** to connect regulated products, manufacturers, trial sites, clinical supply orders, quality signals, cold-chain service coverage, release-risk predictions, conversational data access, and governed agent-assisted operations.
+The demo follows one clinical-supply risk journey: a quality or regulatory signal appears, semantic matching identifies potentially affected products, relationship analysis traces propagation paths, spatial views show cold-chain coverage, orders expose trial-site and supply value impact, predictive analytics supports planning decisions, natural-language analytics exposes trusted SQL and row results, and agent-assisted workflows record auditable follow-up. The story is clinical supply continuity first, with Oracle capabilities supporting that business outcome.
 
-The demo follows a clinical-supply risk thread: a quality or regulatory signal appears, semantic search identifies affected products, graph analytics traces connected manufacturers and sources, spatial views show cold-chain coverage, orders expose supply value at risk, predictive analytics scores release and replenishment risk, and AI-assisted workflows recommend auditable next actions.
+This same connected architecture is also relevant to adjacent use cases such as cold-chain event management and enrollment-driven resupply optimization, but this runbook stays focused on the regulated clinical-supply risk journey shown in the current app.
+
 
 Estimated Demo Time: **90 minutes**
 
@@ -19,7 +19,7 @@ Each scene is designed to take between 5 and 10 minutes.
 
 ### Objectives
 
-In this LiveStack demo, you will learn how connected data and AI-assisted workflows help life sciences teams identify regulated supply risk, trace connected evidence, protect trial continuity, and explain governed next actions.
+In this LiveStack demo, you will see how a life sciences organization can use a governed operational intelligence layer to identify regulated supply risk, protect trial continuity, improve quality traceability, and make AI-assisted operational decisions easier to inspect and explain.
 
 ### Prerequisites
 
@@ -50,4 +50,4 @@ Before you begin, confirm that you can open the running Seer Lifesciences LiveSt
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-29
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-04
