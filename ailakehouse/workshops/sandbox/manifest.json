@@ -1,0 +1,58 @@
+{
+  "workshoptitle": "PeakGear AI Lakehouse LiveStack Guide",
+  "help": "livelabs-help-database_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Get Started",
+      "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
+    },
+    {
+      "title": "Introduction",
+      "filename": "../../introduction/introduction.md"
+    },
+    {
+      "title": "Scene 1: Welcome and Demo Orientation",
+      "filename": "../../scene-1-welcome-and-demo-orientation/scene-1-welcome-and-demo-orientation.md"
+    },
+    {
+      "title": "Scene 2: LiveStack Configuration",
+      "filename": "../../scene-2-livestack-configuration/scene-2-livestack-configuration.md"
+    },
+    {
+      "title": "Scene 3: Ingest Real-Time and Batch Data",
+      "filename": "../../scene-3-ingest-real-time-and-batch-data/scene-3-ingest-real-time-and-batch-data.md"
+    },
+    {
+      "title": "Scene 4: Process Bronze to Silver",
+      "filename": "../../scene-4-process-bronze-to-silver/scene-4-process-bronze-to-silver.md"
+    },
+    {
+      "title": "Scene 5: Operations Dashboard",
+      "filename": "../../scene-5-operations-dashboard/scene-5-operations-dashboard.md"
+    },
+    {
+      "title": "Scene 6: PeakGear Webshop and Product Discovery",
+      "filename": "../../scene-6-peakgear-webshop-and-product-discovery/scene-6-peakgear-webshop-and-product-discovery.md"
+    },
+    {
+      "title": "Scene 7: Retail Demand Sensing",
+      "filename": "../../scene-7-retail-demand-sensing/scene-7-retail-demand-sensing.md"
+    },
+    {
+      "title": "Scene 8: Returns Risk Network",
+      "filename": "../../scene-8-returns-risk-network/scene-8-returns-risk-network.md"
+    },
+    {
+      "title": "Scene 9: Fulfillment, Orders, and Predictions",
+      "filename": "../../scene-9-fulfillment-orders-and-predictions/scene-9-fulfillment-orders-and-predictions.md"
+    },
+    {
+      "title": "Scene 10: Ask Data and Retail Agents",
+      "filename": "../../scene-10-ask-data-and-retail-agents/scene-10-ask-data-and-retail-agents.md"
+    },
+    {
+      "title": "Need Help?",
+      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+    }
+  ]
+}
