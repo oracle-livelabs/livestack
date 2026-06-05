@@ -40,7 +40,9 @@ Perform the following set of steps when the user wants a business-readable answe
 
     ![Explain mode response for the launch risk question](images/ask-seer-media-data-explain-mode.png)
 
-**Expected result:** The assistant returns a narrated answer and key findings without making the generated SQL the main artifact. The current flow follows the healthcare-style Ask Data experience: a business-readable answer appears first, but the answer is still grounded in the live Oracle schema and SQL execution path.
+**Expected result:** The assistant returns a narrated answer and key findings without making generated SQL the main artifact. The response should stay grounded in governed media data rather than treating SQL as the main story.
+
+Use this mode when the user wants a business-readable answer first. The system still uses governed SQL behind the scenes, but the presentation is optimized for a media analyst, programming lead, or retention manager.
 
 ## Task 3: Use Chat mode for a conversational answer
 
@@ -53,6 +55,7 @@ Perform the following set of steps when the user wants to explore the data inter
     ![Chat mode response for the launch risk question](images/ask-seer-media-data-chat-mode.png)
 
 **Expected result:** The assistant returns a conversational response and follow-up prompts. Chat mode keeps the answer grounded in the live media schema, prioritizes the current question over stale chat context, and is shaped for exploration such as breaking risk down by audience region, coverage desk, or audience tier.
+
 
 ## Task 4: Use Show SQL mode to inspect the query path
 
@@ -69,6 +72,8 @@ Perform the following set of steps when the user wants to inspect the generated 
 This is the governance moment: the user can inspect the generated SQL before Oracle returns data. Use this mode when a data steward, solution engineer, or technical reviewer wants to verify what will run before rows are returned.
 
 ## Task 5: Use Run SQL mode to inspect returned rows
+
+Perform the following set of steps to inspect the returned rows behind the answer so the user can connect a plain-English question to specific audience accounts, launch risk, and operating context.
 
 1. Click **Clear** if the generated SQL result is still visible.
 2. Click **Run SQL**.

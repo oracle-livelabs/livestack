@@ -18,7 +18,7 @@ In this scene, you will learn what operational decision the page supports, what 
 
 ## Task 1: Review the agent console workspace
 
-Review the agent console as an operational workspace. The user should notice routing, runtime information, confidence indicators, tool usage, and action history before running an agent task.
+Perform the following set of steps to review the agent console as an operational workspace before running an agent task.
 
 1. Click **Media and Entertainment Action Console** in the sidebar.
 2. Review the runtime profile selector. The current demo uses **llama3.2** through Ollama-backed reasoning.

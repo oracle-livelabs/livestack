@@ -8,9 +8,11 @@ Estimated Time: **10 minutes**
 
 ### Objectives
 
-Connect each workflow to a business outcome and explain how the combined experience supports faster, more confident media decisions.
+In this section, you will connect each workflow to a business outcome and explain how the combined experience supports faster, more confident media decisions.
 
 ## Task 1: Review the final operating model
+
+Perform the following set of steps to review the final operating model and reconnect the scenes to one business story.
 
 1. Open **Welcome**.
 2. Use the left navigation to revisit the scenes that matter most to your audience.
@@ -21,6 +23,8 @@ Connect each workflow to a business outcome and explain how the combined experie
 - You can point to the scene that supports each part of the story.
 
 ## Task 2: Review the outcome signals
+
+Perform the following set of steps to review the outcome signals across the core scenes and connect each workflow to a business result.
 
 1. In **Launch Operations Command Center**, identify campaign requests, content revenue, audience momentum, demand alerts, and AI action indicators.
 2. In **Audience Momentum & Safety Signals**, connect semantic search results to related content assets and signal posts.
@@ -44,6 +48,8 @@ Connect each workflow to a business outcome and explain how the combined experie
     - **AI-assisted media operations** - Natural-language SQL and agent actions are observable, auditable, and grounded in the live schema.
 
 ## Task 4: Why this matters
+
+Perform the following set of steps to close the walkthrough by explaining why this operating model matters.
 
 1. Close the walkthrough by explaining that media companies often split audience insight, content catalogs, rights data, distribution status, campaign orders, revenue forecasts, and agent actions across separate systems.
 2. Position the LiveStack as a different operating model: one Oracle AI Database foundation serves converged data, analytics, application APIs, and AI-assisted decisions with less data movement and a clearer governance story.

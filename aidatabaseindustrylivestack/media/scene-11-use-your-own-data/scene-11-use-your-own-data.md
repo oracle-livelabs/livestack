@@ -68,4 +68,3 @@ You can move to the **Conclusion** or the **Download** lab when you want to run 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
 - **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-04
-- **Screenshot source** - Captured from `http://141.148.236.195:8505/`.
