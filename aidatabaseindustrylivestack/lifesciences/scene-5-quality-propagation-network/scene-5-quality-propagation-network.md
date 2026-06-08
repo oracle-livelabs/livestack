@@ -2,11 +2,11 @@
 
 ## Introduction
 
-**Signal Propagation Network** helps life sciences teams decide whether a quality signal is isolated or part of a wider manufacturer, source, product, or cold-chain pattern. The page shows how signal sources and regulated communities connect so teams can understand where risk may propagate next.
+**Signal Propagation Network** shows why one signal may not be isolated. The operational event is a quality, regulatory, or supply signal connected to sources, manufacturers, products, logistics partners, and regulated communities. The risk is propagation: a source or relationship cluster may amplify impact across products or partners before the organization sees it in a linear report.
 
-Quality and supply teams struggle when this information lives in separate systems. That separation makes it harder to tell whether one bulletin is isolated or connected to a broader manufacturer, product, source, or cold-chain pattern.
+Life sciences teams often need to understand whether a bulletin, advisory, or manufacturer note is part of a wider pattern. That is difficult when source relationships, product links, logistics references, and manufacturer context are spread across separate systems and manual tracking files.
 
-**Oracle AI Database** helps address that challenge by modeling signal, source, product, and manufacturer relationships as a property graph over governed life sciences data. SQL/PGQ then helps answer relationship questions such as which signal sources are community hubs or how quality signals may travel through connected sources.
+The page helps the user decide which sources, manufacturers, or communities need closer monitoring. Oracle property graph and SQL/PGQ support that decision by making relationship paths queryable over governed life sciences data.
 
 Estimated Time: **10 minutes**
 
@@ -14,20 +14,20 @@ Estimated Time: **10 minutes**
 
 ### Objectives
 
-In this scene, you will learn what life sciences decision the network supports, what evidence the user should inspect, and what action the team may take next.
+In this scene, you will learn how relationship analysis exposes propagation paths, what evidence the user should inspect, and how the business can prioritize monitoring or follow-up.
 
 ## Task 1: Review the Signal Propagation Network page
 
 ![Signal Propagation Network page with source list, metrics, and graph highlighted](images/propagation-network.png)
 
-Perform the following set of steps to review the network and show how relationships, communities, and propagation paths extend beyond a simple source list.
+Perform the following set of steps to review how relationships, communities, and propagation paths extend beyond a simple source list.
 
 1. Click **Signal Propagation Network** in the sidebar.
 2. Review the regulatory and quality source list on the left.
 3. Review the graph depth control. Increasing the hop count expands the network from direct relationships to broader propagation paths.
 4. Review the graph workspace. The graph connects regulated signal sources through relationship types such as follows, collaborates, reshared, inspired by, tagged, co-creator, and mentions.
 
-The page helps the user decide which sources, manufacturers, or communities may need closer monitoring after a quality signal appears.
+The business decision is whether a source or community is important enough to monitor, investigate, or include in a broader impact assessment.
 
 ## Task 2: Inspect the selected source data point
 
@@ -42,7 +42,7 @@ Perform the following set of steps to inspect the selected source and compare di
 
 This is the data point to focus on during the demo: **@stability_risk** is the selected source, and the visible manufacturer relationships connect the source to organizations such as CitrateSource Pharma, ElectrolyteWorks Clinical, GreenLab Reagents, and PurePAC Clinical.
 
-**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
+**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before relying on specific sample values.
 
 ## Task 3: Run Community Hub Detection
 
@@ -57,7 +57,7 @@ Perform the following set of steps to run **Community Hub Detection** and identi
 
 Focus on the result count and the first hub. In the current demo dataset, the query returns **20** rows and identifies **@import_alerts** as a high-degree hub with **15** graph connections, **6** edge types, and an average relationship strength of about **0.610**.
 
-**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
+The operational takeaway is that the organization can prioritize a source based on connected influence, not only on one visible message. The governed follow-up may be source monitoring, manufacturer outreach, or a broader exposure check in the next scenes.
 
 This result is useful because it shows a graph-based decision signal: the most important source is not defined by one message alone, but by how many meaningful relationship paths it can activate across the network.
 
@@ -65,4 +65,4 @@ This result is useful because it shows a graph-based decision signal: the most i
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-29
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-04
