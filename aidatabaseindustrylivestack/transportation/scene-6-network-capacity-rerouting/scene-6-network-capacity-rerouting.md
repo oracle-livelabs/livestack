@@ -6,7 +6,7 @@
 
 Transportation capacity decisions depend on geography. A planner needs to know which terminal is close enough, whether a service zone covers the affected customer, which lanes are under pressure, and whether a terminal has enough available capacity. These questions are difficult when maps, capacity tables, and demand forecasts live in separate systems.
 
-Oracle AI Database helps by keeping spatial geometry, terminal capacity, shipment routes, demand forecasts, and operational tables together. In this scene, users can toggle spatial layers, inspect terminal load, and investigate capacity alerts without leaving the application.
+Oracle AI Database helps by keeping spatial geometry, terminal capacity, shipment routes, demand forecasts, and operational tables together. In this scene, users can toggle spatial layers, isolate a single shipment route, inspect terminal load, and investigate capacity alerts without leaving the application.
 
 Estimated Time: 10 minutes
 
@@ -30,9 +30,9 @@ Use the map layers to show that terminal routing decisions can combine coverage,
 
 1. Turn on **Logistics Terminals**.
 2. Turn on **Service Zones** and compare coverage areas.
-3. Turn on **Shipment Routes**.
+3. Turn on **Shipment Routes**. Use the **Shipment Route** selector in the map layer panel to isolate one route when overlapping lines make the full route set hard to read.
 4. Turn on **Shipper Density Grid** and **Transport Demand Regions**.
-5. Hover over or click a map item to inspect the operational details.
+5. Hover over or click a map item to inspect the operational details, including carrier, order, origin terminal, destination, distance, and status for a focused route.
 
 ## Task 3: Inspect terminal capacity rows
 
@@ -58,4 +58,4 @@ You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-29
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-09

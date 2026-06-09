@@ -6,7 +6,7 @@
 
 Transportation teams need to act before service risk becomes visible in missed pickups, terminal backlogs, or customer escalations. That is difficult when predictive models, operational orders, signal feeds, and capacity data are separated across tools.
 
-Oracle AI Database helps by keeping model scoring, SQL analytics, vector features, forecasts, and operational data together. In this scene, the user can move between predictive tabs and show how model output becomes a planning decision.
+Oracle AI Database helps by keeping model scoring, SQL analytics, similarity features, forecasts, and operational data together. In this scene, the user can move between predictive tabs and show how model output becomes a planning decision.
 
 Estimated Time: 10 minutes
 
@@ -31,8 +31,9 @@ Demand Surge shows which services are likely to experience elevated demand. In t
 
 1. Click **Demand Surge**.
 2. Review the predicted shipment request chart.
-3. Review the top service rows, confidence, signal label, and freight value at risk.
-4. Change the scoring window if you want to compare time horizons.
+3. Review **Top request reasons** below the chart so the drivers are visible without relying on hover actions.
+4. Review the top service rows, confidence, signal label, and freight value at risk.
+5. Change the scoring window if you want to compare time horizons.
 
 ## Task 3: Filter Shipper Health
 
@@ -59,11 +60,11 @@ The forecast tab shows freight value trend and confidence bands so operators can
 
 ![Service cluster controls, metrics, and cluster assignments highlighted](images/service-clusters-action.png)
 
-Service clusters group transportation services by similarity so operators can reason about related services and risk cohorts.
+Service clusters group transportation services by similarity so operators can reason about related services and risk cohorts. The visible cards now use business-facing labels such as **Services Compared**, **Similarity Basis**, and **Operational Use**; detailed embedding and distance-metric proof remains in Oracle Internals and SQL evidence.
 
 1. Click **Service Clusters**.
 2. Change the K value.
-3. Review cluster distribution, top category, centroid service, and similarity percentages.
+3. Review cluster distribution, top category, centroid service, similarity percentages, and the business-facing cluster summary cards.
 
 ## Task 6: Review Capacity Intelligence
 
@@ -80,4 +81,4 @@ You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-29
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-09
