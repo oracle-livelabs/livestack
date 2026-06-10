@@ -62,5 +62,4 @@ You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-02
-- **Screenshot source** - Captured from `http://143.47.191.163:8505/`.
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-09

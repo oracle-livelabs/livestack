@@ -44,12 +44,13 @@ This workflow helps keep custom demos repeatable. The template sets the expected
 
 ## Task 3: Preview or restore the seeded dataset
 
-1. In **Restore Manufacturing Demo Data**, click **Preview Restore**.
-2. Review the row counts, warnings, or issues returned by the preview.
-3. If you need to return the demo to the seeded baseline, click **Restore Manufacturing Demo Data** after the preview enables the action.
-4. Close the dataset manager when finished.
+1. In **Restore Demo Data**, review the **Preview Restore** and **Restore Demo Data** controls.
+2. Click **Preview Restore** when you are ready to validate the seeded dataset before resetting the demo.
+3. When the preview response completes, review row counts, warnings, or issues returned by the validation.
+4. If you need to return the demo to the seeded baseline, click **Restore Demo Data** after validating the restore path.
+5. Close the dataset manager when finished.
 
-    ![Preview Restore, Restore Manufacturing Demo Data, and validation result highlighted](images/preview-restore-seeded-dataset.png)
+    ![Preview Restore and Restore Demo Data controls highlighted](images/preview-restore-seeded-dataset.png)
 
 Use this scene to explain the operating guardrail. Teams can bring their own synthetic manufacturing data into the LiveStack, but the seeded dataset remains available so the demo can always return to a known baseline.
 
@@ -57,5 +58,4 @@ You can move to the download lab when you want to run the Manufacturing LiveStac
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-02
-- **Screenshot source** - Captured from `http://143.47.191.163:8505/`.
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-09

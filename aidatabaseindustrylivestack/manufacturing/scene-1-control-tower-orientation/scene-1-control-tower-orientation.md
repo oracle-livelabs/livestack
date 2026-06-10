@@ -1,4 +1,4 @@
-# Scene 1 Welcome and Demo Orientation
+# Scene 1 Manufacturing Control Tower Orientation
 
 ## Introduction
 
@@ -52,5 +52,4 @@ Use this transition to explain that the welcome page is the orientation layer. T
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-02
-- **Screenshot source** - Captured from `http://143.47.191.163:8505/`.
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-09

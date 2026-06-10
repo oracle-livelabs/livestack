@@ -17,7 +17,7 @@ Estimated Time: 10 minutes
 In this scene, you will:
 - Review the **Plant Capacity and Routing Map** as a geographic operating view.
 - Interpret the active plant, available capacity, pending work order, and capacity alert cards.
-- Toggle map layers for customer risk, plants, routes, coverage zones, density, and demand regions.
+- Toggle map layers for customer commitment risk, plants and production lines, work-order routes, maintenance and capacity zones, account density, and capacity planning regions.
 - Compare map evidence with the plant table.
 - Explain how Oracle Spatial supports location-aware manufacturing decisions.
 
@@ -35,12 +35,12 @@ Use this opening view to explain the manufacturing problem. The AX-400 recovery 
 ## Task 2: Toggle spatial layers
 
 1. Review the map and its layer controls.
-2. Toggle **Customer Risk Tiers**.
-3. Toggle **Plants** and **Work Order Routes**.
-4. Toggle **Coverage Zones**, **H3 Density Grid**, and **Production Demand Regions**.
+2. Toggle **Customer Commitment Risk**.
+3. Toggle **Plants & Production Lines** and **Work Order Production Routes**.
+4. Toggle **Maintenance & Capacity Zones**, **Customer Account Density**, and **Capacity Planning Regions**.
 5. Review how the map changes as layers are added or removed.
 
-    ![Plant capacity map layers with active spatial overlays highlighted](images/plant-capacity-map-layers.png)
+    ![Plant capacity map layers with customer commitment risk, production lines, routes, density, and capacity planning overlays highlighted](images/plant-capacity-map-layers.png)
 
 The layer controls make the same map useful for different questions. A plant manager may start with plant locations and coverage zones. A supply chain analyst may focus on work-order routes. A capacity planner may compare demand regions and density with available production capacity.
 
@@ -59,5 +59,4 @@ You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-02
-- **Screenshot source** - Captured from `http://143.47.191.163:8505/`.
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-09

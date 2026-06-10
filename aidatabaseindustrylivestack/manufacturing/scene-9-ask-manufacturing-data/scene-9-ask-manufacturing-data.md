@@ -28,9 +28,9 @@ In this scene, you will:
 
 1. Click **Ask Manufacturing Data** in the sidebar.
 2. Review the runtime profile in the top right of the assistant card. The current demo uses **llama3.2** through the local Ollama runtime.
-3. Review the queryable schema summary. The current page shows **8** domains and **26** queryable objects.
+3. Review the queryable schema summary. The current page shows **8** domains and **23** queryable objects.
 4. Click **Explain**.
-5. Click **Ask** on the **Production Risk Graph** question: **Which production-risk graph findings have the highest risk score?**
+5. Click **Explain** on the **Production Risk Graph** question: **Which production-risk graph findings have the highest risk score?**
 
     ![Explain mode response for the manufacturing production-risk graph question](images/ask-manufacturing-data-explain-mode.png)
 
@@ -40,7 +40,7 @@ Expected result: The assistant returns a narrated answer and key findings withou
 
 1. Click **Clear** if the Explain result is still visible.
 2. Click **Chat**.
-3. Click **Ask** on the same **Production Risk Graph** question.
+3. Click **Chat** on the same **Production Risk Graph** question.
 
     ![Chat mode response for the manufacturing production-risk graph question](images/ask-manufacturing-data-chat-mode.png)
 
@@ -50,7 +50,7 @@ Expected result: The assistant returns a conversational response and follow-up p
 
 1. Click **Clear** if the Chat result is still visible.
 2. Click **Show SQL**.
-3. Click **Ask** on the same **Production Risk Graph** question.
+3. Click **Show SQL** on the same **Production Risk Graph** question.
 
     ![Generated SQL for the manufacturing production-risk graph question](images/ask-manufacturing-data-generated-sql.png)
 
@@ -64,7 +64,7 @@ Use this mode when the user, data steward, or technical reviewer wants to verify
 
 1. Click **Clear** if the generated SQL result is still visible.
 2. Click **Run SQL**.
-3. Click **Ask** on the same **Production Risk Graph** question.
+3. Click **Run SQL** on the same **Production Risk Graph** question.
 
     ![Run SQL results for the manufacturing production-risk graph question](images/ask-manufacturing-data-run-sql-results.png)
 
@@ -88,5 +88,4 @@ You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-02
-- **Screenshot source** - Captured from `http://143.47.191.163:8505/`.
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-09
