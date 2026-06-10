@@ -32,7 +32,7 @@ This LiveStack Demo assumes you have:
 
 ## Demo Flow
 
-- Scene 1: Welcome and Demo Orientation.
+- Scene 1: Manufacturing Control Tower Orientation.
 - Scene 2: Manufacturing Data Foundation.
 - Scene 3: Operations Command Center.
 - Scene 4: Production Signal Monitor.
@@ -57,5 +57,4 @@ This LiveStack Demo assumes you have:
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-02
-- **Screenshot source** - Captured from `http://143.47.191.163:8505/`.
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-09
