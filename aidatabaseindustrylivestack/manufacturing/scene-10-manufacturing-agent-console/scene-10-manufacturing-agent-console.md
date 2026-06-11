@@ -54,11 +54,11 @@ This is the data point to emphasize during the demo. The agent did more than ans
 
     ![Recent Agent Actions audit trail after the manufacturing capacity agent request](images/agent-action-audit-trail.png)
 
-2. Review the newest action row.
-3. Confirm that the row shows a **chat query** routed to the plant-capacity-oriented agent path.
-4. Review the confidence value.
+2. Review the panel as the audit surface for completed action-cycle records.
+3. If action rows are present, confirm the action type, routed agent path, execution status, and confidence value.
+4. If the panel is empty after a chat-only response, explain that the answer still exposes runtime and tool badges in the chat result, while action-cycle records appear when the application writes them to the event history.
 
-In the current demo dataset, the completed chat action is logged with **90%** confidence. This is the governance point of the scene: agent decisions should be observable after the conversation. The page shows that interactions are not just transient chat messages; they are written into the action history.
+This is the governance point of the scene: agent decisions should be observable after the conversation or action cycle. The page separates the live chat response from the durable action history so operators can distinguish immediate assistance from recorded operational actions.
 
 The value of Oracle AI Database is that the agent workflow stays connected to governed operational data. The AI runtime can reason and orchestrate, while Oracle remains responsible for data access, SQL and PL/SQL execution, spatial and operational calculations, and durable audit records.
 
@@ -66,5 +66,4 @@ You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-02
-- **Screenshot source** - Captured from `http://143.47.191.163:8505/`.
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-09
