@@ -224,15 +224,16 @@ ORDER BY sku
 FETCH FIRST 10 ROWS ONLY;
 ```
 
-## Task 14: Connect the pipeline to the business outcome
+## Conclusion: Business Outcome
 
-1. Explain that Bronze preserved the product master source file exactly as it arrived.
-2. Explain that the Data Transforms flow turns that raw source into a Silver product table with standardized product IDs, cleaned attributes, deduplicated SKUs, and deleted records removed.
-3. Connect the downstream outcome: the Gold layer and application scenes can now use a consistent product foundation for webshop search, semantic product discovery, inventory joins, fulfillment views, dashboards, predictions, and AI agents.
-4. Reinforce the architecture pattern: Process is where PeakGear turns raw ingest into trusted reusable data products.
+The Data Processing and Pipelines scene shows why the Process stage is the core of the AI Lakehouse. Bronze preserved the product master source file exactly as it arrived, but raw source data is not reliable enough for every dashboard, app, and agent to interpret independently.
+
+The Data Transforms flow turns that raw source into a Silver product table with standardized product IDs, cleaned attributes, deduplicated SKUs, and deleted records removed. From there, Gold data products can serve a consistent product foundation to webshop search, semantic product discovery, inventory joins, fulfillment views, dashboards, predictions, and AI agents.
+
+For PeakGear, this means the business can reuse trusted product data instead of rebuilding cleanup logic in every downstream tool. The Process stage turns raw ingest into governed data products that make later Serve Data and Serve AI outcomes more efficient, consistent, and defensible.
 
 You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-11
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-12

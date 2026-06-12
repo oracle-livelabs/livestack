@@ -1,4 +1,4 @@
-# Scene 10 Ask Data and Retail Agents
+# Scene 14 Ask Data and Retail Agents
 
 ## Introduction
 
@@ -40,4 +40,4 @@ You have completed the PeakGear AI Lakehouse LiveStack Demo runbook.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-05
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-12

@@ -10,7 +10,7 @@ Without a single governed platform, teams face slow decisions, stockouts, duplic
 
 By the end of this LiveStack Demo, you will understand how Oracle's AI Lakehouse architecture combines streaming data, vector search, graph analytics, spatial intelligence, machine learning, and AI agents into a single governed platform that helps retailers sense demand faster, optimize operations, and make decisions using live business data.
 
-Estimated Demo Time: **100 minutes**
+Estimated Demo Time: **130 minutes**
 
 Each scene is designed to take between **5 and 10 minutes**.
 
@@ -43,7 +43,7 @@ The flow starts with source data such as product master data, orders, customer r
 
 The core AI Lakehouse process is the medallion flow from **Bronze** to **Silver** to **Gold**. Bronze preserves raw, source-shaped data. Silver standardizes, deduplicates, validates, and enriches that data. Gold publishes curated data products that are ready for applications, analytics, machine learning, and AI.
 
-The business outcomes in the later scenes come from those curated products. Serve Data demonstrates dashboards, catalog views, demand sensing, graph-based return analysis, spatial fulfillment, order flow, and predictions. Serve AI demonstrates semantic product discovery, natural-language data access, and retail agents grounded in governed operational data.
+The business outcomes in the later scenes come from those curated products. Serve Data demonstrates dashboards, catalog views, demand sensing, graph-based return analysis, spatial fulfillment, and order flow. Serve AI demonstrates predictions, retrieval-augmented generation, semantic product discovery, natural-language data access, and retail agents grounded in governed operational data.
 
 ## Demo Flow
 
@@ -53,11 +53,14 @@ The business outcomes in the later scenes come from those curated products. Serv
 - **Scene 4:** Batch and File Loading Ingest.
 - **Scene 5:** Data Processing and Pipelines.
 - **Scene 6:** Operations Dashboard.
-- **Scene 7:** PeakGear Webshop and Product Discovery.
+- **Scene 7:** Product Catalog.
 - **Scene 8:** Retail Demand Sensing.
 - **Scene 9:** Returns Risk Network.
-- **Scene 10:** Fulfillment, Orders, and Predictions.
-- **Scene 11:** Ask Data and Retail Agents.
+- **Scene 10:** Store Fulfillment Map.
+- **Scene 11:** Orders and Fulfillment Flow.
+- **Scene 12:** Demand, Revenue, and Inventory Predictions.
+- **Scene 13:** PeakGear Webshop and Product Discovery.
+- **Scene 14:** Ask Data and Retail Agents.
 
 ## Learn More
 
@@ -70,4 +73,4 @@ The business outcomes in the later scenes come from those curated products. Serv
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-05
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-12

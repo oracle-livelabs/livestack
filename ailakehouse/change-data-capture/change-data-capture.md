@@ -93,11 +93,17 @@ In the pipeline details page, the **Runtime** view shows the running Extract and
 2. Review the **PG.BRONZE\_NETSUITE\_CUSTOMERS** Bronze mirror.
 3. Confirm that the inserted customer appears in both the source table and the Bronze mirror.
 4. Confirm that the source and Bronze row counts increased together. The screenshot shows one completed run where both counts moved to **26** after the insert; your count can differ if the demo has been reset or replayed.
-5. Explain the business outcome: customer changes from an operational system are now available in the AI Lakehouse without waiting for a batch cycle.
-6. Explain the lakehouse outcome: Bronze keeps the source-shaped customer change, while later Silver and Gold processing can standardize and enrich it for dashboards, webshop personalization, customer analytics, predictions, and AI agents.
+
+## Conclusion: Business Outcome
+
+Change data capture helps PeakGear keep operational customer context current. When a customer record changes in the NetSuite-style source system, GoldenGate mirrors that change into the AI Lakehouse Bronze layer without waiting for a batch cycle.
+
+That current customer data can then move through the medallion process. Bronze preserves the source-shaped change, Silver can standardize and validate it, and Gold can serve trusted customer context to dashboards, webshop personalization, customer analytics, predictions, and AI agents.
+
+For PeakGear, this reduces the gap between what happened in the operational system and what the business can act on. Teams can make decisions from current customer data instead of reconciling stale extracts across disconnected tools.
 
 You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-11
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-12

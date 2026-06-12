@@ -65,11 +65,18 @@ In this scene, you will:
 1. Review **Recent Demand Signals**.
 2. Point out that each **LIVE-** event came from the generator, moved through Kafka, was processed by GoldenGate Stream Analytics, and landed in **PG.BRONZE\_DEMAND\_SIGNALS**.
 3. Explain that Bronze is intentionally raw. The next processing stage can clean, validate, deduplicate, enrich, and match products before Silver and Gold outputs are created.
-4. Connect the business outcome: these streamed demand signals later support product demand dashboards, fulfillment planning, demand prediction, and AI agents that respond using current business data.
-5. Use **Clear Live Rows** only when you need to reset this scene for a clean replay.
+4. Use **Clear Live Rows** only when you need to reset this scene for a clean replay.
+
+## Conclusion: Business Outcome
+
+Real-time streaming gives PeakGear earlier awareness of demand changes. Instead of waiting for delayed reports, planners and operations teams can see live demand signals land in the Bronze layer as they happen.
+
+The value is not only the stream itself. The stream becomes part of the AI Lakehouse medallion process: Bronze preserves the source-shaped event, Silver can standardize and enrich it, and Gold can serve demand-aware data products to dashboards, fulfillment planning, predictions, and AI agents.
+
+For PeakGear, this means the business can detect product demand sooner, react before inventory pressure becomes a customer problem, and ground downstream operational decisions in live governed data.
 
 You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-05
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-12

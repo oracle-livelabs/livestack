@@ -35,8 +35,8 @@
       "filename": "../../operations-dashboard/operations-dashboard.md"
     },
     {
-      "title": "Scene 7: PeakGear Webshop and Product Discovery",
-      "filename": "../../peakgear-webshop-and-product-discovery/peakgear-webshop-and-product-discovery.md"
+      "title": "Scene 7: Product Catalog",
+      "filename": "../../product-catalog/product-catalog.md"
     },
     {
       "title": "Scene 8: Retail Demand Sensing",
@@ -47,11 +47,23 @@
       "filename": "../../returns-risk-network/returns-risk-network.md"
     },
     {
-      "title": "Scene 10: Fulfillment, Orders, and Predictions",
-      "filename": "../../fulfillment-orders-and-predictions/fulfillment-orders-and-predictions.md"
+      "title": "Scene 10: Store Fulfillment Map",
+      "filename": "../../store-fulfillment-map/store-fulfillment-map.md"
     },
     {
-      "title": "Scene 11: Ask Data and Retail Agents",
+      "title": "Scene 11: Orders and Fulfillment Flow",
+      "filename": "../../orders-and-fulfillment-flow/orders-and-fulfillment-flow.md"
+    },
+    {
+      "title": "Scene 12: Demand, Revenue, and Inventory Predictions",
+      "filename": "../../demand-revenue-and-inventory-predictions/demand-revenue-and-inventory-predictions.md"
+    },
+    {
+      "title": "Scene 13: PeakGear Webshop and Product Discovery",
+      "filename": "../../peakgear-webshop-and-product-discovery/peakgear-webshop-and-product-discovery.md"
+    },
+    {
+      "title": "Scene 14: Ask Data and Retail Agents",
       "filename": "../../ask-data-and-retail-agents/ask-data-and-retail-agents.md"
     },
     {
