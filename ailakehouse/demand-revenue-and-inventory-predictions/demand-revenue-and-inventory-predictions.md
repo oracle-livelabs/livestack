@@ -1,4 +1,4 @@
-# Scene 12 Demand, Revenue, and Inventory Predictions
+# Scene 13 Demand, Revenue, and Inventory Predictions
 
 ## Introduction
 

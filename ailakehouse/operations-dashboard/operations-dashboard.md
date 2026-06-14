@@ -1,4 +1,4 @@
-# Scene 6 Operations Dashboard
+# Scene 7 Operations Dashboard
 
 ## Introduction
 

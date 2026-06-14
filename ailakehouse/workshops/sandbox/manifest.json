@@ -4,7 +4,7 @@
   "tutorials": [
     {
       "title": "Get Started",
-      "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
+      "filename": "../../getstarted/getstarted.md"
     },
     {
       "title": "Introduction",
@@ -15,56 +15,64 @@
       "filename": "../../livestack-configuration/livestack-configuration.md"
     },
     {
-      "title": "Scene 2: Real-Time Streaming Ingest",
+      "title": "Scene 2: Data Catalog and AI Table Explain",
+      "filename": "../../data-catalog/data-catalog.md"
+    },
+    {
+      "title": "Scene 3: Real-Time Streaming Ingest",
       "filename": "../../ingest-real-time-and-batch-data/ingest-real-time-and-batch-data.md"
     },
     {
-      "title": "Scene 3: Change Data Capture Ingest",
+      "title": "Scene 4: Change Data Capture Ingest",
       "filename": "../../change-data-capture/change-data-capture.md"
     },
     {
-      "title": "Scene 4: Batch and File Loading Ingest",
+      "title": "Scene 5: Batch and File Loading Ingest",
       "filename": "../../batch-and-file-loading/batch-and-file-loading.md"
     },
     {
-      "title": "Scene 5: Data Processing and Pipelines",
+      "title": "Scene 6: Data Processing and Pipelines",
       "filename": "../../process-bronze-to-silver/process-bronze-to-silver.md"
     },
     {
-      "title": "Scene 6: Operations Dashboard",
+      "title": "Scene 7: Operations Dashboard",
       "filename": "../../operations-dashboard/operations-dashboard.md"
     },
     {
-      "title": "Scene 7: Product Catalog",
+      "title": "Scene 8: Product Catalog",
       "filename": "../../product-catalog/product-catalog.md"
     },
     {
-      "title": "Scene 8: Retail Demand Sensing",
+      "title": "Scene 9: Retail Demand Sensing",
       "filename": "../../retail-demand-sensing/retail-demand-sensing.md"
     },
     {
-      "title": "Scene 9: Returns Risk Network",
+      "title": "Scene 10: Returns Risk Network",
       "filename": "../../returns-risk-network/returns-risk-network.md"
     },
     {
-      "title": "Scene 10: Store Fulfillment Map",
+      "title": "Scene 11: Store Fulfillment Map",
       "filename": "../../store-fulfillment-map/store-fulfillment-map.md"
     },
     {
-      "title": "Scene 11: Orders and Fulfillment Flow",
+      "title": "Scene 12: Orders and Fulfillment Flow",
       "filename": "../../orders-and-fulfillment-flow/orders-and-fulfillment-flow.md"
     },
     {
-      "title": "Scene 12: Demand, Revenue, and Inventory Predictions",
+      "title": "Scene 13: Demand, Revenue, and Inventory Predictions",
       "filename": "../../demand-revenue-and-inventory-predictions/demand-revenue-and-inventory-predictions.md"
     },
     {
-      "title": "Scene 13: PeakGear Webshop and Product Discovery",
+      "title": "Scene 14: PeakGear Webshop and Product Discovery",
       "filename": "../../peakgear-webshop-and-product-discovery/peakgear-webshop-and-product-discovery.md"
     },
     {
-      "title": "Scene 14: Ask Data and Retail Agents",
-      "filename": "../../ask-data-and-retail-agents/ask-data-and-retail-agents.md"
+      "title": "Scene 15: Ask Your Data",
+      "filename": "../../ask-your-data/ask-your-data.md"
+    },
+    {
+      "title": "Scene 16: Retail Operations Agents",
+      "filename": "../../retail-operations-agents/retail-operations-agents.md"
     },
     {
       "title": "Need Help?",

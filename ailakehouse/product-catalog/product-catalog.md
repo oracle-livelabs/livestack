@@ -1,4 +1,4 @@
-# Scene 7 Product Catalog
+# Scene 8 Product Catalog
 
 ## Introduction
 
