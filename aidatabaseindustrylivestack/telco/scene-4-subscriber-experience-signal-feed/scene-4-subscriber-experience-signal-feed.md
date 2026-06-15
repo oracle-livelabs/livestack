@@ -2,7 +2,7 @@
 
 ## Introduction
 
-**Subscriber Experience Signal Feed** helps care and network teams understand what subscribers are reporting before the issue is fully visible in traditional network KPIs. The page connects care chats, app feedback, outage reports, call-center notes, NPS comments, community posts, and field observations to services, regions, and emerging demand pressure quickly enough to act.
+**Subscriber Experience Signal Feed** helps care and network teams understand what subscribers are reporting before the issue is fully visible in traditional network KPIs. The page connects care chats, app feedback, outage reports, call-center notes, NPS comments, community posts, and field observations to services, regions, and emerging service-impact pressure quickly enough to act.
 
 Secure semantic search is difficult to implement when service data, subscriber conversations, embeddings, search indexes, and security policies live in separate systems. Telecom teams often have to move sensitive text into external AI services, synchronize vector indexes, duplicate service catalogs, and then rebuild access control outside the database.
 
@@ -28,6 +28,7 @@ Review the **Subscriber Signals** page to see how subscriber language from care,
 2. Review **Mobile Service Signal Search** at the top of the page. This section searches the telecom service catalog by meaning, not only by exact keywords.
 3. Review **Subscriber Experience Signal Feed** below it. This section searches and filters subscriber signals across operational signal sources such as mobile app feedback, care chat, call-center notes, outage portal, and community forum.
 4. Review the filters for **All Signal Severity**, **All Signal Sources**, and **All Signal Owners**.
+5. Review the operational context fields on the signal cards: impact category, affected service, suspected domain, ticket linkage, escalation state, and operational owner.
 
 ## Task 2: Search telecom service intent
 
@@ -53,9 +54,9 @@ Review high-priority subscriber signals to identify the subscriber pain, affecte
 
 ![High-priority subscriber signal card](images/high-priority-signal-card.png)
 
-In this example, the guide mentions values such as **5,000 subscriber signals**, a signal urgency of *97.9*, and **3M** affected reach.
+In this example, the guide mentions values such as **5,000 subscriber signals**, a signal urgency of *97.9*, and **3M** affected reach. The important pattern is that each card should read as an operational signal with linked service, suspected domain, ticket state, escalation state, and owner context.
 
-**Note:** These are sample values from the current demo dataset and may change after a refresh, seed update, or custom dataset import. Treat these numbers as an example of the current operating pattern. Verify the live values in the UI before presenting, then explain the business takeaway: what demand, subscriber impact, capacity, revenue, dispatch, or risk pattern the values reveal.
+**Note:** These are sample values from the current demo dataset and may change after a refresh, seed update, or custom dataset import. Treat these numbers as an example of the current operating pattern. Review the live values in the UI and connect them to the operational pattern: subscriber impact, capacity exposure, SLA risk, revenue exposure, dispatch load, or restoration status.
 
 **Important:** This page is not a social-media wall. It is an operational signal feed that helps service assurance teams detect urgent subscriber pain before it becomes churn.
 

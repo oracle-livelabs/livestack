@@ -1,32 +1,32 @@
-# Seer Comms Telecom Operations Intelligence LiveStack Guide
+# Seer Telecom Service Assurance LiveStack Guide
 
 ## Introduction
 
-Communications service providers need to keep subscribers connected while demand pressure, care signals, field capacity, service orders, and churn risk change quickly. The Seer Comms LiveStack shows how those signals can come together so network, care, field, and retention teams can spot service pressure earlier, understand the evidence behind it, and act with more confidence.
+Communications service providers need to keep subscribers connected while network alarms, subscriber signals, field capacity, service orders, SLA exposure, churn risk, and revenue impact change quickly. The Seer Telecom LiveStack shows how those signals can come together so service assurance, care, field, network operations, and retention teams can spot subscriber-impacting issues earlier, understand the evidence behind them, and coordinate the next action.
 
-This runbook supports the Seer Comms Telecom Operations Intelligence LiveStack Demo. The demo shows how Oracle AI Database 26ai helps communications service providers bring service orders, JSON documents, graph relationships, spatial context, vector search, machine learning, natural-language SQL, and AI-assisted action logging together on one governed data foundation.
+This runbook supports the Seer Telecom Service Assurance LiveStack Demo. The demo shows how Oracle AI Database 26ai helps communications service providers bring service orders, JSON documents, graph relationships, spatial context, vector search, machine learning, natural-language SQL, and AI-assisted action logging together on one governed data foundation. It is not positioned as a replacement for a full NOC, OSS, or trouble-ticketing platform; it demonstrates the data foundation and application patterns that connect those systems for service-assurance decisions.
 
-The demo follows a **South Florida 5G** mobile demand surge. Subscriber signals appear first. Graph and spatial views show who and what is affected. Service orders and field dispatches show the operational response. Predictive models quantify churn and revenue exposure, and AI-assisted workflows recommend governed next actions.
+The demo follows a **South Florida 5G** subscriber-impact scenario. Subscriber signals and congestion indicators appear first. Graph and spatial views show who and what is affected. Service orders and field dispatches show the operational response. Predictive models quantify service-impact risk, churn exposure, revenue exposure, and SLA pressure, and AI-assisted workflows recommend governed next actions.
 
 Estimated Demo Time: **90 minutes**
 
 Each scene is designed to take between **5 and 10 minutes**.
 
-![Seer Comms welcome page](images/welcome-and-demo-orientation.png)
+![Seer Telecom welcome page](images/welcome-and-demo-orientation.png)
 
 ### Objectives
 
-In this LiveStack demo, you will see how connected telecom data can help teams detect demand pressure, prioritize subscriber signals, investigate network impact, coordinate field capacity, manage service orders, use predictive assurance, and apply AI with stronger governance.
+In this LiveStack demo, you will see how connected telecom data can help teams detect service-assurance risk, prioritize subscriber signals, investigate network impact, coordinate field capacity, manage service orders, use predictive assurance, and apply AI with stronger governance.
 
 ### Prerequisites
 
-Before you begin, confirm that you can open the running Seer Comms Telecom Operations Intelligence LiveStack in a modern browser. No coding or database administration knowledge is required for the guided demo scenes.
+Before you begin, confirm that you can open the running Seer Telecom Service Assurance LiveStack in a modern browser. No coding or database administration knowledge is required for the guided demo scenes.
 
 ## Demo Flow
 
 - Scene 1: Welcome and Demo Orientation.
 - Scene 2: Data Foundation.
-- Scene 3: Network Experience Operations Center.
+- Scene 3: Telecom Service Assurance Dashboard.
 - Scene 4: Subscriber Experience Signal Feed.
 - Scene 5: Subscriber and Network Impact Graph.
 - Scene 6: Network Access and Field Operations.
