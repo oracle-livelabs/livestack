@@ -33,7 +33,7 @@ Review the service-order workspace to establish the operational context: who the
 
 In the current demo dataset, service order **#52968** is for **Lisa Hernandez** in **Chicago, Illinois**. It is marked **Completed**, contains **3** line items, totals **$2,065**, and is fulfilled by **Dallas 5G Dispatch Center**. This service order will be the data point used through the rest of the scene.
 
-**Note:** These are sample values from the current demo dataset and may change after a refresh, seed update, or custom dataset import. Treat these numbers as an example of the current operating pattern. Verify the live values in the UI before presenting, then explain the business takeaway: what demand, subscriber impact, capacity, revenue, dispatch, or risk pattern the values reveal.
+**Note:** These are sample values from the current demo dataset and may change after a refresh, seed update, or custom dataset import. Treat these numbers as an example of the current operating pattern. Review the live values in the UI and connect them to the operational pattern: subscriber impact, capacity exposure, SLA risk, revenue exposure, dispatch load, or restoration status.
 
 ## Task 2: Inspect the relational service-order detail
 
@@ -76,7 +76,7 @@ The business value is that teams can make the decision from connected, governed 
 
 For order **#52968**, the page connects **Dallas 5G Dispatch Center** to **Lisa Hernandez** in Chicago. The operational detail includes a spatial distance of about **817 miles** and a dispatch cost of **$22.20**. This connects the service-order record to field visibility, not just API payloads or order totals.
 
-**Note:** These are sample values from the current demo dataset and may change after a refresh, seed update, or custom dataset import. Treat these numbers as an example of the current operating pattern. Verify the live values in the UI before presenting, then explain the business takeaway: what demand, subscriber impact, capacity, revenue, dispatch, or risk pattern the values reveal.
+**Note:** These are sample values from the current demo dataset and may change after a refresh, seed update, or custom dataset import. Treat these numbers as an example of the current operating pattern. Review the live values in the UI and connect them to the operational pattern: subscriber impact, capacity exposure, SLA risk, revenue exposure, dispatch load, or restoration status.
 
 
 You can move to the next scene.

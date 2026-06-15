@@ -11,7 +11,7 @@ Telecom teams struggle when the information needed for one service-assurance dec
 Oracle AI Database helps address these challenges with property graph and SQL/PGQ on top of the same governed operational data. SQL/PGQ helps answer relationship questions, such as how an outage connects to subscribers, service lines, network sites, support cases, and crews.
 
 
-In this scene, the graph uses telecom impact entities and relationships to let users explore connected impact and run business-facing graph queries without moving the data into a separate graph-only platform.
+In this scene, the graph uses telecom impact entities and relationships to let users explore connected impact and run business-facing graph queries without moving the data into a separate graph-only platform. The detail panel also exposes network evidence so the graph reads like a service-assurance investigation, not just a relationship visualization.
 
 
 Estimated Time: **10 minutes**
@@ -32,9 +32,9 @@ Review the graph workspace to see how subscriber-impact relationships connect ou
 2. Review the search field, **Impact Radius** control, **Impact Entities** list, relationship legend, and graph canvas.
 3. Review the metric labels in the selected entity panel: **Affected Subscribers**, **Impact Risk**, **Experience Score**, and **Impact Radius**.
 
-In this example, the graph contains **36** telecom impact entities and **50** telecom graph relationships.The top entities include **Game-day 5G congestion spike**, **Fiber cut affecting enterprise corridor**, and trouble tickets such as **ATL-77109** and **NY-77831**.
+In this example, the graph contains **36** telecom impact entities and **50** telecom graph relationships. The top entities include **Game-day 5G congestion spike**, **Fiber cut affecting enterprise corridor**, and trouble tickets such as **ATL-77109** and **NY-77831**.
 
-**Note:** These are sample values from the current demo dataset and may change after a refresh, seed update, or custom dataset import. Treat these numbers as an example of the current operating pattern. Verify the live values in the UI before presenting, then explain the business takeaway: what demand, subscriber impact, capacity, revenue, dispatch, or risk pattern the values reveal.
+**Note:** These are sample values from the current demo dataset and may change after a refresh, seed update, or custom dataset import. Treat these numbers as an example of the current operating pattern. Review the live values in the UI and connect them to the operational pattern: subscriber impact, capacity exposure, SLA risk, revenue exposure, dispatch load, or restoration status.
 
 ## Task 2: Investigate a high-impact outage event
 
@@ -44,12 +44,12 @@ Investigate a high-impact outage event to show how teams can move from a named i
 
 1. Search for or select **Game-day 5G congestion spike**.
 2. Review the entity detail panel.
-3. Note the affected subscribers, impact risk, experience score, region, and connected relationships.
+3. Note the affected subscribers, impact risk, experience score, region, connected relationships, and network evidence.
 4. Click **Explore** if the graph is not already centered on that entity.
 
-In the current demo dataset, **Game-day 5G congestion spike** affects **31,200** subscribers, carries **96** impact risk, and has a low **35** experience score. That is the data point to emphasize: the graph lets the operator move from a named event to subscriber impact and connected operational dependencies.
+In the current demo dataset, **Game-day 5G congestion spike** affects **31,200** subscribers, carries **96** impact risk, and has a low **35** experience score. The network evidence panel adds service-assurance context such as cells and sectors, PRB utilization, RRC setup failures, handover failures, throughput, latency, packet loss, backhaul state, and restoration status. That is the data point to emphasize: the graph lets the operator move from a named event to subscriber impact, technical evidence, and connected operational dependencies.
 
-**Note:** These are sample values from the current demo dataset and may change after a refresh, seed update, or custom dataset import. Treat these numbers as an example of the current operating pattern. Verify the live values in the UI before presenting, then explain the business takeaway: what demand, subscriber impact, capacity, revenue, dispatch, or risk pattern the values reveal.
+**Note:** These are sample values from the current demo dataset and may change after a refresh, seed update, or custom dataset import. Treat these numbers as an example of the current operating pattern. Review the live values in the UI and connect them to the operational pattern: subscriber impact, capacity exposure, SLA risk, revenue exposure, dispatch load, or restoration status.
 
 ## Task 3: Run a SQL/PGQ impact query
 

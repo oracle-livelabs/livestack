@@ -2,11 +2,11 @@
 
 ## Introduction
 
-**Predictive Service Assurance** helps telecom teams decide which predictive signals should become action. The page brings together demand surge, retention segments, service revenue forecasts, service behavior clusters, and network access risk so teams can plan capacity, outreach, dispatch, and care response before pressure turns into churn.
+**Predictive Service Assurance** helps telecom teams decide which predictive signals should become action. The page brings together service-impact risk prediction, retention segments, service revenue forecasts, service behavior clusters, and network access risk so teams can plan capacity, outreach, dispatch, and care response before pressure turns into churn or SLA breach.
 
 Telecom teams struggle when the information needed for one service-assurance decision lives in separate OSS, BSS, care, NOC, field, and analytics tools. That separation slows action, increases reconciliation work, and makes it harder to trust the result.
 
-Oracle AI Database helps address these challenges by keeping machine learning close to governed telecom data. Oracle Machine Learning models can be trained, persisted, and scored in the database with `DBMS_DATA_MINING`, `PREDICTION()`, `PREDICTION_PROBABILITY()`, and `CLUSTER_ID()`. Demand surge prediction, retention segmentation, service revenue forecasting, service behavior clustering, and network access risk scoring can run from the same connected data foundation that powers the rest of the LiveStack Demo. The demand-surge model uses 13 telecom service features, including subscriber signals, service-order activity, service value, and a demand-pressure score.
+Oracle AI Database helps address these challenges by keeping machine learning close to governed telecom data. Oracle Machine Learning models can be trained, persisted, and scored in the database with `DBMS_DATA_MINING`, `PREDICTION()`, `PREDICTION_PROBABILITY()`, and `CLUSTER_ID()`. Service-impact risk prediction, retention segmentation, service revenue forecasting, service behavior clustering, and network access risk scoring can run from the same connected data foundation that powers the rest of the LiveStack Demo. The backend model name remains `DEMAND_SURGE_MODEL` for compatibility with the seed scripts, but the business interpretation in the demo is service-impact risk. The model uses 13 telecom service features, including subscriber signals, service-order activity, service value, and a service-pressure score.
 
 Estimated Time: **10 minutes**
 
@@ -20,30 +20,30 @@ In this scene, you will learn what telecom decision the page supports, what evid
 
 ![Predictive Service Assurance summary cards and mode tabs](images/predictive-summary-and-tabs.png)
 
-Review the predictive assurance workspace as a set of decision tools for demand surge, retention, revenue forecasting, service behavior grouping, and network access risk.
+Review the predictive assurance workspace as a set of decision tools for service-impact risk, retention, revenue forecasting, service behavior grouping, and network access risk.
 
 1. Click **Predictive Service Assurance** in the sidebar.
-2. Review the four summary cards at the top of the page: services with demand surge, subscribers segmented, revenue model R2, and active ML models.
-3. Review the mode tabs: **Demand Surge**, **Retention**, **Forecast**, **Service Clusters**, and **Access Risk**.
+2. Review the four summary cards at the top of the page: services with service-impact risk, subscribers segmented, revenue model R2, and active ML models.
+3. Review the mode tabs: **Service-Impact Risk**, **Retention**, **Forecast**, **Service Clusters**, and **Access Risk**.
 
 This page is a business-facing analytics surface, not a separate data science notebook. The predictions are shown next to the operational context needed to act on them.
 
-## Task 2: Inspect mobile demand surge prediction
+## Task 2: Inspect service-impact risk prediction
 
-![Mobile Demand Surge Prediction results](images/demand-surge-results.png)
+![Service-impact risk prediction results](images/demand-surge-results.png)
 
-Inspect mobile demand surge prediction to identify services where predicted demand may require capacity planning, field dispatch, care outreach, or retention action.
+Inspect service-impact risk prediction to identify services where predicted pressure may require capacity planning, field dispatch, care outreach, SLA management, or retention action.
 
-1. Stay on the **Demand Surge** tab.
+1. Stay on the **Service-Impact Risk** tab.
 2. Use the scoring window selector if you want to change the time window, then click **Refresh**.
 3. Review the bar chart and service table.
-4. Focus on a top surge row, such as **Device Upgrade Enrollment** or **Fixed Wireless Home Internet**.
+4. Focus on a top risk row, such as **Device Upgrade Enrollment** or **Fixed Wireless Home Internet**.
 
-In the current demo dataset, **Fixed Wireless Home Internet** shows **131** recent mentions, **290** recent service orders, **1,008** predicted demand, **90%** demand surge, and about **$70.6K** service revenue opportunity. The same table also shows services such as **Premium International Roaming Pass**, **Device Upgrade Enrollment**, and **Fleet Telematics SIM Pack**. 
+In the current demo dataset, **Fixed Wireless Home Internet** shows **131** recent mentions, **290** recent service orders, **1,008** predicted demand, **90%** service-impact probability, and about **$70.6K** service revenue opportunity. The same table also shows services such as **Premium International Roaming Pass**, **Device Upgrade Enrollment**, and **Fleet Telematics SIM Pack**. 
 
-This gives the service assurance user a concrete question to answer: should the provider add capacity, adjust field dispatch, prioritize outreach, or prepare care teams before demand pressure turns into churn?
+This gives the service assurance user a concrete question to answer: should the provider add capacity, adjust field dispatch, prioritize outreach, prepare care teams, or protect an SLA before service pressure turns into churn?
 
-**Note:** These are sample values from the current demo dataset and may change after a refresh, seed update, or custom dataset import. Treat these numbers as an example of the current operating pattern. Verify the live values in the UI before presenting, then explain the business takeaway: what demand, subscriber impact, capacity, revenue, dispatch, or risk pattern the values reveal.
+**Note:** These are sample values from the current demo dataset and may change after a refresh, seed update, or custom dataset import. Treat these numbers as an example of the current operating pattern. Review the live values in the UI and connect them to the operational pattern: subscriber impact, capacity exposure, SLA risk, revenue exposure, dispatch load, or restoration status.
 
 ## Task 3: Filter retention segments
 
@@ -60,7 +60,7 @@ Segmentation becomes operational when teams can turn subscriber groups into rete
 
 In the current demo dataset, the visible segment distribution includes **Lost (79)**, **Potential (59)**, **Promising (34)**, **New Customer (18)**, and **Loyal (10)**. Selecting a segment filters the subscriber list so the user can inspect the people behind that score, including spend, location, churn risk, and predicted lifetime value.
 
-**Note:** These are sample values from the current demo dataset and may change after a refresh, seed update, or custom dataset import. Treat these numbers as an example of the current operating pattern. Verify the live values in the UI before presenting, then explain the business takeaway: what demand, subscriber impact, capacity, revenue, dispatch, or risk pattern the values reveal.
+**Note:** These are sample values from the current demo dataset and may change after a refresh, seed update, or custom dataset import. Treat these numbers as an example of the current operating pattern. Review the live values in the UI and connect them to the operational pattern: subscriber impact, capacity exposure, SLA risk, revenue exposure, dispatch load, or restoration status.
 
 ## Task 4: Change the service revenue forecast horizon
 
@@ -77,7 +77,7 @@ A low model-quality score tells planners to treat the forecast as directional, n
 
 In the current demo dataset, the 14-day forecast view shows a low trend R2 of **0.01%**, a daily slope of about **+$9.63/day**, mean daily service revenue of about **$30.6K**, and **31** observations.
 
-**Note:** These are sample values from the current demo dataset and may change after a refresh, seed update, or custom dataset import. Treat these numbers as an example of the current operating pattern. Verify the live values in the UI before presenting, then explain the business takeaway: what demand, subscriber impact, capacity, revenue, dispatch, or risk pattern the values reveal.
+**Note:** These are sample values from the current demo dataset and may change after a refresh, seed update, or custom dataset import. Treat these numbers as an example of the current operating pattern. Review the live values in the UI and connect them to the operational pattern: subscriber impact, capacity exposure, SLA risk, revenue exposure, dispatch load, or restoration status.
 
 
 ## Task 5: Review service behavior clusters
@@ -95,18 +95,18 @@ This helps a telecom analyst understand how AI-assisted grouping can support ser
 
 In the current demo dataset, **K = 5** clusters group **32** telecom services. One visible cluster has **5G Unlimited Mobile Plan**, **Gigabit Fiber Install**, and **Premium International Roaming Pass** in the same behavior group.
 
-**Note:** These are sample values from the current demo dataset and may change after a refresh, seed update, or custom dataset import. Treat these numbers as an example of the current operating pattern. Verify the live values in the UI before presenting, then explain the business takeaway: what demand, subscriber impact, capacity, revenue, dispatch, or risk pattern the values reveal.
+**Note:** These are sample values from the current demo dataset and may change after a refresh, seed update, or custom dataset import. Treat these numbers as an example of the current operating pattern. Review the live values in the UI and connect them to the operational pattern: subscriber impact, capacity exposure, SLA risk, revenue exposure, dispatch load, or restoration status.
 
 
 ## Task 6: Review network access risk
 
-![Network Access Risk summary and capacity risks by demand surge probability](images/access-risk-results.png)
+![Network Access Risk summary and capacity risks by service-impact probability](images/access-risk-results.png)
 
 Review network access risk to connect predicted demand with site capacity, available units, capacity status, and revenue or churn exposure.
 
 1. Click **Access Risk**.
 2. Review the access-risk summary cards.
-3. Scroll to **Capacity Risks by Demand Surge Probability**.
+3. Scroll to **Capacity Risks by Service-Impact Probability**.
 4. Focus on a high-risk service and site combination.
 
 The business value is that teams can make the decision from connected, governed data. Oracle AI Database provides the shared foundation that keeps operational data, analytics, and AI workflows aligned.

@@ -43,9 +43,9 @@ Run a network access capacity question to show how the agent identifies capacity
 
 After showing the capacity response, explain what the business can decide: review site capacity, rebalance dispatch, prepare field support, or trigger customer outreach.
 
-In the current demo dataset, the capacity question for **Fixed Wireless Home Internet** routes to the **Network Access Agent** path and returns capacity across **11** centers with **1,911** total units. The response identifies lower-capacity sites such as **Chicago Midwest NOC**, **Miami Connected Life Hub**, **Boston Family Plan Support Center**, and **Seattle Customer Experience Center**.
+In the current demo dataset, the capacity question for **Fixed Wireless Home Internet** routes to the **Network Access Agent** path and returns capacity across **11** centers with **1,911** available dispatch slots. The response identifies lower-capacity sites such as **Chicago Midwest NOC**, **Miami Connected Life Hub**, **Boston Family Plan Support Center**, and **Seattle Customer Experience Center**.
 
-**Note:** These are sample values from the current demo dataset and may change after a refresh, seed update, or custom dataset import. Treat these numbers as an example of the current operating pattern. Verify the live values in the UI before presenting, then explain the business takeaway: what demand, subscriber impact, capacity, revenue, dispatch, or risk pattern the values reveal.
+**Note:** These are sample values from the current demo dataset and may change after a refresh, seed update, or custom dataset import. Treat these numbers as an example of the current operating pattern. Review the live values in the UI and connect them to the operational pattern: subscriber impact, capacity exposure, SLA risk, revenue exposure, dispatch load, or restoration status.
 
 ## Task 3: Interpret the operational story
 
@@ -57,7 +57,7 @@ Interpret the capacity result as an operational visibility story: teams can comp
 4. The business user can compare whether capacity is deep enough to support the demand story from earlier scenes.
 5. The audit trail records that the question was handled by the appropriate agent path.
 
-The important story is operational visibility: teams can see whether capacity exists, whether reserved quantities matter, and whether the demand-surge story should trigger field dispatch, capacity relief, or customer outreach.
+The important story is operational visibility: teams can see whether capacity exists, whether reserved quantities matter, and whether the service-impact scenario should trigger field dispatch, capacity relief, SLA management, or customer outreach.
 
 ## Task 4: Review the agent action audit trail
 
@@ -72,13 +72,13 @@ Review the audit trail to show that AI-assisted actions do not disappear after t
 
 In the current demo dataset, the completed chat action is logged with **90%** confidence. This is the governance point of the scene: agent decisions should be observable after the conversation. The page shows that agent interactions are not just transient chat messages. They are written into the action history so an operator, architect, or auditor can understand what happened.
 
-**Note:** These are sample values from the current demo dataset and may change after a refresh, seed update, or custom dataset import. Treat these numbers as an example of the current operating pattern. Verify the live values in the UI before presenting, then explain the business takeaway: what demand, subscriber impact, capacity, revenue, dispatch, or risk pattern the values reveal.
+**Note:** These are sample values from the current demo dataset and may change after a refresh, seed update, or custom dataset import. Treat these numbers as an example of the current operating pattern. Review the live values in the UI and connect them to the operational pattern: subscriber impact, capacity exposure, SLA risk, revenue exposure, dispatch load, or restoration status.
 
 The business value is that teams can make the decision from connected, governed data. Oracle AI Database provides the shared foundation that keeps operational data, analytics, and AI workflows aligned.
 
 **Congratulations! You have completed the LiveStack demo!** 
 
-The walkthrough showed how connected telecom data can support demand detection, subscriber signal triage, impact investigation, field capacity planning, service-order visibility, predictive assurance, governed data access, and AI-assisted action.
+The walkthrough showed how connected telecom data can support service-impact detection, subscriber signal triage, impact investigation, field capacity planning, service-order visibility, predictive assurance, governed data access, and AI-assisted action.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
