@@ -1,4 +1,4 @@
-# Scene 4 Batch and File Loading Ingest
+# Scene 5 Batch and File Loading Ingest
 
 ## Introduction
 
@@ -135,15 +135,16 @@ FROM PRODUCT_MASTER_RAW_DEMO;
 
 The expected row count for `product_master_raw.csv` is **38**.
 
-## Task 11: Connect the load to the business outcome
+## Conclusion: Business Outcome
 
-1. Explain that the product master file is now available in Bronze exactly as it arrived.
-2. Explain that the next processing scene can standardize categories, validate prices, deduplicate SKUs, enrich product attributes, and connect image metadata.
-3. Connect the downstream outcome: once product data is refined through Silver and Gold, PeakGear can power webshop search, product discovery, operations dashboards, fulfillment decisions, and AI agents from a governed catalog foundation.
-4. Reinforce the medallion pattern: file-based ingest is not the final business product. It is the controlled starting point that lets PeakGear turn raw source files into trusted, reusable data products.
+Batch and file loading gives PeakGear a controlled way to bring source files into the AI Lakehouse. The product master CSV is not the final business product; it is the Bronze starting point that preserves the file as it arrived.
+
+Once the file is in Bronze, the medallion process can make it reusable. Silver processing can standardize categories, validate prices, deduplicate SKUs, enrich product attributes, and connect image metadata. Gold data products can then serve a governed catalog foundation to webshop search, product discovery, operations dashboards, fulfillment decisions, and AI agents.
+
+For PeakGear, this means file-based source data becomes part of the same trusted lakehouse flow as streaming and CDC data. The business avoids one-off file handling and gains a repeatable path from raw product data to operational outcomes.
 
 You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-11
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-12
