@@ -6,7 +6,7 @@
 
 Flat tables can show a delayed shipment or a constrained terminal, but they do not easily explain how that problem connects to carrier partners, shared terminals, lanes, equipment pools, or open exception cases. Transportation teams need a way to follow those relationships without rebuilding a network model outside the operational database.
 
-Oracle AI Database helps by supporting graph-style relationship analysis against the same governed transportation data. In this scene, the user can inspect a default risk network, select a transportation entity, and run graph query examples that reveal influence, shared dependency, and exception propagation.
+Oracle AI Database helps by supporting graph-style relationship analysis against the same governed transportation data. In this scene, users can inspect a default risk network, select a transportation entity, and run graph query examples that reveal influence, shared dependency, and exception propagation. The graph opens with a less congested default depth so the network is easier to understand before expanding it.
 
 Estimated Time: 10 minutes
 
@@ -19,9 +19,9 @@ In this scene, you will learn what transportation decision the page supports, wh
 ## Task 1: Review the risk network workspace
 
 1. Click **Transportation Risk Network** in the sidebar.
-2. Review the graph visualization and the list of investigation entities.
+2. Review the graph visualization, the larger **Edge Types** legend, and the list of investigation entities.
 3. Review the selected entity details. In the current demo dataset, **PORT-LAX-DRAY** is a critical port entity with a **96** risk score, **96%** evidence strength, and **$2.65M** in service value.
-4. Change the graph depth control if you want to reveal more connected relationships.
+4. Change the graph depth control only after the default network is clear; higher depth reveals more relationships and can make the network denser.
 
 ## Task 2: Inspect the selected network data point
 
@@ -40,12 +40,12 @@ Use the selected entity details to make the graph concrete. The data point shoul
 Run a graph query example to show that the visible network is backed by queryable relationship data rather than a static diagram.
 
 1. Open the graph query examples area.
-2. Select a query such as influence reach, mutual connections, or community hub detection.
+2. Select a query such as influence reach, mutual connections, or community hub detection. The updated query cards use more width so the descriptions are easier to scan.
 3. Click the run action for the selected query.
-4. Review the result table and connect the returned rows to the graph view.
+4. Review the wider result table and connect the returned rows to the graph view.
 
 You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-29
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-09
