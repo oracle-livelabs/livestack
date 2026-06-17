@@ -2,44 +2,70 @@
 
 ## Introduction
 
-The AI Agent Console demonstrates application-layer agents that use Oracle SQL, PL/SQL tools, vector retrieval, in-database scoring, and JSON audit events to support product operations.
+The **AI Agent Console** shows how AI assistance can support High Tech operating decisions without becoming a black box. The page positions specialist agents as visible operating tools rather than generic chat responses.
 
-Estimated Time: 8 minutes
+**Oracle AI Database** keeps the source data, SQL execution, PL/SQL tools, graph and spatial context, in-database analytics, and durable action logging connected to the same governed High Tech data foundation. The app orchestrates the agent workflow, Ollama provides local reasoning when available, and Oracle AI Database 26ai executes governed data operations and records action evidence.
 
-![AI Agent Console rendered in the LiveStack app](images/scene-10-ai-agent-console.png)
+Estimated Time: **10 minutes**
+
+![AI Agent Console overview with example questions and recent actions](images/scene-10-ai-agent-console.png)
 
 ### Objectives
 
-In this lab, you will:
-- Review available agent teams and runtime profile controls.
-- Ask agent questions about buyer signals, availability, and product operations.
-- Inspect recent agent actions and the audited event stream.
+In this scene, you will learn how specialist agents convert product, capacity, signal, quality, and commitment findings into auditable operating actions.
 
-## Task 1: Review Agent Runtime Context
+## Task 1: Review the agent console workspace
 
-1. Open **AI Agent Console** from the left navigation.
-2. Review the Oracle internals panel for Ollama Runtime, Oracle SQL / PL/SQL Tools, Application Orchestration, agent_actions, event_stream, Vector RAG Retrieval, and In-DB ML Scoring.
-3. Inspect the runtime profile selector and recent actions table.
+Perform the following set of steps to review the agent console as an operational workspace before running an agent task:
 
-Expected result:
-- The console shows how agent behavior is grounded in explicit database tools and audited records.
-- The presenter can explain the three agent teams: Signal Agent, Product Availability Agent, and Product Operations Agent.
+1. Click **AI Agent Console** in the sidebar.
+2. Review the runtime profile selector.
+3. Review the specialist example questions for product signals, capacity, product operations, supplier risk, customer commitments, and service follow-up.
+4. Review **Recent Agent Actions** below the workspace.
+5. Focus on a capacity or commitment example such as **Which high-tech products have low capacity?**
 
-## Task 2: Ask an Agent Question
+Use this opening view to explain that the page is an operational agent console. The user can see routing, tools, results, confidence, fallback status, and action history, not just a chat response.
 
-1. Select an example question or type a question about trending products, capacity risk, or operations response.
-2. Click **Ask** or **Send**.
-3. Review the response and compare it with the recent action log.
+![AI Agent Console overview with example questions and recent actions](images/scene-10-ai-agent-console.png)
 
-Expected result:
-- When Ollama and the database are connected, the agent produces a grounded answer and records actions or events.
-- The action log provides an audit trail for decisions made through the agent workflow.
+## Task 2: Run an agent question
 
-## Task 3: Why this matters?
+Perform the following set of steps to show how the agent summarizes product capacity evidence while exposing the data, tool path, runtime status, and fallback context behind the answer:
 
-Agentic workflows need grounding and traceability. This scene shows how Seer Tech can let AI assist product operations while keeping data access, tools, and decisions tied to Oracle-backed audit evidence.
+1. Type or select the following question:
+
+    `<copy>Which high-tech products have low capacity?</copy>`
+
+2. Click **Send**.
+3. Review the agent response at the top of the chat output.
+4. Review the agent team badge, response, returned rows, tools used, runtime badge, or fallback status.
+
+    ![AI Agent Console product capacity response highlighted](images/agent-capacity-response.png)
+
+**Expected result:** The response should summarize constrained products or capacity signals using Oracle-backed product and supply evidence. It should connect the answer to product availability, supply sites, shortage alerts, customer commitments, and next operating steps when those records are present in the live dataset.
+
+If the runtime shows a timeout or fallback, use it as an observability example: the operator can see whether the answer came from a complete LLM/tool path or from Oracle SQL and PL/SQL fallback evidence.
+
+**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
+
+## Task 3: Review the agent action audit trail
+
+Perform the following set of steps to show that AI-assisted actions do not disappear after the conversation. Operators, planners, engineers, architects, and auditors can review what the agent did, which route it used, and how confident the system was:
+
+1. Scroll to **Recent Agent Actions**.
+2. Review the newest action row when the action list is populated.
+3. Confirm that the row captures the agent action type, operational intent, confidence, related evidence, and runtime path.
+4. Compare the visible action trail with the Oracle Internals diagram.
+
+    ![Recent agent action audit trail highlighted](images/agent-action-audit-trail.png)
+
+The governance point is that agent decisions should remain observable after the conversation, with action history available for supply review, product operations, customer follow-up, quality escalation, warranty response, service operations, and continuous improvement.
+
+The business value is that teams can make the decision from connected, governed data. **Oracle AI Database** provides the shared foundation that keeps operational data, analytics, graph evidence, SQL tools, PL/SQL actions, and AI workflows aligned.
+
+*You can move to the next scene.*
 
 ## Credits & Build Notes
-- **Author** - Oracle LiveStack Team
-- **Last Updated By/Date** - Oracle LiveStack Team, 2026-05-13
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-16
 - **Source Bundle** - `livestack-hightech.zip`

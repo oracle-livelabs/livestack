@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "High Tech Product Intelligence LiveStack Guide",
+  "workshoptitle": "Seer Tech High Tech Product Intelligence LiveStack Guide",
   "help": "livelabs-help-database_us@oracle.com",
   "tutorials": [
     {
@@ -8,7 +8,7 @@
     },
     {
       "title": "Download and Run the LiveStack",
-      "filename": "../../download-livestack/download-livestack.md"
+      "filename": "../../download-livestack/download-livestack-take-it-home.md"
     },
     {
       "title": "Scene 1: Seer Tech Control Tower",
@@ -19,24 +19,24 @@
       "filename": "../../scene-2-seer-tech-26ai-data-foundation/scene-2-seer-tech-26ai-data-foundation.md"
     },
     {
-      "title": "Scene 3: Product Intelligence Command Center",
-      "filename": "../../scene-3-product-intelligence-command-center/scene-3-product-intelligence-command-center.md"
+      "title": "Scene 3: Product & Commitment Control Tower",
+      "filename": "../../scene-3-product-and-commitment-control-tower/scene-3-product-and-commitment-control-tower.md"
     },
     {
       "title": "Scene 4: Enterprise Buyer Signal Monitor",
       "filename": "../../scene-4-enterprise-buyer-signal-monitor/scene-4-enterprise-buyer-signal-monitor.md"
     },
     {
-      "title": "Scene 5: Developer Ecosystem Graph",
-      "filename": "../../scene-5-developer-ecosystem-graph/scene-5-developer-ecosystem-graph.md"
+      "title": "Scene 5: Product Signal Graph",
+      "filename": "../../scene-5-product-signal-graph/scene-5-product-signal-graph.md"
     },
     {
-      "title": "Scene 6: Product Availability and Capacity Map",
-      "filename": "../../scene-6-product-availability-and-capacity-map/scene-6-product-availability-and-capacity-map.md"
+      "title": "Scene 6: Supply & Commitment Map",
+      "filename": "../../scene-6-supply-and-commitment-map/scene-6-supply-and-commitment-map.md"
     },
     {
-      "title": "Scene 7: Solution Orders",
-      "filename": "../../scene-7-solution-orders/scene-7-solution-orders.md"
+      "title": "Scene 7: Customer Commitments",
+      "filename": "../../scene-7-customer-commitments/scene-7-customer-commitments.md"
     },
     {
       "title": "Scene 8: OML Product Intelligence",
@@ -51,8 +51,8 @@
       "filename": "../../scene-10-ai-agent-console/scene-10-ai-agent-console.md"
     },
     {
-      "title": "Conclusion: Business Outcomes",
-      "filename": "../../conclusion/conclusion.md"
+      "title": "Scene 11: Use Your Own Product Data",
+      "filename": "../../scene-11-use-your-own-product-data/scene-11-use-your-own-product-data.md"
     },
     {
       "title": "Need Help?",
