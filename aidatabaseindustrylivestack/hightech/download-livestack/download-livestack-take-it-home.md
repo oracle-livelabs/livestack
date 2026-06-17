@@ -2,11 +2,13 @@
 
 ## Introduction
 
-This lab shows how to run a portable LiveStack package in your own environment using Podman Compose.
+This lab shows how to run the portable **Seer Tech High Tech Product Intelligence LiveStack** package in your own environment using Podman Compose.
+
+Use this appendix when you want to take the same High Tech product-launch story home: Oracle Database, ORDS, Ollama, and the Seer Tech application run together so the local environment can support the same product, manufacturing, supply, commitment, analytics, Ask Data, and agent scenes from the guided runbook.
 
 This guide is intended for technical users who can install Podman and run terminal commands. If you are new to containers, complete the Podman readiness checks before starting. If any readiness check fails, ask your workshop facilitator or system administrator for help before continuing.
 
-Estimated time: 30 minutes for a local run, or 45 minutes when deploying to an OCI Compute VM.
+Estimated Time: **30 minutes** for a local run, or **45 minutes** when deploying to an OCI Compute VM.
 
 ### Objectives
 
@@ -228,11 +230,11 @@ Do not extract or run the stack from your `Downloads` folder. Create a new empty
 
 6. Move into the extracted LiveStack application folder.
 
-    The folder name can vary by package, such as `finance`, `healthcare`, or another industry name. Replace `<extracted-folder-name>` with the folder name created when you extracted `livestack.zip`.
+    The High Tech package is expected to be extracted into a folder named `hightech`. If your archive tooling creates a different folder name, use that generated folder instead.
 
     ```powershell
     <copy>
-    Set-Location .\<extracted-folder-name>
+    Set-Location .\hightech
     </copy>
     ```
 
