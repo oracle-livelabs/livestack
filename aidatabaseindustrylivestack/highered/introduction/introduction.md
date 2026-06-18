@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Higher education teams need to make faster decisions while enrollment, advising, retention, student support, financial aid, advancement, campus operations, and student signals are spread across many systems. The Seer Higher Education LiveStack shows how an institution can bring those signals together, understand where students need help, and move from insight to action with more confidence.
+Higher education institutions are navigating their most demanding operational environment in decades. Declining traditional-age enrollment, FAFSA simplification disruptions, escalating FERPA and Title IV compliance requirements, and rising student service expectations are forcing teams to make faster, more confident decisions while the data they need remains fragmented across dozens of systems. The Seer Higher Education LiveStack shows how an institution can bring those signals together, understand where students need help, and move from insight to action with more confidence than peer institutions still relying on disconnected point solutions.
 
 This runbook supports the Seer Higher Education Student Success LiveStack Demo. The demo shows how Oracle AI Database 26ai can help higher education teams bring those workloads together on one connected data foundation. Instead of splitting student records, service requests, JSON documents, support networks, campus geography, vector search, machine learning, natural-language SQL, and AI agent workflows across separate systems, the LiveStack shows how those capabilities can work against the same governed Oracle data model.
 

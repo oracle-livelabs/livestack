@@ -4,7 +4,7 @@
 
 **Predictive Student Success Analytics** helps institutional research, enrollment management, student success, advising, and operations teams move from historical reporting to predictive decisions.
 
-Higher education analytics often require copied data, separate model pipelines, and technical handoffs before a team can score demand, segment students, forecast service value, or cluster similar services. That slows down action and makes governance harder.
+With a projected 15% decline in the 18-year-old population by 2029, institutions can no longer afford to learn about retention risk after the fact. The institutions winning in this environment are the ones scoring demand, segmenting student populations, and forecasting service pressure in advance, not in a quarterly IR report, but in the same workflow where advisors and operations teams are already working. This scene shows how Oracle Machine Learning trains, stores, and scores predictive models inside Oracle AI Database, with no data export, no separate ML pipeline, and no reconciliation before someone will trust the result.
 
 Oracle Machine Learning helps address that challenge by training, storing, and scoring models inside Oracle AI Database. In this scene, the application exposes demand prediction, engagement segmentation, service value forecasting, vector clustering, and capacity intelligence from the same student-success data foundation.
 
