@@ -35,6 +35,8 @@ Layer toggles let the presenter show the map from different operational perspect
 3. Review **H3 Density Grid** and **Student Demand Regions** to explain demand pressure.
 4. Explain that Oracle Spatial lets the application calculate and visualize service access without leaving the database platform.
 
+That is the Oracle AI Database point: spatial and GeoJSON data can sit beside relational student records, JSON service requests, capacity data, vectors, graph relationships, and governed operations data in one engine. The map can therefore answer a business question: where are students, what do they need, and can the institution reach them with the right support?
+
 You can move to the next scene.
 
 ## Credits & Build Notes

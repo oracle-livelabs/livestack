@@ -4,7 +4,7 @@
 
 **Student Intent and Support Signals** helps student success, enrollment, advising, financial aid, and engagement teams understand what students and communities are asking for before demand becomes a late intervention.
 
-Institutions receive signals through many channels: official offices, student communities, alumni groups, advising teams, financial aid conversations, basic-needs programs, transfer communities, and online learner networks. Those signals are hard to interpret when they are stored separately from services, programs, capacity, and student request data.
+Students often signal their needs long before they submit a request, open a case, or contact an advisor. Those signals appear across financial aid communities, peer networks, alumni advocacy channels, and other student-driven conversations. When institutions can identify and interpret those signals early, they gain valuable time to intervene. With 5,000 signal posts across the live dataset, this scene shows how semantic search and AI-powered signal monitoring convert unstructured student voice into actionable operational intelligence, enabling student success teams to respond before challenges become escalations.
 
 Oracle AI Database helps address that challenge with vector embeddings, semantic matching, SQL filtering, row-level security, and live signal analytics in the same data platform. The current dataset includes **5,000** student signal posts from realistic higher education sources such as `@riverbendfinaid_bos`, `@firstgenpathways_hou`, and `@campusbasicneeds_sea`.
 
@@ -36,13 +36,13 @@ Vector search helps the institution find relevant services even when the user's 
 
 ## Task 3: Review live student signal posts
 
-![Student signal feed with realistic platforms and advocate handles highlighted](images/student-signal-feed-platforms.png)
+![Student signal feed with realistic signal channels and advocate handles highlighted](images/student-signal-feed-platforms.png)
 
-The feed turns student and community activity into operational evidence. It uses uneven, realistic platform mix across Instagram, TikTok, Threads, YouTube, and **X / Twitter** while preserving governed source data.
+The feed turns student and community activity into operational evidence. It uses an uneven, realistic mix of higher education signal channels such as student communities, student video, campus video, peer network threads, and public student threads while preserving governed source data.
 
 1. Scroll to the signal feed.
-2. Review the platform badges, momentum labels, urgency scores, and advocate handles.
-3. Focus on the **X / Twitter** badge and the institutional handle pattern, such as `@riverbendfinaid_bos`.
+2. Review the signal-channel badges, momentum labels, urgency scores, and advocate handles.
+3. Focus on the institutional handle pattern, such as `@riverbendfinaid_bos`, and explain why the channel names are normalized for a governed higher education demo.
 4. Explain that student signal monitoring becomes useful only when it is tied back to services and interventions.
 
 You can move to the next scene.

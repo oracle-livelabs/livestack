@@ -4,7 +4,7 @@
 
 **Student Success Command Center** gives enrollment, student success, advising, and operations leaders a clear daily view of the institution. It tracks student requests, service value proxy, urgent signals, high-demand services, and agent actions in one place.
 
-This team must see shifts in student demand, service access, support risk, and operational capacity as they emerge, not after they become separate escalations. The dashboard helps leaders spot patterns early, act faster, and keep teams aligned across enrollment, advising, financial aid, student wellness, academic programs, and advancement.
+Across the industry, institutions that respond to early signals before a student misses a deadline, drops a course, or disengages consistently achieve stronger retention outcomes. This command center provides enrollment, advising, and operations leaders with a unified daily view of student demand, risk, and service activity, enabling them to act before small issues become long-term retention challenges.
 
 Dashboards like this are difficult to implement when higher education data is split across SIS, CRM, LMS, case-management, advising, social listening, advancement, and analytics systems. Teams often need copied data, ETL jobs, separate search indexes, and reconciliation logic before a dashboard can show a trustworthy view.
 
