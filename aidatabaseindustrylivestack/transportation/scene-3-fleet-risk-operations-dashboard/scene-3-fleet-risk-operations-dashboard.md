@@ -8,7 +8,7 @@ This team must see shifts in demand, capacity, and service risk as they emerge, 
 
 Dashboards like this are difficult to implement when transportation data is split across order systems, fleet tools, terminal spreadsheets, social or partner signal feeds, and analytics pipelines. Oracle AI Database helps address that challenge by keeping operational, analytical, JSON, in-memory, and AI-ready data close to the same governed data foundation.
 
-The **White Glove Delivery Crew** row gives the seller a clear opening example: demand is visible at the dashboard level and then traceable down to freight value, service category, signal exposure, and JSON application shape.
+The **White Glove Delivery Crew** row gives users a clear opening example: demand is visible at the dashboard level and then traceable down to freight value, service category, signal exposure, and JSON application shape. The dashboard also defines **Signal Velocity** as the rate and intensity of new disruption, demand, and service-risk signals over the selected time window, so the term is clear without extra explanation.
 
 Estimated Time: 10 minutes
 
@@ -24,8 +24,8 @@ Use the dashboard as a triage view. In the current demo dataset, the opening KPI
 
 1. Click **Fleet Risk & Operations Dashboard** in the sidebar.
 2. Review the KPI cards across the top of the page.
-3. Review **Signal Velocity** to see the rate and intensity of operational signals.
-4. Review **Freight Value by Service Category** to see where value exposure is concentrated.
+3. Review **Signal Velocity** to see how quickly new disruption, demand, and service-risk signals are building.
+4. Review **Freight Value by Service Category** to see where value exposure is concentrated across related transportation services. Explain that this is a concentration view, not a statistical correlation chart.
 5. Review Oracle Internals after the business flow is clear. Use it to connect the visible logistics outcome to the database capabilities behind the page.
 
 ## Task 2: Review services at surge risk
@@ -60,4 +60,4 @@ You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-29
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-09

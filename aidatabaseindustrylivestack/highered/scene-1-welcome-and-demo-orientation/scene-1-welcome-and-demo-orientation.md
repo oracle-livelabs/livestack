@@ -4,7 +4,7 @@
 
 **Welcome and Demo Orientation** gives the seller a clean opening story for Seer Higher Education. It frames the demo as a connected student lifecycle journey, not a collection of separate database features.
 
-Higher education leaders are under pressure to improve enrollment yield, support persistence, allocate scarce student services, explain risk, and show trusted evidence to executive, academic, advising, financial aid, and advancement stakeholders. The welcome page gives the presenter a guided way to introduce that journey before drilling into the operational scenes.
+Higher education leaders are under pressure on every front: enrollment yield is declining as the pipeline of traditional-age students shrinks, persistence rates are under scrutiny from accreditors and boards, scarce student services are being stretched across growing at-risk populations, and compliance risk from FERPA and Title IV is intensifying. Leaders need trusted, governed evidence not another dashboard that requires a data team to validate before anyone will act on it. The welcome page gives the presenter a guided way to introduce that journey before drilling into the operational scenes.
 
 Oracle AI Database helps by bringing the operational data, signal data, graph relationships, spatial service coverage, vector search, machine learning, natural-language SQL, and agent workflows into one governed data foundation. The seller can start with the business challenge and then show how each scene contributes evidence.
 

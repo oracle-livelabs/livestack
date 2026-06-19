@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This scene prepares the trusted Seer Comms dataset used throughout the demo. Loading or restoring the data gives every later screen the same governed starting point, so dashboards, signal search, graph analysis, field operations, service orders, predictive assurance, Ask Data, and AI-assisted workflows all reflect the same telecom data foundation.
+This scene prepares the trusted Seer Telecom dataset used throughout the demo. Loading or restoring the data gives every later screen the same governed starting point, so dashboards, signal search, graph analysis, field operations, service orders, predictive assurance, Ask Data, and AI-assisted workflows all reflect the same telecom data foundation.
 
 Estimated Time: **5 minutes**
 
@@ -27,7 +27,7 @@ The load prepares telecom services, subscriber signals, service orders, network 
 
 In this example, the guide mentions values such as **32 telecom services**, **5,000 subscriber signals**, **3,000 service orders**, **12 network sites**, **360 demand forecasts**, **5,000 signal vectors**, **1,572 semantic matches**, **36 telecom impact entities**.
 
-**Note:** These are sample values from the current demo dataset and may change after a refresh, seed update, or custom dataset import. Treat these numbers as an example of the current operating pattern. Verify the live values in the UI before presenting, then explain the business takeaway: what demand, subscriber impact, capacity, revenue, dispatch, or risk pattern the values reveal.
+**Note:** These are sample values from the current demo dataset and may change after a refresh, seed update, or custom dataset import. Treat these numbers as an example of the current operating pattern. Review the live values in the UI and connect them to the operational pattern: subscriber impact, capacity exposure, SLA risk, revenue exposure, dispatch load, or restoration status.
 
 ## Task 2: Review what gets loaded
 
