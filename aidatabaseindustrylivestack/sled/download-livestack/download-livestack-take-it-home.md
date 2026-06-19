@@ -2,17 +2,17 @@
 
 ## Introduction
 
-This lab shows how to run a portable LiveStack package in your own environment using Podman Compose.
+This lab shows how to run the portable State and Local Government LiveStack package in your own environment using Podman Compose.
 
 This guide is intended for technical users who can install Podman and run terminal commands. If you are new to containers, complete the Podman readiness checks before starting. If any readiness check fails, ask your workshop facilitator or system administrator for help before continuing.
 
-Estimated time: 30 minutes for a local run, or 45 minutes when deploying to an OCI Compute VM.
+Estimated Time: 30 minutes for a local run, or 45 minutes when deploying to an OCI Compute VM.
 
 ### Objectives
 
 In this lab, you will:
 
-- Download the portable LiveStack package.
+- Download the portable State and Local Government LiveStack package.
 - Confirm that Podman and Podman Compose are ready.
 - Extract the package into a clean local working directory.
 - Create a local runtime environment file from `.env.example`.
@@ -122,13 +122,13 @@ If this test fails, fix Podman setup before continuing with LiveStack.
 
 ## Task 1: Download the portable package
 
-1. Download the LiveStack package using this [link](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/livestack-sled.zip).
+1. Download the State and Local Government LiveStack package using this [link](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/livestack-sled.zip).
 
-2. Save or rename the file as `livestack.zip`.
+2. Save or rename the file as `livestack-sled.zip`.
 
 Expected result:
 
-- You have `livestack.zip` available on your machine.
+- You have `livestack-sled.zip` available on your machine.
 
 ## Task 2: Prepare the working directory
 
@@ -142,7 +142,7 @@ Do not extract or run the stack from your `Downloads` folder. Create a new empty
 
     ```bash
     <copy>
-    mkdir -p ~/livestack
+    mkdir -p ~/livestack-sled
     </copy>
     ```
 
@@ -150,7 +150,7 @@ Do not extract or run the stack from your `Downloads` folder. Create a new empty
 
     ```bash
     <copy>
-    cd ~/livestack
+    cd ~/livestack-sled
     </copy>
     ```
 
@@ -158,7 +158,7 @@ Do not extract or run the stack from your `Downloads` folder. Create a new empty
 
     ```bash
     <copy>
-    mv ~/Downloads/livestack.zip .
+    mv ~/Downloads/livestack-sled.zip .
     </copy>
     ```
 
@@ -166,11 +166,19 @@ Do not extract or run the stack from your `Downloads` folder. Create a new empty
 
     ```bash
     <copy>
-    unzip livestack.zip
+    unzip livestack-sled.zip
     </copy>
     ```
 
-6. Confirm that you are in the directory that contains the compose file.
+6. Move into the extracted State and Local Government LiveStack folder.
+
+    ```bash
+    <copy>
+    cd sled
+    </copy>
+    ```
+
+7. Confirm that you are in the directory that contains the compose file.
 
     ```bash
     <copy>
@@ -182,7 +190,7 @@ Do not extract or run the stack from your `Downloads` folder. Create a new empty
 
     - You see `compose.yml` or `compose.yaml` in the current directory.
 
-7. Create or refresh the runtime environment file.
+8. Create or refresh the runtime environment file.
 
     ```bash
     <copy>
@@ -198,7 +206,7 @@ Do not extract or run the stack from your `Downloads` folder. Create a new empty
 
     ```powershell
     <copy>
-    New-Item -ItemType Directory -Force -Path "$HOME\livestack" | Out-Null
+    New-Item -ItemType Directory -Force -Path "$HOME\livestack-sled" | Out-Null
     </copy>
     ```
 
@@ -206,7 +214,7 @@ Do not extract or run the stack from your `Downloads` folder. Create a new empty
 
     ```powershell
     <copy>
-    Set-Location "$HOME\livestack"
+    Set-Location "$HOME\livestack-sled"
     </copy>
     ```
 
@@ -214,7 +222,7 @@ Do not extract or run the stack from your `Downloads` folder. Create a new empty
 
     ```powershell
     <copy>
-    Move-Item "$HOME\Downloads\livestack.zip" .
+    Move-Item "$HOME\Downloads\livestack-sled.zip" .
     </copy>
     ```
 
@@ -222,21 +230,11 @@ Do not extract or run the stack from your `Downloads` folder. Create a new empty
 
     ```powershell
     <copy>
-    tar -xf .\livestack.zip
+    tar -xf .\livestack-sled.zip
     </copy>
     ```
 
-6. Move into the extracted LiveStack application folder.
-
-    The folder name can vary by package, such as `finance`, `healthcare`, or another industry name. Replace `<extracted-folder-name>` with the folder name created when you extracted `livestack.zip`.
-
-    ```powershell
-    <copy>
-    Set-Location .\<extracted-folder-name>
-    </copy>
-    ```
-
-    Example:
+6. Move into the extracted State and Local Government LiveStack application folder.
 
     ```powershell
     <copy>
@@ -267,7 +265,7 @@ Do not extract or run the stack from your `Downloads` folder. Create a new empty
 Expected result:
 
 - You are in a clean working directory outside `Downloads`.
-- The extracted package contains `compose.yml` or `compose.yaml`, `.env.example`, application source files, database setup files, and supporting scripts.
+- The extracted `sled` package contains `compose.yml` or `compose.yaml`, `.env.example`, application source files, database setup files, and supporting scripts.
 - You created a local `.env` file from `.env.example`.
 
 ## Task 3: Configure proxy settings, if your network requires them
@@ -599,7 +597,7 @@ Prerequisites:
 - Ingress to TCP port `8505` allowed from your approved client CIDR.
 - An OCI Compute VM running Oracle Linux 9.
 - SSH access to the VM, using the private key paired with the public key added during VM creation.
-- The LiveStack package download URL for your workshop.
+- The State and Local Government LiveStack package download URL for your workshop.
 
 1. SSH into the OCI VM from your local terminal.
 
@@ -645,8 +643,8 @@ Prerequisites:
 
     ```bash
     <copy>
-    mkdir -p ~/livestack
-    cd ~/livestack
+    mkdir -p ~/livestack-sled
+    cd ~/livestack-sled
     </copy>
     ```
 
@@ -654,7 +652,7 @@ Prerequisites:
 
     ```bash
     <copy>
-    curl -L -o livestack.zip "<livestack-package-url>"
+    curl -L -o livestack-sled.zip "https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/livestack-sled.zip"
     </copy>
     ```
 
@@ -662,9 +660,8 @@ Prerequisites:
 
     ```bash
     <copy>
-    unzip livestack.zip
-    COMPOSE_FILE="$(find . -maxdepth 3 \( -name compose.yml -o -name compose.yaml \) | head -n 1)"
-    cd "$(dirname "$COMPOSE_FILE")"
+    unzip livestack-sled.zip
+    cd sled
     </copy>
     ```
 
@@ -726,11 +723,11 @@ Expected result:
 
 ## Why this matters
 
-A portable LiveStack runbook turns this guide into something teams can reproduce instead of just read. By shipping the application as a Podman Compose package with a clear startup flow, you reduce environment drift, make scene validation repeatable, and give teams a practical way to explore the same Oracle-backed experience on macOS, Linux, Windows, and OCI Compute.
+A portable LiveStack runbook turns this guide into something teams can reproduce instead of just read. By shipping the State and Local Government application as a Podman Compose package with a clear startup flow, you reduce environment drift, make scene validation repeatable, and give agency teams a practical way to explore the same Oracle-backed experience on macOS, Linux, Windows, and OCI Compute.
 
 This guide is self-service for technical users who can install Podman and run terminal commands. Users who are new to containers should complete the Podman readiness checks before starting and ask for help if those checks fail.
 
-## Credits and build notes
+## Credits & Build Notes
 
 - **Author** - LiveLabs Team
-- **Last Updated By/Date** - LiveLabs Team, 2026-06-04
+- **Last Updated By/Date** - LiveLabs Team, 2026-06-18

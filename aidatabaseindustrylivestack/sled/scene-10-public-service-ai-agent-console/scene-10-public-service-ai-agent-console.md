@@ -2,46 +2,55 @@
 
 ## Introduction
 
-This scene shows agent-assisted SLED operations. A user can ask questions that route to resident signal, service access, or public service operations agents, while Oracle records tool use and action history.
+The **Public Service AI Agent Console** shows how AI-assisted operations can remain grounded in governed public-sector data. A user can ask questions that route to resident signal, service access, or public service operations agents, while Oracle records tool use and action history.
 
-Estimated Time: 12 minutes
+This scene is the action checkpoint in the story. The agency has seen resident demand, services under pressure, partner relationships, access geography, service requests, and capacity forecasts. The agent console helps the team ask what to do next while keeping the evidence path and audit trail visible.
 
-![Public Service AI Agent Console screen](images/scene-10-public-service-ai-agent-console.png)
+Estimated Time: **12 minutes**
+
+![Public Service AI Agent Console with prompt examples and agent history](images/scene-10-public-service-ai-agent-console.png)
 
 ### Objectives
 
-In this lab, you will:
-- Review the agent teams and runtime profile.
-- Ask an example question.
-- Inspect tool badges, response data, and action history.
-- Explain why auditability matters for public-sector AI workflows.
+In this scene, you will review the agent workspace, ask an example agent question, inspect the response, and review the action history that supports audit-ready AI operations.
 
-## Task 1: Ask an agent question
+## Task 1: Review the agent console workspace
 
-1. Open **Public Service AI Agent Console**.
-2. Review the agent teams: resident signal, service access, and public service operations.
-3. Click an example question such as **Which public services have low capacity?**, or type your own question.
-4. Click **Ask** or **Send**.
+Perform the following set of steps to orient the audience before running an agent question.
 
-Expected result:
-- The console shows the user question and an agent response.
-- The response identifies the routed team, timing, tools used, and any returned data or route map.
+1. Click **Public Service AI Agent Console** in the sidebar.
+2. Review the available agent teams for resident signals, service access, and public service operations.
+3. Review the example prompt cards, input box, runtime profile, and recent action area.
 
-## Task 2: Inspect action history
+    ![Public Service AI Agent Console workspace with example prompts and action history](images/agent-console-workspace.png)
+
+The workspace shows that the agent experience is tied to public-sector operating tasks, not an open-ended chat surface.
+
+## Task 2: Ask an agent question
+
+Perform the following set of steps when the audience wants to see AI-assisted public-service operations.
+
+1. Click an example question such as **What percentage of service requests are resident-signal-driven?**, or type your own question.
+2. Click **Ask** or **Send**.
+
+    ![Agent response for resident-signal-driven service requests](images/agent-public-service-response.png)
+
+**Expected result:** The agent response references public-service evidence instead of generic model prose. Use the response to connect agent reasoning to the same service, signal, map, and capacity data shown in earlier scenes.
+
+## Task 3: Inspect action history
+
+Perform the following set of steps to show how AI activity remains reviewable.
 
 1. Review the latest action history or event stream on the page.
 2. Look for tool names, status badges, and agent action records.
 3. Switch runtime profile if the control is available and explain what changes.
 
-Expected result:
-- The scene shows that agent activity is not a hidden black box.
-- Oracle-backed action records and JSON event data support review, audit, and operational trust.
+    ![Agent action audit trail and tool history](images/agent-action-audit-trail.png)
 
-## Task 3: Why this matters?
+The audit trail is the governance story for this scene. The agency can show what was asked, which tools were used, and which records supported the response.
 
-Public-sector AI needs accountability. This scene makes the agent useful without making it untraceable: reasoning, tool routing, SQL-backed retrieval, service access recommendations, and action logging stay visible to the operator.
+*You can move to the next scene.*
 
 ## Credits & Build Notes
-- **Author** - Oracle LiveStack Team
-- **Last Updated By/Date** - Oracle LiveStack Team, 2026-05-13
-- **Screenshot** - Captured from `http://158.178.146.34:8505/?page=agents`.
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-17

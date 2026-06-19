@@ -2,44 +2,57 @@
 
 ## Introduction
 
-This scene uses Oracle Spatial to show service sites, service zones, resident access tiers, H3 density, and regional demand overlays. It turns service access into a map-based operating decision.
+**Service Access & Coverage Map** helps a state or local agency understand how geography changes the response. A high-demand service may require a different action depending on nearby service capacity, partner coverage, travel distance, neighborhood access tier, or emergency operations constraints.
 
-Estimated Time: 10 minutes
+This scene uses Oracle Spatial to keep location intelligence close to the same public-sector operating data used by the command center, service request workbench, and analytics pages.
 
-![Service Access and Coverage Map screen](images/scene-6-service-access-and-coverage-map.png)
+Estimated Time: **10 minutes**
+
+![Service Access and Coverage Map with layer controls and capacity signals](images/scene-6-service-access-and-coverage-map.png)
 
 ### Objectives
 
-In this lab, you will:
-- Review the spatial map and layer controls.
-- Toggle coverage, demand, and service site layers.
-- Explain how spatial indexing and geometry support service access decisions.
+In this scene, you will inspect the service access map, compare capacity and access signals, and explain why spatial analysis is part of the operating workflow.
 
 ## Task 1: Inspect the service access map
 
-1. Open **Service Access & Coverage Map**.
-2. Review the map, service site markers, zones, and demand overlays.
-3. Use the layer panel to turn individual layers on or off.
+Perform the following set of steps to show how the map organizes place-based service access evidence.
 
-Expected result:
-- The map changes as layers are toggled.
-- Operators can distinguish service sites, service zones, resident risk tiers, and demand regions.
+1. Click **Service Access & Coverage Map** in the sidebar.
+2. Review the **Map Layers** panel and the active layer legend.
+3. Note the available layer types for resident risk tiers, service sites, task routes, service zones, H3 density grid, and public service demand regions.
+4. Connect the layer evidence to the active center count, total capacity, pending service tasks, and capacity alerts.
 
-## Task 2: Compare capacity and access signals
+    ![Service access map layers and coverage controls](images/service-access-map-layers.png)
 
-1. Review any alerts or capacity cards next to the map.
-2. Select a demand region or service site if the map exposes details.
-3. Compare the spatial context with service pressure from the command center.
+The map turns service demand into a place-based decision. In this task, the layer list is the proof point: it shows the spatial data the agency can combine with capacity and service-request evidence.
 
-Expected result:
-- The user can see whether a demand signal is near adequate service access or a constrained area.
-- The evidence panel shows Oracle Spatial concepts such as `SDO_GEOMETRY`, spatial indexes, distance calculations, buffered zones, and GeoJSON output.
+## Task 2: Compare service sites with the map
 
-## Task 3: Why this matters?
+Perform the following set of steps to show how the map connects to service-site records.
 
-For SLED teams, geography changes the decision. A high-demand service may need a different response depending on nearby service capacity, partner coverage, travel distance, or neighborhood access tier. Oracle Spatial lets those signals stay close to the operational data.
+1. Review the visible **Service Sites** table below the map.
+2. Compare center, location, type, services, capacity, pending work, and load values.
+3. Use the map and table together to explain which sites may need follow-up.
+
+    ![Service sites table connected to the service access map](images/service-sites-table.png)
+
+The table gives the map operational grounding. It lets the audience connect place-based coverage to the actual service centers and pending work the agency must manage.
+
+## Task 3: Compare capacity and access signals
+
+Perform the following set of steps to connect geography with service operations.
+
+1. Review the capacity, alert, or access cards next to the map.
+2. Compare the spatial context with services under pressure from the command center.
+3. Use the active-center, total-capacity, pending-task, and capacity-alert cards to explain where the agency would investigate coverage next.
+
+    ![Capacity and access signals beside the service coverage map](images/capacity-and-access-signals.png)
+
+For State and Local Government teams, geography changes the decision. Oracle Spatial lets those signals stay close to the operational data instead of forcing users into a separate mapping system.
+
+*You can move to the next scene.*
 
 ## Credits & Build Notes
-- **Author** - Oracle LiveStack Team
-- **Last Updated By/Date** - Oracle LiveStack Team, 2026-05-13
-- **Screenshot** - Captured from `http://158.178.146.34:8505/?page=fulfillment`.
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-17

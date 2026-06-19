@@ -2,46 +2,71 @@
 
 ## Introduction
 
-This scene shows operational service requests as both normalized relational records and JSON duality documents. It is the bridge between service work queues and application-friendly JSON APIs.
+The **Service Request Workbench** shows how a public-service request moves from a table of operational records into a row-level case detail. The live page lets the agency review service request status, resident context, line count, service value, and line-level public program detail from the same governed dataset.
 
-Estimated Time: 10 minutes
+For a state or local agency, a service request may represent a resident contact, permit follow-up, benefits eligibility review, inspection task, public works issue, or emergency-response support item. Different users need different levels of evidence: an analyst may start with the request list, a supervisor may open the row-level detail, and a data steward may use Oracle Internals to explain how JSON Duality and VPD support the application pattern.
 
-![Service Request Workbench screen](images/scene-7-service-request-workbench.png)
+Estimated Time: **10 minutes**
+
+![Service Request Workbench with request list and detail panel](images/scene-7-service-request-workbench.png)
 
 ### Objectives
 
-In this lab, you will:
-- Filter service requests by status.
-- Open a service request detail panel.
-- Compare relational, JSON duality, and service route views.
-- Explain how VPD keeps request access governed.
+In this scene, you will open a service request, review the expanded request detail, and connect the visible workflow to Oracle-backed JSON Duality and access-control evidence.
 
-## Task 1: Open a service request
+## Task 1: Review the request list
 
-1. Open **Service Request Workbench**.
-2. Use the status filter to narrow the list, or leave it on **All Statuses**.
-3. Click a service request row to expand the detail panel.
+Perform the following set of steps to move from the service request list into a detailed public-sector case or task.
 
-Expected result:
-- The row expands into a detail panel.
-- The panel shows tabs for **Relational**, **JSON Duality View**, and **Service Task Route**.
+1. Click **Service Request Workbench** in the sidebar.
+2. Review the visible request list, including request number, resident, location, status, line count, and service value.
+3. Use **Prev** or **Next** if you need to move through the visible request pages.
+4. Identify one request that should be opened for detail review.
 
-## Task 2: Compare the same data in three views
+    ![Service request workspace with request list and visible request columns](images/service-request-workspace.png)
 
-1. Review the **Relational** tab.
-2. Click **JSON Duality View** and review the nested document.
-3. Click **Service Task Route** and compare the route or spatial task context.
-4. Use the copy control on the JSON tab if you want to show the document outside the app.
+The workbench helps the agency move from an aggregate service-pressure signal to the individual requests that need review.
 
-Expected result:
-- The same request can be explained as relational operational data, a JSON document, and a routed service task.
-- The Oracle evidence panel connects the scene to JSON relational duality views, ACID consistency, and VPD row-level security.
+## Task 2: Inspect the request detail
 
-## Task 3: Why this matters?
+Perform the following set of steps to inspect the request-level evidence available on the page.
 
-Public-service applications often need both transactional integrity and document-style APIs. JSON relational duality lets the SLED team support app developers and operators without duplicating or syncing separate data stores.
+1. Click a service request row, such as **#113881**.
+2. Review the expanded **Same data - three views** panel.
+3. Compare resident, location, service value, route cost, and line-count context.
+
+    ![Expanded service request detail with request-level fields](images/service-request-relational-detail.png)
+
+The request-level detail gives the staff member the basic context needed before they inspect line items, escalate, or route the request.
+
+## Task 3: Compare line-level service evidence
+
+Perform the following set of steps to inspect the public-service evidence attached to the request.
+
+1. Keep the request expanded.
+2. Review the line-level service table.
+3. Compare public service, public program, category, quantity, estimated value, and line value fields.
+4. Use the expanded detail to explain what a staff member would inspect before escalating or routing the request.
+
+    ![Expanded service request detail with line-level public program evidence](images/service-request-json-duality.png)
+
+The expanded row connects the request table to line-level service evidence without sending the user to another application. This is the visible decision point in the scene: the staff member can inspect the request and the related service lines before choosing the next action.
+
+## Task 4: Connect the row detail to Oracle evidence
+
+Perform the following set of steps after the business workflow is clear.
+
+1. Keep the request row expanded.
+2. Click **Show Oracle Internals**.
+3. Review the Oracle evidence for JSON Duality, VPD, SQL access, and the governed service request model.
+4. Explain that Oracle keeps the operational record, document-oriented application pattern, and access control close to the same data foundation.
+
+    ![Oracle Internals evidence for the Service Request Workbench](images/service-request-oracle-evidence.png)
+
+Public-service applications often need transactional integrity, document-style application access, and governed row-level permissions. This scene shows how one Oracle data model can support the staff workflow without duplicating or syncing separate databases.
+
+*You can move to the next scene.*
 
 ## Credits & Build Notes
-- **Author** - Oracle LiveStack Team
-- **Last Updated By/Date** - Oracle LiveStack Team, 2026-05-13
-- **Screenshot** - Captured from `http://158.178.146.34:8505/?page=orders`.
+- **Author** - Oracle LiveLabs Team
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-18

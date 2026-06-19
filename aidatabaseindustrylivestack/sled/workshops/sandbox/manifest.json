@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "State and Local Government Service Operations LiveStack",
+  "workshoptitle": "State and Local Government Service Operations LiveStack Guide",
   "help": "livelabs-help-database_us@oracle.com",
   "tutorials": [
     {
@@ -11,11 +11,11 @@
       "filename": "../../introduction/introduction.md"
     },
     {
-      "title": "Scene 1: SLED Operations Brief",
+      "title": "Scene 1: Welcome and Demo Orientation",
       "filename": "../../scene-1-sled-operations-brief/scene-1-sled-operations-brief.md"
     },
     {
-      "title": "Scene 2: Seer 26ai Data Foundation",
+      "title": "Scene 2: Data Foundation",
       "filename": "../../scene-2-seer-26ai-data-foundation/scene-2-seer-26ai-data-foundation.md"
     },
     {
@@ -43,7 +43,7 @@
       "filename": "../../scene-8-demand-and-capacity-analytics/scene-8-demand-and-capacity-analytics.md"
     },
     {
-      "title": "Scene 9: Ask Seer Operations Data",
+      "title": "Scene 9: Ask State and Local Government Data",
       "filename": "../../scene-9-ask-seer-operations-data/scene-9-ask-seer-operations-data.md"
     },
     {
