@@ -2,11 +2,11 @@
 
 ## Introduction
 
-PeakGear has already moved operational data through the AI Lakehouse medallion process. Return events, customer accounts, orders, receipts, stores, refund methods, promotions, and channel activity can start as separate source records. Bronze preserves those source-shaped records, Silver standardizes and connects them, and Gold can serve a relationship model that the business can investigate.
+**PeakGear** has already moved operational data through the **AI Lakehouse** medallion process. This scene shifts from product and demand views into relationship analysis, where the important evidence is how records connect.
 
 The business problem is that return risk is rarely obvious in a single row. One return may look normal. A shared receipt, repeated refund method, connected account, store origin, promotion pattern, or outlet channel may only become suspicious when the relationships are visible together. If PeakGear only looks at isolated return transactions, service teams may miss coordinated behavior and operations teams may not know which cases deserve priority.
 
-**Returns Risk Network** shows a graph-based Serve Data outcome from the AI Lakehouse. The graph turns curated Gold-layer entities and relationships into an investigation view. Users can start with a specific return-risk entity, inspect connected accounts and refund patterns, adjust relationship depth, and run graph queries that rank review-priority hubs.
+**Returns Risk Network** shows a graph-based Serve Data outcome. A graph represents entities as nodes and relationships as connections, which helps reviewers see patterns that are hard to spot in rows alone.
 
 Estimated Time: **10 minutes**
 
@@ -24,6 +24,8 @@ In this scene, you will:
 
 ![Sidebar navigation showing Serve Data and Returns Risk Network](images/task-1-open-returns-risk-network.png)
 
+Perform the following set of steps to open **Returns Risk Network**:
+
 1. In the left sidebar, expand **Serve Data**.
 2. Select **Returns Risk Network**.
 3. Confirm that the page title is **Returns Risk Network**.
@@ -34,6 +36,8 @@ This page is a Serve Data experience. The return-risk graph is not another data-
 
 ![Returns Risk Network selected entity and relationship graph](images/task-2-review-selected-return-risk-entity.png)
 
+Perform the following set of steps to review a return-risk entity:
+
 1. Review the selected entity **ACCT-mreed45-yahoo-com**.
 2. Review the risk metrics: **Exposure** `$1,302.00`, **Review Priority** `96`, **Return Risk Score** `96.0%`, **Relationships** `13`, **Nodes** `84`, and **Edges** `95`.
 3. Review the connected graph for related accounts, receipts, stores, and refund methods.
@@ -41,9 +45,13 @@ This page is a Serve Data experience. The return-risk graph is not another data-
 
 The graph makes return context visible. Instead of asking a user to manually compare account rows, receipt rows, store rows, and refund rows, the Serve Data view shows connected behavior around a selected entity.
 
+**Note:** Sample values may change after data refreshes or rebuilds. Focus on the expected result pattern and the business takeaway, not the exact values.
+
 ## Task 3: Adjust graph depth
 
 ![Graph depth controls with three-hop view selected](images/task-3-focus-graph-depth.png)
+
+Perform the following set of steps to adjust graph depth and compare connected evidence:
 
 1. Use **Graph Depth (Hops)** to select **3**.
 2. Review how the graph changes as the relationship radius changes.
@@ -55,6 +63,8 @@ Graph depth controls how far the investigation moves from the selected entity. A
 
 ![Graph Query Explorer with Review Priority Hubs selected](images/task-4-open-graph-query-explorer.png)
 
+Perform the following set of steps to open the **Graph Query Explorer**:
+
 1. Scroll to **Graph Query Explorer**.
 2. Select **Review Priority Hubs**.
 3. Use this query to rank return entities by graph degree, review score, and return value exposure.
@@ -65,12 +75,16 @@ The query explorer shows that the graph is not only a visualization. PeakGear ca
 
 ![Review Priority Hubs result table showing ranked return entities](images/task-5-review-priority-hubs-results.png)
 
+Perform the following set of steps to review priority hub results:
+
 1. Click **Run Query**.
 2. Confirm that the query returns **20 rows**.
 3. Review the top-ranked entities, including **ACCT-avery-foster-gmail-com** with degree `15`, review score `94`, and total amount `1,278`, and **ACCT-mreed45-yahoo-com** with degree `13`, review score `96`, and total amount `1,302`.
 4. Explain how a review team could use this output to prioritize connected return-risk cases.
 
 The result turns graph relationships into a prioritized worklist. This is the operational payoff: graph analytics can find high-degree, high-score return hubs that would be difficult to identify from separate reports.
+
+**Note:** Sample values may change after data refreshes or rebuilds. Focus on the expected result pattern and the business takeaway, not the exact values.
 
 ## Conclusion: Business Outcome
 

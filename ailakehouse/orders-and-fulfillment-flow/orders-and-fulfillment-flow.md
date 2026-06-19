@@ -2,11 +2,11 @@
 
 ## Introduction
 
-PeakGear has already used the AI Lakehouse process to prepare orders, customers, products, inventory, and fulfillment-site data. Bronze keeps the operational source events, Silver standardizes order and customer keys, and Gold can serve an order data product that supports both application-style views and operational analysis.
+**PeakGear** has already used the **AI Lakehouse** process to prepare orders, customers, products, inventory, and fulfillment-site data. This scene shows how one order can be viewed in several useful shapes without creating separate copies.
 
 The business challenge is handoff friction. An ecommerce order may look like a JSON document to the application team, a relational transaction to the database team, a shipment or transfer route to fulfillment, and a customer-service case to support. If each team works from a separate copy, the business creates sync delays, conflicting answers, and expensive integration logic.
 
-**Orders & Fulfillment Flow** shows how the AI Lakehouse can serve one trusted operational order view in multiple forms. A user can inspect the order table, open the same order as relational detail, view it as a JSON Relational Duality document, and review its transfer route. The business outcome is faster order investigation without duplicating the underlying data.
+**Orders & Fulfillment Flow** shows how the AI Lakehouse can serve one trusted operational order view in multiple forms. JSON Duality means application-style JSON and relational tables stay connected to the same source of truth.
 
 Estimated Time: **10 minutes**
 
@@ -24,6 +24,8 @@ In this scene, you will:
 
 ![Sidebar navigation showing Serve Data and Orders & Fulfillment Flow](images/open-orders-flow.png)
 
+Perform the following set of steps to open **Orders & Fulfillment Flow**:
+
 1. In the left sidebar, expand **Serve Data**.
 2. Select **Orders & Fulfillment Flow**.
 3. Confirm that the page title is **Orders & Fulfillment Flow**.
@@ -34,6 +36,8 @@ This page shows a served order data product. The user is no longer cleaning orde
 
 ![Orders table with order 2347 highlighted](images/order-row-2347.png)
 
+Perform the following set of steps to select the demo order:
+
 1. Review the order table.
 2. Use **Order 2347** as the demo point.
 3. Confirm the visible order details: **Riley Garcia**, **Dallas, TX**, **completed**, **1 item**, **$32.44**, fulfilled by **PeakGear Dallas Store 001**.
@@ -41,9 +45,13 @@ This page shows a served order data product. The user is no longer cleaning orde
 
 This order is intentionally simple. That makes it useful for showing how the same trusted transaction can be viewed through different technical interfaces without becoming a different copy of data.
 
+**Note:** Sample values may change after data refreshes or rebuilds. Focus on the expected result pattern and the business takeaway, not the exact values.
+
 ## Task 3: Review relational order detail
 
 ![Order 2347 expanded with relational, JSON Duality View, and Transfer Route tabs](images/order-relational-detail.png)
+
+Perform the following set of steps to review relational order detail:
 
 1. Start on the **Relational** tab.
 2. Review the customer, location, total, and service-fee fields.
@@ -56,6 +64,8 @@ The relational view is useful for operational reporting and database analysis. I
 
 ![Order 2347 shown through the JSON Relational Duality View](images/order-json-duality-view.png)
 
+Perform the following set of steps to compare the JSON Duality view:
+
 1. Select **JSON Duality View**.
 2. Review the generated JSON document for **Order 2347**.
 3. Confirm that the JSON document still represents the same transaction: status **completed**, total **32.44**, and one nested item.
@@ -63,9 +73,13 @@ The relational view is useful for operational reporting and database analysis. I
 
 This is a practical Serve Data outcome. Application teams can work with JSON documents, operations teams can work with relational tables, and the business avoids drift between copies.
 
+**Note:** Sample values may change after data refreshes or rebuilds. Focus on the expected result pattern and the business takeaway, not the exact values.
+
 ## Task 5: Review the transfer route
 
 ![Order 2347 Transfer Route view showing Dallas store to customer route](images/order-transfer-route.png)
+
+Perform the following set of steps to review the transfer route:
 
 1. Select **Transfer Route**.
 2. Review the route from **PeakGear Dallas Store 001** to **Riley Garcia - Dallas, TX**.
@@ -73,6 +87,8 @@ This is a practical Serve Data outcome. Application teams can work with JSON doc
 4. Explain that this route uses the same curated order, customer, and fulfillment-site context shown in the earlier views.
 
 The route view connects order operations to spatial context. PeakGear can use order, customer, fulfillment, and location data together instead of asking a user to reconcile separate order and mapping systems.
+
+**Note:** Sample values may change after data refreshes or rebuilds. Focus on the expected result pattern and the business takeaway, not the exact values.
 
 ## Conclusion: Business Outcome
 

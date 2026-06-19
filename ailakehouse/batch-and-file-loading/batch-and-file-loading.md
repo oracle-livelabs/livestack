@@ -2,11 +2,11 @@
 
 ## Introduction
 
-PeakGear does not only depend on live event streams. A large part of retail still arrives as files: product master updates from merchandising, POS order extracts from stores, inventory snapshots from fulfillment sites, and product image manifests from content operations.
+**PeakGear** does not only depend on live event streams. Streaming handles data that arrives continuously, while batch loading handles files that arrive as a set, such as product master updates or inventory snapshots.
 
 Without a governed file loading path, these files often turn into manual spreadsheet work, one-off scripts, or direct updates into reporting tables. That creates familiar retail problems: product descriptions drift from the webshop, inventory teams argue over which snapshot is current, planners cannot explain why an order total changed, and AI experiences are grounded in data that no one can trace back to the original source file.
 
-This scene shows how PeakGear lands batch files into the Bronze layer before anything is cleaned or reshaped. Bronze keeps the source-shaped data visible and traceable. Later processing can standardize SKUs, validate prices, enrich categories, connect image metadata, and publish Silver and Gold data products for the webshop, operations dashboards, product discovery, fulfillment analysis, and AI agents.
+This scene shows how PeakGear lands batch files into the Bronze layer before anything is cleaned or reshaped. **Bronze** is intentionally not polished yet; it preserves the original file shape so the source remains traceable.
 
 In this walkthrough, you will load `product_master_raw.csv` as the worked example. It is a good retail batch file because it contains the catalog attributes PeakGear needs before products can be searched, recommended, priced, joined to inventory, and used in curated data products.
 
@@ -30,6 +30,8 @@ In this scene, you will:
 
 ![Sidebar navigation showing Ingest and Batch & File Loading](images/task-1-open-batch-file-loading.png)
 
+Perform the following set of steps to open the **Batch & File** Loading demo:
+
 1. In the left sidebar, expand **Ingest**.
 2. Select **Batch & File Loading (Data Studio)**.
 3. Confirm that the page title is **Batch & File Loading (Data Studio)** before continuing.
@@ -37,6 +39,8 @@ In this scene, you will:
 ## Task 2: Open Data Studio from the LiveStack page
 
 ![LiveStack page showing the Open Data Studio action](images/task-2-open-data-studio.png)
+
+Perform the following set of steps to open **Data Studio** from the LiveStack page:
 
 1. Click **Open Data Studio**.
 2. Sign in to Database Actions with the displayed PG username and password.
@@ -46,6 +50,8 @@ In this scene, you will:
 
 ![Database Actions Data Studio page showing the Load Data tile](images/task-3-choose-data-load.png)
 
+Perform the following set of steps to choose **Data Load** in **Database Actions**:
+
 1. In Database Actions, open **Data Studio**.
 2. Select **Data Load**.
 3. Click the **Load Data** tile to start a new loading job.
@@ -53,6 +59,8 @@ In this scene, you will:
 ## Task 4: Enter the Object Storage public URL
 
 ![Data Load page showing Cloud Store and public URL field](images/task-4-enter-object-storage-url.png)
+
+Perform the following set of steps to enter the **Object Storage** public URL:
 
 1. Select **Cloud Store**.
 2. Copy the Object Storage prefix from the LiveStack page.
@@ -63,6 +71,8 @@ In this scene, you will:
 ## Task 5: Select the product master CSV
 
 ![Cloud Store file list showing product_master_raw.csv](images/task-5-select-product-master-file.png)
+
+Perform the following set of steps to select the product master CSV for this walkthrough:
 
 1. In the Cloud Store file list, locate `product_master_raw.csv`.
 2. Select only `product_master_raw.csv` for this walkthrough.
@@ -81,6 +91,8 @@ The batch file set used by this scene is:
 
 ![Data Load job showing product_master_raw.csv and Review Settings](images/task-6-add-file-review-settings.png)
 
+Perform the following set of steps to add the file and review load settings:
+
 1. Double-click `product_master_raw.csv`, or drag it into the loading job panel.
 2. Confirm that the job card shows `product_master_raw.csv`.
 3. Click **Review Settings**.
@@ -88,6 +100,8 @@ The batch file set used by this scene is:
 ## Task 7: Confirm the Bronze table name and CSV header
 
 ![Review Settings dialog showing PRODUCT_MASTER_RAW and header row settings](images/task-7-review-target-table.png)
+
+Perform the following set of steps to confirm the Bronze table name and CSV header settings:
 
 1. Confirm that **Table Name** is `PRODUCT_MASTER_RAW`.
 2. Confirm that **Column header row** is checked.
@@ -98,6 +112,8 @@ The batch file set used by this scene is:
 
 ![Preview dialog showing rows from product_master_raw.csv](images/task-8-preview-product-master-file.png)
 
+Perform the following set of steps to preview the product master file before loading it:
+
 1. Select **Preview**.
 2. Confirm that the preview shows product fields such as source system, SKU, product name, brand, category, price, and launch date.
 3. Close the settings dialog after the preview and table settings look correct.
@@ -105,6 +121,8 @@ The batch file set used by this scene is:
 ## Task 9: Start the load
 
 ![Data Load job showing the Start button for product_master_raw.csv](images/task-9-start-load.png)
+
+Perform the following set of steps to start the file load:
 
 1. Confirm that the job card still shows `product_master_raw.csv`.
 2. Click **Start**.
@@ -114,6 +132,8 @@ The batch file set used by this scene is:
 ## Task 10: Verify the loaded Bronze table
 
 ![Database Actions Launchpad showing SQL Worksheet](images/task-10-open-sql-worksheet.png)
+
+Perform the following set of steps to verify the loaded **Bronze** table:
 
 1. Return to the Database Actions Launchpad.
 2. Open **Development**.

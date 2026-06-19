@@ -2,11 +2,11 @@
 
 ## Introduction
 
-PeakGear has already moved fulfillment, inventory, customer, order, and demand data through the AI Lakehouse medallion process. Bronze captures the source-shaped records, Silver standardizes locations and operational keys, and Gold can serve a spatial fulfillment data product that business users can inspect directly.
+**PeakGear** has already moved fulfillment, inventory, customer, order, and demand data through the **AI Lakehouse** medallion process. This scene shows how location becomes part of the governed data story, not a separate map-only exercise.
 
 The business challenge is location. A product may be available somewhere in the network, but PeakGear still needs to know which store or distribution site can serve the customer, how much capacity is available, where pending transfers are building up, and which service zones are under pressure. Without a governed spatial layer, teams would have to export coordinates into separate mapping tools, reconcile those results with inventory reports, and then manually translate the answer back into fulfillment actions.
 
-**Store Fulfillment Map** shows how spatial data becomes a Serve Data outcome from the AI Lakehouse. Oracle AI Database can manage location as a native data type through Oracle Spatial, including points, routes, zones, and demand regions. That means the same governed Gold-layer foundation can support proximity analysis, service coverage, customer-density overlays, and regional fulfillment decisions without moving the data into a separate geospatial platform.
+**Store Fulfillment Map** shows how spatial data becomes a Serve Data outcome. Spatial data is location-aware data, such as sites, routes, zones, and demand regions.
 
 Estimated Time: **10 minutes**
 
@@ -24,6 +24,8 @@ In this scene, you will:
 
 ![Sidebar navigation showing Serve Data and Store Fulfillment Map](images/open-store-fulfillment-map.png)
 
+Perform the following set of steps to open Store Fulfillment Map:
+
 1. In the left sidebar, expand **Serve Data**.
 2. Select **Store Fulfillment Map**.
 3. Confirm that the page title is **Store Fulfillment Map**.
@@ -34,6 +36,8 @@ This page is a Serve Data experience. The user is not preparing raw location dat
 
 ![Store Fulfillment Sites table with live capacity and pending transfer counts](images/fulfillment-sites-table.png)
 
+Perform the following set of steps to learn how to navigate the **Store Fulfillment Map**:
+
 1. Review the summary cards at the top of the page: **50 Active Sites**, **995.2K Total Capacity**, **1.7K Pending Transfers**, and **50 Capacity Alerts**.
 2. Scroll to **Store Fulfillment Sites**.
 3. Use **PeakGear Austin Store 004** as the demo point.
@@ -42,9 +46,13 @@ This page is a Serve Data experience. The user is not preparing raw location dat
 
 The table turns spatial fulfillment data into operational context. A user can see where capacity exists, where transfers are accumulating, and which sites may need attention before a fulfillment problem becomes visible to customers.
 
+**Note:** Sample values may change after data refreshes or rebuilds. Focus on the expected result pattern and the business takeaway, not the exact values.
+
 ## Task 3: Inspect spatial layers
 
 ![Store Fulfillment Map spatial layer controls](images/spatial-layer-controls.png)
+
+Perform the following set of steps to inspect spatial layers:
 
 1. Use **Map Layers** to review the available spatial overlays.
 2. Toggle layers such as **Store and DC Sites**, **Transfer Routes**, **Service Zones**, **H3 Density Grid**, and **Demand Regions**.
@@ -54,6 +62,8 @@ The table turns spatial fulfillment data into operational context. A user can se
 The important point is that spatial is not an isolated add-on. Oracle Spatial lets PeakGear keep location data with the governed operational data. That allows the Gold layer to serve a map, a dashboard, a routing query, or a machine-learning feature from the same trusted foundation.
 
 ## Task 4: Connect the map to fulfillment decisions
+
+Perform the following set of steps to connect the map to fulfillment decisions:
 
 1. Use **PeakGear Austin Store 004** and **PeakGear Dallas Store 001** as comparison points.
 2. Explain that a fulfillment planner can evaluate capacity, pending transfers, and nearby demand before deciding where to route or rebalance.

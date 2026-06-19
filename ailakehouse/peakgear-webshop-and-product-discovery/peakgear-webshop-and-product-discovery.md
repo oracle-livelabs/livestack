@@ -2,9 +2,9 @@
 
 ## Introduction
 
-PeakGear customers do not always shop with clean product names, SKUs, or catalog categories. They search by need: "trail running shoes for rainy weather", "something like this photo", or "I have a problem with the grip tape I ordered." If the webshop only supports keyword search and disconnected customer support, shoppers may miss the right product, abandon the session, or wait for manual service follow-up.
+**PeakGear** customers do not always shop with clean product names, SKUs, or catalog categories. This scene moves from internal business users to a customer-facing AI experience.
 
-The AI Lakehouse changes that experience. Product master data, inventory, images, orders, and demand signals can enter through the earlier ingest paths, move through Bronze, Silver, and Gold, and then serve an AI-powered shopping experience. The **PeakGear Webshop** demonstrates how curated Gold-layer product data can support semantic text search, visual product discovery, and an Ask PeakGear customer-service agent that is grounded in order and product data.
+The **AI Lakehouse** changes that experience. The shopper sees search and support features, but those features depend on prepared product, image, inventory, and order data behind the scenes.
 
 The business outcome is a better retail experience: shoppers can find products by intent, use images as a search input, and resolve product issues through an agent workflow that can verify order context and recommend a replacement path.
 
@@ -24,6 +24,8 @@ In this scene, you will:
 
 ![Sidebar navigation showing Serve AI and PeakGear Webshop](images/task-1-open-peakgear-webshop.png)
 
+Perform the following set of steps to open **PeakGear Webshop**:
+
 1. In the left sidebar, expand **Serve AI**.
 2. Select **PeakGear Webshop**.
 3. Confirm that the page title is **PeakGear Webshop**.
@@ -33,6 +35,8 @@ This page is a Serve AI outcome because the shopper experience uses governed pro
 ## Task 2: Search by shopper intent
 
 ![PeakGear Webshop semantic search field with trail running query](images/task-2-semantic-search.png)
+
+Perform the following set of steps to search by shopper intent:
 
 1. In **Meaning Search**, enter:
 
@@ -50,6 +54,8 @@ Semantic search turns product discovery into an intent-based experience. The web
 
 ![PeakGear Webshop visual search upload and similar product results](images/task-3-visual-search.png)
 
+Perform the following set of steps to search with a product image:
+
 1. In **Visual Search**, click **Upload JPG or PNG**.
 2. Upload a product image, such as the Ironkinetic grip tape image used in this demo.
 3. Click **Find Similar**.
@@ -57,9 +63,13 @@ Semantic search turns product discovery into an intent-based experience. The web
 
 Visual search shows how images can become part of the same governed product discovery experience. Product images are not just static assets; after the medallion process prepares the catalog and image metadata, embeddings can help customers find similar items from a photo.
 
+**Note:** Sample values may change after data refreshes or rebuilds. Focus on the expected result pattern and the business takeaway, not the exact values.
+
 ## Task 4: Use Ask PeakGear for an order issue
 
 ![Ask PeakGear product support flow for order 7820](images/task-4-ask-peakgear-order-7820.png)
+
+Perform the following set of steps to use Ask PeakGear for an order issue:
 
 1. Click **Ask PeakGear** in the lower-right corner.
 2. Enter:
@@ -83,6 +93,8 @@ Please use DuraHold Max.
 5. Review the final response confirming that the replacement will be processed for order **7820**.
 
 Ask PeakGear demonstrates why the webshop is more than a search page. A support agent can use order context, product context, and replacement logic from the governed AI Lakehouse foundation to move from a customer problem to an actionable service outcome.
+
+**Note:** Sample values may change after data refreshes or rebuilds. Focus on the expected result pattern and the business takeaway, not the exact values.
 
 ## Conclusion: Business Outcome
 
