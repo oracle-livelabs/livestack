@@ -69,6 +69,8 @@ Perform the following set of steps to connect the transaction record to service 
 4. Compare the current assigned center with the recommended center.
 5. Review the distance difference, capacity coverage, service coverage, and reason score.
 
+The `optimal_fulfillment` function is the database recommendation source for this panel. Given an order id, it reads the current assigned center, customer location, requested products and quantities, active service centers, and available inventory by center and product. It then uses Oracle Spatial distance in kilometers plus service coverage, available units, capacity margin, and a balanced score to return the top recommended centers and the currently assigned center for comparison.
+
 For transaction **#424183**, the current assigned center is **West Jordan Mountain Client Center** in **West Jordan, Utah**. The recommended center is **Edwardsville Central Operations Site** in **Edwardsville, Kansas**. The recommendation has full service coverage for the transaction, is **670.21 km** from the client, has an estimated completion time of **8.4 hours**, and is **925.79 km** closer than the current assigned center. The recommendation score is **85.0**. The current assigned center covers only **2 of 4** product lines and ranks **11**, so this is a strong example of the application detecting a better operational routing decision.
 
 **Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
