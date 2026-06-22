@@ -10,7 +10,7 @@ This runbook supports the **Seer Bank Finance LiveStack Demo**. The demo shows h
 
 In the demo, Seer Bank uses Oracle AI Database to connect financial products, client transactions, fraud and Anti-Money Laundering (AML) signals, regulatory and market monitoring, financial crime networks, client service coverage, predictive risk analytics, governed conversational data access, and agent-assisted operations.
 
-The demo follows one financial-intelligence journey: risk signals emerge, products and institutions are tied to exposure, fraud networks reveal connected evidence, service and transaction workflows show operational impact, and analytics, natural-language SQL, and AI agents help teams act from the same governed data foundation.
+The demo follows one financial-intelligence journey: risk signals emerge, products and institutions are tied to exposure, fraud networks reveal connected evidence, service and transaction workflows show operational impact, and analytics, natural-language SQL, and AI agents help teams act from the same governed data foundation. The updated service and transaction scenes also show runtime JSON Relational Duality and Oracle Spatial logic directly in the application experience, including nearest-center and recommended-routing decisions.
 
 Estimated Demo Time: **90 minutes**
 
@@ -30,11 +30,11 @@ Before you begin, confirm that you can open the running Seer Bank Finance LiveSt
 
 - **Scene 1:** Welcome and Demo Orientation.
 - **Scene 2:** Data Foundation.
-- **Scene 3:** Risk & Operations Dashboard.
+- **Scene 3:** Risk & Operations Dashboard with product JSON Relational Duality.
 - **Scene 4:** Risk Signal Intelligence.
 - **Scene 5:** Financial Crime Network.
-- **Scene 6:** Client Service & SLA Coverage.
-- **Scene 7:** Transaction & Case Operations.
+- **Scene 6:** Client Service & SLA Coverage with nearest-center spatial routing.
+- **Scene 7:** Transaction & Case Operations with service-center recommendation.
 - **Scene 8:** Predictive Risk, Capacity & Revenue.
 - **Scene 9:** Governed Data Copilot.
 - **Scene 10:** AI Operations Agent Console.
@@ -51,4 +51,4 @@ Before you begin, confirm that you can open the running Seer Bank Finance LiveSt
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-28
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-22
