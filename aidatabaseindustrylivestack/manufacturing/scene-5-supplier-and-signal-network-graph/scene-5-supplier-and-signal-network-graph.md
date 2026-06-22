@@ -25,9 +25,10 @@ In this scene, you will:
 
 1. Click **Supplier & Signal Network Graph** in the sidebar.
 2. Review the graph depth controls: **1 Hop**, **2 Hops**, **3 Hops**, **4 Hops**, and **5 Hops**.
-3. Review the search field for supplier, work order, machine, or risk lookup.
-4. Review **Graph Entities**.
-5. Open or review the **Oracle Internals** sidebar on the right.
+3. Use the helper text to explain that hops are dependency distance; more hops reveal additional supplier, logistics, machine, and work-order handoffs where delay can propagate.
+4. Review the search field for supplier, work order, machine, or risk lookup.
+5. Review **Graph Entities**.
+6. Open or review the **Oracle Internals** sidebar on the right.
 
     ![Supplier and production-risk graph workspace with depth controls, entity list, selected node metrics, findings, and graph canvas highlighted](images/graph-workspace-controls.png)
 
@@ -37,8 +38,9 @@ In the current demo dataset, the page shows **39** graph entities. Visible nodes
 
 1. In the entity list, locate **Supplier Delay Signal - PCB Rev C**.
 2. Review the node type, signal reach, risk score, link count, connected nodes, and production relationships.
-3. Compare it with nearby risk nodes such as **Servo Drive Controller PCB Rev C**, **WO-4501 - AX-400 Servo Drive Build**, **AX-400 High Scrap Rate**, and **CircuitForge Electronics Supplier Desk**.
-4. Change the graph depth from **1 Hop** to **2 Hops**, **3 Hops**, or **5 Hops** to explain how relationship scope changes.
+3. Inspect the risk score explanation in the selected node panel before comparing connected records.
+4. Compare it with nearby risk nodes such as **Servo Drive Controller PCB Rev C**, **WO-4501 - AX-400 Servo Drive Build**, **AX-400 High Scrap Rate**, and **CircuitForge Electronics Supplier Desk**.
+5. Change the graph depth from **1 Hop** to **2 Hops**, **3 Hops**, or **5 Hops** to explain how relationship scope changes.
 
     ![Supplier Delay Signal PCB Rev C node, risk findings, and connected production relationships highlighted](images/production-risk-node-example.png)
 
@@ -59,4 +61,4 @@ You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-09
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-22

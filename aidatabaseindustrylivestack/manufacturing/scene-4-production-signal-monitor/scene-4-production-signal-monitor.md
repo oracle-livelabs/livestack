@@ -33,6 +33,8 @@ In this scene, you will:
 
 In the current demo dataset, the page shows **5.0K** indexed production signals. Visible examples include quality inspection scrap findings, machine telemetry vibration alerts, procurement risk updates, and rework notes. Use this opening view to explain that the AX-400 recovery story is driven by many operational signals, not by a single dashboard number.
 
+The metric labels now include definitions for dollar-value proxies and match percentages, so users can explain what the visible amount and percentage represent before moving into the signal feed.
+
 ## Task 2: Run manufactured-part semantic search
 
 1. Click the **servo drive controller capacity** example query chip, or enter `servo drive controller capacity` in the search field.
@@ -51,6 +53,7 @@ This is the data point to emphasize. A production supervisor can search for the 
 2. Review signal source, urgency, reach, score, sentiment, and the production issue described in each card.
 3. Focus on examples such as elevated scrap, abnormal vibration, constrained raw material allocation, or pending quality engineering corrective action.
 4. Use the action labels and scene transition to explain where the operator could go next: supplier graph, plant capacity map, work orders, OML analytics, Ask Data, or the agent console.
+5. Review the visible definitions for reach, score, urgency, and sentiment. Where a scale is shown, use that scale rather than adding a separate calculation.
 
     ![Production signal cards with urgency and manufacturing evidence highlighted](images/production-signal-cards.png)
 
@@ -60,4 +63,4 @@ You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-09
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-22

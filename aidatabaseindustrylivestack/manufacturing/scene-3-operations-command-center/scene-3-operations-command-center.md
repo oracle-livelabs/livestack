@@ -35,9 +35,11 @@ In this scene, you will:
 
 In the current demo dataset, the page shows **3.0K** work orders logged, about **$12.06M** in order value over the last 30 days, **474** critical production signals, **187** high-demand manufactured parts, and **2** completed agent actions. Use those numbers to frame the command center as a triage surface: the user can see work-order load, value exposure, signal pressure, watched parts, and AI activity in one place.
 
+The top summary now also exposes operating indicators such as OEE load, scrap watch, throughput, demand variance, and production rate. Momentum categories explain how critical, escalating, rising, and stable signals map to urgency levels.
+
 ## Task 2: Interpret signal velocity and order value
 
-1. Click a signal velocity time range such as **24h**, **48h**, or **7d**.
+1. Click a signal velocity time range such as **24h**, **48h**, **7d**, **30d**, or **1y**.
 2. Review how the signal chart changes by time bucket.
 3. Review the order value chart by part category.
 4. Focus on visible categories such as **Industrial IoT**, **Electronics**, **Industrial Automation**, **Metal Fabrication**, and **Mobility Components**.
@@ -55,6 +57,7 @@ This is the business story to emphasize: manufacturing users need to know where 
 
 3. Focus on rows such as **High-Torque Maintenance Kit M310-079**, **Smart Telemetry Gateway A900-007**, or **Low-Variance Sensor Board A900-042**.
 4. Review the columns for category, supplier or brand, signal count, urgency, views, and next operating context.
+5. Inspect the accessible part fields to compare supplier, category, signal count, urgency, view activity, and the next operating action.
 
 The high-demand parts table turns the KPI story into a set of manufacturing decisions. A plant manager or production supervisor can move from "critical production signals are high" to a specific manufactured part, supplier, or production line that needs review.
 
@@ -62,4 +65,4 @@ You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-09
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-22

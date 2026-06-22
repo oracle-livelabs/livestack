@@ -29,6 +29,7 @@ In this scene, you will:
 3. Review the five analytics tabs: **Demand Surge**, **Customer Segments**, **Order Value Forecast**, **Part Clusters**, and **Capacity Risk**.
 4. Confirm that **Demand Surge** is selected.
 5. Review the scoring window, **Refresh** control, bar chart, and prediction table.
+6. Use the updated chart layout and hover details to compare urgency, uplift, and predicted values; the app provides definitions for those terms in the view.
 
     ![Demand Surge predictions with active tab, chart, and prediction table highlighted](images/demand-surge-predictions.png)
 
@@ -41,6 +42,7 @@ Use this opening view to set the scene: this page is not a separate data science
 3. Review the repeat-order risk distribution.
 4. Review **Segment Summary** and **Top customer accounts by RFM score**.
 5. Optionally click a segment filter to focus the account list.
+6. Use the color mapping and legend to tie segment colors in the chart to the segment values shown below it.
 
     ![Customer Segments tab with segment distribution and top accounts highlighted](images/customer-segments.png)
 
@@ -84,4 +86,4 @@ You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-09
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-22
