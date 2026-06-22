@@ -2,26 +2,23 @@
 
 ## Introduction
 
-A plant capacity planner, production supervisor, supply chain analyst, field operations lead, or manufacturing operations leader uses this page to understand where plant capacity, demand regions, work-order routes, inventory constraints, and customer risk intersect. This persona needs a geographic operating view, not just a list of plants.
+**Plant Capacity and Routing Map** helps manufacturing teams decide where plant capacity, demand regions, work-order routes, inventory constraints, and customer risk intersect. The page gives users a geographic operating view of the AX-400 recovery path, not just a list of plants.
 
 Location-aware manufacturing decisions are difficult when plant sites, work-order routes, demand regions, capacity zones, and customer risk tiers live outside the operational data platform. Teams may export to a GIS tool, but then lose the connection to current work orders, capacity levels, access controls, and operational status.
 
-Oracle AI Database helps address these challenges by keeping spatial geometry and operational records together. In this scene, Oracle Spatial powers plant locations, routes, coverage zones, density grids, demand regions, and proximity context in the same application that manages the rest of the manufacturing data.
+**Oracle AI Database** helps address these challenges by keeping spatial geometry and operational records together. In this scene, **Oracle Spatial** powers plant locations, routes, coverage zones, density grids, demand regions, and proximity context in the same application that manages the rest of the manufacturing data.
 
-Estimated Time: 10 minutes
+Estimated Time: **10 minutes**
 
 ![Plant Capacity and Routing Map with spatial layers, capacity cards, and plant table](images/scene-6-plant-capacity-and-routing-map.png)
 
 ### Objectives
 
-In this scene, you will:
-- Review the **Plant Capacity and Routing Map** as a geographic operating view.
-- Interpret the active plant, available capacity, pending work order, and capacity alert cards.
-- Toggle map layers for customer commitment risk, plants and production lines, work-order routes, maintenance and capacity zones, account density, and capacity planning regions.
-- Compare map evidence with the plant table.
-- Explain how Oracle Spatial supports location-aware manufacturing decisions.
+In this scene, you will learn what location-aware manufacturing decision the map supports, what evidence the user should inspect, and what action the team may take next.
 
 ## Task 1: Review plant capacity priorities
+
+Perform the following set of steps to review plant capacity priorities and frame the map as the operating geography view for the AX-400 recovery plan:
 
 1. Click **Plant Capacity & Routing Map** in the sidebar.
 2. Review the stat cards across the top of the page.
@@ -33,6 +30,8 @@ In this scene, you will:
 Use this opening view to explain the manufacturing problem. The AX-400 recovery plan needs to know where production can be shifted, which plants have available capacity, how many work orders are pending, and where capacity alerts may block a schedule recovery action.
 
 ## Task 2: Toggle spatial layers
+
+Perform the following set of steps to compare spatial layers for customer commitment risk, production lines, work-order routes, maintenance zones, density, and capacity planning regions:
 
 1. Review the map and its layer controls.
 2. Toggle **Customer Commitment Risk**.
@@ -46,6 +45,8 @@ The layer controls make the same map useful for different questions. A plant man
 
 ## Task 3: Compare plant data with the map
 
+Perform the following set of steps to compare plant data with the map and connect visual location context to concrete operating records:
+
 1. Scroll to the **Plants** table.
 2. Review columns for center, location, type, supported products, capacity, pending work orders, load, and status.
 3. Use the table to connect map markers to concrete operating records.
@@ -53,7 +54,7 @@ The layer controls make the same map useful for different questions. A plant man
 
     ![Plants table and selected operating rows highlighted](images/plants-table.png)
 
-The value of Oracle AI Database is that location intelligence is not detached from the operational data. Oracle Spatial can support route coverage and proximity analysis while the application still shows capacity, pending work, alerts, and VPD-aware access from the same data foundation.
+The business value is that location intelligence is not detached from the operational data. Oracle Spatial can support route coverage and proximity analysis while the application still shows capacity, pending work, alerts, and VPD-aware access from the same data foundation.
 
 You can move to the next scene.
 
