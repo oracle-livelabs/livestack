@@ -2,11 +2,11 @@
 
 ## Introduction
 
-PeakGear has already captured source data into the AI Lakehouse and transformed it through the medallion process. Demand signals, product records, regional context, inventory, and catalog data are no longer isolated source extracts. They have been standardized and prepared so the business can search, compare, and act on trusted demand intelligence.
+**PeakGear** has already captured source data into the **AI Lakehouse** and transformed it through the medallion process. Demand sensing is where prepared data becomes an early-warning view for planners and merchandisers.
 
 The business challenge is timing. Retail demand can shift before traditional planning reports catch up. A product can trend because of social activity, product-page traffic, commerce behavior, store activity, or partner feeds. If those signals remain disconnected, PeakGear may react too late: inventory is not moved, campaigns miss the moment, substitutes are not prepared, and fulfillment teams only see pressure after customers are already affected.
 
-**Retail Demand Sensing** shows the Serve Data outcome of the AI Lakehouse. Data that started in Bronze, was cleaned and enriched in Silver, and was served through Gold can now support semantic search. Instead of searching only for exact keywords, a user can describe an intent, product need, or market condition and find relevant demand patterns. This works because the lakehouse has made the underlying product and demand data consistent enough to be matched, ranked, and explained.
+**Retail Demand Sensing** shows the **Serve Data** outcome of the AI Lakehouse. Semantic search means matching by meaning, not only by exact words, so users can find related products and signals even when the wording differs.
 
 Estimated Time: **10 minutes**
 
@@ -24,6 +24,8 @@ In this scene, you will:
 
 ![Sidebar navigation showing Serve Data and Retail Demand Sensing](images/task-1-open-retail-demand-sensing.png)
 
+Perform the following set of steps to open **Retail Demand Sensing**:
+
 1. In the left sidebar, expand **Serve Data**.
 2. Select **Retail Demand Sensing**.
 3. Confirm that the page title is **Retail Demand Sensing**.
@@ -33,6 +35,8 @@ This page is a Serve Data experience. The user is no longer ingesting or transfo
 ## Task 2: Search by demand intent
 
 ![Find Demand Patterns semantic search with trail running shoe demand results](images/task-2-search-demand-patterns.png)
+
+Perform the following set of steps to search by demand intent:
 
 1. In **Find Demand Patterns**, enter:
 
@@ -50,6 +54,8 @@ This search is semantic. The user describes the business intent rather than typi
 
 ![Demand Signal Feed showing filters, priority scores, reach, and recommended actions](images/task-3-review-demand-signal-feed.png)
 
+Perform the following set of steps to review the demand signal feed:
+
 1. Review the **Demand Signal Feed**.
 2. Review the filters for **Signal Intensity**, **Signal Sources**, and **Signal Feeds**.
 3. Review the first demand signal cards.
@@ -60,6 +66,8 @@ The feed translates source activity into business-readable demand intelligence. 
 ## Task 4: Search demand signals by intent
 
 ![Demand signal embedding search with waterproof jacket texas query results](images/task-4-search-demand-signals.png)
+
+Perform the following set of steps to search demand signals by intent:
 
 1. In the feed search field, enter:
 

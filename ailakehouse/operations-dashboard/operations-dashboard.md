@@ -2,13 +2,13 @@
 
 ## Introduction
 
-PeakGear has now moved data through the AI Lakehouse path. Streaming signals, customer changes, and file-based product data have landed in Bronze. Processing has cleaned, standardized, and enriched that data into reusable Silver and Gold outputs. The next question is practical: what can the business do with those trusted data products?
+PeakGear has now moved data through the **AI Lakehouse** path. This scene is the first major shift from building the lakehouse to using the lakehouse through a business-facing page.
 
-The **Operations Dashboard** is a Serve Data example. It shows how a retail operations team can move from disconnected reports to one operating view for revenue, demand pressure, inventory readiness, fulfillment coverage, product risk, and AI-assisted decisions.
+The **Operations Dashboard** is a **Serve Data** example. Serve Data means prepared data is now being consumed by users through dashboards, app pages, or other business-facing experiences.
 
 Without this kind of lakehouse foundation, PeakGear would likely need separate dashboards for orders, social demand, inventory, geography, product relationships, and semantic search. Each dashboard would have its own data movement, reconciliation rules, and timing gaps. That makes it harder to answer a simple operational question: which products need attention right now, and what should the business do next?
 
-This scene shows the outcome of the medallion process. Curated Gold data products can be served directly into an operational dashboard, while still preserving access to multiple data modalities behind the scenes. The best example is the **Watched Products** table. It behaves like a single operational table, but it showcases a converged query pattern across relational product and inventory data, JSON demand signals, spatial fulfillment context, graph reach, and semantic search for both typed keywords and uploaded images.
+This scene shows the outcome of the medallion process. Gold data products are the curated outputs that dashboards and applications should use because they are prepared for business consumption.
 
 Estimated Time: **10 minutes**
 
@@ -27,6 +27,8 @@ In this scene, you will:
 
 ![Sidebar navigation showing Serve Data and Operations Dashboard](images/task-1-open-operations-dashboard.png)
 
+Perform the following set of steps to open the **Operations Dashboard**:
+
 1. In the left sidebar, expand **Serve Data**.
 2. Select **Operations Dashboard**.
 3. Confirm that the page title is **Operations Dashboard** and that the main page shows the **Command Center**.
@@ -37,6 +39,8 @@ The dashboard sits in Serve Data because it is not another ingest or transformat
 
 ![Operations Dashboard command center showing KPIs and demand activity controls](images/task-2-review-command-center.png)
 
+Perform the following set of steps to review the command center as a business-facing **Gold** data product:
+
 1. Review the KPI cards for **Total Transactions**, **Total Revenue**, **Critical Demand Signals**, **Watched Products**, and **Agent Actions**.
 2. Review the **Market Demand Activity** chart and use the time range controls if you want to compare recent demand activity windows.
 3. Explain the business value: PeakGear can see current operating pressure from one trusted dashboard instead of reconciling separate reports.
@@ -46,6 +50,8 @@ These metrics are the dashboard-level proof that curated data products can be se
 ## Task 3: Use watched-products semantic search
 
 ![Watched Products controls for semantic search and image matching](images/task-3-use-watched-products-search.png)
+
+Perform the following set of steps to use watched-products semantic search:
 
 1. Scroll to **Watched Products**.
 2. In the semantic search field, enter:
@@ -64,6 +70,8 @@ Typed search and image matching are both Serve Data experiences. A user does not
 
 ![Watched product detail modal showing fulfillment capacity and store site context](images/task-4-open-product-detail.png)
 
+Perform the following set of steps to open a watched-product detail view:
+
 1. Click a row in the watched-products table.
 2. Review the product header, brand, category, and price.
 3. Review the capacity summary: **Available Capacity**, **Reserved Capacity**, and **Signal Mentions**.
@@ -75,6 +83,8 @@ This is where the business outcome becomes concrete. A planner can start from a 
 ## Task 5: Review the JSON Duality view
 
 ![JSON Duality View showing product and inventory as one JSON document](images/task-5-review-json-duality-view.png)
+
+Perform the following set of steps to review the **JSON Duality** view for the selected product:
 
 1. In the product detail modal, click **JSON Duality View**.
 2. Review the explanation that the same product and capacity data is exposed as a nested JSON document.

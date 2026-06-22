@@ -2,11 +2,11 @@
 
 ## Introduction
 
-PeakGear has now landed raw source data into the lakehouse. The product master file is in Bronze, customer changes can arrive through CDC, and demand signals can arrive through real-time streaming. That is progress, but Bronze is not where the business should make decisions.
+**PeakGear** has now landed raw source data into the **Lakehouse**. Getting data into **Bronze** is only the first step; the next job is to clean and standardize it so business users can trust and reuse it.
 
 Retail data becomes valuable when it is standardized and reusable. A raw product file can contain duplicate SKUs, mixed casing, trailing spaces, deleted records, inconsistent categories, and fields that are still shaped like the source system. If PeakGear lets every dashboard, webshop feature, AI agent, and planning workflow fix those problems independently, the business ends up with conflicting product definitions.
 
-This scene shows the Process stage of the AI Lakehouse. You will use Oracle Data Transforms to create a repeatable pipeline that turns the previously loaded product master Bronze data into a Silver product table. The example transformation is intentionally simple and visible: product IDs are standardized with `UPPER(TRIM(raw_sku))`, product attributes are cleaned, deleted records are filtered out, and the latest row per SKU is kept.
+This scene shows the **Process** stage of the AI Lakehouse. Here, **Oracle Data Transforms** turns raw Bronze product records into a cleaner **Silver** table that later scenes can reuse.
 
 That Silver table becomes the governed product foundation for later Gold data products: webshop search, product discovery, operations dashboards, fulfillment decisions, and retail agents.
 
@@ -29,6 +29,8 @@ In this scene, you will:
 
 ![Sidebar navigation showing Process and Data Processing & Pipelines](images/task-1-open-data-processing-pipelines.png)
 
+Perform the following set of steps to open the **Data Processing & Pipelines** demo:
+
 1. In the left sidebar, expand **Process**.
 2. Select **Data Processing & Pipelines**.
 3. Confirm that the page title is **Data Processing & Pipelines** before continuing.
@@ -36,6 +38,8 @@ In this scene, you will:
 ## Task 2: Open Data Transforms
 
 ![LiveStack page showing the Open Data Transforms action](images/task-2-open-data-transforms.png)
+
+Perform the following set of steps to open **Data Transforms**:
 
 1. Click **Open Data Transforms**.
 2. Use the displayed PG username and password to sign in.
@@ -45,6 +49,8 @@ In this scene, you will:
 
 ![Oracle Data Transforms login screen](images/task-3-sign-in-data-transforms.png)
 
+Perform the following set of steps to sign in to **Data Transforms**:
+
 1. Enter the PG username.
 2. Enter the PG password from the LiveStack page.
 3. Click **Connect**.
@@ -52,6 +58,8 @@ In this scene, you will:
 ## Task 4: Start from the Data Transforms home page
 
 ![Data Transforms home page showing Projects, Data Entities, and Transform Data](images/task-4-open-projects-and-data-entities.png)
+
+Perform the following set of steps to orient yourself on the **Data Transforms** home page:
 
 1. Review the Data Transforms home page.
 2. Use **Data Entities** to confirm that the source and target objects are visible.
@@ -61,6 +69,8 @@ In this scene, you will:
 ## Task 5: Confirm Product Master Data Entities
 
 ![Data Entities page showing PRODUCT_MASTER_RAW and SILVER_PRODUCTS](images/task-5-confirm-product-data-entities.png)
+
+Perform the following set of steps to confirm the **Product Master** data entities:
 
 1. Open **Data Entities**.
 2. Filter for `PRODUCT`.
@@ -72,12 +82,16 @@ In this scene, you will:
 
 ![Projects page showing Create Project](images/task-6-create-silver-project.png)
 
+Perform the following set of steps to create the **Silver** project:
+
 1. Open **Projects**.
 2. Click **Create Project**.
 
 ## Task 7: Name the Silver project
 
 ![Create Project dialog for the Silver process project](images/task-7-name-silver-project.png)
+
+Perform the following set of steps to name the **Silver** project:
 
 1. Enter the project name:
 
@@ -93,12 +107,16 @@ The project gives PeakGear a managed workspace for repeatable Bronze-to-Silver f
 
 ![Project resources showing Data Flows](images/task-8-open-data-flows-resource.png)
 
+Perform the following set of steps to open **Data Flows** in the project:
+
 1. In the project resource list, select **Data Flows**.
 2. Click **Create Data Flow** after the Data Flows resource page opens.
 
 ## Task 9: Create the Silver product flow
 
 ![Create Data Flow dialog for SILVER_PRODUCTS_FLOW](images/task-9-create-silver-products-flow.png)
+
+Perform the following set of steps to create the **Silver product flow**:
 
 1. Enter the flow name:
 
@@ -118,8 +136,10 @@ Transform PRODUCT_MASTER_RAW into SILVER_PRODUCTS.
 
 ![Add a Schema dialog showing the delight connection and PG schema](images/task-10-add-pg-schema.png)
 
+Perform the following set of steps to add the PG schema to the flow editor:
+
 1. Click **Add a Schema**.
-2. Select the ADB connection for this environment. In this demo it is shown as `delight`.
+2. Select the ADB connection shown in your environment, then select schema PG. In the reference environment, the connection may appear as `delight`.
 3. Select schema `PG`.
 4. Click **OK**.
 
@@ -128,6 +148,8 @@ The left panel can now show the PG Data Entities that can be used in the flow.
 ## Task 11: Define the Bronze-to-Silver transformation
 
 ![Generate Data Flow From SQL dialog showing the SQL entry field and Generate action](images/task-11-generate-transform-from-sql.png)
+
+Perform the following set of steps to define the **Bronze-to-Silver** transformation:
 
 Use this transformation as the presenter-safe path for the product master flow. It makes the product ID rule explicit, removes deleted records, trims product attributes, standardizes category casing, and keeps the latest row per SKU.
 
@@ -186,6 +208,8 @@ If you prefer to model the rule visually, add an **Expression** step between the
 
 ![Data Flow editor showing Save, Validate, SQL, and Start controls](images/task-12-save-validate-start-flow.png)
 
+Perform the following set of steps to save, validate, and start the flow:
+
 1. Click **Save** after the source, transformation, and target are connected.
 2. Click **Validate**.
 3. Review generated SQL if you want to inspect the insert statement.
@@ -196,7 +220,9 @@ If `SILVER_PRODUCTS` already contains rows from a previous demo run, do not over
 
 ## Task 13: Verify the Silver product output
 
-Run the following checks in SQL Worksheet.
+Perform the following set of steps to verify the **Silver** product output:
+
+Run the following checks in SQL Worksheet:
 
 ```sql
 SELECT COUNT(*) AS silver_product_rows
@@ -223,6 +249,8 @@ FROM silver_products
 ORDER BY sku
 FETCH FIRST 10 ROWS ONLY;
 ```
+
+**Note:** Sample values may change after data refreshes or rebuilds. Focus on the expected result pattern and the business takeaway, not the exact values.
 
 ## Conclusion: Business Outcome
 

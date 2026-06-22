@@ -2,13 +2,13 @@
 
 ## Introduction
 
-PeakGear Sporting Goods sells through a fast-moving webshop and a network of store fulfillment sites. The company manages products across activewear, outdoor gear, running, strength training, cycling, climbing, water sports, team sports, footwear, and fitness devices.
+**PeakGear Sporting Goods** is the fictional retail business used throughout this LiveStack. The webshop, fulfillment sites, product catalog, demand signals, and AI experiences in this guide all belong to that same demo business scenario.
 
 PeakGear faces a familiar retail problem: demand shifts faster than operations can respond. A product can go viral overnight through social channels or supplier activity, but the business still must coordinate inventory, fulfillment capacity, routing, customer demand, returns risk, and catalog data before it can act.
 
 Without a single governed platform, teams face slow decisions, stockouts, duplicate pipelines, synchronization delays, and AI responses disconnected from live business data.
 
-By the end of this LiveStack Demo, you will understand how Oracle's AI Lakehouse architecture combines streaming data, vector search, graph analytics, spatial intelligence, machine learning, and AI agents into a single governed platform that helps retailers sense demand faster, optimize operations, and make decisions using live business data.
+By the end of this LiveStack demo, you will understand the basic **AI Lakehouse** flow: data enters the platform, the data is prepared into trusted products, and those trusted products power dashboards, search, predictions, and agents for PeakGear.
 
 Estimated Demo Time: **150 minutes**
 
@@ -31,21 +31,21 @@ Before you begin, confirm that you can open the running PeakGear Sporting Goods 
 
 ## Architecture of PeakFlow
 
-PeakFlow is the source-to-outcome architecture used by the PeakGear demo. It shows how an AI Lakehouse starts with operational data sources and ends with business outcomes delivered through data products and AI products.
+PeakFlow is the source-to-outcome architecture used by the PeakGear demo. Think of it as the map for the LiveStack: it shows where the data starts, how the data is prepared, and which business experiences use the prepared data.
 
 ![Oracle Autonomous AI Lakehouse source-to-outcome architecture](images/pg-info.png)
 
 The flow starts with source data such as product master data, orders, customer records, inventory snapshots, product images, demand signals, fulfillment sites, and returns activity. The demo shows several ways that data can enter the lakehouse:
 
-- **Streaming ingest** for demand signals through Kafka and GoldenGate Stream Analytics.
+- **Streaming ingest** for demand signals through **Kafka** and **GoldenGate Stream Analytics**.
 - **Change data capture** from a NetSuite-style operational database through GoldenGate Studio.
 - **Batch and object-storage loading** for product master, POS order, inventory, and product image manifest files through Data Studio.
 
-The core AI Lakehouse process is the medallion flow from **Bronze** to **Silver** to **Gold**. Bronze preserves raw, source-shaped data. Silver standardizes, deduplicates, validates, and enriches that data. Gold publishes curated data products that are ready for applications, analytics, machine learning, and AI.
+The core **AI Lakehouse** process is the medallion flow from **Bronze** to **Silver** to **Gold**. Bronze preserves raw, source-shaped data. Silver cleans, standardizes, and enriches that data. Gold publishes curated data products that are ready for dashboards, applications, AI features, and business decisions.
 
 Catalog makes those trusted assets discoverable and understandable before they are reused. Users can find a curated table, understand its columns and business meaning, and publish a reusable view that becomes another data product.
 
-The business outcomes in the later scenes come from those curated products. Serve Data demonstrates dashboards, catalog views, demand sensing, graph-based return analysis, spatial fulfillment, and order flow. Serve AI demonstrates predictions, semantic product discovery, natural-language data access, and retail agents grounded in governed operational data.
+The business outcomes in later scenes come from curated products. Serve Data shows business users trusted data products through dashboards and app pages. Serve AI shows AI experiences built on those same trusted products.
 
 ## Demo Flow
 

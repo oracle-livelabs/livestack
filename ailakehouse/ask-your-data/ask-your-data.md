@@ -4,9 +4,9 @@
 
 PeakGear business users often need answers faster than a reporting backlog can deliver them. A merchandising lead may ask which categories drive revenue, an operations manager may ask where inventory is concentrated, and an executive may ask how demand signals are changing. Without a governed AI Lakehouse foundation, these questions often become spreadsheet pulls, manual SQL requests, or dashboard change tickets.
 
-**Ask Your Data** shows a different Serve AI outcome. Data that has moved through the medallion process can be queried through natural language while still staying grounded in Oracle data and generated SQL. The user asks a business question, Oracle Select AI drafts the SQL from schema context, and Oracle queries the governed data foundation.
+**Ask Your Data** shows a different Serve AI outcome. This is not a general chatbot; it is a natural-language interface over curated data with SQL that can be inspected.
 
-The business outcome is faster decision-making with transparency. Users can ask questions in plain English, inspect the generated SQL, and understand that the answer is coming from curated business data rather than an isolated chatbot memory.
+The business outcome is faster decision-making with transparency. That transparency matters because users can review the generated SQL before trusting the answer.
 
 Estimated Time: **10 minutes**
 
@@ -24,6 +24,8 @@ In this scene, you will:
 
 ![Sidebar navigation showing Serve AI and Ask Your Data](images/task-1-open-ask-your-data.png)
 
+Perform the following set of steps to open Ask Your Data:
+
 1. In the left sidebar, expand **Serve AI**.
 2. Select **Ask Your Data**.
 3. Confirm that the page title is **Ask Your Data**.
@@ -33,6 +35,8 @@ This page is a Serve AI experience. The user is not preparing data or writing a 
 ## Task 2: Review the runtime and question options
 
 ![Ask Your Data runtime profile and mode controls](images/task-2-runtime-and-examples.png)
+
+Perform the following set of steps to review the runtime and question options:
 
 1. Confirm that the runtime profile shows **Oracle Select AI**.
 2. Review the available modes: **Narrate**, **Chat**, **Show SQL**, and **Run SQL**.
@@ -44,6 +48,8 @@ The mode controls are useful during a technical verification. They show that the
 ## Task 3: Ask a revenue question and inspect SQL
 
 ![Ask Your Data response with generated SQL expanded](images/task-3-select-ai-answer-and-sql.png)
+
+Perform the following set of steps to ask a revenue question and inspect the generated SQL:
 
 1. Select the example question:
 
