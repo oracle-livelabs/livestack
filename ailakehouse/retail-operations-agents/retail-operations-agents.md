@@ -4,9 +4,9 @@
 
 PeakGear does not only need answers. Operational teams need coordinated actions. A demand spike may require inventory checks, fulfillment routing, category revenue review, and follow-up decisions. Without an agent workflow grounded in governed data, teams may copy facts across tools, miss the next best action, or rely on recommendations that cannot be audited.
 
-**Retail Operations Agents** demonstrates a Serve AI outcome where Oracle AI Database **Select AI Agent** teams use the AI Lakehouse foundation to answer operational questions and expose suggested next steps. Demand signals, product records, inventory, orders, fulfillment sites, and action history can all originate from different sources, move through the medallion process, and become trusted context for agent workflows.
+**Retail Operations Agents** demonstrates a Serve AI outcome. An agent is a guided AI workflow that can use approved tools and data to suggest next steps.
 
-This is not just an application chatbot. In the verified LiveStack environment, the app database exposes a Select AI Agent runtime with the **PG\_GENAI\_PROFILE** profile, **SOCIAL\_TREND\_TEAM**, **FULFILLMENT\_TEAM**, and **COMMERCE_TEAM**, plus registered SQL and PL/SQL tools. The application routes work through `DBMS_CLOUD_AI_AGENT.RUN_TEAM` and records the operational result.
+This is not just an application chatbot. The runtime profile, agent teams, SQL tools, and PL/SQL tools are the controlled backend pieces that keep the agent grounded in the LiveStack environment.
 
 The business outcome is faster operational response. Instead of treating AI as a generic chat window, PeakGear can route questions to specialized Oracle AI Database agent teams that use governed data, SQL and PL/SQL tools, and auditable action history.
 
@@ -27,6 +27,8 @@ In this scene, you will:
 
 ![Sidebar navigation showing Serve AI and Retail Operations Agents](images/task-1-open-retail-operations-agents.png)
 
+Perform the following set of steps to open Retail Operations Agents:
+
 1. In the left sidebar, expand **Serve AI**.
 2. Select **Retail Operations Agents**.
 3. Confirm that the page title is **Agent Orchestration Console**.
@@ -38,6 +40,8 @@ This page represents the action side of Serve AI. The user is no longer browsing
 
 ![Retail Operations Agents example question tiles](images/task-2-agent-question-options.png)
 
+Perform the following set of steps to review the agent question options:
+
 1. Review the example question tiles.
 2. Notice that the questions map to different operational domains, including demand signals, fulfillment, commerce, inventory, and route planning.
 3. Focus on the **Find urgent demand signals in the last 24 hours** question.
@@ -47,6 +51,8 @@ The example questions show the intended operating model: users ask in business l
 ## Task 3: Ask for urgent demand signals
 
 ![Retail Operations Agents demand signal response with suggested next steps](images/task-3-demand-signal-response.png)
+
+Perform the following set of steps to ask for urgent demand signals:
 
 1. Click **Ask** for:
 
@@ -61,11 +67,13 @@ Find urgent demand signals in the last 24 hours
 
 This task shows how Select AI Agent orchestration can turn a demand question into a workflow. The response does not stop at "here are products with signal momentum." It also gives next actions that connect demand sensing to inventory, fulfillment, and commerce decisions.
 
-If the native Select AI Agent team call takes longer than the demo timeout, the UI may show **Select AI Agent orchestration** with a fallback status and then answer through the same registered Oracle SQL and PL/SQL tools. That fallback is part of the demo resilience path. The key point is that the environment is configured for Oracle AI Database Select AI Agent teams, and the app attempts the native `DBMS_CLOUD_AI_AGENT.RUN_TEAM` path first.
+If the native Select AI Agent team call takes longer than the demo timeout, the UI may answer through the same registered Oracle SQL and PL/SQL tools. This fallback still demonstrates the governed tool pattern, so treat it as a supported demo path rather than a failed run.
 
 ## Task 4: Review recent agent actions
 
 ![Retail Operations Agents recent actions audit area](images/task-4-recent-agent-actions.png)
+
+Perform the following set of steps to review recent agent actions:
 
 1. Scroll to **Recent Agent Actions**.
 2. Review the action records created by recent agent interactions.

@@ -2,12 +2,15 @@
 
 ## Introduction
 
-Welcome to LiveLabs.
-You have successfully created a LiveLabs Sandbox environment!
+**Welcome to LiveLabs.** 
 
-In this lab, we will show you where you can find the login information and how to log in to your LiveLabs Sandbox.
+You have successfully created a LiveLabs Sandbox environment. This sandbox is the temporary cloud environment where you open and run the PeakGear LiveStack demo.
 
-Estimated Time: 5 minutes
+In this lab, you find the sandbox login information, open the running LiveStack demo, and learn how to return to the reservation later if the browser closes.
+
+**Note:** A "sandbox" is the temporary cloud environment where the guided demo runs.
+
+Estimated Time: **5 minutes**
 
 ### Objectives
 
@@ -15,6 +18,8 @@ Estimated Time: 5 minutes
 - Find your LiveLabs Sandbox reservations
 
 ## Task 1: View the Login Information and Log in to your LiveLabs Sandbox
+
+Perform the following set of steps to find your sandbox access controls and open the LiveStack demo:
 
 1. Above the workshop instructions, you can find the information and actions you need to access and track your sandbox session:
 
@@ -28,11 +33,11 @@ Estimated Time: 5 minutes
 
     ![View Login Info](./images/view-login-info-3.png " ")
 
-    c. **Mark Complete**: After you finish the LiveStack demo, click **Mark Complete**. This marks the demo as completed on the **LiveStack's landing page**.
+    d. **Mark Complete**: After you finish the LiveStack demo, click **Mark Complete**. This marks the demo as completed on the **LiveStack's landing page**.
 
     ![View Login Info](./images/view-login-info-2.png " ")
 
-    >**Note:** Clicking **Mark Complete** marks the demo as completed on the **LiveStack's landing page**.
+    >**Note:** Use **Mark Complete** only after you finish the LiveStack demo. If you are still working through the scenes, leave the reservation open and continue from the next task.
 
 
 
@@ -45,11 +50,13 @@ Estimated Time: 5 minutes
     ![Login information](./images/getstarted.png " ")
 
 
-4. If you need to view your login information at any time, click the **View Login Info** link in **Run Workshop** browser tab. **Important:** Please be aware of the **Time Remaining** for your sandbox environment. Your environment will be deleted once the remaining time has expired.
+4. If you need to view your login information at any time, click the **View Login Info** link in **Run Workshop** browser tab. 
+
+**Important:** Please be aware of the **Time Remaining** for your sandbox environment. Your environment will be deleted once the remaining time has expired.
 
 ## Task 2: Find your LiveLabs Sandbox Reservations
 
-If you close your browser, and you want to launch your workshop again, use the following steps.
+Perform the following set of steps to return to your LiveLabs Sandbox reservation if you close the browser:
 
 1. Go to [livelabs.oracle.com](https://livelabs.oracle.com), and then click **Sign In**.
 

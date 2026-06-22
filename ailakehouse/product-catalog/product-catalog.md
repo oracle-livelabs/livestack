@@ -2,7 +2,7 @@
 
 ## Introduction
 
-PeakGear has now shown how data enters the AI Lakehouse and moves through the medallion process. Source data is captured in Bronze, cleaned and standardized in Silver, and served as trusted Gold-layer data products. The **Product Catalog** is a straightforward Serve Data example of what becomes possible when product data is no longer scattered across disconnected source systems.
+**PeakGear** has now shown how data enters the **AI Lakehouse** and moves through the medallion process. The **Product Catalog** is a practical example of a **Gold** data product that business teams can inspect directly.
 
 Without a governed catalog foundation, PeakGear teams would have to reconcile product names, SKUs, categories, brands, prices, images, inventory, demand signals, and order context separately in each dashboard or application. Merchandising might use one product list, ecommerce might use another, operations might depend on a spreadsheet, and AI experiences might answer from stale or incomplete product data.
 
@@ -24,6 +24,8 @@ In this scene, you will:
 
 ![Sidebar navigation showing Serve Data and Product Catalog](images/task-1-open-product-catalog.png)
 
+Perform the following set of steps to open the **Product Catalog**:
+
 1. In the left sidebar, expand **Serve Data**.
 2. Select **Product Catalog**.
 3. Confirm that the page title is **Product Catalog**.
@@ -34,6 +36,8 @@ The Product Catalog sits in Serve Data because it is a consumption experience. T
 
 ![Product Catalog showing summary metrics, category filters, and product table](images/task-2-review-catalog.png)
 
+Perform the following set of steps to review the curated catalog:
+
 1. Review the catalog summary cards for **Curated Products**, **Categories**, and **Source**.
 2. Review the category list on the left.
 3. Review the product table with product name, SKU, category, brand, price, and inventory.
@@ -43,6 +47,8 @@ This is the operational catalog view that business teams expect: a single place 
 ## Task 3: Search and filter the catalog
 
 ![Product Catalog search field with jacket query entered](images/task-3-search-and-filter-catalog.png)
+
+Perform the following set of steps to search and filter the catalog:
 
 1. In the search field, enter:
 
@@ -59,6 +65,8 @@ This search is intentionally simple. The goal is not to demonstrate semantic pro
 ## Task 4: Open a product detail
 
 ![Product detail view showing inventory by store and demand signals](images/task-4-open-product-detail.png)
+
+Perform the following set of steps to open a product detail:
 
 1. Select a product row, such as **Velocityworks Outdoor Jacket 231**.
 2. Review the product image, SKU, category, price, and product description.

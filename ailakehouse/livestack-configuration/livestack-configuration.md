@@ -2,9 +2,9 @@
 
 ## Introduction
 
-Before you run the PeakGear business scenarios, confirm that the LiveStack services are connected and that the demo data has been initialized. This scene is a short technical readiness guide. Do not continue to the rest of the demo until these checks are complete.
+Before you run the **PeakGear** business scenarios, confirm that the LiveStack services are connected and the demo data has been initialized. These readiness checks prevent confusing failures later because the demo can look broken when a required service or seeded dataset is not ready.
 
-The fastest check is the **LiveStack Demo ready** indicator in the lower-left sidebar. When all four lights are green, the required services and data foundation are ready: Autonomous Database, GoldenGate Stream Analytics, OCI GenAI, and the seeded demo data in Autonomous Database.
+The fastest check is the **LiveStack Demo ready** indicator in the lower-left sidebar. The four green lights are the demo health check: they confirm that the required services and seeded data are ready before you begin the business walkthrough.
 
 Estimated Time: **5 minutes**
 
@@ -22,6 +22,8 @@ In this scene, you will:
 
 ![Sidebar readiness indicator showing all four green lights](images/task-1-sidebar-readiness.png)
 
+Perform the following set of steps to confirm that the LiveStack readiness indicator shows the demo is ready:
+
 1. Look at the lower-left sidebar.
 2. Find **LiveStack Demo ready**.
 3. Confirm that all four readiness lights are green.
@@ -36,6 +38,8 @@ In this scene, you will:
 
 ![LiveStack Configuration page showing the configured ADB connection and service status cards](images/task-2-livestack-configuration.png)
 
+Perform the following set of steps to double-check the LiveStack service connections before starting the business walkthrough:
+
 1. Open **LiveStack Admin** from the sidebar and select **LiveStack Configuration**.
 2. Review **AI Data Lakehouse Connections**.
 3. Confirm that the active Autonomous Database connection is configured.
@@ -47,9 +51,11 @@ In this scene, you will:
 
 ## Task 3: Refresh and load demo data
 
-This step is mandatory before running the demo.
+**Important:** This step is mandatory before running the demo.
 
 ![Demo Maintenance section with Verify & Refresh Demo highlighted](images/task-3-demo-maintenance-refresh.png)
+
+Perform the following set of steps to refresh and load the seeded demo data before running the scenes:
 
 1. In **LiveStack Configuration**, go to **Demo Maintenance**.
 2. Click **Verify & Refresh Demo** or **Load Demo Data**, depending on the button label shown by the current environment.
@@ -57,9 +63,13 @@ This step is mandatory before running the demo.
 4. Confirm that the demo counts are populated. In the reference environment, the page shows **650 products**, **420 demand signals**, **5,000 orders**, **180 product vectors**, **50 spatial zones**, and **10 demand regions**.
 5. Explain that this step initializes the business data used across the demo and creates or refreshes embeddings used by semantic search and AI-driven parts of the experience.
 
+**Note:** Sample values may change after data refreshes or rebuilds. Focus on the expected result pattern and the business takeaway, not the exact values.
+
 ## Task 4: Reset the return workflow only when needed
 
 ![Ask PeakGear conversation reset section with Clear Return Conversation highlighted](images/task-4-return-reset.png)
+
+Perform the following set of steps to reset the return workflow only when you need a clean replay:
 
 1. Use **Clear Return Conversation** in the **Reset customer\_order\_status table** section only when you need to replay the Ask PeakGear return and exchange scenario.
 2. After resetting, rerun the relevant Ask PeakGear scene from the beginning so the conversation state is clean.

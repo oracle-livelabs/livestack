@@ -2,11 +2,11 @@
 
 ## Introduction
 
-PeakGear has already brought operational data through the AI Lakehouse medallion process. Product demand signals, customer behavior, order history, revenue observations, and inventory levels can start as separate data sources. Bronze captures them, Silver standardizes and enriches them, and Gold serves the trusted feature foundation needed for predictive AI.
+**PeakGear** has already brought operational data through the **AI Lakehouse** medallion process. This is where prepared data starts powering predictions instead of only dashboards and catalog views.
 
 The business challenge is timing and confidence. PeakGear needs to know which products are at risk of demand surge, how revenue is trending, and where inventory exposure is building. If prediction models are trained on disconnected extracts or stale spreadsheets, planners may act too late, overstock the wrong products, or miss a demand spike that operations could have handled.
 
-**Demand, Revenue & Inventory Predictions** shows how machine-learning output becomes a Serve AI outcome from the AI Lakehouse. Oracle Machine Learning can score demand risk, segment customers, forecast revenue, cluster products, and compare predicted demand against inventory from the same governed database foundation. The result is not just a model score. It is an AI-assisted operating view for allocation, replenishment, campaign focus, and revenue-risk mitigation.
+**Demand, Revenue & Inventory Predictions** shows how machine-learning output becomes a Serve AI outcome. Serve AI means the user is consuming an AI-assisted experience built on governed lakehouse data.
 
 Estimated Time: **10 minutes**
 
@@ -25,6 +25,8 @@ In this scene, you will:
 
 ![Sidebar navigation showing Serve AI and Demand, Revenue & Inventory Predictions](images/open-predictions.png)
 
+Perform the following set of steps to open **Demand, Revenue & Inventory Predictions**:
+
 1. In the left sidebar, expand **Serve AI**.
 2. Select **Demand, Revenue & Inventory Predictions**.
 3. Confirm that the page title is **Demand, Revenue & Inventory Predictions**.
@@ -35,6 +37,9 @@ This page is a Serve AI prediction experience. The user is consuming model outpu
 
 ![Demand Risk tab showing model summary and product demand predictions](images/demand-risk-model-output.png)
 
+Perform the following set of steps to navigate **Demand, Revenue & Inventory Predictions**:
+
+
 1. Review the model summary cards: **129 Products with Demand Risk**, **6.0K Customers Segmented**, **2.3% Revenue Model R²**, and **4 Active ML Models**.
 2. Stay on the **Demand Risk** tab.
 3. Review the predicted-demand chart and table.
@@ -42,9 +47,13 @@ This page is a Serve AI prediction experience. The user is consuming model outpu
 
 The demand-risk tab translates cleaned product, demand, revenue, and customer signals into a ranked AI output. A planner can immediately see which products may need more inventory attention or campaign coordination.
 
+**Note:** Sample values may change after data refreshes or rebuilds. Focus on the expected result pattern and the business takeaway, not the exact values.
+
 ## Task 3: Review revenue forecast
 
 ![Revenue Forecast tab showing 7-day forecast and model metrics](images/revenue-forecast.png)
+
+Perform the following set of steps to review the revenue forecast:
 
 1. Select **Forecast**.
 2. Review the **+7 day forecast** view.
@@ -53,9 +62,13 @@ The demand-risk tab translates cleaned product, demand, revenue, and customer si
 
 Revenue forecast gives the business a planning lens. Even when the model fit is not strong, the AI view helps users understand trend direction, observations, and forecast horizon from the same governed data foundation.
 
+**Note:** Sample values may change after data refreshes or rebuilds. Focus on the expected result pattern and the business takeaway, not the exact values.
+
 ## Task 4: Review inventory capacity intelligence
 
 ![Inventory tab showing availability risk and revenue at risk](images/inventory-intelligence.png)
+
+Perform the following set of steps to review inventory capacity intelligence:
 
 1. Select **Inventory**.
 2. Review the capacity summary: **3 Critical / Out of Capacity**, **22 At Risk**, **100 OML Surge Predicted Demand**, **$178,507.46 Revenue at Risk**, and **100 Total Monitored**.

@@ -55,17 +55,19 @@ The **Details** tab is the operational view of the same governed data. It presen
 
 ## Task 4: Review the JSON Duality View
 
-Perform the following set of steps to show that the same trusted product data can support different users. Business teams see an operational product view, while applications and APIs can use the same information as a structured document.
+Perform the following set of steps to show that the same trusted product data can support different users. Business teams see an operational product view, while applications and APIs can query the same information through the runtime `PRODUCTS_CAPACITY_DV` JSON Relational Duality view.
 
 ![Financial product JSON Duality view](images/financial-product-json-duality.png)
 
 1. In the product modal, click **JSON Duality View**.
-2. Review the JSON document generated for the same financial product and case-processing data.
+2. Review the source label **PRODUCTS_CAPACITY_DV**.
+3. Review the JSON document generated for the same financial product and case-processing data.
+4. Look for the nested `serviceCapacity` array, which includes operations center, service tier, case-processing capacity, active workload, and remaining capacity.
 
-The point of this view is to show that the same data can support different application needs. The **Details** tab presents the data as an operational interface for business users. The **JSON Duality View** presents the same product and case-processing information as a nested JSON document that is useful for APIs and application developers. Oracle JSON Relational Duality lets the application expose document-style access without copying the data into a separate document store.
+The point of this view is to show that the same data can support different application needs. The **Details** tab presents the data as an operational interface for business users. The **JSON Duality View** presents the same product and case-processing information as a nested JSON document that is useful for APIs and application developers. Oracle JSON Relational Duality lets the application expose document-style access without copying the data into a separate document store, and in this demo the API uses `PRODUCTS_CAPACITY_DV` as the runtime source for the document shown on screen.
 
 *You can move to the next scene.*
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-28
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-22

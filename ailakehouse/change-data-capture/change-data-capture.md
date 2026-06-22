@@ -2,11 +2,11 @@
 
 ## Introduction
 
-PeakGear's customer data does not begin in the lakehouse. Customer profiles, loyalty tiers, contact details, and account updates are first created in operational systems that run the business every day.
+PeakGear's customer data does not begin in the **Lakehouse**. Change data capture, or CDC, copies changes from an operational system into the Lakehouse as those changes happen.
 
 Without change data capture, those updates reach analytics, applications, and AI experiences too late. A newly upgraded loyalty customer might still be treated like a standard shopper. A service agent might see an old email address. A dashboard might miss the newest customers until the next batch load finishes. The business outcome is familiar: decisions are technically correct for yesterday, but not current enough for the moment PeakGear needs to act.
 
-This scene shows how PeakGear closes that gap. A NetSuite-style customer system remains the operational source, while GoldenGate captures changes and mirrors them into the Bronze layer of the AI Lakehouse. From there, the same customer updates can be refined through Silver and Gold so dashboards, customer experiences, predictions, and agents all work from trusted, current customer context.
+This scene shows how PeakGear closes that gap. You are not building CDC from scratch; you are reviewing and running a prepared CDC flow so you can understand how the LiveStack keeps operational changes moving into the lakehouse.
 
 Estimated Time: **10 minutes**
 
@@ -26,6 +26,8 @@ In this scene, you will:
 
 ![Sidebar navigation showing Ingest and Change Data Capture](images/task-1-open-change-data-capture.png)
 
+Perform the following set of steps to open the **Change Data Capture** demo:
+
 1. In the left sidebar, expand **Ingest**.
 2. Select **Change Data Capture (GoldenGate Studio)**.
 3. Confirm that the page title is **Change Data Capture** before continuing.
@@ -34,7 +36,9 @@ In this scene, you will:
 
 ![Change Data Capture page showing GoldenGate access and CDC readiness cards](images/task-2-goldengate-access-and-readiness.png)
 
-1. Review the GoldenGate Studio login area.
+Perform the following set of steps to review GoldenGate access and CDC readiness:
+
+1. Review the **GoldenGate Studio** login area.
 2. Click **Open GoldenGate** to open GoldenGate Studio in a new browser tab.
 3. Use the displayed username and password from your environment to sign in.
 4. Return to the LiveStack page and confirm that **NetSuite Source DB**, **Oracle GoldenGate Studio Free**, and **ADB Bronze Customer Mirror** show **Ready**.
@@ -44,6 +48,8 @@ In this scene, you will:
 
 ![LiveStack CDC configuration showing source and Bronze target values](images/task-3-review-cdc-configuration.png)
 
+Perform the following set of steps to review the source-to-Bronze CDC configuration:
+
 1. Review **GoldenGate Studio CDC Configuration**.
 2. Confirm the source table **NETSUITE.CUSTOMERS**.
 3. Confirm the Bronze target table **PG.BRONZE\_NETSUITE\_CUSTOMERS**.
@@ -52,9 +58,11 @@ In this scene, you will:
 
 ## Task 4: Start the prepared CDC pipeline in GoldenGate Studio
 
+Perform the following set of steps to start the prepared CDC pipeline in GoldenGate Studio:
+
 ![GoldenGate Studio Pipelines page showing the prepared CDC pipeline](images/task-4-goldengate-pipeline-list.png)
 
-1. In GoldenGate Studio, select **Pipelines**.
+1. In **GoldenGate Studio**, select **Pipelines**.
 2. Open the prepared pipeline **PeakGear\_NetSuite\_Customers\_CDC**.
 3. Do not click **Create Pipeline**. The CDC pipeline already exists for this demo.
 
@@ -79,6 +87,8 @@ In the pipeline details page, the **Runtime** view shows the running Extract and
 
 ![LiveStack source change panel showing CDC Flow ready and Insert Customer enabled](images/task-5-insert-customer-change.png)
 
+Perform the following set of steps to insert a customer change into the source system:
+
 1. In the LiveStack page, locate **Simulate Customer Changes**.
 2. If the warning says to start the GoldenGate Studio pipeline, return to Task 4 and start the pipeline.
 3. After **CDC Flow** is **Ready**, click **Insert Customer**.
@@ -89,10 +99,14 @@ In the pipeline details page, the **Runtime** view shows the running Extract and
 
 ![LiveStack comparison of NetSuite source customers and Bronze mirror customers](images/task-6-verify-bronze-mirror.png)
 
+Perform the following set of steps to verify that the Bronze customer mirror received the source change:
+
 1. Review the **NETSUITE.CUSTOMERS** source table.
 2. Review the **PG.BRONZE\_NETSUITE\_CUSTOMERS** Bronze mirror.
 3. Confirm that the inserted customer appears in both the source table and the Bronze mirror.
 4. Confirm that the source and Bronze row counts increased together. The screenshot shows one completed run where both counts moved to **26** after the insert; your count can differ if the demo has been reset or replayed.
+
+**Note:** Sample values may change after data refreshes or rebuilds. Focus on the expected result pattern and the business takeaway, not the exact values.
 
 ## Conclusion: Business Outcome
 
