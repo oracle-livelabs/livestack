@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This scene prepares the trusted Seer Bank dataset used throughout the demo. Loading or restoring the data gives every later screen the same clean starting point, so dashboards, risk signals, transactions, predictive results, and AI actions all reflect the same governed finance data foundation.
+This scene prepares the trusted Seer Bank dataset used throughout the demo. Loading or restoring the data gives every later screen the same clean starting point, so dashboards, risk signals, transactions, predictive results, spatial recommendations, JSON document views, and AI actions all reflect the same governed finance data foundation.
 
 Estimated Time: **5 minutes**
 
@@ -30,11 +30,11 @@ Perform the following set of steps to show that the demo uses recognizable finan
 1. Scroll to **What Gets Loaded**.
 2. Read the three visible carousel tiles.
 3. Use the right carousel arrow to review the remaining tiles.
-4. Look for the major data types used in the demo: relational tables, JSON duality views, graph relationships, spatial geometry, vector embeddings, machine learning results, and agent audit records.
+4. Look for the major data types used in the demo: relational tables, JSON duality views such as `ORDERS_DV` and `PRODUCTS_CAPACITY_DV`, graph relationships, spatial geometry, spatial functions such as `find_nearest_centers` and `optimal_fulfillment`, vector embeddings, machine learning results, and agent audit records.
 5. Review the **Oracle Internals** sidebar after the business flow is clear. Use it to connect the visible finance outcome to the database capabilities behind the page.
 
 *You can move to the next scene.*
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-28
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-22
