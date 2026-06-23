@@ -24,6 +24,7 @@ Perform the following set of steps to review plant capacity priorities and frame
 2. Review the stat cards across the top of the page.
 3. Review the current user and VPD banner.
 4. Review the map and the plant-capacity summary before changing layers.
+5. Note the displayed OEE load target before comparing plant and line load.
 
     ![Plant capacity priority cards, active user, and VPD context highlighted](images/plant-capacity-priorities.png)
 
@@ -38,6 +39,7 @@ Perform the following set of steps to compare spatial layers for customer commit
 3. Toggle **Plants & Production Lines** and **Work Order Production Routes**.
 4. Toggle **Maintenance & Capacity Zones**, **Customer Account Density**, and **Capacity Planning Regions**.
 5. Review how the map changes as layers are added or removed.
+6. Use the OEE load legend to distinguish below-target, near-target, and above-target plant or line load.
 
     ![Plant capacity map layers with customer commitment risk, production lines, routes, density, and capacity planning overlays highlighted](images/plant-capacity-map-layers.png)
 
@@ -60,4 +62,4 @@ You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-09
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-22
