@@ -30,6 +30,8 @@ Perform the following set of steps to use **Explain mode** when the user wants a
 
 Expected result: The assistant returns a narrated answer and key findings without making the generated SQL the main artifact. Use this mode when the user wants a business-readable answer first. The system still uses governed SQL behind the scenes, but the presentation is optimized for a plant manager, production supervisor, or operations analyst.
 
+    ![Explain mode response for the manufacturing production-risk graph question](images/ask-manufacturing-data-explain-mode-2.png)
+
 **Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
 
 ## Task 2: Use Chat mode for a conversational answer
@@ -44,6 +46,8 @@ Perform the following set of steps to use **Chat mode** when the user wants to e
 
 Expected result: The assistant returns a conversational response and follow-up prompts. Use this mode when the user is exploring the data interactively. Chat mode keeps the answer grounded in the live manufacturing schema, but it is shaped for follow-up questions such as breaking the result down by work order, supplier, production line, or risk case.
 
+    ![Chat mode response for the manufacturing production-risk graph question](images/ask-manufacturing-data-chat-mode-2.png)
+
 ## Task 3: Use Show SQL mode to inspect the query path
 
 Perform the following set of steps to use Show SQL mode when a user, data steward, or technical reviewer needs to inspect the query path before rows are returned:
@@ -55,6 +59,8 @@ Perform the following set of steps to use Show SQL mode when a user, data stewar
     ![Generated SQL for the manufacturing production-risk graph question](images/ask-manufacturing-data-generated-sql.png)
 
 4. Review the generated SQL.
+
+    ![Generated SQL for the manufacturing production-risk graph question](images/ask-manufacturing-data-generated-sql-2.png)
 
 The generated SQL reads from `manufacturing_graph_production_findings`, orders by `risk_score DESC NULLS LAST`, then by graph depth and finding type, and limits the result with `FETCH FIRST 5 ROWS ONLY`. This is the governance moment in the scene: the user can inspect the query path before asking the database to return rows.
 
@@ -71,6 +77,8 @@ Perform the following set of steps to use Run SQL mode and inspect the live rows
     ![Run SQL results for the manufacturing production-risk graph question](images/ask-manufacturing-data-run-sql-results.png)
 
 4. Review the returned table.
+
+    ![Run SQL results for the manufacturing production-risk graph question](images/ask-manufacturing-data-run-sql-results-2.png)
 
 In the current demo dataset, the question returns **5** rows. The top risk findings are tied to **CircuitForge Electronics Supplier Desk**, **Servo Drive Controller PCB Rev C**, **WO-4501 - AX-400 Servo Drive Build**, **Central Production Scheduling Team**, and **Line A - Servo Drive Assembly**, each with a **97.4** risk score and case-evidence recommendations.
 
@@ -92,4 +100,4 @@ You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-09
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-22

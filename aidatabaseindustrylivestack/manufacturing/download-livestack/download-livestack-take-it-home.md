@@ -733,4 +733,4 @@ This guide is self-service for technical users who can install Podman and run te
 ## Credits and build notes
 
 - **Author** - LiveLabs Team
-- **Last Updated By/Date** - LiveLabs Team, 2026-06-04
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-22
