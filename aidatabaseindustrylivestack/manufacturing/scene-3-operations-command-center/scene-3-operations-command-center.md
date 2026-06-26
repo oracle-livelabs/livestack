@@ -2,26 +2,23 @@
 
 ## Introduction
 
-The Operations Command Center is built for a manufacturing operations leader, plant manager, production supervisor, capacity planner, or manufacturing analyst who needs a daily operating view of work-order volume, production value, production signals, high-demand parts, plant capacity pressure, and AI-assisted actions. The goal is to see where the AX-400 recovery plan is under pressure before the issue becomes a missed-output escalation.
+The **Operations Command Center** helps manufacturing leaders answer a daily operating question: where does the **AX-400** recovery plan need attention right now? The page brings together work-order volume, production value, production signals, high-demand parts, plant capacity pressure, and AI-assisted actions so teams can decide where to investigate first.
 
 Dashboards like this are difficult to implement when work orders, production signals, supplier updates, capacity records, machine telemetry, and agent activity live in different systems. Teams often need duplicated extracts, separate BI models, and reconciliation logic before a dashboard can show a trustworthy view.
 
-Oracle AI Database helps address that challenge by keeping operational, analytical, JSON, in-memory, and AI-ready data close to the same governed data foundation. In this scene, the dashboard brings together live manufacturing KPIs, production signal velocity, order value by part category, and high-demand manufactured parts without sending the user to another application.
+**Oracle AI Database** helps address that challenge by keeping operational, analytical, JSON, in-memory, and AI-ready data close to the same governed data foundation. In this scene, the dashboard brings together live manufacturing KPIs, production signal velocity, order value by part category, and high-demand manufactured parts without sending the user to another application.
 
-Estimated Time: 10 minutes
+Estimated Time: **10 minutes**
 
 ![Operations Command Center with KPI cards, signal velocity, order value, and high-demand parts](images/scene-3-operations-command-center.png)
 
 ### Objectives
 
-In this scene, you will:
-- Review the command center as a manufacturing operations user.
-- Interpret the KPI cards, production signal velocity chart, order value chart, and high-demand manufactured parts table.
-- Change the signal velocity time window.
-- Search or filter high-demand manufactured parts.
-- Use the **Oracle Internals** sidebar to explain why this dashboard can stay connected to governed Oracle data.
+In this scene, you will learn what manufacturing decision the command center supports, what evidence the user should inspect, and what action the team may take next.
 
 ## Task 1: Review the command center dashboard
+
+Perform the following set of steps to review the command center as a daily triage view for work-order load, value exposure, signal pressure, watched parts, and AI activity:
 
 1. Click **Operations Command Center** in the sidebar.
 2. Review the KPI cards across the top of the page.
@@ -35,7 +32,11 @@ In this scene, you will:
 
 In the current demo dataset, the page shows **3.0K** work orders logged, about **$12.06M** in order value over the last 30 days, **474** critical production signals, **187** high-demand manufactured parts, and **2** completed agent actions. Use those numbers to frame the command center as a triage surface: the user can see work-order load, value exposure, signal pressure, watched parts, and AI activity in one place.
 
+**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
+
 ## Task 2: Interpret signal velocity and order value
+
+Perform the following set of steps to understand where work-order volume, order value, and production risk are moving at the same time:
 
 1. Click a signal velocity time range such as **24h**, **48h**, or **7d**.
 2. Review how the signal chart changes by time bucket.
@@ -44,9 +45,11 @@ In the current demo dataset, the page shows **3.0K** work orders logged, about *
 
     ![Signal velocity time controls, chart, and order value breakdown highlighted](images/signal-velocity-and-order-value.png)
 
-This is the business story to emphasize: manufacturing users need to know where value, volume, and risk are moving together. A category with high order value and rising production signals may need a different operating response than a low-value category with stable capacity.
+The key business story is that manufacturing users need to know where value, volume, and risk are moving together so they can choose the right operating response.
 
 ## Task 3: Review high-demand manufactured parts
+
+Perform the following set of steps to move from dashboard-level pressure to the specific manufactured parts, suppliers, or production lines that may need attention:
 
 1. Use the high-demand parts search box to filter for a part, product family, or program.
 2. Review the top watched rows.
@@ -62,4 +65,4 @@ You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-09
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-22

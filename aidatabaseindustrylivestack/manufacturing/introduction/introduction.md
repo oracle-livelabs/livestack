@@ -2,47 +2,42 @@
 
 ## Introduction
 
-Manufacturing teams need to coordinate plant performance, work orders, supplier risk, quality inspections, machine telemetry, inventory constraints, predictive maintenance, production variance, and AI-assisted decisions while keeping operational data governed. Those workflows often live in separate execution systems, planning tools, quality systems, spreadsheets, analytics marts, search services, mapping tools, notebooks, and AI experiments. The result is a slower operating model: users can see part of the factory picture, but they cannot easily trace a corrective action back to the same trusted manufacturing data foundation.
+Manufacturing teams need to coordinate plant performance, work orders, supplier risk, quality inspections, machine telemetry, inventory constraints, predictive maintenance, production variance, and AI-assisted decisions while keeping operational data governed. 
 
-This runbook supports the Seer Manufacturing LiveStack Demo. The demo shows how Oracle AI Database 26ai can bring manufacturing operations workloads together on one connected data platform. Instead of splitting relational work orders, JSON documents, supplier and production-risk graphs, plant spatial analysis, vector search, in-database machine learning, natural-language SQL, and AI agent workflows across different systems, the LiveStack shows how those capabilities can work against the same governed Oracle data model.
+Those workflows often live in separate execution systems, planning tools, quality systems, spreadsheets, analytics marts, search services, mapping tools, notebooks, and AI experiments. The result is a slower operating model: users can see part of the factory picture, but they cannot easily trace a corrective action back to the same trusted manufacturing data foundation.
 
-In the demo, Seer Manufacturing uses Oracle AI Database to recover the Servo Drive Controller AX-400 production plan from constrained PCB material, work-order schedule variance, supplier delay, plant-capacity pressure, scrap risk, and machine telemetry signals. Each scene is designed to help you explain a practical manufacturing operations challenge and then show how a converged Oracle database capability supports a clearer decision path.
+This runbook supports the **Seer Manufacturing LiveStack Demo**. The demo shows how **Oracle AI Database 26ai** can bring manufacturing operations workloads together on one connected data platform. Instead of splitting relational work orders, JSON documents, supplier and production-risk graphs, plant spatial analysis, vector search, in-database machine learning, natural-language SQL, and AI agent workflows across different systems, the LiveStack shows how those capabilities can work against the same governed Oracle data model.
 
-Estimated Demo Time: 90 minutes
+In the demo, **Seer Manufacturing** uses Oracle AI Database to recover the **Servo Drive Controller AX-400** production plan from constrained PCB material, work-order schedule variance, supplier delay, plant-capacity pressure, scrap risk, and machine telemetry signals. Each scene is designed to help you explain a practical manufacturing operations challenge and then show how a converged Oracle database capability supports a clearer decision path.
 
-Each scene is designed to take between 5 and 10 minutes.
+Estimated Demo Time: **90 minutes**
+
+Each scene is designed to take between **5 and 10 minutes**.
 
 ![Manufacturing LiveStack welcome page](images/welcome-and-demo-orientation.png)
 
 ### Objectives
 
-In this LiveStack Demo, you will:
-- Explore the key manufacturing use cases featured in the Seer Manufacturing demo, from the data foundation and command center to production signals, supplier graph analysis, plant routing, work orders, predictive analytics, conversational data access, and AI agent workflows.
-- Understand how common manufacturing operations challenges such as fragmented production data, supplier delay, capacity pressure, quality inspection failures, scrap risk, downtime risk, limited self-service analytics, and governed AI adoption are addressed in the demo flow.
-- See how Oracle AI Database 26ai supports each use case with converged capabilities including relational data, JSON, graph, spatial, vector search, machine learning, natural-language SQL, and AI-assisted operations.
-- Connect each scene to a practical business outcome, so the demo shows not only what the application does, but why the Oracle data platform matters for manufacturing operations.
+In this LiveStack demo, you will see how connected manufacturing data helps teams identify production pressure, trace supplier and quality risk, evaluate plant capacity, analyze work orders, forecast demand and capacity constraints, and apply AI-assisted workflows with stronger governance.
 
 ### Prerequisites
 
-This LiveStack Demo assumes you have:
-- Access to the running Seer Manufacturing LiveStack.
-- A modern browser open to the application URL.
-- The seeded Seer Manufacturing demo dataset loaded, or an imported synthetic manufacturing dataset loaded through the application dataset tool.
-- For the download lab, Podman and Podman Compose available on the machine where you run the portable stack.
+Before you begin, confirm that you can open the running Seer Manufacturing LiveStack in a modern browser. No database or coding knowledge is required for the guided business workflow.
+Podman and Podman Compose are required only if you plan to run the portable LiveStack locally in the Take It Home lab.
 
 ## Demo Flow
 
-- Scene 1: Manufacturing Control Tower Orientation.
-- Scene 2: Manufacturing Data Foundation.
-- Scene 3: Operations Command Center.
-- Scene 4: Production Signal Monitor.
-- Scene 5: Supplier and Signal Network Graph.
-- Scene 6: Plant Capacity and Routing Map.
-- Scene 7: Work Orders and JSON Duality.
-- Scene 8: OML Demand and Capacity Analytics.
-- Scene 9: Ask Manufacturing Data.
-- Scene 10: Manufacturing Agent Console.
-- Scene 11: Use Your Own Manufacturing Data.
+- **Scene 1:** Manufacturing Control Tower Orientation.
+- **Scene 2:** Manufacturing Data Foundation.
+- **Scene 3:** Operations Command Center.
+- **Scene 4:** Production Signal Monitor.
+- **Scene 5:** Supplier and Signal Network Graph.
+- **Scene 6:** Plant Capacity and Routing Map.
+- **Scene 7:** Work Orders and JSON Duality.
+- **Scene 8:** OML Demand and Capacity Analytics.
+- **Scene 9:** Ask Manufacturing Data.
+- **Scene 10:** Manufacturing Agent Console.
+- **Scene 11:** Use Your Own Manufacturing Data.
 - Download and run the portable Manufacturing LiveStack.
 
 ## Learn More
@@ -57,4 +52,4 @@ This LiveStack Demo assumes you have:
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-09
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-22
