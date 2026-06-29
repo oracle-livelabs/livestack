@@ -20,12 +20,14 @@ In this scene, you will learn what finance decision the page supports, what evid
 
 Perform the following set of steps to move beyond individual alerts. The graph helps investigators see relationships among accounts, devices, IP addresses, payees, channels, branches, and cases.
 
+![Financial Crime Network page with connected entities, investigation depth, and the relationship graph](images/financial-crime-network.png)
+
 1. Click **Financial Crime Network** in the sidebar.
 2. Review the connected risk entity list on the left. The list includes risk score, exposure, channel, and number of graph links.
-3. Set **Graph Depth (Hops)** to **2** for a compact investigation view.
+3. Set **Investigation Depth** to **5** to expose the full multi-hop pattern used in this walkthrough.
 4. Review the graph workspace. The graph connects accounts, devices, IP addresses, payees, branches, phones, emails, merchants, and cases through relationship types such as shared device, shared IP, uses payee, same phone, and opened with.
 
-In the current demo dataset, the selected investigation account **ACCT-8841** is **Premier Checking 8841**. At 2 hops, its network contains **11** nodes and **16** edges. Use that account to set the scene: the investigator is not reviewing a single alert, but a connected account-takeover and mule-payment pattern.
+In the current demo dataset, investigation account **ACCT-8841** has **$18,540.25** exposure and a risk score of **96.5**. At 5 hops, its network contains **19** nodes and **25** edges. Use that account to set the scene: the investigator is not reviewing a single alert, but a connected account-takeover and mule-payment pattern.
 
 **Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
 
@@ -36,7 +38,7 @@ In the current demo dataset, the selected investigation account **ACCT-8841** is
 Perform the following set of steps to compare its direct risk score with the surrounding relationship pattern. The account matters because shared infrastructure and mule-payment links can reveal more risk than a single alert.
 
 1. Select **ACCT-8841** if it is not already selected.
-2. Review the account metrics above the graph. The selected account shows **$18,540.25** exposure, **96.5** risk score, **5** direct connections, **11** nodes, **16** edges, and **2** hops when the depth control is set to 2.
+2. Review the account metrics above the graph. The selected account shows **$18,540.25** exposure, **96.5** risk score, **96.5%** evidence strength, **5** direct connections, **19** nodes, **25** edges, and **5** hops.
 3. Compare the account row on the left with the graph on the right. The row tells you the account's direct risk context; the graph shows how that account connects to devices, payees, IP addresses, phone numbers, and a case.
 4. Use the visible relationships as the demo evidence: **shared_device** to **DEV-fp-91a7** with strength **0.982**, **uses_payee** to **PAYEE-MULE-017** with strength **0.971**, **shared_ip** to **IP-198.51.100.44** with strength **0.963**, and **same_phone** to **PHONE-212-0199** with strength **0.934**.
 
@@ -128,4 +130,4 @@ The query runs against the `FRAUD_NETWORK` property graph using SQL/PGQ-style tr
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-28
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-29

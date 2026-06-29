@@ -2,7 +2,7 @@
 
 ## Introduction
 
-**Ask Seer Bank Data** helps business users ask finance questions in plain language while keeping the answer path visible. Users can inspect generated SQL, run it against governed Oracle data, and review the returned rows, making self-service analytics faster and easier to trust.
+**Ask Finance Data** helps business users ask finance questions in plain language while keeping the answer path visible. Users can inspect generated SQL, run it against governed Oracle data, and review the returned rows, making self-service analytics faster and easier to trust.
 
 Finance teams struggle when the information needed for one decision lives in separate tools. That separation slows action, increases reconciliation work, and makes it harder to trust the result.
 
@@ -10,7 +10,7 @@ Finance teams struggle when the information needed for one decision lives in sep
 
 Estimated Time: **10 minutes**
 
-![Governed Data Copilot workspace with modes and finance question examples highlighted](images/ask-seer-bank-data-overview.png)
+![Governed Data Copilot workspace with modes and finance question examples](images/ask-seer-bank-data-overview.png)
 
 ### Objectives
 
@@ -20,7 +20,9 @@ In this scene, you will learn what finance decision the page supports, what evid
 
 Perform the following set of steps to show how business users can ask questions in plain language while still keeping the query path visible and controlled.
 
-1. Click **Governed Data Copilot** in the sidebar.
+![Governed Data Copilot workspace with runtime selection, interaction modes, and example questions](images/ask-seer-bank-data-overview.png)
+
+1. Click **Ask Finance Data** in the sidebar.
 2. Review the runtime profile in the top right of the chat card. The current demo uses the local **llama3.2** runtime through the **SC_LLAMA_PROFILE** profile.
 3. Review the four modes: **Explain**, **Chat**, **Show SQL**, and **Run SQL**.
 4. Review the example question tiles.
@@ -46,7 +48,7 @@ The value is not only convenience. A finance analyst can get faster answers whil
 
 ![Run SQL results for fraud and AML exposure signals](images/ask-seer-bank-data-run-sql-results.png)
 
-Perform the following set of steps to identify concrete revenue patterns that may matter to product management, finance operations, service planning, or reporting.
+Perform the following set of steps to identify concrete fraud and AML exposure patterns that may matter to risk management, finance operations, service planning, or reporting.
 
 1. Click **Clear** if the generated SQL result is still visible.
 2. Click **Run SQL**.
@@ -76,4 +78,4 @@ This pattern matters because financial institutions want faster answers, but the
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-28
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-29
