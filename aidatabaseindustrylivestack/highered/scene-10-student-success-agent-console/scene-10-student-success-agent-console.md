@@ -31,7 +31,7 @@ Use the console to show the governed AI operations pattern.
 
 Ask a trend-oriented question to show how the agent routes work to the right team and grounds the answer in student-success data.
 
-1. Click **Which student services are creating the highest fall census pressure?**
+1. Click **Find urgent FAFSA verification and emergency aid signals in the last 24 hours**.
 2. Review the response from the agent runtime.
 3. Review the recent action log area.
 4. Explain that the system uses AI for reasoning but keeps data access, tool execution, and audit evidence inside the governed Oracle-backed application.
