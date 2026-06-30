@@ -20,7 +20,13 @@ In this scene, you will learn what telecom decision the page supports, what evid
 2. Use the welcome page to make the demo feel like one connected telecom service-assurance story, not eight separate feature stops.
 3. Read the three visible use case tiles in **Core Mobile Service Assurance Use Cases**.
 4. Click the right carousel arrow to move forward.
+
+![Use case carousel showing the next group of telecom assurance use cases](images/use-case-summary-next.png)
+
 5. Continue until you have reviewed all eight use cases.
+
+![Use case carousel showing the final telecom assurance use cases](images/use-case-summary-final.png)
+
 6. Use the left carousel arrow if you want to return to earlier tiles.
 
 ## Task 2: Continue the demo
@@ -34,4 +40,4 @@ After the audience understands the **South Florida 5G** subscriber-impact storyl
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-28
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-29

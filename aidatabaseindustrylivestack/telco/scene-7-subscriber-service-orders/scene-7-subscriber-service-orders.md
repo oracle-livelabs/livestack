@@ -29,9 +29,9 @@ Review the service-order workspace to establish the operational context: who the
 1. Click **Subscriber Service Orders** in the sidebar.
 2. Review the VPD banner below the page subtitle. It shows the active demo user and whether the user has full access or a region-filtered order view.
 3. Review the status filter and the service-order table.
-4. Focus on service order **#52968**.
+4. Focus on service order **#189288**.
 
-In the current demo dataset, service order **#52968** is for **Lisa Hernandez** in **Chicago, Illinois**. It is marked **Completed**, contains **3** line items, totals **$2,065**, and is fulfilled by **Dallas 5G Dispatch Center**. This service order will be the data point used through the rest of the scene.
+In the current demo dataset, service order **#189288** is for **Lisa Hernandez** in **Chicago, Illinois**. It is marked **Completed**, contains **3** line items, totals **$2,065**, and is fulfilled by **Dallas 5G Dispatch Center**. This service order will be the data point used through the rest of the scene.
 
 **Note:** These are sample values from the current demo dataset and may change after a refresh, seed update, or custom dataset import. Treat these numbers as an example of the current operating pattern. Review the live values in the UI and connect them to the operational pattern: subscriber impact, capacity exposure, SLA risk, revenue exposure, dispatch load, or restoration status.
 
@@ -41,22 +41,24 @@ In the current demo dataset, service order **#52968** is for **Lisa Hernandez** 
 
 Inspect the relational service-order detail to validate the subscriber, location, order total, dispatch cost, line items, quantities, and pricing that care and service operations teams need for follow-up.
 
-1. Click service order **#52968**.
+1. Click service order **#189288**.
 2. Confirm the **Service Order Tables** tab is selected.
 3. Review the subscriber, location, total, dispatch cost, and line-item table.
 4. Review the services in the order, such as **Edge Compute Reservation**, **Fleet Telematics SIM Pack**, and **Network Congestion Plan Review**.
 
 This view is useful for service operations and customer care because it shows normalized transactional data in a format that is easy to validate. The order header, subscriber, service, brand, category, quantity, unit price, and line total are connected through relational joins while preserving ACID consistency.
 
+The relational order record shows an order-level shipping or dispatch cost of **$0.00**. The later route view calculates **$22.20** of field-dispatch context; these are separate measures.
+
 ## Task 3: Compare the Service Order Document
 
-![Service Order Document tab with JSON document for order 52968](images/service-order-document-tab.png)
+![Service Order Document tab with JSON document for order 189288](images/service-order-document-tab.png)
 
 Compare the Service Order Document to show that the same governed service order can support both operations users and application teams without creating separate copies of the record.
 
 1. Click **Service Order Document** in the expanded order panel.
 2. Review the source label for the JSON Duality View.
-3. Review the JSON document for service order **52968**.
+3. Review the JSON document for service order **189288**.
 4. Notice that the document contains order identity, subscriber identity, status, total, dispatch cost, demand score, created date, and nested line items.
 
 The key point is that the service order is not copied into a separate document store. The same governed order can appear as operational detail or as a document shape for applications.
@@ -74,7 +76,7 @@ Review field dispatch context to connect the service order to the dispatch cente
 
 The business value is that teams can make the decision from connected, governed data. Oracle AI Database provides the shared foundation that keeps operational data, analytics, and AI workflows aligned.
 
-For order **#52968**, the page connects **Dallas 5G Dispatch Center** to **Lisa Hernandez** in Chicago. The operational detail includes a spatial distance of about **817 miles** and a dispatch cost of **$22.20**. This connects the service-order record to field visibility, not just API payloads or order totals.
+For order **#189288**, the page connects **Dallas 5G Dispatch Center** to **Lisa Hernandez** in Chicago. The operational detail includes a spatial distance of about **817 miles** and a route-derived field-dispatch cost of **$22.20**. This connects the service-order record to field visibility, not just API payloads or order totals.
 
 **Note:** These are sample values from the current demo dataset and may change after a refresh, seed update, or custom dataset import. Treat these numbers as an example of the current operating pattern. Review the live values in the UI and connect them to the operational pattern: subscriber impact, capacity exposure, SLA risk, revenue exposure, dispatch load, or restoration status.
 
@@ -83,4 +85,4 @@ You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-28
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-29

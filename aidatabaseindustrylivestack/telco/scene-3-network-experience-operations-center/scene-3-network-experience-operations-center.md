@@ -30,7 +30,7 @@ Use the dashboard as a daily triage view. The goal is to see where subscriber im
 4. Review **Service Revenue by Service Line** to see which service categories are contributing most to revenue.
 5. Review the assurance evidence row: alarm severity, incident status, ticket aging, and restoration status. These markers make the dashboard feel like a service-assurance view instead of a generic business dashboard.
 
-Use the dashboard as a triage view. These are sample values from the current demo dataset and may change after a refresh, seed update, or custom dataset import. In this example, the guide mentions values such as **3,000 service orders**, **$2.17M in service revenue**, **524 high-priority subscriber signals**, **32 services with service-impact risk**, and **375 active dispatches**.
+The current dashboard shows **3,000 service orders**, **$2.17M in service revenue**, **524 high-priority subscriber signals**, **32 services with service-impact risk**, and **375 active dispatches**.
 
 **Note:** These are sample values from the current demo dataset and may change after a refresh, seed update, or custom dataset import. Treat these numbers as an example of the current operating pattern. Review the live values in the UI and connect them to the operational pattern: subscriber impact, capacity exposure, SLA risk, revenue exposure, dispatch load, or restoration status.
 
@@ -47,7 +47,7 @@ Review service-impact risk to identify which telecom services are carrying the s
 3. Use the search field or service-line chips if you want to narrow the table.
 4. Focus on **Fixed Wireless Home Internet**.
 
-In this example, the guide mentions values such as **57 signal mentions**, **45M affected subscriber reach**, an urgency score of **77**, and **High risk**.
+The current service-impact table shows **57 signal mentions**, **45.4M affected subscriber reach**, an urgency score of **77.0**, and **High risk**.
 
 **Note:** These are sample values from the current demo dataset and may change after a refresh, seed update, or custom dataset import. Treat these numbers as an example of the current operating pattern. Review the live values in the UI and connect them to the operational pattern: subscriber impact, capacity exposure, SLA risk, revenue exposure, dispatch load, or restoration status.
 
@@ -80,4 +80,4 @@ You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-28
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-29

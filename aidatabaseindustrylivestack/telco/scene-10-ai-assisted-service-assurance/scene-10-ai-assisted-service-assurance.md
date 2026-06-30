@@ -20,44 +20,44 @@ In this scene, you will learn what telecom decision the page supports, what evid
 
 ![AI-Assisted Service Assurance workspace](images/agent-console-workspace.png)
 
-Review the agent console as an operational workspace. The user should notice the runtime profile, example questions, specialist routing, recent interventions, tool badges, and confidence information before running an agent task.
+Review the agent console as an operational workspace. Before running a task, the user can see the runtime profile, example questions, chat area, and any interventions logged by earlier demo runs. Specialist routing, tool badges, returned data, and confidence become visible after a query runs.
 
 1. Click **AI-Assisted Service Assurance** in the sidebar.
 2. Review the runtime profile selector in the top right. The current demo uses **llama3.2** through an Ollama-backed runtime profile.
 3. Review the example questions in the chat panel.
-4. Review **Recent AI-Assisted Interventions** below the chat panel.
+4. Review **Recent AI-Assisted Interventions** below the chat panel if earlier demo runs are present.
 5. Focus on a capacity example such as **Check capacity for 5G Unlimited Mobile Plan** or **Which telecom services have low capacity?**
 
-Use this opening view to explain that the page is an operational agent console. The user can see routing, tools, results, confidence, and action history, not just a chat response.
+Use this opening view to explain that the page is an operational agent console. The runtime profile and examples establish what can be asked; the next task shows routing, tools, returned data, confidence, and durable action history.
 
-## Task 2: Run a network access capacity question
+## Task 2: Run a low-capacity question
 
-![Network access capacity question tiles](images/capacity-question-tile.png)
+![Low-capacity query result with fulfillment-center inventory and tool badges](images/capacity-question-tile.png)
 
-Run a network access capacity question to show how the agent identifies capacity across network sites, connects the answer to a telecom service under demand pressure, and exposes the tool path behind the result.
+Run the low-capacity question to show how the agent routes the request, summarizes fulfillment-center inventory pressure, and exposes the governed tool path behind the result.
 
-1. Click **Ask** on **Which telecom services have low capacity?** or enter **Check capacity for Fixed Wireless Home Internet**.
+1. Click **Ask** on **Which telecom services have low capacity?**
 2. Review the agent response at the top of the chat output.
-3. Review the capacity or site list returned by the agent.
+3. Review the fulfillment-center inventory table returned by the agent.
 4. Review the tool badges below the response.
 
-After showing the capacity response, explain what the business can decide: review site capacity, rebalance dispatch, prepare field support, or trigger customer outreach.
+After showing the response, explain what the business can decide: investigate low-stock exposure, prioritize replenishment, or coordinate the fulfillment centers that need attention first.
 
-In the current demo dataset, the capacity question for **Fixed Wireless Home Internet** routes to the **Network Access Agent** path and returns capacity across **11** centers with **1,911** available dispatch slots. The response identifies lower-capacity sites such as **Chicago Midwest NOC**, **Miami Connected Life Hub**, **Boston Family Plan Support Center**, and **Seattle Customer Experience Center**.
+In the current demo dataset, the low-capacity question routes to **FULFILLMENT_TEAM** and returns a fulfillment overview for **10 active centers**. The table shows each center's location, center type, products stocked, total on hand, and low-stock item count. The response exposes **COMMERCE_SQL_TOOL (fallback)** as the governed Oracle data-access path used for the result.
 
 **Note:** These are sample values from the current demo dataset and may change after a refresh, seed update, or custom dataset import. Treat these numbers as an example of the current operating pattern. Review the live values in the UI and connect them to the operational pattern: subscriber impact, capacity exposure, SLA risk, revenue exposure, dispatch load, or restoration status.
 
 ## Task 3: Interpret the operational story
 
-Interpret the capacity result as an operational visibility story: teams can compare available capacity, reserved quantities, demand pressure, and possible actions such as field dispatch, capacity relief, or customer outreach.
+Interpret the result as an operational visibility story: teams can compare center-level stock breadth, total on-hand capacity, and low-stock exposure before deciding where replenishment, field support, capacity relief, or customer communication may be needed.
 
-1. The service request narrows the search to a telecom service.
-2. Oracle data identifies network sites with available capacity.
-3. The agent summarizes center-level capacity and reserved quantities.
-4. The business user can compare whether capacity is deep enough to support the demand story from earlier scenes.
-5. The audit trail records that the question was handled by the appropriate agent path.
+1. The question asks for telecom services with low capacity.
+2. The workflow routes the request to **FULFILLMENT_TEAM**.
+3. Oracle data returns **10** active centers with products stocked, total on hand, and low-stock item counts.
+4. The business user can compare where capacity or replenishment pressure is concentrated.
+5. The audit trail records the specialist route and confidence after the query completes.
 
-The important story is operational visibility: teams can see whether capacity exists, whether reserved quantities matter, and whether the service-impact scenario should trigger field dispatch, capacity relief, SLA management, or customer outreach.
+The important story is operational visibility: teams can see where inventory capacity is available, where low-stock exposure is concentrated, and which fulfillment centers may need replenishment or operational follow-up.
 
 ## Task 4: Review the agent action audit trail
 
@@ -82,4 +82,4 @@ The walkthrough showed how connected telecom data can support service-impact det
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-28
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-29
