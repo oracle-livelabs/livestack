@@ -1,0 +1,32 @@
+product_id,brand_id,sku,product_name,description,category,subcategory,unit_price,unit_cost,weight_kg,is_active,launch_date,tags,created_at,updated_at
+1,1,APE-00001,Servo Drive Controller AX-400,,Industrial Automation,Motion Control,1280,620,3.8,1,2024-09-23,"servo,drive,controller,motion-control",2026-06-29T21:44:57Z,2026-06-29T21:44:57Z
+2,1,APE-00002,Robotic Palletizer Control Cabinet,,Industrial Automation,Robotics,18400,9100,280,1,2024-07-24,"robotics,palletizer,control-cabinet,automation",2026-06-29T21:44:57Z,2026-06-29T21:44:57Z
+3,1,APE-00003,Predictive Maintenance Sensor Pack,,Industrial Automation,Condition Monitoring,740,310,1.6,1,2024-11-21,"sensor,maintenance,vibration,iiot",2026-06-29T21:44:57Z,2026-06-29T21:44:57Z
+4,2,CIR-00004,Industrial Gateway PCB Assembly,,Electronics,PCB Assembly,92,41,0.18,1,2026-01-18,"pcb,gateway,assembly,smt",2026-06-29T21:44:57Z,2026-06-29T21:44:57Z
+5,2,CIR-00005,Ruggedized Edge Compute Module,,Electronics,Edge Compute,680,325,1.2,1,2026-05-01,"edge-compute,rugged,controller,module",2026-06-29T21:44:57Z,2026-06-29T21:44:57Z
+6,2,CIR-00006,Power Regulation Board,,Electronics,Power Electronics,145,66,0.32,1,2026-05-05,"power,regulator,board,electronics",2026-06-29T21:44:57Z,2026-06-29T21:44:57Z
+7,3,MOT-00007,EV Motor Stator Assembly,,Mobility Components,Electric Drive,1460,720,18.5,1,2026-01-03,"ev,stator,motor,assembly",2026-06-29T21:44:57Z,2026-06-29T21:44:57Z
+8,3,MOT-00008,Torque Sensor Housing,,Mobility Components,Sensors,210,92,1.1,1,2024-08-31,"torque,sensor,housing,cnc",2026-06-29T21:44:57Z,2026-06-29T21:44:57Z
+9,3,MOT-00009,Thermal Management Manifold,,Mobility Components,Thermal,390,175,2.8,1,2026-05-07,"thermal,manifold,cooling,mobility",2026-06-29T21:44:57Z,2026-06-29T21:44:57Z
+10,4,PRE-00010,CNC Machined Pump Impeller,,Metal Fabrication,Machining,275,118,2.4,1,2025-05-30,"cnc,impeller,pump,metal",2026-06-29T21:44:57Z,2026-06-29T21:44:57Z
+11,4,PRE-00011,Investment Cast Valve Body,,Metal Fabrication,Casting,520,230,6.8,1,2024-08-23,"casting,valve,body,alloy",2026-06-29T21:44:57Z,2026-06-29T21:44:57Z
+12,4,PRE-00012,Welded Structural Bracket Set,,Metal Fabrication,Welding,185,78,4.2,1,2025-09-23,"welded,bracket,structural,fabrication",2026-06-29T21:44:57Z,2026-06-29T21:44:57Z
+13,5,NOR-00013,High-Precision Drill Fixture,,Machine Tools,Tooling,980,410,8.5,1,2025-06-24,"fixture,drill,tooling,precision",2026-06-29T21:44:57Z,2026-06-29T21:44:57Z
+14,5,NOR-00014,Modular CNC Workholding Kit,,Machine Tools,Workholding,1250,540,12.3,1,2024-12-24,"cnc,workholding,fixture,kit",2026-06-29T21:44:57Z,2026-06-29T21:44:57Z
+15,5,NOR-00015,Line Changeover Gauge Set,,Machine Tools,Quality Tooling,360,145,2.1,1,2025-11-26,"gauge,changeover,quality,tooling",2026-06-29T21:44:57Z,2026-06-29T21:44:57Z
+16,6,ROB-00016,Collaborative Assembly Cell Slot,,Flexible Assembly,Assembly Capacity,5200,2600,0.001,1,2025-04-30,"cobot,assembly,capacity,line-slot",2026-06-29T21:44:57Z,2026-06-29T21:44:57Z
+17,6,ROB-00017,Vision Inspection Station,,Flexible Assembly,Quality Automation,8900,4300,95,1,2025-07-21,"vision,inspection,quality,automation",2026-06-29T21:44:57Z,2026-06-29T21:44:57Z
+18,6,ROB-00018,End-of-Arm Tooling Adapter,,Flexible Assembly,Robotics Tooling,430,175,2.6,1,2025-12-14,"robot,tooling,adapter,eoat",2026-06-29T21:44:57Z,2026-06-29T21:44:57Z
+19,7,PAC-00019,Temperature Sensor Node,,Industrial IoT,Sensors,74,28,0.22,1,2025-07-12,"temperature,sensor,node,iiot",2026-06-29T21:44:57Z,2026-06-29T21:44:57Z
+20,7,PAC-00020,Vibration Analytics Gateway,,Industrial IoT,Condition Monitoring,620,285,1.9,1,2025-07-04,"vibration,analytics,gateway,maintenance",2026-06-29T21:44:57Z,2026-06-29T21:44:57Z
+21,7,PAC-00021,Line Utilization Beacon,,Industrial IoT,Production Telemetry,110,44,0.35,1,2024-07-29,"line-utilization,beacon,telemetry",2026-06-29T21:44:57Z,2026-06-29T21:44:57Z
+22,8,QUA-00022,Injection Molded Gear Housing,,Injection Molding,Polymer Parts,132,52,0.8,1,2025-12-05,"injection-molding,gear,housing,polymer",2026-06-29T21:44:57Z,2026-06-29T21:44:57Z
+23,8,QUA-00023,Industrial-Grade Enclosure Shell,,Injection Molding,Enclosures,98,39,0.5,1,2025-11-17,"enclosure,shell,molded,polymer",2026-06-29T21:44:57Z,2026-06-29T21:44:57Z
+24,9,SUM-00024,Bearing and Seal Maintenance Kit,,MRO Supply,Maintenance Kit,260,108,3.2,1,2026-05-10,"bearing,seal,mro,maintenance",2026-06-29T21:44:57Z,2026-06-29T21:44:57Z
+25,9,SUM-00025,Safety Stock Replenishment Bundle,,MRO Supply,Inventory Bundle,475,210,7.5,1,2024-09-05,"safety-stock,replenishment,mro,bundle",2026-06-29T21:44:57Z,2026-06-29T21:44:57Z
+26,10,ALL-00026,Lightweight Aluminum Extrusion,,Advanced Materials,Extrusions,340,150,5.4,1,2025-03-12,"aluminum,extrusion,lightweight,materials",2026-06-29T21:44:57Z,2026-06-29T21:44:57Z
+27,10,ALL-00027,Nickel Alloy Heat Shield,,Advanced Materials,Thermal Shielding,720,330,4.7,1,2025-01-01,"nickel,alloy,heat-shield,thermal",2026-06-29T21:44:57Z,2026-06-29T21:44:57Z
+28,12,TIT-00028,Hydraulic Actuator Repair Kit,,Aftermarket Parts,Hydraulics,390,165,6.3,1,2024-10-25,"hydraulic,actuator,repair,aftermarket",2026-06-29T21:44:57Z,2026-06-29T21:44:57Z
+29,12,TIT-00029,Field Service Spare Parts Pack,,Aftermarket Parts,Service Parts,580,240,9.5,1,2024-11-15,"field-service,spare-parts,aftermarket",2026-06-29T21:44:57Z,2026-06-29T21:44:57Z
+30,11,GRE-00030,Recyclable Protective Packaging Insert,,Packaging Materials,Protective Packaging,46,19,0.28,1,2026-05-21,"recyclable,packaging,insert,materials",2026-06-29T21:44:57Z,2026-06-29T21:44:57Z
+31,11,GRE-00031,Returnable Dunnage Tray,,Packaging Materials,Returnable Packaging,88,36,1.4,1,2024-08-03,"dunnage,tray,returnable,packaging",2026-06-29T21:44:57Z,2026-06-29T21:44:57Z

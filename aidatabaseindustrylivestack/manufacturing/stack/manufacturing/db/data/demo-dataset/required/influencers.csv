@@ -1,0 +1,484 @@
+influencer_id,handle,display_name,platform,follower_count,engagement_rate,influence_score,niche,city,region,country,is_verified,created_at
+1,@plant_mike,Plant Mike,instagram,49125,0.0424,79.74,Industrial Automation,New York,New York,US,0,2026-06-29T21:44:57Z
+2,@plant_jen,Plant Jen,tiktok,169703,0.0351,72.96,Electronics Manufacturing,Los Angeles,California,US,0,2026-06-29T21:44:57Z
+3,@plant_alex,Plant Alex,twitter,3576487,0.0054,74.6,Metal Fabrication,Chicago,Illinois,US,1,2026-06-29T21:44:57Z
+4,@plant_zoe,Plant Zoe,youtube,3831,0.0819,88.3,CNC Machining,Houston,Texas,US,0,2026-06-29T21:44:57Z
+5,@plant_marcus,Plant Marcus,threads,108002,0.0205,70.11,Injection Molding,Phoenix,Arizona,US,0,2026-06-29T21:44:57Z
+6,@plant_lily,Plant Lily,instagram,4253,0.042,63.64,Robotics,San Francisco,California,US,0,2026-06-29T21:44:57Z
+7,@plant_kai,Plant Kai,tiktok,18583,0.0573,75.65,Quality Assurance,Miami,Florida,US,0,2026-06-29T21:44:57Z
+8,@plant_maya,Plant Maya,twitter,4514236,0.0138,87.9,MRO Supply,Seattle,Washington,US,1,2026-06-29T21:44:57Z
+9,@plant_tyler,Plant Tyler,youtube,4931,0.0952,86.71,Industrial IoT,Denver,Colorado,US,0,2026-06-29T21:44:57Z
+10,@plant_ava,Plant Ava,threads,4058,0.1105,95.06,Packaging Materials,Austin,Texas,US,0,2026-06-29T21:44:57Z
+11,@line_jen,Line Jen,instagram,320801,0.0428,93.7,Production Planning,Nashville,Tennessee,US,0,2026-06-29T21:44:57Z
+12,@line_zoe,Line Zoe,tiktok,14956499,0.0163,93.12,Supplier Quality,Portland,Oregon,US,1,2026-06-29T21:44:57Z
+13,@line_lily,Line Lily,twitter,21158,0.0674,81.64,Maintenance Reliability,Boston,Massachusetts,US,0,2026-06-29T21:44:57Z
+14,@line_maya,Line Maya,youtube,64944,0.0399,82.34,Plant Logistics,Atlanta,Georgia,US,0,2026-06-29T21:44:57Z
+15,@line_ava,Line Ava,threads,2034,0.1126,93.69,Aftermarket Parts,Dallas,Texas,US,0,2026-06-29T21:44:57Z
+16,@line_nina,Line Nina,instagram,6214,0.1167,100,Industrial Automation,San Diego,California,US,0,2026-06-29T21:44:57Z
+17,@line_ella,Line Ella,tiktok,22682,0.0571,85,Electronics Manufacturing,Minneapolis,Minnesota,US,0,2026-06-29T21:44:57Z
+18,@line_aria,Line Aria,twitter,8966,0.0373,74.06,Metal Fabrication,Detroit,Michigan,US,0,2026-06-29T21:44:57Z
+19,@line_luna,Line Luna,youtube,2476,0.0612,66.14,CNC Machining,Las Vegas,Nevada,US,0,2026-06-29T21:44:57Z
+20,@line_mia,Line Mia,threads,1272,0.115,100,Injection Molding,Brooklyn,New York,US,0,2026-06-29T21:44:57Z
+21,@tooling_alex,Tooling Alex,instagram,783004,0.0351,89.05,Robotics,New York,New York,US,1,2026-06-29T21:44:57Z
+22,@tooling_lily,Tooling Lily,tiktok,7690,0.0689,78.16,Quality Assurance,Los Angeles,California,US,0,2026-06-29T21:44:57Z
+23,@tooling_tyler,Tooling Tyler,twitter,6816,0.0967,94.92,MRO Supply,Chicago,Illinois,US,0,2026-06-29T21:44:57Z
+24,@tooling_nina,Tooling Nina,youtube,4073,0.052,66.74,Industrial IoT,Houston,Texas,US,0,2026-06-29T21:44:57Z
+25,@tooling_finn,Tooling Finn,threads,4031,0.0556,73.45,Packaging Materials,Phoenix,Arizona,US,0,2026-06-29T21:44:57Z
+26,@tooling_luna,Tooling Luna,instagram,67773,0.0762,100,Production Planning,San Francisco,California,US,0,2026-06-29T21:44:57Z
+27,@tooling_noah,Tooling Noah,tiktok,5314,0.0684,76.85,Supplier Quality,Miami,Florida,US,0,2026-06-29T21:44:57Z
+28,@tooling_ruby,Tooling Ruby,twitter,3220,0.0371,67.52,Maintenance Reliability,Seattle,Washington,US,0,2026-06-29T21:44:57Z
+29,@tooling_dane,Tooling Dane,youtube,37422,0.0251,64.33,Plant Logistics,Denver,Colorado,US,0,2026-06-29T21:44:57Z
+30,@tooling_hope,Tooling Hope,threads,6879,0.0386,72.78,Aftermarket Parts,Austin,Texas,US,0,2026-06-29T21:44:57Z
+31,@supplier_zoe,Supplier Zoe,instagram,9355,0.0647,78.52,Industrial Automation,Nashville,Tennessee,US,0,2026-06-29T21:44:57Z
+32,@supplier_maya,Supplier Maya,tiktok,24167,0.0319,63.94,Electronics Manufacturing,Portland,Oregon,US,0,2026-06-29T21:44:57Z
+33,@supplier_nina,Supplier Nina,twitter,45836,0.0574,82.22,Metal Fabrication,Boston,Massachusetts,US,0,2026-06-29T21:44:57Z
+34,@supplier_aria,Supplier Aria,youtube,850964,0.0328,89.29,CNC Machining,Atlanta,Georgia,US,1,2026-06-29T21:44:57Z
+35,@supplier_mia,Supplier Mia,threads,73461,0.0417,76.3,Injection Molding,Dallas,Texas,US,0,2026-06-29T21:44:57Z
+36,@supplier_ruby,Supplier Ruby,instagram,11686262,0.0119,93.05,Robotics,San Diego,California,US,1,2026-06-29T21:44:57Z
+37,@supplier_faye,Supplier Faye,tiktok,7128,0.0679,86.28,Quality Assurance,Minneapolis,Minnesota,US,0,2026-06-29T21:44:57Z
+38,@supplier_jace,Supplier Jace,twitter,16689,0.061,76.33,MRO Supply,Detroit,Michigan,US,0,2026-06-29T21:44:57Z
+39,@supplier_omar,Supplier Omar,youtube,6391,0.0667,77.57,Industrial IoT,Las Vegas,Nevada,US,0,2026-06-29T21:44:57Z
+40,@supplier_tess,Supplier Tess,threads,3160,0.0364,61.98,Packaging Materials,Brooklyn,New York,US,0,2026-06-29T21:44:57Z
+41,@quality_marcus,Quality Marcus,instagram,4519,0.1054,100,Production Planning,New York,New York,US,0,2026-06-29T21:44:57Z
+42,@quality_ava,Quality Ava,tiktok,580023,0.0444,90.96,Supplier Quality,Los Angeles,California,US,1,2026-06-29T21:44:57Z
+43,@quality_finn,Quality Finn,twitter,316733,0.0448,88.65,Maintenance Reliability,Chicago,Illinois,US,0,2026-06-29T21:44:57Z
+44,@quality_mia,Quality Mia,youtube,8380,0.061,83.83,Plant Logistics,Houston,Texas,US,0,2026-06-29T21:44:57Z
+45,@quality_max,Quality Max,threads,14911,0.0549,81.97,Aftermarket Parts,Phoenix,Arizona,US,0,2026-06-29T21:44:57Z
+46,@quality_hope,Quality Hope,instagram,6839047,0.0106,79,Industrial Automation,San Francisco,California,US,1,2026-06-29T21:44:57Z
+47,@quality_nora,Quality Nora,tiktok,33290,0.065,91.6,Electronics Manufacturing,Miami,Florida,US,0,2026-06-29T21:44:57Z
+48,@quality_tess,Quality Tess,twitter,23426,0.0397,68.64,Metal Fabrication,Seattle,Washington,US,0,2026-06-29T21:44:57Z
+49,@quality_yuri,Quality Yuri,youtube,70016,0.0317,77.63,CNC Machining,Denver,Colorado,US,0,2026-06-29T21:44:57Z
+50,@quality_sarah,Quality Sarah,threads,205605,0.0316,73.53,Injection Molding,Austin,Texas,US,0,2026-06-29T21:44:57Z
+51,@safety_lily,Safety Lily,instagram,23993,0.0713,85.27,Robotics,Nashville,Tennessee,US,0,2026-06-29T21:44:57Z
+52,@safety_nina,Safety Nina,tiktok,255679,0.0292,80.35,Quality Assurance,Portland,Oregon,US,0,2026-06-29T21:44:57Z
+53,@safety_luna,Safety Luna,twitter,50027,0.0396,73.61,MRO Supply,Boston,Massachusetts,US,0,2026-06-29T21:44:57Z
+54,@safety_ruby,Safety Ruby,youtube,35923,0.0503,81.77,Industrial IoT,Atlanta,Georgia,US,0,2026-06-29T21:44:57Z
+55,@safety_hope,Safety Hope,threads,6494,0.1061,93.75,Packaging Materials,Dallas,Texas,US,0,2026-06-29T21:44:57Z
+56,@safety_omar,Safety Omar,instagram,93347,0.0644,87.83,Production Planning,San Diego,California,US,0,2026-06-29T21:44:57Z
+57,@safety_vince,Safety Vince,tiktok,139243,0.03,82.88,Supplier Quality,Minneapolis,Minnesota,US,0,2026-06-29T21:44:57Z
+58,@safety_cass,Safety Cass,twitter,9687,0.1188,100,Maintenance Reliability,Detroit,Michigan,US,0,2026-06-29T21:44:57Z
+59,@safety_zoe,Safety Zoe,youtube,98396,0.0316,73.83,Plant Logistics,Las Vegas,Nevada,US,0,2026-06-29T21:44:57Z
+60,@safety_ava,Safety Ava,threads,42654,0.0291,75.36,Aftermarket Parts,Brooklyn,New York,US,0,2026-06-29T21:44:57Z
+61,@maintenance_kai,Maintenance Kai,instagram,14470507,0.01,91.84,Industrial Automation,New York,New York,US,1,2026-06-29T21:44:57Z
+62,@maintenance_ella,Maintenance Ella,tiktok,270624,0.0388,84.11,Electronics Manufacturing,Los Angeles,California,US,0,2026-06-29T21:44:57Z
+63,@maintenance_noah,Maintenance Noah,twitter,951354,0.0203,86.62,Metal Fabrication,Chicago,Illinois,US,1,2026-06-29T21:44:57Z
+64,@maintenance_faye,Maintenance Faye,youtube,34757,0.0518,73.25,CNC Machining,Houston,Texas,US,0,2026-06-29T21:44:57Z
+65,@maintenance_nora,Maintenance Nora,threads,7570,0.0494,74.84,Injection Molding,Phoenix,Arizona,US,0,2026-06-29T21:44:57Z
+66,@maintenance_vince,Maintenance Vince,instagram,1004,0.0795,72.74,Robotics,San Francisco,California,US,0,2026-06-29T21:44:57Z
+67,@maintenance_dev,Maintenance Dev,tiktok,7533,0.0309,65.86,Quality Assurance,Miami,Florida,US,0,2026-06-29T21:44:57Z
+68,@maintenance_lily,Maintenance Lily,twitter,734953,0.0172,85.74,MRO Supply,Seattle,Washington,US,1,2026-06-29T21:44:57Z
+69,@maintenance_drew,Maintenance Drew,youtube,8873,0.0423,71.27,Industrial IoT,Denver,Colorado,US,0,2026-06-29T21:44:57Z
+70,@maintenance_mia,Maintenance Mia,threads,6251,0.106,100,Packaging Materials,Austin,Texas,US,0,2026-06-29T21:44:57Z
+71,@robotics_maya,Robotics Maya,instagram,38981,0.067,82.85,Production Planning,Nashville,Tennessee,US,0,2026-06-29T21:44:57Z
+72,@robotics_aria,Robotics Aria,tiktok,586111,0.0449,95.21,Supplier Quality,Portland,Oregon,US,1,2026-06-29T21:44:57Z
+73,@robotics_ruby,Robotics Ruby,twitter,2213,0.0313,60,Maintenance Reliability,Boston,Massachusetts,US,0,2026-06-29T21:44:57Z
+74,@robotics_jace,Robotics Jace,youtube,1094,0.1092,94.26,Plant Logistics,Atlanta,Georgia,US,0,2026-06-29T21:44:57Z
+75,@robotics_tess,Robotics Tess,threads,3778,0.0473,61.67,Aftermarket Parts,Dallas,Texas,US,0,2026-06-29T21:44:57Z
+76,@robotics_cass,Robotics Cass,instagram,501313,0.0367,88.68,Industrial Automation,San Diego,California,US,1,2026-06-29T21:44:57Z
+77,@robotics_lily,Robotics Lily,tiktok,51200,0.0542,86.24,Electronics Manufacturing,Minneapolis,Minnesota,US,0,2026-06-29T21:44:57Z
+78,@robotics_ella,Robotics Ella,twitter,7813,0.0647,84.08,Metal Fabrication,Detroit,Michigan,US,0,2026-06-29T21:44:57Z
+79,@robotics_ivy,Robotics Ivy,youtube,5748,0.0971,94.44,CNC Machining,Las Vegas,Nevada,US,0,2026-06-29T21:44:57Z
+80,@robotics_hope,Robotics Hope,threads,1693,0.0682,76.74,Injection Molding,Brooklyn,New York,US,0,2026-06-29T21:44:57Z
+81,@automation_tyler,Automation Tyler,instagram,8678,0.0722,80.39,Robotics,New York,New York,US,0,2026-06-29T21:44:57Z
+82,@automation_luna,Automation Luna,tiktok,36652,0.026,70.54,Quality Assurance,Los Angeles,California,US,0,2026-06-29T21:44:57Z
+83,@automation_dane,Automation Dane,twitter,19674,0.0433,72.02,MRO Supply,Chicago,Illinois,US,0,2026-06-29T21:44:57Z
+84,@automation_omar,Automation Omar,youtube,8684,0.0563,69.31,Industrial IoT,Houston,Texas,US,0,2026-06-29T21:44:57Z
+85,@automation_yuri,Automation Yuri,threads,58997,0.0538,79.04,Packaging Materials,Phoenix,Arizona,US,0,2026-06-29T21:44:57Z
+86,@automation_zoe,Automation Zoe,instagram,14862,0.0421,79.07,Production Planning,San Francisco,California,US,0,2026-06-29T21:44:57Z
+87,@automation_drew,Automation Drew,tiktok,8262,0.0348,63.56,Supplier Quality,Miami,Florida,US,0,2026-06-29T21:44:57Z
+88,@automation_ivy,Automation Ivy,twitter,25655,0.0599,76.88,Maintenance Reliability,Seattle,Washington,US,0,2026-06-29T21:44:57Z
+89,@automation_ines,Automation Ines,youtube,121319,0.0197,77.34,Plant Logistics,Denver,Colorado,US,0,2026-06-29T21:44:57Z
+90,@automation_tess,Automation Tess,threads,52452,0.0404,75.5,Aftermarket Parts,Austin,Texas,US,0,2026-06-29T21:44:57Z
+91,@cnc_ava,Cnc Ava,instagram,3299,0.0783,79.91,Industrial Automation,Nashville,Tennessee,US,0,2026-06-29T21:44:57Z
+92,@cnc_mia,Cnc Mia,tiktok,7976,0.0985,100,Electronics Manufacturing,Portland,Oregon,US,0,2026-06-29T21:44:57Z
+93,@cnc_hope,Cnc Hope,twitter,18925,0.0256,57.46,Metal Fabrication,Boston,Massachusetts,US,0,2026-06-29T21:44:57Z
+94,@cnc_tess,Cnc Tess,youtube,641672,0.0367,85.58,CNC Machining,Atlanta,Georgia,US,1,2026-06-29T21:44:57Z
+95,@cnc_sarah,Cnc Sarah,threads,1876,0.0947,92.74,Injection Molding,Dallas,Texas,US,0,2026-06-29T21:44:57Z
+101,@welding_cole,Welding Cole,instagram,1347,0.0891,89.62,Robotics,San Diego,California,US,0,2026-06-29T21:44:57Z
+102,@welding_ivy,Welding Ivy,tiktok,80963,0.0544,82.61,Quality Assurance,Minneapolis,Minnesota,US,0,2026-06-29T21:44:57Z
+103,@welding_kara,Welding Kara,twitter,966166,0.0293,87.49,MRO Supply,Detroit,Michigan,US,1,2026-06-29T21:44:57Z
+104,@welding_xena,Welding Xena,youtube,8827,0.0671,81.59,Industrial IoT,Las Vegas,Nevada,US,0,2026-06-29T21:44:57Z
+105,@welding_marcus,Welding Marcus,threads,97363,0.0694,93.67,Packaging Materials,Brooklyn,New York,US,0,2026-06-29T21:44:57Z
+106,@welding_aria,Welding Aria,instagram,7542,0.0378,70.13,Production Planning,New York,New York,US,0,2026-06-29T21:44:57Z
+107,@welding_dane,Welding Dane,tiktok,257620,0.0309,84.86,Supplier Quality,Los Angeles,California,US,0,2026-06-29T21:44:57Z
+108,@welding_reed,Welding Reed,twitter,4489,0.0517,76.71,Maintenance Reliability,Chicago,Illinois,US,0,2026-06-29T21:44:57Z
+109,@welding_dev,Welding Dev,youtube,27267,0.0315,76.34,Plant Logistics,Houston,Texas,US,0,2026-06-29T21:44:57Z
+110,@welding_ava,Welding Ava,threads,55837,0.0484,83.66,Aftermarket Parts,Phoenix,Arizona,US,0,2026-06-29T21:44:57Z
+111,@casting_nina,Casting Nina,instagram,592248,0.0312,83.17,Industrial Automation,San Francisco,California,US,1,2026-06-29T21:44:57Z
+112,@casting_ruby,Casting Ruby,tiktok,13758,0.0452,68.96,Electronics Manufacturing,Miami,Florida,US,0,2026-06-29T21:44:57Z
+113,@casting_omar,Casting Omar,twitter,5870,0.0776,90.22,Metal Fabrication,Seattle,Washington,US,0,2026-06-29T21:44:57Z
+114,@casting_cass,Casting Cass,youtube,5165,0.0888,85.66,CNC Machining,Denver,Colorado,US,0,2026-06-29T21:44:57Z
+115,@casting_ava,Casting Ava,threads,45406,0.0523,79.57,Injection Molding,Austin,Texas,US,0,2026-06-29T21:44:57Z
+116,@casting_ivy,Casting Ivy,instagram,8865,0.0884,95.39,Robotics,Nashville,Tennessee,US,0,2026-06-29T21:44:57Z
+117,@casting_liam,Casting Liam,tiktok,58924,0.0566,89.54,Quality Assurance,Portland,Oregon,US,0,2026-06-29T21:44:57Z
+118,@casting_zara,Casting Zara,twitter,3949,0.0895,91.97,MRO Supply,Boston,Massachusetts,US,0,2026-06-29T21:44:57Z
+119,@casting_maya,Casting Maya,youtube,272581,0.0273,79.22,Industrial IoT,Atlanta,Georgia,US,0,2026-06-29T21:44:57Z
+120,@casting_mia,Casting Mia,threads,6597,0.0648,85.48,Packaging Materials,Dallas,Texas,US,0,2026-06-29T21:44:57Z
+121,@molding_drew,Molding Drew,instagram,11186978,0.0078,89.29,Production Planning,San Diego,California,US,1,2026-06-29T21:44:57Z
+122,@molding_cleo,Molding Cleo,tiktok,96742,0.0488,77.95,Supplier Quality,Minneapolis,Minnesota,US,0,2026-06-29T21:44:57Z
+123,@molding_sage,Molding Sage,twitter,192665,0.0337,81.69,Maintenance Reliability,Detroit,Michigan,US,0,2026-06-29T21:44:57Z
+124,@molding_jen,Molding Jen,youtube,811487,0.0244,89.56,Plant Logistics,Las Vegas,Nevada,US,1,2026-06-29T21:44:57Z
+125,@molding_finn,Molding Finn,threads,8236,0.0326,63.63,Aftermarket Parts,Brooklyn,New York,US,0,2026-06-29T21:44:57Z
+126,@molding_faye,Molding Faye,instagram,33413,0.0574,87.09,Industrial Automation,New York,New York,US,0,2026-06-29T21:44:57Z
+127,@molding_uma,Molding Uma,tiktok,5224,0.0741,86.41,Electronics Manufacturing,Los Angeles,California,US,0,2026-06-29T21:44:57Z
+128,@molding_zoe,Molding Zoe,twitter,3714,0.0971,97,Metal Fabrication,Chicago,Illinois,US,0,2026-06-29T21:44:57Z
+129,@molding_owen,Molding Owen,youtube,4985,0.0591,74.29,CNC Machining,Houston,Texas,US,0,2026-06-29T21:44:57Z
+130,@molding_hope,Molding Hope,threads,8847,0.097,89.94,Injection Molding,Phoenix,Arizona,US,0,2026-06-29T21:44:57Z
+131,@sensor_ella,Sensor Ella,instagram,24995,0.0347,72.06,Robotics,San Francisco,California,US,0,2026-06-29T21:44:57Z
+132,@sensor_faye,Sensor Faye,tiktok,106405,0.0365,79.44,Quality Assurance,Miami,Florida,US,0,2026-06-29T21:44:57Z
+133,@sensor_vince,Sensor Vince,twitter,63610,0.0532,78.28,MRO Supply,Seattle,Washington,US,0,2026-06-29T21:44:57Z
+134,@sensor_lily,Sensor Lily,youtube,5806,0.0683,76.19,Industrial IoT,Denver,Colorado,US,0,2026-06-29T21:44:57Z
+135,@sensor_mia,Sensor Mia,threads,3740,0.0946,85.42,Packaging Materials,Austin,Texas,US,0,2026-06-29T21:44:57Z
+136,@sensor_liam,Sensor Liam,instagram,8930,0.1059,100,Production Planning,Nashville,Tennessee,US,0,2026-06-29T21:44:57Z
+137,@sensor_cass,Sensor Cass,tiktok,95113,0.0519,78.54,Supplier Quality,Portland,Oregon,US,0,2026-06-29T21:44:57Z
+138,@sensor_nina,Sensor Nina,twitter,75809,0.0545,92.77,Maintenance Reliability,Boston,Massachusetts,US,0,2026-06-29T21:44:57Z
+139,@sensor_cleo,Sensor Cleo,youtube,55748,0.0256,66.91,Plant Logistics,Atlanta,Georgia,US,0,2026-06-29T21:44:57Z
+140,@sensor_tess,Sensor Tess,threads,44118,0.0473,85.39,Aftermarket Parts,Dallas,Texas,US,0,2026-06-29T21:44:57Z
+141,@electronics_finn,Electronics Finn,instagram,9783,0.11,100,Industrial Automation,San Diego,California,US,0,2026-06-29T21:44:57Z
+142,@electronics_hope,Electronics Hope,tiktok,3001,0.0787,74.41,Electronics Manufacturing,Minneapolis,Minnesota,US,0,2026-06-29T21:44:57Z
+143,@electronics_yuri,Electronics Yuri,twitter,72406,0.0396,85.18,Metal Fabrication,Detroit,Michigan,US,0,2026-06-29T21:44:57Z
+144,@electronics_ava,Electronics Ava,youtube,8396,0.1032,100,CNC Machining,Las Vegas,Nevada,US,0,2026-06-29T21:44:57Z
+145,@electronics_max,Electronics Max,threads,14440,0.0393,66.25,Injection Molding,Brooklyn,New York,US,0,2026-06-29T21:44:57Z
+146,@electronics_tess,Electronics Tess,instagram,73711,0.0757,94.54,Robotics,New York,New York,US,0,2026-06-29T21:44:57Z
+147,@electronics_marcus,Electronics Marcus,tiktok,7979,0.1158,98.98,Quality Assurance,Los Angeles,California,US,0,2026-06-29T21:44:57Z
+148,@electronics_mia,Electronics Mia,twitter,6297,0.0482,66.99,MRO Supply,Chicago,Illinois,US,0,2026-06-29T21:44:57Z
+149,@electronics_nora,Electronics Nora,youtube,70355,0.0361,72.12,Industrial IoT,Houston,Texas,US,0,2026-06-29T21:44:57Z
+150,@electronics_sarah,Electronics Sarah,threads,80004,0.0264,66.88,Packaging Materials,Phoenix,Arizona,US,0,2026-06-29T21:44:57Z
+151,@assembly_aria,Assembly Aria,instagram,17645,0.0762,88.94,Production Planning,San Francisco,California,US,0,2026-06-29T21:44:57Z
+152,@assembly_jace,Assembly Jace,tiktok,8831,0.0722,79.81,Supplier Quality,Miami,Florida,US,0,2026-06-29T21:44:57Z
+153,@assembly_cass,Assembly Cass,twitter,3248402,0.0109,81.35,Maintenance Reliability,Seattle,Washington,US,1,2026-06-29T21:44:57Z
+154,@assembly_ella,Assembly Ella,youtube,104870,0.0357,78.44,Plant Logistics,Denver,Colorado,US,0,2026-06-29T21:44:57Z
+155,@assembly_hope,Assembly Hope,threads,5186,0.0421,69.5,Aftermarket Parts,Austin,Texas,US,0,2026-06-29T21:44:57Z
+156,@assembly_zara,Assembly Zara,instagram,5727,0.0647,73.62,Industrial Automation,Nashville,Tennessee,US,0,2026-06-29T21:44:57Z
+157,@assembly_nina,Assembly Nina,tiktok,5863,0.0602,71.69,Electronics Manufacturing,Portland,Oregon,US,0,2026-06-29T21:44:57Z
+158,@assembly_faye,Assembly Faye,twitter,5457,0.057,71.84,Metal Fabrication,Boston,Massachusetts,US,0,2026-06-29T21:44:57Z
+159,@assembly_xena,Assembly Xena,youtube,650289,0.022,82.21,CNC Machining,Atlanta,Georgia,US,1,2026-06-29T21:44:57Z
+160,@assembly_ava,Assembly Ava,threads,77071,0.0585,84.6,Injection Molding,Dallas,Texas,US,0,2026-06-29T21:44:57Z
+161,@logistics_owen,Logistics Owen,instagram,4743,0.0669,84.32,Robotics,San Diego,California,US,0,2026-06-29T21:44:57Z
+162,@logistics_liam,Logistics Liam,tiktok,799929,0.0249,76.95,Quality Assurance,Minneapolis,Minnesota,US,1,2026-06-29T21:44:57Z
+163,@logistics_mike,Logistics Mike,twitter,2276,0.1082,98.03,MRO Supply,Detroit,Michigan,US,0,2026-06-29T21:44:57Z
+164,@logistics_luna,Logistics Luna,youtube,9183,0.1008,92.12,Industrial IoT,Las Vegas,Nevada,US,0,2026-06-29T21:44:57Z
+165,@logistics_nora,Logistics Nora,threads,42526,0.063,90.17,Packaging Materials,Brooklyn,New York,US,0,2026-06-29T21:44:57Z
+166,@logistics_jen,Logistics Jen,instagram,86661,0.0538,83.25,Production Planning,New York,New York,US,0,2026-06-29T21:44:57Z
+167,@logistics_jack,Logistics Jack,tiktok,81632,0.038,70.55,Supplier Quality,Los Angeles,California,US,0,2026-06-29T21:44:57Z
+168,@logistics_omar,Logistics Omar,twitter,9907,0.0487,72.56,Maintenance Reliability,Chicago,Illinois,US,0,2026-06-29T21:44:57Z
+169,@logistics_alex,Logistics Alex,youtube,476321,0.0347,79.44,Plant Logistics,Houston,Texas,US,0,2026-06-29T21:44:57Z
+170,@logistics_mia,Logistics Mia,threads,6378,0.0376,57.98,Aftermarket Parts,Phoenix,Arizona,US,0,2026-06-29T21:44:57Z
+171,@materials_luna,Materials Luna,instagram,134641,0.0369,73.93,Industrial Automation,San Francisco,California,US,0,2026-06-29T21:44:57Z
+172,@materials_omar,Materials Omar,tiktok,5773,0.0962,98.34,Electronics Manufacturing,Miami,Florida,US,0,2026-06-29T21:44:57Z
+173,@materials_zoe,Materials Zoe,twitter,716706,0.018,84.45,Metal Fabrication,Seattle,Washington,US,1,2026-06-29T21:44:57Z
+174,@materials_ivy,Materials Ivy,youtube,5979,0.0853,94.22,CNC Machining,Denver,Colorado,US,0,2026-06-29T21:44:57Z
+175,@materials_tess,Materials Tess,threads,825337,0.0217,86.23,Injection Molding,Austin,Texas,US,1,2026-06-29T21:44:57Z
+176,@materials_maya,Materials Maya,instagram,5940,0.0666,72.54,Robotics,Nashville,Tennessee,US,0,2026-06-29T21:44:57Z
+177,@materials_cleo,Materials Cleo,tiktok,901745,0.041,96.86,Quality Assurance,Portland,Oregon,US,1,2026-06-29T21:44:57Z
+178,@materials_xena,Materials Xena,twitter,6739047,0.0167,93.74,MRO Supply,Boston,Massachusetts,US,1,2026-06-29T21:44:57Z
+179,@materials_nina,Materials Nina,youtube,2963,0.0559,68.64,Industrial IoT,Atlanta,Georgia,US,0,2026-06-29T21:44:57Z
+180,@materials_hope,Materials Hope,threads,8359274,0.0097,88.31,Packaging Materials,Dallas,Texas,US,1,2026-06-29T21:44:57Z
+181,@inventory_jack,Inventory Jack,instagram,92180,0.0429,86.45,Production Planning,San Diego,California,US,0,2026-06-29T21:44:57Z
+182,@inventory_reed,Inventory Reed,tiktok,4621,0.1029,97.38,Supplier Quality,Minneapolis,Minnesota,US,0,2026-06-29T21:44:57Z
+183,@inventory_kai,Inventory Kai,twitter,12389257,0.0216,100,Maintenance Reliability,Detroit,Michigan,US,1,2026-06-29T21:44:57Z
+184,@inventory_cleo,Inventory Cleo,youtube,351463,0.0243,81.26,Plant Logistics,Las Vegas,Nevada,US,0,2026-06-29T21:44:57Z
+185,@inventory_yuri,Inventory Yuri,threads,295531,0.0177,79.52,Aftermarket Parts,Brooklyn,New York,US,0,2026-06-29T21:44:57Z
+186,@inventory_ella,Inventory Ella,instagram,1484,0.0491,57.76,Industrial Automation,New York,New York,US,0,2026-06-29T21:44:57Z
+187,@inventory_kara,Inventory Kara,tiktok,44042,0.0324,70.3,Electronics Manufacturing,Los Angeles,California,US,0,2026-06-29T21:44:57Z
+188,@inventory_jen,Inventory Jen,twitter,82906,0.0796,100,Metal Fabrication,Chicago,Illinois,US,0,2026-06-29T21:44:57Z
+189,@inventory_noah,Inventory Noah,youtube,2271,0.0586,71.45,CNC Machining,Houston,Texas,US,0,2026-06-29T21:44:57Z
+190,@inventory_tess,Inventory Tess,threads,4379,0.1022,96.43,Injection Molding,Phoenix,Arizona,US,0,2026-06-29T21:44:57Z
+191,@planner_mia,Planner Mia,instagram,1674,0.1119,96.61,Robotics,San Francisco,California,US,0,2026-06-29T21:44:57Z
+192,@planner_tess,Planner Tess,tiktok,994834,0.0189,87.92,Quality Assurance,Miami,Florida,US,1,2026-06-29T21:44:57Z
+193,@planner_ava,Planner Ava,twitter,4626,0.1015,100,MRO Supply,Seattle,Washington,US,0,2026-06-29T21:44:57Z
+194,@planner_hope,Planner Hope,youtube,20297,0.0634,81.67,Industrial IoT,Denver,Colorado,US,0,2026-06-29T21:44:57Z
+195,@planner_sarah,Planner Sarah,threads,56583,0.0478,80.06,Packaging Materials,Austin,Texas,US,0,2026-06-29T21:44:57Z
+201,@scheduler_noah,Scheduler Noah,instagram,4054,0.0825,85.65,Production Planning,Nashville,Tennessee,US,0,2026-06-29T21:44:57Z
+202,@scheduler_vince,Scheduler Vince,tiktok,264402,0.0274,73.99,Supplier Quality,Portland,Oregon,US,0,2026-06-29T21:44:57Z
+203,@scheduler_drew,Scheduler Drew,twitter,1401,0.1064,87.82,Maintenance Reliability,Boston,Massachusetts,US,0,2026-06-29T21:44:57Z
+204,@scheduler_liam,Scheduler Liam,youtube,591331,0.0347,83.21,Plant Logistics,Atlanta,Georgia,US,1,2026-06-29T21:44:57Z
+205,@scheduler_marcus,Scheduler Marcus,threads,5485,0.0476,69.38,Aftermarket Parts,Dallas,Texas,US,0,2026-06-29T21:44:57Z
+206,@scheduler_cleo,Scheduler Cleo,instagram,6110,0.0573,81.39,Industrial Automation,San Diego,California,US,0,2026-06-29T21:44:57Z
+207,@scheduler_beau,Scheduler Beau,tiktok,80740,0.0403,73.48,Electronics Manufacturing,Minneapolis,Minnesota,US,0,2026-06-29T21:44:57Z
+208,@scheduler_luna,Scheduler Luna,twitter,4309,0.1145,100,Metal Fabrication,Detroit,Michigan,US,0,2026-06-29T21:44:57Z
+209,@scheduler_sage,Scheduler Sage,youtube,335159,0.0166,71.8,CNC Machining,Las Vegas,Nevada,US,0,2026-06-29T21:44:57Z
+210,@scheduler_ava,Scheduler Ava,threads,2376,0.0507,70.45,Injection Molding,Brooklyn,New York,US,0,2026-06-29T21:44:57Z
+211,@machining_ivy,Machining Ivy,instagram,2498,0.046,66.06,Robotics,New York,New York,US,0,2026-06-29T21:44:57Z
+212,@machining_xena,Machining Xena,tiktok,6975,0.1146,100,Quality Assurance,Los Angeles,California,US,0,2026-06-29T21:44:57Z
+213,@machining_aria,Machining Aria,twitter,6356,0.1195,100,MRO Supply,Chicago,Illinois,US,0,2026-06-29T21:44:57Z
+214,@machining_reed,Machining Reed,youtube,3855,0.1161,100,Industrial IoT,Houston,Texas,US,0,2026-06-29T21:44:57Z
+215,@machining_ava,Machining Ava,threads,3210,0.0409,67.78,Packaging Materials,Phoenix,Arizona,US,0,2026-06-29T21:44:57Z
+216,@machining_jace,Machining Jace,instagram,35676,0.0343,79.02,Production Planning,San Francisco,California,US,0,2026-06-29T21:44:57Z
+217,@machining_zoe,Machining Zoe,tiktok,5606,0.0829,84.22,Supplier Quality,Miami,Florida,US,0,2026-06-29T21:44:57Z
+218,@machining_cleo,Machining Cleo,twitter,69361,0.0721,87.48,Maintenance Reliability,Seattle,Washington,US,0,2026-06-29T21:44:57Z
+219,@machining_cass,Machining Cass,youtube,3821,0.0723,75.19,Plant Logistics,Denver,Colorado,US,0,2026-06-29T21:44:57Z
+220,@machining_mia,Machining Mia,threads,44613,0.0477,76.86,Aftermarket Parts,Austin,Texas,US,0,2026-06-29T21:44:57Z
+221,@lean_leo,Lean Leo,instagram,8191,0.1154,99.39,Industrial Automation,Nashville,Tennessee,US,0,2026-06-29T21:44:57Z
+222,@lean_zara,Lean Zara,tiktok,3880,0.0396,64.85,Electronics Manufacturing,Portland,Oregon,US,0,2026-06-29T21:44:57Z
+223,@lean_jack,Lean Jack,twitter,7814,0.1179,100,Metal Fabrication,Boston,Massachusetts,US,0,2026-06-29T21:44:57Z
+224,@lean_vince,Lean Vince,youtube,4211,0.0803,85.74,CNC Machining,Atlanta,Georgia,US,0,2026-06-29T21:44:57Z
+225,@lean_finn,Lean Finn,threads,3692,0.0903,89.95,Injection Molding,Dallas,Texas,US,0,2026-06-29T21:44:57Z
+226,@lean_reed,Lean Reed,instagram,74035,0.0421,80.16,Robotics,San Diego,California,US,0,2026-06-29T21:44:57Z
+227,@lean_cole,Lean Cole,tiktok,6642,0.1182,100,Quality Assurance,Minneapolis,Minnesota,US,0,2026-06-29T21:44:57Z
+228,@lean_liam,Lean Liam,twitter,3758,0.0364,61.06,MRO Supply,Detroit,Michigan,US,0,2026-06-29T21:44:57Z
+229,@lean_kai,Lean Kai,youtube,6714,0.0967,100,Industrial IoT,Las Vegas,Nevada,US,0,2026-06-29T21:44:57Z
+230,@lean_hope,Lean Hope,threads,8381,0.0388,68.86,Packaging Materials,Brooklyn,New York,US,0,2026-06-29T21:44:57Z
+231,@kaizen_ruby,Kaizen Ruby,instagram,7538,0.0328,62.31,Production Planning,New York,New York,US,0,2026-06-29T21:44:57Z
+232,@kaizen_cass,Kaizen Cass,tiktok,1701,0.0646,78.84,Supplier Quality,Los Angeles,California,US,0,2026-06-29T21:44:57Z
+233,@kaizen_ivy,Kaizen Ivy,twitter,26977,0.0615,86.21,Maintenance Reliability,Chicago,Illinois,US,0,2026-06-29T21:44:57Z
+234,@kaizen_zara,Kaizen Zara,youtube,14764176,0.0099,94.51,Plant Logistics,Houston,Texas,US,1,2026-06-29T21:44:57Z
+235,@kaizen_mia,Kaizen Mia,threads,2373,0.088,78.4,Aftermarket Parts,Phoenix,Arizona,US,0,2026-06-29T21:44:57Z
+236,@kaizen_xena,Kaizen Xena,instagram,19689,0.0483,83.07,Industrial Automation,San Francisco,California,US,0,2026-06-29T21:44:57Z
+237,@kaizen_luna,Kaizen Luna,tiktok,442994,0.0374,80.18,Electronics Manufacturing,Miami,Florida,US,0,2026-06-29T21:44:57Z
+238,@kaizen_vince,Kaizen Vince,twitter,4631,0.0999,88.96,Metal Fabrication,Seattle,Washington,US,0,2026-06-29T21:44:57Z
+239,@kaizen_aria,Kaizen Aria,youtube,6408,0.1135,100,CNC Machining,Denver,Colorado,US,0,2026-06-29T21:44:57Z
+240,@kaizen_tess,Kaizen Tess,threads,12742,0.0384,63.63,Injection Molding,Austin,Texas,US,0,2026-06-29T21:44:57Z
+241,@factory_max,Factory Max,instagram,8441,0.0547,78.73,Robotics,Nashville,Tennessee,US,0,2026-06-29T21:44:57Z
+242,@factory_sarah,Factory Sarah,tiktok,763915,0.044,87.1,Quality Assurance,Portland,Oregon,US,1,2026-06-29T21:44:57Z
+251,@production_cleo,Production Cleo,twitter,1872,0.0951,81.99,MRO Supply,Boston,Massachusetts,US,0,2026-06-29T21:44:57Z
+252,@production_jen,Production Jen,youtube,99325,0.0339,70.46,Industrial IoT,Atlanta,Georgia,US,0,2026-06-29T21:44:57Z
+253,@production_faye,Production Faye,threads,7237,0.0713,82.55,Packaging Materials,Dallas,Texas,US,0,2026-06-29T21:44:57Z
+254,@production_zoe,Production Zoe,instagram,5038,0.0412,68.34,Production Planning,San Diego,California,US,0,2026-06-29T21:44:57Z
+255,@production_hope,Production Hope,tiktok,77512,0.0685,88.37,Supplier Quality,Minneapolis,Minnesota,US,0,2026-06-29T21:44:57Z
+256,@production_lily,Production Lily,twitter,5073437,0.0145,86.66,Maintenance Reliability,Detroit,Michigan,US,1,2026-06-29T21:44:57Z
+257,@production_jace,Production Jace,youtube,1413,0.1122,91.86,Plant Logistics,Las Vegas,Nevada,US,0,2026-06-29T21:44:57Z
+258,@production_maya,Production Maya,threads,9352,0.1167,100,Aftermarket Parts,Brooklyn,New York,US,0,2026-06-29T21:44:57Z
+259,@production_liam,Production Liam,instagram,92823,0.0314,71.46,Industrial Automation,New York,New York,US,0,2026-06-29T21:44:57Z
+260,@production_ava,Production Ava,tiktok,5332,0.075,82.8,Electronics Manufacturing,Los Angeles,California,US,0,2026-06-29T21:44:57Z
+261,@throughput_dane,Throughput Dane,twitter,91257,0.0708,100,Metal Fabrication,Chicago,Illinois,US,0,2026-06-29T21:44:57Z
+262,@throughput_zoe,Throughput Zoe,youtube,373964,0.0156,71.81,CNC Machining,Houston,Texas,US,0,2026-06-29T21:44:57Z
+263,@throughput_ines,Throughput Ines,threads,2518,0.0811,77.66,Injection Molding,Phoenix,Arizona,US,0,2026-06-29T21:44:57Z
+264,@throughput_maya,Throughput Maya,instagram,6733,0.1087,95.7,Robotics,San Francisco,California,US,0,2026-06-29T21:44:57Z
+265,@throughput_nora,Throughput Nora,tiktok,4846,0.0892,93.61,Quality Assurance,Miami,Florida,US,0,2026-06-29T21:44:57Z
+266,@throughput_nina,Throughput Nina,twitter,7790,0.1067,100,MRO Supply,Seattle,Washington,US,0,2026-06-29T21:44:57Z
+267,@throughput_sage,Throughput Sage,youtube,602426,0.0382,91.77,Industrial IoT,Denver,Colorado,US,1,2026-06-29T21:44:57Z
+268,@throughput_aria,Throughput Aria,threads,8246,0.0756,82.06,Packaging Materials,Austin,Texas,US,0,2026-06-29T21:44:57Z
+269,@throughput_wren,Throughput Wren,instagram,37260,0.0346,68.61,Production Planning,Nashville,Tennessee,US,0,2026-06-29T21:44:57Z
+270,@throughput_mia,Throughput Mia,tiktok,8516,0.1182,100,Supplier Quality,Portland,Oregon,US,0,2026-06-29T21:44:57Z
+271,@capacity_faye,Capacity Faye,twitter,5028,0.1101,93.55,Maintenance Reliability,Boston,Massachusetts,US,0,2026-06-29T21:44:57Z
+272,@capacity_lily,Capacity Lily,youtube,2207,0.0392,67.23,Plant Logistics,Atlanta,Georgia,US,0,2026-06-29T21:44:57Z
+273,@capacity_liam,Capacity Liam,threads,179540,0.0311,82.17,Aftermarket Parts,Dallas,Texas,US,0,2026-06-29T21:44:57Z
+274,@capacity_nina,Capacity Nina,instagram,5151,0.0326,65.55,Industrial Automation,San Diego,California,US,0,2026-06-29T21:44:57Z
+275,@capacity_tess,Capacity Tess,tiktok,66515,0.0589,89.31,Electronics Manufacturing,Minneapolis,Minnesota,US,0,2026-06-29T21:44:57Z
+276,@capacity_luna,Capacity Luna,twitter,4165,0.1164,94.96,Metal Fabrication,Detroit,Michigan,US,0,2026-06-29T21:44:57Z
+277,@capacity_zara,Capacity Zara,youtube,6020,0.0641,84.65,CNC Machining,Las Vegas,Nevada,US,0,2026-06-29T21:44:57Z
+278,@capacity_ruby,Capacity Ruby,threads,5126,0.0416,71.11,Injection Molding,Brooklyn,New York,US,0,2026-06-29T21:44:57Z
+279,@capacity_jen,Capacity Jen,instagram,3623,0.0393,68.58,Robotics,New York,New York,US,0,2026-06-29T21:44:57Z
+280,@capacity_hope,Capacity Hope,tiktok,7600,0.0702,75.73,Quality Assurance,Los Angeles,California,US,0,2026-06-29T21:44:57Z
+281,@uptime_gus,Uptime Gus,twitter,8032,0.1042,93.46,MRO Supply,Chicago,Illinois,US,0,2026-06-29T21:44:57Z
+282,@uptime_maya,Uptime Maya,youtube,97021,0.0605,96.41,Industrial IoT,Houston,Texas,US,0,2026-06-29T21:44:57Z
+283,@uptime_pia,Uptime Pia,threads,49370,0.0756,89.19,Packaging Materials,Phoenix,Arizona,US,0,2026-06-29T21:44:57Z
+284,@uptime_aria,Uptime Aria,instagram,67268,0.0756,99.16,Production Planning,San Francisco,California,US,0,2026-06-29T21:44:57Z
+285,@uptime_yuri,Uptime Yuri,tiktok,9759,0.0377,65.87,Supplier Quality,Miami,Florida,US,0,2026-06-29T21:44:57Z
+286,@uptime_ruby,Uptime Ruby,twitter,3514,0.0605,69.12,Maintenance Reliability,Seattle,Washington,US,0,2026-06-29T21:44:57Z
+287,@uptime_alex,Uptime Alex,youtube,11039995,0.0215,100,Plant Logistics,Denver,Colorado,US,1,2026-06-29T21:44:57Z
+288,@uptime_jace,Uptime Jace,threads,6381,0.0427,73.38,Aftermarket Parts,Austin,Texas,US,0,2026-06-29T21:44:57Z
+289,@uptime_cole,Uptime Cole,instagram,118850,0.0256,79.07,Industrial Automation,Nashville,Tennessee,US,0,2026-06-29T21:44:57Z
+290,@uptime_tess,Uptime Tess,tiktok,80355,0.0799,95.53,Electronics Manufacturing,Portland,Oregon,US,0,2026-06-29T21:44:57Z
+291,@reliability_hope,Reliability Hope,twitter,5499,0.046,72.79,Metal Fabrication,Boston,Massachusetts,US,0,2026-06-29T21:44:57Z
+292,@reliability_ava,Reliability Ava,youtube,2079,0.0943,87.39,CNC Machining,Atlanta,Georgia,US,0,2026-06-29T21:44:57Z
+293,@reliability_tess,Reliability Tess,threads,93905,0.045,76.51,Injection Molding,Dallas,Texas,US,0,2026-06-29T21:44:57Z
+294,@reliability_mia,Reliability Mia,instagram,7669,0.0756,90.06,Robotics,San Diego,California,US,0,2026-06-29T21:44:57Z
+295,@reliability_sarah,Reliability Sarah,tiktok,7945,0.1066,95.82,Quality Assurance,Minneapolis,Minnesota,US,0,2026-06-29T21:44:57Z
+301,@packaging_ines,Packaging Ines,twitter,960924,0.0321,93.52,MRO Supply,Detroit,Michigan,US,1,2026-06-29T21:44:57Z
+302,@packaging_nina,Packaging Nina,youtube,42773,0.0695,97.43,Industrial IoT,Las Vegas,Nevada,US,0,2026-06-29T21:44:57Z
+303,@packaging_wren,Packaging Wren,threads,10698069,0.0098,87.27,Packaging Materials,Brooklyn,New York,US,1,2026-06-29T21:44:57Z
+304,@packaging_ruby,Packaging Ruby,instagram,9387456,0.0195,86.66,Production Planning,New York,New York,US,1,2026-06-29T21:44:57Z
+305,@packaging_marcus,Packaging Marcus,tiktok,9267,0.0608,82.86,Supplier Quality,Los Angeles,California,US,0,2026-06-29T21:44:57Z
+306,@packaging_omar,Packaging Omar,twitter,8363,0.082,88.3,Maintenance Reliability,Chicago,Illinois,US,0,2026-06-29T21:44:57Z
+307,@packaging_owen,Packaging Owen,youtube,2652,0.082,88.01,Plant Logistics,Houston,Texas,US,0,2026-06-29T21:44:57Z
+308,@packaging_cass,Packaging Cass,threads,9006,0.0329,62.75,Aftermarket Parts,Phoenix,Arizona,US,0,2026-06-29T21:44:57Z
+309,@packaging_gus,Packaging Gus,instagram,3103,0.0738,83.15,Industrial Automation,San Francisco,California,US,0,2026-06-29T21:44:57Z
+310,@packaging_ava,Packaging Ava,tiktok,9186,0.0662,84.32,Electronics Manufacturing,Miami,Florida,US,0,2026-06-29T21:44:57Z
+311,@industrial_jace,Industrial Jace,twitter,5934,0.0952,95.9,Metal Fabrication,Seattle,Washington,US,0,2026-06-29T21:44:57Z
+312,@industrial_ella,Industrial Ella,youtube,358316,0.0262,74.17,CNC Machining,Denver,Colorado,US,0,2026-06-29T21:44:57Z
+313,@industrial_zara,Industrial Zara,threads,99010,0.0261,72.9,Injection Molding,Austin,Texas,US,0,2026-06-29T21:44:57Z
+314,@industrial_faye,Industrial Faye,instagram,56274,0.0335,68.72,Robotics,Nashville,Tennessee,US,0,2026-06-29T21:44:57Z
+315,@industrial_ava,Industrial Ava,tiktok,68120,0.0602,91.66,Quality Assurance,Portland,Oregon,US,0,2026-06-29T21:44:57Z
+316,@industrial_vince,Industrial Vince,twitter,3923,0.0482,71.45,MRO Supply,Boston,Massachusetts,US,0,2026-06-29T21:44:57Z
+317,@industrial_ruby,Industrial Ruby,youtube,6502,0.0536,69.64,Industrial IoT,Atlanta,Georgia,US,0,2026-06-29T21:44:57Z
+318,@industrial_lily,Industrial Lily,threads,37862,0.0466,74.81,Packaging Materials,Dallas,Texas,US,0,2026-06-29T21:44:57Z
+319,@industrial_reed,Industrial Reed,instagram,16470,0.0348,61.9,Production Planning,San Diego,California,US,0,2026-06-29T21:44:57Z
+320,@industrial_mia,Industrial Mia,tiktok,4664,0.0554,67.77,Supplier Quality,Minneapolis,Minnesota,US,0,2026-06-29T21:44:57Z
+321,@fabrication_kara,Fabrication Kara,twitter,9226,0.0851,91.83,Maintenance Reliability,Detroit,Michigan,US,0,2026-06-29T21:44:57Z
+322,@fabrication_aria,Fabrication Aria,youtube,25005,0.058,78.86,Plant Logistics,Las Vegas,Nevada,US,0,2026-06-29T21:44:57Z
+323,@fabrication_dev,Fabrication Dev,threads,3561,0.1041,96.13,Aftermarket Parts,Brooklyn,New York,US,0,2026-06-29T21:44:57Z
+324,@fabrication_jace,Fabrication Jace,instagram,21708,0.0645,89.45,Industrial Automation,New York,New York,US,0,2026-06-29T21:44:57Z
+325,@fabrication_finn,Fabrication Finn,tiktok,4979,0.0959,92.78,Electronics Manufacturing,Los Angeles,California,US,0,2026-06-29T21:44:57Z
+326,@fabrication_cass,Fabrication Cass,twitter,73641,0.0539,91.09,Metal Fabrication,Chicago,Illinois,US,0,2026-06-29T21:44:57Z
+327,@fabrication_ines,Fabrication Ines,youtube,887743,0.0212,81.23,CNC Machining,Houston,Texas,US,1,2026-06-29T21:44:57Z
+328,@fabrication_ella,Fabrication Ella,threads,4782,0.0838,84.61,Injection Molding,Phoenix,Arizona,US,0,2026-06-29T21:44:57Z
+329,@fabrication_beau,Fabrication Beau,instagram,9534851,0.0242,92.54,Robotics,San Francisco,California,US,1,2026-06-29T21:44:57Z
+330,@fabrication_hope,Fabrication Hope,tiktok,10640,0.0384,63.15,Quality Assurance,Miami,Florida,US,0,2026-06-29T21:44:57Z
+331,@parts_liam,Parts Liam,twitter,15350,0.0687,87.29,MRO Supply,Seattle,Washington,US,0,2026-06-29T21:44:57Z
+332,@parts_luna,Parts Luna,youtube,24003,0.0574,88.76,Industrial IoT,Denver,Colorado,US,0,2026-06-29T21:44:57Z
+333,@parts_jen,Parts Jen,threads,58429,0.0767,96.2,Packaging Materials,Austin,Texas,US,0,2026-06-29T21:44:57Z
+334,@parts_omar,Parts Omar,instagram,83790,0.0471,82.66,Production Planning,Nashville,Tennessee,US,0,2026-06-29T21:44:57Z
+335,@parts_mia,Parts Mia,tiktok,342311,0.0295,87.39,Supplier Quality,Portland,Oregon,US,0,2026-06-29T21:44:57Z
+336,@parts_zoe,Parts Zoe,twitter,89336,0.037,83.97,Maintenance Reliability,Boston,Massachusetts,US,0,2026-06-29T21:44:57Z
+337,@parts_reed,Parts Reed,youtube,41515,0.0315,74.28,Plant Logistics,Atlanta,Georgia,US,0,2026-06-29T21:44:57Z
+338,@parts_ivy,Parts Ivy,threads,8643,0.0571,71.09,Aftermarket Parts,Dallas,Texas,US,0,2026-06-29T21:44:57Z
+339,@parts_lily,Parts Lily,instagram,33821,0.0291,74.1,Industrial Automation,San Diego,California,US,0,2026-06-29T21:44:57Z
+340,@parts_tess,Parts Tess,tiktok,4536,0.0852,87.86,Electronics Manufacturing,Minneapolis,Minnesota,US,0,2026-06-29T21:44:57Z
+341,@motion_nora,Motion Nora,twitter,2692,0.0307,55.44,Metal Fabrication,Detroit,Michigan,US,0,2026-06-29T21:44:57Z
+342,@motion_mia,Motion Mia,youtube,8786,0.0885,94.5,CNC Machining,Las Vegas,Nevada,US,0,2026-06-29T21:44:57Z
+343,@motion_marcus,Motion Marcus,threads,7052,0.1131,97.68,Injection Molding,Brooklyn,New York,US,0,2026-06-29T21:44:57Z
+344,@motion_tess,Motion Tess,instagram,1597,0.0781,79.31,Robotics,New York,New York,US,0,2026-06-29T21:44:57Z
+345,@motion_max,Motion Max,tiktok,9794,0.0547,80.76,Quality Assurance,Los Angeles,California,US,0,2026-06-29T21:44:57Z
+346,@motion_ava,Motion Ava,twitter,85986,0.0546,80.99,MRO Supply,Chicago,Illinois,US,0,2026-06-29T21:44:57Z
+347,@motion_yuri,Motion Yuri,youtube,83602,0.0643,98.1,Industrial IoT,Houston,Texas,US,0,2026-06-29T21:44:57Z
+348,@motion_hope,Motion Hope,threads,8740,0.1143,100,Packaging Materials,Phoenix,Arizona,US,0,2026-06-29T21:44:57Z
+349,@motion_finn,Motion Finn,instagram,63021,0.0503,77.61,Production Planning,San Francisco,California,US,0,2026-06-29T21:44:57Z
+350,@motion_sarah,Motion Sarah,tiktok,50278,0.0341,70.4,Supplier Quality,Miami,Florida,US,0,2026-06-29T21:44:57Z
+351,@hydraulic_omar,Hydraulic Omar,twitter,14007,0.064,77.56,Maintenance Reliability,Seattle,Washington,US,0,2026-06-29T21:44:57Z
+352,@hydraulic_ivy,Hydraulic Ivy,youtube,1376,0.0741,77.76,Plant Logistics,Denver,Colorado,US,0,2026-06-29T21:44:57Z
+353,@hydraulic_maya,Hydraulic Maya,threads,6800,0.1134,100,Aftermarket Parts,Austin,Texas,US,0,2026-06-29T21:44:57Z
+354,@hydraulic_xena,Hydraulic Xena,instagram,1359,0.081,82.58,Industrial Automation,Nashville,Tennessee,US,0,2026-06-29T21:44:57Z
+355,@hydraulic_hope,Hydraulic Hope,tiktok,51386,0.0411,80.34,Electronics Manufacturing,Portland,Oregon,US,0,2026-06-29T21:44:57Z
+356,@hydraulic_aria,Hydraulic Aria,twitter,6311,0.1076,98.91,Metal Fabrication,Boston,Massachusetts,US,0,2026-06-29T21:44:57Z
+357,@hydraulic_jen,Hydraulic Jen,youtube,43402,0.0746,92.1,CNC Machining,Atlanta,Georgia,US,0,2026-06-29T21:44:57Z
+358,@hydraulic_reed,Hydraulic Reed,threads,591348,0.0447,87.31,Injection Molding,Dallas,Texas,US,1,2026-06-29T21:44:57Z
+359,@hydraulic_ruby,Hydraulic Ruby,instagram,2622,0.0411,62.22,Robotics,San Diego,California,US,0,2026-06-29T21:44:57Z
+360,@hydraulic_ava,Hydraulic Ava,tiktok,263954,0.0292,78.29,Quality Assurance,Minneapolis,Minnesota,US,0,2026-06-29T21:44:57Z
+361,@controls_pia,Controls Pia,twitter,902602,0.0206,88.31,MRO Supply,Detroit,Michigan,US,1,2026-06-29T21:44:57Z
+362,@controls_ruby,Controls Ruby,youtube,15590,0.0368,75.74,Industrial IoT,Las Vegas,Nevada,US,0,2026-06-29T21:44:57Z
+363,@controls_cole,Controls Cole,threads,845394,0.042,87.12,Packaging Materials,Brooklyn,New York,US,1,2026-06-29T21:44:57Z
+364,@controls_cass,Controls Cass,instagram,81991,0.0316,76.31,Production Planning,New York,New York,US,0,2026-06-29T21:44:57Z
+365,@controls_nora,Controls Nora,tiktok,8013,0.0691,80.83,Supplier Quality,Los Angeles,California,US,0,2026-06-29T21:44:57Z
+366,@controls_ivy,Controls Ivy,twitter,43003,0.0484,73.03,Maintenance Reliability,Chicago,Illinois,US,0,2026-06-29T21:44:57Z
+367,@controls_tyler,Controls Tyler,youtube,5803,0.1002,98.9,Plant Logistics,Houston,Texas,US,0,2026-06-29T21:44:57Z
+368,@controls_zara,Controls Zara,threads,32434,0.0368,73.08,Aftermarket Parts,Phoenix,Arizona,US,0,2026-06-29T21:44:57Z
+369,@controls_kara,Controls Kara,instagram,5670,0.0778,79.14,Industrial Automation,San Francisco,California,US,0,2026-06-29T21:44:57Z
+370,@controls_mia,Controls Mia,tiktok,1783,0.1003,87.48,Electronics Manufacturing,Miami,Florida,US,0,2026-06-29T21:44:57Z
+371,@operator_reed,Operator Reed,twitter,6763,0.0947,93.76,Metal Fabrication,Seattle,Washington,US,0,2026-06-29T21:44:57Z
+372,@operator_cleo,Operator Cleo,youtube,79599,0.0449,84.05,CNC Machining,Denver,Colorado,US,0,2026-06-29T21:44:57Z
+373,@operator_ella,Operator Ella,threads,2588,0.0344,56.49,Injection Molding,Austin,Texas,US,0,2026-06-29T21:44:57Z
+374,@operator_jen,Operator Jen,instagram,213029,0.0176,69.62,Robotics,Nashville,Tennessee,US,0,2026-06-29T21:44:57Z
+375,@operator_tess,Operator Tess,tiktok,89414,0.0606,89.11,Quality Assurance,Portland,Oregon,US,0,2026-06-29T21:44:57Z
+376,@operator_faye,Operator Faye,twitter,64159,0.0443,75.11,MRO Supply,Boston,Massachusetts,US,0,2026-06-29T21:44:57Z
+377,@operator_aria,Operator Aria,youtube,2748,0.0738,71.83,Industrial IoT,Atlanta,Georgia,US,0,2026-06-29T21:44:57Z
+378,@operator_zoe,Operator Zoe,threads,8798,0.0631,82.39,Packaging Materials,Dallas,Texas,US,0,2026-06-29T21:44:57Z
+379,@operator_vince,Operator Vince,instagram,7565,0.0987,91.6,Production Planning,San Diego,California,US,0,2026-06-29T21:44:57Z
+380,@operator_hope,Operator Hope,tiktok,67732,0.0512,80.52,Supplier Quality,Minneapolis,Minnesota,US,0,2026-06-29T21:44:57Z
+381,@engineer_sage,Engineer Sage,twitter,1849,0.1149,91.93,Maintenance Reliability,Detroit,Michigan,US,0,2026-06-29T21:44:57Z
+382,@engineer_faye,Engineer Faye,youtube,49790,0.0282,73.13,Plant Logistics,Las Vegas,Nevada,US,0,2026-06-29T21:44:57Z
+383,@engineer_owen,Engineer Owen,threads,81598,0.0796,98.15,Aftermarket Parts,Brooklyn,New York,US,0,2026-06-29T21:44:57Z
+384,@engineer_lily,Engineer Lily,instagram,20712,0.0587,80.2,Industrial Automation,New York,New York,US,0,2026-06-29T21:44:57Z
+385,@engineer_yuri,Engineer Yuri,tiktok,5962,0.0519,76.82,Electronics Manufacturing,Los Angeles,California,US,0,2026-06-29T21:44:57Z
+386,@engineer_liam,Engineer Liam,twitter,1769,0.056,66.86,Metal Fabrication,Chicago,Illinois,US,0,2026-06-29T21:44:57Z
+387,@engineer_leo,Engineer Leo,youtube,435775,0.0395,84.3,CNC Machining,Houston,Texas,US,0,2026-06-29T21:44:57Z
+388,@engineer_nina,Engineer Nina,threads,4399,0.0478,68.72,Injection Molding,Phoenix,Arizona,US,0,2026-06-29T21:44:57Z
+389,@engineer_mike,Engineer Mike,instagram,85549,0.0356,80.99,Robotics,San Francisco,California,US,0,2026-06-29T21:44:57Z
+390,@engineer_tess,Engineer Tess,tiktok,9806,0.053,77.14,Quality Assurance,Miami,Florida,US,0,2026-06-29T21:44:57Z
+391,@procurement_tess,Procurement Tess,twitter,8653,0.116,100,MRO Supply,Seattle,Washington,US,0,2026-06-29T21:44:57Z
+392,@procurement_hope,Procurement Hope,youtube,296816,0.0156,76.02,Industrial IoT,Denver,Colorado,US,0,2026-06-29T21:44:57Z
+393,@procurement_mia,Procurement Mia,threads,4177,0.0479,66.69,Packaging Materials,Austin,Texas,US,0,2026-06-29T21:44:57Z
+394,@procurement_ava,Procurement Ava,instagram,249921,0.0226,73.81,Production Planning,Nashville,Tennessee,US,0,2026-06-29T21:44:57Z
+395,@procurement_sarah,Procurement Sarah,tiktok,92280,0.0337,76.1,Supplier Quality,Portland,Oregon,US,0,2026-06-29T21:44:57Z
+401,@sourcing_uma,Sourcing Uma,twitter,39041,0.0697,95.75,Maintenance Reliability,Boston,Massachusetts,US,0,2026-06-29T21:44:57Z
+402,@sourcing_jace,Sourcing Jace,youtube,21776,0.0747,88.08,Plant Logistics,Atlanta,Georgia,US,0,2026-06-29T21:44:57Z
+403,@sourcing_leo,Sourcing Leo,threads,1629,0.1022,86.02,Aftermarket Parts,Dallas,Texas,US,0,2026-06-29T21:44:57Z
+404,@sourcing_ella,Sourcing Ella,instagram,8051,0.0776,83.89,Industrial Automation,San Diego,California,US,0,2026-06-29T21:44:57Z
+405,@sourcing_marcus,Sourcing Marcus,tiktok,120944,0.0308,71.82,Electronics Manufacturing,Minneapolis,Minnesota,US,0,2026-06-29T21:44:57Z
+406,@sourcing_zara,Sourcing Zara,twitter,9666,0.0539,76.02,Metal Fabrication,Detroit,Michigan,US,0,2026-06-29T21:44:57Z
+407,@sourcing_pia,Sourcing Pia,youtube,25002,0.0353,71.23,CNC Machining,Las Vegas,Nevada,US,0,2026-06-29T21:44:57Z
+408,@sourcing_faye,Sourcing Faye,threads,24410,0.0378,66.04,Injection Molding,Brooklyn,New York,US,0,2026-06-29T21:44:57Z
+409,@sourcing_jack,Sourcing Jack,instagram,1789,0.1033,85.89,Robotics,New York,New York,US,0,2026-06-29T21:44:57Z
+410,@sourcing_ava,Sourcing Ava,tiktok,10360,0.0349,71.41,Quality Assurance,Los Angeles,California,US,0,2026-06-29T21:44:57Z
+411,@inspection_vince,Inspection Vince,twitter,14393741,0.0171,93.79,MRO Supply,Chicago,Illinois,US,1,2026-06-29T21:44:57Z
+412,@inspection_liam,Inspection Liam,youtube,9738,0.1058,100,Industrial IoT,Houston,Texas,US,0,2026-06-29T21:44:57Z
+413,@inspection_cleo,Inspection Cleo,threads,98151,0.069,93.23,Packaging Materials,Phoenix,Arizona,US,0,2026-06-29T21:44:57Z
+414,@inspection_luna,Inspection Luna,instagram,673919,0.0372,86.04,Production Planning,San Francisco,California,US,1,2026-06-29T21:44:57Z
+415,@inspection_ava,Inspection Ava,tiktok,405912,0.0244,77.22,Supplier Quality,Miami,Florida,US,0,2026-06-29T21:44:57Z
+416,@inspection_jen,Inspection Jen,twitter,970301,0.0284,84.05,Maintenance Reliability,Seattle,Washington,US,1,2026-06-29T21:44:57Z
+417,@inspection_xena,Inspection Xena,youtube,7196,0.072,89.31,Plant Logistics,Denver,Colorado,US,0,2026-06-29T21:44:57Z
+418,@inspection_omar,Inspection Omar,threads,88161,0.0364,75.62,Aftermarket Parts,Austin,Texas,US,0,2026-06-29T21:44:57Z
+419,@inspection_faye,Inspection Faye,instagram,55448,0.0654,84.35,Industrial Automation,Nashville,Tennessee,US,0,2026-06-29T21:44:57Z
+420,@inspection_mia,Inspection Mia,tiktok,6784,0.0562,70.04,Electronics Manufacturing,Portland,Oregon,US,0,2026-06-29T21:44:57Z
+421,@metrology_wren,Metrology Wren,twitter,6428,0.0522,77.58,Metal Fabrication,Boston,Massachusetts,US,0,2026-06-29T21:44:57Z
+422,@metrology_omar,Metrology Omar,youtube,4329,0.0896,92.53,CNC Machining,Atlanta,Georgia,US,0,2026-06-29T21:44:57Z
+423,@metrology_gus,Metrology Gus,threads,50826,0.0684,86.72,Injection Molding,Dallas,Texas,US,0,2026-06-29T21:44:57Z
+424,@metrology_ivy,Metrology Ivy,instagram,7623730,0.0172,96.9,Robotics,San Diego,California,US,1,2026-06-29T21:44:57Z
+425,@metrology_finn,Metrology Finn,tiktok,504388,0.0233,80.27,Quality Assurance,Minneapolis,Minnesota,US,1,2026-06-29T21:44:57Z
+426,@metrology_maya,Metrology Maya,twitter,6248,0.112,100,MRO Supply,Detroit,Michigan,US,0,2026-06-29T21:44:57Z
+427,@metrology_mike,Metrology Mike,youtube,7920,0.0371,59.3,Industrial IoT,Las Vegas,Nevada,US,0,2026-06-29T21:44:57Z
+428,@metrology_xena,Metrology Xena,threads,1814,0.1192,99.11,Packaging Materials,Brooklyn,New York,US,0,2026-06-29T21:44:57Z
+429,@metrology_pia,Metrology Pia,instagram,4226,0.1125,100,Production Planning,New York,New York,US,0,2026-06-29T21:44:57Z
+430,@metrology_hope,Metrology Hope,tiktok,3366,0.0992,94.17,Supplier Quality,Los Angeles,California,US,0,2026-06-29T21:44:57Z
+431,@spares_xena,Spares Xena,twitter,6205,0.0685,80.02,Maintenance Reliability,Chicago,Illinois,US,0,2026-06-29T21:44:57Z
+432,@spares_reed,Spares Reed,youtube,4942,0.0325,58.15,Plant Logistics,Houston,Texas,US,0,2026-06-29T21:44:57Z
+433,@spares_jace,Spares Jace,threads,18200,0.0302,66.11,Aftermarket Parts,Phoenix,Arizona,US,0,2026-06-29T21:44:57Z
+434,@spares_cleo,Spares Cleo,instagram,6383,0.1027,93.07,Industrial Automation,San Francisco,California,US,0,2026-06-29T21:44:57Z
+435,@spares_mia,Spares Mia,tiktok,67839,0.0715,96.58,Electronics Manufacturing,Miami,Florida,US,0,2026-06-29T21:44:57Z
+436,@spares_ella,Spares Ella,twitter,6127,0.0613,76.85,Metal Fabrication,Seattle,Washington,US,0,2026-06-29T21:44:57Z
+437,@spares_maya,Spares Maya,youtube,940380,0.0397,91.55,CNC Machining,Denver,Colorado,US,1,2026-06-29T21:44:57Z
+438,@spares_jen,Spares Jen,threads,11610714,0.0239,100,Injection Molding,Austin,Texas,US,1,2026-06-29T21:44:57Z
+439,@spares_zara,Spares Zara,instagram,46979,0.0422,71.55,Robotics,Nashville,Tennessee,US,0,2026-06-29T21:44:57Z
+440,@spares_tess,Spares Tess,tiktok,8124,0.0905,89.15,Quality Assurance,Portland,Oregon,US,0,2026-06-29T21:44:57Z
+441,@mro_yuri,Mro Yuri,twitter,4094415,0.0105,78.69,MRO Supply,Boston,Massachusetts,US,1,2026-06-29T21:44:57Z
+442,@mro_tess,Mro Tess,youtube,1070,0.0638,73.75,Industrial IoT,Atlanta,Georgia,US,0,2026-06-29T21:44:57Z
+443,@mro_nora,Mro Nora,threads,965067,0.0424,94.44,Packaging Materials,Dallas,Texas,US,1,2026-06-29T21:44:57Z
+444,@mro_hope,Mro Hope,instagram,5746,0.0434,63.84,Production Planning,San Diego,California,US,0,2026-06-29T21:44:57Z
+445,@mro_max,Mro Max,tiktok,37097,0.0318,74.11,Supplier Quality,Minneapolis,Minnesota,US,0,2026-06-29T21:44:57Z
+446,@mro_mia,Mro Mia,twitter,87702,0.0589,89.88,Maintenance Reliability,Detroit,Michigan,US,0,2026-06-29T21:44:57Z
+447,@mro_finn,Mro Finn,youtube,23432,0.0459,76.31,Plant Logistics,Las Vegas,Nevada,US,0,2026-06-29T21:44:57Z
+448,@mro_ava,Mro Ava,threads,9768,0.0761,84.43,Aftermarket Parts,Brooklyn,New York,US,0,2026-06-29T21:44:57Z
+449,@mro_marcus,Mro Marcus,instagram,62732,0.0255,63.14,Industrial Automation,New York,New York,US,0,2026-06-29T21:44:57Z
+450,@mro_sarah,Mro Sarah,tiktok,5664,0.0613,74.03,Electronics Manufacturing,Los Angeles,California,US,0,2026-06-29T21:44:57Z
+451,@warehouse_zara,Warehouse Zara,twitter,4669,0.0679,80.55,Metal Fabrication,Chicago,Illinois,US,0,2026-06-29T21:44:57Z
+452,@warehouse_vince,Warehouse Vince,youtube,2032,0.0399,57.44,CNC Machining,Houston,Texas,US,0,2026-06-29T21:44:57Z
+453,@warehouse_reed,Warehouse Reed,threads,37156,0.0526,83.84,Injection Molding,Phoenix,Arizona,US,0,2026-06-29T21:44:57Z
+454,@warehouse_liam,Warehouse Liam,instagram,4648,0.1098,94.1,Robotics,San Francisco,California,US,0,2026-06-29T21:44:57Z
+455,@warehouse_hope,Warehouse Hope,tiktok,431326,0.0376,84.4,Quality Assurance,Miami,Florida,US,0,2026-06-29T21:44:57Z
+456,@warehouse_cleo,Warehouse Cleo,twitter,1877,0.0778,79.94,MRO Supply,Seattle,Washington,US,0,2026-06-29T21:44:57Z
+457,@warehouse_ivy,Warehouse Ivy,youtube,22146,0.0467,69.71,Industrial IoT,Denver,Colorado,US,0,2026-06-29T21:44:57Z
+458,@warehouse_luna,Warehouse Luna,threads,7950,0.0782,92.32,Packaging Materials,Austin,Texas,US,0,2026-06-29T21:44:57Z
+459,@warehouse_ella,Warehouse Ella,instagram,8524,0.0609,84.56,Production Planning,Nashville,Tennessee,US,0,2026-06-29T21:44:57Z
+460,@warehouse_ava,Warehouse Ava,tiktok,5532,0.1025,91.75,Supplier Quality,Portland,Oregon,US,0,2026-06-29T21:44:57Z
+461,@shift_beau,Shift Beau,twitter,4072,0.0899,91.19,Maintenance Reliability,Boston,Massachusetts,US,0,2026-06-29T21:44:57Z
+462,@shift_xena,Shift Xena,youtube,387363,0.0215,77.95,Plant Logistics,Atlanta,Georgia,US,0,2026-06-29T21:44:57Z
+463,@shift_uma,Shift Uma,threads,34972,0.0598,85.54,Aftermarket Parts,Dallas,Texas,US,0,2026-06-29T21:44:57Z
+464,@shift_reed,Shift Reed,instagram,4504,0.0792,79.73,Industrial Automation,San Diego,California,US,0,2026-06-29T21:44:57Z
+465,@shift_nora,Shift Nora,tiktok,45103,0.0504,82.8,Electronics Manufacturing,Minneapolis,Minnesota,US,0,2026-06-29T21:44:57Z
+466,@shift_jace,Shift Jace,twitter,7728,0.0475,70.66,Metal Fabrication,Detroit,Michigan,US,0,2026-06-29T21:44:57Z
+467,@shift_gus,Shift Gus,youtube,77759,0.0312,81.73,CNC Machining,Las Vegas,Nevada,US,0,2026-06-29T21:44:57Z
+468,@shift_cleo,Shift Cleo,threads,96039,0.0653,92.03,Injection Molding,Brooklyn,New York,US,0,2026-06-29T21:44:57Z
+469,@shift_leo,Shift Leo,instagram,20744,0.0299,60.4,Robotics,New York,New York,US,0,2026-06-29T21:44:57Z
+470,@shift_mia,Shift Mia,tiktok,4588715,0.0072,87.07,Quality Assurance,Los Angeles,California,US,1,2026-06-29T21:44:57Z
+471,@workcell_cass,Workcell Cass,twitter,98343,0.0462,86.1,MRO Supply,Chicago,Illinois,US,0,2026-06-29T21:44:57Z
+472,@workcell_zara,Workcell Zara,youtube,78169,0.0429,81.4,Industrial IoT,Houston,Texas,US,0,2026-06-29T21:44:57Z
+473,@workcell_xena,Workcell Xena,threads,11413831,0.0159,84.22,Packaging Materials,Phoenix,Arizona,US,1,2026-06-29T21:44:57Z
+474,@workcell_vince,Workcell Vince,instagram,35100,0.062,93.24,Production Planning,San Francisco,California,US,0,2026-06-29T21:44:57Z
+475,@workcell_tess,Workcell Tess,tiktok,5948,0.0886,87.94,Supplier Quality,Miami,Florida,US,0,2026-06-29T21:44:57Z
+476,@workcell_reed,Workcell Reed,twitter,4975,0.0551,70.02,Maintenance Reliability,Seattle,Washington,US,0,2026-06-29T21:44:57Z
+477,@workcell_omar,Workcell Omar,youtube,2610,0.066,68.25,Plant Logistics,Denver,Colorado,US,0,2026-06-29T21:44:57Z
+478,@workcell_liam,Workcell Liam,threads,7863,0.0491,71.02,Aftermarket Parts,Austin,Texas,US,0,2026-06-29T21:44:57Z
+479,@workcell_jace,Workcell Jace,instagram,4904,0.0596,77.51,Industrial Automation,Nashville,Tennessee,US,0,2026-06-29T21:44:57Z
+480,@workcell_hope,Workcell Hope,tiktok,7805,0.0617,84.44,Electronics Manufacturing,Portland,Oregon,US,0,2026-06-29T21:44:57Z
+481,@oee_dev,Oee Dev,twitter,6397,0.1068,96.42,Metal Fabrication,Boston,Massachusetts,US,0,2026-06-29T21:44:57Z
+482,@oee_cass,Oee Cass,youtube,324473,0.0295,87.04,CNC Machining,Atlanta,Georgia,US,0,2026-06-29T21:44:57Z
+483,@oee_beau,Oee Beau,threads,730817,0.0201,85.7,Injection Molding,Dallas,Texas,US,1,2026-06-29T21:44:57Z
+484,@oee_zara,Oee Zara,instagram,13372690,0.0137,84.43,Robotics,San Diego,California,US,1,2026-06-29T21:44:57Z
+485,@oee_yuri,Oee Yuri,tiktok,9824,0.0325,60.57,Quality Assurance,Minneapolis,Minnesota,US,0,2026-06-29T21:44:57Z
+486,@oee_xena,Oee Xena,twitter,66856,0.0385,70.45,MRO Supply,Detroit,Michigan,US,0,2026-06-29T21:44:57Z
+487,@oee_wren,Oee Wren,youtube,13155062,0.0206,91.05,Industrial IoT,Las Vegas,Nevada,US,1,2026-06-29T21:44:57Z
+488,@oee_vince,Oee Vince,threads,8017,0.0522,68.06,Packaging Materials,Brooklyn,New York,US,0,2026-06-29T21:44:57Z
+489,@oee_uma,Oee Uma,instagram,12902,0.042,68.89,Production Planning,New York,New York,US,0,2026-06-29T21:44:57Z
+490,@oee_tess,Oee Tess,tiktok,61017,0.0321,71.19,Supplier Quality,Los Angeles,California,US,0,2026-06-29T21:44:57Z
+491,@yield_sarah,Yield Sarah,twitter,4654,0.0412,58.59,Maintenance Reliability,Chicago,Illinois,US,0,2026-06-29T21:44:57Z
+501,@dispatch_mike,Dispatch Mike,youtube,89167,0.0511,84.79,Plant Logistics,Houston,Texas,US,0,2026-06-29T21:44:57Z
+502,@dispatch_jen,Dispatch Jen,threads,5493,0.089,95.83,Aftermarket Parts,Phoenix,Arizona,US,0,2026-06-29T21:44:57Z
+503,@dispatch_alex,Dispatch Alex,instagram,8689,0.0661,77.81,Industrial Automation,San Francisco,California,US,0,2026-06-29T21:44:57Z
+504,@dispatch_zoe,Dispatch Zoe,tiktok,332264,0.0153,68.87,Electronics Manufacturing,Miami,Florida,US,0,2026-06-29T21:44:57Z
+505,@dispatch_marcus,Dispatch Marcus,twitter,87319,0.0579,86.75,Metal Fabrication,Seattle,Washington,US,0,2026-06-29T21:44:57Z
+506,@dispatch_lily,Dispatch Lily,youtube,987514,0.0186,83.52,CNC Machining,Denver,Colorado,US,1,2026-06-29T21:44:57Z
+507,@dispatch_kai,Dispatch Kai,threads,96676,0.0374,77.71,Injection Molding,Austin,Texas,US,0,2026-06-29T21:44:57Z
+508,@dispatch_maya,Dispatch Maya,instagram,87245,0.0626,91.38,Robotics,Nashville,Tennessee,US,0,2026-06-29T21:44:57Z
+509,@dispatch_tyler,Dispatch Tyler,tiktok,1461,0.0846,87.05,Quality Assurance,Portland,Oregon,US,0,2026-06-29T21:44:57Z
+510,@dispatch_ava,Dispatch Ava,twitter,917785,0.0239,83.38,MRO Supply,Boston,Massachusetts,US,1,2026-06-29T21:44:57Z
+511,@expedite_jen,Expedite Jen,youtube,8469,0.0309,64.86,Industrial IoT,Atlanta,Georgia,US,0,2026-06-29T21:44:57Z
+512,@expedite_zoe,Expedite Zoe,threads,2057,0.0502,68.47,Packaging Materials,Dallas,Texas,US,0,2026-06-29T21:44:57Z
+513,@expedite_lily,Expedite Lily,instagram,3520,0.113,100,Production Planning,San Diego,California,US,0,2026-06-29T21:44:57Z
+514,@expedite_maya,Expedite Maya,tiktok,3905,0.044,63.66,Supplier Quality,Minneapolis,Minnesota,US,0,2026-06-29T21:44:57Z
+515,@expedite_ava,Expedite Ava,twitter,5244,0.0316,57.84,Maintenance Reliability,Detroit,Michigan,US,0,2026-06-29T21:44:57Z
+516,@expedite_nina,Expedite Nina,youtube,1915,0.1079,100,Plant Logistics,Las Vegas,Nevada,US,0,2026-06-29T21:44:57Z
+517,@expedite_ella,Expedite Ella,threads,79570,0.036,70.66,Aftermarket Parts,Brooklyn,New York,US,0,2026-06-29T21:44:57Z
+518,@expedite_aria,Expedite Aria,instagram,4490,0.1067,100,Industrial Automation,New York,New York,US,0,2026-06-29T21:44:57Z
+519,@expedite_luna,Expedite Luna,tiktok,7659,0.0508,71.87,Electronics Manufacturing,Los Angeles,California,US,0,2026-06-29T21:44:57Z
+520,@expedite_mia,Expedite Mia,twitter,5713,0.0571,67.22,Metal Fabrication,Chicago,Illinois,US,0,2026-06-29T21:44:57Z
