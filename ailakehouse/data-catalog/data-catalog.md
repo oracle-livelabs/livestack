@@ -16,11 +16,11 @@ In this scene, you will:
 
 - Open **Data Catalog** from the **Catalog** menu.
 - Open **Catalog** in Oracle Data Studio.
-- Search for the curated `PRODUCTS` table.
-- Review the `PRODUCTS` catalog details and launch **AI Assist**.
+- Search for the curated `DIM_PRODUCT` table.
+- Review the `DIM_PRODUCT` catalog details and launch **AI Assist**.
 - Use the AI-assisted explanation to identify a useful derived business column.
-- Create a reusable view named `PRODUCT_CATALOG_AI_DEMO_V`.
-- Verify that the new view includes `MARGIN_PCT`.
+- Create a reusable view named `DIM_PRODUCT_VIEW`.
+- Verify that the new view includes `MARGIN_AMOUNT`.
 
 ## Task 1: Open the Data Catalog demo
 
@@ -46,24 +46,24 @@ Perform the following set of steps to open **Catalog** in **Oracle Data Studio**
 
 Data Studio Catalog gives PeakGear a searchable inventory of database objects. For the demo, this is where the technical object becomes a business asset that users can inspect, explain, and reuse.
 
-## Task 3: Find the PRODUCTS dataset
+## Task 3: Find the DIM_PRODUCT dataset
 
 ![Data Studio Catalog search filtered to PRODUCTS](images/task-3-search-products-table.png)
 
-Perform the following set of steps to find the **PRODUCTS** dataset in Catalog:
+Perform the following set of steps to find the **DIM_PRODUCT** dataset in Catalog:
 
 1. In the Catalog search field, enter:
 
 ```text
-PRODUCTS
+DIM_PRODUCT
 ```
 
 2. Press **Enter**.
-3. Confirm that `PRODUCTS` appears in the results.
-4. Confirm that the table shows **650 rows** in the reference environment.
-5. Select `PRODUCTS` to open the table details.
+3. Confirm that `DIM_PRODUCT` appears in the results.
+4. Confirm that the table shows **20,000 rows** in the reference environment.
+5. Select `DIM_PRODUCT` to open the table details.
 
-The `PRODUCTS` table is a good catalog demo object because it is easy to understand and relevant to many business outcomes: product catalog browsing, merchandising decisions, semantic search, operations dashboards, webshop discovery, and AI agents.
+The `DIM_PRODUCT` table is a good catalog demo object because it is easy to understand and relevant to many business outcomes: product catalog browsing, merchandising decisions, semantic search, operations dashboards, webshop discovery, and AI agents.
 
 **Note:** Sample values may change after data refreshes or rebuilds. Focus on the expected result pattern and the business takeaway, not the exact values.
 
@@ -71,22 +71,12 @@ The `PRODUCTS` table is a good catalog demo object because it is easy to underst
 
 ![PRODUCTS table detail showing AI Assist](images/task-4-open-products-ai-assist.png)
 
-Perform the following set of steps to review the PRODUCTS table and launch AI Assist:
+Perform the following set of steps to review the DIM_PRODUCT table and launch AI Assist:
 
-1. Review the `PRODUCTS` overview.
-2. Confirm that the table is owned by `PG`, belongs to the `LOCAL` catalog, and has a row count of **650**.
+1. Review the `DIM_PRODUCT` overview.
+2. Confirm that the table is owned by `PG`, belongs to the `LOCAL` catalog, and has a row count of **20,000**.
 3. Review the available detail tabs such as **Columns**, **Preview**, **Data Definition**, **Lineage**, and **Impact**.
 4. Click **AI Assist**.
-
-Use AI Assist as the explanation step. If the assistant asks for guidance, use this prompt:
-
-```text
-Explain this PRODUCTS table in business terms and suggest one simple derived column that would make it more useful for merchandising analysis.
-```
-
-A practical answer is `MARGIN_PCT`, because PeakGear can use it to compare promotional candidates, evaluate category profitability, and prioritize products that deserve more attention.
-
-**Note:** Sample values may change after data refreshes or rebuilds. Focus on the expected result pattern and the business takeaway, not the exact values.
 
 ## Task 5: Review the Table AI Assist create-view workspace
 
@@ -94,74 +84,58 @@ A practical answer is `MARGIN_PCT`, because PeakGear can use it to compare promo
 
 Perform the following set of steps to review the Table AI Assist create-view workspace:
 
-1. Confirm that **Source Table Name** is `PRODUCTS`.
+1. Confirm that **Source Table Name** is `DIM_PRODUCT`.
 2. Confirm that **Target Type** is **Create View**.
 3. In **Target Name**, replace the default value shown in the field with:
 
 ```text
-PRODUCT_CATALOG_AI_DEMO_V
+DIM_PRODUCT_VIEW
 ```
 
 4. Review **Add Step**. This is where Table AI Assist can help build a recipe to add, update, remove, or rename columns without changing the source table.
-5. Use the view SQL in the next task as the presenter-safe path for this demo.
+5. Click **Add or replace column**
+
+The system will analyze the table and metadata and give you suggestions.
+
+You can also use your own prompt:
+
+```text
+Explain this DIM_PRODUCT table in business terms and suggest one simple derived column that would make it more useful for merchandising analysis.
+```
+
+![Table AI Assist](images/task-5-ask-ai.png)
+
+A practical answer is `MARGIN_AMOUNT`, because PeakGear can use it to understand the profitability of each product, enabling better decision-making on pricing, promotions, and inventory management 
+
+![Table AI Assist](images/task-5-margin.png)
+
+**Note:** Sample values may change after data refreshes or rebuilds. Focus on the expected result pattern and the business takeaway, not the exact values.
+
 
 The important point is that the source table is not modified. PeakGear can create a reusable view that adds business meaning on top of the trusted product dataset.
 
-## Task 6: Create the margin-enriched product view
+## Task 6: Create and review the margin-enriched product view
 
 Perform the following set of steps to create and verify the margin-enriched product view:
 
-Open SQL from Data Studio or use the **Query** action from the `PRODUCTS` detail page. Create the view with this SQL:
+1. Click **Save** to create the enhanced view.
 
-```sql
-CREATE OR REPLACE VIEW product_catalog_ai_demo_v AS
-SELECT
-  product_id,
-  sku,
-  product_name,
-  description,
-  category,
-  subcategory,
-  unit_price,
-  unit_cost,
-  ROUND(
-    ((unit_price - unit_cost) / NULLIF(unit_price, 0)) * 100,
-    2
-  ) AS margin_pct
-FROM products;
-```
+2. Click **Create View** and then confirm with **Yes**.
 
-Then verify the result:
+2. Open SQL from Data Studio
 
-```sql
-SELECT
-  product_name,
-  category,
-  subcategory,
-  unit_price,
-  unit_cost,
-  margin_pct
-FROM product_catalog_ai_demo_v
-ORDER BY margin_pct DESC
-FETCH FIRST 10 ROWS ONLY;
-```
+  ![Table AI Assist](images/task-6-sql.png)
 
-The `MARGIN_PCT` column is intentionally simple. It turns existing product facts into a reusable business measure without duplicating the source table or forcing every downstream dashboard and AI feature to recalculate margin independently.
+  Then verify the result:
+  
+  ```sql
+  SELECT * FROM dim_product_view;
+  ```
+  
+  The `MARGIN_AMOUNT` column is available.
 
-## Task 7: Verify the new view in Catalog
-
-Perform the following set of steps to verify that the new view is available in Catalog:
-
-1. Return to **Catalog**.
-2. Search for:
-
-```text
-PRODUCT_CATALOG_AI_DEMO_V
-```
-
-3. Open the view.
-4. Confirm that the view includes `MARGIN_PCT`.
-5. Use **AI Assist** again to explain the view in business terms.
+  ![Table AI Assist](images/task-6-view.png)
+  
 
 This closes the Catalog loop: the user discovered a trusted table, understood it, enriched it as a view, and made the result available as another cataloged data asset.
 
