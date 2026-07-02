@@ -4,7 +4,7 @@ import { TrendingUp, Filter, Search, Flame, Eye, Share2, MessageCircle, Heart, P
 import { api } from '../utils/api';
 import { useData } from '../hooks/useData';
 import { useUser } from '../context/UserContext';
-import { formatNumber, formatCurrency, timeAgo } from '../utils/format';
+import { formatNumber, formatCurrency, formatScore, timeAgo } from '../utils/format';
 import { FeatureBadge, SqlBlock, DiagramBox } from '../components/OracleInfoPanel';
 import { RegisterOraclePanel } from '../context/OraclePanelContext';
 import { JetButton, JetInputText, JetSelectSingle } from '../components/JetControls';
@@ -28,7 +28,6 @@ const URGENCY_LABELS = {
 
 const SIGNAL_METRIC_DEFINITIONS = [
   { label: 'Reach', description: 'signal-source audience or account exposure', scale: 'count' },
-  { label: 'Score', description: 'source influence score from reach and activity', scale: '0-100' },
   { label: 'Urgency', description: 'production signal activity, amplification, and capacity relevance', scale: '0-100' },
   { label: 'Sentiment', description: 'text sentiment from negative to positive', scale: '-1 to +1' },
 ];
@@ -64,17 +63,16 @@ function SignalCard({ signal }) {
             <p className="text-xs text-[var(--color-accent)] font-medium mb-1">
               {signal.NETWORK_ACCOUNT_HANDLE}
               <span className="text-[var(--color-text-dim)] font-normal ml-2">
-                <strong className="text-[var(--color-text)]">{formatNumber(signal.FOLLOWER_COUNT)}</strong> reach · Score{' '}
-                <strong className="text-[var(--color-text)]">{signal.INFLUENCE_SCORE} / 100</strong>
+                <strong className="text-[var(--color-text)]">{formatNumber(signal.NETWORK_ACCOUNT_REACH)}</strong> reach
               </span>
             </p>
           )}
           <p className="text-sm leading-relaxed line-clamp-3">{signal.SIGNAL_TEXT}</p>
         </div>
-        {signal.URGENCY_SCORE && (
+        {signal.URGENCY_SCORE != null && (
           <div className="flex-shrink-0 text-center">
             <div className="text-lg font-bold font-mono" style={{ color: signal.URGENCY_SCORE > 75 ? '#C74634' : signal.URGENCY_SCORE > 50 ? '#AA643B' : '#7A736E' }}>
-              {signal.URGENCY_SCORE} / 100
+              {formatScore(signal.URGENCY_SCORE)} / 100
             </div>
             <div className="text-[9px] text-[var(--color-text-dim)] uppercase">Urgency</div>
           </div>
@@ -528,8 +526,7 @@ FETCH APPROXIMATE FIRST 10 ROWS ONLY;`} />
                       <p className="text-xs text-[var(--color-accent)] font-medium mb-1">
                         {p.NETWORK_ACCOUNT_HANDLE}
                         <span className="text-[var(--color-text-dim)] font-normal ml-2">
-                          <strong className="text-[var(--color-text)]">{formatNumber(p.FOLLOWER_COUNT)}</strong> reach · Score{' '}
-                          <strong className="text-[var(--color-text)]">{p.INFLUENCE_SCORE} / 100</strong>
+                          <strong className="text-[var(--color-text)]">{formatNumber(p.NETWORK_ACCOUNT_REACH)}</strong> reach
                         </span>
                       </p>
                     )}

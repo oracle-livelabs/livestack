@@ -10,6 +10,13 @@ export function formatCurrency(n) {
   return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(n);
 }
 
+export function formatScore(value) {
+  if (value == null || value === '') return 'Not scored';
+  const score = Number(value);
+  if (!Number.isFinite(score)) return 'Not scored';
+  return score.toLocaleString('en-US', { maximumFractionDigits: 2 });
+}
+
 export function formatDate(d) {
   if (!d) return '-';
   return new Date(d).toLocaleDateString('en-US', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
