@@ -181,7 +181,7 @@ const TABLES = [
       integerColumn('response_count'),
       integerColumn('observation_count'),
       numberColumn('sentiment_score'),
-      numberColumn('urgency_score'),
+      numberColumn('urgency_score', { required: true }),
       sourceIdListColumn('detected_part_ids', 'products'),
       enumColumn('momentum_code', ['stable', 'elevated', 'escalating', 'critical']),
       timestampColumn('processed_at'),

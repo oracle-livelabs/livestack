@@ -10,7 +10,7 @@ import {
 } from 'recharts';
 import { api } from '../utils/api';
 import { useData } from '../hooks/useData';
-import { formatNumber, formatCurrency, getMomentumColor, timeAgo } from '../utils/format';
+import { formatNumber, formatCurrency, formatScore, getMomentumColor, timeAgo } from '../utils/format';
 import { FeatureBadge, SqlBlock, DiagramBox } from '../components/OracleInfoPanel';
 import { RegisterOraclePanel } from '../context/OraclePanelContext';
 import { SceneStoryPanel } from '../components/ManufacturingStory';
@@ -295,7 +295,9 @@ function TrendingTable({ products, onSelect, selectedId }) {
         <tbody>
           {products.map((p, i) => {
             const isSelected = selectedId === p.PRODUCT_ID;
-            const rowLabel = `${p.PRODUCT_NAME}, ${p.BRAND_NAME}, category ${p.CATEGORY}, unit value ${formatCurrency(p.UNIT_PRICE)}, ${formatNumber(p.SIGNAL_COUNT)} production signals, urgency ${p.AVG_URGENCY} out of 100`;
+            const averageUrgencyScore = p.AVG_URGENCY ?? p.AVERAGE_URGENCY_SCORE;
+            const formattedUrgencyScore = formatScore(averageUrgencyScore);
+            const rowLabel = `${p.PRODUCT_NAME}, ${p.BRAND_NAME}, category ${p.CATEGORY}, unit value ${formatCurrency(p.UNIT_PRICE)}, ${formatNumber(p.SIGNAL_COUNT)} production signals, urgency ${formattedUrgencyScore} out of 100`;
             return (
               <tr
                 key={p.PRODUCT_ID || i}
@@ -323,7 +325,7 @@ function TrendingTable({ products, onSelect, selectedId }) {
                 <td className="py-2.5 px-3 text-right font-semibold">{formatNumber(p.TOTAL_OBSERVATIONS)}</td>
                 <td className="py-2.5 px-3 text-right">
                   <span className="font-mono font-bold" style={{ color: getMomentumColor(p.PEAK_MOMENTUM) }}>
-                    {p.AVG_URGENCY} / 100
+                    {formattedUrgencyScore} / 100
                   </span>
                 </td>
                 <td className="py-2.5 px-3 text-center">
