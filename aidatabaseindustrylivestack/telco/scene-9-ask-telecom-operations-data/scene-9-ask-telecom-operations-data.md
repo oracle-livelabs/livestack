@@ -34,7 +34,7 @@ Use this page to show the balance between business access and technical governan
 
 ## Task 2: Inspect generated SQL
 
-![Show SQL mode button](images/show-sql-mode.png)
+![Generated SQL for the selected telecom revenue question](images/show-sql-mode.png)
 
 Inspect generated SQL to show that the answer is traceable. Even if the user does not read every line, the query can be reviewed instead of trusting a hidden AI response.
 
@@ -48,7 +48,7 @@ The value is not only convenience. A telecom analyst can get faster answers whil
 
 ## Task 3: Run SQL and inspect returned data
 
-![Run SQL mode button](images/run-sql-mode.png)
+![Returned service revenue rows after running the generated SQL](images/run-sql-mode.png)
 
 Run SQL and inspect the returned data to connect a plain-English telecom question to live service-order rows, revenue patterns, subscriber signals, or capacity evidence.
 
@@ -77,4 +77,4 @@ You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-28
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-29

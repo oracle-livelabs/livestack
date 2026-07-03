@@ -122,7 +122,7 @@ If this test fails, fix Podman setup before continuing with LiveStack.
 
 ## Task 1: Download the portable package
 
-1. Download the LiveStack package using this [link](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/livestack-finance.zip).
+1. Download the LiveStack package using this [link](https://c4u02.objectstorage.us-ashburn-1.oci.customer-oci.com/p/9DEArLjsgbKXuJgQtSG95E8hMXRFtxgHR8jiHbqz4HgyVYXVnSo0SC_s-zq5CJA3/n/c4u02/b/hosted-files/o/livestack-finance.zip).
 
 2. Save or rename the file as `livestack.zip`.
 

@@ -52,7 +52,7 @@ Perform the following set of steps to show the demo-safe reset path:
 
     ![Preview Restore workflow highlighted in the dataset tool](images/preview-restore-seeded-dataset.png)
 
-Use this scene to close the runbook with a practical adoption point: the same LiveStack can tell the seeded Seer Tech product-launch story or help customers reason about their own High Tech operating data while preserving a known-good demo baseline.
+Use this scene to close the runbook with a practical adoption point: the same LiveStack can tell the seeded Seer Tech AI infrastructure release-train story or help customers reason about their own High Tech operating data while preserving a known-good demo baseline.
 
 The business value is that teams can test their own product and commitment story without losing the demo-safe reset path that keeps workshops repeatable.
 
@@ -60,5 +60,5 @@ The business value is that teams can test their own product and commitment story
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-16
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-07-02
 - **Source Bundle** - `livestack-hightech.zip`

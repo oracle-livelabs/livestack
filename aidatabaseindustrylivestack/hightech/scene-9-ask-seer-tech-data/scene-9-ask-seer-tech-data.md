@@ -36,10 +36,7 @@ Perform the following set of steps when the user wants a business-readable answe
 
 1. Click **Clear** if a previous result is visible.
 2. Click **Explain**.
-3. Ask a High Tech question such as:
-- *Which products are constrained by component shortages and supplier risk?*
-- *Which commitments need capacity review before the promise date?*
-- *Which products show field quality or warranty exposure?*
+3. Ask **Which products are constrained by component shortages and supplier risk?**
 4. Review the narrated answer and generated SQL details when they are visible.
 
     ![Ask Seer Tech Data Explain mode response highlighted](images/ask-seer-tech-data-explain-mode.png)
@@ -57,7 +54,7 @@ Perform the following set of steps when the user is exploring the data interacti
 
 1. Click **Clear** if the Explain result is still visible.
 2. Click **Chat**.
-3. Ask a related question, such as **Which high-tech products have low capacity?** or **Which customer commitments are at risk from shortage signals?**
+3. Ask **Which customer commitments are at risk from shortage signals?**
 
     ![Ask Seer Tech Data Chat mode response highlighted](images/ask-seer-tech-data-chat-mode.png)
 
@@ -69,7 +66,7 @@ Perform the following set of steps when a data steward, planner, engineer, or re
 
 1. Click **Clear** if the Chat result is still visible.
 2. Click **Show SQL**.
-3. Ask a question such as **Which products have the highest demand volatility this week?**, **Which supply sites have shortage alerts?**, or **Which commitments are waiting on BOM or capacity review?**
+3. Ask **Which products have the highest demand volatility this week?**
 4. Review the generated SQL.
 
     ![Ask Seer Tech Data generated SQL highlighted](images/ask-seer-tech-data-generated-sql.png)
@@ -82,7 +79,7 @@ Perform the following set of steps to inspect the live rows behind the answer. T
 
 1. Click **Clear** if the generated SQL result is still visible.
 2. Click **Run SQL**.
-3. Ask a question such as **Which high-tech products have low capacity?** or rerun the previous question.
+3. Ask **Which products have the highest demand volatility this week?** This carries the reviewed question from **Show SQL** into governed execution.
 4. Review the returned table.
 5. Expand **View generated SQL** if you want to show the query behind the result.
 
@@ -104,5 +101,5 @@ This pattern matters because teams want faster answers, but they also need gover
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-16
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-07-02
 - **Source Bundle** - `livestack-hightech.zip`

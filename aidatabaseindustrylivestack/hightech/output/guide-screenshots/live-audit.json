@@ -1,0 +1,473 @@
+{
+  "baseUrl": "http://127.0.0.1:8505",
+  "capturedAt": "2026-07-02T16:18:26.787Z",
+  "results": [
+    {
+      "id": "welcome",
+      "route": "welcome",
+      "title": "Seer Tech Product Intelligence - Oracle AI Database 26ai Demo",
+      "text": "High Tech product and manufacturing intelligence on one governed Oracle data platform.\n\nThis LiveStack demonstrates Oracle AI Database 26ai for High Tech across semiconductor manufacturing, fab operations, product lifecycle management, design-to-manufacturing handoff, electronics manufacturing, supplier risk, contract manufacturing, connected products, field quality, warranty analytics, service and support operations, order promising, and AI-assisted customer-commitment decisions.\n\nNINE USE CASES, ONE HIGH TECH PRODUCT LIFECYCLE STORY\n\nThe demo follows a launch-at-risk scenario across semiconductor manufacturing, fab operations, product lifecycle management, design-to-manufacturing handoff, electronics manufacturing, supplier risk, demand volatility, channel inventory, customer commitments, field quality, warranty analytics, connected products, and service and support operations. Each scene uses the same governed Oracle AI Database 26ai foundation so the story stays connected from data load through AI-assisted action.\n\n1\nData Foundation\nLoad one governed baseline for wafer starts, NPI programs, BOM revisions, supplier risk, fab capacity, order promising, channel inventory, field quality, warranty analytics, and connected-product signals.\n2\nHigh Tech Operations Command Center\nSee the design-to-manufacturing handoff risk before it becomes separate fab operations, electronics manufacturing, supplier, order, support, and quality escalations.\n3\nProduct, Supply & Quality Signals\nExplain the evidence across component shortages, demand volatility, yield improvement, engineering change orders, customer commitments, and service and support operations.\n4\nProduct Lifecycle Event Graph\nTrace how NPI milestones, product lifecycle management records, suppliers, contract manufacturing partners, BOM items, launch blockers, quality cases, and buyer commitments connect.\n5\nSupply Chain Resilience Map\nPrioritize fabs, contract manufacturing sites, supplier lanes, availability centers, channel inventory pools, and order-promising decisions with Oracle Spatial evidence.\n6\nCustomer Commitments\nOpen the order, allocation, connected-product, warranty, field-quality, and support records behind the launch and fulfillment commitment.\n7\nYield, Capacity & Warranty Analytics\nPredict wafer yield exposure, fab bottlenecks, component shortages, allocation risk, warranty escape rates, field quality exposure, and NPI launch readiness.\n8\nAsk High Tech Data\nAsk the semiconductor manufacturing and electronics manufacturing story in plain language and let Oracle generate governed SQL over the live High Tech schema.\n9\nHigh Tech AI Agent Console\nConvert findings into auditable actions for fab operations, product engineering, supply planning, contract manufacturing, quality, warranty, support, sales, and customer-commitment teams.\nStart the demo\nKey High Tech Use Cases Featured\n\nShowing 1-3 of 9\n\nHigh Tech Data Foundation\n\nShows how Oracle AI Database 26ai provides:\n\nA governed product lifecycle and manufacturing data layer\nSemiconductor manufacturing, fab operations, wafer starts, and yield records\nProduct lifecycle management, BOM, engineering change order, and new product introduction data\nSupplier, contract manufacturing, quality, warranty, support, and customer-commitment records\nHigh Tech Operations Command Center\n\nGives product, supply, and operations teams visibility into:\n\nFab bottlenecks and wafer-start exposure\nComponent shortages and supplier risk\nDemand volatility and channel inventory pressure\nCustomer commitments, order promising, and launch readiness\nProduct, Supply & Quality Signals\n\nUses vector-powered analysis across:\n\nDesign-to-manufacturing handoff and ECO signals\nBOM risk, supplier constraints, and contract manufacturing commits\nConnected-product telemetry and field quality trends\nWarranty analytics and support escalation signals",
+      "headings": [
+        "High Tech product and manufacturing intelligence on one governed Oracle data platform.",
+        "Key High Tech Use Cases Featured"
+      ],
+      "buttons": [
+        "Start the demo",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "selects": [],
+      "inputs": [],
+      "errors": []
+    },
+    {
+      "id": "foundation",
+      "route": "datamodel",
+      "title": "Seer Tech Product Intelligence - Oracle AI Database 26ai Demo",
+      "text": "Data Foundation\n\nPrepare the governed Seer Tech dataset before you move into the High Tech industry scenarios.\n\nSCENE 1 - ESTABLISH THE SHARED PRODUCT RECORD\nBuild the governed High Tech operating baseline.\n\nThe demo starts by loading one High Tech foundation for a launch-at-risk scenario. Semiconductor manufacturing plans, fab operations capacity, wafer starts, yield improvement targets, product lifecycle management milestones, new product introduction programs, design-to-manufacturing handoff records, electronics manufacturing partners, engineering change orders, bill of materials revisions, component shortages, supplier risk, demand volatility, channel inventory, connected products, field quality, warranty analytics, customer commitments, order promising, and service and support operations become the common records used downstream.\n\n1\n\nRestore the governed High Tech demo foundation.\n\n2\n\nConfirm fab, supplier, BOM, NPI, quality, warranty, support, channel, and customer-commitment records are present.\n\n3\n\nUse the same Oracle AI Database 26ai records in every scene.\n\nStart here to load the Seer Tech Product Intelligence demo dataset. This action prepares product portfolios, semiconductor manufacturing and fab operations context, wafer-start and yield-improvement signals, product lifecycle management records, design-to-manufacturing handoff evidence, electronics manufacturing and contract manufacturing capacity, engineering change orders, bill of materials dependencies, component shortage and supplier-risk signals, demand volatility, channel inventory, customer commitments, order-promising dates, connected-product signals, field quality, warranty analytics, support operations, spatial allocation data, vector embeddings, ML outputs, and agent audit history.\n\nPrepare the Dataset\n\nLoad or restore the bundled High Tech dataset, then verify the live record counts that power every use case in the demo.\n\nRestore Demo Data\n\n18,565 tracked records across the major demo layers.\n\n60\n\nHIGH TECH PRODUCTS\n\n5,000\n\nPRODUCT SIGNALS\n\n3,000\n\nCUSTOMER COMMITMENTS\n\n60\n\nPRODUCT VECTORS\n\n5,000\n\nSIGNAL VECTORS\n\n5,445\n\nSEMANTIC MATCHES\n\nWhat Gets Loaded\n\nThe restore prepares semiconductor manufacturing, fab operations, product lifecycle, supplier, electronics manufacturing, contract manufacturing, customer commitment, quality, warranty, support, spatial, graph, vector, analytical, and agent data domains that the rest of the demo uses.\n\nShowing 1-3 of 8\n\nHigh Tech Data Foundation\n\nProduct lifecycle, manufacturing, supply, quality, support, and customer-commitment records share one governed Oracle foundation.\n\nTechnology portfolios, high-tech products, enterprise buyers, solution orders, allocation routes, product capacity, product signals, and agent actions are modeled together.\n\nFab and Manufacturing Operations\n\nThe same schema supports semiconductor manufacturing, fab operations, wafer starts, yield improvement, electronics manufacturing, and contract manufacturing views.\n\nOperators can inspect capacity pressure, launch readiness, product availability, and manufacturing constraints from governed Oracle data.\n\nProduct, Supply, and Quality Signals\n\nComponent shortages, supplier risk, demand volatility, design-to-manufacturing handoff, field quality, warranty analytics, and support signals become searchable events.\n\nVector search and semantic matching help surface product risk, customer-commitment exposure, quality urgency, and support follow-up.",
+      "headings": [
+        "Data Foundation",
+        "Build the governed High Tech operating baseline.",
+        "Prepare the Dataset",
+        "What Gets Loaded"
+      ],
+      "buttons": [
+        "Restore Demo Data",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "selects": [],
+      "inputs": [],
+      "errors": []
+    },
+    {
+      "id": "dashboard",
+      "route": "dashboard",
+      "title": "Seer Tech Product Intelligence - Oracle AI Database 26ai Demo",
+      "text": "SCENE 2 - DETECT THE LAUNCH CONSTRAINT\nSpot the product-launch risk before it fragments across teams.\n\nThe command center turns a constrained AI accelerator launch into one operating view: fab utilization, wafer-start plans, yield risk, supplier shortage exposure, design-to-manufacturing handoff readiness, channel inventory, contract manufacturing capacity, customer commitments, order-promising pressure, connected-product signals, field quality, warranty exposure, and support backlog surface together.\n\n1\n\nStart with cross-functional status cards and exception lists.\n\n2\n\nLook for linked fab, supplier, quality, warranty, support, and customer pressure.\n\n3\n\nUse the dashboard as the handoff into signals, graph, map, analytics, Ask Data, and agents.\n\nHow the launch constraint is detected\n\nProducts are flagged when demand signals accelerate while supply flexibility tightens. The same inputs shown below are combined into a transparent 0–100 Constraint Risk score; higher scores indicate greater launch exposure.\n\nDemand signal pressure · 80%\n45% average virality, up to 20% signal concentration, and up to 15% matched-record volume.\nCapacity pressure · 15%\nRecent requested units compared with available units across the product network.\nSupply flexibility · 5%\nAdded exposure when only one or two supply sites have units available for allocation.\nProduct & Commitment Intelligence Control Tower\n\nReal-time Seer Tech visibility across fab operations, component shortages, demand volatility, customer commitments, field quality, and channel inventory.\n\nRefresh\n\n3.0K\n\nCustomer Commitments\n\n3.0K new promise checks\n\n$113,046,200.00\n\nCommitment Value\n\n$113,046,200.00 last 30d\n\n1.8K\n\nShortage & Quality Signals\n\n2.1K rising\n\n44\n\nDemand Volatility\n\n5.0K product signals\n\n24\n\nAgent Actions\n\n262 order promise routes\n\nSignal Velocity\n1h\n24h\n48h\n7d\n30d\n1y\n19:00\n11:00\n03:00\n19:00\n11:00\n03:00\n19:00\n11:00\n03:00\n19:00\n16:00\nDate\n0\n2\n4\n6\n8\nSignal Volume\nProduct Value by Portfolio\nSemiconductor Manufacturing\nFab Operations\nSupply Chain Resilience\nProduct Lifecycle Management\nContract Manufacturing\nQuality & Warranty\nCustomer Commitments\nConnected Products\nHigh-Demand Products\n- LAUNCH EXPOSURE (7 DAY)\nVectorLink Networks\nWarrantyIQ Services\nHelioCore Components\nSeer Silicon Systems\nHIGH-TECH PRODUCT\tTECHNOLOGY PORTFOLIO\tMENTIONS\tVIEWS\tVIRALITY\tCONSTRAINT RISK\n\t\nAutonomous Test Cell Controller\tVectorLink Networks\t22\t4.0M\t87.17\t61 / 100\t\n\nWafer Probe Exception Detector\tWarrantyIQ Services\t11\t2.5M\t89.18\t59 / 100\t\n\nSupplier Risk Heatmap Service\tHelioCore Components\t17\t2.7M\t87.35\t59 / 100\t\n\nEngineering Change Order Copilot\tSeer Silicon Systems\t15\t2.9M\t86.5\t59 / 100\t\n\nYield Excursion Response Pack\tChannelFlow Systems\t13\t2.9M\t87.32\t58 / 100\t\n\nCustomer Support Operations Board\tSupportOps Cloud\t12\t2.4M\t86.33\t58 / 100\t\n\nCustomer Commit Date Guardrail\tQuantumEdge Devices\t16\t3.4M\t85.81\t58 / 100\t\n\nWarranty Escape Detector\tOrion PLM Systems\t17\t3.3M\t83.93\t58 / 100\t\n\nField Failure Pattern Detector\tApex Compute Platforms\t15\t2.7M\t83.87\t58 / 100\t\n\nDeveloper Portal Premium Seat\tWarrantyIQ Services\t21\t3.0M\t82.47\t58 / 100\t\n\nChannel Inventory Signal Pack\tHelioCore Components\t13\t2.4M\t84.69\t57 / 100\t\n\nConnected Product Support Entitlement\tNovaFab Operations\t17\t3.5M\t83.29\t57 / 100\t\n\nPrivate 5G Factory Starter Pack\tNovaFab Operations\t21\t3.5M\t79.2\t57 / 100\t\n\nCustomer Promise Allocation API\tSeer Silicon Systems\t14\t2.2M\t79.86\t56 / 100\t\n\nContract Manufacturing Audit Pack\tSignalForge Quality\t21\t3.5M\t77.36\t56 / 100\t\n\nECO Impact Simulation Service\tSupportOps Cloud\t14\t2.9M\t79.36\t55 / 100\t\n\nLithography Throughput Analyzer\tApex Compute Platforms\t16\t2.1M\t78.64\t55 / 100\t\n\nSupplier Shortage Radar\tQuantumEdge Devices\t18\t2.3M\t78.06\t55 / 100\t\n\nOptical Module Test Kit\tAtlas Contract Manufacturing\t17\t2.7M\t76.44\t55 / 100\t\n\nAI Edge Gateway Reference Kit\tSeer Silicon Systems\t34\t4.0M\t67.55\t55 / 100\t\n\nYield Improvement Analytics Pack\tHelioCore Components\t14\t2.5M\t79.18\t54 / 100\t\n\nOrder Promising Risk Service\tChannelFlow Systems\t15\t2.2M\t77.97\t54 / 100\t\n\nContract Build Plan Optimizer\tAtlas Contract Manufacturing\t11\t1.6M\t77.81\t54 / 100\t\n\nWarranty Analytics Data Mart\tVectorLink Networks\t10\t1.5M\t76.92\t54 / 100\t\n\nSilicon Lot Genealogy Viewer\tSignalForge Quality\t17\t1.9M\t75.04\t54 / 100\t\n\nClick any row to view inventory & social mention details\n\nCONVERGED CAPABILITIES IN USE\nRelational\nJSON\nGraph\nVector\nSpatial\nAgents\nSecurity",
+      "headings": [
+        "Spot the product-launch risk before it fragments across teams.",
+        "How the launch constraint is detected",
+        "Product & Commitment Intelligence Control Tower",
+        "Signal Velocity",
+        "Product Value by Portfolio",
+        "High-Demand Products- Launch Exposure (7 day)"
+      ],
+      "buttons": [
+        "Refresh",
+        "1h",
+        "24h",
+        "48h",
+        "7d",
+        "30d",
+        "1y",
+        "VectorLink Networks",
+        "WarrantyIQ Services",
+        "HelioCore Components",
+        "Seer Silicon Systems"
+      ],
+      "selects": [],
+      "inputs": [
+        {
+          "type": "text",
+          "placeholder": "Search high-tech products or programs…",
+          "value": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "signals",
+      "route": "social",
+      "title": "Seer Tech Product Intelligence - Oracle AI Database 26ai Demo",
+      "text": "SCENE 3 - EXPLAIN THE PRODUCT SIGNALS\nFind the supply, demand, and quality evidence.\n\nThe signal scene explains why the event matters. Vector search links component shortages, supplier risk, demand volatility, wafer-start deviations, fab queue pressure, product lifecycle management milestones, engineering change orders, BOM mismatches, contract manufacturing commits, channel inventory, field quality reports, warranty analytics, connected-product telemetry, support case trends, and customer-commitment exposure.\n\n1\n\nSearch for supplier risk, yield improvement, BOM changes, field quality, or order promising.\n\n2\n\nUse semantic matches to connect signals to products, portfolios, suppliers, and launch cases.\n\n3\n\nCarry the strongest signal evidence into the graph and agent workflows.\n\nEnterprise Buyer Signal Monitor\n\nOracle Vector Search with ONNX embeddings · semantic high-tech product matching · momentum detection\n\nHigh-Tech Product Signal Match Search\nOracle in-database semantic search\n\nDollar values are product unit prices. Match percentages show semantic similarity between the search phrase and each product record, calculated as one minus cosine distance; they are not revenue, margin, or forecast uplift.\n\nSearch\nTry:\nGPU capacity surge for AI training\ndeveloper platform observability spike\nedge gateway allocation for field teams\nprivate 5G factory rollout demand\nzero trust access gateway pilot\nrugged sensor replacement kit\nSignal Summary\n\nWhat the current product signal view means for supply, quality, and customer commitments.\n\nLIVE VIEW\nINDEXED SIGNALS\n5.0K signals\nELEVATED / CRITICAL\n50 elevated or critical\nTOP CONCERN\ncomponent shortage and supplier risk escalation\nHIGHEST IMPACT SOURCE\n@semiconductor_manufacturing_099\nRECOMMENDED NEXT STEP\nCheck component shortages and supplier risk\nGo\n5.0K posts\ntiktok\n🔥 MEGA VIRAL\n2d ago\n\n@component_shortages_329154.0K followers · Score 83.5\n\nSupplier Risk Heatmap Service allocation is tightening as component shortages ripple through customer commitments\n\n99\nVIRALITY\nRelated signals 3.2K\nAffected commitments 1.0K\nOpen follow-ups 380\nMatched records 104.1K\nSentiment: 0.66\nReview supplier risk\nCheck component capacity\nInspect customer commitments\nRoute quality follow-up\nthreads\n🔥 MEGA VIRAL\n12d ago\n\n@warranty_analytics_01136.4K followers · Score 58.1\n\nSupplier risk is rising for Wafer Probe Exception Detector and channel inventory buffers may not cover the next order-promising cycle\n\n99\nVIRALITY\nRelated signals 6.8K\nAffected commitments 504\nOpen follow-ups 260\nMatched records 163.3K\nSentiment: 0.63\nReview supplier risk\nCheck component capacity\nInspect customer commitments\nRoute quality follow-up\ntwitter\n🔥 MEGA VIRAL\n18d ago\n\n@contract_manufacturing_13526.8K followers · Score 68.2\n\nDemand volatility around Engineering Change Order Copilot is pressuring allocation rules across enterprise buyer regions\n\n99\nVIRALITY\nRelated signals 10.3K\nAffected commitments 150\nOpen follow-ups 650\nMatched records 84.6K\nSentiment: 0.77\nReview supplier risk\nCheck component capacity\nInspect customer commitments\nRoute quality follow-up\ntiktok\n🔥 MEGA VIRAL\n24d ago\n\n@component_shortages_11995.1K followers · Score 70.7\n\nDemand volatility around Wafer Probe Exception Detector is pressuring allocation rules across enterprise buyer regions\n\n99\nVIRALITY\nRelated signals 1.6K\nAffected commitments 3.0K\nOpen follow-ups 120\nMatched records 163.9K\nSentiment: 0.48\nReview supplier risk\nCheck component capacity\nInspect customer commitments\nRoute quality follow-up\ntwitter\n🔥 MEGA VIRAL\n265d ago\n\n@warranty_analytics_44598.2K followers · Score 78.2\n\nConnected product telemetry for Supplier Risk Heatmap Service is showing field quality patterns that warranty analytics should triage\n\n99\nVIRALITY\nRelated signals 6.8K\nAffected commitments 1.3K\nOpen follow-ups 360\nMatched records 280.6K\nSentiment: 0.81\nReview supplier risk\nCheck component capacity\nInspect customer commitments\nRoute quality follow-up\ntwitter\n🔥 MEGA VIRAL\n357d ago\n\n@component_shortages_17594.8K followers · Score 91.9\n\nDemand volatility around Supplier Risk Heatmap Service is pressuring allocation rules across enterprise buyer regions\n\n99\nVIRALITY\nRelated signals 8.4K\nAffected commitments 521\nOpen follow-ups 327\nMatched records 41.1K\nSentiment: 0.47\nReview supplier risk\nCheck component capacity\nInspect customer commitments\nRoute quality follow-up\ntiktok\n🔥 MEGA VIRAL\n6d ago\n\n@semiconductor_manufacturing_099231.0K followers · Score 76.4\n\nSupplier risk is rising for Supplier Risk Heatmap Service and channel inventory buffers may not cover the next order-promising cycle\n\n98.6\nVIRALITY\nRelated signals 4.5K\nAffected commitments 994\nOpen follow-ups 100\nMatched records 281.8K\nSentiment: 0.59\nReview supplier risk\nCheck component capacity\nInspect customer commitments\nRoute quality follow-up\ntiktok\n🔥 MEGA VIRAL\n19d ago\n\n@engineering_change_orders_314118.7K followers · Score 65.4\n\nContract manufacturing capacity for Engineering Change Order Copilot is becoming the bottleneck for the next customer commitment wave\n\n98.5\nVIRALITY\nRelated signals 10.4K\nAffected commitments 154\nOpen follow-ups 461\nMatched records 147.7K\nSentiment: 0.35\nReview supplier risk\nCheck component capacity\nInspect customer commitments\nRoute quality follow-up\nthreads\n🔥 MEGA VIRAL\n21d ago\n\n@supplier_risk_31655.4K followers · Score 68.1\n\nService and support operations are asking for a follow-up plan on Wafer Probe Exception Detector before warranty cases rise\n\n98.5\nVIRALITY\nRelated signals 15.3K\nAffected commitments 2.2K\nOpen follow-ups 681\nMatched records 107.6K\nSentiment: 0.50\nReview supplier risk\nCheck component capacity\nInspect customer commitments\nRoute quality follow-up\ninstagram\n🔥 MEGA VIRAL\n9d ago\n\n@connected_products_20895.9K followers · Score 56.4\n\nEngineering change orders changed the bill of materials assumptions for Wafer Probe Exception Detector during the NPI gate\n\n98.4\nVIRALITY\nRelated signals 16.8K\nAffected commitments 2.6K\nOpen follow-ups 281\nMatched records 285.6K\nSentiment: 0.86\nReview supplier risk\nCheck component capacity\nInspect customer commitments\nRoute quality follow-up\ninstagram\n🔥 MEGA VIRAL\n21d ago\n\n@field_quality_24816.6K followers · Score 60.9\n\nEngineering change orders changed the bill of materials assumptions for Engineering Change Order Copilot during the NPI gate\n\n98.4\nVIRALITY\nRelated signals 5.5K\nAffected commitments 743\nOpen follow-ups 42\nMatched records 322.4K\nSentiment: 0.52\nReview supplier risk\nCheck component capacity\nInspect customer commitments\nRoute quality follow-up\nyoutube\n🔥 MEGA VIRAL\n19d ago\n\n@yield_improvement_38254.5K followers · Score 76.1\n\nFab operations teams are watching wafer starts for Wafer Probe Exception Detector after the latest yield improvement review\n\n98.1\nVIRALITY\nRelated signals 1.4K\nAffected commitments 529\nOpen follow-ups 119\nMatched records 124.5K\nSentiment: 0.59\nReview supplier risk\nCheck component capacity\nInspect customer commitments\nRoute quality follow-up\ninstagram\n🔥 MEGA VIRAL\n131d ago\n\n@order_promising_43317.8K followers · Score 86.6\n\nSupplier Risk Heatmap Service allocation is tightening as component shortages ripple through customer commitments\n\n98.1\nVIRALITY\nRelated signals 15.0K\nAffected commitments 3.3K\nOpen follow-ups 290\nMatched records 265.6K\nSentiment: 0.87\nReview supplier risk\nCheck component capacity\nInspect customer commitments\nRoute quality follow-up\ntwitter\n🔥 MEGA VIRAL\n2d ago\n\n@semiconductor_manufacturing_15565.5K followers · Score 90.7\n\nSupplier risk is rising for Wafer Probe Exception Detector and channel inventory buffers may not cover the next order-promising cycle\n\n98\nVIRALITY\nRelated signals 1.2K\nAffected commitments 506\nOpen follow-ups 350\nMatched records 60.7K\nSentiment: 0.80\nReview supplier risk\nCheck component capacity\nInspect customer commitments\nRoute quality follow-up\ntwitter\n🔥 MEGA VIRAL\n9d ago\n\n@semiconductor_manufacturing_36532.3K followers · Score 84.8\n\nConnected product telemetry for Supplier Risk Heatmap Service is showing field quality patterns that warranty analytics should triage\n\n97.8\nVIRALITY\nRelated signals 2.3K\nAffected commitments 1.4K\nOpen follow-ups 213\nMatched records 52.0K\nSentiment: 0.65\nReview supplier risk\nCheck component capacity\nInspect customer commitments\nRoute quality follow-up\n← Prev\nPage 1 of 334\nNext →",
+      "headings": [
+        "Find the supply, demand, and quality evidence.",
+        " Enterprise Buyer Signal Monitor",
+        "High-Tech Product Signal Match Search",
+        "Signal Summary"
+      ],
+      "buttons": [
+        "Search",
+        "GPU capacity surge for AI training",
+        "developer platform observability spike",
+        "edge gateway allocation for field teams",
+        "private 5G factory rollout demand",
+        "zero trust access gateway pilot",
+        "rugged sensor replacement kit",
+        "Go",
+        "← Prev",
+        "Next →"
+      ],
+      "selects": [],
+      "inputs": [
+        {
+          "type": "text",
+          "placeholder": "Describe the product signal you are looking for, for example, GPU capacity, edge gateway allocation, or zero trust rollout.",
+          "value": ""
+        },
+        {
+          "type": "text",
+          "placeholder": "All Momentum",
+          "value": "All Momentum"
+        },
+        {
+          "type": "text",
+          "placeholder": "All Momentum",
+          "value": ""
+        },
+        {
+          "type": "text",
+          "placeholder": "",
+          "value": ""
+        },
+        {
+          "type": "text",
+          "placeholder": "All Platforms",
+          "value": "All Platforms"
+        },
+        {
+          "type": "text",
+          "placeholder": "All Platforms",
+          "value": ""
+        },
+        {
+          "type": "text",
+          "placeholder": "",
+          "value": ""
+        },
+        {
+          "type": "text",
+          "placeholder": "All Developer Advocates",
+          "value": "All Developer Advocates"
+        },
+        {
+          "type": "text",
+          "placeholder": "All Developer Advocates",
+          "value": ""
+        },
+        {
+          "type": "text",
+          "placeholder": "",
+          "value": ""
+        },
+        {
+          "type": "text",
+          "placeholder": "Search enterprise buyer signals...",
+          "value": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "graph",
+      "route": "graph",
+      "title": "Seer Tech Product Intelligence - Oracle AI Database 26ai Demo",
+      "text": "SCENE 4 - TRACE THE PRODUCT LIFECYCLE PATH\nConnect products, suppliers, BOMs, launch blockers, and commitments.\n\nThe graph scene shows how NPI records, product portfolios, developer and ecosystem signals, supplier constraints, component shortages, engineering change orders, bill of materials dependencies, contract manufacturing partners, capacity centers, field quality cases, warranty analytics, service operations, and customer commitments interact as one product lifecycle event graph.\n\n1\n\nSelect a product, supplier, blocker, buyer, architecture, quality case, or commitment node.\n\n2\n\nIncrease graph depth to expose multi-hop supplier, BOM, and mitigation relationships.\n\n3\n\nUse pathway findings to decide which launch or customer milestone needs attention first.\n\nHow risk scores and hops guide the decision\n\nThis demo keeps the scoring transparent. Higher values mean the selected product path is more likely to affect launch readiness or a customer commitment.\n\nStored case or node risk\nThe seeded 0–100 urgency score attached to the product signal evidence.\nDerived pathway risk\nDeep-path findings use 72 plus the number of entities found at three or more hops, capped at 99. Relationship hot spots use 60 plus five points per repeated relationship, capped at 100.\nWhy hops matter\nA hop is one connected lifecycle step. More hops reveal longer dependency chains and more places where supplier, fab, quality, or allocation delays can propagate.\nProduct Signal Graph\n\nExplore multi-hop product lifecycle paths with Oracle Property Graph and SQL property graph queries across bill of materials, supplier risk, fab capacity, field quality, warranty, and customer commitments.\n\nGRAPH DEPTH (HOPS)\n\n1 Hop\n2 Hops\n3 Hops\n4 Hops\n5 Hops\nPRODUCT SIGNAL NODES (50)\ncomponent_abf_core\nBill of Materials\n44\n★ 77\n2 links\nblocker_abf_substrate\nComponent Shortage\n48\n★ 77\n8 links\nsignal_supplier_risk\nSupplier Risk\n57\n★ 90\n5 links\nyield_metric_litho_drift\nYield Engineering\n36\n★ 83\n1 links\nblocker_gpu_capacity\nCapacity Signal\n37\n★ 71\n4 links\nblocker_litho_yield\nYield Improvement\n44\n★ 78\n6 links\nfab_austin_line_7\nFab Operations\n41\n★ 92.5\n2 links\nsupplier_kinetic_abf\nSupplier Risk\n40\n★ 84\n2 links\nportfolio_lithography_ai\nFab Operations\n62\n★ 96\n9 links\nbuyer_quantum_fab\nCustomer Commitments\n30\n★ 92\n4 links\nsignal_wafer_starts\nWafer Starts\n52\n★ 87.5\n2 links\nwafer_lot_ltx_4408\nWafer Lot Control\n31\n★ 86\n2 links\neco_ltx_reticle\nEngineering Change\n33\n★ 85\n3 links\nportfolio_gpu\nProduct Ops\n54\n★ 94\n9 links\nprocess_litho_overlay\nYield Engineering\n24\n★ 82\n2 links\ncenter_austin_fab\nFab Operations\n40\n★ 91\n4 links\narch_litho_eco\nEngineering Change Order\n36\n★ 86\n2 links\norder_promise_quantumfab_aug\nOrder Promising\n28\n★ 86\n2 links\nsignal_order_promising\nOrder Promising\n46\n★ 88.5\n5 links\nallocation_plan_abf_recovery\nAllocation Planning\n30\n★ 82.5\n2 links\nblocker_asic_shortage\nSupplier Risk\n39\n★ 75\n3 links\narch_gpu_bom\nBill of Materials\n29\n★ 88\n4 links\ncommitment_novacloud_q3\nCustomer Commitments\n25\n★ 88\n2 links\nsupplier_site_taipei\nSupplier Site\n29\n★ 78\n1 links\ncenter_tsmc_5nm\nWafer Starts\n35\n★ 88\n6 links\neco_gpu_substrate_alt\nEngineering Change\n27\n★ 82.5\n2 links\nadv_gpu_maya\nProduct Forum\n42\n★ 96.5\n3 links\nfab_hsinchu_line_5\nWafer Starts\n37\n★ 90\nbuyer_nova_cloud\nCustomer Commitments\n28\n★ 89\n3 links\npartner_supplier_kinetic\nSupplier Risk\n43\n★ 85\n4 links\nwafer_lot_gpu_2815\nWafer Lot Control\n28\n★ 84.5\ncapacity_reservation_hsinchu_wk32\nCapacity Reservation\n24\n★ 84\n1 links\ncrb_litho_priority\nChange Review Board\n21\n★ 81\n1 links\nsignal_npi_slip\nNew Product Introduction\n34\n★ 84.5\n3 links\nnpi_milestone_ltx_pvt\nNPI Control Tower\n24\n★ 83.5\n2 links\ncomponent_hbm_stack\nBill of Materials\n30\n★ 80\n2 links\nsubstrate_material_abf\nSubstrate Material\n20\n★ 78\nadv_npi_lena\nNPI Control Tower\n38\n★ 93\n1 links\nbuyer_orion_auto\nCustomer Commitments\n24\n★ 86\n5 links\ndemand_forecast_gpu_q3\nDemand Forecast\n27\n★ 82\n2 links\nportfolio_auto_sensor\nProduct Lifecycle Management\n41\n★ 91\n10 links\nbuyer_apex\nEnterprise Buyer Signal\n23\n★ 83\n3 links\nsignal_field_quality\nField Quality\n36\n★ 82.5\n5 links\nplm_record_gpu_bom_23c\nPLM\n21\n★ 80\n2 links\nfield_quality_incident_adas_42\nField Quality\n24\n★ 78\n2 links\nwarranty_cohort_sensor_early\nWarranty Analytics\n23\n★ 79\n2 links\nblocker_warranty_spike\nWarranty Analytics\n32\n★ 74\n2 links\npartner_foundry_alpha\nFoundry Partner\n31\n★ 90.5\n3 links\ncenter_sjc\nAvailability Center\n24\n★ 82\n4 links\nsupplier_micron_hbm\nSupplier Risk\n26\n★ 82\n1 links\nAB\n\nABF Substrate Core BOM Component\n✓\nBill of Materials\nBOM Component\n\nCenter node - highest product and commitment influence score in network\n\n44\n\nSignal Volume\n\n97.5\n\nRisk Score / 100\n\n-\n\nConfidence\n\n0\n\nConnections\n\n55\n\nNodes\n\n82\n\nEdges\n\n5 hops\n\nDepth\n\nHOP COVERAGE\n\n55\n\n1-hop 2 · 2-hop 9 · 3+ hop 43\n\nSIGNAL-TO-COMMITMENT\n\n12\n\nCases tied to customer commitments and order promising\n\nLIFECYCLE PATHS\n\n82\n\nBill of materials, engineering change, wafer lot, outsourced test, product lifecycle, warranty, channel, and fab relationships\n\nGRAPH DEPTH\n\n5 hops\n\nIncrease depth to reveal hidden handoffs\n\n✓\nABF Substrate Core BOM Component\n✓\nKinetic Components ABF Supplier Desk\n✓\nCloud GPU Burst Portfolio\n✓\nMaya Chen - GPU Infrastructure Advocate\n✓\nComponent Shortage - ABF Substrate Allocation\n✓\nTaipei ABF Lamination Site\n✓\nLaunch Blocker - GPU Capacity Surge\n✓\nBOM Architecture - GPU Memory Substrate Stack\n✓\nHBM3E Memory Stack BOM Component\n✓\nSignal Cluster - Component Shortage and Supplier Risk\n✓\nHsinchu 5nm Foundry Capacity Window\n✓\nSan Jose Product Availability Center\n✓\nNovaCloud Q3 AI Server Customer Commitment\n✓\nABF Recovery Allocation Plan\n✓\nLithography Throughput Analyzer Portfolio\n✓\nSignal Cluster - Order Promising Commitments at Risk\n✓\nPLM Record GPU BOM Baseline 23C\n✓\nApex Manufacturing AI Platform Team\n✓\nKinetic Components Supplier Risk Desk\n✓\nMicron HBM Allocation Desk\n✓\nECO-818 Alternate ABF Stack\n✓\nNovaCloud AI Server Commitment\n✓\nAustin Fab Operations Wafer Start Line\nOsaka Final Test and Package Center\n✓\nLena Park - NPI Product Readiness Lead\n✓\nAustin Fab Line 7 Lithography Cell\n✓\nEngineering Change Order - Lithography Reticle Flow\n✓\nYield Improvement Blocker - Lithography Drift\n✓\nQuantumFab Yield Automation Commitment\n✓\nSignal Cluster - Wafer Starts Below Customer Commitments\n✓\nHsinchu Week 32 Capacity Reservation\n✓\nQ3 GPU Demand Volatility Forecast\n✓\nAlphaFoundry Capacity Desk\n✓\nOrion Automotive ADAS Commitment\nGuadalajara Electronics Manufacturing Line\nPacific OSAT Test and Package Team\n✓\nAutomotive Sensor Fusion Portfolio\n✓\nPenang Contract Manufacturing Cell\n✓\nWafer Lot LTX-4408 Overlay Drift\n✓\nQuantumFab August Order Promise\n✓\nOsaka OSAT Final Test Line 3\n✓\nPLM Baseline - Automotive Sensor Fusion BOM\nADAS Sensor Burn-In Test Program\n✓\nVectorEMS Contract Manufacturing\n✓\nOmar Singh - Field Quality Analytics Lead\n✓\nSignal Cluster - Field Quality Escalations\n✓\nField Quality Blocker - Warranty Analytics Spike\nAutomotive PPAP Quality Gate\n✓\nSupplier Risk - Automotive ASIC Lead Time\n✓\nSignal Cluster - New Product Introduction Slip\n✓\nSignal Cluster - Warranty Analytics Early Warning\n✓\nConnected Product Blocker - Firmware Regression\n✓\nConnected Edge Controller Portfolio\n✓\nSignal Cluster - Private 5G Factory Rollout\nData Center Switch ASIC Portfolio\n\nEDGE LEGEND\n\nDemand & Channel Signals\n\nAdvocates For Product Portfolio - Product advocacy, partner engineering, and channel signals are increasing demand volatility for a product portfolio.\nAmplifies Signal - A signal cluster is amplified across channels, suppliers, or partner engineering teams.\nDrives Demand Forecast - Demand volatility, product signals, or customer commitments drive a forecast signal.\nMentions High Tech Product - A signal references a product, bill of materials option, or connected-product program.\n\nCustomer Commitments\n\nBlocks Commitment - A blocker threatens a customer commitment, order promise, or delivery confidence window.\nCreates Order Risk - Demand volatility, supplier exposure, or channel inventory creates order promising risk.\nFeeds Order Promise - A signal, capacity reservation, or customer commitment feeds an order promising decision.\nInfluences Customer Commitment - A product advocate, partner, or product signal affects customer commitments and order promising decisions.\n\nChannel & Order Promising\n\nReallocated to Channel - Product supply or inventory is reallocated across channel inventory and distributor pools.\nRouted through Logistics - A distributor, customer commitment, or inventory action routes urgent supply through a logistics path.\nSplits Channel Supply - Supply is split across distributor, channel inventory, or customer commitment pools.\n\nSupply Chain Resilience\n\nMitigates Blocker - A mitigation path reduces supplier risk, capacity exposure, or customer commitment risk.\nPartners With - Partner engineering, contract manufacturing, or supplier risk relationships support mitigation.\nRoutes to Capacity Center - Portfolio demand is routed to a fab, contract manufacturing site, or product availability center.\nSupplied By - A bill of materials component, substrate material, memory stack, or product dependency is supplied by a supplier or supplier site.\nUpdates Allocation Plan - A supplier risk, demand, or customer signal updates constrained component allocation planning.\n\nFab & Manufacturing Flow\n\nBacked by Capacity Reservation - An allocation plan or order promise is backed by a fab, foundry, or outsourced semiconductor assembly and test capacity reservation.\nConstrained By - A wafer lot, fab route, or manufacturing step is constrained by a process, yield, or capacity issue.\nConsumes Wafer Starts - A product portfolio consumes fab wafer starts or foundry allocation windows.\nImpacts Yield - A process step, wafer lot, or manufacturing signal impacts yield improvement and wafer-start confidence.\nManufactured At - A product, wafer lot, or supplier flow is manufactured at a fab, foundry, or contract manufacturing site.\nRequires Outsourced Assembly and Test Capacity - A product, wafer lot, or test program requires outsourced semiconductor assembly and test capacity.\n\nProduct Data & Engineering Change Control\n\nAdvances Lifecycle Stage - A new product introduction milestone, manufacturing route, or engineering change order advances a product lifecycle stage.\nChanges Bill of Materials - An engineering change order changes a bill of materials, product lifecycle management baseline, or manufacturing route.\nDelays New Product Introduction - An engineering change order, firmware release, bill of materials decision, or test gate delays a new product introduction milestone.\nGoverned by Product Lifecycle Record - A product architecture, bill of materials, or manufacturing handoff is governed by a product lifecycle management record.\nMitigated by Engineering Change Order - A product lifecycle blocker is mitigated by an engineering change order or product lifecycle management-controlled substitution.\nReleases Firmware To - A firmware release is assigned to a connected product, support operation, or new product introduction milestone.\nRequires Component - A product portfolio requires a bill of materials component, substrate material, memory stack, or qualified design input.\nReviewed by Change Review Board - An engineering change order, new product introduction, or product lifecycle decision is reviewed by a change review board.\n\nQuality & Service Intelligence\n\nCertified By - A product release or customer program is certified by a quality, compliance, or automotive gate.\nCorrelates with Field Quality - A signal, telemetry pattern, or field incident correlates with field quality exposure.\nEscalates Service Case - Warranty analytics, field quality, or customer telemetry escalates to service and support operations.\nMonitored by Telemetry - A product, firmware, or quality issue is monitored by connected-product telemetry.\nPasses Quality Gate - A product, test program, or new product introduction milestone must pass a quality gate before release.\nQualified by Test Program - A component, site, or product is qualified through a burn-in, final test, or quality program.\nTested By - A product or wafer lot is validated by an OSAT, burn-in, final test, or quality program.\nTriggers Warranty Exposure - A field quality incident or telemetry signal triggers a warranty cohort or service exposure.\n\nProduct Lifecycle Risk\n\nBlocks Launch or New Product Introduction - A component shortage, engineering change, capacity constraint, or field quality issue blocks launch readiness.\nDepends on Architecture - Design-to-manufacturing handoff, reference architecture, or bill of materials readiness influences adoption.\n\nProduct Data & ECO Control\n\nShares Design IP - A product portfolio or architecture shares a design IP dependency or qualification artifact.\nKey Pathway Findings\n\nProduct lifecycle evidence from the current 5-hop Product Signal Graph: wafer lots, outsourced semiconductor assembly and test, engineering change orders, product lifecycle records, order promises, warranty cohorts, and capacity reservations.\n\n6 findings\nComponent shortage supplier risk exposes commitments\nRisk 96.5 / 100\n\nComponent shortage and supplier risk could block new product introduction unless allocation shifts to qualified partners.\n\nPathways: Source Signal · Launch Blocker · Mitigation Path · Capacity Owner\n\nEscalate product allocation, supplier risk, and customer commitment review.\n\nGPU capacity surge exposes commitments\nRisk 96 / 100\n\nProduct advocate and enterprise buyer demand for Cloud GPU Burst Reservation exceeds West region capacity.\n\nPathways: Source Signal · Impacted Product · Product Advocate\n\nEscalate product allocation, supplier risk, and customer commitment review.\n\nWafer lot yield recovery exposes commitments\nRisk 96 / 100\n\nWafer Lot LTX-4408, overlay process drift, and Austin Fab Line 7 yield metrics threaten Lithography Throughput Analyzer order promises.\n\nPathways: Source Signal · Fab Owner · Order Promise · Buyer Account\n\nEscalate product allocation, supplier risk, and customer commitment review.\n\nWafer starts below customer commitments exposes commitments\nRisk 94 / 100\n\nAustin fab operations show wafer starts below QuantumFab customer commitments for Lithography Throughput Analyzer.\n\nPathways: Source Signal · Impacted Product · Capacity Owner · Buyer Account\n\nEscalate product allocation, supplier risk, and customer commitment review.\n\nPRODUCT SIGNAL CASES - ABF SUBSTRATE CORE BOM COMPONENT\nComponent shortage supplier riskValue at risk: $15.4M\nGPU capacity surgeValue at risk: $12.8M\nWafer lot yield recoveryValue at risk: $17.8M\nWafer starts below customer commitmentsValue at risk: $16.8M\nAllocation and capacity reservation recoveryValue at risk: $15.1M\nBOM and engineering change order collisionValue at risk: $14.8M\nECO and PLM BOM substitutionValue at risk: $14.4M\nOrder promising capacity exposureValue at risk: $13.9M\nNew product introduction slipValue at risk: $10.4M\nConnected product warranty containmentValue at risk: $7.2M\nField quality and warranty analytics riskValue at risk: $7.2M\nOSAT final test bottleneckValue at risk: $10.4M\nGraph Query Explorer\n\nRun SQL/PGQ-style product lifecycle traversals against the tech_product_signal_network property graph\n\nBOM and ECO Commitment Path\n\nTrace a product portfolio through bill of materials and engineering change exposure to customer commitments.\n\nSupplier Shortage to NPI Risk\n\nFind component shortage and supplier-risk paths that can block new product introduction or wafer-start plans.\n\nField Quality and Warranty Path\n\nConnect field quality signals to warranty analytics, impacted products, and customer commitment exposure.\n\nOrder Promising Capacity Path\n\nTrace order promising risk through product portfolios, fabs, contract manufacturing, and customer commitments.\n\nProduct Lifecycle Hubs\n\nRank the most connected product lifecycle entities by degree, risk score, and commitment value.",
+      "headings": [
+        "Connect products, suppliers, BOMs, launch blockers, and commitments.",
+        "How risk scores and hops guide the decision",
+        " Product Signal Graph",
+        " Product Signal Nodes (50)",
+        "Key Pathway Findings",
+        "Graph Query Explorer"
+      ],
+      "buttons": [
+        "1 Hop",
+        "2 Hops",
+        "3 Hops",
+        "4 Hops",
+        "5 Hops",
+        "component_abf_coreBill of Materials44★ 772 links",
+        "blocker_abf_substrateComponent Shortage48★ 778 links",
+        "signal_supplier_riskSupplier Risk57★ 905 links",
+        "yield_metric_litho_driftYield Engineering36★ 831 links",
+        "blocker_gpu_capacityCapacity Signal37★ 714 links",
+        "blocker_litho_yieldYield Improvement44★ 786 links",
+        "fab_austin_line_7Fab Operations41★ 92.52 links",
+        "supplier_kinetic_abfSupplier Risk40★ 842 links",
+        "portfolio_lithography_aiFab Operations62★ 969 links",
+        "buyer_quantum_fabCustomer Commitments30★ 924 links",
+        "signal_wafer_startsWafer Starts52★ 87.52 links",
+        "wafer_lot_ltx_4408Wafer Lot Control31★ 862 links",
+        "eco_ltx_reticleEngineering Change33★ 853 links",
+        "portfolio_gpuProduct Ops54★ 949 links",
+        "process_litho_overlayYield Engineering24★ 822 links",
+        "center_austin_fabFab Operations40★ 914 links",
+        "arch_litho_ecoEngineering Change Order36★ 862 links",
+        "order_promise_quantumfab_augOrder Promising28★ 862 links",
+        "signal_order_promisingOrder Promising46★ 88.55 links",
+        "allocation_plan_abf_recoveryAllocation Planning30★ 82.52 links",
+        "blocker_asic_shortageSupplier Risk39★ 753 links",
+        "arch_gpu_bomBill of Materials29★ 884 links",
+        "commitment_novacloud_q3Customer Commitments25★ 882 links",
+        "supplier_site_taipeiSupplier Site29★ 781 links",
+        "center_tsmc_5nmWafer Starts35★ 886 links",
+        "eco_gpu_substrate_altEngineering Change27★ 82.52 links",
+        "adv_gpu_mayaProduct Forum42★ 96.53 links",
+        "fab_hsinchu_line_5Wafer Starts37★ 90",
+        "buyer_nova_cloudCustomer Commitments28★ 893 links",
+        "partner_supplier_kineticSupplier Risk43★ 854 links",
+        "wafer_lot_gpu_2815Wafer Lot Control28★ 84.5",
+        "capacity_reservation_hsinchu_wk32Capacity Reservation24★ 841 links",
+        "crb_litho_priorityChange Review Board21★ 811 links",
+        "signal_npi_slipNew Product Introduction34★ 84.53 links",
+        "npi_milestone_ltx_pvtNPI Control Tower24★ 83.52 links",
+        "component_hbm_stackBill of Materials30★ 802 links",
+        "substrate_material_abfSubstrate Material20★ 78",
+        "adv_npi_lenaNPI Control Tower38★ 931 links",
+        "buyer_orion_autoCustomer Commitments24★ 865 links",
+        "demand_forecast_gpu_q3Demand Forecast27★ 822 links",
+        "portfolio_auto_sensorProduct Lifecycle Management41★ 9110 links",
+        "buyer_apexEnterprise Buyer Signal23★ 833 links",
+        "signal_field_qualityField Quality36★ 82.55 links",
+        "plm_record_gpu_bom_23cPLM21★ 802 links",
+        "field_quality_incident_adas_42Field Quality24★ 782 links",
+        "warranty_cohort_sensor_earlyWarranty Analytics23★ 792 links",
+        "blocker_warranty_spikeWarranty Analytics32★ 742 links",
+        "partner_foundry_alphaFoundry Partner31★ 90.53 links",
+        "center_sjcAvailability Center24★ 824 links",
+        "supplier_micron_hbmSupplier Risk26★ 821 links",
+        "BOM and ECO Commitment PathTrace a product portfolio through bill of materials and engineering change exposure to customer commitments.",
+        "Supplier Shortage to NPI RiskFind component shortage and supplier-risk paths that can block new product introduction or wafer-start plans.",
+        "Field Quality and Warranty PathConnect field quality signals to warranty analytics, impacted products, and customer commitment exposure.",
+        "Order Promising Capacity PathTrace order promising risk through product portfolios, fabs, contract manufacturing, and customer commitments.",
+        "Product Lifecycle HubsRank the most connected product lifecycle entities by degree, risk score, and commitment value."
+      ],
+      "selects": [],
+      "inputs": [
+        {
+          "type": "text",
+          "placeholder": "Search product signal, BOM, fab, customer...",
+          "value": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "supply",
+      "route": "fulfillment",
+      "title": "Seer Tech Product Intelligence - Oracle AI Database 26ai Demo",
+      "text": "SCENE 5 - COORDINATE SUPPLY CHAIN RESILIENCE\nPrioritize fabs, suppliers, partners, lanes, and availability centers.\n\nThe map turns the event into execution. Fab operations sites, electronics manufacturing partners, contract manufacturing capacity, supplier lanes, component shortage zones, regional channel inventory pools, availability centers, customer commitment destinations, connected-product service regions, and support coverage areas are compared spatially.\n\n1\n\nReview active availability centers, supplier lanes, capacity, and pending allocation routes.\n\n2\n\nToggle spatial layers for demand regions, product availability, and order-promising zones.\n\n3\n\nUse proximity and capacity evidence to support allocation and commitment priorities.\n\nHow inventory load is calculated\n\nInventory Load = total units on hand across all products ÷ configured site capacity units × 100. Values at or above 85% are treated as constrained. This is a storage and allocation measure, not forecast demand.\n\nBelow 65%\nCapacity is available for order promising.\n65%–84%\nReview pending commitments and bill of materials alternatives.\n85% or higher\nReallocation or additional manufacturing capacity may be required.\nSupply & Commitment Control Tower\n\nSix spatial layers connect fabs, contract manufacturing, component capacity, order promising, and customer commitments.\n\n12\n\nActive Supply Sites\n\nfabs, contract manufacturers, supplier direct, and channel nodes\n\n177.9K\n\nAvailable Capacity\n\nunits available for order promising\n\n1.9K\n\nCustomer Commitments\n\npending, confirmed, or processing\n\n103\n\nSupply Watch Items\n\n50 immediate shortages · 0 constrained sites\n\nJessica Chen\nAdmin\n12 supply sites visible\nVPD full access\n+\n−\n Leaflet | Tiles © Esri - Esri, HERE, Garmin, FAO, NOAA, USGS\n\nMAP LAYERS\n\nStrategic Customer Commitments\nSupply & Commitment Sites\nOrder Promise Routes\nCommitment Service Zones\nH3 Density Grid\nProduct Demand Regions\nSDO_GEOMETRY spatial routing\n\nSELECTED SUPPLY SITE\n\nAtlanta Quality Response Hub\n\nAtlanta, Georgia · Contract Manufacturing Hub\n\n30% inventory load\n\n22.8K\n\nON-HAND UNITS\n\n60\n\nPRODUCTS\n\n250\n\nCOMMITMENTS\n\nCustomer commitment backlog across supply chain resilience, order promising, and customer commitments.\n\nProtect customer commitments\nConfirm contract manufacturing capacity\nCheck BOM alternates\nUpdate order promising\nSupply & Commitment Sites\nSITE\tLOCATION\tTYPE\tPRODUCTS\tON-HAND UNITS\tCOMMITMENTS\tINVENTORY LOAD \n\tACTIONS\nAtlanta Quality Response Hub\tAtlanta, Georgia\tContract Manufacturing Hub\t60\t22.8K\t250\t30%\t\nProtect customer commitments\nConfirm contract manufacturing capacity\nCheck BOM alternates\nUpdate order promising\n\nBay Area Silicon Allocation Center\tSan Jose, California\tContract Manufacturing Hub\t60\t19.8K\t125\t15.8%\t\nProtect customer commitments\nConfirm contract manufacturing capacity\nCheck BOM alternates\nUpdate order promising\n\nBoston PLM Handoff Center\tBoston, Massachusetts\tField Quality Buffer Site\t60\t21.0K\t250\t49.9%\t\nProtect customer commitments\nCheck BOM alternates\nUpdate order promising\n\nChicago Contract Manufacturing Desk\tChicago, Illinois\tRegional Product Availability Center\t60\t22.2K\t0\t25.9%\t\nCheck BOM alternates\nUpdate order promising\n\nDallas Component Reservation Center\tDallas, Texas\tContract Manufacturing Hub\t60\t21.4K\t125\t18.5%\t\nProtect customer commitments\nConfirm contract manufacturing capacity\nCheck BOM alternates\nUpdate order promising\n\nDenver Network Systems Depot\tDenver, Colorado\tRegional Product Availability Center\t60\t22.3K\t0\t36%\t\nCheck BOM alternates\nUpdate order promising\n\nLos Angeles Electronics Manufacturing Port\tLos Angeles, California\tRegional Product Availability Center\t60\t21.0K\t0\t20.3%\t\nCheck BOM alternates\nUpdate order promising\n\nMiami Channel Inventory Pool\tMiami, Florida\tContract Manufacturing Hub\t60\t22.3K\t250\t24.5%\t\nProtect customer commitments\nConfirm contract manufacturing capacity\nCheck BOM alternates\nUpdate order promising\n\nNew York Support Operations Hub\tNew York, New York\tChannel Inventory Node\t60\t22.7K\t125\t33.3%\t\nProtect customer commitments\nCheck BOM alternates\nUpdate order promising\n\nPhoenix Fab Operations Hub\tPhoenix, Arizona\tRegional Product Availability Center\t60\t22.1K\t250\t22.5%\t\nProtect customer commitments\nCheck BOM alternates\nUpdate order promising\n\nRaleigh Field Quality Center\tRaleigh, North Carolina\tSupplier Direct Allocation\t60\t22.6K\t250\t42.7%\t\nProtect customer commitments\nCheck BOM alternates\nUpdate order promising\n\nSeattle Connected Product Lab\tSeattle, Washington\tField Quality Buffer Site\t60\t21.6K\t125\t55.5%\t\nProtect customer commitments\nCheck BOM alternates\nUpdate order promising\nCapacity Alerts - Immediate Shortages and Watchlist\nImmediate shortages\nYield Improvement Analytics PackHelioCore Components · Seattle Connected Product Lab\n40 in stock\n714 forecast need\nDemand factor 1.3×\n\nForecast need exceeds stock on hand by 674 units.\n\nOrder Promising Risk ServiceChannelFlow Systems · Boston PLM Handoff Center\n43 in stock\n703 forecast need\nDemand factor 1.47×\n\nForecast need exceeds stock on hand by 660 units.\n\nWarranty Escape DetectorOrion PLM Systems · Miami Channel Inventory Pool\n49 in stock\n707 forecast need\nDemand factor 0.96×\n\nForecast need exceeds stock on hand by 658 units.\n\nWarranty Escape DetectorOrion PLM Systems · Dallas Component Reservation Center\n65 in stock\n707 forecast need\nDemand factor 0.96×\n\nForecast need exceeds stock on hand by 642 units.\n\nOrder Promising Capacity TwinAtlas Contract Manufacturing · Seattle Connected Product Lab\n63 in stock\n703 forecast need\nDemand factor 1.37×\n\nForecast need exceeds stock on hand by 640 units.\n\nConnected Device Health TwinOrion PLM Systems · Seattle Connected Product Lab\n68 in stock\n694 forecast need\nDemand factor 1.4×\n\nForecast need exceeds stock on hand by 626 units.\n\nContract Manufacturing Capacity PackWarrantyIQ Services · Atlanta Quality Response Hub\n51 in stock\n646 forecast need\nDemand factor 1.25×\n\nForecast need exceeds stock on hand by 595 units.\n\nOrder Promising Risk ServiceChannelFlow Systems · Los Angeles Electronics Manufacturing Port\n121 in stock\n703 forecast need\nDemand factor 1.47×\n\nForecast need exceeds stock on hand by 582 units.\n\nDesign Handoff Readiness GateWarrantyIQ Services · Boston PLM Handoff Center\n30 in stock\n609 forecast need\nDemand factor 0.97×\n\nForecast need exceeds stock on hand by 579 units.\n\nFab Operations Runbook SeatWarrantyIQ Services · Dallas Component Reservation Center\n51 in stock\n629 forecast need\nDemand factor 0.91×\n\nForecast need exceeds stock on hand by 578 units.",
+      "headings": [
+        "Prioritize fabs, suppliers, partners, lanes, and availability centers.",
+        "How inventory load is calculated",
+        " Supply & Commitment Control Tower",
+        "Atlanta Quality Response Hub",
+        "Supply & Commitment Sites",
+        " Capacity Alerts - Immediate Shortages and Watchlist"
+      ],
+      "buttons": [],
+      "selects": [],
+      "inputs": [
+        {
+          "type": "checkbox",
+          "placeholder": "",
+          "value": "on"
+        },
+        {
+          "type": "checkbox",
+          "placeholder": "",
+          "value": "on"
+        },
+        {
+          "type": "checkbox",
+          "placeholder": "",
+          "value": "on"
+        },
+        {
+          "type": "checkbox",
+          "placeholder": "",
+          "value": "on"
+        },
+        {
+          "type": "checkbox",
+          "placeholder": "",
+          "value": "on"
+        },
+        {
+          "type": "checkbox",
+          "placeholder": "",
+          "value": "on"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "commitments",
+      "route": "orders",
+      "title": "Seer Tech Product Intelligence - Oracle AI Database 26ai Demo",
+      "text": "SCENE 6 - INSPECT CUSTOMER COMMITMENTS\nOpen the commitment record behind the launch risk.\n\nCustomer Commitments shows how commercial operations fit the event. Operators can inspect solution orders, allocation status, customer commitments, order-promising dates, channel inventory constraints, connected-product entitlements, field quality follow-ups, warranty analytics cases, support escalations, and service and support operations handoffs.\n\n1\n\nFilter commitments by status and active VPD context.\n\n2\n\nCompare relational rows with JSON duality documents for the same commitment.\n\n3\n\nUse the record as the customer handoff into analytics or agent action.\n\nCustomer Commitments\n\nClick any commitment to inspect order promising, bill of materials availability, engineering change exposure, and JSON Duality evidence.\n\nJessica Chen\nAdmin\n20 orders visible\nVPD full access\nCOMMITMENT #\tENTERPRISE BUYER\tLOCATION\tSTATUS\tITEMS\tCOMMITMENT TOTAL\tSOURCE\tSUPPLY SITE\tCOMPLETION DATES\tCANCELLATION REASON\n\n#100801\nAva Chen\tBoston, Massachusetts\tCommitment Confirmed\t3\t$18,895.00\tDemand volatility signal\tBay Area Silicon Allocation Center\t\nTarget: Jul 7, 2026\nActual: Pending\nCreated Jul 1, 04:30 PM\n\t—\n\n#99361\nAva Chen\tSan Jose, California\tCommitment Confirmed\t3\t$18,895.00\tDemand volatility signal\tBay Area Silicon Allocation Center\t\nTarget: Jul 2, 2026\nActual: Pending\nCreated Jul 1, 04:30 PM\n\t—\n\n#101521\nAva Chen\tRaleigh, North Carolina\tCommitment Confirmed\t3\t$18,895.00\tDemand volatility signal\tBay Area Silicon Allocation Center\t\nTarget: Jul 6, 2026\nActual: Pending\nCreated Jul 1, 04:30 PM\n\t—\n\n#102241\nAva Chen\tSan Jose, California\tCommitment Confirmed\t3\t$18,895.00\tDemand volatility signal\tBay Area Silicon Allocation Center\t\nTarget: Jul 5, 2026\nActual: Pending\nCreated Jul 1, 04:30 PM\n\t—\n\n#100081\nAva Chen\tSan Jose, California\tCommitment Confirmed\t3\t$18,895.00\tDemand volatility signal\tBay Area Silicon Allocation Center\t\nTarget: Jul 8, 2026\nActual: Pending\nCreated Jul 1, 04:30 PM\n\t—\n\n#100802\nHenry Reed\tLos Angeles, California\tBill of Materials / Capacity Check\t3\t$27,220.00\tDemand volatility signal\tAtlanta Quality Response Hub\t\nTarget: Jul 8, 2026\nActual: Pending\nCreated Jul 1, 04:25 PM\n\t—\n\n#99362\nHenry Reed\tDenver, Colorado\tBill of Materials / Capacity Check\t3\t$27,220.00\tDemand volatility signal\tAtlanta Quality Response Hub\t\nTarget: Jul 3, 2026\nActual: Pending\nCreated Jul 1, 04:25 PM\n\t—\n\n#101522\nHenry Reed\tChicago, Illinois\tBill of Materials / Capacity Check\t3\t$27,220.00\tDemand volatility signal\tAtlanta Quality Response Hub\t\nTarget: Jul 7, 2026\nActual: Pending\nCreated Jul 1, 04:25 PM\n\t—\n\n#102242\nHenry Reed\tDenver, Colorado\tBill of Materials / Capacity Check\t3\t$27,220.00\tDemand volatility signal\tAtlanta Quality Response Hub\t\nTarget: Jul 6, 2026\nActual: Pending\nCreated Jul 1, 04:25 PM\n\t—\n\n#100082\nHenry Reed\tDenver, Colorado\tBill of Materials / Capacity Check\t3\t$27,220.00\tDemand volatility signal\tAtlanta Quality Response Hub\t\nTarget: Jul 2, 2026\nActual: Pending\nCreated Jul 1, 04:25 PM\n\t—\n\n#100803\nLuna Wright\tSeattle, Washington\tAllocation Released\t3\t$93,450.00\tDemand volatility signal\tNew York Support Operations Hub\t\nTarget: Jul 2, 2026\nActual: Pending\nCreated Jul 1, 04:20 PM\n\t—\n\n#99363\nLuna Wright\tDallas, Texas\tAllocation Released\t3\t$93,450.00\tDemand volatility signal\tNew York Support Operations Hub\t\nTarget: Jul 4, 2026\nActual: Pending\nCreated Jul 1, 04:20 PM\n\t—\n\n#101523\nLuna Wright\tNew York, New York\tAllocation Released\t3\t$93,450.00\tDemand volatility signal\tNew York Support Operations Hub\t\nTarget: Jul 8, 2026\nActual: Pending\nCreated Jul 1, 04:20 PM\n\t—\n\n#102243\nLuna Wright\tDallas, Texas\tAllocation Released\t3\t$93,450.00\tDemand volatility signal\tNew York Support Operations Hub\t\nTarget: Jul 7, 2026\nActual: Pending\nCreated Jul 1, 04:20 PM\n\t—\n\n#100083\nLuna Wright\tDallas, Texas\tAllocation Released\t3\t$93,450.00\tDemand volatility signal\tNew York Support Operations Hub\t\nTarget: Jul 3, 2026\nActual: Pending\nCreated Jul 1, 04:20 PM\n\t—\n\n#100804\nBenjamin Morris\tPhoenix, Arizona\tCustomer Commitment Met\t3\t$39,940.00\tDemand volatility signal\tChicago Contract Manufacturing Desk\t\nTarget: Jul 3, 2026\nActual: Jul 1, 2026\nCreated Jul 1, 04:15 PM\n\t—\n\n#99364\nBenjamin Morris\tMiami, Florida\tCustomer Commitment Met\t3\t$39,940.00\tDemand volatility signal\tChicago Contract Manufacturing Desk\t\nTarget: Jul 5, 2026\nActual: Jul 1, 2026\nCreated Jul 1, 04:15 PM\n\t—\n\n#101524\nBenjamin Morris\tAtlanta, Georgia\tCustomer Commitment Met\t3\t$39,940.00\tDemand volatility signal\tChicago Contract Manufacturing Desk\t\nTarget: Jul 2, 2026\nActual: Jul 1, 2026\nCreated Jul 1, 04:15 PM\n\t—\n\n#102244\nBenjamin Morris\tMiami, Florida\tCustomer Commitment Met\t3\t$39,940.00\tDemand volatility signal\tChicago Contract Manufacturing Desk\t\nTarget: Jul 8, 2026\nActual: Jul 1, 2026\nCreated Jul 1, 04:15 PM\n\t—\n\n#100084\nBenjamin Morris\tMiami, Florida\tCustomer Commitment Met\t3\t$39,940.00\tDemand volatility signal\tChicago Contract Manufacturing Desk\t\nTarget: Jul 4, 2026\nActual: Jul 1, 2026\nCreated Jul 1, 04:15 PM\n\t—\nPrev\nPage 1\nNext",
+      "headings": [
+        "Open the commitment record behind the launch risk.",
+        " Customer Commitments"
+      ],
+      "buttons": [
+        "Prev",
+        "Next"
+      ],
+      "selects": [],
+      "inputs": [
+        {
+          "type": "text",
+          "placeholder": "All Statuses",
+          "value": "All Statuses"
+        },
+        {
+          "type": "text",
+          "placeholder": "All Statuses",
+          "value": ""
+        },
+        {
+          "type": "text",
+          "placeholder": "",
+          "value": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "analytics",
+      "route": "oml",
+      "title": "Seer Tech Product Intelligence - Oracle AI Database 26ai Demo",
+      "text": "Predictive Product & Commitment Analytics\n\nOracle Machine Learning for demand volatility, product lifecycle, bill of materials capacity, and commitment-value forecasting - Random Forest · K-Means · Generalized Linear Model regression · Oracle AI Database 26ai\n\nSCENE 7 - PREDICT THE NEXT CONSTRAINT\nScore yield, capacity, allocation, and warranty exposure.\n\nAnalytics turns the event into forward-looking decisions. In-database models score wafer-start variance, fab bottlenecks, yield improvement opportunity, supplier shortage exposure, demand volatility, channel inventory risk, order-promising feasibility, contract manufacturing readiness, field quality escapes, warranty analytics exposure, connected-product support load, and NPI launch readiness.\n\n1\n\nReview active DBMS_DATA_MINING models and SQL fallback status.\n\n2\n\nUse forecast, cluster, capacity, and risk views to prioritize exposed products.\n\n3\n\nCarry predictions into Ask Data or the agent console for auditable action.\n\nHIGH TECH MODEL EVIDENCE\n\nPredictive Product & Commitment Analytics\n\nOracle Machine Learning ties product signals to semiconductor manufacturing, fab operations, customer commitments, and order promising decisions without moving the data out of Oracle AI Database 26ai.\n\nwafer starts\nyield improvement\nbill of materials\ncomponent shortage\nsupplier risk\nfield quality\nwarranty analytics\nSemiconductor Manufacturing\nFab\n\nDemand volatility is scored against fab operations, wafer starts, yield improvement signals, and design-to-manufacturing handoff risk.\n\nNPI / ECO Readiness\nPLM\n\nCustomer commitments are segmented with NPI / ECO timing, bill of materials exposure, component shortage alerts, and supplier risk evidence.\n\nOrder Promising\nATP\n\nCommitment forecasts connect channel inventory, contract manufacturing capacity, and order promising constraints before customer commitments slip.\n\nField Quality\nQuality\n\nProduct-signal clusters surface connected products, field quality patterns, warranty analytics, and service and support operations impact.\n\nLATEST PREDICTION REFRESH\n\nPrediction readiness and durable results\n\nPrediction results are stored in Oracle so this scene remains ready after app restarts, demo-data restores, and container rebuilds. Technical model object names are available below for specialists.\n\nRefresh persisted ML outputs\n\nLAST COMPLETED REFRESH\n\nJul 2, 03:32 PM\n\nResults are available to every predictive view on this page.\n\nDataset source: api-refresh\n\nPERSISTED ROWS\n\nDemand scores\n60\nCommitment segments\n2.0K\nForecast rows\n17\nSignal clusters\n180\nCapacity alerts\n100\n\nPREDICTION READINESS\n\n4 of 4 prediction models ready in Oracle\n\nActive\n\nReady models support demand volatility, commitment segments, commitment value, and product signal grouping.\n\nTechnical model details\nRandom Forest\n\n60\n\nProducts with Demand Volatility\n\nRandom Forest demand classification\n\nK-Means\n\n2.0K\n\nEnterprise Buyers Segmented\n\nK-Means commitment segmentation\n\nLinear model\n\n0.2%\n\nCommitment Value Model Fit\n\nGeneralized linear model · 30-day fit\n\nIn database\n\n4\n\nActive Prediction Models\n\nDemand volatility · Commitments · Forecast · K-Means\n\nDemand Volatility\nCommitment Segments\nCommitment Forecast\nSignal Clusters\nBOM Capacity\nDemand Volatility Forecasting\n\nSeven-day product demand estimates from recent requested units and product-signal activity.\n\nRefresh\nHow these values are calculated\n\nThe definitions below describe the active data path returned by the API, including the persisted demo-scoring path or live Oracle model path.\n\nVirality\nAverage 0–100 virality score for the product signals in the selected lookback window.\nDemand Uplift Indicator\nWeighted demand-surge indicator: 45% average virality plus capped contributions from signal count, elevated signals, views, and recently requested units.\nPredicted Solution Orders\nPredicted 7-day solution orders = recent requested units × (1 + uplift indicator ÷ 100 × 2) + recent signal mentions × 0.5, rounded to a whole order.\n\nTOP 10 - PREDICTED SOLUTION ORDERS (7-DAY HORIZON)\n\n0\n350\n700\n1050\n1400\nPredicted Solution Orders\nEngineeringCh…\nAutonomousTes…\nCustomerSuppo…\nConnectedProd…\nWarrantyEscap…\nHIGH-TECH PRODUCT\tVIRALITY \n\tUPLIFT INDICATOR \n\tPREDICTED ORDERS \n\tESTIMATED PRODUCT VALUE OPPORTUNITY \n\tCONFIDENCE \n\tSIGNAL\n\nWafer Probe Exception Detector\nSemiconductor Manufacturing\n\t88.3\t+99%\t1.4K\t$12,896,800.00\t\n99%\n\tviral\n\nEngineering Change Order Copilot\nProduct Lifecycle Management\n\t86.7\t+99%\t1.2K\t$3,375,625.00\t\n99%\n\tviral\n\nSupplier Risk Heatmap Service\nSupply Chain Resilience\n\t86.5\t+99%\t924\t$2,401,100.00\t\n99%\n\tviral\n\nAutonomous Test Cell Controller\nFab Operations\n\t85.5\t+99%\t1.2K\t$15,542,100.00\t\n99%\n\tviral\n\nYield Excursion Response Pack\nSemiconductor Manufacturing\n\t85.4\t+99%\t923\t$10,337,600.00\t\n99%\n\tviral\n\nCustomer Support Operations Board\nService Operations\n\t85\t+99%\t1.1K\t$2,358,400.00\t\n99%\n\tviral\n\nCustomer Commit Date Guardrail\nCustomer Commitments\n\t84.5\t+99%\t924\t$2,124,050.00\t\n99%\n\tviral\n\nConnected Product Support Entitlement\nService Operations\n\t83.5\t+99%\t1.4K\t$1,043,860.00\t\n99%\n\tviral\n\nChannel Inventory Signal Pack\nSupply Chain Resilience\n\t83.4\t+99%\t924\t$1,755,600.00\t\n99%\n\tviral\n\nWarranty Escape Detector\nQuality & Warranty\n\t82.5\t+99%\t1.4K\t$4,051,825.00\t\n99%\n\tviral\n\nDeveloper Portal Premium Seat\nPlatform Software\n\t82.4\t+99%\t1.4K\t$744,930.00\t\n99%\n\tviral\n\nField Failure Pattern Detector\nQuality & Warranty\n\t82\t+99%\t1.1K\t$5,099,125.00\t\n99%\n\tviral\n\nPrivate 5G Factory Starter Pack\nConnectivity\n\t80.3\t+99%\t1.4K\t$13,651,400.00\t\n99%\n\tviral\n\nContract Build Plan Optimizer\nContract Manufacturing\n\t80.1\t+99%\t1.1K\t$5,628,000.00\t\n99%\n\tviral\n\nOrder Promising Risk Service\nCustomer Commitments\n\t80.1\t+99%\t926\t$3,333,600.00\t\n99%\n\tviral\n\nCustomer Promise Allocation API\nCustomer Commitments\n\t79\t+99%\t1.2K\t$3,607,850.00\t\n99%\n\tviral\n\nECO Impact Simulation Service\nProduct Lifecycle Management\n\t79\t+99%\t1.1K\t$4,821,750.00\t\n99%\n\tviral\n\nContract Manufacturing Audit Pack\nContract Manufacturing\n\t78.9\t+99%\t1.2K\t$4,153,100.00\t\n99%\n\tviral\n\nLithography Throughput Analyzer\nFab Operations\n\t78.2\t+99%\t1.1K\t$18,713,700.00\t\n99%\n\tviral\n\nSupplier Shortage Radar\nSupply Chain Resilience\n\t78\t+99%\t930\t$5,766,000.00\t\n99%\n\tviral\nTechnical demand-model details",
+      "headings": [
+        " Predictive Product & Commitment Analytics",
+        "Score yield, capacity, allocation, and warranty exposure.",
+        "Predictive Product & Commitment Analytics",
+        "Prediction readiness and durable results",
+        "Demand Volatility Forecasting"
+      ],
+      "buttons": [
+        "Refresh persisted ML outputs",
+        "Demand Volatility",
+        "Commitment Segments",
+        "Commitment Forecast",
+        "Signal Clusters",
+        "BOM Capacity",
+        "Refresh"
+      ],
+      "selects": [],
+      "inputs": [
+        {
+          "type": "text",
+          "placeholder": "",
+          "value": "Last 30 days"
+        },
+        {
+          "type": "text",
+          "placeholder": "",
+          "value": ""
+        },
+        {
+          "type": "text",
+          "placeholder": "",
+          "value": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "ask-data",
+      "route": "askdata",
+      "title": "Seer Tech Product Intelligence - Oracle AI Database 26ai Demo",
+      "text": "Ask Seer Tech Data\n\nAsk Seer Tech product operations questions in plain English - Ollama drafts SQL and Oracle queries your live product-intelligence data\n\nSCENE 8 - ASK THE INVESTIGATION QUESTIONS\nInterrogate the High Tech story in plain language.\n\nAsk High Tech Data lets teams ask which products are constrained by component shortages, which fab operations show wafer-start risk, which suppliers threaten customer commitments, which engineering change orders affect the bill of materials, which channel inventory pools need allocation, which connected products show field quality signals, and which warranty analytics cases need support action.\n\n1\n\nUse explain, chat, show SQL, or run SQL mode for story-specific questions.\n\n2\n\nReview generated SQL before executing governed live-schema queries.\n\n3\n\nUse the answer as context for specialist agent actions.\n\nAsk Data Chat\n\nPowered by Ollama (llama3.2) · Local SQL + reasoning · Oracle AI Database 26ai\n\nLocal SQL + reasoning · Ollama\n\nMODE:\nExplain\nChat\nShow SQL\nRun SQL\n\nChoose how the assistant responds: explain the answer, continue a conversation, show generated SQL without running it, or run the query against governed High Tech tables.\n\nAsk about semiconductor manufacturing, fab operations, product lifecycle, supplier risk, customer commitments, field quality, warranty analytics, or support operations.\n\nThe assistant drafts SQL, Oracle executes authorized queries, and results are explained or displayed based on your selected mode.\n\nQUERYABLE HIGH TECH SCHEMA\n\n10 domains · 18 queryable objects · raw names preserved for generated SQL.\n\nLIVE METADATA\nProduct Lifecycle & Portfolios\n2\nCustomer Commitments & Order Promising\n2\nFab, Contract Manufacturing & Capacity\n3\nSupply Chain Resilience\n1\nDemand & Supply Planning\n2\nProduct Signals & Field Quality\n3\nDeveloper Ecosystem & Signals\n2\nAI Agent Actions\n1\nSecurity & Personas\n1\nEnterprise Buyers\n1\nShow SQL object names\nSUPPLIER RISK\n\nWhich high-tech products are constrained by component shortages and supplier risk?\n\nAsk\nFAB OPERATIONS\n\nWhich fab operations have the highest wafer-start and yield improvement exposure?\n\nAsk\nCUSTOMER COMMITMENTS\n\nShow customer commitments at risk from order promising and channel inventory constraints\n\nAsk\nPRODUCT LIFECYCLE\n\nWhich engineering change orders affect the bill of materials for active NPI programs?\n\nAsk\nFIELD QUALITY\n\nWhat connected products have the strongest field quality and warranty analytics signals?\n\nAsk\nCONTRACT MANUFACTURING\n\nWhich contract manufacturing partners support the highest product value?\n\nAsk\nDEMAND VOLATILITY\n\nWhich product portfolios show demand volatility across enterprise buyer signals?\n\nAsk\nSUPPORT OPERATIONS\n\nWhat service and support operations need follow-up for customer commitments?\n\nAsk\nSend\n\nTry one of the examples above or enter a question about the live High Tech schema.",
+      "headings": [
+        " Ask Seer Tech Data",
+        "Interrogate the High Tech story in plain language.",
+        "Ask Data Chat"
+      ],
+      "buttons": [
+        "Explain",
+        "Chat",
+        "Show SQL",
+        "Run SQL",
+        "Ask",
+        "Ask",
+        "Ask",
+        "Ask",
+        "Ask",
+        "Ask",
+        "Ask",
+        "Ask",
+        "Send"
+      ],
+      "selects": [],
+      "inputs": [
+        {
+          "type": "text",
+          "placeholder": "",
+          "value": "llama3.2"
+        },
+        {
+          "type": "text",
+          "placeholder": "",
+          "value": ""
+        },
+        {
+          "type": "text",
+          "placeholder": "",
+          "value": ""
+        },
+        {
+          "type": "text",
+          "placeholder": "Ask about fab operations, component shortages, channel inventory, customer commitments, field quality, warranty analytics, support operations, or NPI readiness...",
+          "value": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "agents",
+      "route": "agents",
+      "title": "Seer Tech Product Intelligence - Oracle AI Database 26ai Demo",
+      "text": "SCENE 9 - COORDINATE AUDITED ACTION\nTurn product, supply, quality, and support findings into action.\n\nThe agent console closes the loop. Fab Operations, Product Engineering, PLM, Supplier Risk, Contract Manufacturing, Supply Planning, Order Promising, Channel Inventory, Field Quality, Warranty Analytics, Connected Products, Customer Commitments, and Service and Support Operations agents summarize events, assess risk, recommend mitigation, and prepare auditable follow-up.\n\n1\n\nAsk agents to summarize supplier risk, assess wafer starts, explain a BOM change, or prepare a warranty follow-up.\n\n2\n\nLet specialist teams call approved Oracle SQL and PL/SQL tools.\n\n3\n\nReview recent actions so product and customer decisions remain auditable.\n\nAgent Orchestration Console\n\nAgent teams use Ollama for reasoning and Oracle for data, SQL execution, and action logging\n\nLocal SQL + reasoning - Ollama + Oracle SQL\n\nChat with AI Agents\n\nAsk questions - auto-routed to Signal, Product Availability, or Product Operations agents\n\nAsk me anything about your high-tech product intelligence data\n\nPowered by Ollama (llama3.2) for reasoning + Oracle SQL and PL/SQL tools\n\nTRENDS\n\nWhich high-tech products are seeing the highest demand right now?\n\nAsk\nPRODUCT OPERATIONS\n\nShow me product value by product category\n\nAsk\nFULFILLMENT\n\nWhich high-tech products have low capacity?\n\nAsk\nPRODUCT OPERATIONS\n\nWhat percentage of customer commitments are product-signal-driven?\n\nAsk\nTRENDS\n\nFind urgent product-signal posts in the last 24 hours\n\nAsk\nFULFILLMENT\n\nCheck capacity for Cloud GPU Burst Reservation\n\nAsk\nFULFILLMENT\n\nFind the nearest availability center for an enterprise buyer in Miami\n\nAsk\nSend\nRecent Agent Actions\nchat query\nHigh Tech Data Assistant\nFulfillment #\n\nChat query routed to PRODUCT_AVAILABILITY_AGENT (intent: fulfillment)\n\n37m ago\n\n90% conf\n\nchat query\nHigh Tech Data Assistant\nFulfillment #\n\nChat query routed to PRODUCT_AVAILABILITY_AGENT (intent: fulfillment)\n\n45m ago\n\n90% conf\n\nproduct operations attribution\nProduct & Commitment Orchestrator\nOrders #\n\n100.0% of customer commitments ($113,046,200) attributed to product signals in last 7 days\n\n45m ago\n\n93% conf",
+      "headings": [
+        "Turn product, supply, quality, and support findings into action.",
+        " Agent Orchestration Console",
+        "Chat with AI Agents",
+        " Recent Agent Actions"
+      ],
+      "buttons": [
+        "Ask",
+        "Ask",
+        "Ask",
+        "Ask",
+        "Ask",
+        "Ask",
+        "Ask",
+        "Send"
+      ],
+      "selects": [],
+      "inputs": [
+        {
+          "type": "text",
+          "placeholder": "",
+          "value": "llama3.2"
+        },
+        {
+          "type": "text",
+          "placeholder": "",
+          "value": ""
+        },
+        {
+          "type": "text",
+          "placeholder": "",
+          "value": ""
+        },
+        {
+          "type": "text",
+          "placeholder": "Ask the agent runtime a question…",
+          "value": ""
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

@@ -1,70 +1,69 @@
-# Scene 3 Product & Commitment Control Tower
+# Scene 3 Product & Commitment Intelligence Control Tower
 
 ## Introduction
 
-The **Product & Commitment Control Tower** helps product, supply, manufacturing, quality, and customer operations leaders answer the first launch-risk question: *Where does the product portfolio need attention right now?*
+The **Product & Commitment Intelligence Control Tower** detects the first sign that Seer Tech's AI infrastructure release train may miss its launch window. Demand is accelerating across products such as **Wafer Probe Exception Detector**, **Engineering Change Order Copilot**, **Supplier Risk Heatmap Service**, **Autonomous Test Cell Controller**, and **AI Edge Gateway Reference Kit**, while component, fab, supplier, and allocation flexibility remain finite.
 
-The page brings together customer commitments, shortage and quality signals, demand volatility, product portfolio value, watched products, and agent activity so teams can quickly decide where to investigate first.
-
-Dashboards like this are difficult when customer commitments, product signals, supplier risk, fab capacity, warranty indicators, field quality, and agent actions are split across systems. **Oracle AI Database** helps keep operational, analytical, JSON, in-memory, vector, graph, spatial, ML, and AI workflows aligned on governed data.
+Instead of treating every signal as a separate alert, the control tower combines demand-signal velocity, signal concentration, matched-record volume, recent requested units, available inventory, and supply-site flexibility into one launch-exposure view. The objective is not simply to find the most popular product; it is to identify where rising demand and limited supply options can affect a launch or customer commitment.
 
 Estimated Time: **10 minutes**
 
-![Product and Commitment Control Tower with KPI cards, signal velocity, and product value](images/scene-3-product-and-commitment-control-tower.png)
+![Product and Commitment Intelligence Control Tower showing launch-constraint guidance, KPIs, and demand charts](images/scene-3-product-and-commitment-control-tower.png)
 
 ### Objectives
 
-In this scene, you will learn how a **High Tech** control tower identifies launch and commitment pressure, then hands the investigation to signal, graph, spatial, analytics, **Ask Data**, and agent workflows.
+In this scene, you will learn how Seer Tech detects a launch constraint, validates the demand trend over different time horizons, and identifies the products with the greatest constraint exposure.
 
-**Note:** Oracle Internals is collapsed by default. Expand it after the business flow is clear to connect the visible outcome to the database capabilities behind the page.
+**Note:** Oracle Internals is collapsed by default. Keep the business explanation visible first, then expand Oracle Internals when the audience wants implementation evidence.
 
-## Task 1: Review the control tower dashboard
+## Task 1: Understand why the launch is being flagged
 
-Perform the following set of steps to use the dashboard as a daily triage view and show where customer commitment, product value, shortage, quality, demand, and AI activity are accumulating:
+Use the explanation panel and status cards to connect the detected constraint to visible business evidence:
 
-1. Click **Product & Commitment Control Tower** in the sidebar.
-2. Review the KPI cards across the top of the page.
-3. Review **Signal Velocity**.
-4. Review **Product Value by Portfolio**.
-5. Review the high-demand products and watched commitments area.
+1. Click **Product & Commitment Control Tower** in the sidebar and confirm the page title **Product & Commitment Intelligence Control Tower**.
+2. Read **How the launch constraint is detected**.
+3. Review the contribution of demand-signal pressure, capacity pressure, and supply flexibility.
+4. Compare those inputs with the status cards for customer commitments, commitment value, shortage and quality signals, demand volatility, and agent actions.
 
-    ![Control Tower KPI cards, signal velocity, and product value areas highlighted](images/control-tower-kpis-overview.png)
+    ![Launch-constraint calculation and control-tower status cards highlighted](images/control-tower-kpis-overview.png)
 
-In the current demo dataset, the page shows **3.0K** customer commitments, about **$113.0M** in commitment value, **1.8K** shortage and quality signals, **60** products with demand volatility, and **27** agent actions. Use those numbers to frame the page as a triage surface: the user can see commitment pressure, value, signal movement, and AI activity in one place.
+The displayed **Constraint Risk** score is a transparent 0–100 demo score. Demand-signal pressure contributes 80%: up to 45 points from average virality, 20 from signal concentration, and 15 from matched-record volume. Capacity pressure contributes up to 15 points from recently requested units compared with available units. Supply flexibility contributes up to 5 points when only one or two sites can allocate the product.
 
-**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
+The current dataset typically shows about **3.0K customer commitments**, more than **$113M in commitment value**, and substantial shortage, quality, and demand-volatility activity. Live values can change after a restore or refresh, so present the relationship between the values rather than memorizing a single count.
 
-## Task 2: Interpret signal velocity and product value
+## Task 2: Validate signal velocity across time
 
-Perform the following set of steps to understand where operational importance and risk are moving at the same time:
+Use the chart to determine whether the pressure is a short spike or a sustained planning issue:
 
-1. Click a signal velocity time range such as **24h**, **48h**, **7d**, **30d**, or **1y** when available.
-2. Review how the signal chart changes by time bucket.
-3. Review the product value chart by technology portfolio.
-4. Focus on visible portfolios such as Semiconductor Manufacturing, Fab Operations, Supply Chain Resilience, Product Lifecycle Management, Connected Products, Quality & Warranty, Service Operations, or Customer Commitments.
+1. Scroll to **Signal Velocity**.
+2. Select **24h**, **48h**, **7d**, or **30d** and observe how the time buckets change.
+3. Select **1y** and confirm that the chart displays the full twelve-month history.
+4. Read the horizontal **Date** axis and vertical **Signal Volume** axis.
+5. Hover over the chart to inspect the values for a time bucket.
+6. Hover over **Product Value by Portfolio** to retain the dollar-value context for each portfolio.
 
-    ![Signal velocity time controls and product value breakdown highlighted](images/signal-velocity-and-product-value.png)
+    ![One-year Signal Velocity chart with Date and Signal Volume axes and the product-value distribution highlighted](images/signal-velocity-and-product-value.png)
 
-The key business story is that **High Tech** users need to see where value, volume, component pressure, quality risk, and customer exposure are converging before a launch issue becomes a customer escalation.
+The one-year view distinguishes a repeatable demand pattern from a temporary burst. Product value then adds materiality: a rising signal matters more when it affects a high-value portfolio, a scarce component path, or a large customer-commitment pool.
 
-## Task 3: Review watched products and commitments
+## Task 3: Prioritize high-demand products by constraint risk
 
-Perform the following set of steps to move from dashboard-level pressure to the specific product, component, supply site, or commitment that may need attention:
+Move from portfolio-level pressure to specific products that require review:
 
-1. Scroll to **High-Demand Products**.
-2. Use the search box to filter for a product, component, or program when rows are available.
-3. Review columns for product, portfolio, signal count, inventory, demand, and next action.
-4. Look for product examples such as **AI Accelerator Module**, **AI Edge Gateway Reference Kit**, **Component Allocation Optimizer**, **Connected Device Health Twin**, **Field Failure Pattern Detector**, or **Wafer Starts Commit Planner** when they are visible.
+1. Scroll to **High-Demand Products - Launch Exposure (7 Day)**.
+2. Compare **Mentions**, **Views**, **Virality**, and **Constraint Risk**.
+3. Use the search field to find a product or launch program.
+4. Select a row when you want to inspect its unit price, inventory, signals, and allocation context.
 
-    ![High-demand product table with search and watched product rows highlighted](images/watched-products-and-commitments.png)
+    ![High-demand product table with varied signal values and Constraint Risk highlighted](images/watched-products-and-commitments.png)
 
-The watched product table turns the KPI story into operating decisions. A **High Tech** leader can move from the broad signal that demand volatility is high to the specific product, component, supplier, fab, service program, or customer commitment that needs review.
+The rows intentionally vary. A product with fewer mentions can still rank highly if its views accelerate, virality is strong, requested units exceed available inventory, or only a small number of supply sites can respond. That makes **Constraint Risk** more useful to a launch leader than a repeated generic momentum label.
 
-**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
+The decision from this scene is clear: Seer Tech has enough evidence to investigate the launch path. Continue to Product Signals to understand which supply, demand, quality, and customer signals are creating the pressure.
 
 *You can move to the next scene.*
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-16
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-07-02
 - **Source Bundle** - `livestack-hightech.zip`

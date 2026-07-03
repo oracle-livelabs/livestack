@@ -1,0 +1,344 @@
+{
+  "generatedAt": "2026-07-02",
+  "sourceApp": "http://158.101.222.154:8505/",
+  "viewport": "1280×1066",
+  "count": 48,
+  "screenshots": [
+    {
+      "file": "capture-2026-07-02/selected/introduction/images/welcome-and-demo-orientation.png",
+      "view": "Seer Tech High Tech Product Intelligence LiveStack Guide — Introduction",
+      "caption": "Seer Tech High Tech LiveStack welcome page",
+      "alt": "Seer Tech High Tech LiveStack welcome page",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-1-seer-tech-control-tower/images/scene-1-seer-tech-control-tower.png",
+      "view": "Scene 1 Seer Tech Control Tower — Introduction",
+      "caption": "Seer Tech Control Tower welcome page with High Tech lifecycle story",
+      "alt": "Seer Tech Control Tower welcome page with High Tech lifecycle story",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-1-seer-tech-control-tower/images/start-the-demo-button.png",
+      "view": "Scene 1 Seer Tech Control Tower — Task 3: Continue the demo",
+      "caption": "Start the demo button highlighted on the welcome page",
+      "alt": "Start the demo button highlighted on the welcome page",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-1-seer-tech-control-tower/images/use-case-carousel.png",
+      "view": "Scene 1 Seer Tech Control Tower — Task 2: Review the use case carousel",
+      "caption": "High Tech use case carousel highlighted on the welcome page",
+      "alt": "High Tech use case carousel highlighted on the welcome page",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-10-ai-agent-console/images/agent-action-audit-trail.png",
+      "view": "Scene 10 AI Agent Console — Task 3: Review the agent action audit trail",
+      "caption": "Recent agent action audit trail highlighted",
+      "alt": "Recent agent action audit trail highlighted",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-10-ai-agent-console/images/agent-capacity-response.png",
+      "view": "Scene 10 AI Agent Console — Task 2: Run an agent question",
+      "caption": "AI Agent Console product capacity response highlighted",
+      "alt": "AI Agent Console product capacity response highlighted",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-10-ai-agent-console/images/scene-10-ai-agent-console.png",
+      "view": "Scene 10 AI Agent Console — Introduction",
+      "caption": "AI Agent Console overview with example questions and recent actions",
+      "alt": "AI Agent Console overview with example questions and recent actions",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-11-use-your-own-product-data/images/open-dataset-tool.png",
+      "view": "Scene 11 Use Your Own Product Data — Task 1: Open the dataset tool",
+      "caption": "Use Your Own Product Data entry control and modal highlighted",
+      "alt": "Use Your Own Product Data entry control and modal highlighted",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-11-use-your-own-product-data/images/preview-restore-seeded-dataset.png",
+      "view": "Scene 11 Use Your Own Product Data — Task 3: Preview or restore the seeded dataset",
+      "caption": "Preview Restore workflow highlighted in the dataset tool",
+      "alt": "Preview Restore workflow highlighted in the dataset tool",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-11-use-your-own-product-data/images/scene-11-use-your-own-product-data.png",
+      "view": "Scene 11 Use Your Own Product Data — Introduction",
+      "caption": "Use Your Own Product Data modal with template, upload, validation, and restore controls",
+      "alt": "Use Your Own Product Data modal with template, upload, validation, and restore controls",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-11-use-your-own-product-data/images/template-and-upload-workflow.png",
+      "view": "Scene 11 Use Your Own Product Data — Task 2: Review the template and upload workflow",
+      "caption": "Template download and completed ZIP upload workflow highlighted",
+      "alt": "Template download and completed ZIP upload workflow highlighted",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-2-seer-tech-26ai-data-foundation/images/foundation-downstream-handoff.png",
+      "view": "Scene 2 Seer Tech 26ai Data Foundation — Task 3: Connect the foundation to the rest of the demo",
+      "caption": "Data Foundation downstream handoff narrative highlighted",
+      "alt": "Data Foundation downstream handoff narrative highlighted",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-2-seer-tech-26ai-data-foundation/images/prepare-dataset-counts.png",
+      "view": "Scene 2 Seer Tech 26ai Data Foundation — Task 1: Restore and verify the demo dataset",
+      "caption": "Restore Demo Data button and live High Tech counts highlighted",
+      "alt": "Restore Demo Data button and live High Tech counts highlighted",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-2-seer-tech-26ai-data-foundation/images/scene-2-seer-tech-26ai-data-foundation.png",
+      "view": "Scene 2 Seer Tech 26ai Data Foundation — Introduction",
+      "caption": "Data Foundation page with restore controls and live High Tech record counts",
+      "alt": "Data Foundation page with restore controls and live High Tech record counts",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-2-seer-tech-26ai-data-foundation/images/what-gets-loaded-carousel.png",
+      "view": "Scene 2 Seer Tech 26ai Data Foundation — Task 2: Review what gets loaded",
+      "caption": "What Gets Loaded carousel highlighted with High Tech data domains",
+      "alt": "What Gets Loaded carousel highlighted with High Tech data domains",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-3-product-and-commitment-control-tower/images/control-tower-kpis-overview.png",
+      "view": "Scene 3 Product & Commitment Intelligence Control Tower — Task 1: Understand why the launch is being flagged",
+      "caption": "Launch-constraint calculation and control-tower status cards highlighted",
+      "alt": "Launch-constraint calculation and control-tower status cards highlighted",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-3-product-and-commitment-control-tower/images/scene-3-product-and-commitment-control-tower.png",
+      "view": "Scene 3 Product & Commitment Intelligence Control Tower — Introduction",
+      "caption": "Product and Commitment Intelligence Control Tower showing launch-constraint guidance, KPIs, and demand charts",
+      "alt": "Product and Commitment Intelligence Control Tower showing launch-constraint guidance, KPIs, and demand charts",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-3-product-and-commitment-control-tower/images/signal-velocity-and-product-value.png",
+      "view": "Scene 3 Product & Commitment Intelligence Control Tower — Task 2: Validate signal velocity across time",
+      "caption": "One-year Signal Velocity chart with Date and Signal Volume axes and the product-value distribution highlighted",
+      "alt": "One-year Signal Velocity chart with Date and Signal Volume axes and the product-value distribution highlighted",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-3-product-and-commitment-control-tower/images/watched-products-and-commitments.png",
+      "view": "Scene 3 Product & Commitment Intelligence Control Tower — Task 3: Prioritize high-demand products by constraint risk",
+      "caption": "High-demand product table with varied signal values and Constraint Risk highlighted",
+      "alt": "High-demand product table with varied signal values and Constraint Risk highlighted",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-4-enterprise-buyer-signal-monitor/images/matched-signal-cards.png",
+      "view": "Scene 4 Enterprise Buyer Signal Monitor — Task 3: Interpret product-signal cards",
+      "caption": "High Tech signal card with virality, affected commitments, and operating actions highlighted",
+      "alt": "High Tech signal card with virality, affected commitments, and operating actions highlighted",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-4-enterprise-buyer-signal-monitor/images/scene-4-enterprise-buyer-signal-monitor.png",
+      "view": "Scene 4 Enterprise Buyer Signal Monitor — Introduction",
+      "caption": "Enterprise Buyer Signal Monitor with product-signal search and signal summary",
+      "alt": "Enterprise Buyer Signal Monitor with product-signal search and signal summary",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-4-enterprise-buyer-signal-monitor/images/semantic-product-results.png",
+      "view": "Scene 4 Enterprise Buyer Signal Monitor — Task 2: Run a semantic product-signal search",
+      "caption": "Semantic product results with Unit Price and Signal Match highlighted",
+      "alt": "Semantic product results with Unit Price and Signal Match highlighted",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-4-enterprise-buyer-signal-monitor/images/signal-feed-overview.png",
+      "view": "Scene 4 Enterprise Buyer Signal Monitor — Task 1: Review the current signal situation",
+      "caption": "Product-signal search and Signal Summary panels highlighted",
+      "alt": "Product-signal search and Signal Summary panels highlighted",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-5-product-signal-graph/images/graph-query-explorer.png",
+      "view": "Scene 5 Product Signal Graph — Task 3: Run a focused graph query",
+      "caption": "Graph Query Explorer with plain-language lifecycle queries highlighted",
+      "alt": "Graph Query Explorer with plain-language lifecycle queries highlighted",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-5-product-signal-graph/images/graph-query-results.png",
+      "view": "Scene 5 Product Signal Graph — Task 3: Run a focused graph query",
+      "caption": "Bill-of-materials and engineering-change commitment query results highlighted",
+      "alt": "Bill-of-materials and engineering-change commitment query results highlighted",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-5-product-signal-graph/images/graph-workspace-controls.png",
+      "view": "Scene 5 Product Signal Graph — Task 1: Review risk and graph-depth guidance",
+      "caption": "Risk-score explanation and graph-depth controls highlighted",
+      "alt": "Risk-score explanation and graph-depth controls highlighted",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-5-product-signal-graph/images/product-lifecycle-node-example.png",
+      "view": "Scene 5 Product Signal Graph — Task 2: Inspect a lifecycle-risk path",
+      "caption": "Selected lifecycle entity with Risk Score and Hop Coverage highlighted",
+      "alt": "Selected lifecycle entity with Risk Score and Hop Coverage highlighted",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-5-product-signal-graph/images/scene-5-product-signal-graph.png",
+      "view": "Scene 5 Product Signal Graph — Introduction",
+      "caption": "Product Signal Graph with risk guidance, graph-depth controls, and lifecycle network",
+      "alt": "Product Signal Graph with risk guidance, graph-depth controls, and lifecycle network",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-6-supply-and-commitment-map/images/capacity-priorities.png",
+      "view": "Scene 6 Supply & Commitment Map — Task 3: Distinguish shortages from watchlist items",
+      "caption": "Immediate shortage cards with supported forecast-need reasons highlighted",
+      "alt": "Immediate shortage cards with supported forecast-need reasons highlighted",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-6-supply-and-commitment-map/images/scene-6-supply-and-commitment-map.png",
+      "view": "Scene 6 Supply & Commitment Map — Introduction",
+      "caption": "Supply and Commitment Control Tower with Inventory Load guidance, spatial map, and selected site",
+      "alt": "Supply and Commitment Control Tower with Inventory Load guidance, spatial map, and selected site",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-6-supply-and-commitment-map/images/supply-commitment-map-layers.png",
+      "view": "Scene 6 Supply & Commitment Map — Task 2: Use spatial layers to compare response options",
+      "caption": "Spatial map layers and selected supply-site evidence highlighted",
+      "alt": "Spatial map layers and selected supply-site evidence highlighted",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-6-supply-and-commitment-map/images/supply-commitment-sites-table.png",
+      "view": "Scene 6 Supply & Commitment Map — Task 3: Distinguish shortages from watchlist items",
+      "caption": "Supply-site table with On-Hand Units and Inventory Load highlighted",
+      "alt": "Supply-site table with On-Hand Units and Inventory Load highlighted",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-7-customer-commitments/images/commitment-json-duality.png",
+      "view": "Scene 7 Customer Commitments — Task 3: Compare the JSON Relational Duality document",
+      "caption": "JSON Relational Duality document for the selected commitment highlighted",
+      "alt": "JSON Relational Duality document for the selected commitment highlighted",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-7-customer-commitments/images/commitment-relational-detail.png",
+      "view": "Scene 7 Customer Commitments — Task 2: Inspect a cancelled commitment",
+      "caption": "Cancelled customer commitment with target date and cancellation reason highlighted",
+      "alt": "Cancelled customer commitment with target date and cancellation reason highlighted",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-7-customer-commitments/images/commitment-route-context.png",
+      "view": "Scene 7 Customer Commitments — Task 4: Review fulfillment-route context",
+      "caption": "Fulfillment route for the selected customer commitment highlighted",
+      "alt": "Fulfillment route for the selected customer commitment highlighted",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-7-customer-commitments/images/customer-commitment-workspace.png",
+      "view": "Scene 7 Customer Commitments — Task 1: Review operational commitment dates",
+      "caption": "Customer commitment table with Completion Dates and Cancellation Reason highlighted",
+      "alt": "Customer commitment table with Completion Dates and Cancellation Reason highlighted",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-7-customer-commitments/images/scene-7-customer-commitments.png",
+      "view": "Scene 7 Customer Commitments — Introduction",
+      "caption": "Customer Commitments workspace with completion dates and cancellation context",
+      "alt": "Customer Commitments workspace with completion dates and cancellation context",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-8-oml-product-intelligence/images/bom-capacity-intelligence.png",
+      "view": "Scene 8 Predictive Product & Commitment Analytics — Task 5: Connect predictions to bill-of-materials capacity",
+      "caption": "Bill-of-materials and capacity intelligence highlighted",
+      "alt": "Bill-of-materials and capacity intelligence highlighted",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-8-oml-product-intelligence/images/commitment-value-forecast.png",
+      "view": "Scene 8 Predictive Product & Commitment Analytics — Task 4: Compare commitment forecasts and signal clusters",
+      "caption": "Commitment value forecast with model-quality guidance highlighted",
+      "alt": "Commitment value forecast with model-quality guidance highlighted",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-8-oml-product-intelligence/images/customer-commitment-segments.png",
+      "view": "Scene 8 Predictive Product & Commitment Analytics — Task 3: Review customer commitment segments",
+      "caption": "Customer commitment segmentation analytics highlighted",
+      "alt": "Customer commitment segmentation analytics highlighted",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-8-oml-product-intelligence/images/demand-volatility-forecasting.png",
+      "view": "Scene 8 Predictive Product & Commitment Analytics — Task 2: Interpret Demand Volatility Forecasting",
+      "caption": "Demand Volatility calculation guidance, forecast chart, and product details highlighted",
+      "alt": "Demand Volatility calculation guidance, forecast chart, and product details highlighted",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-8-oml-product-intelligence/images/product-signal-clusters.png",
+      "view": "Scene 8 Predictive Product & Commitment Analytics — Task 4: Compare commitment forecasts and signal clusters",
+      "caption": "Product signal clusters and related High Tech evidence highlighted",
+      "alt": "Product signal clusters and related High Tech evidence highlighted",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-8-oml-product-intelligence/images/scene-8-oml-product-intelligence.png",
+      "view": "Scene 8 Predictive Product & Commitment Analytics — Introduction",
+      "caption": "Predictive Product and Commitment Analytics with Prediction Readiness and current model results",
+      "alt": "Predictive Product and Commitment Analytics with Prediction Readiness and current model results",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-9-ask-seer-tech-data/images/ask-seer-tech-data-chat-mode.png",
+      "view": "Scene 9 Ask Seer Tech Data — Task 3: Use Chat mode for a conversational answer",
+      "caption": "Ask Seer Tech Data Chat mode response highlighted",
+      "alt": "Ask Seer Tech Data Chat mode response highlighted",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-9-ask-seer-tech-data/images/ask-seer-tech-data-explain-mode.png",
+      "view": "Scene 9 Ask Seer Tech Data — Task 2: Use Explain mode for a narrated answer",
+      "caption": "Ask Seer Tech Data Explain mode response highlighted",
+      "alt": "Ask Seer Tech Data Explain mode response highlighted",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-9-ask-seer-tech-data/images/ask-seer-tech-data-generated-sql.png",
+      "view": "Scene 9 Ask Seer Tech Data — Task 4: Use Show SQL mode to inspect the query path",
+      "caption": "Ask Seer Tech Data generated SQL highlighted",
+      "alt": "Ask Seer Tech Data generated SQL highlighted",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-9-ask-seer-tech-data/images/ask-seer-tech-data-run-sql-results.png",
+      "view": "Scene 9 Ask Seer Tech Data — Task 5: Use Run SQL mode to inspect returned rows",
+      "caption": "Ask Seer Tech Data Run SQL results highlighted",
+      "alt": "Ask Seer Tech Data Run SQL results highlighted",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    },
+    {
+      "file": "capture-2026-07-02/selected/scene-9-ask-seer-tech-data/images/scene-9-ask-seer-tech-data.png",
+      "view": "Scene 9 Ask Seer Tech Data — Introduction",
+      "caption": "Ask Seer Tech Data workspace with modes, schema metadata, and example questions",
+      "alt": "Ask Seer Tech Data workspace with modes, schema metadata, and example questions",
+      "note": "Selected 1280×1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result."
+    }
+  ]
+}

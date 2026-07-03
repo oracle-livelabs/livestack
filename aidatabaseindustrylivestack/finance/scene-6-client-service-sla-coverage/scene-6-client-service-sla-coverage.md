@@ -12,7 +12,7 @@ SQL can use distance, buffered zones, nearest-center ranking, and GeoJSON conver
 
 Estimated Time: **10 minutes**
 
-![Client Service and SLA Coverage overview with KPIs and map highlighted](images/client-service-coverage.png)
+![Client Service and SLA Coverage overview with KPIs, nearest-center results, and map](images/client-service-coverage.png)
 
 ### Objectives
 
@@ -22,12 +22,14 @@ In this scene, you will learn what finance decision the page supports, what evid
 
 Perform the following set of steps to understand whether client demand can be handled within available coverage, capacity, and SLA expectations.
 
-1. Click **Client Service & SLA Coverage** in the sidebar.
-2. Review the KPI tiles at the top of the page. They summarize active service centers, processing capacity, pending service cases, and SLA capacity alerts.
+![Client Service and SLA Coverage page with network KPIs, nearest-center results, and the coverage map](images/client-service-coverage.png)
+
+1. Click **Client Service & SLA Coverage Map** in the sidebar.
+2. Review the KPI tiles at the top of the page. They summarize active service centers, processing capacity, open investigation cases, and SLA capacity alerts.
 3. Review the VPD banner below the tiles. It shows which demo user is active and whether the page is using full access or a region-filtered service view.
 4. Review the map workspace. This is where service centers, SLA zones, client tiers, case routes, demand density, and service-pressure regions can be layered together.
 
-In the current demo dataset, the page shows **30** active service centers, about **495.7K** units of processing capacity, **750** pending service cases, and **50** SLA capacity alerts. Use those numbers to set the operational scene: this is not a single branch decision, but a network decision across service capacity, geography, and active client demand.
+In the current demo dataset, the page shows **30** active service centers, about **495.7K** case-processing capacity units, **750** open investigation cases, and **50** SLA capacity alerts. Capacity is an operational workload measure: it represents how many case-processing units the network can support, not people, hours, or compute power. Use those numbers to set the scene as a network decision across service capacity, geography, and active client demand.
 
 **Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
 
@@ -44,7 +46,7 @@ Perform the following set of steps to see how client location, service-center re
 
 Use the map to explain how the same database can serve operational and spatial questions. Service teams can look at client tiers and service-center coverage together with regional demand signals.
 
-In the current demo dataset, **New York Metro** has demand index **91**, average 7-day forecast **203**, peak signal factor **2.08x**, and **2** forecasted products. The same page also uses **120** database-backed service-zone records generated from Oracle spatial geometry.
+The screenshot shows the two selected layers together: dashed SLA rings represent service reach by tier, while shaded service-pressure regions show where forecast demand is concentrated. The combined view helps an operator judge whether geographic coverage and processing capacity align with the regions where investigation work is building.
 
 **Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
 
@@ -57,20 +59,20 @@ Perform the following set of steps to show how the application turns a client an
 1. Review the **Nearest Service Center** panel.
 2. Confirm the selected client and financial product.
 3. Review the evidence labels for `find_nearest_centers`, `distance_km`, and `estimated_hours`.
-4. Compare the ranked service-center results and focus on the first recommendation, **Lebanon Central Banking Center** in **Lebanon, Tennessee**.
-5. Explain the decision evidence: the top-ranked center is **395.06 km** away, has an estimated SLA of **4.9 hours**, and shows **92** units of available capacity.
+4. Compare the ranked service-center results and focus on the first recommendation, **Concord Southeast Micro Branch** in **Concord, North Carolina**.
+5. Explain the decision evidence: the top-ranked center is **828.38 km** away, has an estimated SLA of **10.4 hours**, and shows **284** case-processing capacity units.
 
 The business value is that service operations can make a routing decision from the same governed Oracle data that powers the map, capacity records, and API response. The application calls the database function directly, so the UI and API share the same nearest-center logic.
 
 ## Task 4: Inspect service-center load
 
-![Service-center load table with service tiers and supported services highlighted](images/service-centers-load.png)
+![Regional Operations Centers table with Aurora Mountain West Advisory Hub highlighted](images/service-centers-load.png)
 
 Perform the following set of steps to identify centers that may be overloaded or underused. This helps operations teams consider routing, staffing, or capacity adjustments.
 
-1. Scroll to **Service Centers**.
-2. Review the center name, location, type, supported services, total capacity, pending service cases, and load percentage.
-3. Focus on **Aurora Mountain West Advisory Hub** or **Aberdeen East Coast Banking Center** as one example. The current live stack shows service tiers such as **Enterprise Operations** and supported-service labels such as **Treasury Services** or **Mortgage Processing**.
+1. Scroll to **Regional Operations Centers**.
+2. Review the operations center, region, service tier, primary service, processing capacity, open cases, and utilization columns.
+3. Focus on **Aurora Mountain West Advisory Hub**. The current live stack shows **Enterprise Operations**, **Treasury Services**, **18.8K** case-processing capacity units, **19** open cases, and **9.4%** utilization.
 4. Compare this row with other centers to understand where there may be available capacity or regional pressure.
 
 This table helps the user move from a map-level network view to a center-level operating view. A service operations manager can see which centers have service depth, where case activity is already queued, and whether load levels leave room to absorb demand.
@@ -84,7 +86,7 @@ Perform the following set of steps to decide whether the business should shift w
 1. Scroll to **SLA Capacity Alerts - Compliance and Onboarding Pressure**.
 2. Review the top alert rows. Critical rows indicate products or service workflows where available capacity is below the operational threshold.
 3. Focus on **Client Profitability Analysis** at **Middletown Mid-Atlantic Branch Hub**.
-4. Interpret the row: **10** units are available at **Middletown Mid-Atlantic Branch Hub**, with an active signal factor of **1x** and a capacity-alert state that needs operational review.
+4. Interpret the row: **10** case-processing capacity units are available at **Middletown Mid-Atlantic Branch Hub**, with an active signal factor of **1x** and a capacity-alert state that needs operational review.
 
 This is the data point to emphasize during the demo. The story is that a client analytics product has limited service capacity at a specific branch hub while signal pressure is active. The operational response could be to shift work to another center, expand analyst coverage, adjust onboarding timing, or alert the compliance team before SLA pressure becomes visible to clients.
 
@@ -94,4 +96,4 @@ The business value is that teams can make the decision from connected, governed 
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-22
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-29

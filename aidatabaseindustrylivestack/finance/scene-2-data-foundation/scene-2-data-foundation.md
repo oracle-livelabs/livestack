@@ -16,6 +16,8 @@ In this scene, you will learn what finance decision the page supports, what evid
 
 Perform the following set of steps so every later scene starts from the same trusted finance baseline. This helps the audience compare dashboards, searches, predictions, transactions, and AI actions without wondering whether the data changed between scenes.
 
+![Prepare the Dataset panel with Restore Demo Data and refreshed record counts](images/prepare-dataset.png)
+
 1. Click **Data Foundation** in the sidebar.
 2. In **Prepare the Dataset**, click **Load Demo Data**.
 3. If the dataset is already loaded, click **Restore Demo Data** to reset the demo data to a clean state.
@@ -26,6 +28,8 @@ These records give every later scene a shared business context, so product expos
 ## Task 2: Review what gets loaded
 
 Perform the following set of steps to show that the demo uses recognizable finance data: products, clients, transactions, cases, regulatory signals, service locations, prediction outputs, and AI action history.
+
+![What Gets Loaded carousel with the next-page arrow highlighted](images/what-gets-loaded.png)
 
 1. Scroll to **What Gets Loaded**.
 2. Read the three visible carousel tiles.

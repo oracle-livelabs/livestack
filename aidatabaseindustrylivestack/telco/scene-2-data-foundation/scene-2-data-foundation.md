@@ -23,9 +23,9 @@ Prepare the dataset so every later scene starts from the same trusted telecom ba
 3. If the dataset is already loaded, click **Restore Demo Data** to reset the demo data to a clean state.
 4. Wait for the progress indicator to finish and review the refreshed record counts.
 
-The load prepares telecom services, subscriber signals, service orders, network sites, demand regions, field dispatch context, vector embeddings, graph relationships, machine learning outputs, and agent audit history. The system compares subscriber and service text by meaning, then mention embeddings as the representation that makes this possible.
+The load prepares telecom services, subscriber signals, service orders, network sites, demand regions, field dispatch context, vector embeddings, graph relationships, machine learning outputs, and agent audit history. The system compares subscriber and service text by meaning, with embeddings providing the representation that makes this possible.
 
-In this example, the guide mentions values such as **32 telecom services**, **5,000 subscriber signals**, **3,000 service orders**, **12 network sites**, **360 demand forecasts**, **5,000 signal vectors**, **1,572 semantic matches**, **36 telecom impact entities**.
+In this example, the live data-foundation page shows **32 telecom services**, **5,000 subscriber signals**, **3,000 service orders**, **32 service vectors**, **5,000 signal vectors**, and **1,572 semantic matches**.
 
 **Note:** These are sample values from the current demo dataset and may change after a refresh, seed update, or custom dataset import. Treat these numbers as an example of the current operating pattern. Review the live values in the UI and connect them to the operational pattern: subscriber impact, capacity exposure, SLA risk, revenue exposure, dispatch load, or restoration status.
 
@@ -38,12 +38,15 @@ Review what gets loaded to show that the demo uses recognizable telecom data: se
 1. Scroll to **What Gets Loaded**.
 2. Read the three visible carousel tiles.
 3. Use the right carousel arrow to review the remaining tiles.
+
+![Remaining loaded telecom data domains in the carousel](images/loaded-data-domains-next.png)
+
 4. Look for the major data types used in the demo: relational tables, JSON duality views, graph relationships, spatial geometry, vector embeddings, machine learning results, and agent audit records.
 
-**Note:** The system compares subscriber and service text by meaning, then mention embeddings as the representation that makes this possible.
+**Note:** The system compares subscriber and service text by meaning, with embeddings providing the representation that makes this possible.
 
 You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-28
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-29

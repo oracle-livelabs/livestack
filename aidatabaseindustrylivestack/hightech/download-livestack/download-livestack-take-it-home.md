@@ -176,7 +176,15 @@ Perform the following set of steps to prepare a clean working directory before e
     </copy>
     ```
 
-6. Confirm that you are in the directory that contains the compose file.
+6. Move into the extracted High Tech application directory.
+
+    ```bash
+    <copy>
+    cd hightech
+    </copy>
+    ```
+
+7. Confirm that you are in the directory that contains the compose file.
 
     ```bash
     <copy>
@@ -188,7 +196,7 @@ Perform the following set of steps to prepare a clean working directory before e
 
     - You see `compose.yml` or `compose.yaml` in the current directory.
 
-7. Create or refresh the runtime environment file.
+8. Create or refresh the runtime environment file.
 
     ```bash
     <copy>
@@ -273,7 +281,8 @@ Perform the following set of steps to prepare a clean working directory before e
 **Expected result:**
 
 - You are in a clean working directory outside `Downloads`.
-- The extracted package contains `compose.yml` or `compose.yaml`, `.env.example`, application source files, database setup files, and supporting scripts.
+- The extracted `hightech` directory contains `compose.yml`, `.env`, `.env.example`, application source, database setup files, runtime demo data, and supporting scripts.
+- The clean deployment package does not include `ip.md`, verification scripts, test fixtures, dependency folders, or generated build output.
 - You created a local `.env` file from `.env.example`.
 
 ## Task 3: Configure proxy settings, if your network requires them
@@ -748,7 +757,7 @@ A portable **LiveStack** runbook turns this guide into something teams can repro
 
 This guide is self-service for technical users who can install Podman and run terminal commands. Users who are new to containers should complete the Podman readiness checks before starting and ask for help if those checks fail.
 
-## Credits and build notes
+## Credits & Build Notes
 
 - **Author** - LiveLabs Team
-- **Last Updated By/Date** - LiveLabs Team, 2026-06-04
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-07-02

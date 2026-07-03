@@ -1,88 +1,98 @@
-# Scene 8 OML Product Intelligence
+# Scene 8 Predictive Product & Commitment Analytics
 
 ## Introduction
 
-**OML Product Intelligence** helps teams decide which predictive signals should become operational action. The page brings together demand volatility, commitment segmentation, value forecasting, signal clustering, **BOM** exposure, and capacity intelligence so planners can prioritize follow-up.
+**Predictive Product & Commitment Analytics** estimates where Seer Tech's next launch constraint may emerge. Oracle Machine Learning connects recent product signals with requested units, customer commitments, value, bill-of-materials exposure, and capacity evidence so product and supply teams can act before the next exception reaches a promise date.
 
-**Oracle AI Database** keeps machine learning close to governed **High Tech** data. **Oracle Machine Learning** models and SQL analytics run from the same connected foundation as the rest of the **LiveStack** demo, so sensitive product, customer, supplier, and service records do not need to move into a disconnected notebook.
+The page leads with business predictions and durable result readiness. Technical database model object names remain available in the collapsed **Technical model details** section for specialists, without making internal identifiers the main operator story.
 
 Estimated Time: **12 minutes**
 
-![OML Product Intelligence page with active model cards and analytics tabs](images/scene-8-oml-product-intelligence.png)
+![Predictive Product and Commitment Analytics with Prediction Readiness and current model results](images/scene-8-oml-product-intelligence.png)
 
 ### Objectives
 
-In this scene, you will learn how in-database analytics can score demand, commitment value, customer segments, signal clusters, **BOM** exposure, and capacity pressure across **High Tech** workflows.
+In this scene, you will learn how **Virality**, **Demand Uplift**,**Predicted Orders**, value opportunity, and confidence are interpreted; how forecasts lead product details; and how related predictive views support customer, signal, and capacity decisions.
 
-## Task 1: Inspect Demand Volatility Forecasting
+## Task 1: Confirm prediction readiness
 
-Perform the following set of steps to identify products where predicted demand may require wafer-start planning, component allocation, channel inventory review, customer outreach, or order-promising action:
+Start with the persisted result status rather than raw model lifecycle identifiers:
 
-1. Click **OML Product Intelligence** in the sidebar.
-2. Review the active ML model cards and persisted ML run evidence.
-3. Keep the **Demand Volatility** tab selected.
-4. Review product demand scores and the Random Forest scoring path.
-5. Review the refresh control and prediction output when the model returns rows.
+1. Click **Oracle Machine Learning Product Intelligence** in the sidebar.
+2. Review **Prediction readiness and durable results**.
+3. Confirm the last completed refresh, dataset source, persisted-row counts, and **Prediction Readiness** status.
+4. Expand **Technical model details** only when the audience needs database model names or catalog evidence.
 
-    ![Demand Volatility Forecasting tab highlighted](images/demand-volatility-forecasting.png)
+    ![Prediction Readiness and persisted analytics results highlighted](images/scene-8-oml-product-intelligence.png)
 
-Use the visible predictions to connect model output to operating decisions such as accelerator demand planning, edge gateway adoption, wafer-start planning, component shortage mitigation, channel inventory shifts, field quality exposure, and customer commitment protection.
+The readiness panel explains the business value of persistence: demand scores, commitment segments, forecast rows, product-signal groups, and capacity alerts remain available after application restarts, demo restores, and container rebuilds.
 
-**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
+## Task 2: Interpret Demand Volatility Forecasting
 
-## Task 2: Review customer commitment segments
+Use the forecast first, then inspect the products behind it:
 
-Perform the following set of steps to turn model output into customer and commitment groups that may need follow-up, allocation review, account outreach, service coordination, or priority planning:
+1. Keep **Demand Volatility** selected.
+2. Read **How these values are calculated**.
+3. Review the **Top 10 - Predicted Solution Orders** bar chart.
+4. Hover over a bar to inspect the product and predicted order value.
+5. Review the product-detail table below the chart.
+6. Compare **Virality**, **Uplift Indicator**, **Predicted Orders**, **Estimated Product Value Opportunity**, **Confidence**, and signal status.
 
-1. Click **Commitment Segments**.
-2. Review the segmentation model note for K-Means and RFM-style commitment behavior.
-3. Review the segment distribution and highest-scoring customers or commitments when the output is populated.
+    ![Demand Volatility calculation guidance, forecast chart, and product details highlighted](images/demand-volatility-forecasting.png)
 
-    ![Customer commitment segment analytics highlighted](images/customer-commitment-segments.png)
+The active persisted demo path uses these definitions:
 
-Segments help teams decide whether a risk is isolated or concentrated in a strategic customer cohort. That distinction matters when a component allocation issue affects one opportunistic order versus a high-value enterprise commitment.
+- **Virality** is the product's average 0–100 virality score during the selected lookback window.
+- **Demand Uplift Indicator** is a weighted demand-surge indicator: 45% average virality plus capped contributions from signal count, elevated signals, views, and recently requested units. It is not margin or price growth.
+- **Predicted Solution Orders** equals recent requested units multiplied by `1 + (uplift ÷ 100 × 2)`, plus half of recent signal mentions, rounded to a whole order.
+- **Estimated Product Value Opportunity** multiplies predicted orders by product unit price. It is a directional opportunity, not recognized revenue.
+- **Confidence** is capped at 99% and reflects the strength of the uplift indicator plus the presence of recent product signals.
 
-## Task 3: Interpret commitment value forecast
+The forecast chart appears before the product table so the operator sees the portfolio-level demand pattern first and then inspects the individual products driving it.
 
-Perform the following set of steps to understand the expected value trend and how much confidence planners should place in it:
+## Task 3: Review customer commitment segments
 
-1. Click **Commitment Forecast**.
-2. Review the forecast horizon, model quality cards, and forecast values.
-3. Explain that a weak model fit tells planners to treat the forecast as directional, not certain.
+Determine whether exposure is concentrated in a particular enterprise-buyer group:
 
-    ![Commitment value forecast analytics highlighted](images/commitment-value-forecast.png)
+1. Select **Commitment Segments**.
+2. Review the K-Means segmentation explanation.
+3. Compare segment distribution, commitment behavior, and the highest-value or highest-risk members.
 
-This page connects product demand and customer commitment data to a governed forecast path. The model output stays near the products, commitments, and signal records it uses, rather than moving into a disconnected notebook.
+    ![Customer commitment segmentation analytics highlighted](images/customer-commitment-segments.png)
 
-## Task 4: Explore product signal clusters
+Segmentation helps distinguish a broad launch issue from a constraint concentrated in strategic customers, regions, or order patterns.
 
-Perform the following set of steps to see how related products and signals group together by meaning:
+## Task 4: Compare commitment forecasts and signal clusters
 
-1. Click **Signal Clusters**.
-2. Review the **K =** controls when available.
-3. Review the cluster count, products clustered, embedding dimensions, and distance metric when clustering completes.
-4. Review a cluster card and its related products or signals.
+Use the supporting predictive views to understand value and related evidence:
 
-    ![Product signal cluster analytics highlighted](images/product-signal-clusters.png)
+1. Select **Commitment Forecast** and review the horizon, model-fit guidance, and forecast values.
+2. Treat a weak fit as directional evidence rather than certainty.
+3. Select **Signal Clusters**.
+4. Review cluster counts, embedding dimensions, distance metric, and the products or signals grouped by operational meaning.
 
-Use this tab to explain how vector similarity can group **High Tech** records by operational meaning. Component shortages, GPU capacity pressure, field quality cases, connected-device telemetry, and warranty signals may cluster together even when the source text uses different wording.
+    ![Commitment value forecast with model-quality guidance highlighted](images/commitment-value-forecast.png)
 
-## Task 5: Review BOM and capacity intelligence
+    ![Product signal clusters and related High Tech evidence highlighted](images/product-signal-clusters.png)
 
-Perform the following set of steps to connect predicted demand with available capacity, component exposure, shortage alerts, product pressure, and value at risk:
+Vector grouping can connect component shortages, GPU capacity, field quality, connected-device telemetry, and warranty signals even when the source records use different language.
 
-1. Click **BOM Capacity**.
-2. Review the summary cards.
-3. Review capacity alerts and products sorted by surge probability or exposure.
-4. Identify which products, BOM dependencies, or supply sites need attention.
+## Task 5: Connect predictions to bill-of-materials capacity
 
-    ![BOM and capacity intelligence tab highlighted](images/bom-capacity-intelligence.png)
+Close the analytics scene with an operating decision:
 
-The business value is that teams can move from predictive scoring to operating action before a capacity issue affects product launch, customer commitment, field quality, warranty, or service outcomes.
+1. Select **BOM Capacity**. BOM means **bill of materials**.
+2. Review summary cards for capacity and exposure.
+3. Compare products by surge probability, shortage exposure, and value at risk.
+4. Identify the product, dependency, or supply site that should move into Ask Data or agent action.
+
+    ![Bill-of-materials and capacity intelligence highlighted](images/bom-capacity-intelligence.png)
+
+The predictive story now connects directly back to the runbook: demand pressure was detected, signal evidence explained it, graph paths located the dependencies, the map identified response options, commitments showed customer exposure, and analytics identified where the next constraint may appear.
 
 *You can move to the next scene.*
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-16
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-07-02
 - **Source Bundle** - `livestack-hightech.zip`

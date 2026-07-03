@@ -1,0 +1,13 @@
+brand_id,brand_name,brand_slug,brand_category,headquarters_city,headquarters_lat,headquarters_lon,founded_year,annual_revenue,social_tier,created_at,updated_at
+1,Apex Automation Systems,apexautomation,Industrial Automation,Detroit,42.3314,-83.0458,2004,725000000,premium,2026-06-29T21:44:56Z,2026-06-29T21:44:56Z
+2,CircuitForge Electronics,circuitforge,Electronics,Austin,30.2672,-97.7431,2010,540000000,premium,2026-06-29T21:44:56Z,2026-06-29T21:44:56Z
+3,MotorWorks Mobility,motorworks,Mobility Components,Dallas,32.7767,-96.797,2008,685000000,premium,2026-06-29T21:44:56Z,2026-06-29T21:44:56Z
+4,PrecisionCast Foundry,precisioncast,Metal Fabrication,Pittsburgh,40.4406,-79.9959,1998,410000000,standard,2026-06-29T21:44:56Z,2026-06-29T21:44:56Z
+5,NordicTool Works,nordictools,Machine Tools,Minneapolis,44.9778,-93.265,2001,295000000,standard,2026-06-29T21:44:56Z,2026-06-29T21:44:56Z
+6,RoboFlex Assembly,roboflex,Flexible Assembly,Atlanta,33.749,-84.388,2016,360000000,standard,2026-06-29T21:44:56Z,2026-06-29T21:44:56Z
+7,Pacific Sensor Systems,pacificsensors,Industrial IoT,San Jose,37.3382,-121.8863,2014,250000000,premium,2026-06-29T21:44:56Z,2026-06-29T21:44:56Z
+8,Quantum Plastics Group,quantumplastics,Injection Molding,Phoenix,33.4484,-112.074,2006,320000000,standard,2026-06-29T21:44:56Z,2026-06-29T21:44:56Z
+9,Summit Industrial Supply,summitsupply,MRO Supply,Denver,39.7392,-104.9903,1995,455000000,standard,2026-06-29T21:44:56Z,2026-06-29T21:44:56Z
+10,AlloyWorks Fabrication,alloyworks,Advanced Materials,Cleveland,41.4993,-81.6944,2009,515000000,premium,2026-06-29T21:44:56Z,2026-06-29T21:44:56Z
+11,GreenPack Materials,greenpack,Packaging Materials,Nashville,36.1627,-86.7816,2018,185000000,emerging,2026-06-29T21:44:56Z,2026-06-29T21:44:56Z
+12,Titan Parts Network,titanparts,Aftermarket Parts,Chicago,41.8781,-87.6298,2002,610000000,premium,2026-06-29T21:44:56Z,2026-06-29T21:44:56Z

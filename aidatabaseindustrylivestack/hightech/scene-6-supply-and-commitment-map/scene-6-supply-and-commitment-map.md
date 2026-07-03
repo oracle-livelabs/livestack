@@ -2,67 +2,68 @@
 
 ## Introduction
 
-The **Supply & Commitment Map** helps teams see where fabs, contract manufacturing sites, supplier lanes, channel inventory buffers, customer destinations, service regions, and order-promising decisions intersect.
+The **Supply & Commitment Control Tower** turns lifecycle risk into a capacity and allocation decision. Seer Tech can compare fabs, contract manufacturing hubs, supplier-direct allocation, channel inventory, field-quality buffers, product availability centers, order-promise routes, and customer destinations on one spatial operating view.
 
-The page turns location context into an operating decision across semiconductor manufacturing, electronics manufacturing, component allocation, customer commitments, service logistics, and field quality workflows.
-
-Location-aware decisions are difficult when supply sites, customer destinations, route commitments, service zones, capacity constraints, and demand regions live outside the operational data platform. **Oracle AI Database** keeps spatial geometry and operational records together, so map context can lead directly to supply and commitment decisions.
+This scene answers the next launch question: *Which locations have inventory and flexibility, and which products have a supported immediate shortage rather than a generic warning?*
 
 Estimated Time: **10 minutes**
 
-![Supply and Commitment Map with KPIs, layer controls, and selected supply site](images/scene-6-supply-and-commitment-map.png)
+![Supply and Commitment Control Tower with Inventory Load guidance, spatial map, and selected site](images/scene-6-supply-and-commitment-map.png)
 
 ### Objectives
 
-In this scene, you will learn how Oracle Spatial supports supply allocation, commitment protection, contract manufacturing coordination, product availability, and service-region planning.
+In this scene, you will learn how Inventory Load is calculated, how spatial layers support allocation, how site-level actions protect commitments, and how Immediate Shortages differ from watchlist monitoring.
 
-## Task 1: Review supply and commitment priorities
+## Task 1: Understand Inventory Load and supply priorities
 
-Perform the following set of steps to understand where capacity, customer commitments, shortage alerts, service coverage, and route coverage may require attention:
+Use the calculation panel and status cards before choosing a site:
 
 1. Click **Supply & Commitment Map** in the sidebar.
-2. Review the KPI cards for active supply sites, available capacity, customer commitments, and shortage alerts.
-3. Review the VPD banner and selected supply site card.
-4. Use the selected site card to connect geography to product availability and customer commitments.
+2. Read **How inventory load is calculated**.
+3. Review the thresholds below 65%, from 65% through 84%, and at or above 85%.
+4. Compare active supply sites, available capacity, customer commitments, and supply watch items.
 
-    ![Supply map KPIs, layer controls, and selected supply site highlighted](images/supply-commitment-map-layers.png)
+    ![Inventory Load calculation, supply status cards, and selected site highlighted](images/scene-6-supply-and-commitment-map.png)
 
-In the current demo dataset, the map shows **12** active supply sites, about **177.9K** available units, about **2.1K** customer commitments, and **103** shortage alerts. The selected site card turns spatial context into operating actions such as protecting customer commitments, confirming contract manufacturing capacity, checking BOM alternates, and updating order promising.
+**Inventory Load = total units on hand across all products ÷ configured site capacity units × 100.** It is a storage and allocation measure, not forecast demand. Below 65% indicates available order-promising capacity. From 65% through 84%, planners should review pending commitments and bill-of-materials alternatives. At 85% or higher, reallocation or added manufacturing capacity may be required.
 
-**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
+The live demo typically shows **12 active supply sites**, about **177.9K available units**, and roughly **1.9K open customer commitments**. Values can change after a dataset refresh.
 
-## Task 2: Toggle spatial layers
+## Task 2: Use spatial layers to compare response options
 
-Perform the following set of steps to compare different High Tech operating questions: where customer commitments are located, which sites support demand, how routes connect, which zones are covered, and where product demand is concentrated:
+Use the map to understand which facilities and routes can respond to the launch pressure:
 
-1. Review the map and its layer controls.
-2. Use **Map Layers** to turn on layers such as Strategic Customer Commitments, Supply & Commitment Sites, Order Promise Routes, Commitment Service Zones, H3 Density Grid, and Product Demand Regions.
-3. Review how the map changes as layers are enabled or disabled.
-4. Use the spatial attribution badge to explain that Oracle Spatial stores and serves the geometry used by the map.
+1. Review **Map Layers**.
+2. Toggle strategic customer commitments, supply and commitment sites, order-promise routes, service zones, density, and product-demand regions.
+3. Select a supply site.
+4. Review the site type, location, Inventory Load, on-hand units, supported products, and commitments.
+5. Review the recommended actions: **Protect customer commitments**, **Confirm contract manufacturing capacity**, **Check BOM alternates**, and **Update order promising**. In the action label, BOM means **bill of materials**.
 
-The layer controls help different users answer different operating questions: which commitments depend on a silicon allocation center, which manufacturing site can protect an order promise, or which service region overlaps with emerging demand.
+    ![Spatial map layers and selected supply-site evidence highlighted](images/supply-commitment-map-layers.png)
 
-## Task 3: Compare site data with the map
+The actions remain prominent because the map is an execution surface, not only a visualization. A product or supply leader should leave this view knowing which facility, alternative component, allocation pool, or promise date needs review.
 
-Perform the following set of steps to connect visual location context with concrete operating records such as capacity, commitments, shortage alerts, current load, supported products, and action chips:
+## Task 3: Distinguish shortages from watchlist items
+
+Compare the site table with the evidence in Capacity Alerts:
 
 1. Scroll to **Supply & Commitment Sites**.
-2. Compare site name, location, type, products, capacity, commitments, load, and action chips.
+2. Compare **On-Hand Units**, commitments, and **Inventory Load** by site.
+3. Scroll to **Capacity Alerts - Immediate Shortages and Watchlist**.
+4. Review an **Immediate shortage** card.
+5. Confirm that the card shows stock on hand, forecast need, the demand factor, and a reason such as *Forecast need exceeds stock on hand by 674 units*.
 
-    ![Supply and commitment sites table highlighted](images/supply-commitment-sites-table.png)
+    ![Supply-site table with On-Hand Units and Inventory Load highlighted](images/supply-commitment-sites-table.png)
 
-3. Scroll to **Capacity Alerts**.
-4. Review which products and supply sites need attention.
+    ![Immediate shortage cards with supported forecast-need reasons highlighted](images/capacity-priorities.png)
 
-    ![Capacity alerts for component shortages and demand volatility highlighted](images/capacity-priorities.png)
+A component is an **Immediate shortage** only when current stock is zero or forecast demand exceeds stock. A product with stock and zero current need must not be presented as a shortage. If such an item is retained for forecast monitoring, it belongs on the watchlist and must state the reason, such as forecast volatility or future demand exposure.
 
-The site table and alerts turn spatial evidence into concrete supply, manufacturing, and customer-commitment actions. A supply leader can move from the broad signal that shortage alerts are high to the facility, product, route, or commitment queue that needs review.
-
-The business value is that teams can make the decision from connected, governed data. Oracle AI Database provides the shared foundation that keeps operational data, spatial analysis, analytics, and AI workflows aligned.
+The decision from this scene is to identify which customer promises depend on the constrained path. Continue to **Customer Commitments**.
 
 *You can move to the next scene.*
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-16
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-07-02
 - **Source Bundle** - `livestack-hightech.zip`

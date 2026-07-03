@@ -6,7 +6,7 @@
 
 Telecom teams struggle when the information needed for one service-assurance decision lives in separate OSS, BSS, care, NOC, field, and analytics tools. That separation slows action, increases reconciliation work, and makes it harder to trust the result.
 
-Oracle AI Database helps address these challenges by keeping machine learning close to governed telecom data. Oracle Machine Learning models can be trained, persisted, and scored in the database with `DBMS_DATA_MINING`, `PREDICTION()`, `PREDICTION_PROBABILITY()`, and `CLUSTER_ID()`. Service-impact risk prediction, retention segmentation, service revenue forecasting, service behavior clustering, and network access risk scoring can run from the same connected data foundation that powers the rest of the LiveStack Demo. The backend model name remains `DEMAND_SURGE_MODEL` for compatibility with the seed scripts, but the business interpretation in the demo is service-impact risk. The model uses 13 telecom service features, including subscriber signals, service-order activity, service value, and a service-pressure score.
+Oracle AI Database helps address these challenges by keeping machine learning close to governed telecom data. Oracle Machine Learning models can be trained, persisted, and scored in the database with `DBMS_DATA_MINING`, `PREDICTION()`, `PREDICTION_PROBABILITY()`, and `CLUSTER_ID()`. Service-impact risk prediction, retention segmentation, service revenue forecasting, service behavior clustering, and network access risk scoring can run from the same connected data foundation that powers the rest of the LiveStack Demo. The backend model name remains `DEMAND_SURGE_MODEL` for compatibility with the seed scripts, but the business interpretation in the demo is service-impact risk. The model uses governed telecom service features including subscriber signals, service-order activity, service value, and a service-pressure score.
 
 Estimated Time: **10 minutes**
 
@@ -24,7 +24,7 @@ Review the predictive assurance workspace as a set of decision tools for service
 
 1. Click **Predictive Service Assurance** in the sidebar.
 2. Review the four summary cards at the top of the page: services with service-impact risk, subscribers segmented, revenue model R2, and active ML models.
-3. Review the mode tabs: **Service-Impact Risk**, **Retention**, **Forecast**, **Service Clusters**, and **Access Risk**.
+3. Review the mode tabs: **Impact Risk**, **Retention**, **Forecast**, **Service Clusters**, and **Access Risk**.
 
 This page is a business-facing analytics surface, not a separate data science notebook. The predictions are shown next to the operational context needed to act on them.
 
@@ -34,12 +34,12 @@ This page is a business-facing analytics surface, not a separate data science no
 
 Inspect service-impact risk prediction to identify services where predicted pressure may require capacity planning, field dispatch, care outreach, SLA management, or retention action.
 
-1. Stay on the **Service-Impact Risk** tab.
+1. Stay on the **Impact Risk** tab.
 2. Use the scoring window selector if you want to change the time window, then click **Refresh**.
 3. Review the bar chart and service table.
-4. Focus on a top risk row, such as **Device Upgrade Enrollment** or **Fixed Wireless Home Internet**.
+4. Focus on a top risk row, such as **Fixed Wireless Home Internet** or **Premium International Roaming Pass**.
 
-In the current demo dataset, **Fixed Wireless Home Internet** shows **131** recent mentions, **290** recent service orders, **1,008** predicted demand, **90%** service-impact probability, and about **$70.6K** service revenue opportunity. The same table also shows services such as **Premium International Roaming Pass**, **Device Upgrade Enrollment**, and **Fleet Telematics SIM Pack**. 
+In the current demo dataset, **Fixed Wireless Home Internet** shows signal urgency **44.3**, impact lift **+34.8%**, predicted workload **292**, subscriber value at risk of **$20,437.90**, and **35%** confidence. The same table also shows services such as **Premium International Roaming Pass**, **Fleet Telematics SIM Pack**, and **5G Unlimited Mobile Plan**.
 
 This gives the service assurance user a concrete question to answer: should the provider add capacity, adjust field dispatch, prioritize outreach, prepare care teams, or protect an SLA before service pressure turns into churn?
 
@@ -53,12 +53,12 @@ Filter retention segments to turn model output into groups of subscribers who ma
 
 1. Click **Retention**.
 2. Review the segment distribution and segment summary.
-3. Click **Loyal (10)**, **Potential (59)**, or another segment button.
+3. Click **Loyal (11)**, **Potential (54)**, or another segment button.
 4. Review the filtered subscriber list on the right.
 
 Segmentation becomes operational when teams can turn subscriber groups into retention campaigns, plan optimization, service follow-up, or care outreach.
 
-In the current demo dataset, the visible segment distribution includes **Lost (79)**, **Potential (59)**, **Promising (34)**, **New Customer (18)**, and **Loyal (10)**. Selecting a segment filters the subscriber list so the user can inspect the people behind that score, including spend, location, churn risk, and predicted lifetime value.
+In the current demo dataset, the visible segment distribution includes **Lost (86)**, **Potential (54)**, **Promising (32)**, **New Customer (17)**, and **Loyal (11)**. Selecting a segment filters the subscriber list so the user can inspect the people behind that score, including spend, location, churn risk, and predicted lifetime value.
 
 **Note:** These are sample values from the current demo dataset and may change after a refresh, seed update, or custom dataset import. Treat these numbers as an example of the current operating pattern. Review the live values in the UI and connect them to the operational pattern: subscriber impact, capacity exposure, SLA risk, revenue exposure, dispatch load, or restoration status.
 
@@ -75,7 +75,7 @@ Change the service revenue forecast horizon to understand both the projected rev
 
 A low model-quality score tells planners to treat the forecast as directional, not certain. This builds trust because the demo does not hide weak predictions.
 
-In the current demo dataset, the 14-day forecast view shows a low trend R2 of **0.01%**, a daily slope of about **+$9.63/day**, mean daily service revenue of about **$30.6K**, and **31** observations.
+In the current demo dataset, the 14-day forecast view shows a trend R2 of **10.1%**, a daily slope of **+$590.91/day**, mean daily service revenue of **$28,221**, and **17 days** of observations.
 
 **Note:** These are sample values from the current demo dataset and may change after a refresh, seed update, or custom dataset import. Treat these numbers as an example of the current operating pattern. Review the live values in the UI and connect them to the operational pattern: subscriber impact, capacity exposure, SLA risk, revenue exposure, dispatch load, or restoration status.
 
@@ -93,7 +93,7 @@ Review service behavior clusters to see how related telecom services group toget
 
 This helps a telecom analyst understand how AI-assisted grouping can support service bundling, plan optimization, recommendation design, and lookalike service exploration.
 
-In the current demo dataset, **K = 5** clusters group **32** telecom services. One visible cluster has **5G Unlimited Mobile Plan**, **Gigabit Fiber Install**, and **Premium International Roaming Pass** in the same behavior group.
+In the current demo dataset, **K = 5** clusters group **32** telecom services. The visible **Cluster 3** contains **5G Unlimited Mobile Plan** and **Gigabit Fiber Install**. **Premium International Roaming Pass** appears in **Cluster 7**.
 
 **Note:** These are sample values from the current demo dataset and may change after a refresh, seed update, or custom dataset import. Treat these numbers as an example of the current operating pattern. Review the live values in the UI and connect them to the operational pattern: subscriber impact, capacity exposure, SLA risk, revenue exposure, dispatch load, or restoration status.
 
@@ -115,4 +115,4 @@ You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-28
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-29

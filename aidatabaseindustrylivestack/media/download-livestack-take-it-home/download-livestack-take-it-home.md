@@ -127,7 +127,7 @@ If this test fails, fix Podman setup before continuing with LiveStack.
 
 Perform the following set of steps to download the portable LiveStack package and confirm that it is ready for the lab.
 
-1. Download the LiveStack package using this [link](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/livestack-media.zip).
+1. Download the LiveStack package using this [link](https://c4u02.objectstorage.us-ashburn-1.oci.customer-oci.com/p/9DEArLjsgbKXuJgQtSG95E8hMXRFtxgHR8jiHbqz4HgyVYXVnSo0SC_s-zq5CJA3/n/c4u02/b/hosted-files/o/livestack-media.zip).
 
 2. Save or rename the file as `livestack.zip`.
 

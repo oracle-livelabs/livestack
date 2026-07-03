@@ -1,0 +1,42 @@
+[
+  {
+    "text": "Which work orders are at greatest production variance or downtime risk this week?",
+    "category": "Production Risk"
+  },
+  {
+    "text": "Which manufactured parts are driving the most work order value this week?",
+    "category": "Part Performance"
+  },
+  {
+    "text": "Which customer accounts have the highest work order value?",
+    "category": "Customer Accounts"
+  },
+  {
+    "text": "How many production signals have urgency score above 80?",
+    "category": "Production Signals"
+  },
+  {
+    "text": "Which plant capacity centers have the most available production capacity?",
+    "category": "Plant Capacity"
+  },
+  {
+    "text": "Which product lines have the highest average work order value?",
+    "category": "Product Lines"
+  },
+  {
+    "text": "What is the total work order value from all work orders?",
+    "category": "Work Order Value"
+  },
+  {
+    "text": "How many work orders have a production signal source?",
+    "category": "Signal Attribution"
+  },
+  {
+    "text": "Which suppliers are producing the fastest-rising production signals by channel?",
+    "category": "Supplier Analytics"
+  },
+  {
+    "text": "Which production-risk graph findings have the highest risk score?",
+    "category": "Production Risk Graph"
+  }
+]

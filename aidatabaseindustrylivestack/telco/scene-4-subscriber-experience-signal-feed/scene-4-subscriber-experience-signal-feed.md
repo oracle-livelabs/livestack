@@ -10,7 +10,7 @@ Oracle AI Database helps address these challenges by keeping vector search, SQL,
 
 In this scene, Oracle AI Database can create embeddings inside the database, so sensitive subscriber-signal data does not need to be sent to external AI services or exposed through another processing layer. Oracle Vector Search can embed a business query, compare it against service or signal embeddings, and return ranked matches while Oracle security policies continue to govern which data the user can see.
 
-Estimated Time: 10 **minutes**
+Estimated Time: **10 minutes**
 
 ![Subscriber Experience Signal Feed with signal search, filters, and signal cards](images/subscriber-experience-signal-feed.png)
 
@@ -32,11 +32,11 @@ Review the **Subscriber Signals** page to see how subscriber language from care,
 
 ## Task 2: Search telecom service intent
 
-![Mobile Service Signal Search demo queries](images/mobile-service-signal-search.png)
+![Mobile Service Signal Search results for home internet performance monitoring](images/service-intent-search-results.png)
 
 Search telecom service intent to show how teams can find related services by meaning, not only by exact service names or keywords.
 
-1. In **Mobile Service Signal Search**, click one of the demo query buttons or enter a query such as **5G coverage and fixed wireless capacity pressure**.
+1. In **Mobile Service Signal Search**, click **home internet performance monitoring**.
 2. Review the returned service matches.
 3. Compare the service name, service line, category, and similarity score.
 
@@ -54,7 +54,7 @@ Review high-priority subscriber signals to identify the subscriber pain, affecte
 
 ![High-priority subscriber signal card](images/high-priority-signal-card.png)
 
-In this example, the guide mentions values such as **5,000 subscriber signals**, a signal urgency of *97.9*, and **3M** affected reach. The important pattern is that each card should read as an operational signal with linked service, suspected domain, ticket state, escalation state, and owner context.
+The current page shows **5,000 subscriber signals**, a signal urgency of *97.9*, and **3.1M** affected reach. The important pattern is that each card should read as an operational signal with linked service, suspected domain, ticket state, escalation state, and owner context.
 
 **Note:** These are sample values from the current demo dataset and may change after a refresh, seed update, or custom dataset import. Treat these numbers as an example of the current operating pattern. Review the live values in the UI and connect them to the operational pattern: subscriber impact, capacity exposure, SLA risk, revenue exposure, dispatch load, or restoration status.
 
@@ -76,4 +76,4 @@ You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-28
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-29

@@ -16,6 +16,8 @@ In this scene, you will learn what finance decision the page supports, what evid
 
 Perform the following set of steps so the audience understands the full finance journey. Each card previews a business problem the demo will address, such as risk monitoring, service coverage, financial crime analysis, transaction visibility, analytics, or AI-assisted action.
 
+![Welcome page with the Seer Bank finance story and use case carousel](images/welcome-and-demo-orientation.png)
+
 1. Review the top panel on the **Welcome** page. It frames the demo around financial operations, compliance risk, customer exposure, and AI-assisted decision intelligence.
 2. Read the numbered use case summaries. The point is to make the demo easy to tell as one connected Seer Bank story rather than a set of disconnected feature pages.
 3. Read the visible use case tiles in the carousel.
@@ -30,4 +32,4 @@ Perform the following set of steps so the audience understands the full finance 
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-28
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-29

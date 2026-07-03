@@ -10,7 +10,7 @@ Oracle AI Database helps address that challenge by keeping operational, analytic
 
 Estimated Time: **10 minutes**
 
-![Risk and Operations Dashboard with KPI cards, charts, and monitored financial products highlighted](images/dashboard.png)
+![Risk and Operations Dashboard with KPI cards and operating charts](images/dashboard.png)
 
 ### Objectives
 
@@ -20,15 +20,17 @@ In this scene, you will learn what finance decision the page supports, what evid
 
 Use the dashboard as a daily triage view. The goal is to see which part of the business needs attention first, such as elevated risk signals, revenue exposure, service pressure, or AI-assisted actions.
 
+![Risk and Operations Dashboard with KPI cards, signal velocity, and revenue exposure](images/dashboard.png)
+
 1. Click **Risk & Operations Dashboard** in the sidebar.
 2. Review the KPI cards across the top of the page. These summarize the current operating picture: client transactions, revenue exposure, critical fraud signals, products under risk review, and AI decisions logged.
-3. Review **Risk Signal Velocity**. This chart measures the rate and intensity of regulatory, market, and operational risk activity.
+3. Review **Fraud & Compliance Signal Velocity**. This chart measures the rate and intensity of regulatory, market, and operational risk activity.
 4. Review **Revenue Exposure by Product Category** to see which finance categories are contributing most to exposure.
 5. Review the **Oracle Internals** sidebar after the business flow is clear. Use it to connect the visible finance outcome to the database capabilities behind the page.
 
 ## Task 2: Review financial products under risk review
 
-![Financial Products Under Risk Review table with high-severity product rows highlighted](images/financial-products-table.png)
+![Financial Products Under Risk Review table with the Secure Document Vault row highlighted](images/financial-products-table.png)
 
 Perform the following set of steps to identify where product exposure, risk severity, processing load, or service pressure may require follow-up.
 
@@ -43,7 +45,7 @@ In the current live stack, the table surfaces products such as **Secure Document
 
 ## Task 3: Inspect the financial product detail modal
 
-![Financial product detail modal](images/financial-product-detail.png)
+![Financial product detail modal with the Lebanon Central Banking Center capacity row highlighted](images/financial-product-detail.png)
 
 Open the product detail modal to connect portfolio-level signals with operational readiness. The user can see whether the product has service capacity, active workload, and recent compliance or market signals that may require action.
 
@@ -57,7 +59,7 @@ The **Details** tab is the operational view of the same governed data. It presen
 
 Perform the following set of steps to show that the same trusted product data can support different users. Business teams see an operational product view, while applications and APIs can query the same information through the runtime `PRODUCTS_CAPACITY_DV` JSON Relational Duality view.
 
-![Financial product JSON Duality view](images/financial-product-json-duality.png)
+![Financial product JSON Duality view with the source and updated case-processing fields highlighted](images/financial-product-json-duality.png)
 
 1. In the product modal, click **JSON Duality View**.
 2. Review the source label **PRODUCTS_CAPACITY_DV**.
@@ -70,4 +72,4 @@ The point of this view is to show that the same data can support different appli
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-22
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-29

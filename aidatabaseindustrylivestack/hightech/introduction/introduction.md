@@ -4,7 +4,9 @@
 
 High Tech organizations coordinate semiconductor manufacturing, fab capacity, product lifecycle management, component supply, customer commitments, field quality, warranty exposure, connected-product telemetry, service operations, and AI-assisted decisions while keeping operational data governed. Those teams need the same trusted operating picture when a product launch, supplier constraint, quality signal, and customer promise collide.
 
-The **Seer Tech Product Intelligence LiveStack** shows how **Oracle AI Database 26ai** brings **High Tech** workflows together on one governed data platform. The demo follows a launch-at-risk story that connects product demand, component supply, fab capacity, customer commitments, quality signals, and AI-assisted action.
+The **Seer Tech Product Intelligence LiveStack** demonstrates how **Oracle AI Database 26ai** can bring those High Tech workflows together on one governed data platform. The demo follows one AI infrastructure release train from early pressure to coordinated action. The control tower detects rising demand and limited supply flexibility; product signals explain the pressure; lifecycle paths expose substrate, wafer-start, engineering-change, quality, and allocation dependencies; spatial evidence identifies response options; commitments show customer impact; and predictive analytics identifies the next likely constraint.
+
+Visible examples include **AI Accelerator Module**, **AI Edge Gateway Reference Kit**, **Wafer Probe Exception Detector**, **Engineering Change Order Copilot**, **Supplier Risk Heatmap Service**, **Autonomous Test Cell Controller**, **Connected Device Health Twin**, and **Customer Commitment Console**. Together they represent the products, planning services, and operational controls required to deliver a complex High Tech launch rather than a disconnected catalog of demonstrations.
 
 The runbook is a story-led walkthrough, not a feature checklist. Each scene shows how relational transactions, JSON Relational Duality, property graph, Oracle Spatial, vector search, Oracle Machine Learning, natural-language SQL, PL/SQL tools, and auditable AI agent actions work against the same governed High Tech foundation.
 
@@ -30,12 +32,12 @@ Before you begin, confirm that you can open the running Seer Tech High Tech Prod
 
 - **Scene 1:** Seer Tech Control Tower.
 - **Scene 2:** Seer Tech 26ai Data Foundation.
-- **Scene 3:** Product & Commitment Control Tower.
+- **Scene 3:** Product & Commitment Intelligence Control Tower.
 - **Scene 4:** Enterprise Buyer Signal Monitor.
 - **Scene 5:** Product Signal Graph.
 - **Scene 6:** Supply & Commitment Map.
 - **Scene 7:** Customer Commitments.
-- **Scene 8:** OML Product Intelligence.
+- **Scene 8:** Predictive Product & Commitment Analytics.
 - **Scene 9:** Ask Seer Tech Data.
 - **Scene 10:** AI Agent Console.
 - **Scene 11:** Use Your Own Product Data.
@@ -53,5 +55,5 @@ Before you begin, confirm that you can open the running Seer Tech High Tech Prod
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-16
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-07-02
 - **Source Bundle** - `livestack-hightech.zip`

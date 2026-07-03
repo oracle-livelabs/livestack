@@ -1,0 +1,13 @@
+center_id,center_name,center_type,address_line1,city,state_province,postal_code,country,latitude,longitude,capacity_units,current_load_pct,is_active,operating_hours,created_at
+1,Detroit Final Assembly Plant,distribution,,Warren,MI,48093,US,42.5145,-83.0147,420000,0,1,06:00-22:00,2026-06-29T21:44:56Z
+2,Ontario Electronics Distribution Hub,warehouse,,Ontario,CA,91761,US,34.0633,-117.6509,360000,0,1,06:00-22:00,2026-06-29T21:44:56Z
+3,Joliet Midwest Fabrication Center,distribution,,Joliet,IL,60435,US,41.525,-88.0817,280000,0,1,06:00-22:00,2026-06-29T21:44:56Z
+4,Dallas Mobility Components Plant,warehouse,,Lancaster,TX,75134,US,32.5921,-96.7561,255000,0,1,06:00-22:00,2026-06-29T21:44:56Z
+5,Atlanta Flexible Assembly Hub,distribution,,Union City,GA,30291,US,33.5871,-84.5421,300000,0,1,06:00-22:00,2026-06-29T21:44:56Z
+6,Seattle Sensor Calibration Cell,micro,,Kent,WA,98032,US,47.3809,-122.2348,125000,0,1,06:00-22:00,2026-06-29T21:44:56Z
+7,Miami Aftermarket Parts Hub,distribution,,Hialeah,FL,33012,US,25.8576,-80.2781,175000,0,1,06:00-22:00,2026-06-29T21:44:56Z
+8,Denver MRO Supply Warehouse,warehouse,,Aurora,CO,80011,US,39.7294,-104.8319,160000,0,1,06:00-22:00,2026-06-29T21:44:56Z
+9,Phoenix Injection Molding Plant,warehouse,,Goodyear,AZ,85338,US,33.4353,-112.3577,230000,0,1,06:00-22:00,2026-06-29T21:44:56Z
+10,Newark Precision Prototype Cell,micro,,Newark,NJ,07102,US,40.7357,-74.1724,90000,0,1,06:00-22:00,2026-06-29T21:44:56Z
+11,Houston Powertrain Components Hub,distribution,,Missouri City,TX,77459,US,29.6186,-95.5377,240000,0,1,06:00-22:00,2026-06-29T21:44:56Z
+12,Bay Area Advanced Materials Cell,micro,,Fremont,CA,94538,US,37.5485,-121.9886,105000,0,1,06:00-22:00,2026-06-29T21:44:56Z

@@ -1,0 +1,123 @@
+volumes:
+  oracle-data:
+  ords-config:
+  ollama-models:
+
+services:
+  db:
+    hostname: db
+    image: ${ORACLE_DB_IMAGE:-container-registry.oracle.com/database/free:23.26.1.0}
+    environment:
+      ORACLE_PWD: ${ORACLE_PWD:-oracle}
+      ORACLE_CHARACTERSET: ${ORACLE_CHARACTERSET:-AL32UTF8}
+      ORACLE_USER: ${ORACLE_USER:-LIVESTACK}
+      APP_SCHEMA_PASSWORD: ${APP_SCHEMA_PASSWORD:-livestackrulez!}
+      ONNX_MODEL_FILENAME: ${ONNX_MODEL_FILENAME:-all_MiniLM_L12_v2.onnx}
+      ONNX_MODEL_URL: ${ONNX_MODEL_URL:-https://adwc4pm.objectstorage.us-ashburn-1.oci.customer-oci.com/p/eLddQappgBJ7jNi6Guz9m9LOtYe2u8LWY19GfgU8flFK4N9YgP4kTlrE9Px3pE12/n/adwc4pm/b/OML-Resources/o/all_MiniLM_L12_v2.onnx}
+      ONNX_MODEL_SHA256: ${ONNX_MODEL_SHA256:-3929907d138051f818619fce3ba054185f748f2739d7a4dbc26e2502dd2499ea}
+      ENABLE_SELECT_AI: ${ENABLE_SELECT_AI:-false}
+      OCI_COMPARTMENT_ID: ${OCI_COMPARTMENT_ID:-}
+      OCI_CRED_NAME: ${OCI_CRED_NAME:-}
+    ports:
+      - "${DBPORT:-1521}:1521"
+    volumes:
+      - oracle-data:/opt/oracle/oradata
+      - ./db:/workspace/app/db:ro,z
+      - ./scripts/bootstrap_db.sh:/opt/oracle/scripts/startup/20-bootstrap_db.sh:ro,z
+    healthcheck:
+      test: ["CMD-SHELL", "[ \"$$(cat /opt/oracle/oradata/.app_schema_bootstrap_done 2>/dev/null)\" = 'READY:2026.07.01.1' ] && echo 'SELECT 1 FROM dual;' | sqlplus -L -s system/$${ORACLE_PWD:-oracle}@localhost:1521/FREEPDB1 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 40
+      start_period: 180s
+    restart: unless-stopped
+
+  ords:
+    hostname: ords
+    image: ${ORDS_IMAGE:-container-registry.oracle.com/database/ords:latest}
+    environment:
+      CONN_STRING: ${CONN_STRING:-db:1521/FREEPDB1}
+      DBHOST: ${DBHOST:-db}
+      DBPORT: ${DBPORT:-1521}
+      DBSERVICENAME: ${DBSERVICENAME:-FREEPDB1}
+      ORACLE_PWD: ${ORACLE_PWD:-oracle}
+      ORACLE_USER: ${ORACLE_USER:-LIVESTACK}
+    ports:
+      - "${ORDS_PORT:-8181}:8080"
+    volumes:
+      - ords-config:/etc/ords/config
+      - ./scripts/enable_ords_schema.sh:/ords-entrypoint.d/20-enable_app_schema.sh:ro,z
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:8080/ords/ || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 20
+      start_period: 120s
+    restart: unless-stopped
+
+  ollama:
+    hostname: ollama
+    image: ${OLLAMA_IMAGE:-docker.io/ollama/ollama:latest}
+    environment:
+      OLLAMA_HOST: ${OLLAMA_HOST:-0.0.0.0:11434}
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-llama3.2}
+    entrypoint: ["/bin/bash", "/pull_ollama.sh"]
+    ports:
+      - "${OLLAMA_PORT:-11434}:11434"
+    volumes:
+      - ollama-models:/root/.ollama
+      - ./scripts/pull_ollama.sh:/pull_ollama.sh:ro,z
+    healthcheck:
+      test: ["CMD-SHELL", "OLLAMA_HOST=http://127.0.0.1:11434 ollama show \"$${OLLAMA_MODEL:-llama3.2}\" >/dev/null 2>&1"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
+    restart: unless-stopped
+
+  app:
+    hostname: app
+    build:
+      context: .
+      dockerfile: Containerfile
+    image: ${APP_IMAGE:-26ai-manufacturing-app:latest}
+    environment:
+      NODE_ENV: ${NODE_ENV:-production}
+      PORT: ${PORT:-3001}
+      FRONTEND_URL: ${FRONTEND_URL:-http://localhost:8505}
+      ORACLE_USER: ${ORACLE_USER:-LIVESTACK}
+      APP_SCHEMA_PASSWORD: ${APP_SCHEMA_PASSWORD:-livestackrulez!}
+      ORACLE_CONNECTION_STRING: ${ORACLE_CONNECTION_STRING:-db:1521/FREEPDB1}
+      ORACLE_POOL_MIN: ${ORACLE_POOL_MIN:-2}
+      ORACLE_POOL_MAX: ${ORACLE_POOL_MAX:-10}
+      ORACLE_POOL_INCREMENT: ${ORACLE_POOL_INCREMENT:-1}
+      OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-http://ollama:11434}
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-llama3.2}
+      DEMO_USAGE_COUNTER_PAR_URL: ${DEMO_USAGE_COUNTER_PAR_URL:-}
+      DEMO_USAGE_COUNTER_PREFIX: ${DEMO_USAGE_COUNTER_PREFIX:-manufacturing-demo-usage/events}
+      DEMO_USAGE_COUNTER_DEMO_ID: ${DEMO_USAGE_COUNTER_DEMO_ID:-manufacturing}
+      DEMO_USAGE_COUNTER_TIMEOUT_MS: ${DEMO_USAGE_COUNTER_TIMEOUT_MS:-3000}
+      DEMO_USAGE_COUNTER_ENABLED: ${DEMO_USAGE_COUNTER_ENABLED:-}
+    ports:
+      - "${APP_PORT:-8505}:3001"
+    depends_on:
+      db:
+        condition: service_healthy
+      ords:
+        condition: service_healthy
+      ollama:
+        condition: service_healthy
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "node -e \"require('http').get('http://127.0.0.1:3001/api/health', (res) => process.exit(res.statusCode === 200 ? 0 : 1)).on('error', () => process.exit(1))\""
+        ]
+      interval: 15s
+      timeout: 5s
+      retries: 15
+      start_period: 180s
+    restart: unless-stopped

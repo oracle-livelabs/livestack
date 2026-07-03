@@ -2,77 +2,74 @@
 
 ## Introduction
 
-**Customer Commitments** shows how commercial promises connect to the launch-risk story. The page can represent order promises, allocation reviews, **BOM** and capacity checks, shipment progress, service entitlements, warranty exposure, and route context from the same governed commitment record.
+**Customer Commitments** shows the commercial consequence of the launch constraint. Seer Tech can connect a product or supply issue to the enterprise buyer, commitment value, supply site, target date, actual completion status, and any cancellation reason.
 
-**Oracle AI Database** keeps each commitment on one governed platform while presenting it in the format each workflow needs. Relational data supports operations, **JSON Relational Duality** supports application workflows, and **Oracle Spatial** adds route context for fulfillment and service planning.
+The same governed commitment can be viewed as an operational row, an application-friendly JSON Relational Duality document, or a spatial fulfillment route. This keeps product operations, customer teams, and application developers aligned on one record.
 
 Estimated Time: **10 minutes**
 
-![Customer Commitments page with VPD banner, status filter, and commitment table](images/scene-7-customer-commitments.png)
+![Customer Commitments workspace with completion dates and cancellation context](images/scene-7-customer-commitments.png)
 
 ### Objectives
 
-In this scene, you will learn how one customer commitment can support order promising, supply operations, customer operations, application integration, and route context while avoiding disconnected copies of the same record.
+In this scene, you will learn how target and actual completion dates improve commitment triage, how cancellation reasons add business context, and how relational, JSON, and spatial views remain connected.
 
-## Task 1: Review the customer commitment workspace
+## Task 1: Review operational commitment dates
 
-Perform the following set of steps to establish customer impact: who is expecting supply, what status the commitment is in, which product or portfolio is affected, what value is involved, and which supply site is responsible:
+Start with the table as the customer-operations queue:
 
 1. Click **Customer Commitments** in the sidebar.
-2. Review the active user banner and VPD context.
-3. Review the status filter.
-4. Review the commitment table columns for commitment id, customer, location, status, item count, total value, source, supply site, and created time.
-5. Focus on a visible commitment such as **67187**, **69347**, or the first visible row when those examples are not present.
+2. Review the active user and Virtual Private Database access context.
+3. Compare commitment number, enterprise buyer, location, status, items, commitment total, source, and supply site.
+4. Review **Completion Dates**.
+5. Compare **Target**, **Actual**, and the secondary **Created** timestamp.
+6. Review **Cancellation Reason**.
 
-    ![Customer commitment table and status workspace highlighted](images/customer-commitment-workspace.png)
+    ![Customer commitment table with Completion Dates and Cancellation Reason highlighted](images/customer-commitment-workspace.png)
 
-Use visible rows to show how customer operations connect to the broader launch-risk story. A strategic account commitment, component allocation request, field service entitlement, or product availability promise can become part of the same governed operating picture.
+The **Target Completion Date** is the operational date the team is working toward. A completed commitment shows an **Actual Completion Date**. An active commitment shows **Pending**, which avoids implying that fulfillment has already occurred. Creation date remains visible for context but is secondary to target and actual completion.
 
-**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
+## Task 2: Inspect a cancelled commitment
 
-## Task 2: Inspect the relational commitment detail
+Use the status filter to understand why a commitment left the active queue:
 
-Perform the following set of steps to validate the commitment header, customer, line items, priority value, supply or logistics cost, and item-level information that operations teams need for follow-up:
+1. Open the status filter and select **Cancelled**.
+2. Review the cancellation reason in the table.
+3. Select a cancelled commitment.
+4. Review **Target Completion Date**, **Actual Completion Date**, and **Cancellation Reason** in the detail panel.
 
-1. Click a visible commitment row.
-2. Confirm the **Relational** tab is selected.
-3. Review customer, location, commitment value, supply or route cost, and line items when the detail panel loads.
+    ![Cancelled customer commitment with target date and cancellation reason highlighted](images/commitment-relational-detail.png)
 
-    ![Relational customer commitment detail highlighted](images/commitment-relational-detail.png)
+Cancellation reasons can include component shortage, customer configuration change, duplicate order, missed delivery date, expired pricing approval, or a delayed customer project. The reason is shown only when it is relevant. Cancelled commitments display **Not completed** rather than a misleading actual completion date.
 
-**Expected result:** The UI returns the same type of result shown here. Exact rows, scores, or counts may vary by dataset, so verify the current values and focus the explanation on the operational pattern.
+## Task 3: Compare the JSON Relational Duality document
 
-**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
+Review the same commitment in the document shape used by applications:
 
-## Task 3: Compare the JSON Duality View
+1. Select **JSON Duality View** in the expanded commitment panel.
+2. Review customer, status, value, source, target and actual delivery fields, demand score, and nested line items.
+3. Compare the JSON values with the relational detail.
 
-Perform the following set of steps to show that the same governed commitment can support both operations users and application teams without creating a separate document store:
+    ![JSON Relational Duality document for the selected commitment highlighted](images/commitment-json-duality.png)
 
-1. Click **JSON Duality View** in the expanded commitment panel.
-2. Review the source label for the customer commitment duality view.
-3. Review the JSON document for the selected commitment.
-4. Notice that the document should include identifiers, customer context, commitment status, commitment value, route or supply cost, demand score, created timestamp, and nested line items.
+The commitment is not copied into a separate document store. JSON Relational Duality exposes an application-friendly document over the same governed relational data.
 
-    ![JSON Relational Duality View for the selected customer commitment highlighted](images/commitment-json-duality.png)
+## Task 4: Review fulfillment-route context
 
-The key point is that the commitment is not copied into a separate document store. The same governed commitment can appear as operational detail or as a JSON document shape for applications.
+Connect the commitment to the supply path that must meet the target date:
 
-## Task 4: Review route context
+1. Select **Fulfillment Route**.
+2. Review the supply site and customer destination.
+3. Compare distance, estimated transit time, route cost, route status, and commitment progress.
+4. Relate the route to the capacity and allocation decision from the previous scene.
 
-Perform the following set of steps to connect the commitment to the supply site, customer destination, distance, travel time, route cost, route status, and commitment progress:
+    ![Fulfillment route for the selected customer commitment highlighted](images/commitment-route-context.png)
 
-1. Click **Fulfillment Route** in the expanded commitment panel.
-2. Review the route map, supply site, and customer location.
-3. Review distance, estimated transit, route cost, route status, and commitment progress.
-4. Review the Oracle Spatial SQL example.
-
-    ![Fulfillment route context for the selected customer commitment highlighted](images/commitment-route-context.png)
-
-The business value is that customer operations, supply execution, JSON application access, and spatial context stay connected to the same governed customer commitment.
+The decision from this scene is to quantify future exposure before more commitments move into exception or cancellation status. Continue to Predictive Product & Commitment Analytics.
 
 *You can move to the next scene.*
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-16
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-07-02
 - **Source Bundle** - `livestack-hightech.zip`

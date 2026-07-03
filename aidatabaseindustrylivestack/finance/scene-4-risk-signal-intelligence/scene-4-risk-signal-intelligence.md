@@ -12,7 +12,7 @@ Secure semantic search is difficult to implement when financial product data, co
 
 Estimated Time: **10 minutes**
 
-![Risk Signal Intelligence page with Financial Product and Exposure Intelligence Search and Regulatory Risk Activity Feed highlighted](images/regulatory-market-signals.png)
+![Risk Signal Intelligence page with Financial Product and Exposure Intelligence Search and Regulatory Risk Activity Feed](images/regulatory-market-signals.png)
 
 ### Objectives
 
@@ -21,6 +21,8 @@ In this scene, you will learn what finance decision the page supports, what evid
 ## Task 1: Review the Risk Signal Intelligence page
 
 Perform the following set of steps to show how risk and compliance users can search by risk intent, not only by exact product names, regulatory terms, or manually curated tags.
+
+![Risk Signal Intelligence page with product search and the regulatory risk activity feed](images/regulatory-market-signals.png)
 
 1. Click **Risk Signal Intelligence** in the sidebar.
 2. Review **Financial Product & Exposure Intelligence Search** at the top of the page. This section searches the financial product catalog by meaning, not only by exact keywords.
@@ -35,14 +37,14 @@ These embedded product and signal representations let finance users search by ri
 
 ## Task 2: Run Financial Product & Exposure Intelligence Search
 
-![Financial Product and Exposure Intelligence Search results for mortgage pre-approval risk](images/financial-product-risk-search-results.png)
+![Financial Product and Exposure Intelligence Search results for AML alerts tied to treasury transaction exposure](images/financial-product-risk-search-results.png)
 
 Perform the following set of steps to show how a vague risk question can become a ranked list of products and institutions that may need exposure review, underwriting-capacity checks, or deeper signal analysis.
 
-1. In **Financial Product & Exposure Intelligence Search**, click the demo query **mortgage pre-approval risk**.
+1. In **Financial Product & Exposure Intelligence Search**, click the demo query **AML alerts tied to treasury transaction exposure**.
 2. Review the returned product matches.
 
-The demo query is embedded at runtime and compared against financial product embeddings stored in Oracle AI Database. The results show ranked products, institution, category, exposure value, linked signal count, and AI match score. In the current live stack, the query returns **Mortgage Pre-Approval** from **NorthBridge Investments** first, with **$995K** exposure value, **18** linked signals, and an AI match score around **64%**.
+The demo query is embedded at runtime and compared against financial product embeddings stored in Oracle AI Database. The results show ranked products, institution, category, exposure value, linked signal count, and AI match score. In the current live stack, the query returns **Liquidity Investment Sweep** from **FraudGuard Operations** first, with **$210K** exposure value, **21** linked signals, and an AI match score around **51%**.
 
 **Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
 
@@ -58,7 +60,7 @@ Perform the following set of steps to see where risk attention is building acros
 2. Review the default feed. Each bulletin shows signal source, severity, timestamp, monitored exposure, AI confidence, signal text, exposure impact, escalated cases, active investigations, reviewed events, and AI risk score.
 3. Use the severity, signal source, or risk category filters if you want to narrow the feed.
 
-This section helps the user monitor where risk attention is building. For example, the live feed includes high-severity bulletins such as **AML Screening Package Series C** at **Clearwater Credit Union** and treasury onboarding activity tied to exposure thresholds.
+This section helps the user monitor where risk attention is building. In the current live stack, the first bulletin is from **Market Activity Monitor - Payments 07** and references **Auto Loan Digital Offer Series C** and a **NorthBridge Investments** documentation review. It shows **$8.8M** monitored exposure, risk severity **92**, AI confidence **97.82**, and AI risk score **78**.
 
 A high-severity bulletin can indicate a regulatory obligation, fraud workflow, product exposure change, or service-capacity issue worth investigating.
 
@@ -76,7 +78,7 @@ The result view changes from the default feed to vector search results for the q
 
 This shows how Oracle AI Database can search unstructured regulatory and market language semantically while still keeping the search tied to governed financial product and exposure data.
 
-In the current live stack, the query returns **AML screening update affects Fraud Monitoring Add-On; Clearwater Credit Union case review volume expected to increase** from **Market Activity Monitor - Payments 05** with an AI match score around **67%**.
+In the current live stack, the query returns **AML screening update affects Fraud Monitoring Add-On; Clearwater Credit Union case review volume expected to increase** from **Market Activity Monitor - Payments 05** with an AI match score around **67.3%**.
 
 **Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
 
@@ -84,4 +86,4 @@ In the current live stack, the query returns **AML screening update affects Frau
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-28
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-29
