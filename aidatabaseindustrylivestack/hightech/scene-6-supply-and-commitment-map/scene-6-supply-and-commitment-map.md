@@ -2,11 +2,11 @@
 
 ## Introduction
 
-The **Supply & Commitment Map** helps teams decide where fabs, contract manufacturing sites, supplier lanes, channel inventory buffers, customer commitment destinations, service regions, and order-promising decisions intersect.
+The **Supply & Commitment Map** helps teams see where fabs, contract manufacturing sites, supplier lanes, channel inventory buffers, customer destinations, service regions, and order-promising decisions intersect.
 
 The page turns location context into an operating decision across semiconductor manufacturing, electronics manufacturing, component allocation, customer commitments, service logistics, and field quality workflows.
 
-Location-aware decisions are difficult when supply sites, customer destinations, route commitments, service zones, capacity constraints, and demand regions live outside the operational data platform. Oracle AI Database keeps spatial geometry and operational records together so the map can support order promising, allocation, service coverage, and supply-risk decisions.
+Location-aware decisions are difficult when supply sites, customer destinations, route commitments, service zones, capacity constraints, and demand regions live outside the operational data platform. **Oracle AI Database** keeps spatial geometry and operational records together, so map context can lead directly to supply and commitment decisions.
 
 Estimated Time: **10 minutes**
 
@@ -40,7 +40,7 @@ Perform the following set of steps to compare different High Tech operating ques
 3. Review how the map changes as layers are enabled or disabled.
 4. Use the spatial attribution badge to explain that Oracle Spatial stores and serves the geometry used by the map.
 
-The layer controls let different users answer different operating questions, such as which Bay Area commitments depend on a silicon allocation center, which contract manufacturing site is close enough to protect an order promise, or which service region overlaps with field quality exposure.
+The layer controls help different users answer different operating questions: which commitments depend on a silicon allocation center, which manufacturing site can protect an order promise, or which service region overlaps with emerging demand.
 
 ## Task 3: Compare site data with the map
 
@@ -56,7 +56,7 @@ Perform the following set of steps to connect visual location context with concr
 
     ![Capacity alerts for component shortages and demand volatility highlighted](images/capacity-priorities.png)
 
-The site table and alerts turn spatial evidence into concrete supply, manufacturing, and customer-commitment actions. A supply leader can move from "shortage alerts are high" to the facility, product, route, or commitment queue that needs review.
+The site table and alerts turn spatial evidence into concrete supply, manufacturing, and customer-commitment actions. A supply leader can move from the broad signal that shortage alerts are high to the facility, product, route, or commitment queue that needs review.
 
 The business value is that teams can make the decision from connected, governed data. Oracle AI Database provides the shared foundation that keeps operational data, spatial analysis, analytics, and AI workflows aligned.
 

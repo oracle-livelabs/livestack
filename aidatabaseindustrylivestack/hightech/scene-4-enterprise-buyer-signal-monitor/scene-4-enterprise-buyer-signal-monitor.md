@@ -4,9 +4,9 @@
 
 The **Enterprise Buyer Signal Monitor** helps product and operations teams understand why the launch needs attention before the risk is obvious in customer commitments alone.
 
-The page connects component shortages, supplier risk, demand volatility, channel signals, product telemetry, field quality, warranty patterns, engineering change exposure, support trends, and customer commitment context. It uses Oracle AI Vector Search to embed a product-signal question and compare it with High Tech product and signal vectors, then combines semantic matches with operational signal cards.
+The page connects component shortages, supplier risk, demand volatility, channel signals, product telemetry, field quality, warranty patterns, engineering change exposure, support trends, and customer commitment context. **Oracle AI Vector Search** helps operators find related signals even when the wording differs across source records.
 
-Semantic search is difficult when supplier notes, partner updates, product telemetry, warranty cases, support tickets, product descriptions, embeddings, search indexes, and access policies live in separate systems. Oracle AI Database keeps vector search close to governed operational data so the search stays tied to live schema context and database access policies.
+Semantic search is difficult when supplier notes, partner updates, product telemetry, warranty cases, support tickets, embeddings, search indexes, and access policies live in separate systems. **Oracle AI Database** keeps vector search close to governed operational records, so teams can search by operating intent without breaking the data trail.
 
 Estimated Time: **10 minutes**
 
@@ -14,7 +14,7 @@ Estimated Time: **10 minutes**
 
 ### Objectives
 
-In this scene, you will learn how vector search connects product, supply, quality, service, and customer commitment signals to the High Tech records that need follow-up.
+In this scene, you will learn how vector search helps operators connect product, supply, quality, service, and customer commitment signals to the **High Tech** records that require investigation.
 
 ## Task 1: Review the signal feed
 
@@ -28,7 +28,7 @@ Perform the following set of steps to see how supply, demand, quality, warranty,
 
     ![Signal Summary panel highlighted with High Tech signal context](images/signal-feed-overview.png)
 
-Use this opening view as the bridge between raw product text and governed High Tech intelligence. The same search pattern can support semiconductor manufacturing, supply chain resilience, product lifecycle management, connected products, quality and warranty, service operations, and customer commitments.
+Use this opening view as the bridge between raw product text and governed **High Tech** intelligence. The same search pattern can support semiconductor manufacturing, supply chain resilience, product lifecycle management, connected products, quality and warranty, service operations, and customer commitment workflows.
 
 ## Task 2: Run semantic product search
 
@@ -42,7 +42,7 @@ Perform the following set of steps to show how an operator can search by operati
 
 4. Use visible examples such as **AI Accelerator Module**, **AI Edge Gateway Reference Kit**, **Component Allocation Optimizer**, **Component Shortage Scenario Lab**, or **Wafer Starts Commit Planner** to explain semantic matching across product and supply records.
 
-The visible Oracle evidence is the vector path: the query is embedded, compared with product vectors using cosine distance, and returned with model and dimension metadata.
+The visible Oracle evidence is the vector path: the query is embedded, compared with product vectors using cosine distance, and returned with model and dimension metadata so the search result remains explainable.
 
 **Notes:**
 - Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
@@ -58,7 +58,7 @@ Perform the following set of steps to identify affected products, severity, evid
 
     ![Matched High Tech signal cards and action chips highlighted](images/matched-signal-cards.png)
 
-The business value is that teams can make the decision from connected, governed data. Oracle AI Database provides the shared foundation that keeps product data, signal search, analytics, and AI workflows aligned.
+The business value is that teams can make decisions from connected, governed data. **Oracle AI Database** provides the shared foundation that keeps product data, signal search, analytics, and AI workflows aligned.
 
 *You can move to the next scene.*
 

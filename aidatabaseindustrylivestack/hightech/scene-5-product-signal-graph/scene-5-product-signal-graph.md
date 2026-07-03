@@ -2,9 +2,9 @@
 
 ## Introduction
 
-The **Product Signal Graph** helps users understand relationships that are hard to see in isolated rows. The page connects product lifecycle records, suppliers, bill of materials dependencies, launch blockers, fab capacity, wafer lots, test programs, quality cases, warranty cohorts, service operations, order promises, and customer commitments so teams can follow a product issue as a connected operating path.
+The **Product Signal Graph** helps users understand relationships that are difficult to see in isolated rows. It connects product lifecycle records, suppliers, **BOM** dependencies, launch blockers, fab capacity, wafer lots, test programs, quality cases, warranty exposure, service activity, and customer commitments.
 
-High Tech teams struggle when the information needed for one decision lives in separate PLM, MES, ERP, quality, service, warranty, and customer systems. Oracle AI Database helps answer relationship questions across structured, graph, vector, spatial, and operational data so teams can reason across the product lifecycle instead of one record at a time.
+**High Tech** teams struggle when the evidence needed for one decision is split across **PLM**, **MES**, **ERP**, quality, service, warranty, and customer systems. **Oracle AI Database** helps answer relationship questions across structured, graph, vector, spatial, and operational data from the same governed foundation.
 
 Estimated Time: **10 minutes**
 
@@ -26,7 +26,7 @@ Perform the following set of steps to see how the product graph connects records
 
     ![Product Signal Graph controls and metrics highlighted](images/graph-workspace-controls.png)
 
-The graph should include High Tech relationships such as **blocks commitment**, **changes BOM**, **manufactured at**, **requires component**, **impacts yield**, **triggers warranty exposure**, **mitigated by ECO**, **feeds order promise**, **consumes wafer starts**, and **backed by capacity reservation** when the live dataset exposes those paths.
+The graph should include **High Tech** relationships such as commitment blockers, **BOM** changes, manufacturing sites, component dependencies, yield impact, warranty exposure, **ECO** mitigation, order promise support, wafer-start consumption, and capacity reservations.
 
 **Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
 
@@ -41,7 +41,7 @@ Perform the following set of steps to show how connected evidence can reveal sha
 
     ![Product lifecycle node example highlighted in the graph workspace](images/product-lifecycle-node-example.png)
 
-Use this example to show why graph context matters: a component shortage, wafer-start constraint, ECO delay, quality signal, customer commitment, and service exposure are more informative together than as isolated records.
+Use this example to show why graph context matters: a component shortage, wafer-start constraint, **ECO** delay, quality signal, customer commitment, and service exposure are more useful together than as isolated records.
 
 ## Task 3: Run the graph query explorer
 
@@ -56,7 +56,7 @@ Perform the following set of steps to explain how the graph remains an analysis 
 
     ![Graph query results and executed SQL highlighted](images/graph-query-results.png)
 
-The query explorer makes the Oracle graph pattern explainable. The presenter can show that the graph is not a static illustration; it is backed by queryable product lifecycle relationships over governed Oracle records.
+Use the query explorer to make the Oracle graph pattern tangible. The graph is not a static visualization; it is a queryable view of product lifecycle relationships built on governed Oracle records.
 
 The business value is that teams can make the decision from connected, governed data. **Oracle AI Database** provides the shared foundation that keeps operational data, analytics, graph evidence, and AI workflows aligned.
 

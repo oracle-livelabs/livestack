@@ -2,9 +2,9 @@
 
 ## Introduction
 
-**Customer Commitments** shows how commercial promises connect to the launch-risk story. The page can represent a wide range of High Tech commitments, including order promises, allocation reviews, BOM and capacity checks, shipment progress, service entitlements, warranty exposure, and strategic customer follow-up.
+**Customer Commitments** shows how commercial promises connect to the launch-risk story. The page can represent order promises, allocation reviews, **BOM** and capacity checks, shipment progress, service entitlements, warranty exposure, and route context from the same governed commitment record.
 
-**Oracle AI Database** keeps each commitment in a single governed platform while presenting it in the format each workflow needs. Relational data supports operational processing, JSON Relational Duality supports application workflows, and Oracle Spatial adds route context such as supply site, customer location, distance, fulfillment window, and route status.
+**Oracle AI Database** keeps each commitment on one governed platform while presenting it in the format each workflow needs. Relational data supports operations, **JSON Relational Duality** supports application workflows, and **Oracle Spatial** adds route context for fulfillment and service planning.
 
 Estimated Time: **10 minutes**
 
@@ -12,7 +12,7 @@ Estimated Time: **10 minutes**
 
 ### Objectives
 
-In this scene, you will learn how one customer commitment can support order promising, supply operations, customer operations, application integration, and route context without creating disconnected copies of the record.
+In this scene, you will learn how one customer commitment can support order promising, supply operations, customer operations, application integration, and route context while avoiding disconnected copies of the same record.
 
 ## Task 1: Review the customer commitment workspace
 
@@ -26,7 +26,7 @@ Perform the following set of steps to establish customer impact: who is expectin
 
     ![Customer commitment table and status workspace highlighted](images/customer-commitment-workspace.png)
 
-Use visible rows to explain how customer operations connect to the broader launch-risk story. A strategic account commitment, component allocation request, field service entitlement, or product availability promise can become part of the same governed operating picture.
+Use visible rows to show how customer operations connect to the broader launch-risk story. A strategic account commitment, component allocation request, field service entitlement, or product availability promise can become part of the same governed operating picture.
 
 **Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
 
@@ -41,6 +41,8 @@ Perform the following set of steps to validate the commitment header, customer, 
     ![Relational customer commitment detail highlighted](images/commitment-relational-detail.png)
 
 **Expected result:** The UI returns the same type of result shown here. Exact rows, scores, or counts may vary by dataset, so verify the current values and focus the explanation on the operational pattern.
+
+**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
 
 ## Task 3: Compare the JSON Duality View
 

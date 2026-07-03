@@ -2,9 +2,9 @@
 
 ## Introduction
 
-The **AI Agent Console** shows how AI assistance can support High Tech operating decisions without becoming a black box. The page positions specialist agents as visible operating tools rather than generic chat responses.
+The **AI Agent Console** shows how AI assistance can support **High Tech** operating decisions without becoming a black box. Position the specialist agents as observable operating tools, not as generic chat responses.
 
-**Oracle AI Database** keeps the source data, SQL execution, PL/SQL tools, graph and spatial context, in-database analytics, and durable action logging connected to the same governed High Tech data foundation. The app orchestrates the agent workflow, Ollama provides local reasoning when available, and Oracle AI Database 26ai executes governed data operations and records action evidence.
+**Oracle AI Database** keeps source data, SQL execution, PL/SQL tools, graph and spatial context, in-database analytics, and durable action logging connected to the same governed **High Tech** data foundation. The app orchestrates the agent workflow while Oracle remains the governed source for evidence and execution.
 
 Estimated Time: **10 minutes**
 
@@ -12,7 +12,7 @@ Estimated Time: **10 minutes**
 
 ### Objectives
 
-In this scene, you will learn how specialist agents convert product, capacity, signal, quality, and commitment findings into auditable operating actions.
+In this scene, you will learn how specialist agents turn product, capacity, signal, quality, and commitment findings into auditable operating actions.
 
 ## Task 1: Review the agent console workspace
 
@@ -24,7 +24,7 @@ Perform the following set of steps to review the agent console as an operational
 4. Review **Recent Agent Actions** below the workspace.
 5. Focus on a capacity or commitment example such as **Which high-tech products have low capacity?**
 
-Use this opening view to explain that the page is an operational agent console. The user can see routing, tools, results, confidence, fallback status, and action history, not just a chat response.
+Use this opening view to establish the page as an operational agent console. The user can see routing, tools, results, confidence, fallback status, and action history, rather than only a chat response.
 
 ![AI Agent Console overview with example questions and recent actions](images/scene-10-ai-agent-console.png)
 
@@ -42,7 +42,7 @@ Perform the following set of steps to show how the agent summarizes product capa
 
     ![AI Agent Console product capacity response highlighted](images/agent-capacity-response.png)
 
-**Expected result:** The response should summarize constrained products or capacity signals using Oracle-backed product and supply evidence. It should connect the answer to product availability, supply sites, shortage alerts, customer commitments, and next operating steps when those records are present in the live dataset.
+**Expected result:** The response summarizes constrained products or capacity signals using Oracle-backed product and supply evidence. It should connect the answer to product availability, supply sites, shortage alerts, customer commitments, and next operating actions.
 
 If the runtime shows a timeout or fallback, use it as an observability example: the operator can see whether the answer came from a complete LLM/tool path or from Oracle SQL and PL/SQL fallback evidence.
 
@@ -59,7 +59,7 @@ Perform the following set of steps to show that AI-assisted actions do not disap
 
     ![Recent agent action audit trail highlighted](images/agent-action-audit-trail.png)
 
-The governance point is that agent decisions should remain observable after the conversation, with action history available for supply review, product operations, customer follow-up, quality escalation, warranty response, service operations, and continuous improvement.
+The governance point is that agent decisions should remain observable after the conversation. Action history should be available for supply review, product operations, customer follow-up, quality escalation, warranty response, service operations, and continuous improvement.
 
 The business value is that teams can make the decision from connected, governed data. **Oracle AI Database** provides the shared foundation that keeps operational data, analytics, graph evidence, SQL tools, PL/SQL actions, and AI workflows aligned.
 

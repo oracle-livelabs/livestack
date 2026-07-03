@@ -4,9 +4,9 @@
 
 The **Product & Commitment Control Tower** helps product, supply, manufacturing, quality, and customer operations leaders answer the first launch-risk question: *Where does the product portfolio need attention right now?*
 
-The page brings together customer commitments, commitment value, shortage and quality signals, demand volatility, signal velocity, product portfolio value, watched products, and agent activity so teams can decide where to investigate first.
+The page brings together customer commitments, shortage and quality signals, demand volatility, product portfolio value, watched products, and agent activity so teams can quickly decide where to investigate first.
 
-Dashboards like this are difficult when customer commitments, product signals, supplier risk, fab capacity, warranty indicators, field quality, and agent actions live in different systems. Oracle AI Database helps keep operational, analytical, JSON, in-memory, and AI-ready data close to the same governed foundation.
+Dashboards like this are difficult when customer commitments, product signals, supplier risk, fab capacity, warranty indicators, field quality, and agent actions are split across systems. **Oracle AI Database** helps keep operational, analytical, JSON, in-memory, vector, graph, spatial, ML, and AI workflows aligned on governed data.
 
 Estimated Time: **10 minutes**
 
@@ -14,7 +14,7 @@ Estimated Time: **10 minutes**
 
 ### Objectives
 
-In this scene, you will learn how a High Tech control tower detects launch and commitment pressure and hands the investigation to signals, graph, spatial, analytics, Ask Data, and agent workflows.
+In this scene, you will learn how a **High Tech** control tower identifies launch and commitment pressure, then hands the investigation to signal, graph, spatial, analytics, **Ask Data**, and agent workflows.
 
 **Note:** Oracle Internals is collapsed by default. Expand it after the business flow is clear to connect the visible outcome to the database capabilities behind the page.
 
@@ -45,7 +45,7 @@ Perform the following set of steps to understand where operational importance an
 
     ![Signal velocity time controls and product value breakdown highlighted](images/signal-velocity-and-product-value.png)
 
-The key business story is that High Tech users need to know where value, volume, component pressure, quality risk, and customer exposure are moving together before a launch issue becomes a customer escalation.
+The key business story is that **High Tech** users need to see where value, volume, component pressure, quality risk, and customer exposure are converging before a launch issue becomes a customer escalation.
 
 ## Task 3: Review watched products and commitments
 
@@ -58,7 +58,7 @@ Perform the following set of steps to move from dashboard-level pressure to the 
 
     ![High-demand product table with search and watched product rows highlighted](images/watched-products-and-commitments.png)
 
-The watched product table turns the KPI story into operating decisions. A High Tech leader can move from "demand volatility is high" to the product, component, supplier, fab, service program, or customer commitment that needs review.
+The watched product table turns the KPI story into operating decisions. A **High Tech** leader can move from the broad signal that demand volatility is high to the specific product, component, supplier, fab, service program, or customer commitment that needs review.
 
 **Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
 

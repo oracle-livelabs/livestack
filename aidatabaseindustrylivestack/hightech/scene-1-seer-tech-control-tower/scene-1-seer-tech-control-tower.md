@@ -4,7 +4,7 @@
 
 The **Seer Tech Control Tower** establishes the demo story: a High Tech product launch is under pressure from demand volatility, component availability, fab and contract manufacturing capacity, product lifecycle changes, field quality signals, warranty exposure, and customer commitments.
 
-Use this scene to make clear that the LiveStack is broader than one product dashboard. Semiconductor manufacturing, electronics manufacturing, PLM, supply chain, service, warranty, connected-device, and customer operations all appear as parts of one operating picture.
+Use this scene to show that the **LiveStack** is broader than a single product dashboard. It introduces the full launch-risk story across semiconductor manufacturing, electronics manufacturing, product lifecycle management, supply chain, service, warranty, connected-device, and customer operations.
 
 Estimated Time: **7 minutes**
 
@@ -12,7 +12,7 @@ Estimated Time: **7 minutes**
 
 ### Objectives
 
-In this scene, you will learn how the demo story is organized, which High Tech operating domains are represented, and how the rest of the runbook follows one launch-risk story through Oracle AI Database capabilities.
+In this scene, you will learn how the demo story is organized, which **High Tech** operating domains are represented, and how the remaining scenes follow one launch-risk scenario through the **Oracle AI Database** capabilities.
 
 ## Task 1: Review the lifecycle story
 
@@ -41,7 +41,7 @@ Each page is a different operating lens on the same launch-risk story: the contr
 
 ## Task 3: Continue the demo
 
-After the audience understands the story, continue to the data foundation page to load or verify the governed baseline.
+Perform the following set of steps to continue the demo and move the audience into the governed **High Tech** data foundation:
 
 1. Click **Start the demo**.
 

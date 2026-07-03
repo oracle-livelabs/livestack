@@ -2,9 +2,9 @@
 
 ## Introduction
 
-**Use Your Own Product Data** shows how a team can map the LiveStack pattern to its own High Tech operating data while preserving the seeded Seer Tech baseline as a known-good demo state.
+**Use Your Own Product Data** shows how teams can apply the **LiveStack** pattern to their own **High Tech** operating data while preserving the seeded Seer Tech baseline as a known-good demo state.
 
-This workflow matters because customers may bring product portfolio, supplier, component, BOM, PLM, ECO, manufacturing, capacity, customer commitment, quality, warranty, connected-device, service, and support data. The dataset tool makes the import path explicit while keeping destructive actions controlled and reinforcing that demo uploads should use synthetic, de-identified, or anonymized data.
+This workflow matters because customers may bring product portfolio, supplier, component, **BOM**, **PLM**, **ECO**, manufacturing, capacity, commitment, quality, warranty, connected-device, service, and support data. The dataset tool makes the import path explicit, so teams can validate replacement data before changing the demo state.
 
 Estimated Time: **8 minutes**
 
@@ -12,7 +12,7 @@ Estimated Time: **8 minutes**
 
 ### Objectives
 
-In this scene, you will learn how the dataset tool supports template ZIP download, completed ZIP upload/replace, validation, restore-demo preview, restore-demo execution, active dataset state, and data-safety expectations.
+In this scene, you will learn how the dataset tool supports template ZIP download, completed ZIP upload or replacement, validation, restore-demo preview, restore-demo execution, active dataset state, and data-safety expectations.
 
 Use synthetic, de-identified, or anonymized data for workshop uploads. Do not upload confidential product, customer, supplier, warranty, support, employee, or export-controlled information into a shared demo environment.
 
@@ -26,7 +26,7 @@ Perform the following set of steps to open the dataset workflow from the app she
 
     ![Use Your Own Product Data entry control and modal highlighted](images/open-dataset-tool.png)
 
-Use this first view to explain that the dataset tool is part of the demo workflow, not a separate admin-only appendix. The seeded High Tech demo dataset stays active by default, and replacement data goes through a validate-and-upload path.
+Use this first view to explain that the dataset tool is part of the demo workflow, not a separate admin-only appendix. The seeded **High Tech** demo dataset stays active by default, and replacement data follows a validate-and-upload path.
 
 ## Task 2: Review the template and upload workflow
 
@@ -39,7 +39,7 @@ Perform the following set of steps to explain what a customer would replace when
 
     ![Template download and completed ZIP upload workflow highlighted](images/template-and-upload-workflow.png)
 
-The key point is that customers can map their own terminology to the same Oracle AI Database capability pattern without changing the runbook story. A customer's product hierarchy, component names, supplier sites, commitment statuses, or quality codes can fit the same guided flow when the data shape is preserved.
+The key point is that customers can map their own terminology to the same **Oracle AI Database** capability pattern without changing the runbook story. A customer's product hierarchy, component names, supplier sites, commitment statuses, or quality codes can fit the same governed workflow.
 
 ## Task 3: Preview or restore the seeded dataset
 

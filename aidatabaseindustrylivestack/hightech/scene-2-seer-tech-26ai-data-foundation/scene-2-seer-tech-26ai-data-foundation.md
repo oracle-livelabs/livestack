@@ -4,9 +4,9 @@
 
 The **Seer Tech 26ai Data Foundation** prepares the trusted High Tech operating baseline used across the demo. Whether the data is loaded or restored, every subsequent screen starts from the same governed records.
 
-That baseline includes product portfolios, semiconductor manufacturing records, fab and wafer-start context, yield-improvement signals, PLM records, design-to-manufacturing handoff evidence, electronics manufacturing capacity, contract manufacturing capacity, engineering change orders, bill of materials dependencies, component shortage and supplier-risk signals, demand volatility, channel inventory, customer commitments, order-promising dates, connected-product telemetry, field quality, warranty analytics, support operations, spatial allocation data, vector embeddings, ML outputs, and agent audit history.
+The baseline includes product portfolios, manufacturing capacity, wafer-start context, yield signals, **PLM** records, **BOM** dependencies, engineering change orders, supplier risk, customer commitments, quality and warranty records, connected-device telemetry, service operations, vectorized signals, graph relationships, spatial locations, model outputs, and agent audit records.
 
-This page makes clear that the runbook is a connected end-to-end workflow, not a series of isolated mini-demos. The same Oracle-backed records power the control tower, vector search, product signal graph, supply map, customer commitments, analytics, Ask Data, data import, and agent workflows.
+This page makes clear that the runbook is a connected workflow, not a set of isolated mini-demos. The same Oracle-backed records power the control tower, vector search, graph, supply map, customer commitments, analytics, **Ask Data**, data import, and AI agent workflows.
 
 Estimated Time: **8 minutes**
 
@@ -14,13 +14,13 @@ Estimated Time: **8 minutes**
 
 ### Objectives
 
-In this scene, you will confirm that the demo has a governed baseline for product portfolios, fab operations, component supply, customer commitments, lifecycle records, field quality, warranty, connected products, service operations, vector search, graph traversal, analytics, Ask Data, and agent workflows.
+In this scene, you will confirm that the demo has a governed baseline for the product, manufacturing, supply, customer commitment, lifecycle, quality, warranty, connected-product, service, vector search, graph, analytics, **Ask Data**, and agent workflows that follow.
 
 **Note:** Oracle Internals is collapsed by default. Expand it only after the business flow is clear so you can connect the visible data foundation to the database capabilities behind the page.
 
 ## Task 1: Restore and verify the demo dataset
 
-Start the demo by restoring the seeded High Tech baseline so the audience sees the database prepare the shared operating record before any scene depends on it:
+Perform the following set of steps to restore the seeded **High Tech** baseline and show the audience how the database prepares the shared operating record before any scene depends on it:
 
 1. From the welcome page, click **Start the demo**, or click **Seer Tech 26ai Data Foundation** in the sidebar.
 2. In **Prepare the Dataset**, click **Restore Demo Data** as the first live action.
@@ -50,7 +50,7 @@ The carousel should make the shared data model concrete: fab, supplier, BOM, NPI
 
 ## Task 3: Connect the foundation to the rest of the demo
 
-Use this page as the bridge into the operating story. The same governed foundation supports the control tower, enterprise buyer signal monitor, product signal graph, supply and commitment map, customer commitments, analytics, Ask Data, data import, and AI agent workflows.
+Perform the following set of steps to use the data foundation as the bridge into the operating story and connect it to the control tower, signal monitor, graph, map, commitments, analytics, **Ask Data**, data import, and AI agent workflows:
 
 1. Explain that the control tower will summarize the foundation as product-launch and customer-commitment indicators.
 2. Explain that vector search will connect supply, demand, quality, and service signals to affected products and commitments.
@@ -58,7 +58,7 @@ Use this page as the bridge into the operating story. The same governed foundati
 
     ![Data Foundation downstream handoff narrative highlighted](images/foundation-downstream-handoff.png)
 
-The business value is that teams can move from a single trusted data foundation to product-launch resilience, component availability, manufacturing coordination, customer commitment protection, quality and warranty follow-up, service operations, and AI-assisted decision-making.
+The business value is that teams can move from one trusted data foundation into product-launch resilience, component availability, manufacturing coordination, customer commitment protection, quality and warranty follow-up, service operations, and AI-assisted action without changing the underlying record of truth.
 
 *You can move to the next scene.*
 

@@ -2,9 +2,9 @@
 
 ## Introduction
 
-**Ask Seer Tech Data** helps users ask operational questions in plain language while keeping the answer path visible. Users can compare narrated answers, conversational responses, generated SQL, and returned rows across product portfolios, component supply, fab capacity, customer commitments, quality and warranty, service operations, connected-product telemetry, and agent audit data.
+**Ask Seer Tech Data** helps users ask operational questions in plain language while keeping the answer path visible. Users can compare narrated answers, conversational responses, generated SQL, and returned rows across product portfolios, component supply, fab capacity, customer commitments, quality records, warranty cases, service operations, and agent actions.
 
-Natural-language data access can create governance risk if the language model generates invalid SQL, references the wrong objects, hides the query path, or exposes more data than the user should see. Oracle AI Database keeps query execution grounded in the live High Tech schema while the UI shows the selected mode and generated SQL path.
+Natural-language data access can create governance risk if a model generates invalid SQL, references the wrong objects, hides the query path, or exposes more data than the user should see. **Oracle AI Database** keeps execution grounded in the live **High Tech** schema with visible SQL and governed access.
 
 **Note:** Ollama provides the local AI runtime used for reasoning, while Oracle remains the governed source for data access and execution.
 
@@ -14,7 +14,7 @@ Estimated Time: **10 minutes**
 
 ### Objectives
 
-In this scene, you will learn how governed natural-language SQL can support High Tech operating questions without hiding the query path.
+In this scene, you will learn how governed natural-language SQL can support **High Tech** operating questions while keeping the query path visible.
 
 ## Task 1: Review the assistant workspace
 
@@ -28,7 +28,7 @@ Perform the following set of steps to show how High Tech users can ask questions
 
     ![Ask Seer Tech Data workspace with modes, schema metadata, and example questions](images/scene-9-ask-seer-tech-data.png)
 
-Use this opening view to explain that the assistant is not a generic chatbot. It is a governed High Tech data assistant that uses schema metadata, visible query modes, and Oracle-backed execution.
+Use this opening view to make the governance distinction clear: the assistant is not a generic chatbot; it uses schema metadata, visible query modes, and Oracle-backed execution to answer **High Tech** operating questions.
 
 ## Task 2: Use Explain mode for a narrated answer
 
@@ -96,7 +96,7 @@ Use the completed mode examples to explain the governance pattern behind the pag
 4. Oracle AI Database executes authorized SQL against the live schema.
 5. The UI returns visible SQL, rows, or a narrated answer depending on the selected mode.
 
-The business value is that product, manufacturing, supply, quality, service, and customer operations teams can move from a plain-English question to a governed operating decision without losing visibility into the query path.
+The business value is that product, manufacturing, supply, quality, service, and customer operations teams can turn a plain-English question into a governed operating decision while retaining visibility into the query path.
 
 This pattern matters because teams want faster answers, but they also need governed access, visible query logic, and a trusted execution layer.
 

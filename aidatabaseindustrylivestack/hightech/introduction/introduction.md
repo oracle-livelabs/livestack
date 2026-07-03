@@ -4,11 +4,11 @@
 
 High Tech organizations coordinate semiconductor manufacturing, fab capacity, product lifecycle management, component supply, customer commitments, field quality, warranty exposure, connected-product telemetry, service operations, and AI-assisted decisions while keeping operational data governed. Those teams need the same trusted operating picture when a product launch, supplier constraint, quality signal, and customer promise collide.
 
-The **Seer Tech Product Intelligence LiveStack** demonstrates how **Oracle AI Database 26ai** can bring those High Tech workflows together on one governed data platform. The demo follows a launch-at-risk story that connects products such as **AI Accelerator Module**, **AI Edge Gateway Reference Kit**, **Component Allocation Optimizer**, **Connected Device Health Twin**, **Silicon Lot Genealogy Viewer**, **Wafer Probe Exception Detector**, **Wafer Starts Commit Planner**, **Field Failure Pattern Detector**, and **Customer Commitment Console** with customer commitments, supply sites, product signals, graph relationships, model outputs, and agent actions.
+The **Seer Tech Product Intelligence LiveStack** shows how **Oracle AI Database 26ai** brings **High Tech** workflows together on one governed data platform. The demo follows a launch-at-risk story that connects product demand, component supply, fab capacity, customer commitments, quality signals, and AI-assisted action.
 
 The runbook is a story-led walkthrough, not a feature checklist. Each scene shows how relational transactions, JSON Relational Duality, property graph, Oracle Spatial, vector search, Oracle Machine Learning, natural-language SQL, PL/SQL tools, and auditable AI agent actions work against the same governed High Tech foundation.
 
-In the demo, Seer Tech uses Oracle AI Database to connect product portfolios, semiconductor manufacturing records, fab operations capacity, wafer-start and yield signals, bill of materials dependencies, engineering change orders, supplier risk, contract manufacturing capacity, channel inventory, customer commitments, connected-product telemetry, field quality cases, warranty analytics, service and support operations, spatial allocation data, predictive analytics, conversational data access, and agent-assisted operations.
+In the demo, Seer Tech uses **Oracle AI Database** to connect product portfolios, manufacturing capacity, wafer-start and yield signals, bill of materials dependencies, engineering change orders, supplier risk, customer commitments, quality records, warranty exposure, service operations, and AI agent actions.
 
 Estimated Workshop Time: **90 minutes**
 
@@ -18,7 +18,7 @@ Each scene is designed to take between **5 and 10 minutes**.
 
 ### Objectives
 
-In this LiveStack demo, you will learn how Oracle AI Database supports product-launch resilience, component availability, manufacturing and fab coordination, product lifecycle governance, customer commitment management, quality and warranty intelligence, predictive analytics, governed data questions, and AI-assisted operating action across a High Tech product organization.
+In this **LiveStack** demo, you will learn how **Oracle AI Database** supports product-launch resilience across component availability, manufacturing coordination, product lifecycle governance, customer commitment management, quality and warranty intelligence, predictive analytics, governed data questions, and AI-assisted operating action.
 
 ### Prerequisites
 

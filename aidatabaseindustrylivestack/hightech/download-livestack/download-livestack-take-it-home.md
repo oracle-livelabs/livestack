@@ -2,11 +2,11 @@
 
 ## Introduction
 
-This lab shows how to run the portable **Seer Tech High Tech Product Intelligence LiveStack** package in your own environment using Podman Compose.
+This lab shows technical users how to run the portable Seer Tech **High Tech** Product Intelligence **LiveStack** package in their own environment using **Podman Compose**.
 
-Use this appendix when you want to take the same High Tech product-launch story home: Oracle Database, ORDS, Ollama, and the Seer Tech application run together so the local environment can support the same product, manufacturing, supply, commitment, analytics, Ask Data, and agent scenes from the guided runbook.
+Use this appendix when you want to take the **High Tech** product-launch story home. **Oracle Database**, **ORDS**, **Ollama**, and the Seer Tech application run together so the local environment can support the same product, manufacturing, supply, commitment, analytics, **Ask Data**, and agent workflows.
 
-This guide is intended for technical users who can install Podman and run terminal commands. If you are new to containers, complete the Podman readiness checks before starting. If any readiness check fails, ask your workshop facilitator or system administrator for help before continuing.
+This guide is intended for technical users who can install **Podman** and run terminal commands. Users who are new to containers should complete the **Podman** readiness checks before starting and ask a workshop facilitator or system administrator for help if any check fails.
 
 Estimated Time: **30 minutes** for a local run, or **45 minutes** when deploying to an OCI Compute VM.
 
@@ -61,7 +61,7 @@ podman --version
 </copy>
 ```
 
-Expected result:
+**Expected result:**
 
 - The command prints a Podman version.
 
@@ -81,7 +81,7 @@ podman-compose version
 </copy>
 ```
 
-Expected result:
+**Expected result:**
 
 - One of the commands prints a compose version.
 
@@ -104,7 +104,7 @@ podman machine start
 </copy>
 ```
 
-Expected result:
+**Expected result:**
 
 - The Podman machine starts successfully.
 
@@ -124,17 +124,21 @@ If this test fails, fix Podman setup before continuing with LiveStack.
 
 ## Task 1: Download the portable package
 
+Perform the following set of steps to download the portable **LiveStack** package and make it available as livestack.zip:
+
 1. Download the LiveStack package using this [link](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/livestack-hightech.zip).
 
 2. Save or rename the file as `livestack.zip`.
 
-Expected result:
+**Expected result:**
 
 - You have `livestack.zip` available on your machine.
 
 ## Task 2: Prepare the working directory
 
-Do not extract or run the stack from your `Downloads` folder. Create a new empty working directory first. The package extracts its files into the current folder, so a clean directory keeps the LiveStack contents organized and avoids Podman issues caused by working from `Downloads`.
+Perform the following set of steps to prepare a clean working directory before extracting the package, rather than working from your Downloads folder:
+
+**Important:** Do not extract or run the stack from your `Downloads` folder. Create a new empty working directory first. The package extracts its files into the current folder, so a clean directory keeps the LiveStack contents organized and avoids Podman issues caused by working from `Downloads`.
 
 ### For macOS or Linux
 
@@ -180,7 +184,7 @@ Do not extract or run the stack from your `Downloads` folder. Create a new empty
     </copy>
     ```
 
-    Expected result:
+    **Expected result:**
 
     - You see `compose.yml` or `compose.yaml` in the current directory.
 
@@ -254,7 +258,7 @@ Do not extract or run the stack from your `Downloads` folder. Create a new empty
     </copy>
     ```
 
-    Expected result:
+    **Expected result:**
 
     - You see `compose.yml` or `compose.yaml` in the current directory.
 
@@ -266,7 +270,7 @@ Do not extract or run the stack from your `Downloads` folder. Create a new empty
     </copy>
     ```
 
-Expected result:
+**Expected result:**
 
 - You are in a clean working directory outside `Downloads`.
 - The extracted package contains `compose.yml` or `compose.yaml`, `.env.example`, application source files, database setup files, and supporting scripts.
@@ -274,7 +278,9 @@ Expected result:
 
 ## Task 3: Configure proxy settings, if your network requires them
 
-Most home, cloud VM, and unrestricted corporate networks do not need this step. Skip this task when your network allows direct access to container registries, npm, Object Storage, and Ollama model downloads.
+Perform the following set of steps only if your network requires a proxy for container registries, npm, **Object Storage**, or **Ollama** model downloads:
+
+**Note:** Most home, cloud VM, and unrestricted corporate networks do not need this step. Skip this task when your network allows direct access to container registries, npm, Object Storage, and Ollama model downloads.
 
 1. If your network requires a proxy, configure the proxy in Podman or Podman Desktop before starting the stack. Image pulls happen before the compose containers exist, so Podman itself must be able to reach external registries.
 
@@ -298,12 +304,14 @@ Most home, cloud VM, and unrestricted corporate networks do not need this step. 
     </copy>
     ```
 
-Expected result:
+**Expected result:**
 
 - Podman can pull external images through the network proxy when one is required.
 - Local compose services still talk to `db`, `ords`, `ollama`, and `app` directly on the internal Podman network.
 
 ## Task 4: Start the LiveStack with Podman Compose
+
+Perform the following set of steps to start the **LiveStack** with **Podman Compose** and verify that the required services begin moving toward a healthy state:
 
 1. If you are using Podman on macOS or Windows and your Podman machine is not already running, start it now.
 
@@ -361,7 +369,7 @@ Expected result:
     </copy>
     ```
 
-Expected result:
+**Expected result:**
 
 - `db`, `ords`, `ollama`, and `app` move toward a healthy state.
 - The initialization containers complete successfully.
@@ -369,16 +377,20 @@ Expected result:
 
 ## Task 5: Understand first-run downloads
 
-On a clean install, the first startup can take several minutes. The stack pulls container images, installs application dependencies, downloads and warms the configured Ollama models, and loads the ONNX embedding model used by Oracle vector search when the package includes one.
+Perform the following set of steps to set expectations for first-run downloads and explain why the first startup may take longer than later restarts:
 
-To avoid downloading the ONNX model at first run, place `all_MiniLM_L12_v2.onnx` in `db/data/onnx/` before starting the stack. The database bootstrap uses the packaged file before falling back to the configured `ONNX_MODEL_URL`.
+1. On a clean install, the first startup can take several minutes. The stack pulls container images, installs application dependencies, downloads and warms the configured Ollama models, and loads the ONNX embedding model used by Oracle vector search when the package includes one.
 
-Expected result:
+2. To avoid downloading the ONNX model at first run, place `all_MiniLM_L12_v2.onnx` in `db/data/onnx/` before starting the stack. The database bootstrap uses the packaged file before falling back to the configured `ONNX_MODEL_URL`.
+
+**Expected result:**
 
 - First-run startup time is expected to be longer than later restarts.
 - Subsequent starts reuse the Podman volumes for Oracle data and Ollama models unless you remove the volumes.
 
 ## Task 6: Validate health and open the application
+
+Perform the following set of steps to validate application health and open the **LiveStack** locally:
 
 1. Check the application health endpoint.
 
@@ -410,6 +422,8 @@ Expected result:
 - The browser opens the LiveStack locally.
 
 ## Task 7: Stop the stack when finished
+
+Perform the following set of steps to stop the stack cleanly when the demo is finished:
 
 1. Stop and remove running containers while preserving volumes.
 
@@ -592,7 +606,9 @@ Use the volume-removal command only when you intentionally want a clean reset.
 
 ## Task 8: Deploy the LiveStack on an OCI Compute VM with Podman (Optional)
 
-Use this task when you want to run the LiveStack on an OCI Compute VM instead of your laptop.
+**Note:** Use this task when you want to run the LiveStack on an OCI Compute VM instead of your laptop.
+
+Perform the following set of steps to deploy the **LiveStack** on an **OCI Compute VM** instead of your local machine:
 
 Prerequisites:
 
@@ -728,7 +744,7 @@ Expected result:
 
 ## Why this matters
 
-A portable LiveStack runbook turns this guide into something teams can reproduce instead of just read. By shipping the application as a Podman Compose package with a clear startup flow, you reduce environment drift, make scene validation repeatable, and give teams a practical way to explore the same Oracle-backed experience on macOS, Linux, Windows, and OCI Compute.
+A portable **LiveStack** runbook turns this guide into something teams can reproduce, not just read. By shipping the application as a **Podman Compose** package with a clear startup flow, you reduce environment drift, make scene validation repeatable, and give teams a practical way to run the demo after the workshop.
 
 This guide is self-service for technical users who can install Podman and run terminal commands. Users who are new to containers should complete the Podman readiness checks before starting and ask for help if those checks fail.
 

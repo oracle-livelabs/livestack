@@ -2,9 +2,9 @@
 
 ## Introduction
 
-**OML Product Intelligence** helps teams decide which predictive signals should become operational action. The page brings together demand volatility, customer commitment segmentation, commitment value forecasting, product signal clustering, BOM exposure, and capacity intelligence so planners can act before the next constraint becomes visible in operations.
+**OML Product Intelligence** helps teams decide which predictive signals should become operational action. The page brings together demand volatility, commitment segmentation, value forecasting, signal clustering, **BOM** exposure, and capacity intelligence so planners can prioritize follow-up.
 
-**Oracle AI Database** keeps machine learning close to governed High Tech data. Oracle Machine Learning models and SQL analytics can run from the same connected foundation that powers the rest of the LiveStack demo, so sensitive product, customer, supplier, and service records do not need to move into disconnected ML silos.
+**Oracle AI Database** keeps machine learning close to governed **High Tech** data. **Oracle Machine Learning** models and SQL analytics run from the same connected foundation as the rest of the **LiveStack** demo, so sensitive product, customer, supplier, and service records do not need to move into a disconnected notebook.
 
 Estimated Time: **12 minutes**
 
@@ -12,7 +12,7 @@ Estimated Time: **12 minutes**
 
 ### Objectives
 
-In this scene, you will learn how in-database analytics can score product demand, commitment value, customer segments, signal clusters, BOM exposure, and capacity pressure across High Tech workflows.
+In this scene, you will learn how in-database analytics can score demand, commitment value, customer segments, signal clusters, **BOM** exposure, and capacity pressure across **High Tech** workflows.
 
 ## Task 1: Inspect Demand Volatility Forecasting
 
@@ -26,7 +26,7 @@ Perform the following set of steps to identify products where predicted demand m
 
     ![Demand Volatility Forecasting tab highlighted](images/demand-volatility-forecasting.png)
 
-Use the visible predictions to explain how the same analytics pattern can support accelerator demand, edge gateway adoption, wafer-start planning, component shortage mitigation, channel inventory shifts, field quality exposure, and customer commitment protection.
+Use the visible predictions to connect model output to operating decisions such as accelerator demand planning, edge gateway adoption, wafer-start planning, component shortage mitigation, channel inventory shifts, field quality exposure, and customer commitment protection.
 
 **Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
 
@@ -52,7 +52,7 @@ Perform the following set of steps to understand the expected value trend and ho
 
     ![Commitment value forecast analytics highlighted](images/commitment-value-forecast.png)
 
-This page helps a user connect product demand and customer commitment data to a governed forecast path. The model output is near the products, commitments, and signal records it uses, not in a disconnected notebook.
+This page connects product demand and customer commitment data to a governed forecast path. The model output stays near the products, commitments, and signal records it uses, rather than moving into a disconnected notebook.
 
 ## Task 4: Explore product signal clusters
 
@@ -65,7 +65,7 @@ Perform the following set of steps to see how related products and signals group
 
     ![Product signal cluster analytics highlighted](images/product-signal-clusters.png)
 
-Use this tab to explain how vector similarity can group High Tech records by operational meaning. Component shortages, GPU capacity pressure, field quality cases, connected-device telemetry, and warranty signals may cluster by meaning even when they use different text.
+Use this tab to explain how vector similarity can group **High Tech** records by operational meaning. Component shortages, GPU capacity pressure, field quality cases, connected-device telemetry, and warranty signals may cluster together even when the source text uses different wording.
 
 ## Task 5: Review BOM and capacity intelligence
 
