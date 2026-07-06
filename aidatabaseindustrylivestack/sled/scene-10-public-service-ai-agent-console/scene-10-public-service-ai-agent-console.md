@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The **Public Service AI Agent Console** closes the Colorado operating loop. Jessica asks for an in-state response to the identified service and capacity pressure, then verifies that the recommendation is grounded in authorized data and recorded in the action audit trail.
+The **Public Service AI Agent Console** closes the **Colorado** operating loop. **Jessica Chen** asks for an in-state response to the identified service and capacity pressure, then verifies that the recommendation is grounded in authorized data and recorded in the action audit trail.
 
 The agent proposes and explains an action. It does not silently reallocate capacity or make an eligibility determination.
 
@@ -12,9 +12,11 @@ Estimated Time: **10 minutes**
 
 ### Objectives
 
-In this scene, you will review the specialist teams, ask a stable capacity question, inspect response evidence, and verify the Recent Agent Actions audit trail.
+In this scene, you will review the governed agent workspace, ask for constrained-service evidence, and inspect the action audit trail.
 
 ## Task 1: Review the governed agent workspace
+
+Perform the following set of steps to review the governed agent workspace before asking for a recommendation:
 
 1. Click **Public Service AI Agent Console** in the sidebar.
 2. Review the Resident Signal, Service Access, and Public Service Operations teams.
@@ -26,6 +28,8 @@ The workspace is tied to Colorado resident-service operations and approved Oracl
 
 ## Task 2: Ask for the constrained-service evidence
 
+Perform the following set of steps to ask for constrained-service evidence and evaluate the recommendation before taking action:
+
 1. Select or enter: **Which public services have low capacity?**
 2. Click **Ask** or **Send**.
 3. Review the routed specialist team, response evidence, tool badges, statuses, and returned data.
@@ -33,9 +37,11 @@ The workspace is tied to Colorado resident-service operations and approved Oracl
 
     ![Agent response identifying constrained Colorado public services](images/agent-public-service-response.png)
 
-The response proposes where Jessica should investigate or coordinate. Human review remains responsible for any operational decision.
+The response proposes where **Jessica Chen** should investigate or coordinate. Human review remains responsible for any operational decision.
 
 ## Task 3: Inspect the action audit trail
+
+Perform the following set of steps to inspect the action audit trail and verify the agent's evidence path:
 
 1. Review **Recent Agent Actions**.
 2. Identify the newly logged interaction by timestamp.
@@ -44,7 +50,7 @@ The response proposes where Jessica should investigate or coordinate. Human revi
 
     ![Recent Agent Actions with the audited Colorado interaction](images/agent-action-audit-trail.png)
 
-The audit trail shows what was asked, which governed tools were used, and which data supported the response. This is the accountable-action endpoint of Jessica's investigation.
+The audit trail shows what was asked, which governed tools were used, and which data supported the response. This is the accountable-action endpoint of **Jessica Chen**'s investigation.
 
 *You can move to the next scene.*
 

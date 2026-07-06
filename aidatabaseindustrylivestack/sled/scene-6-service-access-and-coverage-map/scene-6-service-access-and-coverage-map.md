@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Jessica now determines whether the observed pressure is statewide or localized. The **Colorado Service Access & Coverage Map** compares in-state service regions, centers, capacity, resident access, and task routes. It also proves that the same map respects the active Oracle VPD identity.
+**Jessica Chen** now determines whether the observed pressure is statewide or localized. The **Service Access and Coverage Map** compares in-state service regions, centers, capacity, resident access, and task routes while proving that the same map respects the active Oracle **VPD** identity.
 
 Estimated Time: **10 minutes**
 
@@ -10,9 +10,11 @@ Estimated Time: **10 minutes**
 
 ### Objectives
 
-In this scene, you will establish the statewide view, compare access and capacity, and demonstrate Global VPD, Regional VPD, and Restricted VPD behavior.
+In this scene, you will compare statewide, regional, and restricted **VPD** views of **Colorado** service access and capacity.
 
 ## Task 1: Establish the statewide Colorado view
+
+Perform the following set of steps to establish the statewide **Colorado** view under **Jessica Chen**'s global access:
 
 1. Confirm Jessica Chen is selected.
 2. Verify **Global VPD Admin** and access to all Colorado service regions.
@@ -22,9 +24,11 @@ In this scene, you will establish the statewide view, compare access and capacit
 
     ![Jessica Chen global VPD view across Colorado](images/global-vpd-statewide.png)
 
-Jessica's global view is explicitly allowlisted for statewide operations. It is not the default for anonymous, unknown, or restricted identities.
+**Jessica Chen**'s global view is explicitly allowlisted for statewide operations. It is not the default for anonymous, unknown, or restricted identities.
 
 ## Task 2: Compare access and capacity
+
+Perform the following set of steps to compare access, capacity, and route context across the **Colorado** operating area:
 
 1. Review the map layers and the Colorado operating area.
 2. Review the **Colorado Service Sites** table.
@@ -37,9 +41,13 @@ Jessica's global view is explicitly allowlisted for statewide operations. It is 
 
     ![Colorado access and capacity signals](images/capacity-and-access-signals.png)
 
-The map separates geographic feasibility from the eligibility-risk indicator. It helps Jessica identify where workload and access deserve investigation; it does not claim that capacity caused the 2.7% rate.
+The map separates geographic feasibility from the eligibility-risk indicator. It helps **Jessica Chen** identify where workload and access deserve investigation; it does not claim that capacity caused the **2.7%** rate.
+
+**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
 
 ## Task 3: Demonstrate regional and restricted VPD scope
+
+Perform the following set of steps to demonstrate regional and restricted **VPD** scope before returning to the regional request investigation:
 
 1. Switch to **Maria Santos**.
 2. Re-enable **Service Sites** if the identity change resets map layers.
@@ -52,11 +60,13 @@ The map separates geographic feasibility from the eligibility-risk indicator. It
 
     ![Sam Taylor restricted VPD state with no operational rows](images/restricted-vpd-no-operational-rows.png)
 
-6. Return to Maria Santos for the regional request investigation in Scene 7.
+6. Return to Maria Santos for the regional request investigation in **Scene 7**.
 
 The statewide lead can see all Colorado operations, the regional manager sees only the Western Slope, and the restricted viewer sees no protected operational rows. The change comes from database-enforced VPD context, not frontend filtering.
 
 ## Task 4: Connect the map to Oracle evidence
+
+Perform the following set of steps to connect the map result to **Oracle Spatial** and **VPD** evidence:
 
 1. Open **Oracle Internals**.
 2. Review the Oracle Spatial and VPD evidence.

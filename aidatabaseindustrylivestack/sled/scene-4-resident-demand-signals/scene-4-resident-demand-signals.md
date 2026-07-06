@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Jessica now asks whether Colorado residents and caseworkers are signaling an eligibility-service problem before it becomes a larger backlog or accuracy issue. Vector search connects plain-language concerns to governed services even when the wording differs.
+**Jessica Chen** now asks whether **Colorado** residents and caseworkers are signaling an eligibility-service problem before it becomes a larger backlog or accuracy issue. **Oracle AI Vector Search** connects plain-language concerns to governed services even when the wording differs.
 
 Estimated Time: **10 minutes**
 
@@ -10,9 +10,11 @@ Estimated Time: **10 minutes**
 
 ### Objectives
 
-In this scene, you will search for eligibility-related services, interpret the Colorado resident signal summary, and select evidence for partner coordination.
+In this scene, you will use vector search and resident-signal summaries to connect the eligibility-risk hypothesis to resident and caseworker evidence.
 
 ## Task 1: Search for eligibility-related services
+
+Perform the following set of steps to search for eligibility-related services using plain-language operating terms:
 
 1. Click **Resident Demand Signals** in the sidebar.
 2. Enter `benefits eligibility appointment backlog` in Public Service Vector Search.
@@ -22,9 +24,11 @@ In this scene, you will search for eligibility-related services, interpret the C
 
     ![Vector search for benefits eligibility appointment backlog](images/public-service-vector-search.png)
 
-Jessica can connect an operating concern to relevant eligibility, assistance, and resident-service definitions without maintaining a separate keyword taxonomy.
+**Jessica Chen** can connect an operating concern to relevant eligibility, assistance, and resident-service definitions without maintaining a separate keyword taxonomy.
 
 ## Task 2: Read the Colorado resident signal summary
+
+Perform the following set of steps to read the **Colorado** resident signal summary and connect it to the eligibility-risk indicator:
 
 1. Review **Resident Signal Summary**.
 2. Compare total signals, critical or escalating signals, top concern, impact area, and recommended next step.
@@ -32,9 +36,13 @@ Jessica can connect an operating concern to relevant eligibility, assistance, an
 
     ![Colorado Resident Signal Summary with operating priorities](images/resident-signal-summary.png)
 
-The summary turns many resident and caseworker observations into a concise operating signal that Jessica can compare with the 2.7% eligibility-risk indicator.
+The summary turns many resident and caseworker observations into a concise operating signal that Jessica can compare with the **2.7%** eligibility-risk indicator.
+
+**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
 
 ## Task 3: Select evidence for partner coordination
+
+Perform the following set of steps to select the resident-signal evidence that should move into partner coordination:
 
 1. Compare the highest-priority signal cards with the vector matches.
 2. Note the source channel, priority label, partner, signal text, and follow-up activity.
@@ -42,7 +50,7 @@ The summary turns many resident and caseworker observations into a concise opera
 
     ![Priority Colorado resident signal cards and follow-up evidence](images/resident-signal-momentum.png)
 
-The risk signal now has resident context. Jessica has evidence of what people are experiencing and can identify which in-state organizations should coordinate next.
+The risk signal now has resident context. **Jessica Chen** has evidence of what people are experiencing and can identify which in-state organizations should coordinate next.
 
 *You can move to the next scene.*
 

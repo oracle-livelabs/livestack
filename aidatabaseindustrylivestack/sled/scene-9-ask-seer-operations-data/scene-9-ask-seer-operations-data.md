@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Jessica now tests the same Colorado operating decision through natural-language data access. **Ask State and Local Government Data** lets her compare a narrated answer, conversational follow-up, generated SQL, and authorized result rows while Oracle remains the governed execution authority.
+**Jessica Chen** now tests the same **Colorado** operating decision through natural-language data access. **Ask State and Local Government Data** lets her compare a narrated answer, conversational follow-up, generated SQL, and authorized result rows while Oracle remains the governed execution authority.
 
 The active VPD identity continues to apply. Changing answer mode does not broaden the user's database access.
 
@@ -12,9 +12,11 @@ Estimated Time: **10 minutes**
 
 ### Objectives
 
-In this scene, you will ask one eligibility-and-capacity question in four modes and inspect how each mode preserves traceability.
+In this scene, you will use natural-language data access to generate a narrated answer, ask a follow-up, inspect generated SQL, and run authorized SQL under the active **VPD** identity.
 
 ## Task 1: Use Narrate for the operating brief
+
+Perform the following set of steps to use Narrate mode for an executive-ready operating brief:
 
 1. Click **Ask State and Local Government Data** in the sidebar.
 2. Confirm that Jessica Chen remains selected.
@@ -24,9 +26,11 @@ In this scene, you will ask one eligibility-and-capacity question in four modes 
 
     ![Narrated answer for the Colorado eligibility and capacity question](images/ask-public-service-data-narrate-mode.png)
 
-Narrate gives Jessica an executive-ready summary while the answer remains grounded in authorized Oracle data.
+Narrate gives **Jessica Chen** an executive-ready summary while the answer remains grounded in authorized Oracle data.
 
 ## Task 2: Use Chat for a follow-up
+
+Perform the following set of steps to use Chat mode for a follow-up question while preserving the same operating context:
 
 1. Without changing the operating topic, click **Chat**.
 2. Ask: **Which constituent service requests are at risk of breaching service-level agreements this week?** Jessica's global VPD context keeps the returned operating rows scoped to Colorado.
@@ -37,6 +41,8 @@ Narrate gives Jessica an executive-ready summary while the answer remains ground
 The follow-up keeps the same decision context while moving from cases needing review to near-term service-level risk.
 
 ## Task 3: Inspect generated SQL without executing it
+
+Perform the following set of steps to inspect generated SQL before executing it:
 
 1. Click **Clear**.
 2. Click **Show SQL**.
@@ -50,6 +56,8 @@ The SQL view is the governance checkpoint: a data steward can inspect the query 
 
 ## Task 4: Run authorized SQL and inspect rows
 
+Perform the following set of steps to run authorized SQL and inspect the returned rows under **Jessica Chen**'s current **VPD** identity:
+
 1. Click **Clear**.
 2. Click **Run SQL**.
 3. Ask the original question again.
@@ -57,9 +65,9 @@ The SQL view is the governance checkpoint: a data steward can inspect the query 
 
     ![Authorized Oracle result rows for the Colorado operating question](images/ask-public-service-data-run-sql-results.png)
 
-Ollama drafts reasoning or query structure, while Oracle AI Database executes authorized, read-only SQL against governed semantic views. The returned rows remain constrained by Jessica's current VPD identity.
+**Ollama** drafts reasoning or query structure, while **Oracle AI Database** executes authorized, read-only SQL against governed semantic views. Returned rows remain constrained by **Jessica Chen**'s current **VPD** identity.
 
-Jessica now has a defensible answer path. Scene 10 turns the evidence into a recommended action while preserving tool use and audit history.
+**Jessica Chen** now has a defensible answer path. **Scene 10** turns the evidence into a recommended action while preserving tool use and audit history.
 
 *You can move to the next scene.*
 

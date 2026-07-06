@@ -2,7 +2,7 @@
 
 ## Introduction
 
-**Use Your Own Public Service Data** closes the runbook with a safe and repeatable way to test another synthetic Colorado scenario and restore the known seeded baseline.
+**Use Your Own Public Service Data** shows how teams can adapt the **LiveStack** pattern to their own resident-service data while preserving the seeded **Colorado** baseline as a repeatable demo state.
 
 Dataset status, validation, upload, restore preview, restore, and job status require a Global VPD Admin. Use only synthetic, anonymized, or approved de-identified data. Never upload resident production data, credentials, wallets, or other secrets to this demo environment.
 
@@ -12,9 +12,11 @@ Estimated Time: **10 minutes**
 
 ### Objectives
 
-In this scene, you will open the dataset tool, review the template and validation workflow, and preview restoration of the seeded Colorado baseline without changing data during the normal presentation.
+In this scene, you will review template download, completed ZIP upload, validation, restore preview, and seeded-data restore controls while reinforcing safe data-handling expectations.
 
-## Task 1: Open the dataset tool as a global administrator
+## Task 1: Open the dataset tool
+
+Perform the following set of steps to open the dataset tool as the global administrator:
 
 1. Confirm Jessica Chen is selected.
 2. From any application scene, click **Use Your Own Public Service Data**.
@@ -27,6 +29,8 @@ The global requirement prevents a regional or restricted identity from replacing
 
 ## Task 2: Review the template and validation workflow
 
+Perform the following set of steps to review the template and validation workflow for customer-provided public-service data:
+
 1. Click **Download Template ZIP**. The canonical template filename is `sled-service-operations-import-template-v1.zip`.
 2. Explain that the archive contains `manifest.json` plus required and optional CSV templates.
 3. Review **Select Completed ZIP** and choose a completed package only when conducting an intentional data test.
@@ -38,6 +42,8 @@ The global requirement prevents a regional or restricted identity from replacing
 The template and validation steps make custom demonstrations repeatable while keeping the seeded Colorado scenario available as a known baseline.
 
 ## Task 3: Preview the seeded-data restore
+
+Perform the following set of steps to preview the seeded-data restore without disrupting a shared workshop environment:
 
 1. Click **Preview Restore**.
 2. Review expected row counts, validation messages, and warnings.

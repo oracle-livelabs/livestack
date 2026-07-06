@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Maria Santos now moves from Western Slope pressure to one Colorado resident request. The **Service Request Workbench** connects the request, resident, in-state service center, Request Line Items, route evidence, JSON document, and active field task under the same Regional VPD context.
+**Maria Santos** now moves from **Western Slope** pressure to one **Colorado** resident request. The **Service Request Workbench** connects the request, resident, in-state service center, request line items, route evidence, JSON document, and active field task under the same regional **VPD** context.
 
 Estimated Time: **10 minutes**
 
@@ -10,9 +10,11 @@ Estimated Time: **10 minutes**
 
 ### Objectives
 
-In this scene, you will review Maria's regional queue, inspect one request in three governed views, distinguish request status from service-task status, and explain Field Resolution Underway.
+In this scene, you will review **Maria Santos**'s regional queue, inspect one request through three governed views, distinguish request status from service-task status, and explain Field Resolution Underway.
 
 ## Task 1: Review the Western Slope request queue
+
+Perform the following set of steps to review the **Western Slope** request queue under **Maria Santos**'s regional access:
 
 1. Keep Maria Santos selected.
 2. Click **Service Request Workbench** in the sidebar.
@@ -22,9 +24,11 @@ In this scene, you will review Maria's regional queue, inspect one request in th
 
     ![Western Slope request list with approved lifecycle labels](images/service-request-workspace.png)
 
-The queue contains only requests Maria is authorized to see. Status filters use business-facing request language and do not expose internal compatibility enums.
+The queue contains only requests **Maria Santos** is authorized to see. Status filters use business-facing request language and should not expose internal compatibility enums.
 
 ## Task 2: Inspect the relational request evidence
+
+Perform the following set of steps to inspect the relational request evidence for the selected resident request:
 
 1. Keep the selected request expanded.
 2. Open **Relational**.
@@ -43,6 +47,8 @@ The request lifecycle describes the overall agency case:
 
 ## Task 3: Compare the JSON Duality document
 
+Perform the following set of steps to compare the **JSON Duality View** with the relational request evidence:
+
 1. Click **JSON Duality View**.
 2. Locate the same request header and nested Request Line Items.
 3. Compare the public JSON names with the relational fields.
@@ -50,9 +56,11 @@ The request lifecycle describes the overall agency case:
 
     ![JSON Duality document for the same Colorado service request](images/service-request-json-duality.png)
 
-The relational and document views represent the same governed request. Maria does not gain additional rows by changing the application interface.
+The relational and document views represent the same governed request. **Maria Santos** does not gain additional rows by changing the application interface.
 
 ## Task 4: Inspect the Service Task Route
+
+Perform the following set of steps to inspect the **Service Task Route** and explain how the active field task connects to the request:
 
 1. Click **Service Task Route**.
 2. Compare the Colorado resident and in-state center, distance, estimated travel time, route cost, and current task status.
@@ -66,9 +74,11 @@ The service-task lifecycle describes execution of the assigned work:
 
 **Blocked** is the exception outcome.
 
-**Field Resolution Underway** means the assigned in-state team is actively resolving the request in the resident's service area. The selected task may currently be In Progress while the complete timeline shows Field Resolution Underway as the next operational stage.
+**Field Resolution Underway** means the assigned in-state team is actively resolving the request in the resident's service area. The selected task may currently be In Progress, while the complete timeline shows **Field Resolution Underway** as the next operational stage.
 
 ## Task 5: Connect the request to Oracle evidence
+
+Perform the following set of steps to connect the request, protected child records, and route evidence to Oracle internals:
 
 1. Click **Show Oracle Internals**.
 2. Review JSON Duality, Spatial routing, and VPD evidence.
@@ -77,7 +87,7 @@ The service-task lifecycle describes execution of the assigned work:
 
     ![Oracle Internals for JSON Duality Spatial routing and VPD](images/service-request-oracle-evidence.png)
 
-Maria has moved from a regional pressure signal to an individual request and active field response without seeing another Colorado service region. Jessica can now return to the statewide view and decide where capacity should be monitored or rebalanced.
+**Maria Santos** has moved from a regional pressure signal to an individual request and active field response without seeing another **Colorado** service region. **Jessica Chen** can now return to the statewide view and decide where capacity should be monitored or rebalanced.
 
 *You can move to the next scene.*
 

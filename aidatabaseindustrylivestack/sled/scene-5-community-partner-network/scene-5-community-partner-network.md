@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Eligibility and resident-service resolution can cross program, county, partner, and case-management boundaries. Jessica uses the Community Partner Network to identify which Colorado organizations and handoff paths can respond to the demand evidence found in Scene 4.
+Eligibility and resident-service resolution can cross program, county, partner, and case-management boundaries. **Jessica Chen** uses the **Community Partner Network** to identify which **Colorado** organizations and handoff paths can respond to the demand evidence from **Scene 4**.
 
 Estimated Time: **10 minutes**
 
@@ -10,9 +10,11 @@ Estimated Time: **10 minutes**
 
 ### Objectives
 
-In this scene, you will trace an in-state partner network, inspect program and handoff evidence, and validate the coordination path with SQL/PGQ.
+In this scene, you will use graph relationships to identify service partners, handoff paths, and query evidence for the resident-service response.
 
 ## Task 1: Trace the Colorado eligibility partner network
+
+Perform the following set of steps to trace the **Colorado** eligibility partner network and show how graph relationships support coordination:
 
 1. Click **Community Partner Network** in the sidebar.
 2. Search for `Benefits Eligibility`.
@@ -22,9 +24,11 @@ In this scene, you will trace an in-state partner network, inspect program and h
 
     ![Colorado eligibility partner graph at two hops](images/partner-graph-workspace.png)
 
-Jessica can see an operational coordination path rather than an unstructured list of organizations. Two-hop evidence reveals where a resident issue may require more than one handoff.
+**Jessica Chen** can see an operational coordination path rather than an unstructured list of organizations. Two-hop evidence reveals where a resident issue may require more than one handoff.
 
 ## Task 2: Inspect program and handoff evidence
+
+Perform the following set of steps to inspect the program and handoff evidence behind the selected graph node:
 
 1. Select the center node or a connected node.
 2. Review source channel, service domain, city, relationship types, and **Public Program Relationships**.
@@ -36,6 +40,8 @@ The relationship evidence explains why the selected organization is relevant and
 
 ## Task 3: Validate the coordination path with SQL/PGQ
 
+Perform the following set of steps to validate the coordination path with queryable **Oracle Property Graph** evidence:
+
 1. Open **Public Sector Graph Query Explorer**.
 2. Select **Community Service Hub Detection**.
 3. Enter `Benefits Eligibility` for Service Domain.
@@ -44,7 +50,7 @@ The relationship evidence explains why the selected organization is relevant and
 
     ![SQL PGQ evidence for a Colorado eligibility coordination path](images/graph-query-explorer.png)
 
-Jessica now has a defensible coordination candidate backed by graph relationships and query evidence. Scene 6 tests whether the response is geographically and operationally feasible within Colorado.
+**Jessica Chen** now has a defensible coordination candidate backed by graph relationships and query evidence. **Scene 6** tests whether the response is geographically and operationally feasible within **Colorado**.
 
 *You can move to the next scene.*
 
