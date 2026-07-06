@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "State and Local Government Service Operations LiveStack Guide",
+  "workshoptitle": "Colorado State and Local Government Service Operations LiveStack Guide",
   "help": "livelabs-help-database_us@oracle.com",
   "tutorials": [
     {
@@ -55,7 +55,7 @@
       "filename": "../../scene-11-use-your-own-public-service-data/scene-11-use-your-own-public-service-data.md"
     },
     {
-      "title": "Take it home",
+      "title": "Take It Home: Download and Run the LiveStack",
       "filename": "../../download-livestack/download-livestack-take-it-home.md"
     },
     {

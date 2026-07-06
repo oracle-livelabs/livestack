@@ -1,53 +1,55 @@
-# State and Local Government Service Operations LiveStack Guide
+# Colorado State and Local Government Service Operations LiveStack Guide
 
 ## Introduction
 
-State and local agencies must coordinate constituent services, permits, benefits, inspections, public works, service requests, emergency response, and transparency obligations while keeping data governed. The **Seer State and Local Government LiveStack** shows how those signals can come together so agency leaders can understand service pressure earlier, see the evidence behind a response, and act with more confidence.
+Colorado agencies coordinate benefits, permits, inspections, public works, emergency response, and other resident services through one statewide operating model. The **Seer State and Local Government LiveStack** shows how agency leaders can detect pressure, inspect the evidence behind it, coordinate an in-state response, and keep each decision governed and auditable.
 
-This runbook tells the story of the final application before go-live. It focuses on practical outcomes: better service delivery visibility, clearer public transparency, stronger compliance posture, faster responsiveness, and more efficient operations without moving sensitive data into disconnected tools.
+Jessica Chen, Colorado's statewide digital services lead, is preparing an operations briefing. The command center reports a **Medicaid Eligibility Error Rate of 2.7%** against the stakeholder-provided **3.0% demo threshold**. The rate is still within threshold, but its **Approaching Threshold** status gives Jessica a reason to investigate resident demand, service pressure, partner handoffs, request details, and regional capacity before potential exposure increases.
 
-This runbook supports the **Seer State and Local Government LiveStack Demo**. The demo shows how Oracle AI Database 26ai can bring public-sector operational workloads together on one connected data platform. Instead of splitting relational transactions, JSON documents, graph relationships, spatial analysis, vector search, in-database machine learning, natural-language SQL, and AI agent workflows across different systems, the LiveStack shows how those capabilities can work against the same governed Oracle data model.
+This is not a Medicaid-only application or a federal legal explainer. The eligibility metric is the initiating business signal in a broader Colorado resident-services workflow. Every operational resident, request, service center, county, and regional comparison shown in the story belongs to Colorado.
 
-In the demo, Jessica Chen, a state digital services lead, is preparing a go-live operations briefing. She uses the application to follow constituent demand from resident signals into service requests, partner coordination, access geography, capacity forecasts, conversational data access, and audited AI-assisted action.
+The demo also proves governed access. Jessica has global visibility across Colorado, a regional manager sees only an assigned service region, and the restricted viewer sees no protected operational rows. Oracle Virtual Private Database (VPD) enforces those perspectives in the database.
 
-Each scene connects a public-sector operations challenge to a visible decision path and the Oracle capability supporting it.
+Estimated Demo Time: **100 minutes**
 
-Estimated Demo Time: **90 minutes**
+Scenes range from 5 to 10 minutes.
 
-Each scene is designed to take between 5 and 10 minutes.
-
-![State and Local Government LiveStack welcome page](images/sled-operations-brief.png)
+![Colorado Resident Services Overview with the statewide operating story](images/sled-operations-brief.png)
 
 ## Application Story
 
-The story follows a state digital services team preparing for a service operations briefing. The team starts with a governed data foundation, then follows resident demand through service pressure, community partner relationships, access geography, service request detail, predictive analytics, natural-language data access, and audited AI-assisted action.
+Jessica begins with statewide evidence, follows the eligibility-risk signal into resident demand and partner relationships, verifies geographic coverage and a specific request, compares regional capacity, and closes with a governed recommendation and audit trail.
 
-The application is designed to show a complete public-sector operating pattern: agency leaders see where service pressure is building, program teams inspect the evidence behind a response, analysts use predictive signals to plan capacity, and AI-assisted workflows remain tied to governed data and audit history.
+The operating decision is: **Which Colorado service demand, partner-coordination, access, and capacity conditions require intervention now so resident requests are resolved accurately before eligibility-error risk crosses the demo threshold?**
+
+The runbook preserves the application's broader state-services scope. It uses the Medicaid eligibility metric as the early-warning trigger while the remaining scenes show how the same operating model supports benefits, permits, inspections, public works, emergency response, and other resident services.
 
 ## Go-Live Outcome Map
 
-- **Service delivery:** Leaders can see urgent demand, service value, access constraints, and request detail in one flow.
-- **Transparency:** Each major screen connects the visible business outcome to source data, SQL, graph, spatial, vector, OML, or agent evidence.
-- **Compliance:** Governed access, VPD, JSON Duality, ORDS APIs, and action history keep sensitive workflows controlled and explainable.
-- **Responsiveness:** Staff can move from resident signal to service request, partner coordination, capacity view, or agent recommendation without switching systems.
-- **Operational efficiency:** The same Oracle AI Database foundation supports dashboards, search, maps, graph analysis, machine learning, natural-language SQL, and AI agents.
+- **Operating decision:** Determine where Colorado should intervene before eligibility accuracy or service responsiveness deteriorates.
+- **Resident service:** Move from statewide pressure to one resident request and its active resolution path.
+- **Compliance risk:** Interpret 2.7% as within the 3.0% demo threshold but close enough to monitor actively. Rates above the threshold may create potential federal matching-fund exposure under the stakeholder-provided demo rule.
+- **Governed access:** Demonstrate global, regional, and restricted VPD perspectives over the same Colorado data.
+- **Accountable action:** Connect analytics, Ask Data, and agents to visible Oracle evidence and audit history.
 
 ### Objectives
 
-In this LiveStack demo, you will see how connected public-sector data can help teams:
+In this LiveStack demo, you will:
 
-- Monitor service delivery pressure, urgent demand, and operational value.
-- Identify resident signals, access gaps, partner relationships, and capacity constraints.
-- Use predictive analytics and natural-language data access to support faster decisions.
-- Apply AI-assisted recommendations with auditability, security controls, and governed evidence.
+- Interpret the Medicaid eligibility error-rate signal without treating it as a legal conclusion or automatic penalty.
+- Trace one Colorado operating decision through resident signals, partners, geography, requests, and capacity.
+- Verify that global, regional, and restricted users receive the intended VPD-scoped view.
+- Use Oracle evidence, natural-language data access, and audited agents to support an accountable response.
 
 ### Scenario
 
-The application opens with a State and Local Government service operations briefing, then moves through the data foundation, public service command center, resident demand signals, partner graph, service access map, request workbench, predictive analytics, conversational data access, AI agent console, and data onboarding workflow. By the end of the story, the same governed data foundation supports executive visibility, staff action, transparent evidence, and operational readiness.
+The application opens with a Colorado resident-services orientation, confirms the governed data foundation, and then moves through the command center, resident demand signals, partner graph, access map, request workbench, predictive analytics, Ask Data, agent console, and data onboarding workflow. By the end of the story, Jessica can explain what needs attention, where the state has capacity, how a request is being resolved, and which governed evidence supports the recommendation.
 
 ### Prerequisites
 
 Before you begin, confirm that you can open the running Seer State and Local Government LiveStack in a modern browser. No coding or database administration knowledge is required for the guided demo scenes.
+
+Use Jessica Chen for statewide scenes. The runbook will explicitly tell you when to switch to Maria Santos for the Western Slope regional view and Sam Taylor for the restricted view.
 
 **Podman** and **Podman Compose** are required only if you plan to run the portable LiveStack locally in the download lab.
 
@@ -77,5 +79,6 @@ Before you begin, confirm that you can open the running Seer State and Local Gov
 - [Oracle LiveLabs catalog](https://livelabs.oracle.com/)
 
 ## Credits & Build Notes
+
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-18
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-07-03

@@ -2,57 +2,72 @@
 
 ## Introduction
 
-**Service Access & Coverage Map** helps a state or local agency understand how geography changes the response. A high-demand service may require a different action depending on nearby service capacity, partner coverage, travel distance, neighborhood access tier, or emergency operations constraints.
-
-This scene uses Oracle Spatial to keep location intelligence close to the same public-sector operating data used by the command center, service request workbench, and analytics pages.
+Jessica now determines whether the observed pressure is statewide or localized. The **Colorado Service Access & Coverage Map** compares in-state service regions, centers, capacity, resident access, and task routes. It also proves that the same map respects the active Oracle VPD identity.
 
 Estimated Time: **10 minutes**
 
-![Service Access and Coverage Map with layer controls and capacity signals](images/scene-6-service-access-and-coverage-map.png)
+![Colorado Service Access and Coverage Map](images/scene-6-service-access-and-coverage-map.png)
 
 ### Objectives
 
-In this scene, you will inspect the service access map, compare capacity and access signals, and explain why spatial analysis is part of the operating workflow.
+In this scene, you will establish the statewide view, compare access and capacity, and demonstrate Global VPD, Regional VPD, and Restricted VPD behavior.
 
-## Task 1: Inspect the service access map
+## Task 1: Establish the statewide Colorado view
 
-Perform the following set of steps to show how the map organizes place-based service access evidence.
+1. Confirm Jessica Chen is selected.
+2. Verify **Global VPD Admin** and access to all Colorado service regions.
+3. Click **Service Access & Coverage Map** in the sidebar.
+4. Enable **Service Sites** and **Public Service Demand Regions**.
+5. Confirm that the visible residents, centers, routes, and regions are all in Colorado.
 
-1. Click **Service Access & Coverage Map** in the sidebar.
-2. Review the **Map Layers** panel and the active layer legend.
-3. Note the available layer types for resident risk tiers, service sites, task routes, service zones, H3 density grid, and public service demand regions.
-4. Connect the layer evidence to the active center count, total capacity, pending service tasks, and capacity alerts.
+    ![Jessica Chen global VPD view across Colorado](images/global-vpd-statewide.png)
 
-    ![Service access map layers and coverage controls](images/service-access-map-layers.png)
+Jessica's global view is explicitly allowlisted for statewide operations. It is not the default for anonymous, unknown, or restricted identities.
 
-The map turns service demand into a place-based decision. In this task, the layer list is the proof point: it shows the spatial data the agency can combine with capacity and service-request evidence.
+## Task 2: Compare access and capacity
 
-## Task 2: Compare service sites with the map
+1. Review the map layers and the Colorado operating area.
+2. Review the **Colorado Service Sites** table.
+3. Compare center, location, center type, supported services, capacity, pending work, and load.
+4. Review capacity alerts and identify candidate regions for deeper investigation without declaring a causal link to the Medicaid metric.
 
-Perform the following set of steps to show how the map connects to service-site records.
+    ![Colorado map layers and demand regions](images/service-access-map-layers.png)
 
-1. Review the visible **Service Sites** table below the map.
-2. Compare center, location, type, services, capacity, pending work, and load values.
-3. Use the map and table together to explain which sites may need follow-up.
+    ![Colorado service sites with in-state locations and capacity](images/service-sites-table.png)
 
-    ![Service sites table connected to the service access map](images/service-sites-table.png)
+    ![Colorado access and capacity signals](images/capacity-and-access-signals.png)
 
-The table gives the map operational grounding. It lets the audience connect place-based coverage to the actual service centers and pending work the agency must manage.
+The map separates geographic feasibility from the eligibility-risk indicator. It helps Jessica identify where workload and access deserve investigation; it does not claim that capacity caused the 2.7% rate.
 
-## Task 3: Compare capacity and access signals
+## Task 3: Demonstrate regional and restricted VPD scope
 
-Perform the following set of steps to connect geography with service operations.
+1. Switch to **Maria Santos**.
+2. Re-enable **Service Sites** if the identity change resets map layers.
+3. Confirm **Regional VPD** and **Western Slope**. Verify that only the assigned Colorado region is visible.
 
-1. Review the capacity, alert, or access cards next to the map.
-2. Compare the spatial context with services under pressure from the command center.
-3. Use the active-center, total-capacity, pending-task, and capacity-alert cards to explain where the agency would investigate coverage next.
+    ![Maria Santos regional VPD view of the Western Slope](images/regional-vpd-western-slope.png)
 
-    ![Capacity and access signals beside the service coverage map](images/capacity-and-access-signals.png)
+4. Switch to **Sam Taylor**.
+5. Confirm **Restricted VPD** and **No protected operational rows visible**.
 
-For State and Local Government teams, geography changes the decision. Oracle Spatial lets those signals stay close to the operational data instead of forcing users into a separate mapping system.
+    ![Sam Taylor restricted VPD state with no operational rows](images/restricted-vpd-no-operational-rows.png)
+
+6. Return to Maria Santos for the regional request investigation in Scene 7.
+
+The statewide lead can see all Colorado operations, the regional manager sees only the Western Slope, and the restricted viewer sees no protected operational rows. The change comes from database-enforced VPD context, not frontend filtering.
+
+## Task 4: Connect the map to Oracle evidence
+
+1. Open **Oracle Internals**.
+2. Review the Oracle Spatial and VPD evidence.
+3. Explain that the application clears pooled context, derives identity and region from trusted Oracle data, and applies enabled `CONTEXT_SENSITIVE` policies.
+4. Explain that missing or unsupported context fails closed.
+
+Oracle Spatial supports the in-state geographic decision, while Oracle VPD controls which protected rows can participate in that decision.
 
 *You can move to the next scene.*
 
 ## Credits & Build Notes
+
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-17
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-07-03

@@ -1,0 +1,1618 @@
+{
+  "generatedAt": "2026-07-03T16:19:05.404Z",
+  "captureDate": "2026-07-03",
+  "baseUrl": "http://127.0.0.1:8505",
+  "viewport": "1280x1066",
+  "expectedCaptures": 52,
+  "selectedRequest": "#226782",
+  "roleMatrix": {
+    "admin_jess": 31,
+    "fm_west_maria": 10,
+    "viewer_sam": 0
+  },
+  "scenes": [
+    {
+      "id": "welcome",
+      "route": "welcome",
+      "identityAtEnd": "admin_jess",
+      "title": "Seer State and Local Government - Oracle AI Database 26ai Demo",
+      "headings": [
+        "Colorado Resident Services Overview",
+        "Key State and Local Government Use Cases Featured"
+      ],
+      "captures": [
+        "introduction/images/sled-operations-brief.png",
+        "scene-1-sled-operations-brief/images/scene-1-sled-operations-brief.png",
+        "scene-1-sled-operations-brief/images/operations-brief-workflow.png",
+        "scene-1-sled-operations-brief/images/start-demo-action.png"
+      ]
+    },
+    {
+      "id": "foundation",
+      "route": "datamodel",
+      "identityAtEnd": "admin_jess",
+      "title": "Seer State and Local Government - Oracle AI Database 26ai Demo",
+      "headings": [
+        "Data Foundation",
+        "Confirm one trusted statewide operating baseline.",
+        "Prepare the Dataset",
+        "What Gets Loaded"
+      ],
+      "captures": [
+        "scene-2-seer-26ai-data-foundation/images/scene-2-seer-26ai-data-foundation.png",
+        "scene-2-seer-26ai-data-foundation/images/prepare-dataset-counts.png",
+        "scene-2-seer-26ai-data-foundation/images/what-gets-loaded-carousel.png",
+        "scene-2-seer-26ai-data-foundation/images/foundation-downstream-handoff.png"
+      ]
+    },
+    {
+      "id": "dashboard",
+      "route": "dashboard",
+      "identityAtEnd": "admin_jess",
+      "title": "Seer State and Local Government - Oracle AI Database 26ai Demo",
+      "headings": [
+        "Public Service Command Center",
+        "Read the eligibility-risk signal before operating margin narrows.",
+        "Medicaid Eligibility Error Rate",
+        "Agency Workload Velocity",
+        "Service Value by Category",
+        "Services Under Pressure\n- AGENCY WORKLOAD AND SLA RISK TREND (7 DAY)"
+      ],
+      "captures": [
+        "scene-3-public-service-command-center/images/scene-3-public-service-command-center.png",
+        "scene-3-public-service-command-center/images/command-center-kpis-overview.png",
+        "scene-3-public-service-command-center/images/signal-velocity-and-service-value.png",
+        "scene-3-public-service-command-center/images/services-under-pressure.png"
+      ]
+    },
+    {
+      "id": "signals",
+      "route": "social",
+      "identityAtEnd": "admin_jess",
+      "title": "Seer State and Local Government - Oracle AI Database 26ai Demo",
+      "headings": [
+        "Resident Demand Signals",
+        "Test the eligibility-pressure hypothesis against resident evidence.",
+        "Public Service Vector Search",
+        "Resident Signal Summary"
+      ],
+      "captures": [
+        "scene-4-resident-demand-signals/images/scene-4-resident-demand-signals.png",
+        "scene-4-resident-demand-signals/images/public-service-vector-search.png",
+        "scene-4-resident-demand-signals/images/resident-signal-summary.png",
+        "scene-4-resident-demand-signals/images/resident-signal-momentum.png"
+      ]
+    },
+    {
+      "id": "graph",
+      "route": "graph",
+      "identityAtEnd": "admin_jess",
+      "title": "Seer State and Local Government - Oracle AI Database 26ai Demo",
+      "headings": [
+        "Community Partner Network Graph",
+        "Connect Colorado agencies, programs, partners, and cases.",
+        "COMMUNITY PARTNERS (50)",
+        "Public Sector Graph Query Explorer"
+      ],
+      "captures": [
+        "scene-5-community-partner-network/images/scene-5-community-partner-network.png",
+        "scene-5-community-partner-network/images/partner-graph-workspace.png",
+        "scene-5-community-partner-network/images/partner-program-relationships.png",
+        "scene-5-community-partner-network/images/graph-query-explorer.png"
+      ]
+    },
+    {
+      "id": "coverage",
+      "route": "fulfillment",
+      "identityAtEnd": "fm_west_maria",
+      "title": "Seer State and Local Government - Oracle AI Database 26ai Demo",
+      "headings": [
+        "Compare in-state service regions, centers, routes, and capacity.",
+        "Colorado Service Access & Coverage Map",
+        "Colorado Service Sites",
+        "Capacity Alerts - Resident Signal Demand Surge"
+      ],
+      "captures": [
+        "scene-6-service-access-and-coverage-map/images/scene-6-service-access-and-coverage-map.png",
+        "scene-6-service-access-and-coverage-map/images/global-vpd-statewide.png",
+        "scene-6-service-access-and-coverage-map/images/service-access-map-layers.png",
+        "scene-6-service-access-and-coverage-map/images/service-sites-table.png",
+        "scene-6-service-access-and-coverage-map/images/capacity-and-access-signals.png",
+        "scene-6-service-access-and-coverage-map/images/regional-vpd-western-slope.png",
+        "scene-6-service-access-and-coverage-map/images/restricted-vpd-no-operational-rows.png"
+      ]
+    },
+    {
+      "id": "requests",
+      "route": "orders",
+      "identityAtEnd": "admin_jess",
+      "title": "Seer State and Local Government - Oracle AI Database 26ai Demo",
+      "headings": [
+        "Follow one resident request from intake into active resolution.",
+        "Service Request Workbench"
+      ],
+      "captures": [
+        "scene-7-service-request-workbench/images/scene-7-service-request-workbench.png",
+        "scene-7-service-request-workbench/images/service-request-workspace.png",
+        "scene-7-service-request-workbench/images/service-request-relational-detail.png",
+        "scene-7-service-request-workbench/images/service-request-json-duality.png",
+        "scene-7-service-request-workbench/images/service-task-route-progress.png",
+        "scene-7-service-request-workbench/images/service-request-oracle-evidence.png"
+      ]
+    },
+    {
+      "id": "analytics",
+      "route": "oml",
+      "identityAtEnd": "admin_jess",
+      "title": "Seer State and Local Government - Oracle AI Database 26ai Demo",
+      "headings": [
+        "Demand & Capacity Analytics",
+        "Compare resident need, request demand, and in-state capacity.",
+        "Oracle-persisted machine learning evidence",
+        "Demand Capacity Across Colorado Service Centers"
+      ],
+      "captures": [
+        "scene-8-demand-and-capacity-analytics/images/scene-8-demand-and-capacity-analytics.png",
+        "scene-8-demand-and-capacity-analytics/images/demand-surge-risk.png",
+        "scene-8-demand-and-capacity-analytics/images/resident-need-segments.png",
+        "scene-8-demand-and-capacity-analytics/images/service-value-forecast.png",
+        "scene-8-demand-and-capacity-analytics/images/vector-k-means-clusters.png",
+        "scene-8-demand-and-capacity-analytics/images/capacity-intelligence.png"
+      ]
+    },
+    {
+      "id": "askdata",
+      "route": "askdata",
+      "identityAtEnd": "admin_jess",
+      "title": "Seer State and Local Government - Oracle AI Database 26ai Demo",
+      "headings": [
+        "Interrogate the same operating decision in plain language.",
+        "Ask State and Local Government Data",
+        "State and Local Government Data Assistant"
+      ],
+      "captures": [
+        "scene-9-ask-seer-operations-data/images/scene-9-ask-seer-operations-data.png",
+        "scene-9-ask-seer-operations-data/images/ask-public-service-data-narrate-mode.png",
+        "scene-9-ask-seer-operations-data/images/ask-public-service-data-chat-mode.png",
+        "scene-9-ask-seer-operations-data/images/ask-public-service-data-generated-sql.png",
+        "scene-9-ask-seer-operations-data/images/ask-public-service-data-run-sql-results.png"
+      ]
+    },
+    {
+      "id": "agents",
+      "route": "agents",
+      "identityAtEnd": "admin_jess",
+      "title": "Seer State and Local Government - Oracle AI Database 26ai Demo",
+      "headings": [
+        "Turn the statewide findings into a governed recommendation.",
+        "Public Service AI Agent Console",
+        "Chat with AI Agents",
+        "Recent Agent Actions"
+      ],
+      "captures": [
+        "scene-10-public-service-ai-agent-console/images/scene-10-public-service-ai-agent-console.png",
+        "scene-10-public-service-ai-agent-console/images/agent-console-workspace.png",
+        "scene-10-public-service-ai-agent-console/images/agent-public-service-response.png",
+        "scene-10-public-service-ai-agent-console/images/agent-action-audit-trail.png"
+      ]
+    },
+    {
+      "id": "dataset",
+      "route": "welcome",
+      "identityAtEnd": "admin_jess",
+      "title": "Seer State and Local Government - Oracle AI Database 26ai Demo",
+      "headings": [
+        "Colorado Resident Services Overview",
+        "Key State and Local Government Use Cases Featured"
+      ],
+      "captures": [
+        "scene-11-use-your-own-public-service-data/images/scene-11-use-your-own-public-service-data.png",
+        "scene-11-use-your-own-public-service-data/images/open-dataset-tool.png",
+        "scene-11-use-your-own-public-service-data/images/template-and-upload-workflow.png",
+        "scene-11-use-your-own-public-service-data/images/preview-restore-seeded-dataset.png"
+      ]
+    }
+  ],
+  "captures": [
+    {
+      "file": "introduction/images/sled-operations-brief.png",
+      "group": "welcome",
+      "route": "welcome",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/",
+      "raw": "capture-2026-07-03/raw/introduction/images/sled-operations-brief.png",
+      "selected": "capture-2026-07-03/selected/introduction/images/sled-operations-brief.png"
+    },
+    {
+      "file": "scene-1-sled-operations-brief/images/scene-1-sled-operations-brief.png",
+      "group": "welcome",
+      "route": "welcome",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/",
+      "raw": "capture-2026-07-03/raw/scene-1-sled-operations-brief/images/scene-1-sled-operations-brief.png",
+      "selected": "capture-2026-07-03/selected/scene-1-sled-operations-brief/images/scene-1-sled-operations-brief.png"
+    },
+    {
+      "file": "scene-1-sled-operations-brief/images/operations-brief-workflow.png",
+      "group": "welcome",
+      "route": "welcome",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/",
+      "raw": "capture-2026-07-03/raw/scene-1-sled-operations-brief/images/operations-brief-workflow.png",
+      "selected": "capture-2026-07-03/selected/scene-1-sled-operations-brief/images/operations-brief-workflow.png"
+    },
+    {
+      "file": "scene-1-sled-operations-brief/images/start-demo-action.png",
+      "group": "welcome",
+      "route": "welcome",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/",
+      "raw": "capture-2026-07-03/raw/scene-1-sled-operations-brief/images/start-demo-action.png",
+      "selected": "capture-2026-07-03/selected/scene-1-sled-operations-brief/images/start-demo-action.png"
+    },
+    {
+      "file": "scene-2-seer-26ai-data-foundation/images/scene-2-seer-26ai-data-foundation.png",
+      "group": "foundation",
+      "route": "datamodel",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/?page=datamodel",
+      "raw": "capture-2026-07-03/raw/scene-2-seer-26ai-data-foundation/images/scene-2-seer-26ai-data-foundation.png",
+      "selected": "capture-2026-07-03/selected/scene-2-seer-26ai-data-foundation/images/scene-2-seer-26ai-data-foundation.png"
+    },
+    {
+      "file": "scene-2-seer-26ai-data-foundation/images/prepare-dataset-counts.png",
+      "group": "foundation",
+      "route": "datamodel",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/?page=datamodel",
+      "raw": "capture-2026-07-03/raw/scene-2-seer-26ai-data-foundation/images/prepare-dataset-counts.png",
+      "selected": "capture-2026-07-03/selected/scene-2-seer-26ai-data-foundation/images/prepare-dataset-counts.png"
+    },
+    {
+      "file": "scene-2-seer-26ai-data-foundation/images/what-gets-loaded-carousel.png",
+      "group": "foundation",
+      "route": "datamodel",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/?page=datamodel",
+      "raw": "capture-2026-07-03/raw/scene-2-seer-26ai-data-foundation/images/what-gets-loaded-carousel.png",
+      "selected": "capture-2026-07-03/selected/scene-2-seer-26ai-data-foundation/images/what-gets-loaded-carousel.png"
+    },
+    {
+      "file": "scene-2-seer-26ai-data-foundation/images/foundation-downstream-handoff.png",
+      "group": "foundation",
+      "route": "datamodel",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/?page=datamodel",
+      "raw": "capture-2026-07-03/raw/scene-2-seer-26ai-data-foundation/images/foundation-downstream-handoff.png",
+      "selected": "capture-2026-07-03/selected/scene-2-seer-26ai-data-foundation/images/foundation-downstream-handoff.png"
+    },
+    {
+      "file": "scene-3-public-service-command-center/images/scene-3-public-service-command-center.png",
+      "group": "dashboard",
+      "route": "dashboard",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/?page=dashboard",
+      "raw": "capture-2026-07-03/raw/scene-3-public-service-command-center/images/scene-3-public-service-command-center.png",
+      "selected": "capture-2026-07-03/selected/scene-3-public-service-command-center/images/scene-3-public-service-command-center.png"
+    },
+    {
+      "file": "scene-3-public-service-command-center/images/command-center-kpis-overview.png",
+      "group": "dashboard",
+      "route": "dashboard",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/?page=dashboard",
+      "raw": "capture-2026-07-03/raw/scene-3-public-service-command-center/images/command-center-kpis-overview.png",
+      "selected": "capture-2026-07-03/selected/scene-3-public-service-command-center/images/command-center-kpis-overview.png"
+    },
+    {
+      "file": "scene-3-public-service-command-center/images/signal-velocity-and-service-value.png",
+      "group": "dashboard",
+      "route": "dashboard",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/?page=dashboard",
+      "raw": "capture-2026-07-03/raw/scene-3-public-service-command-center/images/signal-velocity-and-service-value.png",
+      "selected": "capture-2026-07-03/selected/scene-3-public-service-command-center/images/signal-velocity-and-service-value.png"
+    },
+    {
+      "file": "scene-3-public-service-command-center/images/services-under-pressure.png",
+      "group": "dashboard",
+      "route": "dashboard",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/?page=dashboard",
+      "raw": "capture-2026-07-03/raw/scene-3-public-service-command-center/images/services-under-pressure.png",
+      "selected": "capture-2026-07-03/selected/scene-3-public-service-command-center/images/services-under-pressure.png"
+    },
+    {
+      "file": "scene-4-resident-demand-signals/images/scene-4-resident-demand-signals.png",
+      "group": "signals",
+      "route": "social",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/?page=social",
+      "raw": "capture-2026-07-03/raw/scene-4-resident-demand-signals/images/scene-4-resident-demand-signals.png",
+      "selected": "capture-2026-07-03/selected/scene-4-resident-demand-signals/images/scene-4-resident-demand-signals.png"
+    },
+    {
+      "file": "scene-4-resident-demand-signals/images/public-service-vector-search.png",
+      "group": "signals",
+      "route": "social",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/?page=social",
+      "raw": "capture-2026-07-03/raw/scene-4-resident-demand-signals/images/public-service-vector-search.png",
+      "selected": "capture-2026-07-03/selected/scene-4-resident-demand-signals/images/public-service-vector-search.png"
+    },
+    {
+      "file": "scene-4-resident-demand-signals/images/resident-signal-summary.png",
+      "group": "signals",
+      "route": "social",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/?page=social",
+      "raw": "capture-2026-07-03/raw/scene-4-resident-demand-signals/images/resident-signal-summary.png",
+      "selected": "capture-2026-07-03/selected/scene-4-resident-demand-signals/images/resident-signal-summary.png"
+    },
+    {
+      "file": "scene-4-resident-demand-signals/images/resident-signal-momentum.png",
+      "group": "signals",
+      "route": "social",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/?page=social",
+      "raw": "capture-2026-07-03/raw/scene-4-resident-demand-signals/images/resident-signal-momentum.png",
+      "selected": "capture-2026-07-03/selected/scene-4-resident-demand-signals/images/resident-signal-momentum.png"
+    },
+    {
+      "file": "scene-5-community-partner-network/images/scene-5-community-partner-network.png",
+      "group": "graph",
+      "route": "graph",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/?page=graph",
+      "raw": "capture-2026-07-03/raw/scene-5-community-partner-network/images/scene-5-community-partner-network.png",
+      "selected": "capture-2026-07-03/selected/scene-5-community-partner-network/images/scene-5-community-partner-network.png"
+    },
+    {
+      "file": "scene-5-community-partner-network/images/partner-graph-workspace.png",
+      "group": "graph",
+      "route": "graph",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/?page=graph",
+      "raw": "capture-2026-07-03/raw/scene-5-community-partner-network/images/partner-graph-workspace.png",
+      "selected": "capture-2026-07-03/selected/scene-5-community-partner-network/images/partner-graph-workspace.png"
+    },
+    {
+      "file": "scene-5-community-partner-network/images/partner-program-relationships.png",
+      "group": "graph",
+      "route": "graph",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/?page=graph",
+      "raw": "capture-2026-07-03/raw/scene-5-community-partner-network/images/partner-program-relationships.png",
+      "selected": "capture-2026-07-03/selected/scene-5-community-partner-network/images/partner-program-relationships.png"
+    },
+    {
+      "file": "scene-5-community-partner-network/images/graph-query-explorer.png",
+      "group": "graph",
+      "route": "graph",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/?page=graph",
+      "raw": "capture-2026-07-03/raw/scene-5-community-partner-network/images/graph-query-explorer.png",
+      "selected": "capture-2026-07-03/selected/scene-5-community-partner-network/images/graph-query-explorer.png"
+    },
+    {
+      "file": "scene-6-service-access-and-coverage-map/images/scene-6-service-access-and-coverage-map.png",
+      "group": "coverage",
+      "route": "fulfillment",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/?page=fulfillment",
+      "raw": "capture-2026-07-03/raw/scene-6-service-access-and-coverage-map/images/scene-6-service-access-and-coverage-map.png",
+      "selected": "capture-2026-07-03/selected/scene-6-service-access-and-coverage-map/images/scene-6-service-access-and-coverage-map.png"
+    },
+    {
+      "file": "scene-6-service-access-and-coverage-map/images/global-vpd-statewide.png",
+      "group": "coverage",
+      "route": "fulfillment",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/?page=fulfillment",
+      "raw": "capture-2026-07-03/raw/scene-6-service-access-and-coverage-map/images/global-vpd-statewide.png",
+      "selected": "capture-2026-07-03/selected/scene-6-service-access-and-coverage-map/images/global-vpd-statewide.png"
+    },
+    {
+      "file": "scene-6-service-access-and-coverage-map/images/service-access-map-layers.png",
+      "group": "coverage",
+      "route": "fulfillment",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/?page=fulfillment",
+      "raw": "capture-2026-07-03/raw/scene-6-service-access-and-coverage-map/images/service-access-map-layers.png",
+      "selected": "capture-2026-07-03/selected/scene-6-service-access-and-coverage-map/images/service-access-map-layers.png"
+    },
+    {
+      "file": "scene-6-service-access-and-coverage-map/images/service-sites-table.png",
+      "group": "coverage",
+      "route": "fulfillment",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/?page=fulfillment",
+      "raw": "capture-2026-07-03/raw/scene-6-service-access-and-coverage-map/images/service-sites-table.png",
+      "selected": "capture-2026-07-03/selected/scene-6-service-access-and-coverage-map/images/service-sites-table.png"
+    },
+    {
+      "file": "scene-6-service-access-and-coverage-map/images/capacity-and-access-signals.png",
+      "group": "coverage",
+      "route": "fulfillment",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/?page=fulfillment",
+      "raw": "capture-2026-07-03/raw/scene-6-service-access-and-coverage-map/images/capacity-and-access-signals.png",
+      "selected": "capture-2026-07-03/selected/scene-6-service-access-and-coverage-map/images/capacity-and-access-signals.png"
+    },
+    {
+      "file": "scene-6-service-access-and-coverage-map/images/regional-vpd-western-slope.png",
+      "group": "coverage",
+      "route": "fulfillment",
+      "identity": "fm_west_maria",
+      "url": "http://127.0.0.1:8505/?page=fulfillment",
+      "raw": "capture-2026-07-03/raw/scene-6-service-access-and-coverage-map/images/regional-vpd-western-slope.png",
+      "selected": "capture-2026-07-03/selected/scene-6-service-access-and-coverage-map/images/regional-vpd-western-slope.png"
+    },
+    {
+      "file": "scene-6-service-access-and-coverage-map/images/restricted-vpd-no-operational-rows.png",
+      "group": "coverage",
+      "route": "fulfillment",
+      "identity": "viewer_sam",
+      "url": "http://127.0.0.1:8505/?page=fulfillment",
+      "raw": "capture-2026-07-03/raw/scene-6-service-access-and-coverage-map/images/restricted-vpd-no-operational-rows.png",
+      "selected": "capture-2026-07-03/selected/scene-6-service-access-and-coverage-map/images/restricted-vpd-no-operational-rows.png"
+    },
+    {
+      "file": "scene-7-service-request-workbench/images/scene-7-service-request-workbench.png",
+      "group": "requests",
+      "route": "orders",
+      "identity": "fm_west_maria",
+      "url": "http://127.0.0.1:8505/?page=orders",
+      "raw": "capture-2026-07-03/raw/scene-7-service-request-workbench/images/scene-7-service-request-workbench.png",
+      "selected": "capture-2026-07-03/selected/scene-7-service-request-workbench/images/scene-7-service-request-workbench.png"
+    },
+    {
+      "file": "scene-7-service-request-workbench/images/service-request-workspace.png",
+      "group": "requests",
+      "route": "orders",
+      "identity": "fm_west_maria",
+      "url": "http://127.0.0.1:8505/?page=orders",
+      "raw": "capture-2026-07-03/raw/scene-7-service-request-workbench/images/service-request-workspace.png",
+      "selected": "capture-2026-07-03/selected/scene-7-service-request-workbench/images/service-request-workspace.png"
+    },
+    {
+      "file": "scene-7-service-request-workbench/images/service-request-relational-detail.png",
+      "group": "requests",
+      "route": "orders",
+      "identity": "fm_west_maria",
+      "url": "http://127.0.0.1:8505/?page=orders",
+      "raw": "capture-2026-07-03/raw/scene-7-service-request-workbench/images/service-request-relational-detail.png",
+      "selected": "capture-2026-07-03/selected/scene-7-service-request-workbench/images/service-request-relational-detail.png"
+    },
+    {
+      "file": "scene-7-service-request-workbench/images/service-request-json-duality.png",
+      "group": "requests",
+      "route": "orders",
+      "identity": "fm_west_maria",
+      "url": "http://127.0.0.1:8505/?page=orders",
+      "raw": "capture-2026-07-03/raw/scene-7-service-request-workbench/images/service-request-json-duality.png",
+      "selected": "capture-2026-07-03/selected/scene-7-service-request-workbench/images/service-request-json-duality.png"
+    },
+    {
+      "file": "scene-7-service-request-workbench/images/service-task-route-progress.png",
+      "group": "requests",
+      "route": "orders",
+      "identity": "fm_west_maria",
+      "url": "http://127.0.0.1:8505/?page=orders",
+      "raw": "capture-2026-07-03/raw/scene-7-service-request-workbench/images/service-task-route-progress.png",
+      "selected": "capture-2026-07-03/selected/scene-7-service-request-workbench/images/service-task-route-progress.png"
+    },
+    {
+      "file": "scene-7-service-request-workbench/images/service-request-oracle-evidence.png",
+      "group": "requests",
+      "route": "orders",
+      "identity": "fm_west_maria",
+      "url": "http://127.0.0.1:8505/?page=orders",
+      "raw": "capture-2026-07-03/raw/scene-7-service-request-workbench/images/service-request-oracle-evidence.png",
+      "selected": "capture-2026-07-03/selected/scene-7-service-request-workbench/images/service-request-oracle-evidence.png"
+    },
+    {
+      "file": "scene-8-demand-and-capacity-analytics/images/scene-8-demand-and-capacity-analytics.png",
+      "group": "analytics",
+      "route": "oml",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/?page=oml",
+      "raw": "capture-2026-07-03/raw/scene-8-demand-and-capacity-analytics/images/scene-8-demand-and-capacity-analytics.png",
+      "selected": "capture-2026-07-03/selected/scene-8-demand-and-capacity-analytics/images/scene-8-demand-and-capacity-analytics.png"
+    },
+    {
+      "file": "scene-8-demand-and-capacity-analytics/images/demand-surge-risk.png",
+      "group": "analytics",
+      "route": "oml",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/?page=oml",
+      "raw": "capture-2026-07-03/raw/scene-8-demand-and-capacity-analytics/images/demand-surge-risk.png",
+      "selected": "capture-2026-07-03/selected/scene-8-demand-and-capacity-analytics/images/demand-surge-risk.png"
+    },
+    {
+      "file": "scene-8-demand-and-capacity-analytics/images/resident-need-segments.png",
+      "group": "analytics",
+      "route": "oml",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/?page=oml",
+      "raw": "capture-2026-07-03/raw/scene-8-demand-and-capacity-analytics/images/resident-need-segments.png",
+      "selected": "capture-2026-07-03/selected/scene-8-demand-and-capacity-analytics/images/resident-need-segments.png"
+    },
+    {
+      "file": "scene-8-demand-and-capacity-analytics/images/service-value-forecast.png",
+      "group": "analytics",
+      "route": "oml",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/?page=oml",
+      "raw": "capture-2026-07-03/raw/scene-8-demand-and-capacity-analytics/images/service-value-forecast.png",
+      "selected": "capture-2026-07-03/selected/scene-8-demand-and-capacity-analytics/images/service-value-forecast.png"
+    },
+    {
+      "file": "scene-8-demand-and-capacity-analytics/images/vector-k-means-clusters.png",
+      "group": "analytics",
+      "route": "oml",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/?page=oml",
+      "raw": "capture-2026-07-03/raw/scene-8-demand-and-capacity-analytics/images/vector-k-means-clusters.png",
+      "selected": "capture-2026-07-03/selected/scene-8-demand-and-capacity-analytics/images/vector-k-means-clusters.png"
+    },
+    {
+      "file": "scene-8-demand-and-capacity-analytics/images/capacity-intelligence.png",
+      "group": "analytics",
+      "route": "oml",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/?page=oml",
+      "raw": "capture-2026-07-03/raw/scene-8-demand-and-capacity-analytics/images/capacity-intelligence.png",
+      "selected": "capture-2026-07-03/selected/scene-8-demand-and-capacity-analytics/images/capacity-intelligence.png"
+    },
+    {
+      "file": "scene-9-ask-seer-operations-data/images/scene-9-ask-seer-operations-data.png",
+      "group": "askdata",
+      "route": "askdata",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/?page=askdata",
+      "raw": "capture-2026-07-03/raw/scene-9-ask-seer-operations-data/images/scene-9-ask-seer-operations-data.png",
+      "selected": "capture-2026-07-03/selected/scene-9-ask-seer-operations-data/images/scene-9-ask-seer-operations-data.png"
+    },
+    {
+      "file": "scene-9-ask-seer-operations-data/images/ask-public-service-data-narrate-mode.png",
+      "group": "askdata",
+      "route": "askdata",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/?page=askdata",
+      "raw": "capture-2026-07-03/raw/scene-9-ask-seer-operations-data/images/ask-public-service-data-narrate-mode.png",
+      "selected": "capture-2026-07-03/selected/scene-9-ask-seer-operations-data/images/ask-public-service-data-narrate-mode.png"
+    },
+    {
+      "file": "scene-9-ask-seer-operations-data/images/ask-public-service-data-chat-mode.png",
+      "group": "askdata",
+      "route": "askdata",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/?page=askdata",
+      "raw": "capture-2026-07-03/raw/scene-9-ask-seer-operations-data/images/ask-public-service-data-chat-mode.png",
+      "selected": "capture-2026-07-03/selected/scene-9-ask-seer-operations-data/images/ask-public-service-data-chat-mode.png"
+    },
+    {
+      "file": "scene-9-ask-seer-operations-data/images/ask-public-service-data-generated-sql.png",
+      "group": "askdata",
+      "route": "askdata",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/?page=askdata",
+      "raw": "capture-2026-07-03/raw/scene-9-ask-seer-operations-data/images/ask-public-service-data-generated-sql.png",
+      "selected": "capture-2026-07-03/selected/scene-9-ask-seer-operations-data/images/ask-public-service-data-generated-sql.png"
+    },
+    {
+      "file": "scene-9-ask-seer-operations-data/images/ask-public-service-data-run-sql-results.png",
+      "group": "askdata",
+      "route": "askdata",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/?page=askdata",
+      "raw": "capture-2026-07-03/raw/scene-9-ask-seer-operations-data/images/ask-public-service-data-run-sql-results.png",
+      "selected": "capture-2026-07-03/selected/scene-9-ask-seer-operations-data/images/ask-public-service-data-run-sql-results.png"
+    },
+    {
+      "file": "scene-10-public-service-ai-agent-console/images/scene-10-public-service-ai-agent-console.png",
+      "group": "agents",
+      "route": "agents",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/?page=agents",
+      "raw": "capture-2026-07-03/raw/scene-10-public-service-ai-agent-console/images/scene-10-public-service-ai-agent-console.png",
+      "selected": "capture-2026-07-03/selected/scene-10-public-service-ai-agent-console/images/scene-10-public-service-ai-agent-console.png"
+    },
+    {
+      "file": "scene-10-public-service-ai-agent-console/images/agent-console-workspace.png",
+      "group": "agents",
+      "route": "agents",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/?page=agents",
+      "raw": "capture-2026-07-03/raw/scene-10-public-service-ai-agent-console/images/agent-console-workspace.png",
+      "selected": "capture-2026-07-03/selected/scene-10-public-service-ai-agent-console/images/agent-console-workspace.png"
+    },
+    {
+      "file": "scene-10-public-service-ai-agent-console/images/agent-public-service-response.png",
+      "group": "agents",
+      "route": "agents",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/?page=agents",
+      "raw": "capture-2026-07-03/raw/scene-10-public-service-ai-agent-console/images/agent-public-service-response.png",
+      "selected": "capture-2026-07-03/selected/scene-10-public-service-ai-agent-console/images/agent-public-service-response.png"
+    },
+    {
+      "file": "scene-10-public-service-ai-agent-console/images/agent-action-audit-trail.png",
+      "group": "agents",
+      "route": "agents",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/?page=agents",
+      "raw": "capture-2026-07-03/raw/scene-10-public-service-ai-agent-console/images/agent-action-audit-trail.png",
+      "selected": "capture-2026-07-03/selected/scene-10-public-service-ai-agent-console/images/agent-action-audit-trail.png"
+    },
+    {
+      "file": "scene-11-use-your-own-public-service-data/images/scene-11-use-your-own-public-service-data.png",
+      "group": "dataset",
+      "route": "welcome",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/",
+      "raw": "capture-2026-07-03/raw/scene-11-use-your-own-public-service-data/images/scene-11-use-your-own-public-service-data.png",
+      "selected": "capture-2026-07-03/selected/scene-11-use-your-own-public-service-data/images/scene-11-use-your-own-public-service-data.png"
+    },
+    {
+      "file": "scene-11-use-your-own-public-service-data/images/open-dataset-tool.png",
+      "group": "dataset",
+      "route": "welcome",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/",
+      "raw": "capture-2026-07-03/raw/scene-11-use-your-own-public-service-data/images/open-dataset-tool.png",
+      "selected": "capture-2026-07-03/selected/scene-11-use-your-own-public-service-data/images/open-dataset-tool.png"
+    },
+    {
+      "file": "scene-11-use-your-own-public-service-data/images/template-and-upload-workflow.png",
+      "group": "dataset",
+      "route": "welcome",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/",
+      "raw": "capture-2026-07-03/raw/scene-11-use-your-own-public-service-data/images/template-and-upload-workflow.png",
+      "selected": "capture-2026-07-03/selected/scene-11-use-your-own-public-service-data/images/template-and-upload-workflow.png"
+    },
+    {
+      "file": "scene-11-use-your-own-public-service-data/images/preview-restore-seeded-dataset.png",
+      "group": "dataset",
+      "route": "welcome",
+      "identity": "admin_jess",
+      "url": "http://127.0.0.1:8505/",
+      "raw": "capture-2026-07-03/raw/scene-11-use-your-own-public-service-data/images/preview-restore-seeded-dataset.png",
+      "selected": "capture-2026-07-03/selected/scene-11-use-your-own-public-service-data/images/preview-restore-seeded-dataset.png"
+    }
+  ],
+  "apiResponses": [
+    {
+      "path": "/api/import/dataset",
+      "status": 403,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/users",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 403,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/demo/status",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/users",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/demo/status",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/dashboard/agency-workload-velocity",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/dashboard/service-value-by-category",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/dashboard/summary",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/users",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/dashboard/inmemory",
+      "status": 403,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/dashboard/services-under-pressure",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/dashboard/agency-workload-velocity",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 403,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/dashboard/summary",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/dashboard/services-under-pressure",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/dashboard/service-value-by-category",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/dashboard/inmemory",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 403,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/resident-signals/influencers",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/resident-signals/priority-signals",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/users",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/resident-signals/posts",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/resident-signals/influencers",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/resident-signals/priority-signals",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/resident-signals/posts",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/resident-signals/semantic-search",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "POST"
+    },
+    {
+      "path": "/api/graph/example-queries",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 403,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/graph/influencers",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/users",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/graph/example-queries",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/graph/influencers",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/graph/network/23243",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/graph/network/23243",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/graph/run-example",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "POST"
+    },
+    {
+      "path": "/api/fulfillment/centers",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/fulfillment/inventory-alerts",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/fulfillment/demand-regions",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/fulfillment/shipments",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/fulfillment/customers",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/fulfillment/zones",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 403,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/users",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/fulfillment/inventory-alerts",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/fulfillment/shipments",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/fulfillment/zones",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/fulfillment/demand-regions",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/fulfillment/centers",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/fulfillment/customers",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/fulfillment/centers",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/fulfillment/zones",
+      "status": 200,
+      "username": "fm_west_maria",
+      "method": "GET"
+    },
+    {
+      "path": "/api/fulfillment/demand-regions",
+      "status": 200,
+      "username": "fm_west_maria",
+      "method": "GET"
+    },
+    {
+      "path": "/api/fulfillment/inventory-alerts",
+      "status": 200,
+      "username": "fm_west_maria",
+      "method": "GET"
+    },
+    {
+      "path": "/api/fulfillment/centers",
+      "status": 200,
+      "username": "fm_west_maria",
+      "method": "GET"
+    },
+    {
+      "path": "/api/fulfillment/customers",
+      "status": 200,
+      "username": "fm_west_maria",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 403,
+      "username": "fm_west_maria",
+      "method": "GET"
+    },
+    {
+      "path": "/api/fulfillment/shipments",
+      "status": 200,
+      "username": "fm_west_maria",
+      "method": "GET"
+    },
+    {
+      "path": "/api/fulfillment/centers",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/fulfillment/customers",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/fulfillment/demand-regions",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/fulfillment/inventory-alerts",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/fulfillment/shipments",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 403,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/fulfillment/zones",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/fulfillment/inventory-alerts",
+      "status": 200,
+      "username": "fm_west_maria",
+      "method": "GET"
+    },
+    {
+      "path": "/api/fulfillment/zones",
+      "status": 200,
+      "username": "fm_west_maria",
+      "method": "GET"
+    },
+    {
+      "path": "/api/fulfillment/demand-regions",
+      "status": 200,
+      "username": "fm_west_maria",
+      "method": "GET"
+    },
+    {
+      "path": "/api/fulfillment/centers",
+      "status": 200,
+      "username": "fm_west_maria",
+      "method": "GET"
+    },
+    {
+      "path": "/api/fulfillment/customers",
+      "status": 200,
+      "username": "fm_west_maria",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 403,
+      "username": "fm_west_maria",
+      "method": "GET"
+    },
+    {
+      "path": "/api/fulfillment/shipments",
+      "status": 200,
+      "username": "fm_west_maria",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 403,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/orders",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/users",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/orders",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 403,
+      "username": "fm_west_maria",
+      "method": "GET"
+    },
+    {
+      "path": "/api/orders",
+      "status": 200,
+      "username": "fm_west_maria",
+      "method": "GET"
+    },
+    {
+      "path": "/api/orders/228161",
+      "status": 200,
+      "username": "fm_west_maria",
+      "method": "GET"
+    },
+    {
+      "path": "/api/orders/226782",
+      "status": 200,
+      "username": "fm_west_maria",
+      "method": "GET"
+    },
+    {
+      "path": "/api/orders/226782/duality",
+      "status": 200,
+      "username": "fm_west_maria",
+      "method": "GET"
+    },
+    {
+      "path": "/api/orders/226782",
+      "status": 200,
+      "username": "fm_west_maria",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/orders",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/ml/persistence/status",
+      "status": 403,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/ml/vector-clusters",
+      "status": 403,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 403,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/ml/summary",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/users",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/ml/customer-segments",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/ml/revenue-forecast",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/ml/demand-forecast",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/ml/inventory-intelligence",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/ml/revenue-forecast",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/ml/summary",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/ml/customer-segments",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/ml/demand-forecast",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/ml/vector-clusters",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/ml/persistence/status",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/ml/inventory-intelligence",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/selectai/profiles",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/selectai/schema-objects",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 403,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/users",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/selectai/profiles",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/selectai/schema-objects",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/selectai/chat",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "POST"
+    },
+    {
+      "path": "/api/selectai/chat-mode",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "POST"
+    },
+    {
+      "path": "/api/selectai/showsql",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "POST"
+    },
+    {
+      "path": "/api/selectai/runsql",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "POST"
+    },
+    {
+      "path": "/api/agents/profiles",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 403,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/users",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/agents/actions",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/agents/profiles",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/agents/actions",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/agents/chat",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "POST"
+    },
+    {
+      "path": "/api/agents/actions",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 403,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/users",
+      "status": 200,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/restore-demo/validate",
+      "status": 200,
+      "username": "admin_jess",
+      "method": "POST"
+    }
+  ],
+  "expectedAuthorizationDenials": [
+    {
+      "path": "/api/import/dataset",
+      "status": 403,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 403,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/dashboard/inmemory",
+      "status": 403,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 403,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 403,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 403,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 403,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 403,
+      "username": "fm_west_maria",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 403,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 403,
+      "username": "fm_west_maria",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 403,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 403,
+      "username": "fm_west_maria",
+      "method": "GET"
+    },
+    {
+      "path": "/api/ml/persistence/status",
+      "status": 403,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/ml/vector-clusters",
+      "status": 403,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 403,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 403,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 403,
+      "username": "viewer_sam",
+      "method": "GET"
+    },
+    {
+      "path": "/api/import/dataset",
+      "status": 403,
+      "username": "viewer_sam",
+      "method": "GET"
+    }
+  ],
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+    "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+    "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+    "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+    "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+    "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+    "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+    "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+    "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+    "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+    "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+    "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+    "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+    "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+    "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+    "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+    "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+    "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+  ],
+  "pageErrors": [],
+  "requestFailures": [],
+  "unexpectedConsoleErrors": [],
+  "unexpectedApiErrors": [],
+  "status": "passed",
+  "capturedCount": 52,
+  "missingCaptures": [],
+  "completedAt": "2026-07-03T16:21:17.412Z"
+}

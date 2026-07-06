@@ -2,57 +2,51 @@
 
 ## Introduction
 
-**Resident Demand Signals** helps an agency analyst connect plain-language constituent concerns to the services and programs already governed in Oracle AI Database. A resident may describe the same issue as "rental help," "housing assistance," "eviction support," or "benefits intake." The application uses vector search so analysts can find related public services even when the wording is not exact.
-
-This scene matters because demand often appears before a formal service request is created. Resident messages, contact-center notes, outreach summaries, community partner updates, and public feedback can all point to pressure that the agency should understand earlier.
+Jessica now asks whether Colorado residents and caseworkers are signaling an eligibility-service problem before it becomes a larger backlog or accuracy issue. Vector search connects plain-language concerns to governed services even when the wording differs.
 
 Estimated Time: **10 minutes**
 
-![Resident Demand Signals page with vector search and resident signal feed](images/scene-4-resident-demand-signals.png)
+![Colorado Resident Demand Signals with vector search and signal evidence](images/scene-4-resident-demand-signals.png)
 
 ### Objectives
 
-In this scene, you will learn how State and Local Government teams can use in-database embeddings to discover related public services, review resident signal momentum, and connect emerging demand to the operating response.
+In this scene, you will search for eligibility-related services, interpret the Colorado resident signal summary, and select evidence for partner coordination.
 
-## Task 1: Run public service vector search
-
-Perform the following set of steps when the audience wants to see semantic search instead of keyword matching.
+## Task 1: Search for eligibility-related services
 
 1. Click **Resident Demand Signals** in the sidebar.
-2. In **Public Service Vector Search**, enter a phrase such as `emergency rental assistance`, `permit intake`, or `food assistance`.
+2. Enter `benefits eligibility appointment backlog` in Public Service Vector Search.
 3. Click **Search**.
 4. Review the ranked public services and similarity scores.
+5. Explain that semantic similarity, rather than exact keyword matching, produced the list.
 
-    ![Public Service Vector Search results for a resident need phrase](images/public-service-vector-search.png)
+    ![Vector search for benefits eligibility appointment backlog](images/public-service-vector-search.png)
 
-**Expected result:** The page returns semantically related services, not just exact keyword matches. The Oracle evidence connects the result to vector embeddings, vector distance, ONNX embeddings, and approximate nearest-neighbor search.
+Jessica can connect an operating concern to relevant eligibility, assistance, and resident-service definitions without maintaining a separate keyword taxonomy.
 
-## Task 2: Review resident signal summary
-
-Perform the following set of steps to connect the search result to the visible signal summary.
+## Task 2: Read the Colorado resident signal summary
 
 1. Review **Resident Signal Summary**.
-2. Compare total resident signals, critical or escalating signals, top concerns, impact area, and recommended next step.
-3. Explain how this summary gives the analyst a fast operating read before opening individual signal cards.
+2. Compare total signals, critical or escalating signals, top concern, impact area, and recommended next step.
+3. Keep the interpretation tied to Colorado residents and the active VPD identity.
 
-    ![Resident Signal Summary with top concerns and recommended next step](images/resident-signal-summary.png)
+    ![Colorado Resident Signal Summary with operating priorities](images/resident-signal-summary.png)
 
-The summary turns many resident messages into a concise operating signal that a constituent-services team can use for triage.
+The summary turns many resident and caseworker observations into a concise operating signal that Jessica can compare with the 2.7% eligibility-risk indicator.
 
-## Task 3: Interpret resident signal cards
+## Task 3: Select evidence for partner coordination
 
-Perform the following set of steps to connect a plain-language resident concern to the signals that may require agency attention.
+1. Compare the highest-priority signal cards with the vector matches.
+2. Note the source channel, priority label, partner, signal text, and follow-up activity.
+3. Carry the strongest eligibility-related evidence into the Community Partner Network.
 
-1. Review the resident signal feed.
-2. Compare the highest-priority signal cards with the matched service results from Task 1.
-3. Use the visible status labels to explain which resident needs should move into service intake, partner coordination, or follow-up.
+    ![Priority Colorado resident signal cards and follow-up evidence](images/resident-signal-momentum.png)
 
-    ![Resident signal momentum cards and urgency labels](images/resident-signal-momentum.png)
-
-The signal feed helps the agency understand where public demand is moving. Use this page to explain that constituent service teams can connect early resident concerns to service definitions and response paths already governed in Oracle.
+The risk signal now has resident context. Jessica has evidence of what people are experiencing and can identify which in-state organizations should coordinate next.
 
 *You can move to the next scene.*
 
 ## Credits & Build Notes
+
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-17
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-07-03

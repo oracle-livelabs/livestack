@@ -1,0 +1,15 @@
+{
+  "Colorado State and Local Government Service Operations LiveStack Guide": 3,
+  "Scene 1 Welcome and Demo Orientation": 7,
+  "Scene 2 Data Foundation": 10,
+  "Scene 3 Public Service Command Center": 14,
+  "Scene 4 Resident Demand Signals": 18,
+  "Scene 5 Community Partner Network": 22,
+  "Scene 6 Service Access and Coverage Map": 26,
+  "Scene 7 Service Request Workbench": 33,
+  "Scene 8 Demand and Capacity Analytics": 39,
+  "Scene 9 Ask State and Local Government Data": 45,
+  "Scene 10 Public Service AI Agent Console": 50,
+  "Scene 11 Use Your Own Public Service Data": 54,
+  "Take It Home: Run LiveStack with Podman Compose": 58
+}

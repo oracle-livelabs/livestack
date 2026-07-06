@@ -2,61 +2,50 @@
 
 ## Introduction
 
-This scene prepares the trusted public-sector dataset used throughout the demo. Loading or restoring the data gives every later screen the same governed starting point, so dashboards, vector search, graph views, maps, service requests, analytics, Ask Data, and agent actions all reflect the same State and Local Government data foundation.
-
-Use this scene to show that later pages are not separate demos. They are different agency workflows running on one governed Oracle AI Database 26ai foundation.
+Before Jessica acts on the eligibility-risk signal, she verifies that residents, service requests, service centers, partner relationships, geographic layers, forecasts, and audit records come from one governed Colorado dataset. This is the evidence baseline for the entire operating decision.
 
 Estimated Time: **5 minutes**
 
-![Data Foundation page with State and Local Government data domains](images/scene-2-seer-26ai-data-foundation.png)
+![Data Foundation with the governed Colorado service domains](images/scene-2-seer-26ai-data-foundation.png)
 
 ### Objectives
 
-In this scene, you will learn what public-sector decision the page supports, what evidence the user should inspect, and what action the team may take next.
+In this scene, you will confirm non-zero live records, connect Oracle workloads to later business steps, and avoid changing the dataset during the normal presentation.
 
-**Note:** Review the Oracle Internals sidebar after the business flow is clear. Use it to connect the visible public-sector outcome to the database capabilities behind the page.
-
-## Task 1: Prepare the dataset
-
-Perform the following set of steps so every later scene starts from the same trusted agency baseline. This makes the command center, signal search, graph, map, service requests, analytics, Ask Data, and agent results easier to compare and trust.
+## Task 1: Confirm the governed Colorado baseline
 
 1. Click **Data Foundation** in the sidebar.
-2. Review the data foundation summary for constituent services, agency operations, public programs, service requests, resident signals, service access, and AI-ready analytics.
-3. Review the **Prepare the Dataset** record counts for public services, resident signals, service requests, vectors, and semantic matches.
-4. Use the dataset manager in Scene 11 when the environment needs a restore, upload, or validation workflow.
+2. Review the live counts for Public Services, Resident Signals, Service Requests, Service Vectors, Signal Vectors, and Semantic Matches.
+3. Confirm that the values are populated.
+4. Do not click **Restore Demo Data** during the normal walkthrough. Use restoration only when intentionally resetting the seeded environment.
 
-    ![Data Foundation counts and loaded public-sector data domains](images/prepare-dataset-counts.png)
+    ![Populated record counts for the governed Colorado baseline](images/prepare-dataset-counts.png)
 
-Use these counts to show that the dataset supports operational, analytical, spatial, graph, vector, machine learning, and audit workflows, not just a single dashboard.
+The counts establish that later dashboards, vectors, graphs, maps, requests, and agents are different views of one prepared Colorado baseline.
 
-**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
-
-## Task 2: Review what gets loaded
-
-Perform the following set of steps to show that the dataset is broad enough to support the full public-sector story.
+## Task 2: Review the connected service domains
 
 1. Scroll to **What Gets Loaded**.
-2. Review the visible data domains for constituent service operations, resident and agency signals, public programs, service requests, service sites, and related public-sector records.
-3. Explain that later scenes use the same prepared data rather than separate, disconnected samples.
+2. Use the carousel to inspect all capability groups.
+3. Call out benefits eligibility as one governed domain alongside permits, inspections, public works, emergency response, and other state services.
 
-    ![What Gets Loaded carousel with State and Local Government data domains](images/what-gets-loaded-carousel.png)
+    ![What Gets Loaded carousel with connected Colorado service domains](images/what-gets-loaded-carousel.png)
 
-This step helps the audience understand why the rest of the runbook can move from dashboards to vectors, graphs, maps, service requests, machine learning, Ask Data, and agents without changing data foundations.
+The breadth of the foundation matters because the Medicaid metric is an early-warning signal inside a larger state-services operating model.
 
-## Task 3: Connect the foundation to downstream scenes
+## Task 3: Trace the evidence into the operating workflow
 
-Perform the following set of steps to show how the same agency data foundation powers the rest of the demo.
+1. Open **Oracle Internals** after the business story is clear.
+2. Link relational records to requests, vectors to resident signals, graph data to partner coordination, Spatial data to coverage, OML to capacity, and audit records to agent action.
+3. Transition to the command center to interpret the risk signal.
 
-1. Review the capability groups for relational operations, JSON duality, property graph, spatial access, vector search, OML, natural-language SQL, and agent audit records.
-2. Open the **Oracle Internals** rail if it is collapsed.
-3. Connect each capability group to a later scene in the sidebar.
+    ![Oracle capabilities connecting the Colorado baseline to downstream scenes](images/foundation-downstream-handoff.png)
 
-    ![Data Foundation handoff to downstream public-sector scenes](images/foundation-downstream-handoff.png)
-
-The business value is that teams can make the decision from connected, governed data. Oracle AI Database provides the shared foundation that keeps operational data, analytics, and AI workflows aligned.
+Jessica has established data trust. She can now treat the 2.7% rate and the surrounding workload indicators as connected operational evidence rather than isolated dashboard values.
 
 *You can move to the next scene.*
 
 ## Credits & Build Notes
+
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-17
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-07-03

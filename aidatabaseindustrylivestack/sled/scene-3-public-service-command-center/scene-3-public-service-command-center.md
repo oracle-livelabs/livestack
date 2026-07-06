@@ -2,66 +2,52 @@
 
 ## Introduction
 
-The **Public Service Command Center** helps agency leaders answer a daily operating question: *Which public services need attention right now?*
+The command center gives Jessica the signal that starts the investigation: Colorado's **Medicaid Eligibility Error Rate is 2.7%**, within the stakeholder-provided **3.0% demo threshold** but close enough to be classified as **Approaching Threshold**. Jessica now needs to determine whether resident demand and service pressure justify intervention.
 
-The page brings together service request volume, public service value, urgent resident signals, services under pressure, and AI activity so a state or local government team can decide where to investigate first.
-
-Dashboards like this are difficult to implement when service requests, resident messages, program data, partner relationships, capacity information, and agent activity live in different systems. Teams often need copied extracts, separate BI models, and reconciliation logic before a dashboard can show a trustworthy view.
-
-Oracle AI Database helps address that challenge by keeping operational, analytical, JSON, in-memory, and AI-ready data close to the same governed data foundation. In this scene, the dashboard brings together live public-sector KPIs, signal velocity, service category value, and services under pressure without sending the user to another application.
+**Approaching Threshold** does not mean the threshold has been exceeded. The page separately confirms **Within 3.0% limit**. Rates above the stakeholder-provided threshold may create potential federal matching-fund exposure; this demo does not calculate a penalty or provide a legal determination.
 
 Estimated Time: **10 minutes**
 
-![Public Service Command Center with KPI cards, signal velocity, service value, and services under pressure](images/scene-3-public-service-command-center.png)
+![Public Service Command Center with the Colorado eligibility-risk signal](images/scene-3-public-service-command-center.png)
 
 ### Objectives
 
-In this scene, you will learn what public-sector decision the page supports, what evidence the user should inspect, and what action the team may take next.
+In this scene, you will interpret the eligibility-risk metric, connect it to statewide pressure, and choose the evidence thread that Jessica will investigate.
 
-**Note:** Review the Oracle Internals sidebar after the business flow is clear. Use it to connect the visible public-sector outcome to the database capabilities behind the page.
-
-## Task 1: Review the command center dashboard
-
-Use the dashboard as a daily triage view. The goal is to see where service demand, value, urgent resident signals, capacity pressure, or AI activity suggests the agency needs attention.
+## Task 1: Read the eligibility-risk signal
 
 1. Click **Public Service Command Center** in the sidebar.
-2. Review the KPI cards across the top of the page.
-3. Note where the resident signal velocity and service value panels sit in the daily triage view.
-4. Review the services-under-pressure table.
+2. Read **Current rate: 2.7%**, **Demo threshold: 3.0%**, **Approaching Threshold**, and **Within 3.0% limit**.
+3. Review the explanatory copy or tooltip.
+4. State that this is the demo's decision trigger, not a penalty calculation.
 
-    ![Command Center KPI cards, resident signal velocity, and service value areas](images/command-center-kpis-overview.png)
+    ![Medicaid Eligibility Error Rate and 3.0 percent demo threshold](images/command-center-kpis-overview.png)
 
-Use the KPI cards to frame the command center as a triage surface: the user can see request volume, service value, urgent signals, watched services, and AI activity in one place.
+Jessica treats the metric as an early-warning indicator. Colorado is not above threshold, but waiting removes operating margin.
 
-**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
+## Task 2: Connect risk to statewide operating pressure
 
-## Task 2: Interpret signal velocity and service value
+1. Review Service Requests, Service Value Exposure, Urgent Resident Signals, Services Under Pressure, and Audited Actions.
+2. Compare **Agency Workload Velocity** with **Service Value by Category**.
+3. Look for benefits eligibility or adjacent health-and-human-services pressure without implying that every workload is Medicaid-related.
 
-Perform the following set of steps when the audience needs to understand why the dashboard is more than a set of counters.
+    ![Agency workload velocity and public service value evidence](images/signal-velocity-and-service-value.png)
 
-1. Review **Agency Workload Velocity** to see how resident signals and service demand are moving over time.
-2. Review **Service Value by Category** to see which public-service categories carry the most operating exposure.
-3. Compare the chart direction with the KPI cards above it.
+The dashboard connects the early-warning metric to the broader operating environment in which accuracy, timeliness, and service capacity are managed.
 
-    ![Agency workload velocity chart and public service value by category](images/signal-velocity-and-service-value.png)
+## Task 3: Choose the investigation thread
 
-The velocity and value panels help a leader decide whether pressure is isolated, recurring, or tied to a high-value public-service category.
+1. Search **Services Under Pressure** for `benefits` or `eligibility`.
+2. Open a matching row when one is available.
+3. Record the service or program, request volume, signal momentum, and capacity evidence to investigate in Scene 4.
 
-## Task 3: Inspect services under pressure
+    ![Services under pressure filtered to an eligibility-related investigation](images/services-under-pressure.png)
 
-Perform the following set of steps to move from dashboard-level pressure to specific services, programs, or locations that may need attention.
-
-1. Use the search or filter control in the services-under-pressure area.
-2. Select or review a service with notable demand or signal momentum.
-3. Compare the service row with the signal velocity and value charts.
-4. Open the Oracle Internals rail to explain how live data supports the view.
-
-    ![Services under pressure table with public-sector operating signals](images/services-under-pressure.png)
-
-The services-under-pressure table turns the KPI story into a set of operating decisions. A public-sector leader can move from "urgent signals are rising" to a specific service, partner, or operating response that needs review.
+Jessica leaves the executive view with a concrete hypothesis: eligibility-related demand or workflow pressure may be narrowing the state's remaining margin before the 3.0% threshold. The next scene tests that hypothesis against resident signals.
 
 *You can move to the next scene.*
 
 ## Credits & Build Notes
+
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-17
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-07-03

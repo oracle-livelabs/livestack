@@ -2,71 +2,86 @@
 
 ## Introduction
 
-The **Service Request Workbench** shows how a public-service request moves from a table of operational records into a row-level case detail. The live page lets the agency review service request status, resident context, line count, service value, and line-level public program detail from the same governed dataset.
-
-For a state or local agency, a service request may represent a resident contact, permit follow-up, benefits eligibility review, inspection task, public works issue, or emergency-response support item. Different users need different levels of evidence: an analyst may start with the request list, a supervisor may open the row-level detail, and a data steward may use Oracle Internals to explain how JSON Duality and VPD support the application pattern.
+Maria Santos now moves from Western Slope pressure to one Colorado resident request. The **Service Request Workbench** connects the request, resident, in-state service center, Request Line Items, route evidence, JSON document, and active field task under the same Regional VPD context.
 
 Estimated Time: **10 minutes**
 
-![Service Request Workbench with request list and detail panel](images/scene-7-service-request-workbench.png)
+![Service Request Workbench with a Colorado regional request queue](images/scene-7-service-request-workbench.png)
 
 ### Objectives
 
-In this scene, you will open a service request, review the expanded request detail, and connect the visible workflow to Oracle-backed JSON Duality and access-control evidence.
+In this scene, you will review Maria's regional queue, inspect one request in three governed views, distinguish request status from service-task status, and explain Field Resolution Underway.
 
-## Task 1: Review the request list
+## Task 1: Review the Western Slope request queue
 
-Perform the following set of steps to move from the service request list into a detailed public-sector case or task.
+1. Keep Maria Santos selected.
+2. Click **Service Request Workbench** in the sidebar.
+3. Confirm the **Regional VPD** banner and Western Slope scope.
+4. Filter to **In Progress**.
+5. Select the first visible In Progress request that has a populated Colorado service site and service task. Do not rely on a fixed request number.
 
-1. Click **Service Request Workbench** in the sidebar.
-2. Review the visible request list, including request number, resident, location, status, line count, and service value.
-3. Use **Prev** or **Next** if you need to move through the visible request pages.
-4. Identify one request that should be opened for detail review.
+    ![Western Slope request list with approved lifecycle labels](images/service-request-workspace.png)
 
-    ![Service request workspace with request list and visible request columns](images/service-request-workspace.png)
+The queue contains only requests Maria is authorized to see. Status filters use business-facing request language and do not expose internal compatibility enums.
 
-The workbench helps the agency move from an aggregate service-pressure signal to the individual requests that need review.
+## Task 2: Inspect the relational request evidence
 
-## Task 2: Inspect the request detail
+1. Keep the selected request expanded.
+2. Open **Relational**.
+3. Compare the resident, Colorado location, in-state service center, service value, route cost, creation date, and Request Line Items.
+4. Confirm that dates are valid and the resident and assigned center are geographically plausible.
 
-Perform the following set of steps to inspect the request-level evidence available on the page.
+    ![Relational request detail with resident, center, route cost, and Request Line Items](images/service-request-relational-detail.png)
 
-1. Click a service request row, such as **#113881**.
-2. Review the expanded **Same data - three views** panel.
-3. Compare resident, location, service value, route cost, and line-count context.
+**Request Line Items:** Number of individual service or eligibility items included in the resident request. They explain the work contained in the overall case; they are not a route or geographic count.
 
-    ![Expanded service request detail with request-level fields](images/service-request-relational-detail.png)
+The request lifecycle describes the overall agency case:
 
-The request-level detail gives the staff member the basic context needed before they inspect line items, escalate, or route the request.
+**Submitted → Accepted → In Review → In Progress → Completed**
 
-## Task 3: Compare line-level service evidence
+**Needs Follow-Up** and **Cancelled** are alternate request outcomes.
 
-Perform the following set of steps to inspect the public-service evidence attached to the request.
+## Task 3: Compare the JSON Duality document
 
-1. Keep the request expanded.
-2. Review the line-level service table.
-3. Compare public service, public program, category, quantity, estimated value, and line value fields.
-4. Use the expanded detail to explain what a staff member would inspect before escalating or routing the request.
+1. Click **JSON Duality View**.
+2. Locate the same request header and nested Request Line Items.
+3. Compare the public JSON names with the relational fields.
+4. Explain that JSON Relational Duality exposes the same transaction without a duplicated document database or synchronization step.
 
-    ![Expanded service request detail with line-level public program evidence](images/service-request-json-duality.png)
+    ![JSON Duality document for the same Colorado service request](images/service-request-json-duality.png)
 
-The expanded row connects the request table to line-level service evidence without sending the user to another application. This is the visible decision point in the scene: the staff member can inspect the request and the related service lines before choosing the next action.
+The relational and document views represent the same governed request. Maria does not gain additional rows by changing the application interface.
 
-## Task 4: Connect the row detail to Oracle evidence
+## Task 4: Inspect the Service Task Route
 
-Perform the following set of steps after the business workflow is clear.
+1. Click **Service Task Route**.
+2. Compare the Colorado resident and in-state center, distance, estimated travel time, route cost, and current task status.
+3. Review the full service-task timeline.
 
-1. Keep the request row expanded.
-2. Click **Show Oracle Internals**.
-3. Review the Oracle evidence for JSON Duality, VPD, SQL access, and the governed service request model.
-4. Explain that Oracle keeps the operational record, document-oriented application pattern, and access control close to the same data foundation.
+    ![Service Task Route with the complete field-resolution lifecycle](images/service-task-route-progress.png)
 
-    ![Oracle Internals evidence for the Service Request Workbench](images/service-request-oracle-evidence.png)
+The service-task lifecycle describes execution of the assigned work:
 
-Public-service applications often need transactional integrity, document-style application access, and governed row-level permissions. This scene shows how one Oracle data model can support the staff workflow without duplicating or syncing separate databases.
+**Intake → Assigned → Scheduled → Dispatched → In Progress → Field Resolution Underway → Completed**
+
+**Blocked** is the exception outcome.
+
+**Field Resolution Underway** means the assigned in-state team is actively resolving the request in the resident's service area. The selected task may currently be In Progress while the complete timeline shows Field Resolution Underway as the next operational stage.
+
+## Task 5: Connect the request to Oracle evidence
+
+1. Click **Show Oracle Internals**.
+2. Review JSON Duality, Spatial routing, and VPD evidence.
+3. Explain that the request and protected child records remain governed under the same regional context.
+4. Return to Jessica Chen before moving to statewide analytics.
+
+    ![Oracle Internals for JSON Duality Spatial routing and VPD](images/service-request-oracle-evidence.png)
+
+Maria has moved from a regional pressure signal to an individual request and active field response without seeing another Colorado service region. Jessica can now return to the statewide view and decide where capacity should be monitored or rebalanced.
 
 *You can move to the next scene.*
 
 ## Credits & Build Notes
+
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-18
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-07-03

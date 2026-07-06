@@ -2,45 +2,43 @@
 
 ## Introduction
 
-This opening scene gives users a quick roadmap for the State and Local Government demo. The page frames a public agency modernization story that starts with a governed data foundation and then moves through constituent demand, service pressure, community partner relationships, access geography, analytics, natural-language data access, and AI-assisted action.
+Jessica Chen is preparing a statewide Colorado resident-services briefing. A Medicaid Eligibility Error Rate of **2.7%** is approaching the stakeholder-provided **3.0%** demo threshold, so she needs to determine whether demand, regional capacity, or service coordination requires intervention. The Welcome page establishes the broader operating environment before the live metric appears in Scene 3.
 
-Use this scene to orient the audience before showing any single feature. Jessica Chen, the agency digital services lead, needs a shared operating picture for programs that span resident services, permits and licensing, benefits, inspections, public works, and emergency response. The welcome page explains how the rest of the demo follows that story on one Oracle AI Database 26ai foundation.
+The application covers more than Medicaid. The eligibility metric motivates one connected investigation across Colorado's broader resident-service portfolio.
 
 Estimated Time: **5 minutes**
 
-![Welcome page with State and Local Government modernization story](images/scene-1-sled-operations-brief.png)
+![Welcome page establishing the Colorado statewide operating decision](images/scene-1-sled-operations-brief.png)
 
 ### Objectives
 
-In this scene, you will learn how the demo is organized, what public-sector decisions the application supports, and how to move from orientation into the guided workflow.
+In this scene, you will establish Jessica's role, confirm the single-state scope, and understand how the eleven scenes resolve one operating decision.
 
-## Task 1: Review the modernization story
-
-Review the welcome page first so the audience understands the complete public-sector journey. The page introduces the agency scenario, the governed Oracle data platform, and the use cases that will be explored during the demo.
+## Task 1: Establish the Colorado operating decision
 
 1. Click **Welcome** in the sidebar if the page is not already open.
-2. Read the State and Local Government service intelligence statement.
-3. Review the use-case tiles for data foundation, constituent services, agency operations, public programs, service access, analytics, Ask Data, and AI agent action.
-4. Point out the active dataset and user context in the left navigation.
+2. Confirm **Colorado residents only** and **Colorado Resident Services Overview**.
+3. Confirm that Jessica Chen is identified as the **Global VPD Admin** with access to all Colorado service regions.
+4. Review the nine operational use-case groups with the carousel controls.
+5. Explain that the eleven-scene runbook adds this Welcome orientation and the final data workflow around those nine operating scenes.
 
-    ![Welcome page workflow stages and public-sector use cases](images/operations-brief-workflow.png)
+    ![Colorado operating workflow and nine connected use cases](images/operations-brief-workflow.png)
 
-The welcome page frames the demo as service intelligence on one governed Oracle data platform. It prepares the audience to see public-sector operations as one connected workflow instead of a set of disconnected point tools.
+The audience now knows who is making the decision, which jurisdiction is in scope, and why the team is investigating. The 2.7% metric is the motivating signal; it does not make every workload a Medicaid case.
 
-## Task 2: Start the guided workflow
-
-After the audience understands the demo themes, start the guided workflow. The application moves from the orientation page into the governed data foundation that powers every later public-sector scene.
+## Task 2: Begin the governed investigation
 
 1. Click **Start the demo**.
-2. Confirm the demo moves to **Data Foundation**.
-3. Return to **Welcome** if you want to show the orientation page again.
+2. Confirm that **Data Foundation** opens.
+3. Explain that every later result uses the same governed Colorado baseline.
 
-    ![Start the demo action on the welcome page](images/start-demo-action.png)
+    ![Start the demo action leading to Data Foundation](images/start-demo-action.png)
 
-Use this transition to explain that the welcome page is the orientation layer. The next scenes use the same public-sector dataset to inspect service pressure, resident demand, partner coordination, and response options.
+Jessica starts with evidence integrity before interpreting risk. That keeps the remaining scenes connected to one operating decision rather than presenting them as independent feature demonstrations.
 
 *You can move to the next scene.*
 
 ## Credits & Build Notes
+
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-17
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-07-03

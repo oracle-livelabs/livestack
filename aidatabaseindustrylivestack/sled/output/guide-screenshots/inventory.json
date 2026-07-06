@@ -1,0 +1,425 @@
+{
+  "generatedAt": "2026-07-03",
+  "sourceApp": "http://158.178.146.34:8505/",
+  "captureBaseUrl": "http://127.0.0.1:8505",
+  "viewport": "1280x1066",
+  "count": 52,
+  "screenshots": [
+    {
+      "file": "capture-2026-07-03/selected/introduction/images/sled-operations-brief.png",
+      "view": "Colorado State and Local Government Service Operations LiveStack Guide - Introduction",
+      "caption": "Colorado Resident Services Overview with the statewide operating story",
+      "alt": "Colorado Resident Services Overview with the statewide operating story",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "0ee407f45d9852db0578cced145338867d68233c5d13bc7a5b210f00bd5c5841"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-1-sled-operations-brief/images/scene-1-sled-operations-brief.png",
+      "view": "Scene 1 Welcome and Demo Orientation - Introduction",
+      "caption": "Welcome page establishing the Colorado statewide operating decision",
+      "alt": "Welcome page establishing the Colorado statewide operating decision",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "0ee407f45d9852db0578cced145338867d68233c5d13bc7a5b210f00bd5c5841"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-1-sled-operations-brief/images/operations-brief-workflow.png",
+      "view": "Scene 1 Welcome and Demo Orientation - Task 1: Review the Colorado operating decision",
+      "caption": "Colorado operating workflow and nine connected use cases",
+      "alt": "Colorado operating workflow and nine connected use cases",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "e346907bac92108edde0283b56e2fe13f67a1fc83fff3889ccc3286c541185a4"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-1-sled-operations-brief/images/start-demo-action.png",
+      "view": "Scene 1 Welcome and Demo Orientation - Task 2: Start the guided workflow",
+      "caption": "Start the demo action leading to Data Foundation",
+      "alt": "Start the demo action leading to Data Foundation",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "b18be43b70714556d5fd6c5a524d087b84d1ab5f44d6b37f323c9fb11e71f864"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-2-seer-26ai-data-foundation/images/scene-2-seer-26ai-data-foundation.png",
+      "view": "Scene 2 Data Foundation - Introduction",
+      "caption": "Data Foundation with the governed Colorado service domains",
+      "alt": "Data Foundation with the governed Colorado service domains",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "8198d21151510b374c072fc3389f4181111b68223ae75336e0df753cbd79f8c2"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-2-seer-26ai-data-foundation/images/prepare-dataset-counts.png",
+      "view": "Scene 2 Data Foundation - Task 1: Verify the governed Colorado baseline",
+      "caption": "Populated record counts for the governed Colorado baseline",
+      "alt": "Populated record counts for the governed Colorado baseline",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "a9e8714f9b95e9b8806fdd434ef2d50a2c293d39764d4fcff145e6167df50438"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-2-seer-26ai-data-foundation/images/what-gets-loaded-carousel.png",
+      "view": "Scene 2 Data Foundation - Task 2: Review the connected data domains",
+      "caption": "What Gets Loaded carousel with connected Colorado service domains",
+      "alt": "What Gets Loaded carousel with connected Colorado service domains",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "8df99da970de8d10c85d9a355f38e5f1c43f39b66a4553e1d2c7a8708f24156f"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-2-seer-26ai-data-foundation/images/foundation-downstream-handoff.png",
+      "view": "Scene 2 Data Foundation - Task 3: Connect the baseline to downstream decisions",
+      "caption": "Oracle capabilities connecting the Colorado baseline to downstream scenes",
+      "alt": "Oracle capabilities connecting the Colorado baseline to downstream scenes",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "36f5d39e3be0edb54f4fac23bb22b8c8ace1668577baf0a025455014a73116a5"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-3-public-service-command-center/images/scene-3-public-service-command-center.png",
+      "view": "Scene 3 Public Service Command Center - Introduction",
+      "caption": "Public Service Command Center with the Colorado eligibility-risk signal",
+      "alt": "Public Service Command Center with the Colorado eligibility-risk signal",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "7ae52192f2cdef273daa0ad6d6d72398ca917759d642d6d3beca045b6fbe3d10"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-3-public-service-command-center/images/command-center-kpis-overview.png",
+      "view": "Scene 3 Public Service Command Center - Task 1: Read the eligibility-risk signal",
+      "caption": "Medicaid Eligibility Error Rate and 3.0 percent demo threshold",
+      "alt": "Medicaid Eligibility Error Rate and 3.0 percent demo threshold",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "15ac513c1db1e672b0e5c164b0269aa7abee2608699a0b3e61e944d48ce8b401"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-3-public-service-command-center/images/signal-velocity-and-service-value.png",
+      "view": "Scene 3 Public Service Command Center - Task 2: Compare workload velocity and service value",
+      "caption": "Agency workload velocity and public service value evidence",
+      "alt": "Agency workload velocity and public service value evidence",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "55f4744ce4ea244f3eeffb75a0501999f50b74b73319c8ddce1f93cb2c14c77d"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-3-public-service-command-center/images/services-under-pressure.png",
+      "view": "Scene 3 Public Service Command Center - Task 3: Identify services under pressure",
+      "caption": "Services under pressure filtered to an eligibility-related investigation",
+      "alt": "Services under pressure filtered to an eligibility-related investigation",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "c8cbac3d58c7cb6c36a1797ff269c73b79b2997fbfb36860ebdb9557da96a1ab"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-4-resident-demand-signals/images/scene-4-resident-demand-signals.png",
+      "view": "Scene 4 Resident Demand Signals - Introduction",
+      "caption": "Colorado Resident Demand Signals with vector search and signal evidence",
+      "alt": "Colorado Resident Demand Signals with vector search and signal evidence",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "a6fad470b5724b49b1ecec340f8d4a36533f2b720ae30907a0bafc4e5e4dd74b"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-4-resident-demand-signals/images/public-service-vector-search.png",
+      "view": "Scene 4 Resident Demand Signals - Task 1: Search for eligibility-related demand",
+      "caption": "Vector search for benefits eligibility appointment backlog",
+      "alt": "Vector search for benefits eligibility appointment backlog",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "3d99bb4889b4912d1f0aae0bdd77f1812986f55e540edd426b2ce8a393cd4b17"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-4-resident-demand-signals/images/resident-signal-summary.png",
+      "view": "Scene 4 Resident Demand Signals - Task 2: Interpret the signal summary",
+      "caption": "Colorado Resident Signal Summary with operating priorities",
+      "alt": "Colorado Resident Signal Summary with operating priorities",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "454babf4703fd1764d8617b32439109d0c71b64b078edc2c4905ea89eacb9f60"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-4-resident-demand-signals/images/resident-signal-momentum.png",
+      "view": "Scene 4 Resident Demand Signals - Task 3: Inspect priority signals",
+      "caption": "Priority Colorado resident signal cards and follow-up evidence",
+      "alt": "Priority Colorado resident signal cards and follow-up evidence",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "1994c5deb7c632c31397767769d8ddb6dfb713de5181538e4792c41a7241a94e"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-5-community-partner-network/images/scene-5-community-partner-network.png",
+      "view": "Scene 5 Community Partner Network - Introduction",
+      "caption": "Colorado Community Partner Network and coordination workspace",
+      "alt": "Colorado Community Partner Network and coordination workspace",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "91e6954fc4ef5e2cf3dd4ae16bb15b6ea70f22effb6b45db15121665aab03f0f"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-5-community-partner-network/images/partner-graph-workspace.png",
+      "view": "Scene 5 Community Partner Network - Task 1: Explore the partner graph",
+      "caption": "Colorado eligibility partner graph at two hops",
+      "alt": "Colorado eligibility partner graph at two hops",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "64eb7ba3aaa6aa4c538753a4d9c7cdb60f1931a3d07c6214ecf9081025e7a921"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-5-community-partner-network/images/partner-program-relationships.png",
+      "view": "Scene 5 Community Partner Network - Task 2: Review partner and program evidence",
+      "caption": "Colorado partner and public program relationship evidence",
+      "alt": "Colorado partner and public program relationship evidence",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "f9a6e964f92205d483763c949b2155c9b4f0f4f16f0048ad2037d7d09fe2847a"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-5-community-partner-network/images/graph-query-explorer.png",
+      "view": "Scene 5 Community Partner Network - Task 3: Run a governed graph query",
+      "caption": "SQL PGQ evidence for a Colorado eligibility coordination path",
+      "alt": "SQL PGQ evidence for a Colorado eligibility coordination path",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "4746f3aa881fdf3bec564d7443f711a68fb700d7705741da723c4b27fa3a3944"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-6-service-access-and-coverage-map/images/scene-6-service-access-and-coverage-map.png",
+      "view": "Scene 6 Service Access and Coverage Map - Introduction",
+      "caption": "Colorado Service Access and Coverage Map",
+      "alt": "Colorado Service Access and Coverage Map",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "109ebdaf121ec17bb489b12f5574b6fae57e982bdf4db8039b446bf47b7126aa"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-6-service-access-and-coverage-map/images/global-vpd-statewide.png",
+      "view": "Scene 6 Service Access and Coverage Map - Task 1: Establish the statewide Colorado view",
+      "caption": "Jessica Chen global VPD view across Colorado",
+      "alt": "Jessica Chen global VPD view across Colorado",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "642834de19c223a9a9b44beaedc02b7954470bc49b1f61c871f4288151832746"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-6-service-access-and-coverage-map/images/service-access-map-layers.png",
+      "view": "Scene 6 Service Access and Coverage Map - Task 2: Compare map layers",
+      "caption": "Colorado map layers and demand regions",
+      "alt": "Colorado map layers and demand regions",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "ba8a7a55a3cfd5d660b55ede07120bc78fee7bc71e2534269ac5e671034ca807"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-6-service-access-and-coverage-map/images/service-sites-table.png",
+      "view": "Scene 6 Service Access and Coverage Map - Task 2: Compare service sites",
+      "caption": "Colorado service sites with in-state locations and capacity",
+      "alt": "Colorado service sites with in-state locations and capacity",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "f033c68e0defbfa2219e44d48e8969cd30111f82852fc2797c41185c3315c72c"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-6-service-access-and-coverage-map/images/capacity-and-access-signals.png",
+      "view": "Scene 6 Service Access and Coverage Map - Task 2: Compare access and capacity",
+      "caption": "Colorado access and capacity signals",
+      "alt": "Colorado access and capacity signals",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "086febf912231b94ffb7f0a13646ec70a6f0adab4d03df8a8a13111e49227de1"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-6-service-access-and-coverage-map/images/regional-vpd-western-slope.png",
+      "view": "Scene 6 Service Access and Coverage Map - Task 3: Demonstrate regional VPD scope",
+      "caption": "Maria Santos regional VPD view of the Western Slope",
+      "alt": "Maria Santos regional VPD view of the Western Slope",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "d0a8ffc3310b2a278d3d1e974d157d627f5f2f2c75f18b89458177a6a596fe0e"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-6-service-access-and-coverage-map/images/restricted-vpd-no-operational-rows.png",
+      "view": "Scene 6 Service Access and Coverage Map - Task 3: Demonstrate restricted VPD scope",
+      "caption": "Sam Taylor restricted VPD state with no operational rows",
+      "alt": "Sam Taylor restricted VPD state with no operational rows",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "62d4661ad323cffac8988cbb8bbac0082b535e32d22085237e11b090a2d84955"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-7-service-request-workbench/images/scene-7-service-request-workbench.png",
+      "view": "Scene 7 Service Request Workbench - Introduction",
+      "caption": "Service Request Workbench with a Colorado regional request queue",
+      "alt": "Service Request Workbench with a Colorado regional request queue",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "1a5ae835d29a7841457f4577642b295bede34625b6b1e042b54b5ac0bb24f3fa"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-7-service-request-workbench/images/service-request-workspace.png",
+      "view": "Scene 7 Service Request Workbench - Task 1: Review the Western Slope request queue",
+      "caption": "Western Slope request list with approved lifecycle labels",
+      "alt": "Western Slope request list with approved lifecycle labels",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "5df7a4401b15fb3d3b3e07f9d9ff2343bdce6dc587f6424f975787e7da589df6"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-7-service-request-workbench/images/service-request-relational-detail.png",
+      "view": "Scene 7 Service Request Workbench - Task 2: Inspect relational request evidence",
+      "caption": "Relational request detail with resident, center, route cost, and Request Line Items",
+      "alt": "Relational request detail with resident, center, route cost, and Request Line Items",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "0bfd82c04a0e12d66f9669f1e04006f63d4e972271390cc7a7b3a1bf5803d284"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-7-service-request-workbench/images/service-request-json-duality.png",
+      "view": "Scene 7 Service Request Workbench - Task 3: Compare the JSON Duality document",
+      "caption": "JSON Duality document for the same Colorado service request",
+      "alt": "JSON Duality document for the same Colorado service request",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "e00b49182cde83a6d985ea450ebfebbc5caad8b0cefa939905abbed31aa44bfa"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-7-service-request-workbench/images/service-task-route-progress.png",
+      "view": "Scene 7 Service Request Workbench - Task 4: Inspect the Service Task Route",
+      "caption": "Service Task Route with the complete field-resolution lifecycle",
+      "alt": "Service Task Route with the complete field-resolution lifecycle",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "0930054958b99c3ba54cda7f191986d3a8780cc60b3979ad2bec3bcc3ab2a6c7"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-7-service-request-workbench/images/service-request-oracle-evidence.png",
+      "view": "Scene 7 Service Request Workbench - Task 5: Connect the request to Oracle evidence",
+      "caption": "Oracle Internals for JSON Duality Spatial routing and VPD",
+      "alt": "Oracle Internals for JSON Duality Spatial routing and VPD",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "519752bee016a6febe4e0be3c4a95e51e7772da4e5b8a905015829b36e62653f"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-8-demand-and-capacity-analytics/images/scene-8-demand-and-capacity-analytics.png",
+      "view": "Scene 8 Demand and Capacity Analytics - Introduction",
+      "caption": "Demand and Capacity Analytics with statewide Colorado model evidence",
+      "alt": "Demand and Capacity Analytics with statewide Colorado model evidence",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "5694cb195c3d6ffb7daf71d9c65659a8062cd5e42ebbecc89d274b615d7f2bdd"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-8-demand-and-capacity-analytics/images/demand-surge-risk.png",
+      "view": "Scene 8 Demand and Capacity Analytics - Task 1: Review demand risk",
+      "caption": "Colorado public-service demand risk model output",
+      "alt": "Colorado public-service demand risk model output",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "657c9a73fbd781f49b2491f1c15a6df1d4d080a5572a800b2bdba4401e84a52c"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-8-demand-and-capacity-analytics/images/resident-need-segments.png",
+      "view": "Scene 8 Demand and Capacity Analytics - Task 2: Inspect resident need segments",
+      "caption": "Colorado Resident Need Segments and in-state resident profiles",
+      "alt": "Colorado Resident Need Segments and in-state resident profiles",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "6dbf274fb81e67244db2b25c60f139101956120d745a0479760712fd27437b7d"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-8-demand-and-capacity-analytics/images/service-value-forecast.png",
+      "view": "Scene 8 Demand and Capacity Analytics - Task 3: Interpret the service value forecast",
+      "caption": "Service value forecast supporting the Colorado operating decision",
+      "alt": "Service value forecast supporting the Colorado operating decision",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "5480c651d1bbb856354fc0ccc06950ffed77077b98b77b126e877e67fff92039"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-8-demand-and-capacity-analytics/images/vector-k-means-clusters.png",
+      "view": "Scene 8 Demand and Capacity Analytics - Task 4: Compare related service patterns",
+      "caption": "Vector K-Means clusters for related Colorado service patterns",
+      "alt": "Vector K-Means clusters for related Colorado service patterns",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "aad8828b2d2c86b9880a5b262d6cdc3d4c9cbb2be0c784c0b46c4d070cde5def"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-8-demand-and-capacity-analytics/images/capacity-intelligence.png",
+      "view": "Scene 8 Demand and Capacity Analytics - Task 5: Compare demand and capacity",
+      "caption": "Demand Capacity Across Colorado Service Centers",
+      "alt": "Demand Capacity Across Colorado Service Centers",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "08a6948097e3177273ad58e9e63d0269229859ffdfa8a6a4a821c329f1319a2e"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-9-ask-seer-operations-data/images/scene-9-ask-seer-operations-data.png",
+      "view": "Scene 9 Ask State and Local Government Data - Introduction",
+      "caption": "Ask State and Local Government Data with governed answer modes",
+      "alt": "Ask State and Local Government Data with governed answer modes",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "6ab0d9e8311812288ad81f0e8750a75fdf719b0916383bb217366d7c15951fe6"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-9-ask-seer-operations-data/images/ask-public-service-data-narrate-mode.png",
+      "view": "Scene 9 Ask State and Local Government Data - Task 1: Use Narrate for the operating brief",
+      "caption": "Narrated answer for the Colorado eligibility and capacity question",
+      "alt": "Narrated answer for the Colorado eligibility and capacity question",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "ad16ca4fbd3610fc49db6b37bd2c10560b7f17000a43c199d95ca5fe6befa98d"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-9-ask-seer-operations-data/images/ask-public-service-data-chat-mode.png",
+      "view": "Scene 9 Ask State and Local Government Data - Task 2: Use Chat for a follow-up",
+      "caption": "Chat follow-up about Colorado service-level risk",
+      "alt": "Chat follow-up about Colorado service-level risk",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "c2a02daab682e171b251b92e529620f3067edb9ef85242f005be75a22b05d99e"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-9-ask-seer-operations-data/images/ask-public-service-data-generated-sql.png",
+      "view": "Scene 9 Ask State and Local Government Data - Task 3: Inspect generated SQL",
+      "caption": "Generated SQL for the governed eligibility and capacity question",
+      "alt": "Generated SQL for the governed eligibility and capacity question",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "136c985c43cf8d352bfbbd088dc4b5284ec96b07ca4e0d9f0995b22c3c560223"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-9-ask-seer-operations-data/images/ask-public-service-data-run-sql-results.png",
+      "view": "Scene 9 Ask State and Local Government Data - Task 4: Run authorized SQL",
+      "caption": "Authorized Oracle result rows for the Colorado operating question",
+      "alt": "Authorized Oracle result rows for the Colorado operating question",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "60a47996da15abd6a1c61861d4279982f815f5b64ee3bfbb8d43ef6388b66223"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-10-public-service-ai-agent-console/images/scene-10-public-service-ai-agent-console.png",
+      "view": "Scene 10 Public Service AI Agent Console - Introduction",
+      "caption": "Public Service AI Agent Console for the Colorado operating decision",
+      "alt": "Public Service AI Agent Console for the Colorado operating decision",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "f5898499ed535456a5f75a0ba658ca54c587d5f814ad57baacfaa2fb1b1bc4e6"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-10-public-service-ai-agent-console/images/agent-console-workspace.png",
+      "view": "Scene 10 Public Service AI Agent Console - Task 1: Review the governed agent workspace",
+      "caption": "Governed public-service agent teams and prompt workspace",
+      "alt": "Governed public-service agent teams and prompt workspace",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "979d773773d49aa1fdc4e95c2fced02666ca718bb492abd805cedc63ac0f5002"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-10-public-service-ai-agent-console/images/agent-public-service-response.png",
+      "view": "Scene 10 Public Service AI Agent Console - Task 2: Ask for constrained-service evidence",
+      "caption": "Agent response identifying constrained Colorado public services",
+      "alt": "Agent response identifying constrained Colorado public services",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "c2d80475cce29127fc8dd3f6e38f58d85f35e675e78a3994b3b2991b879b134e"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-10-public-service-ai-agent-console/images/agent-action-audit-trail.png",
+      "view": "Scene 10 Public Service AI Agent Console - Task 3: Inspect the action audit trail",
+      "caption": "Recent Agent Actions with the audited Colorado interaction",
+      "alt": "Recent Agent Actions with the audited Colorado interaction",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "7538000d87b10c950f73e5cca2959983d13ca6ff1bb3086d67bbe921d3c49418"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-11-use-your-own-public-service-data/images/scene-11-use-your-own-public-service-data.png",
+      "view": "Scene 11 Use Your Own Public Service Data - Introduction",
+      "caption": "Use Your Own Public Service Data with validation and restore controls",
+      "alt": "Use Your Own Public Service Data with validation and restore controls",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "7bb2f83cbdf11c9c0f79bfb3be8cb28c4b9673e7fb005933a4f5902e7a1734f6"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-11-use-your-own-public-service-data/images/open-dataset-tool.png",
+      "view": "Scene 11 Use Your Own Public Service Data - Task 1: Open the dataset tool",
+      "caption": "Dataset tool opened with the active Colorado demo baseline",
+      "alt": "Dataset tool opened with the active Colorado demo baseline",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "2b4df39193acef47a05c97dbdd1d1e7a2b2b364acca7e4d1ce258ce3ca94baa2"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-11-use-your-own-public-service-data/images/template-and-upload-workflow.png",
+      "view": "Scene 11 Use Your Own Public Service Data - Task 2: Review the template and upload workflow",
+      "caption": "Template download completed ZIP validation and upload workflow",
+      "alt": "Template download completed ZIP validation and upload workflow",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "f0421efda31b7235f30b6168aec1a1d5f72f4a066525d2a69b95f79a930ebbf1"
+    },
+    {
+      "file": "capture-2026-07-03/selected/scene-11-use-your-own-public-service-data/images/preview-restore-seeded-dataset.png",
+      "view": "Scene 11 Use Your Own Public Service Data - Task 3: Preview the seeded baseline",
+      "caption": "Preview Restore results for the seeded Colorado demo data",
+      "alt": "Preview Restore results for the seeded Colorado demo data",
+      "note": "Selected 1280x1066 live-app capture. Red boxes and numbered badges are deterministic DOM overlays used only where the instruction emphasizes a specific control, value, or result.",
+      "sha256": "023effb5be1d35629bda40a5f5df5812bacbc44d8fc3542088fb1abf99c181e0"
+    }
+  ]
+}
