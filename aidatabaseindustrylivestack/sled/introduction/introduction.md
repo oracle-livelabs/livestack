@@ -2,13 +2,15 @@
 
 ## Introduction
 
-Colorado agencies coordinate benefits, permits, inspections, public works, emergency response, and other resident services through one statewide operating model. The **Seer State and Local Government LiveStack** shows how agency leaders can detect pressure, inspect the evidence behind it, coordinate an in-state response, and keep each decision governed and auditable.
+**Colorado** agencies coordinate benefits, permits, inspections, public works, emergency response, and other resident services through one statewide operating model. The **Seer State and Local Government LiveStack** shows how leaders can detect service pressure, inspect the evidence behind it, coordinate response, and preserve an accountable action trail.
 
-Jessica Chen, Colorado's statewide digital services lead, is preparing an operations briefing. The command center reports a **Medicaid Eligibility Error Rate of 2.7%** against the stakeholder-provided **3.0% demo threshold**. The rate is still within threshold, but its **Approaching Threshold** status gives Jessica a reason to investigate resident demand, service pressure, partner handoffs, request details, and regional capacity before potential exposure increases.
+**Jessica Chen**, Colorado's statewide digital services lead, is preparing an operations briefing. The command center reports a **Medicaid Eligibility Error Rate of 2.7%** against the stakeholder-provided **3.0% demo threshold**. The rate is still within threshold, but its **Approaching Threshold** status gives Jessica a reason to investigate resident demand, service pressure, partner handoffs, request details, and regional capacity before potential exposure increases.
 
-This is not a Medicaid-only application or a federal legal explainer. The eligibility metric is the initiating business signal in a broader Colorado resident-services workflow. Every operational resident, request, service center, county, and regional comparison shown in the story belongs to Colorado.
+This is not a Medicaid-only application or a federal legal explainer. The eligibility metric is the initiating business signal in a broader **Colorado** resident-services workflow, and every operational resident, request, service center, county, and regional comparison should stay anchored to that broader scope.
 
-The demo also proves governed access. Jessica has global visibility across Colorado, a regional manager sees only an assigned service region, and the restricted viewer sees no protected operational rows. Oracle Virtual Private Database (VPD) enforces those perspectives in the database.
+The demo also proves governed access. **Jessica Chen** has statewide visibility, a regional manager sees only the assigned service region, and the restricted viewer sees no protected operational rows. **Oracle Virtual Private Database** enforces those perspectives in the database.
+
+**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
 
 Estimated Demo Time: **100 minutes**
 
@@ -18,11 +20,11 @@ Scenes range from 5 to 10 minutes.
 
 ## Application Story
 
-Jessica begins with statewide evidence, follows the eligibility-risk signal into resident demand and partner relationships, verifies geographic coverage and a specific request, compares regional capacity, and closes with a governed recommendation and audit trail.
+**Jessica Chen** begins with statewide evidence, follows the eligibility-risk signal into resident demand and partner relationships, verifies geographic coverage and a specific request, compares regional capacity, and closes with a governed recommendation and audit trail.
 
-The operating decision is: **Which Colorado service demand, partner-coordination, access, and capacity conditions require intervention now so resident requests are resolved accurately before eligibility-error risk crosses the demo threshold?**
+The operating decision is: *Which **Colorado** service-demand*, partner-coordination, access, and capacity conditions require intervention now so resident requests are resolved accurately before eligibility-error risk crosses the demo threshold?
 
-The runbook preserves the application's broader state-services scope. It uses the Medicaid eligibility metric as the early-warning trigger while the remaining scenes show how the same operating model supports benefits, permits, inspections, public works, emergency response, and other resident services.
+The runbook preserves the application's broader state-services scope. It uses the **Medicaid Eligibility Error Rate** as the early-warning trigger, while the remaining scenes show how the same operating model supports benefits, permits, inspections, public works, emergency response, and other resident services.
 
 ## Go-Live Outcome Map
 
@@ -32,24 +34,21 @@ The runbook preserves the application's broader state-services scope. It uses th
 - **Governed access:** Demonstrate global, regional, and restricted VPD perspectives over the same Colorado data.
 - **Accountable action:** Connect analytics, Ask Data, and agents to visible Oracle evidence and audit history.
 
+**Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
+
 ### Objectives
 
-In this LiveStack demo, you will:
-
-- Interpret the Medicaid eligibility error-rate signal without treating it as a legal conclusion or automatic penalty.
-- Trace one Colorado operating decision through resident signals, partners, geography, requests, and capacity.
-- Verify that global, regional, and restricted users receive the intended VPD-scoped view.
-- Use Oracle evidence, natural-language data access, and audited agents to support an accountable response.
+In this **LiveStack** demo, you will learn how to interpret the eligibility-risk signal, trace one **Colorado** operating decision through resident demand and service capacity, verify **VPD**-scoped access, and use Oracle evidence, natural-language data access, and audited agents to support an accountable response.
 
 ### Scenario
 
-The application opens with a Colorado resident-services orientation, confirms the governed data foundation, and then moves through the command center, resident demand signals, partner graph, access map, request workbench, predictive analytics, Ask Data, agent console, and data onboarding workflow. By the end of the story, Jessica can explain what needs attention, where the state has capacity, how a request is being resolved, and which governed evidence supports the recommendation.
+The application opens with a **Colorado** resident-services orientation, confirms the governed data foundation, then moves through the command center, resident demand signals, partner graph, access map, request workbench, predictive analytics, **Ask Data**, agent console, and data onboarding workflow.
 
 ### Prerequisites
 
-Before you begin, confirm that you can open the running Seer State and Local Government LiveStack in a modern browser. No coding or database administration knowledge is required for the guided demo scenes.
+Before you begin, confirm that you can open the running **Seer State and Local Government LiveStack** in a modern browser. No coding or database administration knowledge is required for the guided demo scenes.
 
-Use Jessica Chen for statewide scenes. The runbook will explicitly tell you when to switch to Maria Santos for the Western Slope regional view and Sam Taylor for the restricted view.
+Use **Jessica Chen** for statewide scenes. The runbook should explicitly tell you when to switch to **Maria Santos** for the **Western Slope** regional view and **Sam Taylor** for the restricted view.
 
 **Podman** and **Podman Compose** are required only if you plan to run the portable LiveStack locally in the download lab.
 
