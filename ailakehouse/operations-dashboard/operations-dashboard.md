@@ -56,9 +56,9 @@ Perform the following set of steps to use watched-products semantic search:
 1. Scroll to **Watched Products**.
 2. In the semantic search field, enter:
 
-```text
-trail running gear in Texas
-```
+    ```text
+    trail running gear in Texas
+    ```
 
 3. Wait for the table to refresh.
 4. Review the brand filter chips if you want to narrow the result set.
@@ -106,3 +106,8 @@ You can move to the next scene.
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
 - **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-12
+
+## Acknowledgements
+
+* **Author** - TODO: Your Name, Your Title, Your Organization
+* **Last Updated By/Date** - TODO: Your Name, Month Year

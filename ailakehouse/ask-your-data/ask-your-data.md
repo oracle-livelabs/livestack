@@ -53,9 +53,9 @@ Perform the following set of steps to ask a revenue question and inspect the gen
 
 1. Select the example question:
 
-```text
-What are the top 5 product categories by revenue?
-```
+    ```text
+    What are the top 5 product categories by revenue?
+    ```
 
 2. Wait for the Select AI response.
 3. Expand **View generated SQL**.
@@ -76,3 +76,8 @@ You can move to the next scene.
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
 - **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-13
+
+## Acknowledgements
+
+* **Author** - TODO: Your Name, Your Title, Your Organization
+* **Last Updated By/Date** - TODO: Your Name, Month Year

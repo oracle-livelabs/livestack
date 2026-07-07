@@ -141,10 +141,10 @@ Perform the following set of steps to verify the loaded **Bronze** table:
 4. Click **Open**.
 5. Run the row-count query for the table you loaded.
 
-```sql
-SELECT COUNT(*) AS product_master_rows
-FROM PRODUCT_MASTER_RAW;
-```
+    ```sql
+    SELECT COUNT(*) AS product_master_rows
+    FROM PRODUCT_MASTER_RAW;
+    ```
 
 If you used a temporary table name, replace `PRODUCT_MASTER_RAW` with that table name:
 
@@ -168,3 +168,8 @@ You can move to the next scene.
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
 - **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-12
+
+## Acknowledgements
+
+* **Author** - TODO: Your Name, Your Title, Your Organization
+* **Last Updated By/Date** - TODO: Your Name, Month Year

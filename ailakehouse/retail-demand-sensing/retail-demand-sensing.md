@@ -40,9 +40,9 @@ Perform the following set of steps to search by demand intent:
 
 1. In **Find Demand Patterns**, enter:
 
-```text
-trail running shoe demand
-```
+    ```text
+    trail running shoe demand
+    ```
 
 2. Click **Search**.
 3. Review the ranked products returned by the search.
@@ -71,9 +71,9 @@ Perform the following set of steps to search demand signals by intent:
 
 1. In the feed search field, enter:
 
-```text
-waterproof jacket texas
-```
+    ```text
+    waterproof jacket texas
+    ```
 
 2. Click **Go**.
 3. Review the returned signal cards and their match percentages.
@@ -94,3 +94,8 @@ You can move to the next scene.
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
 - **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-12
+
+## Acknowledgements
+
+* **Author** - TODO: Your Name, Your Title, Your Organization
+* **Last Updated By/Date** - TODO: Your Name, Month Year

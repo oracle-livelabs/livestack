@@ -2,6 +2,9 @@
 
 ## Introduction
 
+Estimated Workshop Time: TODO - x minutes
+
+
 **PeakGear Sporting Goods** is the fictional retail business used throughout this LiveStack. The webshop, fulfillment sites, product catalog, demand signals, and AI experiences in this guide all belong to that same demo business scenario.
 
 PeakGear faces a familiar retail problem: demand shifts faster than operations can respond. A product can go viral overnight through social channels or supplier activity, but the business still must coordinate inventory, fulfillment capacity, routing, customer demand, returns risk, and catalog data before it can act.
@@ -78,3 +81,8 @@ The business outcomes in later scenes come from curated products. Serve Data sho
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
 - **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-14
+
+## Acknowledgements
+
+* **Author** - TODO: Your Name, Your Title, Your Organization
+* **Last Updated By/Date** - TODO: Your Name, Month Year

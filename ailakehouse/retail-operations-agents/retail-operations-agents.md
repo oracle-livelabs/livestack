@@ -56,9 +56,9 @@ Perform the following set of steps to ask for urgent demand signals:
 
 1. Click **Ask** for:
 
-```text
-Find urgent demand signals in the last 24 hours
-```
+    ```text
+    Find urgent demand signals in the last 24 hours
+    ```
 
 2. Wait for the response.
 3. Review the ranked products and signal metrics.
@@ -94,3 +94,8 @@ You have completed the PeakGear AI Lakehouse LiveStack Demo runbook.
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
 - **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-13
+
+## Acknowledgements
+
+* **Author** - TODO: Your Name, Your Title, Your Organization
+* **Last Updated By/Date** - TODO: Your Name, Month Year

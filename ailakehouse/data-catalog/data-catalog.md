@@ -54,9 +54,9 @@ Perform the following set of steps to find the **DIM_PRODUCT** dataset in Catalo
 
 1. In the Catalog search field, enter:
 
-```text
-DIM_PRODUCT
-```
+    ```text
+    DIM_PRODUCT
+    ```
 
 2. Press **Enter**.
 3. Confirm that `DIM_PRODUCT` appears in the results.
@@ -88,9 +88,9 @@ Perform the following set of steps to review the Table AI Assist create-view wor
 2. Confirm that **Target Type** is **Create View**.
 3. In **Target Name**, replace the default value shown in the field with:
 
-```text
-DIM_PRODUCT_VIEW
-```
+    ```text
+    DIM_PRODUCT_VIEW
+    ```
 
 4. Review **Add Step**. This is where Table AI Assist can help build a recipe to add, update, remove, or rename columns without changing the source table.
 5. Click **Add or replace column**
@@ -150,3 +150,8 @@ You can move to the next scene.
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
 - **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-14
+
+## Acknowledgements
+
+* **Author** - TODO: Your Name, Your Title, Your Organization
+* **Last Updated By/Date** - TODO: Your Name, Month Year

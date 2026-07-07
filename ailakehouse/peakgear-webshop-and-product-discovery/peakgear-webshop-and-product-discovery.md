@@ -40,9 +40,9 @@ Perform the following set of steps to search by shopper intent:
 
 1. In **Meaning Search**, enter:
 
-```text
-lightweight trail running shoes for rainy weather
-```
+    ```text
+    lightweight trail running shoes for rainy weather
+    ```
 
 2. Click **Search**.
 3. Review the ranked product cards.
@@ -74,21 +74,21 @@ Perform the following set of steps to use Ask PeakGear for an order issue:
 1. Click **Ask PeakGear** in the lower-right corner.
 2. Enter:
 
-```text
-I have a problem with my Ironkinetic Grip Tape.
-```
+    ```text
+    I have a problem with my Ironkinetic Grip Tape.
+    ```
 
 3. When the agent asks for more detail, enter:
 
-```text
-The tape is peeling and the adhesive failed. My order number is 7820. I would like an alternate grip tape.
-```
+    ```text
+    The tape is peeling and the adhesive failed. My order number is 7820. I would like an alternate grip tape.
+    ```
 
 4. When the agent suggests replacement options, choose one:
 
-```text
-Please use DuraHold Max.
-```
+    ```text
+    Please use DuraHold Max.
+    ```
 
 5. Review the final response confirming that the replacement will be processed for order **7820**.
 
@@ -107,3 +107,8 @@ You can move to the next scene.
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
 - **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-13
+
+## Acknowledgements
+
+* **Author** - TODO: Your Name, Your Title, Your Organization
+* **Last Updated By/Date** - TODO: Your Name, Month Year

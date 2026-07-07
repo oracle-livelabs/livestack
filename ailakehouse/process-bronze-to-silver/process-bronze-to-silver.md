@@ -95,9 +95,9 @@ Perform the following set of steps to name the **Silver** project:
 
 1. Enter the project name:
 
-```text
-PG_SILVER_PROCESS
-```
+    ```text
+    PG_SILVER_PROCESS
+    ```
 
 2. Click **Create**.
 
@@ -120,15 +120,15 @@ Perform the following set of steps to create the **Silver product flow**:
 
 1. Enter the flow name:
 
-```text
-SILVER_PRODUCTS_FLOW
-```
+    ```text
+    SILVER_PRODUCTS_FLOW
+    ```
 
 2. Add a description such as:
 
-```text
-Transform PRODUCT_MASTER_RAW into SILVER_PRODUCTS.
-```
+    ```text
+    Transform PRODUCT_MASTER_RAW into SILVER_PRODUCTS.
+    ```
 
 3. Click **Create**.
 
@@ -265,3 +265,8 @@ You can move to the next scene.
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
 - **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-12
+
+## Acknowledgements
+
+* **Author** - TODO: Your Name, Your Title, Your Organization
+* **Last Updated By/Date** - TODO: Your Name, Month Year
