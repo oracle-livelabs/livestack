@@ -62,7 +62,8 @@ Perform the following set of steps to start the prepared CDC pipeline in GoldenG
 
 ![GoldenGate Studio Pipelines page showing the prepared CDC pipeline](images/task-4-goldengate-pipeline-list.png)
 
-1. In **GoldenGate Studio**, select **Pipelines**.
+1. Select **Open GoldenGate**
+2. In **GoldenGate Studio**, select **Pipelines**.
 2. Open the prepared pipeline **PeakGear\_NetSuite\_Customers\_CDC**.
 3. Do not click **Create Pipeline**. The CDC pipeline already exists for this demo.
 

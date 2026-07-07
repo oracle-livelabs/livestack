@@ -12,29 +12,12 @@ Estimated Time: **5 minutes**
 
 In this scene, you will:
 
-- Confirm that all four LiveStack readiness lights are green.
 - Open **LiveStack Configuration** from **LiveStack Admin**.
 - Double-check the Autonomous Database, GoldenGate Stream Analytics, and OCI GenAI connections.
 - Run the mandatory demo data refresh before starting the business walkthrough.
 - Reset the Ask PeakGear conversation state only when the return and exchange flow needs to be replayed.
 
-## Task 1: Check the sidebar readiness indicator
-
-![Sidebar readiness indicator showing all four green lights](images/task-1-sidebar-readiness.png)
-
-Perform the following set of steps to confirm that the LiveStack readiness indicator shows the demo is ready:
-
-1. Look at the lower-left sidebar.
-2. Find **LiveStack Demo ready**.
-3. Confirm that all four readiness lights are green.
-4. Treat the four lights as the first readiness gate:
-   - **Autonomous Database** is connected.
-   - **GoldenGate Stream Analytics** is connected.
-   - **OCI GenAI** is connected.
-   - **Demo data** has been seeded into Autonomous Database.
-5. If any light is not green, do not continue to the business demo. Open **LiveStack Admin** and select **LiveStack Configuration** to identify which dependency is not ready.
-
-## Task 2: Double-check LiveStack Configuration
+## Task 1: Double-check LiveStack Configuration
 
 ![LiveStack Configuration page showing the configured ADB connection and service status cards](images/task-2-livestack-configuration.png)
 
@@ -49,7 +32,7 @@ Perform the following set of steps to double-check the LiveStack service connect
    - **GoldenGate Stream Analytics** shows **Connected**.
    - **OCI GenAI** shows **Connected**.
 
-## Task 3: Refresh and load demo data
+## Task 2: Refresh and load demo data
 
 **Important:** This step is mandatory before running the demo.
 
@@ -65,7 +48,7 @@ Perform the following set of steps to refresh and load the seeded demo data befo
 
 **Note:** Sample values may change after data refreshes or rebuilds. Focus on the expected result pattern and the business takeaway, not the exact values.
 
-## Task 4: Reset the return workflow only when needed
+## Task 3: Reset the return workflow only when needed
 
 ![Ask PeakGear conversation reset section with Clear Return Conversation highlighted](images/task-4-return-reset.png)
 

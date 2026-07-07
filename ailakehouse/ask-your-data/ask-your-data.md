@@ -61,6 +61,8 @@ What are the top 5 product categories by revenue?
 3. Expand **View generated SQL**.
 4. Review the answer and the SQL statement.
 
+![Ask Your Data response with generated SQL expanded](images/task-4-select-ai-answer-and-sql.png)
+
 This step is important because it keeps the AI interaction auditable. The user can see the natural-language answer, but can also inspect the query that Oracle generated and ran against PeakGear's governed schema.
 
 ## Conclusion: Business Outcome

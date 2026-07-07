@@ -50,7 +50,7 @@ The example questions show the intended operating model: users ask in business l
 
 ## Task 3: Ask for urgent demand signals
 
-![Retail Operations Agents demand signal response with suggested next steps](images/task-3-demand-signal-response.png)
+![Retail Operations Agents demand signal response with suggested next steps](images/task-3-demand-signal-response-1.png)
 
 Perform the following set of steps to ask for urgent demand signals:
 
@@ -64,6 +64,8 @@ Find urgent demand signals in the last 24 hours
 3. Review the ranked products and signal metrics.
 4. Review the **Suggested next steps**, such as checking stock, finding a fulfillment route, or checking category revenue.
 5. Review the tool indicators below the response.
+
+![Retail Operations Agents demand signal response with suggested next steps](images/task-3-demand-signal-response-2.png)
 
 This task shows how Select AI Agent orchestration can turn a demand question into a workflow. The response does not stop at "here are products with signal momentum." It also gives next actions that connect demand sensing to inventory, fulfillment, and commerce decisions.
 
