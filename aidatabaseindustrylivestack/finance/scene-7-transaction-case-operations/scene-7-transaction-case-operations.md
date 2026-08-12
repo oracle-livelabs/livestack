@@ -12,7 +12,10 @@ Finance teams struggle when the information needed for one decision lives in sep
 
 Estimated Time: **10 minutes**
 
-![Transaction and Case Operations list with transaction 513063 highlighted](images/client-transactions-cases.png)
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/Videos/SeerBank_Scene-5_with-CC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### Objectives
 

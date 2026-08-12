@@ -10,7 +10,10 @@ Finance teams struggle when the information needed for one decision lives in sep
 
 Estimated Time: **10 minutes**
 
-![Governed Data Copilot workspace with modes and finance question examples](images/ask-seer-bank-data-overview.png)
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/Videos/SeerBank_Scene-7_with-CC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### Objectives
 
