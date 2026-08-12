@@ -1,0 +1,395 @@
+[
+  {
+    "id": "oj-c.AccordionItemSingle",
+    "name": "AccordionItemSingle",
+    "memberof": "oj-c",
+    "kind": "class",
+    "meta": {
+      "filename": "accordion-item-single.tsx",
+      "path": "web/components/oj-c/accordion-item-single"
+    },
+    "ojcomponent": true,
+    "isvcomponent": true,
+    "since": "20.0.0",
+    "longname": "oj-c.AccordionItemSingle",
+    "pack": "oj-c",
+    "classdesc": "<h3 id=\"AccordionItemSingleOverview-section\">\n  JET AccordionItemSingle\n  <a class=\"bookmarkable-link\" title=\"Bookmarkable Link\" href=\"#AccordionItemSingleOverview-section\"></a>\n</h3>\n<p>Description: The <code>oj-c-accordion-item-single</code> component renders collapsible content in a group, supporting single expansion mode (only one item expanded at a time). Use <code>itemKey</code> and <code>expandedKey</code> to control and identify expanded items. Event handlers <code>onOjExpand</code> and <code>onOjCollapse</code> provide callbacks for responding to expansion and collapse events.</p>\n<p>This component is typically used in Layout & Nav scenarios, such as within templates for Table, ListView, or CardView. It supports accessibility via the <code>aria-label</code> attribute and requires header text for screen readers.</p>\n\n<pre class=\"prettyprint\"><code>\n&lt;oj-c-accordion-item-single\n   item-key=\"item1\"\n   expanded-key=\"[[expanded]]\"\n   on-oj-expand=\"[[expandHandler]]\"\n   on-oj-collapse=\"[[collapseHandler]]\"\n   aria-label=\"Details for Item 1\"\n&gt;\n  &lt;h3 slot=\"header\"&gt;Item 1&lt;/h3&gt;\n  &lt;div&gt;Content for Item 1&lt;/div&gt;\n&lt;/oj-c-accordion-item-single&gt;\n</code></pre>\n\n<h3 id=\"a11y-section\">Accessibility</h3>\n<p>Specify a value for the <code>aria-label</code> attribute with a meaningful description of the purpose of this accordion item for accessibility. Header text is required for screen readers.</p>\n\n<h3 id=\"keyboard-section\">Keyboard End User Information</h3>\n<ul>\n  <li><kbd>Enter/Space</kbd>: Toggle expansion/collapse of the item.</li>\n  <li><kbd>Tab</kbd>: Move focus to the next tabbable element.</li>\n</ul>\n\n<h3 id=\"touch-section\">Touch End User Information</h3>\n<ul>\n  <li><b>Tap</b> on header: Toggle expansion/collapse of the item.</li>\n</ul>\n\n<h3 id=\"validation-section\">Validation and Messaging</h3>\n<p>This component does not support validation or messaging directly. Use parent form components for validation if needed.</p>\n\n<h3 id=\"user-assistance-text-section\">User Assistance Text</h3>\n<p>Provide clear header text and aria-labels for accessibility and user guidance.</p>",
+    "scope": "static",
+    "tagWithoutBrackets": "oj-c-accordion-item-single",
+    "tagWithBrackets": "<oj-c-accordion-item-single>",
+    "domInterface": "CAccordionItemSingleElement",
+    "ojPageTitle": "&lt;oj-c-accordion-item-single>",
+    "camelCaseName": "AccordionItemSingle",
+    "ojPageTitlePrefix": "Element: ",
+    "ojtsvcomponent": true,
+    "tstype": {
+      "target": "Type",
+      "value": "interface CAccordionItemSingleElement<K extends string | number> extends JetElement<AccordionItemSingleElementSettableProperties<K>>",
+      "genericParameters": [
+        {
+          "name": "K",
+          "description": "Type extends string or number"
+        }
+      ]
+    },
+    "ojsignature": [
+      {
+        "target": "Type",
+        "value": "interface CAccordionItemSingleElement<K extends string | number> extends JetElement<AccordionItemSingleElementSettableProperties<K>>",
+        "genericParameters": [
+          {
+            "name": "K",
+            "description": "Type extends string or number"
+          }
+        ]
+      }
+    ],
+    "tsdeprecated": [
+      {
+        "type": "supersedes",
+        "since": "20.0.0",
+        "value": [
+          "oj-accordion"
+        ]
+      }
+    ],
+    "extension": {
+      "catalog": {
+        "category": "Layout & Nav"
+      },
+      "vbdt": {
+        "module": "oj-c/accordion-item-single"
+      }
+    },
+    "ojmodule": "accordion-item-single"
+  },
+  {
+    "id": "oj-c.AccordionItemSingle#itemKey",
+    "name": "itemKey",
+    "memberof": "oj-c.AccordionItemSingle",
+    "meta": {
+      "filename": "accordion-item-single.tsx",
+      "path": "web/components/oj-c/accordion-item-single"
+    },
+    "kind": "member",
+    "longname": "oj-c.AccordionItemSingle#itemKey",
+    "scope": "instance",
+    "type": {
+      "names": [
+        "string|number"
+      ]
+    },
+    "optional": true,
+    "ojdisplayname": "Item Key",
+    "ojshortdesc": "Specifies the item key of each AccordionItemSingle.",
+    "description": "Specifies the item key of each AccordionItemSingle.\nUse <code>itemKey</code> to uniquely identify each item in the accordion.",
+    "tstype": [
+      {
+        "target": "Type",
+        "value": "K",
+        "jsdocOverride": true
+      }
+    ]
+  },
+  {
+    "id": "oj-c.AccordionItemSingle#expandedKey",
+    "name": "expandedKey",
+    "memberof": "oj-c.AccordionItemSingle",
+    "meta": {
+      "filename": "accordion-item-single.tsx",
+      "path": "web/components/oj-c/accordion-item-single"
+    },
+    "kind": "member",
+    "longname": "oj-c.AccordionItemSingle#expandedKey",
+    "scope": "instance",
+    "type": {
+      "names": [
+        "string|number|null"
+      ]
+    },
+    "optional": true,
+    "ojdisplayname": "Expanded Key",
+    "ojwriteback": true,
+    "ojshortdesc": "Specifies the expandedKey.",
+    "description": "Specifies the expandedKey property.\nUse <code>expandedKey</code> to control which item is expanded.\nBind this property to an observable in your ViewModel (e.g., <code>ko.Observable&lt;string | null&gt;</code>) to programmatically expand/collapse items.",
+    "tstype": [
+      {
+        "target": "Type",
+        "value": "K|null",
+        "jsdocOverride": true
+      }
+    ]
+  },
+  {
+    "id": "oj-c.AccordionItemSingle#disabled",
+    "name": "disabled",
+    "memberof": "oj-c.AccordionItemSingle",
+    "meta": {
+      "filename": "accordion-item-single.tsx",
+      "path": "web/components/oj-c/accordion-item-single"
+    },
+    "kind": "member",
+    "longname": "oj-c.AccordionItemSingle#disabled",
+    "scope": "instance",
+    "type": {
+      "names": [
+        "boolean"
+      ]
+    },
+    "optional": true,
+    "ojdisplayname": "Disabled",
+    "ojshortdesc": "Disables the collapsible if set to true.",
+    "description": "Disables the item if set to true."
+  },
+  {
+    "id": "oj-c.AccordionItemSingle#iconPosition",
+    "name": "iconPosition",
+    "memberof": "oj-c.AccordionItemSingle",
+    "meta": {
+      "filename": "accordion-item-single.tsx",
+      "path": "web/components/oj-c/accordion-item-single"
+    },
+    "kind": "member",
+    "longname": "oj-c.AccordionItemSingle#iconPosition",
+    "scope": "instance",
+    "type": {
+      "names": [
+        "\"end\"",
+        "\"start\""
+      ]
+    },
+    "optional": true,
+    "ojdisplayname": "Icon Position",
+    "description": "Changes chevron icon placement at the end of the collapsible header."
+  },
+  {
+    "id": "oj-c.AccordionItemSingle#setProperty",
+    "name": "setProperty",
+    "memberof": "oj-c.AccordionItemSingle",
+    "meta": {
+      "filename": "accordion-item-single.tsx",
+      "path": "web/components/oj-c/accordion-item-single"
+    },
+    "kind": "function",
+    "longname": "oj-c.AccordionItemSingle#setProperty",
+    "scope": "instance",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "void"
+          ]
+        }
+      }
+    ],
+    "ojshortdesc": "Sets a property or a single subproperty for complex properties and notifies the component of the change, triggering a corresponding event.",
+    "description": "Sets a property or a single subproperty for complex properties and notifies the component of the change, triggering a corresponding event.",
+    "params": [
+      {
+        "name": "property",
+        "description": "The property name to set. Supports dot notation for subproperty access.",
+        "type": {
+          "names": [
+            "string"
+          ]
+        }
+      },
+      {
+        "name": "value",
+        "description": "The new value to set the property to.",
+        "type": {
+          "names": [
+            "any"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "oj-c.AccordionItemSingle#getProperty",
+    "name": "getProperty",
+    "memberof": "oj-c.AccordionItemSingle",
+    "meta": {
+      "filename": "accordion-item-single.tsx",
+      "path": "web/components/oj-c/accordion-item-single"
+    },
+    "kind": "function",
+    "longname": "oj-c.AccordionItemSingle#getProperty",
+    "scope": "instance",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "any"
+          ]
+        }
+      }
+    ],
+    "ojshortdesc": "Retrieves the value of a property or a subproperty.",
+    "description": "Retrieves the value of a property or a subproperty.",
+    "params": [
+      {
+        "name": "property",
+        "description": "The property name to get. Supports dot notation for subproperty access.",
+        "type": {
+          "names": [
+            "string"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "oj-c.AccordionItemSingle#setProperties",
+    "name": "setProperties",
+    "memberof": "oj-c.AccordionItemSingle",
+    "meta": {
+      "filename": "accordion-item-single.tsx",
+      "path": "web/components/oj-c/accordion-item-single"
+    },
+    "kind": "function",
+    "longname": "oj-c.AccordionItemSingle#setProperties",
+    "scope": "instance",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "void"
+          ]
+        }
+      }
+    ],
+    "ojshortdesc": "Performs a batch set of properties.",
+    "description": "Performs a batch set of properties.",
+    "params": [
+      {
+        "name": "properties",
+        "description": "An object containing the property and value pairs to set.",
+        "type": {
+          "names": [
+            "object"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "oj-c.AccordionItemSingle#event:ojCollapse",
+    "name": "ojCollapse",
+    "kind": "event",
+    "memberof": "oj-c.AccordionItemSingle",
+    "meta": {
+      "filename": "accordion-item-single.tsx",
+      "path": "web/components/oj-c/accordion-item-single"
+    },
+    "longname": "oj-c.AccordionItemSingle#event:ojCollapse",
+    "scope": "instance",
+    "ojshortdesc": "Triggered after the item has been collapsed (after animation completes).",
+    "description": "<p style=\"background-color: RGB(var(--oj-palette-info-rgb-30)); border: 2px solid #ddd\"><strong>Note:</strong> The event detail contains the following properties: [oj-c.AccordionItemSingle.AccordionItemSingleDetail]{@link oj-c.AccordionItemSingle.AccordionItemSingleDetail}&lt;K></p>Triggered after the item has been collapsed (after animation completes)."
+  },
+  {
+    "id": "oj-c.AccordionItemSingle#event:ojExpand",
+    "name": "ojExpand",
+    "kind": "event",
+    "memberof": "oj-c.AccordionItemSingle",
+    "meta": {
+      "filename": "accordion-item-single.tsx",
+      "path": "web/components/oj-c/accordion-item-single"
+    },
+    "longname": "oj-c.AccordionItemSingle#event:ojExpand",
+    "scope": "instance",
+    "ojshortdesc": "Triggered after the item has been expanded (after animation completes).",
+    "description": "<p style=\"background-color: RGB(var(--oj-palette-info-rgb-30)); border: 2px solid #ddd\"><strong>Note:</strong> The event detail contains the following properties: [oj-c.AccordionItemSingle.AccordionItemSingleDetail]{@link oj-c.AccordionItemSingle.AccordionItemSingleDetail}&lt;K></p>Triggered after the item has been expanded (after animation completes)."
+  },
+  {
+    "id": "oj-c.AccordionItemSingle#header",
+    "name": "header",
+    "memberof": "oj-c.AccordionItemSingle",
+    "meta": {
+      "filename": "accordion-item-single.tsx",
+      "path": "web/components/oj-c/accordion-item-single"
+    },
+    "kind": "member",
+    "longname": "oj-c.AccordionItemSingle#header",
+    "scope": "instance",
+    "ojdisplayname": "Header",
+    "description": "Item's header. If not specified, the header contains only an open/close icon.\nThe header text is required for accessibility purposes.",
+    "ojshortdesc": "Collapsible's header. If not specified, the header contains only an open/close icon. The header text is required for accessibility purposes.",
+    "ojslot": true
+  },
+  {
+    "id": "oj-c.AccordionItemSingle#Default",
+    "name": "Default",
+    "memberof": "oj-c.AccordionItemSingle",
+    "meta": {
+      "filename": "accordion-item-single.tsx",
+      "path": "web/components/oj-c/accordion-item-single"
+    },
+    "kind": "member",
+    "longname": "oj-c.AccordionItemSingle#Default",
+    "scope": "instance",
+    "ojdisplayname": "Content",
+    "description": "The content node to be expanded or collapsed.\nPlace any content to be shown/hidden inside this property.",
+    "ojshortdesc": "Collapsible's content node. Place any content to be shown/hidden inside this property.",
+    "ojchild": true
+  },
+  {
+    "id": "oj-c.AccordionItemSingle.AccordionItemSingleDetail",
+    "name": "AccordionItemSingleDetail",
+    "kind": "typedef",
+    "memberof": "oj-c.AccordionItemSingle",
+    "meta": {
+      "filename": "accordion-item-single.tsx",
+      "path": "web/components/oj-c/accordion-item-single"
+    },
+    "longname": "oj-c.AccordionItemSingle.AccordionItemSingleDetail",
+    "type": {
+      "names": [
+        "Object"
+      ]
+    },
+    "scope": "static",
+    "description": "Payload for the onOjCollapse event and onOjExpand event.\n<p>All of the event payloads listed below can be found under <code>event.detail</code>. See Events and Listeners for additional information.</p>\n\n<table>\n  <thead>\n    <tr>\n      <th>Name</th>\n      <th>Type</th>\n      <th>Description</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>from</td>\n      <td>K | undefined</td>\n      <td>The key of the item that was previously expanded.</td>\n    </tr>\n    <tr>\n      <td>to</td>\n      <td>K | null</td>\n      <td>The key of the item that is now expanded.</td>\n    </tr>\n  </tbody>\n</table>",
+    "tsgenerictype": {
+      "target": "Type",
+      "value": "<K extends string | number>",
+      "for": "genericTypeParameters"
+    },
+    "properties": [
+      {
+        "name": "fromKey",
+        "optional": true,
+        "type": {
+          "names": [
+            "string|number"
+          ]
+        },
+        "tstype": [
+          {
+            "target": "Type",
+            "value": "K",
+            "jsdocOverride": true,
+            "for": "fromKey"
+          }
+        ]
+      },
+      {
+        "name": "toKey",
+        "optional": false,
+        "type": {
+          "names": [
+            "string|number|null"
+          ]
+        },
+        "tstype": [
+          {
+            "target": "Type",
+            "value": "K|null",
+            "jsdocOverride": true,
+            "for": "toKey"
+          }
+        ]
+      }
+    ]
+  }
+]

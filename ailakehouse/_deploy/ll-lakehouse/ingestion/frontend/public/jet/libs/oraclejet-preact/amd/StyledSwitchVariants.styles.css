@@ -1,0 +1,31 @@
+.StyledSwitchVariants_multiVariantStyles_compound_1__v65k2bb {
+  background-color: rgb(var(--oj-c-palette-brand-100));
+  border-color: transparent;
+}
+.StyledSwitchVariants_multiVariantStyles_compound_2__v65k2bc {
+  background-color: rgb(var(--oj-c-palette-neutral-90));
+  border-color: transparent;
+}
+.StyledSwitchVariants_multiVariantStyles_compound_3__v65k2bd {
+  background-color: var(--oj-c-measure-track-disabled);
+  border-color: transparent;
+}
+.StyledSwitchVariants_multiVariantStyles_compound_4__v65k2be {
+  background-color: transparent;
+  border-width: 0;
+}
+.StyledSwitchVariants_multiVariantStyles_compound_5__v65k2bf {
+  inset-inline-start: auto;
+  inset-inline-end: 0.0625rem;
+}
+.StyledSwitchVariants_multiVariantStyles_compound_6__v65k2bg {
+  inset-inline-start: 0.0625rem;
+  inset-inline-end: auto;
+}
+.StyledSwitchVariants_multiVariantStyles_compound_7__v65k2bh {
+  inset-inline-start: auto;
+  inset-inline-end: auto;
+  background-color: transparent;
+  border-width: 0;
+  box-shadow: none;
+}

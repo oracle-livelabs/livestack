@@ -1,0 +1,586 @@
+volumes:
+  oracle-data:
+  netsuite-db-data:
+  ords-config:
+  ollama-models:
+  # Legacy GoldenGate Distributed Apps volumes kept for rollback with the
+  # commented service definition below.
+  # goldengate-data:
+  # goldengate-temp:
+  goldengate-runtime-data:
+  goldengate-runtime-temp:
+  ggsa-mysql:
+  ggsa-kafka:
+  ggsa-spark-events:
+  ggsa-osa-files:
+  app-node-modules:
+  frontend-node-modules:
+  frontend-dist:
+  signal-generator-node-modules:
+  gravitino-logs:
+
+networks:
+  default: {}
+
+services:
+  db:
+    hostname: db
+    image: ${ORACLE_DB_IMAGE:-container-registry.oracle.com/database/free:23.26.1.0}
+    environment:
+      ORACLE_PWD: ${ORACLE_PWD:-oracle}
+      ORACLE_CHARACTERSET: ${ORACLE_CHARACTERSET:-AL32UTF8}
+      DBPASSWORD: ${DBPASSWORD:-peakgear}
+      APP_SCHEMA_PASSWORD: ${APP_SCHEMA_PASSWORD:-peakgear}
+      ONNX_MODEL_FILENAME: ${ONNX_MODEL_FILENAME:-all_MiniLM_L12_v2.onnx}
+      ONNX_MODEL_URL: ${ONNX_MODEL_URL:-https://adwc4pm.objectstorage.us-ashburn-1.oci.customer-oci.com/p/eLddQappgBJ7jNi6Guz9m9LOtYe2u8LWY19GfgU8flFK4N9YgP4kTlrE9Px3pE12/n/adwc4pm/b/OML-Resources/o/all_MiniLM_L12_v2.onnx}
+      OCI_REGION: ${OCI_REGION:-}
+      AI_ENDPOINT_REGION: ${AI_ENDPOINT_REGION:-}
+      REGION_IDENTIFIER: ${REGION_IDENTIFIER:-}
+      OCI_GENAI_ENDPOINT: ${OCI_GENAI_ENDPOINT:-}
+    ports:
+      - 1521:1521
+    volumes:
+      - oracle-data:/opt/oracle/oradata
+      - ./db:/workspace/app/db:ro,z
+      - ./gold-data:/workspace/gold-data:ro,z
+      - ./scripts/bootstrap_db.sh:/opt/oracle/scripts/startup/20-bootstrap_db.sh:ro,z
+    networks:
+      default:
+        aliases:
+          - db
+    healthcheck:
+      test: ["CMD-SHELL", "[ -f /opt/oracle/oradata/.pggold_bootstrap_done ] && echo 'SELECT 1 FROM dual;' | sqlplus -L -s system/${ORACLE_PWD:-oracle}@localhost:1521/FREEPDB1 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 40
+      start_period: 180s
+    restart: unless-stopped
+
+  netsuite-db:
+    hostname: netsuite-db
+    image: ${NETSUITE_DB_IMAGE:-container-registry.oracle.com/database/free:23.26.1.0}
+    environment:
+      ORACLE_PWD: ${ORACLE_PWD:-oracle}
+      ORACLE_CHARACTERSET: ${ORACLE_CHARACTERSET:-AL32UTF8}
+      DBPASSWORD: ${DBPASSWORD:-peakgear}
+      NETSUITE_DB_PASSWORD: ${DBPASSWORD:-peakgear}
+      GOLDENGATE_SOURCE_PASSWORD: ${DBPASSWORD:-peakgear}
+    ports:
+      - "${NETSUITE_DB_PORT:-1522}:1521"
+    volumes:
+      - netsuite-db-data:/opt/oracle/oradata
+      - ./cdc/netsuite-db/20-bootstrap-netsuite.sh:/opt/oracle/scripts/startup/20-bootstrap-netsuite.sh:ro,z
+    networks:
+      default:
+        aliases:
+          - netsuite-db
+    healthcheck:
+      test: ["CMD-SHELL", "[ -f /opt/oracle/oradata/.netsuite_bootstrap_done ] && echo 'SELECT 1 FROM dual;' | sqlplus -L -s system/${ORACLE_PWD:-oracle}@localhost:1521/FREEPDB1 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 40
+      start_period: 180s
+    restart: unless-stopped
+
+  ords:
+    hostname: ords
+    image: ${ORDS_IMAGE:-container-registry.oracle.com/database/ords:latest}
+    environment:
+      CONN_STRING: db:1521/FREEPDB1
+      DBHOST: db
+      DBPORT: 1521
+      DBSERVICENAME: FREEPDB1
+      ORACLE_PWD: ${ORACLE_PWD:-oracle}
+    ports:
+      - 8181:8080
+    volumes:
+      - ords-config:/etc/ords/config
+    networks:
+      default:
+        aliases:
+          - ords
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:8080/ords/ || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 20
+      start_period: 120s
+    restart: unless-stopped
+
+  ords-pg-setup:
+    image: ${ORACLE_DB_IMAGE:-container-registry.oracle.com/database/free:23.26.1.0}
+    entrypoint: ["/bin/bash", "/workspace/app/scripts/enable_pg_ords.sh"]
+    environment:
+      ORACLE_PWD: ${ORACLE_PWD:-oracle}
+      DBPASSWORD: ${DBPASSWORD:-peakgear}
+      APP_SCHEMA_PASSWORD: ${APP_SCHEMA_PASSWORD:-peakgear}
+    volumes:
+      - ./scripts/enable_pg_ords.sh:/workspace/app/scripts/enable_pg_ords.sh:ro,z
+    networks:
+      default: {}
+    depends_on:
+      db:
+        condition: service_healthy
+      ords:
+        condition: service_healthy
+    restart: "no"
+
+  ollama:
+    hostname: ollama
+    image: ${OLLAMA_IMAGE:-docker.io/ollama/ollama:latest}
+    environment:
+      OLLAMA_HOST: 0.0.0.0:11434
+      OLLAMA_MODEL_PRIMARY: ${OLLAMA_MODEL_PRIMARY:-llama3.2}
+    entrypoint: ["/bin/bash", "/pull_ollama.sh"]
+    ports:
+      - 11434:11434
+    volumes:
+      - ollama-models:/root/.ollama
+      - ./scripts/pull_ollama.sh:/pull_ollama.sh:ro,z
+    networks:
+      default:
+        aliases:
+          - ollama
+    healthcheck:
+      test: ["CMD-SHELL", "ollama show \"$${OLLAMA_MODEL_PRIMARY:-llama3.2}\" >/dev/null 2>&1"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
+    restart: unless-stopped
+
+  privateai:
+    hostname: privateai
+    image: ${PRIVATE_AI_IMAGE:-container-registry.oracle.com/database/private-ai:latest}
+    environment:
+      OML_HTTPS_ENABLED: ${PRIVATE_AI_HTTPS_ENABLED:-false}
+    networks:
+      default:
+        aliases:
+          - privateai
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:8080/health || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 20
+      start_period: 90s
+    restart: unless-stopped
+
+  goldengate-cdc:
+    hostname: goldengate-cdc
+    image: ${GOLDENGATE_STUDIO_FREE_IMAGE:-container-registry.oracle.com/goldengate/goldengate-studio-free:23.9.0.25.09}
+    environment:
+      STUDIO_ADMIN: ${GOLDENGATE_STUDIO_ADMIN_USER:-studioadmin}
+      STUDIO_ADMIN_PWD: ${DBPASSWORD:-peakgear}
+      OGGF_API_SERVER_URL: ${GOLDENGATE_PUBLIC_URL:-https://localhost:8501}
+      OGGF_API_SERVER_SSL_URL: ${GOLDENGATE_PUBLIC_URL:-https://localhost:8501}
+    ports:
+      - "${GOLDENGATE_HTTP_PORT:-8501}:8443"
+    volumes:
+      - ./cdc/goldengate-studio/patch-public-url.sh:/usr/local/bin/patch-goldengate-studio-public-url.sh:ro,z
+    networks:
+      default:
+        aliases:
+          - goldengate-cdc
+          - goldengate-studio
+    depends_on:
+      netsuite-db:
+        condition: service_healthy
+      goldengate-runtime:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "/usr/local/bin/patch-goldengate-studio-public-url.sh && curl -kfsS https://127.0.0.1:8443/ >/dev/null || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 40
+      start_period: 240s
+    restart: unless-stopped
+
+  goldengate-runtime:
+    hostname: goldengate-runtime
+    image: ${GOLDENGATE_ORACLE_FREE_IMAGE:-container-registry.oracle.com/goldengate/goldengate-oracle-free:latest}
+    platform: linux/amd64
+    entrypoint: ["/bin/bash", "/usr/local/bin/start-goldengate-runtime.sh"]
+    environment:
+      OGG_ADMIN: ${GOLDENGATE_ADMIN_USER:-studioadmin}
+      OGG_ADMIN_PWD: ${DBPASSWORD:-peakgear}
+      OGG_DEPLOYMENT: ${GOLDENGATE_DEPLOYMENT:-PeakGearCDC}
+      OGG_DOMAIN: goldengate-runtime
+      TNS_ADMIN: /wallet
+    ports:
+      - "${GOLDENGATE_RUNTIME_HTTP_PORT:-8502}:8080"
+    volumes:
+      - goldengate-runtime-data:/u02
+      - goldengate-runtime-temp:/u03
+      - ./wallet:/wallet:ro,z
+      - ./cdc/goldengate-runtime/start-goldengate-runtime.sh:/usr/local/bin/start-goldengate-runtime.sh:ro,z
+      - ./cdc/goldengate-runtime/ensure-pmsrvr.sh:/usr/local/bin/ensure-goldengate-pmsrvr.sh:ro,z
+      - ./cdc/goldengate-runtime/ensure-pmsrvr.sh:/u01/ogg/scripts/startup/90-ensure-pmsrvr.sh:ro,z
+    networks:
+      default:
+        aliases:
+          - goldengate-runtime
+          - goldengate
+    depends_on:
+      netsuite-db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS -u \"$${OGG_ADMIN}:$${OGG_ADMIN_PWD}\" \"http://127.0.0.1:8080/services/$${OGG_DEPLOYMENT:-PeakGearCDC}/adminsrvr/v2/config/health\" >/dev/null || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 60
+      start_period: 300s
+    restart: unless-stopped
+
+  # Legacy GoldenGate Distributed Apps container. GGSA replaces this service.
+  # goldengate:
+  #   hostname: goldengate
+  #   image: ${GOLDENGATE_IMAGE:-container-registry.oracle.com/goldengate/goldengate-distributed-apps-and-analytics:23.26.1.0.1}
+  #   environment:
+  #     OGG_ADMIN: ${GOLDENGATE_ADMIN_USER:-oggadmin}
+  #     OGG_ADMIN_PWD: ${GOLDENGATE_ADMIN_PASSWORD:-LiveStacksRulez!2026}
+  #     OGG_DEPLOYMENT: ${GOLDENGATE_DEPLOYMENT:-Lakehouse}
+  #   ports:
+  #     - 8504:8080
+  #   volumes:
+  #     - goldengate-data:/u02
+  #     - goldengate-temp:/u03
+  #   networks:
+  #     default:
+  #       aliases:
+  #         - goldengate
+  #   restart: unless-stopped
+
+  ggsa:
+    hostname: ggsa
+    image: ${GGSA_IMAGE:-localhost/ggsa-osa:26ai}
+    platform: linux/amd64
+    build:
+      context: ./ggsa
+      dockerfile: Dockerfile
+      args:
+        OSA_ARCHIVE: ${GGSA_OSA_ARCHIVE:-V1054826-01.zip}
+    environment:
+      PUBLISH_HOST: ${PUBLISH_HOST:-auto}
+      GGSA_PUBLIC_HOST: ${GGSA_PUBLIC_HOST:-auto}
+      BASH_ENV: /etc/profile.d/ggsa-public-host.sh
+      MYSQL_ROOT_PASSWORD: ${DBPASSWORD:-oracle}
+      MYSQL_DATABASE: osa
+      MYSQL_USER: osa
+      MYSQL_PASSWORD: ${DBPASSWORD:-oracle}
+      GGSA_RESET_MYSQL_ON_PASSWORD_CHANGE: ${GGSA_RESET_MYSQL_ON_PASSWORD_CHANGE:-true}
+      OSA_ADMIN_USER: osaadmin
+      OSA_ADMIN_PASSWORD: ${DBPASSWORD:-oracle}
+      OSA_PUBLIC_HOST: ${GGSA_PUBLIC_HOST:-auto}
+      OSA_API_SERVER_SPORT: ${GGSA_OSA_HTTPS_PORT:-8085}
+      SPARK_PUBLIC_DNS: ${GGSA_PUBLIC_HOST:-auto}
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://${GGSA_PUBLIC_HOST:-auto}:${GGSA_KAFKA_PORT:-9092}
+      OSA_KAFKA_URL: ${OSA_KAFKA_URL:-localhost:19092}
+      SPARK_WORKER_INSTANCES: ${GGSA_SPARK_WORKER_INSTANCES:-2}
+      SPARK_WORKER_CORES: ${GGSA_SPARK_WORKER_CORES:-8}
+      SPARK_WORKER_MEMORY: ${GGSA_SPARK_WORKER_MEMORY:-2g}
+      OSA_READY_TIMEOUT: ${GGSA_OSA_READY_TIMEOUT:-600}
+      OSA_AUTO_ADB_CONNECT: ${OSA_AUTO_ADB_CONNECT:-true}
+      OSA_ADB_CONNECTION_NAME: ${OSA_ADB_CONNECTION_NAME:-PeakGear_ADB}
+      OSA_ADB_CONNECTION_DISPLAY_NAME: ${OSA_ADB_CONNECTION_DISPLAY_NAME:-PeakGear ADB}
+      OSA_ADB_WALLET_DIR: /wallet
+      OSA_ADB_USERNAME: ${OSA_ADB_USERNAME:-PG}
+      OSA_ADB_PASSWORD: ${DBPASSWORD:-}
+      OSA_ADB_SERVICE_NAME: ${SERVICE_NAME:-}
+    ports:
+      - "${GGSA_MYSQL_PORT:-3306}:3306"
+      - "${GGSA_SPARK_APP_PORT_RANGE:-4040-4050}:4040-4050"
+      - "${GGSA_SPARK_REST_PORT:-6066}:6066"
+      - "${GGSA_SPARK_MASTER_PORT:-7077}:7077"
+      - "${GGSA_SPARK_MASTER_UI_PORT:-28080}:28080"
+      - "${GGSA_SPARK_WORKER_UI_PORT:-28081}:28081"
+      - "${GGSA_SPARK_WORKER_UI_PORT_2:-28082}:28082"
+      - "${GGSA_SPARK_HISTORY_PORT:-28083}:28083"
+      - "${GGSA_OSA_HTTPS_PORT:-8085}:${GGSA_OSA_HTTPS_PORT:-8085}"
+      - "${GGSA_OSA_HTTP_PORT:-19080}:9080"
+      - "${GGSA_KAFKA_PORT:-9092}:9092"
+    volumes:
+      - ggsa-mysql:/var/lib/mysql
+      - ggsa-kafka:/var/lib/kafka/data
+      - ggsa-spark-events:/var/lib/spark-events
+      - ggsa-osa-files:/u01/app/osa/deployedpipelines
+      - ./wallet:/wallet:ro,z
+    networks:
+      default:
+        aliases:
+          - ggsa
+          - goldengate
+    healthcheck:
+      test: ["CMD-SHELL", "curl -kfsS \"https://127.0.0.1:$${OSA_API_SERVER_SPORT:-9443}/osa/index.html\" || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 40
+      start_period: 600s
+    restart: unless-stopped
+
+  signal-generator:
+    hostname: signal-generator
+    image: docker.io/node:20-bookworm
+    working_dir: /workspace/generator
+    network_mode: "service:ggsa"
+    volumes:
+      - ./signal-generator:/workspace/generator:z
+      - signal-generator-node-modules:/workspace/generator/node_modules
+    environment:
+      PORT: 18088
+      KAFKA_BROKERS: localhost:19092
+      KAFKA_TOPIC: ${SIGNAL_KAFKA_TOPIC:-peakgear.demand.signals.raw}
+      KAFKA_TOPIC_PARTITIONS: ${KAFKA_TOPIC_PARTITIONS:-3}
+      SIGNAL_RATE_MS: ${SIGNAL_RATE_MS:-1500}
+    command:
+      - bash
+      - -lc
+      - |
+        set -euo pipefail
+        [ -d node_modules/kafkajs ] || npm install --omit=dev
+        npm start
+    depends_on:
+      ggsa:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "node -e \"require('http').get('http://127.0.0.1:18088/health', (res) => process.exit(res.statusCode === 200 ? 0 : 1)).on('error', () => process.exit(1))\""]
+      interval: 15s
+      timeout: 5s
+      retries: 15
+      start_period: 30s
+    restart: unless-stopped
+
+  gravitino:
+    hostname: gravitino
+    image: ${GRAVITINO_IMAGE:-localhost/gravitino-iceberg-rest:adw}
+    build:
+      context: ./gravitino
+      dockerfile: Dockerfile
+    ports:
+      - "${GRAVITINO_REST_PORT:-1525}:${GRAVITINO_HTTP_PORT:-1525}"
+    environment:
+      DBPASSWORD: ${DBPASSWORD:-}
+      SERVICE_NAME: ${SERVICE_NAME:-}
+      BUCKET_NAME: ${BUCKET_NAME:-}
+      OBJECT_NAMESPACE: ${OBJECT_NAMESPACE:-}
+      REGION_IDENTIFIER: ${REGION_IDENTIFIER:-}
+      GRAVITINO_HTTP_PORT: ${GRAVITINO_HTTP_PORT:-1525}
+      GRAVITINO_CATALOG_BACKEND_NAME: ${GRAVITINO_CATALOG_BACKEND_NAME:-TEST_ICEBERG}
+      GRAVITINO_JDBC_URI: ${GRAVITINO_JDBC_URI:-}
+      GRAVITINO_JDBC_SERVICE_NAME: ${GRAVITINO_JDBC_SERVICE_NAME:-}
+      GRAVITINO_JDBC_USER: ${GRAVITINO_JDBC_USER:-PG}
+      GRAVITINO_JDBC_PASSWORD: ${GRAVITINO_JDBC_PASSWORD:-}
+      GRAVITINO_WALLET_DIR: /wallet
+      GRAVITINO_WAREHOUSE: ${GRAVITINO_WAREHOUSE:-}
+      GRAVITINO_OBJECT_STORAGE_BUCKET: ${GRAVITINO_OBJECT_STORAGE_BUCKET:-}
+      GRAVITINO_OBJECT_STORAGE_PREFIX: ${GRAVITINO_OBJECT_STORAGE_PREFIX:-iceberg}
+      GRAVITINO_S3_ENDPOINT: ${GRAVITINO_S3_ENDPOINT:-}
+      GRAVITINO_S3_REGION: ${GRAVITINO_S3_REGION:-}
+      GRAVITINO_S3_ACCESS_KEY_ID: ${GRAVITINO_S3_ACCESS_KEY_ID:-}
+      GRAVITINO_S3_SECRET_ACCESS_KEY: ${GRAVITINO_S3_SECRET_ACCESS_KEY:-}
+      GRAVITINO_S3_PATH_STYLE_ACCESS: ${GRAVITINO_S3_PATH_STYLE_ACCESS:-true}
+    volumes:
+      - ./wallet:/wallet:ro,z
+      - gravitino-logs:/opt/gravitino/logs
+    networks:
+      default:
+        aliases:
+          - gravitino
+          - iceberg-rest
+    healthcheck:
+      test: ["CMD-SHELL", "curl --fail \"http://127.0.0.1:$${GRAVITINO_HTTP_PORT:-1525}/iceberg/v1/config\""]
+      interval: 30s
+      timeout: 10s
+      retries: 20
+      start_period: 90s
+    restart: unless-stopped
+
+  iceberg-seeder:
+    hostname: iceberg-seeder
+    image: ${ICEBERG_SEED_IMAGE:-localhost/iceberg-seeder:latest}
+    build:
+      context: ./iceberg-seeder
+      dockerfile: Dockerfile
+    profiles:
+      - seed
+    environment:
+      ICEBERG_SEED_AUTO_CREATE: ${ICEBERG_SEED_AUTO_CREATE:-true}
+      ICEBERG_SEED_NAMESPACE: ${ICEBERG_SEED_NAMESPACE:-bronze}
+      ICEBERG_SEED_TABLE: ${ICEBERG_SEED_TABLE:-product_master_raw}
+      ICEBERG_SEED_OVERWRITE: ${ICEBERG_SEED_OVERWRITE:-false}
+      ICEBERG_SEED_ADB_METADATA: ${ICEBERG_SEED_ADB_METADATA:-true}
+      ICEBERG_SEED_ADB_METADATA_PREFIX: ${ICEBERG_SEED_ADB_METADATA_PREFIX:-adb_oci}
+      ICEBERG_SEED_CSV_PATH: ${ICEBERG_SEED_CSV_PATH:-/workspace/app/demodata/bronze/product_master_raw.csv}
+      ICEBERG_SEED_CSV_URL: ${ICEBERG_SEED_CSV_URL:-}
+      ICEBERG_SEED_TABLE_LOCATION: ${ICEBERG_SEED_TABLE_LOCATION:-}
+      ICEBERG_SEED_FILE_IO: ${ICEBERG_SEED_FILE_IO:-seed_product_master.OCIS3FsspecFileIO}
+      ICEBERG_REST_CATALOG_URI: ${ICEBERG_REST_CATALOG_URI:-http://gravitino:1525/iceberg}
+      GRAVITINO_WAREHOUSE: ${GRAVITINO_WAREHOUSE:-}
+      GRAVITINO_OBJECT_STORAGE_BUCKET: ${GRAVITINO_OBJECT_STORAGE_BUCKET:-}
+      GRAVITINO_OBJECT_STORAGE_PREFIX: ${GRAVITINO_OBJECT_STORAGE_PREFIX:-iceberg}
+      BUCKET_NAME: ${BUCKET_NAME:-}
+      OBJECT_NAMESPACE: ${OBJECT_NAMESPACE:-}
+      REGION_IDENTIFIER: ${REGION_IDENTIFIER:-}
+      GRAVITINO_S3_ENDPOINT: ${GRAVITINO_S3_ENDPOINT:-}
+      GRAVITINO_S3_REGION: ${GRAVITINO_S3_REGION:-}
+      GRAVITINO_S3_ACCESS_KEY_ID: ${GRAVITINO_S3_ACCESS_KEY_ID:-}
+      GRAVITINO_S3_SECRET_ACCESS_KEY: ${GRAVITINO_S3_SECRET_ACCESS_KEY:-}
+      GRAVITINO_S3_PATH_STYLE_ACCESS: ${GRAVITINO_S3_PATH_STYLE_ACCESS:-true}
+    volumes:
+      - ./demodata/bronze:/workspace/app/demodata/bronze:ro,z
+    networks:
+      default:
+        aliases:
+          - iceberg-seeder
+    depends_on:
+      gravitino:
+        condition: service_healthy
+    restart: "no"
+
+  app:
+    hostname: app
+    image: docker.io/node:20-bookworm
+    working_dir: /workspace/app
+    volumes:
+      - ./:/workspace/app:z
+      - ./gold-data:/workspace/gold-data:ro,z
+      - ./wallet:/wallet:ro,z
+      - ${PRODUCT_IMAGE_DIR:-./images}:/workspace/app/images:ro,z
+      - app-node-modules:/workspace/app/node_modules
+      - frontend-node-modules:/workspace/app/frontend/node_modules
+      - frontend-dist:/workspace/app/frontend/dist
+    networks:
+      default:
+        aliases:
+          - app
+    environment:
+      NODE_ENV: production
+      PORT: 3001
+      FRONTEND_URL: http://localhost:${APP_PORT:-8505}
+      ORACLE_USER: PG
+      ORACLE_PASSWORD: ${DBPASSWORD:-peakgear}
+      ORACLE_CONNECTION_STRING: db:1521/FREEPDB1
+      ORACLE_POOL_MIN: ${ORACLE_POOL_MIN:-2}
+      ORACLE_POOL_MAX: ${ORACLE_POOL_MAX:-10}
+      ORACLE_POOL_INCREMENT: ${ORACLE_POOL_INCREMENT:-1}
+      ADB_AUTO_CONNECT: ${ADB_AUTO_CONNECT:-true}
+      ADB_WALLET_DIR: /wallet
+      ADB_CONNECTION_STRING: ${DBCONNECTION:-}
+      ADB_ADMIN_PASSWORD: ${DBPASSWORD:-}
+      ADB_STREAM_SCHEMA_USER: ${ADB_STREAM_SCHEMA_USER:-PG}
+      ADB_STREAM_SCHEMA_PASSWORD: ${DBPASSWORD:-}
+      ADB_WALLET_PASSWORD: ${ADB_WALLET_PASSWORD:-}
+      ADB_SERVICE_NAME: ${SERVICE_NAME:-}
+      ADB_DB_ACTIONS_URL: ${ORDSURL:-}
+      OSA_API_BASE_URL: ${OSA_API_BASE_URL:-}
+      OSA_PUBLIC_URL: ${OSA_PUBLIC_URL:-}
+      GGSA_OSA_HTTPS_PORT: ${GGSA_OSA_HTTPS_PORT:-8085}
+      OSA_ADMIN_USER: osaadmin
+      OSA_ADMIN_PASSWORD: ${PASSWORD:-oracle}
+      OSA_SETUP_TIMEOUT_MS: ${OSA_SETUP_TIMEOUT_MS:-120000}
+      OSA_ADB_CONNECTION_NAME: ${OSA_ADB_CONNECTION_NAME:-PeakGear_ADB}
+      OSA_AUTO_STREAMING_PIPELINE: ${OSA_AUTO_STREAMING_PIPELINE:-true}
+      OSA_KAFKA_CONNECTION_NAME: ${OSA_KAFKA_CONNECTION_NAME:-PeakGear_Kafka}
+      OSA_STREAMING_SOURCE_NAME: ${OSA_STREAMING_SOURCE_NAME:-PeakGear_Demand_Signal_Stream}
+      OSA_STREAMING_TARGET_NAME: ${OSA_STREAMING_TARGET_NAME:-PeakGear_Bronze_Demand_Signals}
+      OSA_STREAMING_PIPELINE_NAME: ${OSA_STREAMING_PIPELINE_NAME:-PeakGear_Realtime_Demand_Pipeline}
+      SIGNAL_GENERATOR_URL: ${SIGNAL_GENERATOR_URL:-http://ggsa:18088}
+      SIGNAL_KAFKA_TOPIC: ${SIGNAL_KAFKA_TOPIC:-peakgear.demand.signals.raw}
+      OSA_KAFKA_BOOTSTRAP: ${OSA_KAFKA_BOOTSTRAP:-localhost:19092}
+      CUSTOMER_CDC_AUTO_SETUP: ${CUSTOMER_CDC_AUTO_SETUP:-true}
+      CUSTOMER_CDC_RESET_ON_STARTUP: ${CUSTOMER_CDC_RESET_ON_STARTUP:-true}
+      CUSTOMER_CDC_DEMO_APPLY: ${CUSTOMER_CDC_DEMO_APPLY:-false}
+      NETSUITE_DB_CONNECT_STRING: ${NETSUITE_DB_CONNECT_STRING:-netsuite-db:1521/FREEPDB1}
+      NETSUITE_DB_HOST_PORT: ${NETSUITE_DB_PORT:-1522}
+      NETSUITE_DB_USER: ${NETSUITE_DB_USER:-NETSUITE}
+      NETSUITE_DB_PASSWORD: ${DBPASSWORD:-peakgear}
+      GOLDENGATE_BASE_URL: ${GOLDENGATE_BASE_URL:-https://goldengate-cdc:8443}
+      GOLDENGATE_PUBLIC_URL: ${GOLDENGATE_PUBLIC_URL:-https://localhost:8501}
+      GOLDENGATE_STUDIO_API_BASE: ${GOLDENGATE_STUDIO_API_BASE:-/01012025/v2}
+      GOLDENGATE_STUDIO_ADMIN_USER: ${GOLDENGATE_STUDIO_ADMIN_USER:-studioadmin}
+      GOLDENGATE_STUDIO_ADMIN_PASSWORD: ${DBPASSWORD:-peakgear}
+      GOLDENGATE_ADMIN_USER: ${GOLDENGATE_ADMIN_USER:-studioadmin}
+      GOLDENGATE_ADMIN_PASSWORD: ${DBPASSWORD:-peakgear}
+      GOLDENGATE_DEPLOYMENT: ${GOLDENGATE_DEPLOYMENT:-PeakGearCDC}
+      GOLDENGATE_EXTRACT_NAME: ${GOLDENGATE_EXTRACT_NAME:-ENSCDC}
+      GOLDENGATE_REPLICAT_NAME: ${GOLDENGATE_REPLICAT_NAME:-RNSCDC}
+      GOLDENGATE_SOURCE_USER: ${GOLDENGATE_SOURCE_USER:-GGADMIN}
+      GOLDENGATE_SOURCE_PASSWORD: ${DBPASSWORD:-peakgear}
+      GOLDENGATE_TARGET_SCHEMA: ${GOLDENGATE_TARGET_SCHEMA:-PG}
+      GOLDENGATE_TARGET_PASSWORD: ${DBPASSWORD:-peakgear}
+      GOLDENGATE_RUNTIME_BASE_URL: ${GOLDENGATE_RUNTIME_BASE_URL:-http://goldengate-runtime}
+      GOLDENGATE_RUNTIME_HOST: ${GOLDENGATE_RUNTIME_HOST:-goldengate-runtime}
+      GOLDENGATE_RUNTIME_PORT: ${GOLDENGATE_RUNTIME_PORT:-8080}
+      GOLDENGATE_STUDIO_SOURCE_CONNECTION: ${GOLDENGATE_STUDIO_SOURCE_CONNECTION:-PeakGear_NetSuite_Source}
+      GOLDENGATE_STUDIO_TARGET_CONNECTION: ${GOLDENGATE_STUDIO_TARGET_CONNECTION:-PeakGear_ADB_Target}
+      GOLDENGATE_STUDIO_DEPLOYMENT_CONNECTION: ${GOLDENGATE_STUDIO_DEPLOYMENT_CONNECTION:-PeakGear_GoldenGate_Runtime}
+      GOLDENGATE_STUDIO_PIPELINE_NAME: ${GOLDENGATE_STUDIO_PIPELINE_NAME:-PeakGear_NetSuite_Customers_CDC}
+      ADB_STUDIO_WALLET_ZIP: /wallet/goldengate-studio-wallet.zip
+      OLLAMA_BASE_URL: http://ollama:11434
+      OLLAMA_MODEL_PRIMARY: ${OLLAMA_MODEL_PRIMARY:-llama3.2}
+      PRIVATEAI_BASE_URL: ${PRIVATEAI_BASE_URL:-http://privateai:8080}
+      PRODUCT_IMAGE_ROOT: /workspace/app/images
+      WEBSHOP_IMAGE_INDEX_WARMUP: ${WEBSHOP_IMAGE_INDEX_WARMUP:-true}
+      WEBSHOP_IMAGE_INDEX_WARMUP_DELAY_MS: ${WEBSHOP_IMAGE_INDEX_WARMUP_DELAY_MS:-5000}
+      WEBSHOP_IMAGE_INDEX_WARMUP_RETRIES: ${WEBSHOP_IMAGE_INDEX_WARMUP_RETRIES:-12}
+      WEBSHOP_IMAGE_INDEX_WARMUP_RETRY_DELAY_MS: ${WEBSHOP_IMAGE_INDEX_WARMUP_RETRY_DELAY_MS:-15000}
+      WEBSHOP_UPLOAD_PAR_URL: ${WEBSHOP_UPLOAD_PAR_URL:-}
+      WEBSHOP_UPLOAD_OBJECT_PREFIX: ${WEBSHOP_UPLOAD_OBJECT_PREFIX:-webshop-uploads}
+      PG_AI_PROFILE_AUTO_SETUP: ${PG_AI_PROFILE_AUTO_SETUP:-true}
+      OCI_AUTH_TYPE: ${OCI_AUTH_TYPE:-api_key}
+      OCI_GENAI_MODEL: ${OCI_GENAI_MODEL:-cohere.command-a-03-2025}
+      OCI_GENAI_EMBEDDING_MODEL: ${OCI_GENAI_EMBEDDING_MODEL:-cohere.embed-v4.0}
+      OCI_AI_PROFILE_NAME: ${OCI_AI_PROFILE_NAME:-PG_GENAI_PROFILE}
+      WEBSHOP_RETURN_AGENT_PROFILE_NAME: ${WEBSHOP_RETURN_AGENT_PROFILE_NAME:-PG_RETURN_AGENT_PROFILE}
+      WEBSHOP_RETURN_AGENT_TEAM_NAME: ${WEBSHOP_RETURN_AGENT_TEAM_NAME:-RETURN_ADVISOR_TEAM}
+      OCI_GENAI_CREDENTIAL_NAME: ${OCI_GENAI_CREDENTIAL_NAME:-PG_OCI_GENAI_CRED}
+      OCI_REGION: ${OCI_REGION:-}
+      OCI_COMPARTMENT_ID: ${OCI_COMPARTMENT_ID:-}
+      OCI_USER_OCID: ${OCI_USER_OCID:-}
+      OCI_TENANCY_OCID: ${OCI_TENANCY_OCID:-}
+      OCI_FINGERPRINT: ${OCI_FINGERPRINT:-}
+      OCI_PRIVATE_KEY: ${OCI_PRIVATE_KEY:-}
+      AI_ENDPOINT_REGION: ${AI_ENDPOINT_REGION:-}
+      COMPARTMENT_OCID: ${COMPARTMENT_OCID:-}
+      USER_OCID: ${USER_OCID:-}
+      TENANCY_OCID: ${TENANCY_OCID:-}
+      PEM_KEY_FINGERPRINT: ${PEM_KEY_FINGERPRINT:-}
+      PEM_SINGLE_LINE: ${PEM_SINGLE_LINE:-}
+    command:
+      - bash
+      - -lc
+      - |
+        set -euo pipefail
+        [ -d node_modules/oracledb ] || npm ci --include=dev
+        [ -x frontend/node_modules/.bin/vite ] || (cd frontend && npm ci --include=dev)
+        (cd frontend && npm run build)
+        npm start
+    ports:
+      - 8505:3001
+    depends_on:
+      db:
+        condition: service_healthy
+      ords:
+        condition: service_healthy
+      ollama:
+        condition: service_healthy
+      privateai:
+        condition: service_healthy
+      netsuite-db:
+        condition: service_healthy
+      goldengate-cdc:
+        condition: service_started
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "node -e \"require('http').get('http://127.0.0.1:3001/api/health', (res) => process.exit(res.statusCode === 200 ? 0 : 1)).on('error', () => process.exit(1))\""
+        ]
+      interval: 15s
+      timeout: 5s
+      retries: 15
+      start_period: 180s
+    restart: unless-stopped

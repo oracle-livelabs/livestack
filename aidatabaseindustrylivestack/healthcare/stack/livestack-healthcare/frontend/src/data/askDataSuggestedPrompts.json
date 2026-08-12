@@ -1,0 +1,34 @@
+[
+  {
+    "category": "Demand Risk",
+    "text": "Which care services are predicted to have the highest demand risk this week?"
+  },
+  {
+    "category": "Quality Signals",
+    "text": "Which quality and capacity signals have the highest network impact and escalation count?"
+  },
+  {
+    "category": "Logistics",
+    "text": "Which logistics sites have available capacity for urgent care service requests?"
+  },
+  {
+    "category": "Operations",
+    "text": "Show service value exposure by care category."
+  },
+  {
+    "category": "Service Requests",
+    "text": "Which care service requests were triggered by quality or capacity signals?"
+  },
+  {
+    "category": "Care Sites",
+    "text": "Which care sites have the highest request volume and capacity pressure?"
+  },
+  {
+    "category": "Signal Trends",
+    "text": "What are the top signal trends by source type, network impact, and escalation count?"
+  },
+  {
+    "category": "Care Pathways",
+    "text": "Which care pathway cases have the highest readmission or care-gap risk?"
+  }
+]

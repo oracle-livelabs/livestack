@@ -1,0 +1,73 @@
+:root, .oj-scale-dependent, :root.oj-scale-sm, :root.oj-scale-md {
+  --oj-c-button-label-layout-icon-size: ;
+  --oj-c-button-label-layout-sizes-xs-icon-size: max(calc(5 * var(--oj-c-size-units, 0.25rem)), 20px);
+  --oj-c-button-label-layout-sizes-sm-icon-size: calc(5 * var(--oj-c-size-units, 0.25rem));
+  --oj-c-button-label-layout-sizes-md-icon-size: calc(6 * var(--oj-c-size-units, 0.25rem));
+  --oj-c-button-label-layout-sizes-lg-icon-size: calc(6 * var(--oj-c-size-units, 0.25rem));
+  --oj-c-button-label-layout-sizes-embeddedxs-icon-size: max(calc(5 * var(--oj-c-size-units, 0.25rem)), 20px);
+  --oj-c-button-label-layout-sizes-embeddedsm-icon-size: calc(5 * var(--oj-c-size-units, 0.25rem));
+  --oj-c-button-label-layout-sizes-embeddedmd-icon-size: calc(6 * var(--oj-c-size-units, 0.25rem));
+  --oj-c-button-label-layout-sizes-embeddedlg-icon-size: calc(6 * var(--oj-c-size-units, 0.25rem));
+}
+.oj-scale-sm, :root.oj-scale-sm {
+  --oj-c-button-label-layout-icon-size: ;
+  --oj-c-button-label-layout-sizes-xs-icon-size: max(calc(5 * var(--oj-c-size-units, 0.25rem)), 20px);
+  --oj-c-button-label-layout-sizes-sm-icon-size: calc(5 * var(--oj-c-size-units, 0.25rem));
+  --oj-c-button-label-layout-sizes-md-icon-size: calc(5.333 * var(--oj-c-size-units, 0.25rem));
+  --oj-c-button-label-layout-sizes-lg-icon-size: calc(5.333 * var(--oj-c-size-units, 0.25rem));
+  --oj-c-button-label-layout-sizes-embeddedxs-icon-size: max(calc(5 * var(--oj-c-size-units, 0.25rem)), 20px);
+  --oj-c-button-label-layout-sizes-embeddedsm-icon-size: calc(5 * var(--oj-c-size-units, 0.25rem));
+  --oj-c-button-label-layout-sizes-embeddedmd-icon-size: calc(5.333 * var(--oj-c-size-units, 0.25rem));
+  --oj-c-button-label-layout-sizes-embeddedlg-icon-size: calc(5.333 * var(--oj-c-size-units, 0.25rem));
+}
+.oj-scale-md, :root.oj-scale-md {
+  --oj-c-button-label-layout-icon-size: ;
+  --oj-c-button-label-layout-sizes-xs-icon-size: max(calc(5 * var(--oj-c-size-units, 0.25rem)), 20px);
+  --oj-c-button-label-layout-sizes-sm-icon-size: calc(5 * var(--oj-c-size-units, 0.25rem));
+  --oj-c-button-label-layout-sizes-md-icon-size: calc(5.714 * var(--oj-c-size-units, 0.25rem));
+  --oj-c-button-label-layout-sizes-lg-icon-size: calc(5.714 * var(--oj-c-size-units, 0.25rem));
+  --oj-c-button-label-layout-sizes-embeddedxs-icon-size: max(calc(5 * var(--oj-c-size-units, 0.25rem)), 20px);
+  --oj-c-button-label-layout-sizes-embeddedsm-icon-size: calc(5 * var(--oj-c-size-units, 0.25rem));
+  --oj-c-button-label-layout-sizes-embeddedmd-icon-size: calc(5.714 * var(--oj-c-size-units, 0.25rem));
+  --oj-c-button-label-layout-sizes-embeddedlg-icon-size: calc(5.714 * var(--oj-c-size-units, 0.25rem));
+}
+.oj-scale-lg {
+  --oj-c-button-label-layout-icon-size: ;
+  --oj-c-button-label-layout-sizes-xs-icon-size: max(calc(5 * var(--oj-c-size-units, 0.25rem)), 20px);
+  --oj-c-button-label-layout-sizes-sm-icon-size: calc(5 * var(--oj-c-size-units, 0.25rem));
+  --oj-c-button-label-layout-sizes-md-icon-size: calc(6 * var(--oj-c-size-units, 0.25rem));
+  --oj-c-button-label-layout-sizes-lg-icon-size: calc(6 * var(--oj-c-size-units, 0.25rem));
+  --oj-c-button-label-layout-sizes-embeddedxs-icon-size: max(calc(5 * var(--oj-c-size-units, 0.25rem)), 20px);
+  --oj-c-button-label-layout-sizes-embeddedsm-icon-size: calc(5 * var(--oj-c-size-units, 0.25rem));
+  --oj-c-button-label-layout-sizes-embeddedmd-icon-size: calc(6 * var(--oj-c-size-units, 0.25rem));
+  --oj-c-button-label-layout-sizes-embeddedlg-icon-size: calc(6 * var(--oj-c-size-units, 0.25rem));
+}
+.ButtonLabelLayoutBaseTheme_baseTheme__1wxhc8g0 {
+  --textToEdgePadding__1onk43q2: ;
+  --iconToTextPadding__1onk43q1: ;
+  --iconToEdgePadding__1onk43q0: ;
+  --sizes-xs-iconToTextPadding__1onk43q4: max(calc(2 * var(--oj-c-size-units, 0.25rem)), 8px);
+  --sizes-xs-iconToEdgePadding__1onk43q3: max(calc(2 * var(--oj-c-size-units, 0.25rem)), 8px);
+  --sizes-xs-textToEdgePadding__1onk43q5: max(calc(4 * var(--oj-c-size-units, 0.25rem)), 16px);
+  --sizes-sm-iconToTextPadding__1onk43q6: calc(2 * var(--oj-c-size-units, 0.25rem));
+  --sizes-sm-iconToEdgePadding__1onk43q7: calc(2 * var(--oj-c-size-units, 0.25rem));
+  --sizes-sm-textToEdgePadding__1onk43q8: calc(4 * var(--oj-c-size-units, 0.25rem));
+  --sizes-md-iconToTextPadding__1onk43qa: calc(2.5 * var(--oj-c-size-units, 0.25rem));
+  --sizes-md-iconToEdgePadding__1onk43q9: calc(2.5 * var(--oj-c-size-units, 0.25rem));
+  --sizes-md-textToEdgePadding__1onk43qb: calc(4 * var(--oj-c-size-units, 0.25rem));
+  --sizes-lg-iconToTextPadding__1onk43qd: calc(4 * var(--oj-c-size-units, 0.25rem));
+  --sizes-lg-iconToEdgePadding__1onk43qc: calc(4 * var(--oj-c-size-units, 0.25rem));
+  --sizes-lg-textToEdgePadding__1onk43qe: calc(4 * var(--oj-c-size-units, 0.25rem));
+  --sizes-embeddedxs-iconToTextPadding__1onk43qg: max(calc(2 * var(--oj-c-size-units, 0.25rem)), 8px);
+  --sizes-embeddedxs-iconToEdgePadding__1onk43qf: max(calc(2 * var(--oj-c-size-units, 0.25rem)), 8px);
+  --sizes-embeddedxs-textToEdgePadding__1onk43qh: max(calc(4 * var(--oj-c-size-units, 0.25rem)), 16px);
+  --sizes-embeddedsm-iconToTextPadding__1onk43qi: calc(2 * var(--oj-c-size-units, 0.25rem));
+  --sizes-embeddedsm-iconToEdgePadding__1onk43qj: calc(1.875 * var(--oj-c-size-units, 0.25rem));
+  --sizes-embeddedsm-textToEdgePadding__1onk43qk: calc(4 * var(--oj-c-size-units, 0.25rem));
+  --sizes-embeddedmd-iconToTextPadding__1onk43qm: calc(2.5 * var(--oj-c-size-units, 0.25rem));
+  --sizes-embeddedmd-iconToEdgePadding__1onk43ql: calc(2.375 * var(--oj-c-size-units, 0.25rem));
+  --sizes-embeddedmd-textToEdgePadding__1onk43qn: calc(4 * var(--oj-c-size-units, 0.25rem));
+  --sizes-embeddedlg-iconToTextPadding__1onk43qp: calc(4 * var(--oj-c-size-units, 0.25rem));
+  --sizes-embeddedlg-iconToEdgePadding__1onk43qo: calc(3.375 * var(--oj-c-size-units, 0.25rem));
+  --sizes-embeddedlg-textToEdgePadding__1onk43qq: calc(4 * var(--oj-c-size-units, 0.25rem));
+}

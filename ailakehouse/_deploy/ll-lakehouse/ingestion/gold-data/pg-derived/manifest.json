@@ -1,0 +1,42 @@
+{
+  "generated_at_utc": "2026-05-07T11:09:31.483320+00:00",
+  "source_files": [
+    "DIM_PRODUCT.csv",
+    "DIM_CUSTOMER.csv",
+    "DIM_STORE.csv",
+    "STORE_ADDRESS.csv",
+    "STORE_GEOCODE.csv",
+    "FACT_SALES.csv",
+    "FACT_INVENTORY_MOVEMENT.csv",
+    "DIM_VENDOR.csv",
+    "PRODUCT_VECTOR_STORE.csv",
+    "RETURNS_AUDIT_BY_STORE.csv"
+  ],
+  "derived_counts": {
+    "brands": 9,
+    "products": 650,
+    "centers": 50,
+    "customers": 5952,
+    "orders": 5000,
+    "order_items": 8500,
+    "inventory": 6000,
+    "influencers": 30,
+    "social_posts": 420,
+    "mentions": 420,
+    "forecasts": 320,
+    "regions": 10,
+    "shipments": 1600,
+    "connections": 30,
+    "brand_links": 9,
+    "return_entities": 194,
+    "return_relationships": 236,
+    "return_cases": 11,
+    "return_case_entities": 320
+  },
+  "sql_outputs": [
+    "pg-stack/db/data/load_all_data.sql",
+    "pg-stack/db/data/load_gold_seed.sql",
+    "pg-stack/db/data/load_fraud_graph.sql",
+    "pg-stack/db/data/seed_fulfillment_zones.sql"
+  ]
+}

@@ -212,7 +212,7 @@ function LayerToggle({ label, active, color, onChange }) {
 }
 
 // ── Map View ──────────────────────────────────────────────────────────────────
-function FulfillmentMapView({ centers, shipments, customers, zonesData, demandRegions, layers, setLayer, onPlantSelect }) {
+function FulfillmentMapView({ centers, shipments, customers, zonesData, demandRegions, spatialEvidence, layers, setLayer, onPlantSelect }) {
   // H3 hexagonal density bins from customer lat/lng at resolution 4
   const h3Cells = useMemo(() => {
     if (!customers?.length) return [];
@@ -559,6 +559,10 @@ function FulfillmentMapView({ centers, shipments, customers, zonesData, demandRe
       {/* ── Spatial Attribution (top-right) ── */}
       <div className="absolute top-4 right-4 z-[1000] text-[10px] bg-[var(--color-surface)]/90 px-3 py-2 rounded-lg border border-[var(--color-border)] pointer-events-none space-y-0.5 text-right">
         <div><span className="tone-teal">SDO_GEOMETRY</span> production routing</div>
+        <div style={{ color: spatialEvidence?.status === 'ACTIVE' ? '#4C825C' : '#AA643B' }}>
+          Nearest routing: {spatialEvidence?.status || 'checking'}
+          {spatialEvidence?.index_name ? ` · ${spatialEvidence.index_name}` : ''}
+        </div>
         {layers.h3 && (
           <div><span className="tone-sienna">H3 res-4</span> · {h3Cells.length} hexagons · {customers?.length ?? 0} customer accounts</div>
         )}
@@ -598,6 +602,7 @@ export default function FulfillmentMap() {
   const { data: customers }     = useData(() => api.fulfillment.customers(), [userKey]);
   const { data: zonesData }     = useData(() => api.fulfillment.zones(), [userKey]);
   const { data: demandRegions } = useData(() => api.fulfillment.demandRegions(), [userKey]);
+  const { data: spatialEvidence } = useData(() => api.fulfillment.spatialReadiness(), [userKey]);
   const {
     data: selectedPlantDocument,
     loading: loadingPlantDocument,
@@ -627,8 +632,10 @@ export default function FulfillmentMap() {
             <p className="text-[var(--color-text)] leading-relaxed">
               Every plant capacity center, maintenance window, customer-account commitment, and capacity planning region is stored as an{' '}
               <span className="tone-pine font-mono">SDO_GEOMETRY</span> point or polygon.
-              Oracle Spatial's <span className="tone-pine font-mono">SDO_GEOM.SDO_DISTANCE()</span> ranks
-              all production lines by proximity and available line capacity in a single SQL - no external routing API.
+              Oracle Spatial's <span className="tone-pine font-mono">SDO_NN()</span> uses the
+              <span className="tone-teal font-mono"> IDX_FC_SPATIAL</span> R-tree to produce nearby candidates;
+              <span className="tone-pine font-mono"> SDO_GEOM.SDO_DISTANCE()</span> then measures and ranks
+              the eligible production lines exactly - no external routing API.
               Maintenance and recovery windows use <span className="tone-sienna font-mono">SDO_BUFFER</span> circular polygons.
               Demand regions are Oracle <span className="tone-sienna font-mono">SDO_GEOMETRY</span> polygon boundaries
               converted to GeoJSON via <span className="tone-sienna font-mono">SDO_UTIL.TO_GEOJSON()</span> and
@@ -646,26 +653,42 @@ export default function FulfillmentMap() {
             <FeatureBadge label="Spatial Index (R-Tree)" color="blue" />
             <FeatureBadge label="WGS-84 Geodetic" color="cyan" />
             <FeatureBadge label="SDO_NN (Nearest Neighbor)" color="orange" />
+            <FeatureBadge
+              label={`Live DBMS_XPLAN: ${spatialEvidence?.status || 'checking'}`}
+              color={spatialEvidence?.status === 'ACTIVE' ? 'cyan' : 'yellow'}
+            />
             <FeatureBadge label="H3 Hexagonal Grid" color="orange" />
             <FeatureBadge label="SDO_UTIL.TO_GEOJSON" color="orange" />
             <FeatureBadge label="demand_regions" color="red" />
             <FeatureBadge label="manufacturing_demand_forecasts" color="red" />
             <FeatureBadge label="line capacity" color="purple" />
           </div>
-          <SqlBlock code={`-- Nearest production line with available capacity
-SELECT fc.center_name, fc.city,
-       ROUND(SDO_GEOM.SDO_DISTANCE(
-         c.location, fc.location, 0.005, 'unit=KM'), 2) AS dist_km,
-       i.quantity_on_hand
-FROM   customers c
-CROSS  JOIN fulfillment_centers fc
-JOIN   inventory i
-          ON  i.center_id  = fc.center_id
-          AND i.product_id = :product_id
-WHERE  c.customer_id = :customer_id
-  AND  fc.is_active  = 1
-  AND  i.quantity_on_hand > i.quantity_reserved
-ORDER  BY dist_km
+          <SqlBlock code={`-- Stage 1: R-tree indexed candidate selection
+WITH origin AS (
+  SELECT location FROM customers
+  WHERE customer_id = :customer_id
+), indexed_candidates AS (
+  SELECT /*+ LEADING(origin) USE_NL(fc) INDEX(fc idx_fc_spatial) */
+         fc.*, origin.location AS origin_location
+  FROM origin
+  JOIN fulfillment_centers fc
+    ON SDO_NN(fc.location, origin.location,
+         'sdo_batch_size=50 unit=KM') = 'TRUE'
+  WHERE fc.is_active = 1
+), measured_candidates AS (
+  -- Stage 2: capacity filter plus exact geodetic measurement
+  SELECT fc.center_id, fc.center_name, i.quantity_on_hand,
+         ROUND(SDO_GEOM.SDO_DISTANCE(
+           fc.origin_location, fc.location,
+           0.005, 'unit=KM'), 2) AS dist_km
+  FROM indexed_candidates fc
+  JOIN inventory i ON i.center_id = fc.center_id
+  WHERE i.product_id = :product_id
+    AND i.quantity_on_hand > i.quantity_reserved
+)
+SELECT center_name, quantity_on_hand, dist_km
+FROM measured_candidates
+ORDER BY dist_km, center_id
 FETCH FIRST 3 ROWS ONLY;`} />
           <SqlBlock code={`-- Demand regions: Oracle SDO_GEOMETRY → GeoJSON
 -- SDO_UTIL.TO_GEOJSON converts polygon boundary for frontend rendering
@@ -740,7 +763,9 @@ END;
           <div>
             <p className="text-[10px] font-semibold text-[var(--color-text-dim)] uppercase tracking-wider mb-2">Spatial Layer Architecture</p>
             <div className="space-y-1">
-              <DiagramBox label="Production Lines" sub="SDO_GEOMETRY points · R-Tree index · OEE load" color="#437C94" />
+              <DiagramBox label="Indexed Candidates" sub="SDO_NN · IDX_FC_SPATIAL R-tree · VPD-aware" color="#437C94" />
+              <div className="text-center text-[var(--color-text-dim)] text-[9px]">↓</div>
+              <DiagramBox label="Exact Route Ranking" sub="SDO_GEOM.SDO_DISTANCE · capacity filter · deterministic order" color="#4C825C" />
               <div className="text-center text-[var(--color-text-dim)] text-[9px]">↓</div>
               <DiagramBox label="Maintenance Windows" sub="SDO_BUFFER circular polygons · 3 recovery tiers" color="#AA643B" />
               <div className="text-center text-[var(--color-text-dim)] text-[9px]">↓</div>
@@ -752,8 +777,14 @@ END;
             </div>
             <div className="rounded-lg p-2 text-center mt-2" style={{ background: 'rgba(76,130,92,0.06)', border: '1px dashed rgba(76,130,92,0.25)' }}>
               <p className="text-[9px] text-[var(--color-text)]">
-                Geometry stored in Oracle · indexed proximity queries use the deployed Spatial objects
+                Live evidence: {spatialEvidence?.index_name || 'IDX_FC_SPATIAL'} · DBMS_XPLAN {spatialEvidence?.status || 'checking'}
+                {spatialEvidence?.plan_sql_id ? ` · SQL_ID ${spatialEvidence.plan_sql_id}` : ''}
               </p>
+              {spatialEvidence?.plan_evidence && (
+                <p className="text-[9px] font-mono text-[var(--color-text-dim)] mt-1 break-words">
+                  {spatialEvidence.plan_operator || 'Plan operator'}: {spatialEvidence.plan_evidence}
+                </p>
+              )}
             </div>
           </div>
         </div>
@@ -851,6 +882,7 @@ END;
         customers={customers}
         zonesData={zonesData}
         demandRegions={demandRegions}
+        spatialEvidence={spatialEvidence}
         layers={layers}
         setLayer={setLayer}
         onPlantSelect={setSelectedPlantId}

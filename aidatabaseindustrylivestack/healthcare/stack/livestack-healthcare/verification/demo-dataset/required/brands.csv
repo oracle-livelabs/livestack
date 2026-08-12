@@ -1,0 +1,51 @@
+brand_id,brand_name,brand_slug,brand_category,headquarters_city,headquarters_lat,headquarters_lon,founded_year,annual_revenue,social_tier,created_at,updated_at
+1,NorthStar Health System,vitacore,Specialty Care Manufacturing,Boston,42.3601,-71.0589,1998,245000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+2,CarePath Clinics,solvanta,Care Operations,Research Triangle Park,35.9049,-78.8640,2004,186000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+3,BioPure Diagnostics,biopure,Diagnostics,Chicago,41.8781,-87.6298,1987,132000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+4,Regional Oncology Network,genenova,Specialty Care,Cambridge,42.3736,-71.1097,1992,221000000,luxury,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+5,Immunology Care Alliance,immunoworks,Specialty Care,South San Francisco,37.6547,-122.4077,2001,98000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+6,Community Health Partners,preclinix,Population Health Research,San Diego,32.7157,-117.1611,1979,154000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+7,MedMove Logistics,cryograde,Care Logistics Logistics,Memphis,35.1495,-90.0490,2016,91000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+8,QualityBridge Advisory,safegxp,Quality and Compliance Services,Rockville,39.0840,-77.1528,2011,43000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+9,Central Sterile Services,sterileprocess,Bioprocess Consumables,Cleveland,41.4993,-81.6944,1968,275000000,luxury,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+10,GreenCare Supplies,greenlab,Sustainable Lab Supplies,Portland,45.5152,-122.6784,2018,39000000,emerging,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+11,MedDevice Services,medpack,Device Packaging,Charlotte,35.2271,-80.8431,2007,76000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+12,CareFlow Analytics,catalysthub,Operations Analytics,Tulsa,36.1540,-95.9928,1996,117000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+13,Northern BioReagents,northernreagents,Lab Reagents,Minneapolis,44.9778,-93.2650,2005,52000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+14,Gulf Vaccine Bed Management,gulfvaccine,Vaccine Manufacturing,Baton Rouge,30.4515,-91.1871,1974,203000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+15,Midwest Care Supply,midwesttrial,Healthcare Operations Supply,Indianapolis,39.7684,-86.1581,1989,88000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+16,Pacific BioServices,pacificbio,CDMO Services,Los Angeles,34.0522,-118.2437,1994,143000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+17,PurityLabs IVD,puritylabs,Diagnostics,San Jose,37.3382,-121.8863,2012,69000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+18,CryoRoute Logistics,cryoroute,Care Logistics Logistics,Memphis,35.1495,-90.0490,2009,58000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+19,WaterWorks BioUtilities,waterworkslab,GMP Utilities,Milwaukee,43.0389,-87.9065,2003,74000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+20,BioBuffer,biobuffer,Pharmacy Supply,San Diego,32.7157,-117.1611,2015,46000000,emerging,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+21,ElectrolyteWorks Clinical,electrolyteworks,Diagnostic Reagents,Phoenix,33.4484,-112.0740,2019,34000000,emerging,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+22,RecyBio Labs,recybio,Circular Lab Supplies,Seattle,47.6062,-122.3321,2021,21000000,emerging,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+23,GxPDesk,gxpdesk,Regulatory Content,Denver,39.7392,-104.9903,2014,18000000,emerging,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+24,PharmaPrep,pharmaprep,Pharmacy Supply,Philadelphia,39.9526,-75.1652,1999,112000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+25,CleanSuite Healthcare,cleansuite,Cleanroom Services,Cincinnati,39.1031,-84.5120,2008,65000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+26,FormulationBridge,formulationbridge,Drug Product Formulation,Atlanta,33.7490,-84.3880,1991,126000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+27,SpecimenShield,specimenshield,Specimen Logistics,Dallas,32.7767,-96.7970,2013,47000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+28,FineBio Direct,finebiodirect,Specialty Specialty Care,Raleigh,35.7796,-78.6382,2006,82000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+29,PortBio Supply,portbio,Global API Import,Savannah,32.0809,-81.0912,1985,157000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+30,Peptide Partners,peptidepartners,API Intermediates,Kansas City,39.0997,-94.5786,1997,93000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+31,PurePAC Clinical,purepac,Clinical Packaging,St. Louis,38.6270,-90.1994,1982,138000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+32,SiliconeWorks Medical,siliconeworks,Device Components,Akron,41.0814,-81.5190,2002,71000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+33,EndoClear BioProcess,endoclear,Bioprocess Filtration,Pittsburgh,40.4406,-79.9959,1978,99000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+34,SterilityGuard,sterilityguard,Sterility Assurance,Tampa,27.9506,-82.4572,1995,61000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+35,Readmission ReviewCo,stabilityco,Readmission Review Excipients,Baltimore,39.2904,-76.6122,2000,55000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+36,AseptiCoast,asepticoast,Aseptic Processing,Wilmington,34.2257,-77.9447,1993,104000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+37,CitrateSource Pharma,citricsource,Pharmacy Supply,Nashville,36.1627,-86.7816,2006,57000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+38,WFI Direct,wfidirect,Sterile Excipients,San Antonio,29.4241,-98.4936,1990,118000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+39,AdhesiveOne Medical,adhesiveone,Device Components,Louisville,38.2527,-85.7585,2004,67000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+40,MedPropel Devices,medpropel,Medical Device Materials,Omaha,41.2565,-95.9345,1988,149000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+41,CleanSteamCare,cleansteamcare,GMP Utilities,New Orleans,29.9511,-90.0715,2001,59000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+42,VaccineWatch,vaccinewatch,Vaccine Safety Intelligence,Austin,30.2672,-97.7431,2020,26000000,emerging,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+43,CMS Watch,fdawatch,Regulatory Intelligence,Washington,38.9072,-77.0369,2017,31000000,emerging,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+44,Joint Commission Updates,emaupdates,Regulatory Intelligence,Washington,38.9072,-77.0369,2010,44000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+45,SupplyDisruption Signals,portsupply,Import and Port Signals,Long Beach,33.7701,-118.1937,2018,29000000,emerging,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+46,PatientFlowOps,coldchainops,Care Logistics Operations,Las Vegas,36.1699,-115.1398,2012,51000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+47,CarePathway Desk,protocoldesk,Clinical Protocol Signals,Cleveland,41.4993,-81.6944,2016,37000000,emerging,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+48,LabGrade Connect,labgradeconnect,Lab Reagents,Salt Lake City,40.7608,-111.8910,2009,48000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+49,SpecBio Exchange,specbioexchange,Specialty Specialty Care Distribution,Miami,25.7617,-80.1918,2015,63000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+50,NorthStar GlycoSpecialty Care,northstarglyco,Glycobiology Materials,Fargo,46.8772,-96.7898,2008,54000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z

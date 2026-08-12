@@ -1,0 +1,10 @@
+brand_id,brand_name,brand_slug,brand_category,headquarters_city,headquarters_lat,headquarters_lon,founded_year,annual_revenue,social_tier
+1,Velocityworks,velocityworks,Gold Product Line,Denver,39.7392,-104.9903,1986,26750000,premium
+2,Trailforge,trailforge,Gold Product Line,Seattle,47.6062,-122.3321,1987,28500000,emerging
+3,Hydrawave,hydrawave,Gold Product Line,Austin,30.2672,-97.7431,1988,30250000,luxury
+4,Ironkinetic,ironkinetic,Gold Product Line,Chicago,41.8781,-87.6298,1989,32000000,standard
+5,Canyonridge,canyonridge,Gold Product Line,Portland,45.5152,-122.6784,1990,33750000,premium
+6,Summitpulse,summitpulse,Gold Product Line,Atlanta,33.749,-84.388,1991,35500000,emerging
+7,Peakgear,peakgear,Gold Product Line,Denver,39.7392,-104.9903,1992,37250000,luxury
+8,Nordcrest,nordcrest,Gold Product Line,Seattle,47.6062,-122.3321,1993,39000000,standard
+9,Aerostride,aerostride,Gold Product Line,Austin,30.2672,-97.7431,1994,40750000,premium

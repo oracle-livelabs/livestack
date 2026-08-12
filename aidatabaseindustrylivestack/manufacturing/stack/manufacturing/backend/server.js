@@ -25,7 +25,13 @@ const PORT = process.env.PORT || 3001;
 app.set('etag', false);
 
 // ── Middleware ──────────────────────────────────────────────
-app.use(helmet({ contentSecurityPolicy: false }));
+app.use(helmet({
+  contentSecurityPolicy: false,
+  // The standalone LiveStack is served over plain HTTP. Chromium ignores
+  // COOP on non-trustworthy origins and reports a console error on every
+  // navigation, so do not emit a header the browser cannot enforce.
+  crossOriginOpenerPolicy: false,
+}));
 app.use(cors({
   origin: process.env.NODE_ENV === 'production'
     ? process.env.FRONTEND_URL

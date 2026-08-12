@@ -1,0 +1,59 @@
+{
+  "name": "sled-service-operations-demo",
+  "version": "1.0.0",
+  "description": "State and Local Government Service Operations & Smart Access - Oracle 26ai Converged Database Demo",
+  "main": "backend/server.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "nodemon backend/server.js",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "verify:brand-colors": "node verification/check-brand-colors.js",
+    "verify:contrast": "node verification/check-contrast.js",
+    "verify:focus-semantics": "node verification/check-focus-semantics.js",
+    "verify:sled-domain-parity": "node verification/check-sled-domain-parity.js",
+    "verify:sled-lifecycle-language": "node verification/check-sled-lifecycle-language-contract.js",
+    "verify:sled-lifecycle-language-live": "node verification/check-sled-lifecycle-language-live.js",
+    "verify:sled-lifecycle-browser": "node verification/check-sled-lifecycle-browser.js",
+    "verify:sled-runbook-alignment": "node verification/check-sled-runbook-alignment-contract.js",
+    "verify:sled-a-plus-contract": "node verification/check-sled-a-plus-contract.js",
+    "verify:sled-askdata-contract": "node verification/check-sled-askdata-contract.js",
+    "verify:sled-ml-persistence-contract": "node verification/check-sled-ml-persistence-contract.js",
+    "verify:sled-single-state-contract": "node verification/check-sled-single-state-contract.js",
+    "verify:sled-single-state-live": "node verification/check-sled-single-state-live.js",
+    "verify:sled-vpd-security": "node verification/check-sled-vpd-security-contract.js",
+    "verify:sled-application-context": "node verification/check-sled-application-context.js",
+    "verify:sled-vpd-role-matrix": "node verification/check-sled-vpd-api-role-matrix.js",
+    "verify:sled-demo-session": "node verification/check-sled-demo-session-contract.js",
+    "verify:sled-dataset-admin": "node verification/check-sled-dataset-admin-contract.js",
+    "verify:sled-dataset-generation": "node verification/check-sled-dataset-generation-contract.js",
+    "verify:sled-dataset-recovery": "node verification/check-sled-dataset-recovery-contract.js",
+    "verify:sled-vector": "node verification/check-sled-vector-contract.js",
+    "verify:sled-feature-truth": "node verification/check-sled-feature-truth-contract.js",
+    "verify:sidebar-layout": "node verification/check-sidebar-layout-contract.js",
+    "verify:resident-demand-signals-onnx": "node verification/check-resident-demand-signals-onnx.js",
+    "verify:usage-telemetry-mock": "node verification/check-usage-telemetry-mock.js",
+    "verify:demo-date-reanchor": "node verification/check-demo-date-reanchor.js",
+    "verify:demo-date-windows": "node verification/check-demo-date-windows.js",
+    "start": "node backend/server.js",
+    "start:prod": "NODE_ENV=production pm2 start backend/server.js --name sled-service-operations"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.17",
+    "cors": "^2.8.5",
+    "csv-parse": "^6.2.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "multer": "^2.1.1",
+    "oracledb": "^6.7.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1",
+    "nodemon": "^3.1.4"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

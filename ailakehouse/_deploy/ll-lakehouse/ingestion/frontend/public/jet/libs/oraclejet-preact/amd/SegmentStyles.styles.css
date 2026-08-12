@@ -1,0 +1,37 @@
+.SegmentStyles_base__kzheun0 {
+  caret-color: transparent;
+  text-align: end;
+  -webkit-tap-highlight-color: transparent;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+}
+.SegmentStyles_base__kzheun0:focus-visible {
+  outline: none;
+}
+.SegmentStyles_literalBase__kzheun1 {
+  white-space: pre;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.SegmentStyles_placeholder__kzheun2 {
+  color: var(--oj-c-text-icon-secondary);
+  text-align: start;
+}
+.SegmentStyles_selected__kzheun3 {
+  background-color: var(--oj-c-surface-selected);
+  border-color: var(--oj-c-border-selected);
+}
+.SegmentStyles_highlighted__kzheun4 {
+  background-color: var(--oj-c-surface-selected);
+}
+.SegmentStyles_hidden__kzheun5 {
+  display: none;
+}
+.SegmentStyles_notHidden__kzheun6 {
+  display: block;
+}
+.SegmentStyles_accessibleTouchTarget__kzheun7 {
+  min-width: 24px;
+}

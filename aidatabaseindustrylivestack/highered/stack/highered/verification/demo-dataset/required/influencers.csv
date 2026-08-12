@@ -1,0 +1,462 @@
+influencer_id,handle,display_name,platform,follower_count,engagement_rate,influence_score,niche,city,region,country,is_verified,created_at
+1,@northstaradvising_la,Northstar Advising - Los Angeles,youtube,48333,0.066,60.8,Academic Advising,Los Angeles,California,US,0,2025-12-16T00:00:00Z
+2,@riverbendfinaid_ny,Riverbend Financial Aid - New York,youtube,75335,0.072,74.5,Financial Aid,New York,New York,US,1,2025-12-22T23:00:00Z
+3,@summitcareerhub_bos,Summit Career Hub - Boston,threads,52060,0.068,88.6,Career Readiness,Boston,Massachusetts,US,1,2026-02-13T08:00:00Z
+4,@clearpathwellness_sf,ClearPath Wellness - San Francisco,tiktok,20536,0.057,69.2,Student Wellness,San Francisco,California,US,0,2026-03-09T02:00:00Z
+5,@pioneerlearning_hou,Pioneer Learning Center - Houston,threads,66909,0.042,66.3,Academic Support,Houston,Texas,US,1,2026-02-21T16:00:00Z
+6,@coastalaccess_chi,Coastal Accessibility Services - Chicago,tiktok,21262,0.027,70.2,Accessibility Services,Chicago,Illinois,US,0,2026-02-16T19:00:00Z
+7,@lakesideaid_sea,Lakeside Aid Office - Seattle,twitter,41547,0.054,87.4,Financial Aid,Seattle,Washington,US,0,2026-03-20T03:00:00Z
+8,@horizonfirstyear_phx,Horizon First-Year Experience - Phoenix,instagram,72011,0.063,88.9,First-Year Experience,Phoenix,Arizona,US,1,2026-03-15T12:00:00Z
+9,@libertytransfer_den,Liberty Transfer Center - Denver,threads,45376,0.068,73.4,Transfer Success,Denver,Colorado,US,0,2026-01-26T21:00:00Z
+10,@innovationonline_pdx,Innovation Online Learning - Portland,threads,60014,0.052,65.5,Online Learning,Portland,Oregon,US,1,2025-12-10T05:00:00Z
+11,@gatewayregistrar_dal,Gateway Registrar - Dallas,threads,75712,0.055,59.0,Registrar,Dallas,Texas,US,1,2026-01-19T16:00:00Z
+12,@censusweekdesk_atl,Census Week Desk - Atlanta,twitter,44456,0.049,77.6,Enrollment Management,Atlanta,Georgia,US,0,2026-02-28T05:00:00Z
+13,@degreeprogresshub_mia,Degree Progress Hub - Miami,instagram,69982,0.032,63.9,Completion,Miami,Florida,US,1,2026-01-17T05:00:00Z
+14,@campusbasicneeds_phl,Campus Basic Needs - Philadelphia,youtube,71506,0.058,66.6,Basic Needs,Philadelphia,Pennsylvania,US,1,2026-01-18T04:00:00Z
+15,@admityieldteam_la,Admit Yield Team - Los Angeles,twitter,46611,0.063,67.3,Admissions,Los Angeles,California,US,1,2026-01-28T11:00:00Z
+16,@scholarshipoffice_ny,Scholarship Office - New York,twitter,23293,0.046,59.8,Scholarships,New York,New York,US,0,2026-03-11T05:00:00Z
+17,@firstgenpathways_bos,First-Gen Pathways - Boston,tiktok,31759,0.037,62.7,First-Generation Success,Boston,Massachusetts,US,1,2026-02-24T19:00:00Z
+18,@transferready_sf,Transfer Ready - San Francisco,youtube,28119,0.083,80.9,Transfer Success,San Francisco,California,US,0,2026-02-12T20:00:00Z
+19,@commuterconnect_hou,Commuter Connect - Houston,instagram,9201,0.093,53.3,Student Engagement,Houston,Texas,US,0,2025-12-13T05:00:00Z
+20,@studentvoicehub_chi,Student Voice Hub - Chicago,twitter,10179,0.061,51.6,Student Success,Chicago,Illinois,US,0,2026-01-28T05:00:00Z
+21,@peermentorcollective_sea,Peer Mentor Collective - Seattle,instagram,15668,0.093,73.2,Peer Mentoring,Seattle,Washington,US,0,2026-01-05T10:00:00Z
+22,@veteransuccess_phx,Veteran Success Network - Phoenix,threads,27513,0.086,53.6,Veteran Success,Phoenix,Arizona,US,0,2026-03-18T08:00:00Z
+23,@adultlearnerhub_den,Adult Learner Hub - Denver,instagram,27079,0.094,89.0,Adult Learners,Denver,Colorado,US,0,2025-12-09T16:00:00Z
+24,@onlinelearners_pdx,Online Learner Community - Portland,instagram,29376,0.037,73.3,Online Learning,Portland,Oregon,US,0,2025-12-14T02:00:00Z
+25,@latinxsuccess_dal,Latinx Student Success - Dallas,tiktok,30041,0.094,75.3,Belonging,Dallas,Texas,US,0,2026-03-18T09:00:00Z
+26,@blackstudentalliance_atl,Black Student Alliance - Atlanta,instagram,1369,0.081,60.0,Belonging,Atlanta,Georgia,US,0,2026-01-19T07:00:00Z
+27,@stempeerlab_mia,STEM Peer Lab - Miami,threads,21079,0.032,89.4,STEM Persistence,Miami,Florida,US,0,2025-12-14T12:00:00Z
+28,@returningstudents_phl,Returning Students Network - Philadelphia,threads,11505,0.077,69.1,Completion,Philadelphia,Pennsylvania,US,0,2025-12-13T23:00:00Z
+29,@housingsecuritynow_la,Housing Security Now - Los Angeles,youtube,18757,0.098,93.2,Basic Needs,Los Angeles,California,US,0,2026-01-22T04:00:00Z
+30,@foodaccesscoalition_ny,Food Access Coalition - New York,instagram,40937,0.114,79.5,Basic Needs,New York,New York,US,1,2026-01-31T18:00:00Z
+31,@lakesidealumni_bos,Lakeside Alumni Association - Boston,twitter,81298,0.037,84.1,Alumni Engagement,Boston,Massachusetts,US,1,2025-12-06T11:00:00Z
+32,@alumniaidfund_sf,Alumni Aid Fund - San Francisco,instagram,115114,0.016,67.2,Emergency Aid,San Francisco,California,US,1,2026-03-31T20:00:00Z
+33,@donorimpacthub_hou,Donor Impact Hub - Houston,instagram,11631,0.054,72.3,Advancement,Houston,Texas,US,0,2026-01-22T21:00:00Z
+34,@scholarshipcircle_chi,Scholarship Circle - Chicago,threads,3708,0.042,78.7,Scholarships,Chicago,Illinois,US,0,2026-01-15T01:00:00Z
+35,@annualgivingdesk_sea,Annual Giving Desk - Seattle,tiktok,89179,0.045,52.0,Advancement,Seattle,Washington,US,1,2026-03-30T04:00:00Z
+36,@alumnicareers_phx,Alumni Career Network - Phoenix,twitter,103102,0.046,66.3,Career Readiness,Phoenix,Arizona,US,1,2026-03-31T15:00:00Z
+37,@communitycollegebridge_den,Community College Bridge - Denver,threads,221792,0.048,87.4,Transfer Success,Denver,Colorado,US,1,2025-12-16T22:00:00Z
+38,@workforcepathways_pdx,Workforce Pathways - Portland,instagram,163524,0.053,84.4,Workforce Programs,Portland,Oregon,US,1,2026-01-18T12:00:00Z
+39,@citypromisepartners_dal,City Promise Partners - Dallas,youtube,144570,0.030,64.3,Community Partnerships,Dallas,Texas,US,1,2026-01-18T19:00:00Z
+40,@employerlearninglab_atl,Employer Learning Lab - Atlanta,youtube,22063,0.020,85.1,Employer Engagement,Atlanta,Georgia,US,0,2026-02-27T03:00:00Z
+41,@stateaidwatch_mia,State Aid Watch - Miami,youtube,238267,0.030,56.2,Financial Aid Policy,Miami,Florida,US,1,2026-01-11T08:00:00Z
+42,@completioncompact_phl,Completion Compact - Philadelphia,twitter,146218,0.022,84.6,Completion,Philadelphia,Pennsylvania,US,1,2026-01-03T07:00:00Z
+43,@institutionalresearch_la,Institutional Research Exchange - Los Angeles,youtube,133077,0.010,89.1,Institutional Research,Los Angeles,California,US,1,2026-02-11T23:00:00Z
+44,@enrollmentanalytics_ny,Enrollment Analytics Forum - New York,threads,30754,0.028,75.1,Enrollment Management,New York,New York,US,0,2026-02-21T03:00:00Z
+45,@northstaradvising_atl,Northstar Advising - Atlanta,threads,60904,0.054,54.9,Academic Advising,Atlanta,Georgia,US,1,2026-01-19T00:00:00Z
+46,@riverbendfinaid_mia,Riverbend Financial Aid - Miami,threads,39460,0.019,73.1,Financial Aid,Miami,Florida,US,0,2026-02-01T22:00:00Z
+47,@summitcareerhub_phl,Summit Career Hub - Philadelphia,instagram,15315,0.034,50.2,Career Readiness,Philadelphia,Pennsylvania,US,0,2026-02-22T16:00:00Z
+48,@clearpathwellness_la,ClearPath Wellness - Los Angeles,tiktok,15322,0.043,66.3,Student Wellness,Los Angeles,California,US,0,2025-12-17T06:00:00Z
+49,@pioneerlearning_ny,Pioneer Learning Center - New York,threads,52031,0.039,87.1,Academic Support,New York,New York,US,1,2025-12-29T07:00:00Z
+50,@coastalaccess_bos,Coastal Accessibility Services - Boston,instagram,66776,0.062,55.0,Accessibility Services,Boston,Massachusetts,US,1,2026-01-07T09:00:00Z
+51,@lakesideaid_sf,Lakeside Aid Office - San Francisco,threads,65993,0.059,83.3,Financial Aid,San Francisco,California,US,1,2025-12-14T19:00:00Z
+52,@horizonfirstyear_hou,Horizon First-Year Experience - Houston,instagram,56461,0.043,76.3,First-Year Experience,Houston,Texas,US,1,2026-03-03T05:00:00Z
+53,@libertytransfer_chi,Liberty Transfer Center - Chicago,instagram,36703,0.019,61.9,Transfer Success,Chicago,Illinois,US,0,2026-01-03T13:00:00Z
+54,@innovationonline_sea,Innovation Online Learning - Seattle,instagram,16386,0.032,64.8,Online Learning,Seattle,Washington,US,0,2026-02-19T16:00:00Z
+55,@gatewayregistrar_phx,Gateway Registrar - Phoenix,twitter,20419,0.032,82.9,Registrar,Phoenix,Arizona,US,0,2026-03-27T00:00:00Z
+56,@censusweekdesk_den,Census Week Desk - Denver,youtube,3565,0.028,69.5,Enrollment Management,Denver,Colorado,US,0,2026-02-23T09:00:00Z
+57,@degreeprogresshub_pdx,Degree Progress Hub - Portland,twitter,34630,0.040,89.4,Completion,Portland,Oregon,US,0,2025-12-19T03:00:00Z
+58,@campusbasicneeds_dal,Campus Basic Needs - Dallas,instagram,46890,0.045,89.9,Basic Needs,Dallas,Texas,US,0,2025-12-04T21:00:00Z
+59,@admityieldteam_atl,Admit Yield Team - Atlanta,twitter,20085,0.019,73.6,Admissions,Atlanta,Georgia,US,0,2026-01-06T15:00:00Z
+60,@scholarshipoffice_mia,Scholarship Office - Miami,instagram,26001,0.062,87.3,Scholarships,Miami,Florida,US,0,2026-02-05T22:00:00Z
+61,@firstgenpathways_phl,First-Gen Pathways - Philadelphia,tiktok,7968,0.064,46.5,First-Generation Success,Philadelphia,Pennsylvania,US,0,2026-03-17T12:00:00Z
+62,@transferready_la,Transfer Ready - Los Angeles,tiktok,11185,0.117,72.1,Transfer Success,Los Angeles,California,US,0,2026-03-31T03:00:00Z
+63,@commuterconnect_ny,Commuter Connect - New York,tiktok,13761,0.042,88.7,Student Engagement,New York,New York,US,0,2026-02-01T20:00:00Z
+64,@studentvoicehub_bos,Student Voice Hub - Boston,threads,6615,0.082,51.3,Student Success,Boston,Massachusetts,US,0,2025-12-08T22:00:00Z
+65,@peermentorcollective_sf,Peer Mentor Collective - San Francisco,tiktok,10018,0.042,87.5,Peer Mentoring,San Francisco,California,US,0,2026-02-04T08:00:00Z
+66,@veteransuccess_hou,Veteran Success Network - Houston,youtube,16753,0.047,68.5,Veteran Success,Houston,Texas,US,0,2026-02-19T23:00:00Z
+67,@adultlearnerhub_chi,Adult Learner Hub - Chicago,tiktok,8985,0.111,77.4,Adult Learners,Chicago,Illinois,US,0,2026-03-21T23:00:00Z
+68,@onlinelearners_sea,Online Learner Community - Seattle,twitter,35947,0.109,67.8,Online Learning,Seattle,Washington,US,1,2026-03-03T04:00:00Z
+69,@latinxsuccess_phx,Latinx Student Success - Phoenix,threads,4116,0.090,64.7,Belonging,Phoenix,Arizona,US,0,2025-12-21T07:00:00Z
+70,@blackstudentalliance_den,Black Student Alliance - Denver,youtube,5814,0.110,85.1,Belonging,Denver,Colorado,US,0,2026-01-05T17:00:00Z
+71,@stempeerlab_pdx,STEM Peer Lab - Portland,instagram,31781,0.058,88.9,STEM Persistence,Portland,Oregon,US,0,2026-01-12T01:00:00Z
+72,@returningstudents_dal,Returning Students Network - Dallas,youtube,26104,0.042,68.0,Completion,Dallas,Texas,US,0,2026-02-04T02:00:00Z
+73,@housingsecuritynow_atl,Housing Security Now - Atlanta,instagram,22236,0.043,90.9,Basic Needs,Atlanta,Georgia,US,0,2025-12-04T08:00:00Z
+74,@foodaccesscoalition_mia,Food Access Coalition - Miami,instagram,28428,0.080,83.4,Basic Needs,Miami,Florida,US,0,2025-12-13T10:00:00Z
+75,@lakesidealumni_phl,Lakeside Alumni Association - Philadelphia,instagram,118092,0.023,59.3,Alumni Engagement,Philadelphia,Pennsylvania,US,1,2026-01-08T17:00:00Z
+76,@alumniaidfund_la,Alumni Aid Fund - Los Angeles,instagram,65575,0.037,72.9,Emergency Aid,Los Angeles,California,US,0,2026-03-23T21:00:00Z
+77,@donorimpacthub_ny,Donor Impact Hub - New York,twitter,43347,0.022,82.7,Advancement,New York,New York,US,1,2026-02-03T05:00:00Z
+78,@scholarshipcircle_bos,Scholarship Circle - Boston,tiktok,9427,0.025,76.7,Scholarships,Boston,Massachusetts,US,0,2025-12-08T03:00:00Z
+79,@annualgivingdesk_sf,Annual Giving Desk - San Francisco,twitter,31012,0.014,83.3,Advancement,San Francisco,California,US,0,2026-03-31T05:00:00Z
+80,@alumnicareers_hou,Alumni Career Network - Houston,youtube,66981,0.038,84.1,Career Readiness,Houston,Texas,US,0,2025-12-23T00:00:00Z
+81,@communitycollegebridge_chi,Community College Bridge - Chicago,threads,150302,0.022,56.7,Transfer Success,Chicago,Illinois,US,1,2026-03-03T07:00:00Z
+82,@workforcepathways_sea,Workforce Pathways - Seattle,youtube,142085,0.022,70.1,Workforce Programs,Seattle,Washington,US,1,2025-12-28T01:00:00Z
+83,@citypromisepartners_phx,City Promise Partners - Phoenix,tiktok,140812,0.049,77.6,Community Partnerships,Phoenix,Arizona,US,1,2026-02-06T16:00:00Z
+84,@employerlearninglab_den,Employer Learning Lab - Denver,twitter,184782,0.051,94.7,Employer Engagement,Denver,Colorado,US,1,2026-03-29T15:00:00Z
+85,@stateaidwatch_pdx,State Aid Watch - Portland,instagram,206635,0.050,83.3,Financial Aid Policy,Portland,Oregon,US,1,2026-01-17T04:00:00Z
+86,@completioncompact_dal,Completion Compact - Dallas,instagram,13599,0.017,65.4,Completion,Dallas,Texas,US,0,2026-03-12T22:00:00Z
+87,@institutionalresearch_atl,Institutional Research Exchange - Atlanta,twitter,84421,0.045,79.1,Institutional Research,Atlanta,Georgia,US,0,2025-12-25T17:00:00Z
+88,@enrollmentanalytics_mia,Enrollment Analytics Forum - Miami,instagram,108242,0.019,66.8,Enrollment Management,Miami,Florida,US,1,2026-01-29T02:00:00Z
+89,@northstaradvising_den,Northstar Advising - Denver,instagram,42105,0.034,77.1,Academic Advising,Denver,Colorado,US,0,2026-03-07T14:00:00Z
+90,@riverbendfinaid_pdx,Riverbend Financial Aid - Portland,threads,59444,0.038,52.2,Financial Aid,Portland,Oregon,US,1,2026-02-20T02:00:00Z
+91,@summitcareerhub_dal,Summit Career Hub - Dallas,youtube,67835,0.041,64.8,Career Readiness,Dallas,Texas,US,1,2026-01-12T18:00:00Z
+92,@clearpathwellness_atl,ClearPath Wellness - Atlanta,youtube,9890,0.042,62.4,Student Wellness,Atlanta,Georgia,US,0,2026-03-28T23:00:00Z
+93,@pioneerlearning_mia,Pioneer Learning Center - Miami,threads,73354,0.020,74.2,Academic Support,Miami,Florida,US,1,2026-03-06T12:00:00Z
+94,@coastalaccess_phl,Coastal Accessibility Services - Philadelphia,instagram,39464,0.055,83.5,Accessibility Services,Philadelphia,Pennsylvania,US,0,2026-02-24T18:00:00Z
+95,@lakesideaid_la,Lakeside Aid Office - Los Angeles,instagram,35623,0.024,51.7,Financial Aid,Los Angeles,California,US,1,2026-03-13T23:00:00Z
+96,@horizonfirstyear_ny,Horizon First-Year Experience - New York,instagram,45232,0.063,73.1,First-Year Experience,New York,New York,US,0,2026-03-09T02:00:00Z
+97,@libertytransfer_bos,Liberty Transfer Center - Boston,twitter,40967,0.031,70.5,Transfer Success,Boston,Massachusetts,US,0,2026-03-31T19:00:00Z
+98,@innovationonline_sf,Innovation Online Learning - San Francisco,instagram,5895,0.026,90.2,Online Learning,San Francisco,California,US,0,2026-02-11T20:00:00Z
+99,@gatewayregistrar_hou,Gateway Registrar - Houston,instagram,76277,0.059,90.9,Registrar,Houston,Texas,US,1,2025-12-17T04:00:00Z
+100,@censusweekdesk_chi,Census Week Desk - Chicago,instagram,51207,0.069,72.7,Enrollment Management,Chicago,Illinois,US,0,2025-12-14T20:00:00Z
+101,@degreeprogresshub_sea,Degree Progress Hub - Seattle,tiktok,54251,0.032,70.0,Completion,Seattle,Washington,US,1,2026-03-03T15:00:00Z
+102,@campusbasicneeds_phx,Campus Basic Needs - Phoenix,youtube,53685,0.035,87.1,Basic Needs,Phoenix,Arizona,US,1,2025-12-22T06:00:00Z
+103,@admityieldteam_den,Admit Yield Team - Denver,youtube,46755,0.032,76.2,Admissions,Denver,Colorado,US,1,2025-12-30T18:00:00Z
+104,@scholarshipoffice_pdx,Scholarship Office - Portland,youtube,37883,0.030,86.7,Scholarships,Portland,Oregon,US,0,2026-01-07T02:00:00Z
+105,@firstgenpathways_dal,First-Gen Pathways - Dallas,instagram,9373,0.053,79.7,First-Generation Success,Dallas,Texas,US,0,2026-02-27T16:00:00Z
+106,@transferready_atl,Transfer Ready - Atlanta,twitter,3797,0.068,84.0,Transfer Success,Atlanta,Georgia,US,0,2026-03-25T18:00:00Z
+107,@commuterconnect_mia,Commuter Connect - Miami,instagram,13477,0.099,73.3,Student Engagement,Miami,Florida,US,0,2026-02-21T20:00:00Z
+108,@studentvoicehub_phl,Student Voice Hub - Philadelphia,tiktok,39212,0.086,49.6,Student Success,Philadelphia,Pennsylvania,US,0,2026-01-15T00:00:00Z
+109,@peermentorcollective_la,Peer Mentor Collective - Los Angeles,tiktok,43086,0.071,89.2,Peer Mentoring,Los Angeles,California,US,1,2026-03-27T21:00:00Z
+110,@veteransuccess_ny,Veteran Success Network - New York,youtube,2644,0.105,68.5,Veteran Success,New York,New York,US,0,2025-12-14T11:00:00Z
+111,@adultlearnerhub_bos,Adult Learner Hub - Boston,instagram,8402,0.114,46.0,Adult Learners,Boston,Massachusetts,US,0,2025-12-10T20:00:00Z
+112,@onlinelearners_sf,Online Learner Community - San Francisco,twitter,39386,0.058,58.7,Online Learning,San Francisco,California,US,1,2026-01-02T06:00:00Z
+113,@latinxsuccess_hou,Latinx Student Success - Houston,threads,36878,0.080,54.9,Belonging,Houston,Texas,US,0,2025-12-22T18:00:00Z
+114,@blackstudentalliance_chi,Black Student Alliance - Chicago,threads,2022,0.078,58.4,Belonging,Chicago,Illinois,US,0,2025-12-07T23:00:00Z
+115,@stempeerlab_sea,STEM Peer Lab - Seattle,instagram,28391,0.103,67.1,STEM Persistence,Seattle,Washington,US,0,2026-01-24T08:00:00Z
+116,@returningstudents_phx,Returning Students Network - Phoenix,tiktok,36665,0.086,61.6,Completion,Phoenix,Arizona,US,0,2026-01-22T10:00:00Z
+117,@housingsecuritynow_den,Housing Security Now - Denver,twitter,10957,0.085,92.9,Basic Needs,Denver,Colorado,US,0,2025-12-30T18:00:00Z
+118,@foodaccesscoalition_pdx,Food Access Coalition - Portland,instagram,20559,0.060,56.5,Basic Needs,Portland,Oregon,US,0,2026-01-01T04:00:00Z
+119,@lakesidealumni_dal,Lakeside Alumni Association - Dallas,youtube,57568,0.048,68.7,Alumni Engagement,Dallas,Texas,US,1,2025-12-27T00:00:00Z
+120,@alumniaidfund_atl,Alumni Aid Fund - Atlanta,threads,109969,0.045,56.4,Emergency Aid,Atlanta,Georgia,US,1,2026-01-13T09:00:00Z
+121,@donorimpacthub_mia,Donor Impact Hub - Miami,threads,68173,0.051,65.4,Advancement,Miami,Florida,US,0,2026-02-20T00:00:00Z
+122,@scholarshipcircle_phl,Scholarship Circle - Philadelphia,tiktok,8516,0.038,54.4,Scholarships,Philadelphia,Pennsylvania,US,0,2025-12-31T18:00:00Z
+123,@annualgivingdesk_la,Annual Giving Desk - Los Angeles,twitter,21903,0.051,58.1,Advancement,Los Angeles,California,US,0,2026-01-06T02:00:00Z
+124,@alumnicareers_ny,Alumni Career Network - New York,instagram,54192,0.027,66.8,Career Readiness,New York,New York,US,0,2026-03-03T03:00:00Z
+125,@communitycollegebridge_bos,Community College Bridge - Boston,instagram,167279,0.025,89.1,Transfer Success,Boston,Massachusetts,US,1,2026-01-14T17:00:00Z
+126,@workforcepathways_sf,Workforce Pathways - San Francisco,tiktok,189698,0.044,63.8,Workforce Programs,San Francisco,California,US,1,2026-03-22T18:00:00Z
+127,@citypromisepartners_hou,City Promise Partners - Houston,threads,49521,0.023,67.6,Community Partnerships,Houston,Texas,US,0,2026-03-08T11:00:00Z
+128,@employerlearninglab_chi,Employer Learning Lab - Chicago,youtube,180814,0.042,68.7,Employer Engagement,Chicago,Illinois,US,1,2026-03-06T11:00:00Z
+129,@stateaidwatch_sea,State Aid Watch - Seattle,threads,129020,0.052,68.4,Financial Aid Policy,Seattle,Washington,US,1,2026-02-12T17:00:00Z
+130,@completioncompact_phx,Completion Compact - Phoenix,instagram,14875,0.030,67.9,Completion,Phoenix,Arizona,US,0,2026-01-27T00:00:00Z
+131,@institutionalresearch_den,Institutional Research Exchange - Denver,youtube,40483,0.014,74.7,Institutional Research,Denver,Colorado,US,0,2026-01-12T08:00:00Z
+132,@enrollmentanalytics_pdx,Enrollment Analytics Forum - Portland,youtube,106649,0.046,79.2,Enrollment Management,Portland,Oregon,US,1,2026-01-22T04:00:00Z
+133,@northstaradvising_chi,Northstar Advising - Chicago,instagram,37488,0.027,54.5,Academic Advising,Chicago,Illinois,US,0,2025-12-26T13:00:00Z
+134,@riverbendfinaid_sea,Riverbend Financial Aid - Seattle,tiktok,7206,0.044,77.6,Financial Aid,Seattle,Washington,US,0,2026-03-26T23:00:00Z
+135,@summitcareerhub_phx,Summit Career Hub - Phoenix,twitter,28858,0.027,50.6,Career Readiness,Phoenix,Arizona,US,0,2025-12-31T03:00:00Z
+136,@clearpathwellness_den,ClearPath Wellness - Denver,instagram,2200,0.068,69.2,Student Wellness,Denver,Colorado,US,0,2026-03-12T17:00:00Z
+137,@pioneerlearning_pdx,Pioneer Learning Center - Portland,twitter,32483,0.037,85.9,Academic Support,Portland,Oregon,US,0,2026-01-18T19:00:00Z
+138,@coastalaccess_dal,Coastal Accessibility Services - Dallas,instagram,21281,0.042,83.7,Accessibility Services,Dallas,Texas,US,0,2026-01-01T09:00:00Z
+139,@lakesideaid_atl,Lakeside Aid Office - Atlanta,youtube,43151,0.020,53.6,Financial Aid,Atlanta,Georgia,US,0,2026-01-29T06:00:00Z
+140,@horizonfirstyear_mia,Horizon First-Year Experience - Miami,tiktok,77455,0.050,78.1,First-Year Experience,Miami,Florida,US,1,2026-02-28T21:00:00Z
+141,@libertytransfer_phl,Liberty Transfer Center - Philadelphia,tiktok,23561,0.054,52.5,Transfer Success,Philadelphia,Pennsylvania,US,0,2026-02-02T16:00:00Z
+142,@innovationonline_la,Innovation Online Learning - Los Angeles,instagram,3890,0.035,62.1,Online Learning,Los Angeles,California,US,0,2025-12-18T02:00:00Z
+143,@gatewayregistrar_ny,Gateway Registrar - New York,twitter,28256,0.019,77.4,Registrar,New York,New York,US,0,2026-02-25T12:00:00Z
+144,@censusweekdesk_bos,Census Week Desk - Boston,threads,56026,0.064,87.8,Enrollment Management,Boston,Massachusetts,US,1,2026-03-03T02:00:00Z
+145,@degreeprogresshub_sf,Degree Progress Hub - San Francisco,threads,45247,0.040,86.9,Completion,San Francisco,California,US,0,2026-02-07T18:00:00Z
+146,@campusbasicneeds_hou,Campus Basic Needs - Houston,instagram,16267,0.043,70.7,Basic Needs,Houston,Texas,US,0,2026-02-07T16:00:00Z
+147,@admityieldteam_chi,Admit Yield Team - Chicago,twitter,22468,0.037,69.4,Admissions,Chicago,Illinois,US,1,2025-12-17T15:00:00Z
+148,@scholarshipoffice_sea,Scholarship Office - Seattle,threads,28394,0.025,65.1,Scholarships,Seattle,Washington,US,0,2026-03-09T20:00:00Z
+149,@firstgenpathways_phx,First-Gen Pathways - Phoenix,threads,2031,0.114,92.0,First-Generation Success,Phoenix,Arizona,US,0,2026-02-24T13:00:00Z
+150,@transferready_den,Transfer Ready - Denver,instagram,23683,0.046,60.1,Transfer Success,Denver,Colorado,US,0,2026-02-02T23:00:00Z
+151,@commuterconnect_pdx,Commuter Connect - Portland,tiktok,24972,0.099,53.2,Student Engagement,Portland,Oregon,US,0,2025-12-25T02:00:00Z
+152,@studentvoicehub_dal,Student Voice Hub - Dallas,tiktok,11544,0.109,92.9,Student Success,Dallas,Texas,US,0,2026-01-22T04:00:00Z
+153,@peermentorcollective_atl,Peer Mentor Collective - Atlanta,tiktok,3889,0.050,82.9,Peer Mentoring,Atlanta,Georgia,US,0,2026-01-22T21:00:00Z
+154,@veteransuccess_mia,Veteran Success Network - Miami,youtube,3730,0.063,90.0,Veteran Success,Miami,Florida,US,0,2026-03-10T22:00:00Z
+155,@adultlearnerhub_phl,Adult Learner Hub - Philadelphia,instagram,42797,0.054,60.2,Adult Learners,Philadelphia,Pennsylvania,US,1,2026-01-03T07:00:00Z
+156,@onlinelearners_la,Online Learner Community - Los Angeles,threads,17692,0.048,49.6,Online Learning,Los Angeles,California,US,0,2026-02-09T10:00:00Z
+157,@latinxsuccess_ny,Latinx Student Success - New York,instagram,30380,0.096,84.4,Belonging,New York,New York,US,0,2026-02-25T09:00:00Z
+158,@blackstudentalliance_bos,Black Student Alliance - Boston,tiktok,13691,0.079,78.2,Belonging,Boston,Massachusetts,US,0,2026-03-09T22:00:00Z
+159,@stempeerlab_sf,STEM Peer Lab - San Francisco,youtube,6637,0.056,66.5,STEM Persistence,San Francisco,California,US,0,2026-03-05T22:00:00Z
+160,@returningstudents_hou,Returning Students Network - Houston,threads,40534,0.049,52.3,Completion,Houston,Texas,US,0,2025-12-18T07:00:00Z
+161,@housingsecuritynow_chi,Housing Security Now - Chicago,tiktok,20821,0.113,61.5,Basic Needs,Chicago,Illinois,US,0,2026-01-25T16:00:00Z
+162,@foodaccesscoalition_sea,Food Access Coalition - Seattle,instagram,14151,0.066,82.5,Basic Needs,Seattle,Washington,US,0,2025-12-22T20:00:00Z
+163,@lakesidealumni_phx,Lakeside Alumni Association - Phoenix,instagram,39040,0.041,60.4,Alumni Engagement,Phoenix,Arizona,US,0,2026-03-30T14:00:00Z
+164,@alumniaidfund_den,Alumni Aid Fund - Denver,youtube,15768,0.062,55.1,Emergency Aid,Denver,Colorado,US,0,2026-03-25T22:00:00Z
+165,@donorimpacthub_pdx,Donor Impact Hub - Portland,instagram,22377,0.031,64.5,Advancement,Portland,Oregon,US,0,2025-12-10T19:00:00Z
+166,@scholarshipcircle_dal,Scholarship Circle - Dallas,youtube,8291,0.039,71.8,Scholarships,Dallas,Texas,US,0,2026-01-29T09:00:00Z
+167,@annualgivingdesk_atl,Annual Giving Desk - Atlanta,tiktok,46407,0.048,89.5,Advancement,Atlanta,Georgia,US,0,2025-12-12T15:00:00Z
+168,@alumnicareers_mia,Alumni Career Network - Miami,youtube,14097,0.039,87.6,Career Readiness,Miami,Florida,US,0,2026-01-10T15:00:00Z
+169,@communitycollegebridge_phl,Community College Bridge - Philadelphia,instagram,179049,0.014,69.8,Transfer Success,Philadelphia,Pennsylvania,US,1,2026-03-26T10:00:00Z
+170,@workforcepathways_la,Workforce Pathways - Los Angeles,threads,201164,0.042,64.3,Workforce Programs,Los Angeles,California,US,1,2026-02-24T19:00:00Z
+171,@citypromisepartners_ny,City Promise Partners - New York,threads,142290,0.021,89.8,Community Partnerships,New York,New York,US,1,2025-12-13T04:00:00Z
+172,@employerlearninglab_bos,Employer Learning Lab - Boston,tiktok,174082,0.026,82.1,Employer Engagement,Boston,Massachusetts,US,1,2026-01-07T14:00:00Z
+173,@stateaidwatch_sf,State Aid Watch - San Francisco,threads,121441,0.052,76.1,Financial Aid Policy,San Francisco,California,US,1,2026-01-28T08:00:00Z
+174,@completioncompact_hou,Completion Compact - Houston,twitter,44237,0.016,69.2,Completion,Houston,Texas,US,0,2026-03-22T19:00:00Z
+175,@institutionalresearch_chi,Institutional Research Exchange - Chicago,threads,143681,0.035,83.8,Institutional Research,Chicago,Illinois,US,1,2026-02-21T06:00:00Z
+176,@enrollmentanalytics_sea,Enrollment Analytics Forum - Seattle,twitter,58247,0.019,69.8,Enrollment Management,Seattle,Washington,US,0,2026-02-23T14:00:00Z
+177,@northstaradvising_bos,Northstar Advising - Boston,instagram,48724,0.023,71.4,Academic Advising,Boston,Massachusetts,US,0,2026-01-06T18:00:00Z
+178,@riverbendfinaid_sf,Riverbend Financial Aid - San Francisco,tiktok,6225,0.068,73.1,Financial Aid,San Francisco,California,US,0,2026-01-01T18:00:00Z
+179,@summitcareerhub_hou,Summit Career Hub - Houston,twitter,5929,0.042,63.0,Career Readiness,Houston,Texas,US,0,2026-03-01T18:00:00Z
+180,@clearpathwellness_chi,ClearPath Wellness - Chicago,tiktok,31752,0.056,85.5,Student Wellness,Chicago,Illinois,US,0,2025-12-07T15:00:00Z
+181,@pioneerlearning_sea,Pioneer Learning Center - Seattle,threads,37778,0.034,70.8,Academic Support,Seattle,Washington,US,0,2026-01-31T17:00:00Z
+182,@coastalaccess_phx,Coastal Accessibility Services - Phoenix,instagram,77459,0.059,87.8,Accessibility Services,Phoenix,Arizona,US,1,2026-01-30T00:00:00Z
+183,@lakesideaid_den,Lakeside Aid Office - Denver,instagram,44935,0.066,69.0,Financial Aid,Denver,Colorado,US,0,2026-01-18T14:00:00Z
+184,@horizonfirstyear_pdx,Horizon First-Year Experience - Portland,twitter,36484,0.041,87.6,First-Year Experience,Portland,Oregon,US,0,2026-03-14T15:00:00Z
+185,@libertytransfer_dal,Liberty Transfer Center - Dallas,threads,71780,0.056,70.6,Transfer Success,Dallas,Texas,US,1,2026-02-26T19:00:00Z
+186,@innovationonline_atl,Innovation Online Learning - Atlanta,threads,3262,0.020,78.9,Online Learning,Atlanta,Georgia,US,0,2025-12-22T23:00:00Z
+187,@gatewayregistrar_mia,Gateway Registrar - Miami,tiktok,45507,0.057,79.6,Registrar,Miami,Florida,US,0,2026-01-22T05:00:00Z
+188,@censusweekdesk_phl,Census Week Desk - Philadelphia,threads,2686,0.067,61.8,Enrollment Management,Philadelphia,Pennsylvania,US,0,2026-01-05T03:00:00Z
+189,@degreeprogresshub_la,Degree Progress Hub - Los Angeles,instagram,14018,0.040,62.8,Completion,Los Angeles,California,US,1,2026-03-20T10:00:00Z
+190,@campusbasicneeds_ny,Campus Basic Needs - New York,instagram,68970,0.057,64.7,Basic Needs,New York,New York,US,1,2026-01-31T22:00:00Z
+191,@admityieldteam_bos,Admit Yield Team - Boston,tiktok,41268,0.060,66.2,Admissions,Boston,Massachusetts,US,0,2026-01-26T14:00:00Z
+192,@scholarshipoffice_sf,Scholarship Office - San Francisco,instagram,31070,0.065,69.2,Scholarships,San Francisco,California,US,0,2026-01-01T09:00:00Z
+193,@firstgenpathways_hou,First-Gen Pathways - Houston,tiktok,561,0.064,54.2,First-Generation Success,Houston,Texas,US,0,2026-02-25T10:00:00Z
+194,@transferready_chi,Transfer Ready - Chicago,instagram,27285,0.114,81.0,Transfer Success,Chicago,Illinois,US,0,2025-12-23T16:00:00Z
+195,@commuterconnect_sea,Commuter Connect - Seattle,twitter,39220,0.078,67.7,Student Engagement,Seattle,Washington,US,0,2025-12-04T02:00:00Z
+196,@studentvoicehub_phx,Student Voice Hub - Phoenix,tiktok,21024,0.036,64.8,Student Success,Phoenix,Arizona,US,0,2026-03-21T15:00:00Z
+197,@peermentorcollective_den,Peer Mentor Collective - Denver,instagram,41587,0.045,67.2,Peer Mentoring,Denver,Colorado,US,0,2025-12-09T09:00:00Z
+198,@veteransuccess_pdx,Veteran Success Network - Portland,tiktok,14040,0.076,70.3,Veteran Success,Portland,Oregon,US,0,2025-12-08T01:00:00Z
+199,@adultlearnerhub_dal,Adult Learner Hub - Dallas,instagram,29010,0.052,58.5,Adult Learners,Dallas,Texas,US,0,2026-01-18T19:00:00Z
+200,@onlinelearners_atl,Online Learner Community - Atlanta,instagram,15680,0.045,88.3,Online Learning,Atlanta,Georgia,US,0,2026-03-29T13:00:00Z
+201,@latinxsuccess_mia,Latinx Student Success - Miami,instagram,2105,0.047,91.9,Belonging,Miami,Florida,US,0,2025-12-24T23:00:00Z
+202,@blackstudentalliance_phl,Black Student Alliance - Philadelphia,threads,23854,0.072,87.1,Belonging,Philadelphia,Pennsylvania,US,0,2026-03-29T12:00:00Z
+203,@stempeerlab_la,STEM Peer Lab - Los Angeles,instagram,33973,0.113,83.7,STEM Persistence,Los Angeles,California,US,1,2025-12-04T17:00:00Z
+204,@returningstudents_ny,Returning Students Network - New York,youtube,27523,0.057,62.6,Completion,New York,New York,US,0,2026-03-25T00:00:00Z
+205,@housingsecuritynow_bos,Housing Security Now - Boston,instagram,22713,0.032,79.8,Basic Needs,Boston,Massachusetts,US,0,2026-02-24T19:00:00Z
+206,@foodaccesscoalition_sf,Food Access Coalition - San Francisco,threads,14167,0.044,59.0,Basic Needs,San Francisco,California,US,0,2026-01-11T03:00:00Z
+207,@lakesidealumni_hou,Lakeside Alumni Association - Houston,youtube,3786,0.032,65.0,Alumni Engagement,Houston,Texas,US,1,2026-03-21T17:00:00Z
+208,@alumniaidfund_chi,Alumni Aid Fund - Chicago,youtube,118008,0.014,88.8,Emergency Aid,Chicago,Illinois,US,1,2025-12-18T17:00:00Z
+209,@donorimpacthub_sea,Donor Impact Hub - Seattle,twitter,50209,0.014,65.1,Advancement,Seattle,Washington,US,1,2025-12-30T13:00:00Z
+210,@scholarshipcircle_phx,Scholarship Circle - Phoenix,youtube,105612,0.021,63.4,Scholarships,Phoenix,Arizona,US,1,2026-01-27T07:00:00Z
+211,@annualgivingdesk_den,Annual Giving Desk - Denver,threads,62422,0.060,81.7,Advancement,Denver,Colorado,US,0,2026-03-17T01:00:00Z
+212,@alumnicareers_pdx,Alumni Career Network - Portland,tiktok,50279,0.021,88.0,Career Readiness,Portland,Oregon,US,0,2026-02-22T22:00:00Z
+213,@communitycollegebridge_dal,Community College Bridge - Dallas,instagram,191470,0.032,92.8,Transfer Success,Dallas,Texas,US,1,2026-01-09T01:00:00Z
+214,@workforcepathways_atl,Workforce Pathways - Atlanta,twitter,64984,0.023,59.1,Workforce Programs,Atlanta,Georgia,US,0,2026-03-20T19:00:00Z
+215,@citypromisepartners_mia,City Promise Partners - Miami,threads,184544,0.050,87.0,Community Partnerships,Miami,Florida,US,1,2026-01-02T01:00:00Z
+216,@employerlearninglab_phl,Employer Learning Lab - Philadelphia,twitter,108931,0.046,93.4,Employer Engagement,Philadelphia,Pennsylvania,US,1,2025-12-12T02:00:00Z
+217,@stateaidwatch_la,State Aid Watch - Los Angeles,twitter,167825,0.043,87.3,Financial Aid Policy,Los Angeles,California,US,1,2026-03-08T18:00:00Z
+218,@completioncompact_ny,Completion Compact - New York,twitter,127642,0.020,60.3,Completion,New York,New York,US,1,2025-12-24T10:00:00Z
+219,@institutionalresearch_bos,Institutional Research Exchange - Boston,twitter,130321,0.044,73.0,Institutional Research,Boston,Massachusetts,US,1,2026-02-01T04:00:00Z
+220,@enrollmentanalytics_sf,Enrollment Analytics Forum - San Francisco,youtube,90891,0.016,76.0,Enrollment Management,San Francisco,California,US,1,2026-01-10T12:00:00Z
+221,@northstaradvising_phl,Northstar Advising - Philadelphia,tiktok,16656,0.047,72.2,Academic Advising,Philadelphia,Pennsylvania,US,0,2026-01-17T21:00:00Z
+222,@riverbendfinaid_la,Riverbend Financial Aid - Los Angeles,threads,47851,0.056,74.9,Financial Aid,Los Angeles,California,US,0,2026-02-13T16:00:00Z
+223,@summitcareerhub_ny,Summit Career Hub - New York,tiktok,51696,0.044,78.9,Career Readiness,New York,New York,US,0,2026-02-17T07:00:00Z
+224,@clearpathwellness_bos,ClearPath Wellness - Boston,youtube,53257,0.036,50.4,Student Wellness,Boston,Massachusetts,US,1,2026-03-18T12:00:00Z
+225,@pioneerlearning_sf,Pioneer Learning Center - San Francisco,instagram,18951,0.025,58.2,Academic Support,San Francisco,California,US,0,2026-03-09T08:00:00Z
+226,@coastalaccess_hou,Coastal Accessibility Services - Houston,twitter,14168,0.036,79.9,Accessibility Services,Houston,Texas,US,0,2026-03-25T23:00:00Z
+227,@lakesideaid_chi,Lakeside Aid Office - Chicago,twitter,39587,0.029,62.8,Financial Aid,Chicago,Illinois,US,0,2025-12-09T12:00:00Z
+228,@horizonfirstyear_sea,Horizon First-Year Experience - Seattle,threads,26531,0.048,84.8,First-Year Experience,Seattle,Washington,US,0,2026-03-26T01:00:00Z
+229,@libertytransfer_phx,Liberty Transfer Center - Phoenix,twitter,5338,0.055,81.8,Transfer Success,Phoenix,Arizona,US,0,2026-01-28T13:00:00Z
+230,@innovationonline_den,Innovation Online Learning - Denver,threads,59154,0.039,60.4,Online Learning,Denver,Colorado,US,1,2026-03-14T07:00:00Z
+231,@gatewayregistrar_pdx,Gateway Registrar - Portland,instagram,25881,0.055,50.9,Registrar,Portland,Oregon,US,0,2026-02-03T03:00:00Z
+232,@censusweekdesk_dal,Census Week Desk - Dallas,instagram,30354,0.024,50.2,Enrollment Management,Dallas,Texas,US,0,2026-03-01T08:00:00Z
+233,@degreeprogresshub_atl,Degree Progress Hub - Atlanta,threads,58283,0.067,74.9,Completion,Atlanta,Georgia,US,1,2026-02-11T14:00:00Z
+234,@campusbasicneeds_mia,Campus Basic Needs - Miami,instagram,60048,0.058,53.4,Basic Needs,Miami,Florida,US,1,2026-02-27T23:00:00Z
+235,@admityieldteam_phl,Admit Yield Team - Philadelphia,threads,34550,0.024,55.1,Admissions,Philadelphia,Pennsylvania,US,0,2025-12-07T00:00:00Z
+236,@scholarshipoffice_la,Scholarship Office - Los Angeles,twitter,75613,0.033,65.4,Scholarships,Los Angeles,California,US,1,2026-02-05T09:00:00Z
+237,@firstgenpathways_ny,First-Gen Pathways - New York,instagram,18404,0.074,58.6,First-Generation Success,New York,New York,US,0,2026-03-25T18:00:00Z
+238,@transferready_bos,Transfer Ready - Boston,instagram,3355,0.070,70.7,Transfer Success,Boston,Massachusetts,US,0,2026-02-22T15:00:00Z
+239,@commuterconnect_sf,Commuter Connect - San Francisco,tiktok,25814,0.094,60.5,Student Engagement,San Francisco,California,US,0,2025-12-29T14:00:00Z
+240,@studentvoicehub_hou,Student Voice Hub - Houston,youtube,1458,0.108,90.4,Student Success,Houston,Texas,US,0,2026-03-08T00:00:00Z
+241,@peermentorcollective_chi,Peer Mentor Collective - Chicago,threads,9034,0.098,72.0,Peer Mentoring,Chicago,Illinois,US,0,2025-12-27T00:00:00Z
+242,@veteransuccess_sea,Veteran Success Network - Seattle,twitter,25858,0.057,68.4,Veteran Success,Seattle,Washington,US,0,2025-12-22T21:00:00Z
+243,@adultlearnerhub_phx,Adult Learner Hub - Phoenix,youtube,15148,0.032,67.0,Adult Learners,Phoenix,Arizona,US,0,2025-12-16T11:00:00Z
+244,@onlinelearners_den,Online Learner Community - Denver,twitter,33366,0.067,90.9,Online Learning,Denver,Colorado,US,0,2026-01-01T02:00:00Z
+245,@latinxsuccess_pdx,Latinx Student Success - Portland,tiktok,19865,0.061,49.6,Belonging,Portland,Oregon,US,0,2026-01-20T15:00:00Z
+246,@blackstudentalliance_dal,Black Student Alliance - Dallas,threads,43703,0.112,77.0,Belonging,Dallas,Texas,US,1,2026-02-11T01:00:00Z
+247,@stempeerlab_atl,STEM Peer Lab - Atlanta,tiktok,35363,0.038,74.1,STEM Persistence,Atlanta,Georgia,US,0,2025-12-17T14:00:00Z
+248,@returningstudents_mia,Returning Students Network - Miami,youtube,30400,0.036,53.2,Completion,Miami,Florida,US,1,2025-12-03T22:00:00Z
+249,@housingsecuritynow_phl,Housing Security Now - Philadelphia,threads,32707,0.105,54.3,Basic Needs,Philadelphia,Pennsylvania,US,1,2026-03-04T05:00:00Z
+250,@foodaccesscoalition_la,Food Access Coalition - Los Angeles,tiktok,15642,0.092,67.3,Basic Needs,Los Angeles,California,US,0,2025-12-26T19:00:00Z
+251,@lakesidealumni_ny,Lakeside Alumni Association - New York,twitter,29402,0.015,82.9,Alumni Engagement,New York,New York,US,0,2026-03-12T20:00:00Z
+252,@alumniaidfund_bos,Alumni Aid Fund - Boston,tiktok,4796,0.021,59.9,Emergency Aid,Boston,Massachusetts,US,0,2026-01-13T23:00:00Z
+253,@donorimpacthub_sf,Donor Impact Hub - San Francisco,youtube,106404,0.057,66.9,Advancement,San Francisco,California,US,1,2026-01-14T06:00:00Z
+254,@scholarshipcircle_hou,Scholarship Circle - Houston,threads,94335,0.034,63.8,Scholarships,Houston,Texas,US,1,2025-12-08T20:00:00Z
+255,@annualgivingdesk_chi,Annual Giving Desk - Chicago,instagram,47395,0.041,87.4,Advancement,Chicago,Illinois,US,0,2026-01-25T14:00:00Z
+256,@alumnicareers_sea,Alumni Career Network - Seattle,youtube,107487,0.021,52.0,Career Readiness,Seattle,Washington,US,1,2026-03-28T00:00:00Z
+257,@communitycollegebridge_phx,Community College Bridge - Phoenix,instagram,117618,0.045,93.9,Transfer Success,Phoenix,Arizona,US,1,2026-03-03T22:00:00Z
+258,@workforcepathways_den,Workforce Pathways - Denver,tiktok,214247,0.040,76.2,Workforce Programs,Denver,Colorado,US,1,2025-12-29T16:00:00Z
+259,@citypromisepartners_pdx,City Promise Partners - Portland,tiktok,130775,0.030,62.6,Community Partnerships,Portland,Oregon,US,1,2026-03-03T09:00:00Z
+260,@employerlearninglab_dal,Employer Learning Lab - Dallas,twitter,151456,0.027,87.6,Employer Engagement,Dallas,Texas,US,1,2026-02-11T12:00:00Z
+261,@stateaidwatch_atl,State Aid Watch - Atlanta,instagram,247006,0.024,77.3,Financial Aid Policy,Atlanta,Georgia,US,1,2026-01-17T02:00:00Z
+262,@completioncompact_mia,Completion Compact - Miami,twitter,76093,0.021,94.3,Completion,Miami,Florida,US,0,2026-01-09T11:00:00Z
+263,@institutionalresearch_phl,Institutional Research Exchange - Philadelphia,youtube,79297,0.045,86.9,Institutional Research,Philadelphia,Pennsylvania,US,0,2026-02-25T14:00:00Z
+264,@enrollmentanalytics_la,Enrollment Analytics Forum - Los Angeles,youtube,134140,0.018,93.1,Enrollment Management,Los Angeles,California,US,1,2026-03-20T17:00:00Z
+265,@northstaradvising_dal,Northstar Advising - Dallas,instagram,19668,0.019,66.8,Academic Advising,Dallas,Texas,US,1,2026-01-17T13:00:00Z
+266,@riverbendfinaid_atl,Riverbend Financial Aid - Atlanta,instagram,37356,0.026,84.1,Financial Aid,Atlanta,Georgia,US,0,2026-03-23T12:00:00Z
+267,@summitcareerhub_mia,Summit Career Hub - Miami,instagram,34597,0.035,75.7,Career Readiness,Miami,Florida,US,0,2025-12-22T08:00:00Z
+268,@clearpathwellness_phl,ClearPath Wellness - Philadelphia,youtube,19783,0.070,76.5,Student Wellness,Philadelphia,Pennsylvania,US,0,2026-02-18T02:00:00Z
+269,@pioneerlearning_la,Pioneer Learning Center - Los Angeles,threads,38725,0.062,58.5,Academic Support,Los Angeles,California,US,0,2026-01-14T22:00:00Z
+270,@coastalaccess_ny,Coastal Accessibility Services - New York,twitter,24586,0.040,78.2,Accessibility Services,New York,New York,US,0,2026-02-24T22:00:00Z
+271,@lakesideaid_bos,Lakeside Aid Office - Boston,twitter,76166,0.037,72.7,Financial Aid,Boston,Massachusetts,US,1,2026-01-26T21:00:00Z
+272,@horizonfirstyear_sf,Horizon First-Year Experience - San Francisco,youtube,57276,0.019,56.3,First-Year Experience,San Francisco,California,US,1,2026-01-16T16:00:00Z
+273,@libertytransfer_hou,Liberty Transfer Center - Houston,instagram,40579,0.018,50.7,Transfer Success,Houston,Texas,US,0,2026-02-02T23:00:00Z
+274,@innovationonline_chi,Innovation Online Learning - Chicago,threads,52164,0.028,58.9,Online Learning,Chicago,Illinois,US,1,2026-03-06T17:00:00Z
+275,@gatewayregistrar_sea,Gateway Registrar - Seattle,threads,77656,0.070,61.2,Registrar,Seattle,Washington,US,1,2026-01-18T01:00:00Z
+276,@censusweekdesk_phx,Census Week Desk - Phoenix,youtube,65235,0.065,85.9,Enrollment Management,Phoenix,Arizona,US,1,2025-12-13T13:00:00Z
+277,@degreeprogresshub_den,Degree Progress Hub - Denver,twitter,62988,0.059,63.8,Completion,Denver,Colorado,US,1,2026-02-11T11:00:00Z
+278,@campusbasicneeds_pdx,Campus Basic Needs - Portland,threads,60171,0.053,70.0,Basic Needs,Portland,Oregon,US,1,2026-01-29T13:00:00Z
+279,@admityieldteam_dal,Admit Yield Team - Dallas,instagram,48079,0.021,51.0,Admissions,Dallas,Texas,US,0,2026-02-23T20:00:00Z
+280,@scholarshipoffice_atl,Scholarship Office - Atlanta,threads,19828,0.066,58.3,Scholarships,Atlanta,Georgia,US,1,2026-03-28T21:00:00Z
+281,@firstgenpathways_mia,First-Gen Pathways - Miami,instagram,4863,0.057,54.6,First-Generation Success,Miami,Florida,US,0,2026-02-24T22:00:00Z
+282,@transferready_phl,Transfer Ready - Philadelphia,instagram,23253,0.063,53.0,Transfer Success,Philadelphia,Pennsylvania,US,0,2025-12-12T16:00:00Z
+283,@commuterconnect_la,Commuter Connect - Los Angeles,instagram,42752,0.101,49.3,Student Engagement,Los Angeles,California,US,1,2026-01-07T17:00:00Z
+284,@studentvoicehub_ny,Student Voice Hub - New York,tiktok,8942,0.080,91.5,Student Success,New York,New York,US,0,2026-03-07T07:00:00Z
+285,@peermentorcollective_bos,Peer Mentor Collective - Boston,tiktok,20109,0.037,69.9,Peer Mentoring,Boston,Massachusetts,US,0,2025-12-18T16:00:00Z
+286,@veteransuccess_sf,Veteran Success Network - San Francisco,tiktok,43925,0.097,81.5,Veteran Success,San Francisco,California,US,0,2026-03-06T02:00:00Z
+287,@adultlearnerhub_hou,Adult Learner Hub - Houston,twitter,8725,0.073,73.5,Adult Learners,Houston,Texas,US,0,2026-02-21T12:00:00Z
+288,@onlinelearners_chi,Online Learner Community - Chicago,tiktok,14731,0.114,63.8,Online Learning,Chicago,Illinois,US,0,2026-03-12T18:00:00Z
+289,@latinxsuccess_sea,Latinx Student Success - Seattle,instagram,44751,0.096,76.9,Belonging,Seattle,Washington,US,0,2025-12-21T04:00:00Z
+290,@blackstudentalliance_phx,Black Student Alliance - Phoenix,threads,43461,0.073,56.1,Belonging,Phoenix,Arizona,US,1,2025-12-19T03:00:00Z
+291,@stempeerlab_den,STEM Peer Lab - Denver,tiktok,11602,0.061,88.1,STEM Persistence,Denver,Colorado,US,0,2026-03-13T23:00:00Z
+292,@returningstudents_pdx,Returning Students Network - Portland,instagram,6767,0.103,52.9,Completion,Portland,Oregon,US,0,2025-12-07T17:00:00Z
+293,@housingsecuritynow_dal,Housing Security Now - Dallas,instagram,19869,0.051,47.1,Basic Needs,Dallas,Texas,US,0,2026-03-04T01:00:00Z
+294,@foodaccesscoalition_atl,Food Access Coalition - Atlanta,twitter,9931,0.033,56.7,Basic Needs,Atlanta,Georgia,US,0,2026-01-29T15:00:00Z
+295,@lakesidealumni_mia,Lakeside Alumni Association - Miami,youtube,21361,0.047,79.7,Alumni Engagement,Miami,Florida,US,0,2026-01-26T03:00:00Z
+296,@alumniaidfund_phl,Alumni Aid Fund - Philadelphia,threads,110678,0.035,58.4,Emergency Aid,Philadelphia,Pennsylvania,US,1,2026-01-16T06:00:00Z
+297,@donorimpacthub_la,Donor Impact Hub - Los Angeles,threads,19035,0.020,87.6,Advancement,Los Angeles,California,US,0,2026-03-02T03:00:00Z
+298,@scholarshipcircle_ny,Scholarship Circle - New York,youtube,75432,0.032,53.1,Scholarships,New York,New York,US,1,2026-03-22T08:00:00Z
+299,@annualgivingdesk_bos,Annual Giving Desk - Boston,youtube,49757,0.019,79.7,Advancement,Boston,Massachusetts,US,0,2026-03-17T21:00:00Z
+300,@alumnicareers_sf,Alumni Career Network - San Francisco,youtube,83157,0.048,81.3,Career Readiness,San Francisco,California,US,1,2025-12-15T03:00:00Z
+301,@communitycollegebridge_hou,Community College Bridge - Houston,instagram,198180,0.050,95.9,Transfer Success,Houston,Texas,US,1,2026-03-18T08:00:00Z
+302,@workforcepathways_chi,Workforce Pathways - Chicago,tiktok,153962,0.029,75.7,Workforce Programs,Chicago,Illinois,US,1,2026-02-25T08:00:00Z
+303,@citypromisepartners_sea,City Promise Partners - Seattle,twitter,42988,0.017,58.4,Community Partnerships,Seattle,Washington,US,0,2025-12-02T22:00:00Z
+304,@employerlearninglab_phx,Employer Learning Lab - Phoenix,threads,138707,0.020,64.3,Employer Engagement,Phoenix,Arizona,US,1,2026-01-10T05:00:00Z
+305,@stateaidwatch_den,State Aid Watch - Denver,tiktok,116626,0.053,78.1,Financial Aid Policy,Denver,Colorado,US,1,2025-12-24T01:00:00Z
+306,@completioncompact_pdx,Completion Compact - Portland,twitter,192498,0.039,70.1,Completion,Portland,Oregon,US,1,2026-02-16T14:00:00Z
+307,@institutionalresearch_dal,Institutional Research Exchange - Dallas,twitter,26484,0.034,93.1,Institutional Research,Dallas,Texas,US,1,2026-02-14T10:00:00Z
+308,@enrollmentanalytics_atl,Enrollment Analytics Forum - Atlanta,tiktok,169418,0.048,87.6,Enrollment Management,Atlanta,Georgia,US,1,2026-03-21T03:00:00Z
+309,@northstaradvising_phx,Northstar Advising - Phoenix,twitter,8291,0.057,52.5,Academic Advising,Phoenix,Arizona,US,0,2026-02-13T02:00:00Z
+310,@riverbendfinaid_den,Riverbend Financial Aid - Denver,threads,9531,0.025,80.6,Financial Aid,Denver,Colorado,US,0,2025-12-24T15:00:00Z
+311,@summitcareerhub_pdx,Summit Career Hub - Portland,instagram,41990,0.069,64.9,Career Readiness,Portland,Oregon,US,0,2026-03-03T05:00:00Z
+312,@clearpathwellness_dal,ClearPath Wellness - Dallas,instagram,69232,0.048,61.4,Student Wellness,Dallas,Texas,US,1,2026-01-24T16:00:00Z
+313,@pioneerlearning_atl,Pioneer Learning Center - Atlanta,twitter,52312,0.051,76.0,Academic Support,Atlanta,Georgia,US,1,2026-01-08T22:00:00Z
+314,@coastalaccess_mia,Coastal Accessibility Services - Miami,twitter,49311,0.056,59.4,Accessibility Services,Miami,Florida,US,0,2026-03-22T07:00:00Z
+315,@lakesideaid_phl,Lakeside Aid Office - Philadelphia,threads,37288,0.024,72.3,Financial Aid,Philadelphia,Pennsylvania,US,0,2026-01-29T01:00:00Z
+316,@horizonfirstyear_la,Horizon First-Year Experience - Los Angeles,twitter,62532,0.059,57.8,First-Year Experience,Los Angeles,California,US,1,2026-02-05T17:00:00Z
+317,@libertytransfer_ny,Liberty Transfer Center - New York,threads,39512,0.061,88.4,Transfer Success,New York,New York,US,0,2025-12-15T00:00:00Z
+318,@innovationonline_bos,Innovation Online Learning - Boston,youtube,72327,0.055,76.6,Online Learning,Boston,Massachusetts,US,1,2026-03-09T00:00:00Z
+319,@gatewayregistrar_sf,Gateway Registrar - San Francisco,tiktok,69186,0.063,67.0,Registrar,San Francisco,California,US,1,2026-02-23T06:00:00Z
+320,@censusweekdesk_hou,Census Week Desk - Houston,threads,43385,0.053,87.1,Enrollment Management,Houston,Texas,US,0,2025-12-30T23:00:00Z
+321,@degreeprogresshub_chi,Degree Progress Hub - Chicago,threads,37491,0.070,72.4,Completion,Chicago,Illinois,US,0,2025-12-11T16:00:00Z
+322,@campusbasicneeds_sea,Campus Basic Needs - Seattle,instagram,73018,0.068,54.2,Basic Needs,Seattle,Washington,US,1,2026-03-13T08:00:00Z
+323,@admityieldteam_phx,Admit Yield Team - Phoenix,youtube,57245,0.071,78.6,Admissions,Phoenix,Arizona,US,1,2026-02-10T13:00:00Z
+324,@scholarshipoffice_den,Scholarship Office - Denver,threads,8808,0.031,79.9,Scholarships,Denver,Colorado,US,0,2026-02-08T05:00:00Z
+325,@firstgenpathways_pdx,First-Gen Pathways - Portland,tiktok,18745,0.039,93.8,First-Generation Success,Portland,Oregon,US,0,2025-12-06T16:00:00Z
+326,@transferready_dal,Transfer Ready - Dallas,threads,5386,0.039,71.5,Transfer Success,Dallas,Texas,US,0,2026-03-25T15:00:00Z
+327,@commuterconnect_atl,Commuter Connect - Atlanta,tiktok,6819,0.101,77.9,Student Engagement,Atlanta,Georgia,US,0,2026-01-27T18:00:00Z
+328,@studentvoicehub_mia,Student Voice Hub - Miami,tiktok,5455,0.081,73.7,Student Success,Miami,Florida,US,0,2026-01-07T20:00:00Z
+329,@peermentorcollective_phl,Peer Mentor Collective - Philadelphia,youtube,22988,0.053,71.0,Peer Mentoring,Philadelphia,Pennsylvania,US,0,2025-12-13T13:00:00Z
+330,@veteransuccess_la,Veteran Success Network - Los Angeles,tiktok,21402,0.082,46.4,Veteran Success,Los Angeles,California,US,0,2026-03-02T17:00:00Z
+331,@adultlearnerhub_ny,Adult Learner Hub - New York,instagram,22197,0.093,92.4,Adult Learners,New York,New York,US,0,2026-02-07T13:00:00Z
+332,@onlinelearners_bos,Online Learner Community - Boston,instagram,15006,0.065,70.9,Online Learning,Boston,Massachusetts,US,0,2026-01-31T15:00:00Z
+333,@latinxsuccess_sf,Latinx Student Success - San Francisco,tiktok,16674,0.046,93.2,Belonging,San Francisco,California,US,0,2026-01-14T11:00:00Z
+334,@blackstudentalliance_hou,Black Student Alliance - Houston,twitter,30495,0.065,89.1,Belonging,Houston,Texas,US,1,2026-02-22T07:00:00Z
+335,@stempeerlab_chi,STEM Peer Lab - Chicago,threads,28555,0.040,73.7,STEM Persistence,Chicago,Illinois,US,0,2025-12-10T07:00:00Z
+336,@returningstudents_sea,Returning Students Network - Seattle,tiktok,23464,0.061,48.0,Completion,Seattle,Washington,US,0,2025-12-20T07:00:00Z
+337,@housingsecuritynow_phx,Housing Security Now - Phoenix,tiktok,37378,0.101,54.7,Basic Needs,Phoenix,Arizona,US,0,2026-03-03T18:00:00Z
+338,@foodaccesscoalition_den,Food Access Coalition - Denver,threads,31894,0.041,87.5,Basic Needs,Denver,Colorado,US,0,2026-02-05T02:00:00Z
+339,@lakesidealumni_pdx,Lakeside Alumni Association - Portland,instagram,59027,0.036,58.2,Alumni Engagement,Portland,Oregon,US,0,2026-03-28T15:00:00Z
+340,@alumniaidfund_dal,Alumni Aid Fund - Dallas,instagram,78953,0.057,77.3,Emergency Aid,Dallas,Texas,US,1,2026-02-08T15:00:00Z
+341,@donorimpacthub_atl,Donor Impact Hub - Atlanta,youtube,60772,0.035,80.1,Advancement,Atlanta,Georgia,US,0,2026-03-29T20:00:00Z
+342,@scholarshipcircle_mia,Scholarship Circle - Miami,tiktok,65866,0.044,64.2,Scholarships,Miami,Florida,US,0,2026-02-27T13:00:00Z
+343,@annualgivingdesk_phl,Annual Giving Desk - Philadelphia,twitter,15523,0.031,56.1,Advancement,Philadelphia,Pennsylvania,US,0,2026-03-24T10:00:00Z
+344,@alumnicareers_la,Alumni Career Network - Los Angeles,threads,10539,0.032,78.0,Career Readiness,Los Angeles,California,US,0,2026-03-07T21:00:00Z
+345,@communitycollegebridge_ny,Community College Bridge - New York,twitter,157549,0.017,88.5,Transfer Success,New York,New York,US,1,2026-02-03T19:00:00Z
+346,@workforcepathways_bos,Workforce Pathways - Boston,threads,229290,0.034,95.4,Workforce Programs,Boston,Massachusetts,US,1,2026-03-03T08:00:00Z
+347,@citypromisepartners_sf,City Promise Partners - San Francisco,youtube,113258,0.048,65.3,Community Partnerships,San Francisco,California,US,1,2026-02-03T15:00:00Z
+348,@employerlearninglab_hou,Employer Learning Lab - Houston,instagram,185211,0.029,82.9,Employer Engagement,Houston,Texas,US,1,2026-01-28T20:00:00Z
+349,@stateaidwatch_chi,State Aid Watch - Chicago,tiktok,220395,0.017,70.7,Financial Aid Policy,Chicago,Illinois,US,1,2025-12-16T06:00:00Z
+350,@completioncompact_sea,Completion Compact - Seattle,twitter,28954,0.050,94.9,Completion,Seattle,Washington,US,0,2026-02-27T08:00:00Z
+351,@institutionalresearch_phx,Institutional Research Exchange - Phoenix,threads,71495,0.041,68.4,Institutional Research,Phoenix,Arizona,US,0,2026-01-13T22:00:00Z
+352,@enrollmentanalytics_den,Enrollment Analytics Forum - Denver,twitter,131563,0.023,64.9,Enrollment Management,Denver,Colorado,US,1,2026-02-15T18:00:00Z
+353,@northstaradvising_hou,Northstar Advising - Houston,tiktok,33049,0.047,52.9,Academic Advising,Houston,Texas,US,1,2026-02-14T17:00:00Z
+354,@riverbendfinaid_chi,Riverbend Financial Aid - Chicago,youtube,31860,0.044,74.2,Financial Aid,Chicago,Illinois,US,0,2026-03-24T14:00:00Z
+355,@summitcareerhub_sea,Summit Career Hub - Seattle,instagram,75199,0.040,61.7,Career Readiness,Seattle,Washington,US,1,2025-12-07T12:00:00Z
+356,@clearpathwellness_phx,ClearPath Wellness - Phoenix,threads,39929,0.052,84.8,Student Wellness,Phoenix,Arizona,US,0,2026-01-20T22:00:00Z
+357,@pioneerlearning_den,Pioneer Learning Center - Denver,instagram,70300,0.025,67.9,Academic Support,Denver,Colorado,US,1,2025-12-14T22:00:00Z
+358,@coastalaccess_pdx,Coastal Accessibility Services - Portland,twitter,72396,0.037,64.1,Accessibility Services,Portland,Oregon,US,1,2026-03-17T17:00:00Z
+359,@lakesideaid_dal,Lakeside Aid Office - Dallas,instagram,18394,0.029,70.4,Financial Aid,Dallas,Texas,US,0,2025-12-15T15:00:00Z
+360,@horizonfirstyear_atl,Horizon First-Year Experience - Atlanta,youtube,59253,0.055,89.1,First-Year Experience,Atlanta,Georgia,US,1,2026-03-10T13:00:00Z
+361,@libertytransfer_mia,Liberty Transfer Center - Miami,threads,5099,0.066,52.0,Transfer Success,Miami,Florida,US,0,2026-02-06T20:00:00Z
+362,@innovationonline_phl,Innovation Online Learning - Philadelphia,instagram,9390,0.060,62.6,Online Learning,Philadelphia,Pennsylvania,US,0,2026-01-25T22:00:00Z
+363,@gatewayregistrar_la,Gateway Registrar - Los Angeles,tiktok,39025,0.066,88.3,Registrar,Los Angeles,California,US,0,2026-03-26T08:00:00Z
+364,@censusweekdesk_ny,Census Week Desk - New York,youtube,36314,0.065,72.1,Enrollment Management,New York,New York,US,0,2025-12-09T08:00:00Z
+365,@degreeprogresshub_bos,Degree Progress Hub - Boston,instagram,50588,0.045,55.4,Completion,Boston,Massachusetts,US,0,2025-12-04T03:00:00Z
+366,@campusbasicneeds_sf,Campus Basic Needs - San Francisco,twitter,13743,0.065,82.4,Basic Needs,San Francisco,California,US,0,2026-03-19T19:00:00Z
+367,@admityieldteam_hou,Admit Yield Team - Houston,instagram,55918,0.035,63.7,Admissions,Houston,Texas,US,1,2025-12-31T16:00:00Z
+368,@scholarshipoffice_chi,Scholarship Office - Chicago,instagram,25034,0.026,74.7,Scholarships,Chicago,Illinois,US,0,2026-03-10T12:00:00Z
+369,@firstgenpathways_sea,First-Gen Pathways - Seattle,twitter,793,0.058,52.3,First-Generation Success,Seattle,Washington,US,0,2026-02-07T10:00:00Z
+370,@transferready_phx,Transfer Ready - Phoenix,tiktok,6849,0.077,84.6,Transfer Success,Phoenix,Arizona,US,0,2026-03-02T01:00:00Z
+371,@commuterconnect_den,Commuter Connect - Denver,tiktok,42898,0.066,69.7,Student Engagement,Denver,Colorado,US,1,2026-01-29T03:00:00Z
+372,@studentvoicehub_pdx,Student Voice Hub - Portland,threads,23840,0.114,64.7,Student Success,Portland,Oregon,US,0,2026-03-27T04:00:00Z
+373,@peermentorcollective_dal,Peer Mentor Collective - Dallas,youtube,35536,0.095,51.9,Peer Mentoring,Dallas,Texas,US,0,2026-01-28T05:00:00Z
+374,@veteransuccess_atl,Veteran Success Network - Atlanta,tiktok,36434,0.103,81.6,Veteran Success,Atlanta,Georgia,US,0,2026-01-05T10:00:00Z
+375,@adultlearnerhub_mia,Adult Learner Hub - Miami,threads,36445,0.080,59.7,Adult Learners,Miami,Florida,US,0,2025-12-17T00:00:00Z
+376,@onlinelearners_phl,Online Learner Community - Philadelphia,tiktok,26701,0.102,65.2,Online Learning,Philadelphia,Pennsylvania,US,0,2025-12-27T01:00:00Z
+377,@latinxsuccess_la,Latinx Student Success - Los Angeles,tiktok,36171,0.092,76.6,Belonging,Los Angeles,California,US,1,2026-03-02T07:00:00Z
+378,@blackstudentalliance_ny,Black Student Alliance - New York,instagram,33110,0.080,92.5,Belonging,New York,New York,US,0,2026-01-28T21:00:00Z
+379,@stempeerlab_bos,STEM Peer Lab - Boston,instagram,38057,0.069,82.1,STEM Persistence,Boston,Massachusetts,US,1,2026-02-17T16:00:00Z
+380,@returningstudents_sf,Returning Students Network - San Francisco,threads,25707,0.112,85.3,Completion,San Francisco,California,US,0,2026-01-27T06:00:00Z
+381,@housingsecuritynow_hou,Housing Security Now - Houston,instagram,44463,0.113,60.1,Basic Needs,Houston,Texas,US,0,2026-03-08T22:00:00Z
+382,@foodaccesscoalition_chi,Food Access Coalition - Chicago,threads,8716,0.058,48.5,Basic Needs,Chicago,Illinois,US,0,2026-01-06T00:00:00Z
+383,@lakesidealumni_sea,Lakeside Alumni Association - Seattle,twitter,62512,0.033,55.7,Alumni Engagement,Seattle,Washington,US,0,2026-03-25T17:00:00Z
+384,@alumniaidfund_phx,Alumni Aid Fund - Phoenix,tiktok,92029,0.055,86.8,Emergency Aid,Phoenix,Arizona,US,1,2026-02-10T12:00:00Z
+385,@donorimpacthub_den,Donor Impact Hub - Denver,youtube,106763,0.032,77.7,Advancement,Denver,Colorado,US,1,2026-03-27T15:00:00Z
+386,@scholarshipcircle_pdx,Scholarship Circle - Portland,youtube,107085,0.039,64.3,Scholarships,Portland,Oregon,US,1,2026-01-18T11:00:00Z
+387,@annualgivingdesk_dal,Annual Giving Desk - Dallas,threads,21919,0.052,69.0,Advancement,Dallas,Texas,US,0,2026-01-10T14:00:00Z
+388,@alumnicareers_atl,Alumni Career Network - Atlanta,tiktok,16074,0.027,77.2,Career Readiness,Atlanta,Georgia,US,0,2026-01-21T18:00:00Z
+389,@communitycollegebridge_mia,Community College Bridge - Miami,instagram,53809,0.039,74.0,Transfer Success,Miami,Florida,US,0,2025-12-14T08:00:00Z
+390,@workforcepathways_phl,Workforce Pathways - Philadelphia,instagram,113237,0.042,60.8,Workforce Programs,Philadelphia,Pennsylvania,US,1,2026-01-16T10:00:00Z
+391,@citypromisepartners_la,City Promise Partners - Los Angeles,tiktok,136579,0.016,70.6,Community Partnerships,Los Angeles,California,US,1,2025-12-13T23:00:00Z
+392,@employerlearninglab_ny,Employer Learning Lab - New York,instagram,188278,0.023,78.6,Employer Engagement,New York,New York,US,1,2025-12-25T06:00:00Z
+393,@stateaidwatch_bos,State Aid Watch - Boston,youtube,185357,0.033,79.2,Financial Aid Policy,Boston,Massachusetts,US,1,2025-12-17T20:00:00Z
+394,@completioncompact_sf,Completion Compact - San Francisco,threads,169778,0.024,77.0,Completion,San Francisco,California,US,1,2026-02-08T09:00:00Z
+395,@institutionalresearch_hou,Institutional Research Exchange - Houston,instagram,59851,0.015,62.6,Institutional Research,Houston,Texas,US,1,2025-12-27T04:00:00Z
+396,@enrollmentanalytics_chi,Enrollment Analytics Forum - Chicago,tiktok,118277,0.045,65.8,Enrollment Management,Chicago,Illinois,US,1,2026-01-08T08:00:00Z
+397,@northstaradvising_ny,Northstar Advising - New York,twitter,19221,0.020,90.8,Academic Advising,New York,New York,US,0,2026-02-06T12:00:00Z
+398,@riverbendfinaid_bos,Riverbend Financial Aid - Boston,twitter,64197,0.026,75.7,Financial Aid,Boston,Massachusetts,US,1,2026-02-27T11:00:00Z
+399,@summitcareerhub_sf,Summit Career Hub - San Francisco,tiktok,26799,0.024,56.6,Career Readiness,San Francisco,California,US,1,2025-12-11T05:00:00Z
+400,@clearpathwellness_hou,ClearPath Wellness - Houston,youtube,4126,0.040,64.6,Student Wellness,Houston,Texas,US,0,2026-03-13T04:00:00Z
+401,@pioneerlearning_chi,Pioneer Learning Center - Chicago,youtube,30371,0.024,52.5,Academic Support,Chicago,Illinois,US,0,2026-03-27T14:00:00Z
+402,@coastalaccess_sea,Coastal Accessibility Services - Seattle,twitter,45434,0.049,59.4,Accessibility Services,Seattle,Washington,US,0,2026-01-05T20:00:00Z
+403,@lakesideaid_phx,Lakeside Aid Office - Phoenix,youtube,54025,0.057,73.9,Financial Aid,Phoenix,Arizona,US,1,2026-03-19T20:00:00Z
+404,@horizonfirstyear_den,Horizon First-Year Experience - Denver,instagram,18224,0.042,68.6,First-Year Experience,Denver,Colorado,US,0,2026-02-08T03:00:00Z
+405,@libertytransfer_pdx,Liberty Transfer Center - Portland,youtube,37079,0.027,61.0,Transfer Success,Portland,Oregon,US,1,2026-01-03T20:00:00Z
+406,@innovationonline_dal,Innovation Online Learning - Dallas,tiktok,37767,0.056,70.9,Online Learning,Dallas,Texas,US,0,2025-12-29T07:00:00Z
+407,@gatewayregistrar_atl,Gateway Registrar - Atlanta,instagram,9669,0.060,65.0,Registrar,Atlanta,Georgia,US,0,2026-03-23T03:00:00Z
+408,@censusweekdesk_mia,Census Week Desk - Miami,youtube,61049,0.063,76.1,Enrollment Management,Miami,Florida,US,1,2025-12-25T05:00:00Z
+409,@degreeprogresshub_phl,Degree Progress Hub - Philadelphia,threads,57875,0.026,76.9,Completion,Philadelphia,Pennsylvania,US,1,2025-12-09T22:00:00Z
+410,@campusbasicneeds_la,Campus Basic Needs - Los Angeles,threads,72395,0.039,83.2,Basic Needs,Los Angeles,California,US,1,2026-01-25T14:00:00Z
+411,@admityieldteam_ny,Admit Yield Team - New York,twitter,50989,0.033,62.8,Admissions,New York,New York,US,0,2026-03-20T01:00:00Z
+412,@scholarshipoffice_bos,Scholarship Office - Boston,instagram,20412,0.040,60.0,Scholarships,Boston,Massachusetts,US,0,2026-03-20T02:00:00Z
+413,@firstgenpathways_sf,First-Gen Pathways - San Francisco,instagram,17491,0.107,57.3,First-Generation Success,San Francisco,California,US,0,2026-02-05T09:00:00Z
+414,@transferready_hou,Transfer Ready - Houston,threads,27247,0.101,85.9,Transfer Success,Houston,Texas,US,0,2026-02-09T00:00:00Z
+415,@commuterconnect_chi,Commuter Connect - Chicago,instagram,17337,0.066,75.3,Student Engagement,Chicago,Illinois,US,0,2026-03-28T14:00:00Z
+416,@studentvoicehub_sea,Student Voice Hub - Seattle,threads,24315,0.060,82.8,Student Success,Seattle,Washington,US,0,2026-03-24T02:00:00Z
+417,@peermentorcollective_phx,Peer Mentor Collective - Phoenix,instagram,43915,0.107,60.6,Peer Mentoring,Phoenix,Arizona,US,1,2026-03-01T11:00:00Z
+418,@veteransuccess_den,Veteran Success Network - Denver,instagram,31143,0.059,75.8,Veteran Success,Denver,Colorado,US,0,2026-01-06T11:00:00Z
+419,@adultlearnerhub_pdx,Adult Learner Hub - Portland,threads,639,0.069,62.1,Adult Learners,Portland,Oregon,US,0,2026-03-14T14:00:00Z
+420,@onlinelearners_dal,Online Learner Community - Dallas,instagram,3010,0.080,49.9,Online Learning,Dallas,Texas,US,0,2026-02-12T13:00:00Z
+421,@latinxsuccess_atl,Latinx Student Success - Atlanta,tiktok,20253,0.106,58.1,Belonging,Atlanta,Georgia,US,0,2025-12-21T16:00:00Z
+422,@blackstudentalliance_mia,Black Student Alliance - Miami,threads,41423,0.062,67.4,Belonging,Miami,Florida,US,0,2026-02-25T18:00:00Z
+423,@stempeerlab_phl,STEM Peer Lab - Philadelphia,instagram,12111,0.061,82.7,STEM Persistence,Philadelphia,Pennsylvania,US,0,2025-12-27T18:00:00Z
+424,@returningstudents_la,Returning Students Network - Los Angeles,tiktok,35434,0.095,76.2,Completion,Los Angeles,California,US,0,2025-12-14T20:00:00Z
+425,@housingsecuritynow_ny,Housing Security Now - New York,twitter,43936,0.049,87.9,Basic Needs,New York,New York,US,0,2026-03-12T18:00:00Z
+426,@foodaccesscoalition_bos,Food Access Coalition - Boston,instagram,1350,0.114,59.2,Basic Needs,Boston,Massachusetts,US,0,2026-03-17T08:00:00Z
+427,@lakesidealumni_sf,Lakeside Alumni Association - San Francisco,threads,65492,0.058,75.0,Alumni Engagement,San Francisco,California,US,1,2026-01-16T21:00:00Z
+428,@alumniaidfund_hou,Alumni Aid Fund - Houston,tiktok,68962,0.037,63.2,Emergency Aid,Houston,Texas,US,0,2026-02-25T02:00:00Z
+429,@donorimpacthub_chi,Donor Impact Hub - Chicago,threads,95163,0.033,86.7,Advancement,Chicago,Illinois,US,1,2026-03-15T00:00:00Z
+430,@scholarshipcircle_sea,Scholarship Circle - Seattle,threads,50484,0.052,74.9,Scholarships,Seattle,Washington,US,0,2026-03-10T10:00:00Z
+431,@annualgivingdesk_phx,Annual Giving Desk - Phoenix,youtube,57707,0.021,55.3,Advancement,Phoenix,Arizona,US,0,2025-12-13T23:00:00Z
+432,@alumnicareers_den,Alumni Career Network - Denver,youtube,30809,0.024,79.5,Career Readiness,Denver,Colorado,US,0,2026-02-25T11:00:00Z
+433,@communitycollegebridge_pdx,Community College Bridge - Portland,threads,144842,0.022,91.9,Transfer Success,Portland,Oregon,US,1,2026-03-24T21:00:00Z
+434,@workforcepathways_dal,Workforce Pathways - Dallas,threads,239538,0.035,67.5,Workforce Programs,Dallas,Texas,US,1,2026-02-23T04:00:00Z
+435,@citypromisepartners_atl,City Promise Partners - Atlanta,instagram,160332,0.046,93.8,Community Partnerships,Atlanta,Georgia,US,1,2026-01-02T19:00:00Z
+436,@employerlearninglab_mia,Employer Learning Lab - Miami,twitter,208560,0.024,84.1,Employer Engagement,Miami,Florida,US,1,2026-01-27T22:00:00Z
+437,@stateaidwatch_phl,State Aid Watch - Philadelphia,tiktok,174157,0.027,74.7,Financial Aid Policy,Philadelphia,Pennsylvania,US,1,2026-03-13T23:00:00Z
+438,@completioncompact_la,Completion Compact - Los Angeles,tiktok,103757,0.040,74.8,Completion,Los Angeles,California,US,1,2025-12-24T16:00:00Z
+439,@institutionalresearch_ny,Institutional Research Exchange - New York,twitter,36099,0.034,89.1,Institutional Research,New York,New York,US,0,2025-12-28T00:00:00Z
+440,@enrollmentanalytics_bos,Enrollment Analytics Forum - Boston,twitter,72052,0.028,76.2,Enrollment Management,Boston,Massachusetts,US,1,2026-02-18T09:00:00Z
+441,@northstaradvising_mia,Northstar Advising - Miami,youtube,48571,0.067,60.3,Academic Advising,Miami,Florida,US,0,2025-12-09T12:00:00Z
+442,@riverbendfinaid_phl,Riverbend Financial Aid - Philadelphia,twitter,32717,0.051,90.1,Financial Aid,Philadelphia,Pennsylvania,US,0,2026-03-11T13:00:00Z
+443,@summitcareerhub_la,Summit Career Hub - Los Angeles,instagram,6146,0.069,79.3,Career Readiness,Los Angeles,California,US,0,2026-03-10T14:00:00Z
+444,@clearpathwellness_ny,ClearPath Wellness - New York,instagram,55265,0.062,81.2,Student Wellness,New York,New York,US,1,2026-02-22T22:00:00Z
+445,@pioneerlearning_bos,Pioneer Learning Center - Boston,instagram,74916,0.024,80.4,Academic Support,Boston,Massachusetts,US,1,2026-03-17T17:00:00Z
+446,@coastalaccess_sf,Coastal Accessibility Services - San Francisco,threads,55149,0.057,77.7,Accessibility Services,San Francisco,California,US,1,2026-03-09T14:00:00Z
+447,@lakesideaid_hou,Lakeside Aid Office - Houston,youtube,8517,0.039,63.7,Financial Aid,Houston,Texas,US,0,2026-01-16T06:00:00Z
+448,@horizonfirstyear_chi,Horizon First-Year Experience - Chicago,youtube,13234,0.045,59.5,First-Year Experience,Chicago,Illinois,US,0,2026-03-25T04:00:00Z
+449,@libertytransfer_sea,Liberty Transfer Center - Seattle,youtube,42833,0.039,50.5,Transfer Success,Seattle,Washington,US,0,2025-12-13T12:00:00Z
+450,@innovationonline_phx,Innovation Online Learning - Phoenix,twitter,28804,0.067,85.0,Online Learning,Phoenix,Arizona,US,0,2026-03-30T21:00:00Z
+451,@gatewayregistrar_den,Gateway Registrar - Denver,youtube,26609,0.044,87.0,Registrar,Denver,Colorado,US,1,2025-12-12T04:00:00Z
+452,@censusweekdesk_pdx,Census Week Desk - Portland,threads,38876,0.046,58.4,Enrollment Management,Portland,Oregon,US,0,2025-12-20T02:00:00Z
+453,@degreeprogresshub_dal,Degree Progress Hub - Dallas,instagram,58655,0.023,56.6,Completion,Dallas,Texas,US,1,2026-01-18T12:00:00Z
+454,@campusbasicneeds_atl,Campus Basic Needs - Atlanta,tiktok,6181,0.043,86.7,Basic Needs,Atlanta,Georgia,US,0,2025-12-17T02:00:00Z
+455,@admityieldteam_mia,Admit Yield Team - Miami,youtube,26678,0.039,69.1,Admissions,Miami,Florida,US,0,2025-12-09T12:00:00Z
+456,@scholarshipoffice_phl,Scholarship Office - Philadelphia,youtube,46959,0.063,60.5,Scholarships,Philadelphia,Pennsylvania,US,0,2026-03-04T14:00:00Z
+457,@firstgenpathways_la,First-Gen Pathways - Los Angeles,tiktok,15860,0.099,87.8,First-Generation Success,Los Angeles,California,US,0,2026-02-15T03:00:00Z
+458,@transferready_ny,Transfer Ready - New York,twitter,43508,0.114,93.3,Transfer Success,New York,New York,US,0,2026-03-10T16:00:00Z
+459,@commuterconnect_bos,Commuter Connect - Boston,instagram,28854,0.054,74.3,Student Engagement,Boston,Massachusetts,US,0,2025-12-26T15:00:00Z
+460,@studentvoicehub_sf,Student Voice Hub - San Francisco,twitter,11001,0.076,84.0,Student Success,San Francisco,California,US,0,2026-03-16T15:00:00Z
+461,@peermentorcollective_hou,Peer Mentor Collective - Houston,threads,39972,0.033,71.6,Peer Mentoring,Houston,Texas,US,0,2025-12-22T19:00:00Z

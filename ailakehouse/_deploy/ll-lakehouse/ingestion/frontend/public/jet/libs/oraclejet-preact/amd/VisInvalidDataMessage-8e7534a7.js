@@ -1,0 +1,2 @@
+define(['exports', 'preact/jsx-runtime', './VisStatusMessage-ac3a90aa', './useTranslationBundle-e4dd341e'], (function(a,e,i,t){"use strict";a.VisInvalidDataMessage=function(a){const s=t.useTranslationBundle("@oracle/oraclejet-preact").vis_invalidData();return e.jsx(i.VisStatusMessage,{text:s,width:a.width,height:a.height,"aria-label":a["aria-label"],"aria-describedby":a["aria-describedby"],"aria-labelledby":a["aria-labelledby"]})}}));
+//# sourceMappingURL=VisInvalidDataMessage-8e7534a7.js.map

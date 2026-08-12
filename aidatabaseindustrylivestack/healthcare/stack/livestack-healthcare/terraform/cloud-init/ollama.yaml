@@ -1,0 +1,23 @@
+#cloud-config
+package_update: true
+packages:
+  - curl
+  - podman
+
+write_files:
+  - path: /opt/healthcare-livestack/ollama-runtime.env
+    permissions: "0644"
+    owner: root:root
+    content: |
+      OLLAMA_MODEL=${ollama_model}
+      OLLAMA_PORT=${ollama_port}
+      OLLAMA_IMAGE=${ollama_image}
+  - path: /usr/local/sbin/bootstrap-healthcare-ollama-vm.sh
+    permissions: "0755"
+    owner: root:root
+    content: |
+      ${bootstrap_ollama_vm_script}
+
+runcmd:
+  - [bash, -lc, "mkdir -p /opt/healthcare-livestack"]
+  - [bash, -lc, "/usr/local/sbin/bootstrap-healthcare-ollama-vm.sh 2>&1 | tee /var/log/healthcare-ollama-bootstrap.log"]

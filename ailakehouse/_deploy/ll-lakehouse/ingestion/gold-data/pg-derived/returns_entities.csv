@@ -1,0 +1,195 @@
+entity_id,entity_key,display_name,entity_type,review_score,review_level,region,city,channel,total_amount,event_count,is_confirmed_returns
+1,ACCT-mreed45-yahoo-com,mreed45@yahoo.com Return Profile,customer_account,96.0,critical,CA,San Jose,web,1302.0,1,1
+2,RECEIPT-459762134,Gold Transaction 459762134,receipt,96.0,critical,CA,San Jose,returns,1302.0,1,1
+3,STORE-008,PeakGear San Jose Store 008,store,76.0,high,CA,San Jose,store,1302.0,1,0
+4,REFUND-SWAPPED_ITEM_SUSPECTED,Swapped Item Suspected Refund Pattern,refund_method,96.0,critical,CA,San Jose,returns,1302.0,1,1
+5,ACCT-cameron-lee87-hotmail-com,cameron.lee87@hotmail.com Return Profile,customer_account,96.0,critical,TX,Austin,web,1302.0,1,1
+6,RECEIPT-244959493,Gold Transaction 244959493,receipt,96.0,critical,TX,Austin,returns,1302.0,1,1
+7,STORE-036,PeakGear Austin Store 036,store,76.0,high,TX,Austin,store,1302.0,1,0
+8,REFUND-HIGH_VALUE_NO_RECEIPT,High Value No Receipt Refund Pattern,refund_method,96.0,critical,TX,Austin,returns,1302.0,1,1
+9,ACCT-avery-foster-gmail-com,avery_foster@gmail.com Return Profile,customer_account,94.0,critical,TX,San Antonio,web,1278.0,1,1
+10,RECEIPT-295315733,Gold Transaction 295315733,receipt,94.0,critical,TX,San Antonio,returns,1278.0,1,1
+11,STORE-049,PeakGear San Antonio Store 049,store,74.0,medium,TX,San Antonio,store,1278.0,1,0
+12,REFUND-SERIAL_RETURN_PATTERN,Serial Return Pattern Refund Pattern,refund_method,94.0,critical,TX,San Antonio,returns,1278.0,1,1
+13,RECEIPT-257474023,Gold Transaction 257474023,receipt,93.0,critical,TX,San Antonio,returns,1266.0,1,1
+14,STORE-043,PeakGear San Antonio Store 043,store,73.0,medium,TX,San Antonio,store,1266.0,1,0
+15,ACCT-morgan54-gmail-com,morgan54@gmail.com Return Profile,customer_account,93.0,critical,AZ,Phoenix,web,1266.0,1,1
+16,RECEIPT-532040822,Gold Transaction 532040822,receipt,93.0,critical,AZ,Phoenix,returns,1266.0,1,1
+17,STORE-019,PeakGear Phoenix Store 019,store,73.0,medium,AZ,Phoenix,store,1266.0,1,0
+18,REFUND-NO_RECEIPT_RETURN,No Receipt Return Refund Pattern,refund_method,93.0,critical,AZ,Phoenix,returns,1266.0,1,1
+19,ACCT-reese80-hotmail-com,reese80@hotmail.com Return Profile,customer_account,92.0,critical,OH,Columbus,web,1254.0,1,1
+20,RECEIPT-364640430,Gold Transaction 364640430,receipt,92.0,critical,OH,Columbus,returns,1254.0,1,1
+21,STORE-003,PeakGear Columbus Store 003,store,72.0,medium,OH,Columbus,store,1254.0,1,0
+22,REFUND-DUPLICATE_RECEIPT_PRESENTED,Duplicate Receipt Presented Refund Pattern,refund_method,92.0,critical,OH,Columbus,returns,1254.0,1,1
+23,ACCT-lwatson29-outlook-com,lwatson29@outlook.com Return Profile,customer_account,92.0,critical,OH,Columbus,web,1254.0,1,1
+24,RECEIPT-176917163,Gold Transaction 176917163,receipt,92.0,critical,OH,Columbus,returns,1254.0,1,1
+25,ACCT-jordan733-proton-me,jordan733@proton.me Return Profile,customer_account,92.0,critical,TX,Houston,web,1254.0,1,1
+26,RECEIPT-145853872,Gold Transaction 145853872,receipt,92.0,critical,TX,Houston,returns,1254.0,1,1
+27,STORE-048,PeakGear Houston Store 048,store,72.0,medium,TX,Houston,store,1254.0,1,0
+28,RECEIPT-383282951,Gold Transaction 383282951,receipt,92.0,critical,IL,Chicago,returns,1254.0,1,1
+29,STORE-031,PeakGear Chicago Store 031,store,72.0,medium,IL,Chicago,store,1254.0,1,0
+30,RECEIPT-134324937,Gold Transaction 134324937,receipt,91.0,critical,TX,San Antonio,returns,1242.0,1,1
+31,STORE-026,PeakGear San Antonio Store 026,store,71.0,medium,TX,San Antonio,store,1242.0,1,0
+32,ACCT-quinn67-gmail-com,quinn67@gmail.com Return Profile,customer_account,91.0,critical,IL,Chicago,web,1242.0,1,1
+33,RECEIPT-109110149,Gold Transaction 109110149,receipt,91.0,critical,IL,Chicago,returns,1242.0,1,1
+34,ACCT-quinn-patel564-outlook-com,quinn.patel564@outlook.com Return Profile,customer_account,90.0,critical,NC,Charlotte,web,1230.0,1,1
+35,RECEIPT-571161465,Gold Transaction 571161465,receipt,90.0,critical,NC,Charlotte,returns,1230.0,1,1
+36,STORE-044,PeakGear Charlotte Store 044,store,70.0,medium,NC,Charlotte,store,1230.0,1,0
+37,ACCT-areed195-yahoo-com,areed195@yahoo.com Return Profile,customer_account,89.0,high,IL,Chicago,web,1218.0,1,0
+38,RECEIPT-556931628,Gold Transaction 556931628,receipt,89.0,high,IL,Chicago,returns,1218.0,1,0
+39,ACCT-blake-flores915-outlook-com,blake.flores915@outlook.com Return Profile,customer_account,89.0,high,TX,Austin,web,1218.0,1,0
+40,RECEIPT-510611510,Gold Transaction 510611510,receipt,89.0,high,TX,Austin,returns,1218.0,1,0
+41,STORE-042,PeakGear Austin Store 042,store,69.0,medium,TX,Austin,store,1218.0,1,0
+42,ACCT-jamie-bailey62-hotmail-com,jamie.bailey62@hotmail.com Return Profile,customer_account,89.0,high,AZ,Phoenix,web,1218.0,1,0
+43,RECEIPT-259900785,Gold Transaction 259900785,receipt,89.0,high,AZ,Phoenix,returns,1218.0,1,0
+44,STORE-007,PeakGear Phoenix Store 007,store,69.0,medium,AZ,Phoenix,store,1218.0,1,0
+45,ACCT-bfoster77-gmail-com,bfoster77@gmail.com Return Profile,customer_account,89.0,high,TX,Fort Worth,web,1218.0,1,0
+46,RECEIPT-18067561,Gold Transaction 18067561,receipt,89.0,high,TX,Fort Worth,returns,1218.0,1,0
+47,STORE-040,PeakGear Fort Worth Store 040,store,69.0,medium,TX,Fort Worth,store,1218.0,1,0
+48,ACCT-tbrooks94-outlook-com,tbrooks94@outlook.com Return Profile,customer_account,89.0,high,CA,San Diego,web,1218.0,1,0
+49,RECEIPT-98968414,Gold Transaction 98968414,receipt,89.0,high,CA,San Diego,returns,1218.0,1,0
+50,STORE-002,PeakGear San Diego Store 002,store,69.0,medium,CA,San Diego,store,1218.0,1,0
+51,RECEIPT-384490878,Gold Transaction 384490878,receipt,88.0,high,CA,San Diego,returns,1206.0,1,0
+52,STORE-022,PeakGear San Diego Store 022,store,68.0,medium,CA,San Diego,store,1206.0,1,0
+53,ACCT-skyler-cook244-gmail-com,skyler.cook244@gmail.com Return Profile,customer_account,87.0,high,CA,San Francisco,web,1194.0,1,0
+54,RECEIPT-574175758,Gold Transaction 574175758,receipt,87.0,high,CA,San Francisco,returns,1194.0,1,0
+55,STORE-015,PeakGear San Francisco Store 015,store,67.0,medium,CA,San Francisco,store,1194.0,1,0
+56,RECEIPT-165087274,Gold Transaction 165087274,receipt,86.0,high,IL,Chicago,returns,1182.0,1,0
+57,REFUND-PRICE_TAG_TAMPERING,Price Tag Tampering Refund Pattern,refund_method,86.0,high,IL,Chicago,returns,1182.0,1,0
+58,ACCT-hflores412-yahoo-com,hflores412@yahoo.com Return Profile,customer_account,85.0,high,CA,Los Angeles,web,1170.0,1,0
+59,RECEIPT-44310235,Gold Transaction 44310235,receipt,85.0,high,CA,Los Angeles,returns,1170.0,1,0
+60,STORE-035,PeakGear Los Angeles Store 035,store,65.0,medium,CA,Los Angeles,store,1170.0,1,0
+61,ACCT-taylor-ramirez513-hotmail-com,taylor.ramirez513@hotmail.com Return Profile,customer_account,85.0,high,TX,Austin,web,1170.0,1,0
+62,RECEIPT-249866308,Gold Transaction 249866308,receipt,85.0,high,TX,Austin,returns,1170.0,1,0
+63,STORE-023,PeakGear Austin Store 023,store,65.0,medium,TX,Austin,store,1170.0,1,0
+64,ACCT-jordan24-yahoo-com,jordan24@yahoo.com Return Profile,customer_account,85.0,high,TX,Austin,web,1170.0,1,0
+65,RECEIPT-184075316,Gold Transaction 184075316,receipt,85.0,high,TX,Austin,returns,1170.0,1,0
+66,STORE-004,PeakGear Austin Store 004,store,65.0,medium,TX,Austin,store,1170.0,1,0
+67,ACCT-ajames103-yahoo-com,ajames103@yahoo.com Return Profile,customer_account,84.0,high,CA,Los Angeles,web,1158.0,1,0
+68,RECEIPT-611851339,Gold Transaction 611851339,receipt,84.0,high,CA,Los Angeles,returns,1158.0,1,0
+69,STORE-010,PeakGear Los Angeles Store 010,store,64.0,medium,CA,Los Angeles,store,1158.0,1,0
+70,ACCT-morgan-morris-proton-me,morgan_morris@proton.me Return Profile,customer_account,83.0,high,WA,Seattle,web,1146.0,1,0
+71,RECEIPT-270246232,Gold Transaction 270246232,receipt,83.0,high,WA,Seattle,returns,1146.0,1,0
+72,STORE-027,PeakGear Seattle Store 027,store,63.0,medium,WA,Seattle,store,1146.0,1,0
+73,REFUND-BOX_CONTENT_MISMATCH,Box Content Mismatch Refund Pattern,refund_method,83.0,high,WA,Seattle,returns,1146.0,1,0
+74,RECEIPT-305322236,Gold Transaction 305322236,receipt,83.0,high,PA,Philadelphia,returns,1146.0,1,0
+75,STORE-016,PeakGear Philadelphia Store 016,store,63.0,medium,PA,Philadelphia,store,1146.0,1,0
+76,REFUND-USED_ITEM_RETURNED,Used Item Returned Refund Pattern,refund_method,83.0,high,PA,Philadelphia,returns,1146.0,1,0
+77,ACCT-drew-sanders144-hotmail-com,drew.sanders144@hotmail.com Return Profile,customer_account,83.0,high,PA,Philadelphia,web,1146.0,1,0
+78,RECEIPT-5883472,Gold Transaction 5883472,receipt,83.0,high,PA,Philadelphia,returns,1146.0,1,0
+79,STORE-018,PeakGear Philadelphia Store 018,store,63.0,medium,PA,Philadelphia,store,1146.0,1,0
+80,RECEIPT-209955078,Gold Transaction 209955078,receipt,81.0,high,OH,Columbus,returns,1122.0,1,0
+81,STORE-011,PeakGear Columbus Store 011,store,61.0,medium,OH,Columbus,store,1122.0,1,0
+82,REFUND-RETURN_AFTER_EVENT_USE,Return After Event Use Refund Pattern,refund_method,81.0,high,OH,Columbus,returns,1122.0,1,0
+83,ACCT-quinn-watson145-outlook-com,quinn.watson145@outlook.com Return Profile,customer_account,81.0,high,TX,Austin,web,1122.0,1,0
+84,RECEIPT-217558165,Gold Transaction 217558165,receipt,81.0,high,TX,Austin,returns,1122.0,1,0
+85,ACCT-dakota-cook91-hotmail-com,dakota.cook91@hotmail.com Return Profile,customer_account,81.0,high,CA,San Diego,web,1122.0,1,0
+86,RECEIPT-483554138,Gold Transaction 483554138,receipt,81.0,high,CA,San Diego,returns,1122.0,1,0
+87,STORE-028,PeakGear San Diego Store 028,store,61.0,medium,CA,San Diego,store,1122.0,1,0
+88,ACCT-jordan-watson-gmail-com,jordan_watson@gmail.com Return Profile,customer_account,81.0,high,AZ,Phoenix,web,1122.0,1,0
+89,RECEIPT-266188213,Gold Transaction 266188213,receipt,81.0,high,AZ,Phoenix,returns,1122.0,1,0
+90,STORE-050,PeakGear Phoenix Store 050,store,61.0,medium,AZ,Phoenix,store,1122.0,1,0
+91,ACCT-dfoster723-hotmail-com,dfoster723@hotmail.com Return Profile,customer_account,81.0,high,AZ,Phoenix,web,1122.0,1,0
+92,RECEIPT-589415413,Gold Transaction 589415413,receipt,81.0,high,AZ,Phoenix,returns,1122.0,1,0
+93,RECEIPT-214296362,Gold Transaction 214296362,receipt,81.0,high,CA,San Francisco,returns,1122.0,1,0
+94,ACCT-cameron279-yahoo-com,cameron279@yahoo.com Return Profile,customer_account,81.0,high,TX,Austin,web,1122.0,1,0
+95,RECEIPT-546822105,Gold Transaction 546822105,receipt,81.0,high,TX,Austin,returns,1122.0,1,0
+96,REFUND-WARDROBING_PATTERN,Wardrobing Pattern Refund Pattern,refund_method,81.0,high,TX,Austin,returns,1122.0,1,0
+97,RECEIPT-309325605,Gold Transaction 309325605,receipt,80.0,high,TX,Fort Worth,returns,1110.0,1,0
+98,ACCT-logan-reed-proton-me,logan_reed@proton.me Return Profile,customer_account,80.0,high,TX,Austin,web,1110.0,1,0
+99,RECEIPT-191785805,Gold Transaction 191785805,receipt,80.0,high,TX,Austin,returns,1110.0,1,0
+100,STORE-020,PeakGear Austin Store 020,store,60.0,medium,TX,Austin,store,1110.0,1,0
+101,ACCT-aramirez702-gmail-com,aramirez702@gmail.com Return Profile,customer_account,80.0,high,PA,Philadelphia,web,1110.0,1,0
+102,RECEIPT-587178635,Gold Transaction 587178635,receipt,80.0,high,PA,Philadelphia,returns,1110.0,1,0
+103,STORE-009,PeakGear Philadelphia Store 009,store,60.0,medium,PA,Philadelphia,store,1110.0,1,0
+104,ACCT-cameron-watson-gmail-com,cameron_watson@gmail.com Return Profile,customer_account,79.0,high,TX,San Antonio,web,1098.0,1,0
+105,RECEIPT-323395145,Gold Transaction 323395145,receipt,79.0,high,TX,San Antonio,returns,1098.0,1,0
+106,ACCT-bperez269-outlook-com,bperez269@outlook.com Return Profile,customer_account,79.0,high,IN,Indianapolis,web,1098.0,1,0
+107,RECEIPT-243333237,Gold Transaction 243333237,receipt,79.0,high,IN,Indianapolis,returns,1098.0,1,0
+108,STORE-041,PeakGear Indianapolis Store 041,store,59.0,medium,IN,Indianapolis,store,1098.0,1,0
+109,ACCT-dakota329-gmail-com,dakota329@gmail.com Return Profile,customer_account,78.0,high,TX,Austin,web,1086.0,1,0
+110,RECEIPT-102441713,Gold Transaction 102441713,receipt,78.0,high,TX,Austin,returns,1086.0,1,0
+111,STORE-006,PeakGear Austin Store 006,store,58.0,medium,TX,Austin,store,1086.0,1,0
+112,RECEIPT-541636151,Gold Transaction 541636151,receipt,78.0,high,PA,Philadelphia,returns,1086.0,1,0
+113,REFUND-EXCESSIVE_RETURN_FREQUENCY,Excessive Return Frequency Refund Pattern,refund_method,78.0,high,PA,Philadelphia,returns,1086.0,1,0
+114,RECEIPT-181961593,Gold Transaction 181961593,receipt,77.0,high,TX,Houston,returns,1074.0,1,0
+115,RECEIPT-10726181,Gold Transaction 10726181,receipt,76.0,high,IL,Chicago,returns,1062.0,1,0
+116,ACCT-quinn-bailey-outlook-com,quinn_bailey@outlook.com Return Profile,customer_account,76.0,high,TX,Austin,web,1062.0,1,0
+117,RECEIPT-269238544,Gold Transaction 269238544,receipt,76.0,high,TX,Austin,returns,1062.0,1,0
+118,STORE-046,PeakGear Austin Store 046,store,56.0,medium,TX,Austin,store,1062.0,1,0
+119,ACCT-jamie-lee-yahoo-com,jamie_lee@yahoo.com Return Profile,customer_account,76.0,high,FL,Jacksonville,web,1062.0,1,0
+120,RECEIPT-171469261,Gold Transaction 171469261,receipt,76.0,high,FL,Jacksonville,returns,1062.0,1,0
+121,STORE-034,PeakGear Jacksonville Store 034,store,56.0,medium,FL,Jacksonville,store,1062.0,1,0
+122,RECEIPT-78316743,Gold Transaction 78316743,receipt,76.0,high,PA,Philadelphia,returns,1062.0,1,0
+123,ACCT-dfoster109-yahoo-com,dfoster109@yahoo.com Return Profile,customer_account,76.0,high,TX,Dallas,web,1062.0,1,0
+124,RECEIPT-262805808,Gold Transaction 262805808,receipt,76.0,high,TX,Dallas,returns,1062.0,1,0
+125,STORE-001,PeakGear Dallas Store 001,store,56.0,medium,TX,Dallas,store,1062.0,1,0
+126,ACCT-mperez737-hotmail-com,mperez737@hotmail.com Return Profile,customer_account,75.0,high,IN,Indianapolis,web,1050.0,1,0
+127,RECEIPT-517415750,Gold Transaction 517415750,receipt,75.0,high,IN,Indianapolis,returns,1050.0,1,0
+128,STORE-005,PeakGear Indianapolis Store 005,store,55.0,medium,IN,Indianapolis,store,1050.0,1,0
+129,ACCT-avery243-proton-me,avery243@proton.me Return Profile,customer_account,75.0,high,CA,San Diego,web,1050.0,1,0
+130,RECEIPT-365332828,Gold Transaction 365332828,receipt,75.0,high,CA,San Diego,returns,1050.0,1,0
+131,RECEIPT-310094555,Gold Transaction 310094555,receipt,74.0,medium,CA,San Francisco,returns,1038.0,1,0
+132,RECEIPT-494545755,Gold Transaction 494545755,receipt,74.0,medium,CA,San Jose,returns,1038.0,1,0
+133,RECEIPT-592701386,Gold Transaction 592701386,receipt,74.0,medium,CA,Los Angeles,returns,1038.0,1,0
+134,ACCT-ajames383-proton-me,ajames383@proton.me Return Profile,customer_account,74.0,medium,TX,Austin,web,1038.0,1,0
+135,RECEIPT-567417866,Gold Transaction 567417866,receipt,74.0,medium,TX,Austin,returns,1038.0,1,0
+136,ACCT-reese-cook-outlook-com,reese_cook@outlook.com Return Profile,customer_account,73.0,medium,CA,Los Angeles,web,1026.0,1,0
+137,RECEIPT-41342808,Gold Transaction 41342808,receipt,73.0,medium,CA,Los Angeles,returns,1026.0,1,0
+138,ACCT-avery267-proton-me,avery267@proton.me Return Profile,customer_account,73.0,medium,CA,San Diego,web,1026.0,1,0
+139,RECEIPT-387537743,Gold Transaction 387537743,receipt,73.0,medium,CA,San Diego,returns,1026.0,1,0
+140,ACCT-logan-turner-proton-me,logan_turner@proton.me Return Profile,customer_account,72.0,medium,CA,San Jose,web,1014.0,1,0
+141,RECEIPT-153633718,Gold Transaction 153633718,receipt,72.0,medium,CA,San Jose,returns,1014.0,1,0
+142,STORE-038,PeakGear San Jose Store 038,store,52.0,medium,CA,San Jose,store,1014.0,1,0
+143,ACCT-sfoster878-yahoo-com,sfoster878@yahoo.com Return Profile,customer_account,72.0,medium,TX,San Antonio,web,1014.0,1,0
+144,RECEIPT-520351856,Gold Transaction 520351856,receipt,72.0,medium,TX,San Antonio,returns,1014.0,1,0
+145,RECEIPT-333127446,Gold Transaction 333127446,receipt,72.0,medium,TX,Austin,returns,1014.0,1,0
+146,ACCT-alex-ward-outlook-com,alex_ward@outlook.com Return Profile,customer_account,71.0,medium,AZ,Phoenix,web,1002.0,1,0
+147,RECEIPT-105696766,Gold Transaction 105696766,receipt,71.0,medium,AZ,Phoenix,returns,1002.0,1,0
+148,ACCT-logan-turner-outlook-com,logan_turner@outlook.com Return Profile,customer_account,71.0,medium,CA,San Diego,web,1002.0,1,0
+149,RECEIPT-185108311,Gold Transaction 185108311,receipt,71.0,medium,CA,San Diego,returns,1002.0,1,0
+150,STORE-047,PeakGear San Diego Store 047,store,51.0,medium,CA,San Diego,store,1002.0,1,0
+151,ACCT-cward78-yahoo-com,cward78@yahoo.com Return Profile,customer_account,71.0,medium,TX,Fort Worth,web,1002.0,1,0
+152,RECEIPT-419628519,Gold Transaction 419628519,receipt,71.0,medium,TX,Fort Worth,returns,1002.0,1,0
+153,RECEIPT-562347949,Gold Transaction 562347949,receipt,71.0,medium,PA,Philadelphia,returns,1002.0,1,0
+154,ACCT-quinn306-proton-me,quinn306@proton.me Return Profile,customer_account,71.0,medium,PA,Philadelphia,web,1002.0,1,0
+155,RECEIPT-449972776,Gold Transaction 449972776,receipt,71.0,medium,PA,Philadelphia,returns,1002.0,1,0
+156,STORE-025,PeakGear Philadelphia Store 025,store,51.0,medium,PA,Philadelphia,store,1002.0,1,0
+157,ACCT-hayden-james-hotmail-com,hayden_james@hotmail.com Return Profile,customer_account,71.0,medium,PA,Philadelphia,web,1002.0,1,0
+158,RECEIPT-381522384,Gold Transaction 381522384,receipt,71.0,medium,PA,Philadelphia,returns,1002.0,1,0
+159,ACCT-hayden-morgan-outlook-com,hayden_morgan@outlook.com Return Profile,customer_account,70.0,medium,TX,San Antonio,web,990.0,1,0
+160,RECEIPT-319543418,Gold Transaction 319543418,receipt,70.0,medium,TX,San Antonio,returns,990.0,1,0
+161,ACCT-casey-james189-yahoo-com,casey.james189@yahoo.com Return Profile,customer_account,69.0,medium,OH,Columbus,web,978.0,1,0
+162,RECEIPT-291254497,Gold Transaction 291254497,receipt,69.0,medium,OH,Columbus,returns,978.0,1,0
+163,ACCT-quinn-ward427-hotmail-com,quinn.ward427@hotmail.com Return Profile,customer_account,69.0,medium,TX,Houston,web,978.0,1,0
+164,RECEIPT-249440724,Gold Transaction 249440724,receipt,69.0,medium,TX,Houston,returns,978.0,1,0
+165,ACCT-cameron39-hotmail-com,cameron39@hotmail.com Return Profile,customer_account,68.0,medium,CA,San Jose,web,966.0,1,0
+166,RECEIPT-157974970,Gold Transaction 157974970,receipt,68.0,medium,CA,San Jose,returns,966.0,1,0
+167,STORE-017,PeakGear San Jose Store 017,store,48.0,medium,CA,San Jose,store,966.0,1,0
+168,ACCT-blake-ward292-outlook-com,blake.ward292@outlook.com Return Profile,customer_account,65.0,medium,CA,San Francisco,web,930.0,1,0
+169,RECEIPT-210285592,Gold Transaction 210285592,receipt,65.0,medium,CA,San Francisco,returns,930.0,1,0
+170,STORE-014,PeakGear San Francisco Store 014,store,45.0,medium,CA,San Francisco,store,930.0,1,0
+171,ACCT-hayden-nguyen431-proton-me,hayden.nguyen431@proton.me Return Profile,customer_account,59.0,medium,IL,Chicago,web,858.0,1,0
+172,RECEIPT-604459902,Gold Transaction 604459902,receipt,59.0,medium,IL,Chicago,returns,858.0,1,0
+173,ACCT-jordan150-outlook-com,jordan150@outlook.com Return Profile,customer_account,57.0,medium,TX,Austin,web,834.0,1,0
+174,RECEIPT-564981687,Gold Transaction 564981687,receipt,57.0,medium,TX,Austin,returns,834.0,1,0
+175,ACCT-ccooper488-yahoo-com,ccooper488@yahoo.com Return Profile,customer_account,52.0,medium,PA,Philadelphia,web,774.0,1,0
+176,RECEIPT-27017454,Gold Transaction 27017454,receipt,52.0,medium,PA,Philadelphia,returns,774.0,1,0
+177,ACCT-riley-ramirez-outlook-com,riley_ramirez@outlook.com Return Profile,customer_account,52.0,medium,TX,Houston,web,774.0,1,0
+178,RECEIPT-535664640,Gold Transaction 535664640,receipt,52.0,medium,TX,Houston,returns,774.0,1,0
+179,STORE-037,PeakGear Houston Store 037,store,35,low,TX,Houston,store,774.0,1,0
+180,ACCT-jamie-ward-proton-me,jamie_ward@proton.me Return Profile,customer_account,51.0,medium,WA,Seattle,web,762.0,1,0
+181,RECEIPT-383172088,Gold Transaction 383172088,receipt,51.0,medium,WA,Seattle,returns,762.0,1,0
+182,ACCT-dakota-watson-proton-me,dakota_watson@proton.me Return Profile,customer_account,50.0,medium,CA,San Francisco,web,750.0,1,0
+183,RECEIPT-586539762,Gold Transaction 586539762,receipt,50.0,medium,CA,San Francisco,returns,750.0,1,0
+184,ACCT-morgan-ward666-hotmail-com,morgan.ward666@hotmail.com Return Profile,customer_account,49.0,medium,TX,Austin,web,738.0,1,0
+185,RECEIPT-45870672,Gold Transaction 45870672,receipt,49.0,medium,TX,Austin,returns,738.0,1,0
+186,ACCT-morgan775-outlook-com,morgan775@outlook.com Return Profile,customer_account,48.0,medium,CA,San Diego,web,726.0,1,0
+187,RECEIPT-405511256,Gold Transaction 405511256,receipt,48.0,medium,CA,San Diego,returns,726.0,1,0
+188,ACCT-parker727-proton-me,parker727@proton.me Return Profile,customer_account,48.0,medium,TX,Austin,web,726.0,1,0
+189,RECEIPT-479651627,Gold Transaction 479651627,receipt,48.0,medium,TX,Austin,returns,726.0,1,0
+190,STORE-039,PeakGear Austin Store 039,store,35,low,TX,Austin,store,726.0,1,0
+191,ACCT-riley603-hotmail-com,riley603@hotmail.com Return Profile,customer_account,48.0,medium,WA,Seattle,web,726.0,1,0
+192,RECEIPT-59162433,Gold Transaction 59162433,receipt,48.0,medium,WA,Seattle,returns,726.0,1,0
+193,ACCT-alex-sanders241-outlook-com,alex.sanders241@outlook.com Return Profile,customer_account,47.0,medium,IN,Indianapolis,web,714.0,1,0
+194,RECEIPT-488833231,Gold Transaction 488833231,receipt,47.0,medium,IN,Indianapolis,returns,714.0,1,0

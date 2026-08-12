@@ -1,0 +1,51 @@
+brand_id,brand_name,brand_slug,brand_category,headquarters_city,headquarters_lat,headquarters_lon,founded_year,annual_revenue,social_tier,created_at,updated_at
+1,Constituent Services Program 01,state-local-government-program-01,Constituent Services,Denver,39.7392,-104.9903,1995,25000000,standard,2026-03-29T12:00:00Z,2026-06-17T12:00:00Z
+2,Permits and Licensing Program 02,state-local-government-program-02,Permits and Licensing,Colorado Springs,38.8339,-104.8214,1996,28750000,premium,2026-03-28T12:00:00Z,2026-06-16T12:00:00Z
+3,Benefits Eligibility Program 03,state-local-government-program-03,Benefits Eligibility,Aurora,39.7294,-104.8319,1997,32500000,emerging,2026-03-27T12:00:00Z,2026-06-15T12:00:00Z
+4,Case Management Program 04,state-local-government-program-04,Case Management,Fort Collins,40.5853,-105.0844,1998,36250000,luxury,2026-03-26T12:00:00Z,2026-06-14T12:00:00Z
+5,Emergency Response Program 05,state-local-government-program-05,Emergency Response,Lakewood,39.7047,-105.0814,1999,40000000,standard,2026-03-25T12:00:00Z,2026-06-13T12:00:00Z
+6,Public Works Program 06,state-local-government-program-06,Public Works,Thornton,39.868,-104.9719,2000,43750000,premium,2026-03-24T12:00:00Z,2026-06-12T12:00:00Z
+7,Transportation Services Program 07,state-local-government-program-07,Transportation Services,Pueblo,38.2544,-104.6091,2001,47500000,emerging,2026-03-23T12:00:00Z,2026-06-11T12:00:00Z
+8,Tax and Revenue Operations Program 08,state-local-government-program-08,Tax and Revenue Operations,Boulder,40.015,-105.2705,2002,51250000,luxury,2026-03-22T12:00:00Z,2026-06-10T12:00:00Z
+9,Citizen-Facing Digital Services Program 09,state-local-government-program-09,Citizen-Facing Digital Services,Greeley,40.4233,-104.7091,2003,55000000,standard,2026-03-21T12:00:00Z,2026-06-09T12:00:00Z
+10,Inspections and Code Enforcement Program 10,state-local-government-program-10,Inspections and Code Enforcement,Castle Rock,39.3722,-104.8561,2004,58750000,premium,2026-03-20T12:00:00Z,2026-06-08T12:00:00Z
+11,Grants Management Program 11,state-local-government-program-11,Grants Management,Grand Junction,39.0639,-108.5506,2005,62500000,emerging,2026-03-19T12:00:00Z,2026-06-07T12:00:00Z
+12,Health and Human Services Program 12,state-local-government-program-12,Health and Human Services,Broomfield,39.9205,-105.0867,2006,66250000,luxury,2026-03-18T12:00:00Z,2026-06-06T12:00:00Z
+13,Fraud Waste and Abuse Detection Program 13,state-local-government-program-13,Fraud Waste and Abuse Detection,Durango,37.2753,-107.8801,2007,70000000,standard,2026-03-17T12:00:00Z,2026-06-05T12:00:00Z
+14,Policy Compliance Program 14,state-local-government-program-14,Policy Compliance,Montrose,38.4783,-107.8762,2008,73750000,premium,2026-03-16T12:00:00Z,2026-06-04T12:00:00Z
+15,Records Management Program 15,state-local-government-program-15,Records Management,Steamboat Springs,40.485,-106.8317,2009,77500000,emerging,2026-03-15T12:00:00Z,2026-06-03T12:00:00Z
+16,Interagency Workflows Program 16,state-local-government-program-16,Interagency Workflows,Alamosa,37.4695,-105.87,2010,81250000,luxury,2026-03-14T12:00:00Z,2026-06-02T12:00:00Z
+17,Business Licensing Program 17,state-local-government-program-17,Business Licensing,Glenwood Springs,39.5505,-107.3248,2011,85000000,standard,2026-03-13T12:00:00Z,2026-06-01T12:00:00Z
+18,Public Assistance Programs Program 18,state-local-government-program-18,Public Assistance Programs,Idaho Springs,39.7425,-105.5136,2012,88750000,premium,2026-03-12T12:00:00Z,2026-05-31T12:00:00Z
+19,Accessibility Services Program 19,state-local-government-program-19,Accessibility Services,Cañon City,38.4494,-105.2253,2013,92500000,emerging,2026-03-11T12:00:00Z,2026-05-30T12:00:00Z
+20,Transparency and Auditability Program 20,state-local-government-program-20,Transparency and Auditability,Salida,38.5347,-105.9989,2014,96250000,luxury,2026-03-10T12:00:00Z,2026-05-29T12:00:00Z
+21,Constituent Services Program 21,state-local-government-program-21,Constituent Services,Gunnison,38.5458,-106.9253,2015,100000000,standard,2026-03-09T12:00:00Z,2026-06-17T12:00:00Z
+22,Permits and Licensing Program 22,state-local-government-program-22,Permits and Licensing,Leadville,39.2508,-106.2925,2016,103750000,premium,2026-03-08T12:00:00Z,2026-06-16T12:00:00Z
+23,Benefits Eligibility Program 23,state-local-government-program-23,Benefits Eligibility,Walsenburg,37.6242,-104.7803,2017,107500000,emerging,2026-03-07T12:00:00Z,2026-06-15T12:00:00Z
+24,Case Management Program 24,state-local-government-program-24,Case Management,Trinidad,37.1695,-104.5005,2018,111250000,luxury,2026-03-06T12:00:00Z,2026-06-14T12:00:00Z
+25,Emergency Response Program 25,state-local-government-program-25,Emergency Response,Sterling,40.6255,-103.2077,2019,115000000,standard,2026-03-05T12:00:00Z,2026-06-13T12:00:00Z
+26,Public Works Program 26,state-local-government-program-26,Public Works,Fort Morgan,40.2503,-103.7999,2020,118750000,premium,2026-03-04T12:00:00Z,2026-06-12T12:00:00Z
+27,Transportation Services Program 27,state-local-government-program-27,Transportation Services,Yuma,40.1222,-102.7252,2021,122500000,emerging,2026-03-03T12:00:00Z,2026-06-11T12:00:00Z
+28,Tax and Revenue Operations Program 28,state-local-government-program-28,Tax and Revenue Operations,Burlington,39.3061,-102.2694,2022,126250000,luxury,2026-03-02T12:00:00Z,2026-06-10T12:00:00Z
+29,Citizen-Facing Digital Services Program 29,state-local-government-program-29,Citizen-Facing Digital Services,Craig,40.5153,-107.5464,2023,130000000,standard,2026-03-01T12:00:00Z,2026-06-09T12:00:00Z
+30,Inspections and Code Enforcement Program 30,state-local-government-program-30,Inspections and Code Enforcement,Telluride,37.9375,-107.8123,1995,133750000,premium,2026-02-28T12:00:00Z,2026-06-08T12:00:00Z
+31,Grants Management Program 31,state-local-government-program-31,Grants Management,Cortez,37.3489,-108.5859,1996,137500000,emerging,2026-03-29T12:00:00Z,2026-06-07T12:00:00Z
+32,Health and Human Services Program 32,state-local-government-program-32,Health and Human Services,Denver,39.7392,-104.9903,1997,141250000,luxury,2026-03-28T12:00:00Z,2026-06-06T12:00:00Z
+33,Fraud Waste and Abuse Detection Program 33,state-local-government-program-33,Fraud Waste and Abuse Detection,Colorado Springs,38.8339,-104.8214,1998,145000000,standard,2026-03-27T12:00:00Z,2026-06-05T12:00:00Z
+34,Policy Compliance Program 34,state-local-government-program-34,Policy Compliance,Aurora,39.7294,-104.8319,1999,148750000,premium,2026-03-26T12:00:00Z,2026-06-04T12:00:00Z
+35,Records Management Program 35,state-local-government-program-35,Records Management,Fort Collins,40.5853,-105.0844,2000,152500000,emerging,2026-03-25T12:00:00Z,2026-06-03T12:00:00Z
+36,Interagency Workflows Program 36,state-local-government-program-36,Interagency Workflows,Lakewood,39.7047,-105.0814,2001,156250000,luxury,2026-03-24T12:00:00Z,2026-06-02T12:00:00Z
+37,Business Licensing Program 37,state-local-government-program-37,Business Licensing,Thornton,39.868,-104.9719,2002,160000000,standard,2026-03-23T12:00:00Z,2026-06-01T12:00:00Z
+38,Public Assistance Programs Program 38,state-local-government-program-38,Public Assistance Programs,Pueblo,38.2544,-104.6091,2003,163750000,premium,2026-03-22T12:00:00Z,2026-05-31T12:00:00Z
+39,Accessibility Services Program 39,state-local-government-program-39,Accessibility Services,Boulder,40.015,-105.2705,2004,167500000,emerging,2026-03-21T12:00:00Z,2026-05-30T12:00:00Z
+40,Transparency and Auditability Program 40,state-local-government-program-40,Transparency and Auditability,Greeley,40.4233,-104.7091,2005,171250000,luxury,2026-03-20T12:00:00Z,2026-05-29T12:00:00Z
+41,Constituent Services Program 41,state-local-government-program-41,Constituent Services,Castle Rock,39.3722,-104.8561,2006,175000000,standard,2026-03-19T12:00:00Z,2026-06-17T12:00:00Z
+42,Permits and Licensing Program 42,state-local-government-program-42,Permits and Licensing,Grand Junction,39.0639,-108.5506,2007,178750000,premium,2026-03-18T12:00:00Z,2026-06-16T12:00:00Z
+43,Benefits Eligibility Program 43,state-local-government-program-43,Benefits Eligibility,Broomfield,39.9205,-105.0867,2008,182500000,emerging,2026-03-17T12:00:00Z,2026-06-15T12:00:00Z
+44,Case Management Program 44,state-local-government-program-44,Case Management,Durango,37.2753,-107.8801,2009,186250000,luxury,2026-03-16T12:00:00Z,2026-06-14T12:00:00Z
+45,Emergency Response Program 45,state-local-government-program-45,Emergency Response,Montrose,38.4783,-107.8762,2010,190000000,standard,2026-03-15T12:00:00Z,2026-06-13T12:00:00Z
+46,Public Works Program 46,state-local-government-program-46,Public Works,Steamboat Springs,40.485,-106.8317,2011,193750000,premium,2026-03-14T12:00:00Z,2026-06-12T12:00:00Z
+47,Transportation Services Program 47,state-local-government-program-47,Transportation Services,Alamosa,37.4695,-105.87,2012,197500000,emerging,2026-03-13T12:00:00Z,2026-06-11T12:00:00Z
+48,Tax and Revenue Operations Program 48,state-local-government-program-48,Tax and Revenue Operations,Glenwood Springs,39.5505,-107.3248,2013,201250000,luxury,2026-03-12T12:00:00Z,2026-06-10T12:00:00Z
+49,Citizen-Facing Digital Services Program 49,state-local-government-program-49,Citizen-Facing Digital Services,Idaho Springs,39.7425,-105.5136,2014,205000000,standard,2026-03-11T12:00:00Z,2026-06-09T12:00:00Z
+50,Inspections and Code Enforcement Program 50,state-local-government-program-50,Inspections and Code Enforcement,Cañon City,38.4494,-105.2253,2015,208750000,premium,2026-03-10T12:00:00Z,2026-06-08T12:00:00Z

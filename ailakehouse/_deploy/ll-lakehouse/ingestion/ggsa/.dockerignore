@@ -1,0 +1,7 @@
+.git
+.gitignore
+.DS_Store
+._*
+Oracle_SSN_DLM_05082045.dmg
+*.log
+tmp/

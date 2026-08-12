@@ -1,0 +1,16 @@
+{
+  "name": "peakgear-signal-generator",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@faker-js/faker": "8.4.1",
+    "kafkajs": "2.2.4"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

@@ -1,0 +1,14 @@
+html {
+  -webkit-text-size-adjust: 100%;
+  font-family: var(--oj-c-font-family);
+  font-size: var(--oj-c-font-size);
+}
+body {
+  margin: 0;
+  background-repeat: repeat;
+  background-position: top left;
+  color: var(--oj-c-text-icon-primary);
+  background-color: var(--oj-c-bg-color);
+  touch-action: manipulation;
+  line-height: var(--oj-c-body-md-line-height);
+}

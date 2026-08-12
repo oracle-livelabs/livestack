@@ -5,9 +5,26 @@ const express = require('express');
 const router = express.Router();
 const db = require('../config/database');
 
+const SPATIAL_NN_PARAMETERS = 'sdo_batch_size=50 unit=KM';
+
 function metricValue(row, columnName) {
   const value = row?.[columnName] ?? row?.[columnName.toUpperCase()] ?? 0;
   return Number(value) || 0;
+}
+
+function rowValue(row, columnName) {
+  return row?.[columnName] ?? row?.[columnName.toUpperCase()] ?? row?.[columnName.toLowerCase()];
+}
+
+function boundedResultCount(value, fallback = 5) {
+  const parsed = Number.parseInt(value, 10);
+  if (!Number.isSafeInteger(parsed) || parsed < 1) return fallback;
+  return Math.min(parsed, 20);
+}
+
+function finiteCoordinate(value, min, max) {
+  const parsed = Number.parseFloat(value);
+  return Number.isFinite(parsed) && parsed >= min && parsed <= max ? parsed : null;
 }
 
 // GET /api/fulfillment/kpis
@@ -94,52 +111,238 @@ router.get('/centers', async (req, res) => {
   }
 });
 
-// GET /api/fulfillment/nearest — find nearest center for a customer+product
+// GET /api/fulfillment/spatial-readiness
+// Executes the same two-stage nearest-neighbor strategy as the routing API and
+// exposes live catalog + DBMS_XPLAN evidence for the Oracle Internals panel.
+router.get('/spatial-readiness', async (req, res) => {
+  try {
+    const evidence = await db.withUserConnection(req.demoUser, async ({ execute }) => {
+      const probe = await execute(`
+        WITH origin AS (
+          SELECT location
+          FROM (
+            SELECT customer.location
+            FROM customers customer
+            WHERE customer.location IS NOT NULL
+            ORDER BY customer.customer_id
+          )
+          WHERE ROWNUM = 1
+        ),
+        indexed_candidates AS (
+          SELECT /*+ GATHER_PLAN_STATISTICS LEADING(origin) USE_NL(center) INDEX(center idx_fc_spatial) */
+                 /* MANUFACTURING_SPATIAL_NN_API_PROOF */
+                 center.center_id,
+                 center.location AS center_location,
+                 origin.location AS origin_location
+          FROM origin
+          JOIN fulfillment_centers center
+            ON SDO_NN(
+                 center.location,
+                 origin.location,
+                 '${SPATIAL_NN_PARAMETERS}'
+               ) = 'TRUE'
+          WHERE center.is_active = 1
+        ),
+        measured_candidates AS (
+          SELECT candidate.center_id,
+                 ROUND(
+                   SDO_GEOM.SDO_DISTANCE(
+                     candidate.origin_location,
+                     candidate.center_location,
+                     0.005,
+                     'unit=KM'
+                   ),
+                   2
+                 ) AS distance_km
+          FROM indexed_candidates candidate
+        )
+        SELECT center_id, distance_km
+        FROM measured_candidates
+        ORDER BY distance_km, center_id
+        FETCH FIRST 3 ROWS ONLY
+      `);
+
+      const sessionResult = await execute(`
+        SELECT prev_sql_id AS sql_id
+        FROM sys.v_$session
+        WHERE audsid = SYS_CONTEXT('USERENV', 'SESSIONID')
+      `);
+      const sqlId = rowValue(sessionResult.rows?.[0], 'sql_id');
+
+      const planResult = await execute(`
+        SELECT plan_table_output
+        FROM TABLE(DBMS_XPLAN.DISPLAY_CURSOR(:sqlId, NULL, 'BASIC'))
+      `, { sqlId });
+      const planLines = (planResult.rows || [])
+        .map((row) => String(rowValue(row, 'plan_table_output') || ''));
+      const indexPlanLine = planLines.find((line) => (
+        /\|\s*\d+\s*\|\s*DOMAIN INDEX[^|]*\|/i.test(line)
+        && /\|\s*IDX_FC_SPATIAL\s*\|/i.test(line)
+      )) || null;
+
+      const indexResult = await execute(`
+        SELECT index_name, status, domidx_status, domidx_opstatus
+        FROM user_indexes
+        WHERE index_name = 'IDX_FC_SPATIAL'
+          AND table_name = 'FULFILLMENT_CENTERS'
+          AND ityp_owner = 'MDSYS'
+          AND ityp_name = 'SPATIAL_INDEX_V2'
+      `);
+      const indexRow = indexResult.rows?.[0] || {};
+      const indexReady = rowValue(indexRow, 'status') === 'VALID'
+        && rowValue(indexRow, 'domidx_status') === 'VALID'
+        && rowValue(indexRow, 'domidx_opstatus') === 'VALID';
+
+      return {
+        status: indexReady && Boolean(indexPlanLine) ? 'ACTIVE' : 'INCOMPLETE',
+        strategy: 'SDO_NN indexed candidates -> SDO_GEOM.SDO_DISTANCE exact ranking',
+        candidate_operator: 'SDO_NN',
+        exact_rank_operator: 'SDO_GEOM.SDO_DISTANCE',
+        index_name: rowValue(indexRow, 'index_name') || 'IDX_FC_SPATIAL',
+        index_status: indexReady ? 'VALID' : 'INVALID',
+        plan_sql_id: sqlId || null,
+        plan_operator: indexPlanLine ? 'DOMAIN INDEX' : null,
+        plan_evidence: indexPlanLine?.trim() || null,
+        probe_result_count: (probe.rows || []).length,
+      };
+    }, { readOnly: true });
+
+    res.json(evidence);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// GET /api/fulfillment/nearest — indexed candidates, then exact distance ranking
 router.get('/nearest', async (req, res) => {
   try {
     const { customerId, productId, lat, lon, maxResults = 5 } = req.query;
+    const resultCount = boundedResultCount(maxResults);
+    const hasCustomerId = customerId !== undefined && customerId !== '';
+    const hasProductId = productId !== undefined && productId !== '';
+    const hasLatitude = lat !== undefined && lat !== '';
+    const hasLongitude = lon !== undefined && lon !== '';
 
     let result;
-    if (customerId && productId) {
-      // Use the spatial function
+    if (hasCustomerId && hasProductId) {
+      const parsedCustomerId = Number.parseInt(customerId, 10);
+      const parsedProductId = Number.parseInt(productId, 10);
+      if (!Number.isSafeInteger(parsedCustomerId) || parsedCustomerId < 1
+          || !Number.isSafeInteger(parsedProductId) || parsedProductId < 1) {
+        return res.status(400).json({ error: 'customerId and productId must be positive integers' });
+      }
+
       result = await db.executeAsUser(`
-        SELECT fc.center_id, fc.center_name, fc.city, fc.state_province,
-               fc.center_type, fc.latitude, fc.longitude,
-               i.quantity_on_hand,
-               ROUND(SDO_GEOM.SDO_DISTANCE(
-                   c.location, fc.location, 0.005, 'unit=KM'
-               ), 2) AS distance_km,
-               ROUND(SDO_GEOM.SDO_DISTANCE(
-                   c.location, fc.location, 0.005, 'unit=KM'
-               ) / 80, 1) AS estimated_hours
-        FROM customers c
-        CROSS JOIN fulfillment_centers fc
-        JOIN inventory i ON fc.center_id = i.center_id AND i.product_id = :productId
-        WHERE c.customer_id = :customerId
-          AND fc.is_active = 1
-          AND i.quantity_on_hand > i.quantity_reserved
-        ORDER BY SDO_GEOM.SDO_DISTANCE(c.location, fc.location, 0.005, 'unit=KM')
-        FETCH FIRST :maxResults ROWS ONLY
-      `, { customerId: parseInt(customerId), productId: parseInt(productId), maxResults: parseInt(maxResults) }, req.demoUser);
-    } else if (lat && lon) {
-      // Use raw coordinates
-      result = await db.executeAsUser(`
-        SELECT fc.center_id, fc.center_name, fc.city, fc.state_province,
-               fc.center_type, fc.latitude, fc.longitude,
-               ROUND(SDO_GEOM.SDO_DISTANCE(
-                   SDO_GEOMETRY(2001, 4326, SDO_POINT_TYPE(:lon, :lat, NULL), NULL, NULL),
-                   fc.location, 0.005, 'unit=KM'
-               ), 2) AS distance_km
-        FROM fulfillment_centers fc
-        WHERE fc.is_active = 1
-        ORDER BY SDO_GEOM.SDO_DISTANCE(
-            SDO_GEOMETRY(2001, 4326, SDO_POINT_TYPE(:lon2, :lat2, NULL), NULL, NULL),
-            fc.location, 0.005, 'unit=KM'
+        WITH origin AS (
+          SELECT customer.location
+          FROM customers customer
+          WHERE customer.customer_id = :customerId
+            AND customer.location IS NOT NULL
+        ),
+        indexed_candidates AS (
+          SELECT /*+ LEADING(origin) USE_NL(center) INDEX(center idx_fc_spatial) */
+                 center.center_id, center.center_name, center.city, center.state_province,
+                 center.center_type, center.latitude, center.longitude,
+                 center.location AS center_location,
+                 origin.location AS origin_location
+          FROM origin
+          JOIN fulfillment_centers center
+            ON SDO_NN(
+                 center.location,
+                 origin.location,
+                 '${SPATIAL_NN_PARAMETERS}'
+               ) = 'TRUE'
+          WHERE center.is_active = 1
+        ),
+        available_candidates AS (
+          SELECT candidate.*, inventory.quantity_on_hand
+          FROM indexed_candidates candidate
+          JOIN inventory
+            ON inventory.center_id = candidate.center_id
+           AND inventory.product_id = :productId
+          WHERE inventory.quantity_on_hand > inventory.quantity_reserved
+        ),
+        measured_candidates AS (
+          SELECT candidate.*,
+                 ROUND(
+                   SDO_GEOM.SDO_DISTANCE(
+                     candidate.origin_location,
+                     candidate.center_location,
+                     0.005,
+                     'unit=KM'
+                   ),
+                   2
+                 ) AS distance_km
+          FROM available_candidates candidate
         )
+        SELECT center_id, center_name, city, state_province,
+               center_type, latitude, longitude, quantity_on_hand,
+               distance_km,
+               ROUND(distance_km / 80, 1) AS estimated_hours
+        FROM measured_candidates
+        ORDER BY distance_km, center_id
         FETCH FIRST :maxResults ROWS ONLY
-      `, { lat: parseFloat(lat), lon: parseFloat(lon),
-           lat2: parseFloat(lat), lon2: parseFloat(lon),
-           maxResults: parseInt(maxResults) }, req.demoUser);
+      `, {
+        customerId: parsedCustomerId,
+        productId: parsedProductId,
+        maxResults: resultCount,
+      }, req.demoUser);
+    } else if (hasLatitude && hasLongitude) {
+      const parsedLatitude = finiteCoordinate(lat, -90, 90);
+      const parsedLongitude = finiteCoordinate(lon, -180, 180);
+      if (parsedLatitude === null || parsedLongitude === null) {
+        return res.status(400).json({ error: 'lat and lon must be valid WGS-84 coordinates' });
+      }
+
+      result = await db.executeAsUser(`
+        WITH origin AS (
+          SELECT SDO_GEOMETRY(
+                   2001,
+                   4326,
+                   SDO_POINT_TYPE(:lon, :lat, NULL),
+                   NULL,
+                   NULL
+                 ) AS location
+          FROM dual
+        ),
+        indexed_candidates AS (
+          SELECT /*+ LEADING(origin) USE_NL(center) INDEX(center idx_fc_spatial) */
+                 center.center_id, center.center_name, center.city, center.state_province,
+                 center.center_type, center.latitude, center.longitude,
+                 center.location AS center_location,
+                 origin.location AS origin_location
+          FROM origin
+          JOIN fulfillment_centers center
+            ON SDO_NN(
+                 center.location,
+                 origin.location,
+                 '${SPATIAL_NN_PARAMETERS}'
+               ) = 'TRUE'
+          WHERE center.is_active = 1
+        ),
+        measured_candidates AS (
+          SELECT candidate.*,
+                 ROUND(
+                   SDO_GEOM.SDO_DISTANCE(
+                     candidate.origin_location,
+                     candidate.center_location,
+                     0.005,
+                     'unit=KM'
+                   ),
+                   2
+                 ) AS distance_km
+          FROM indexed_candidates candidate
+        )
+        SELECT center_id, center_name, city, state_province,
+               center_type, latitude, longitude, distance_km
+        FROM measured_candidates
+        ORDER BY distance_km, center_id
+        FETCH FIRST :maxResults ROWS ONLY
+      `, {
+        lat: parsedLatitude,
+        lon: parsedLongitude,
+        maxResults: resultCount,
+      }, req.demoUser);
     } else {
       return res.status(400).json({ error: 'Provide customerId+productId or lat+lon' });
     }

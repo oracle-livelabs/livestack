@@ -1,4 +1,4 @@
-# Scene 15 Ask Your Data
+# Scene 16 Ask Your Data
 
 ## Introduction
 
@@ -73,11 +73,7 @@ For the business, this reduces the time between question and answer, lowers depe
 
 You can move to the next scene.
 
-## Credits & Build Notes
-- **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-13
-
 ## Acknowledgements
 
-* **Author** - TODO: Your Name, Your Title, Your Organization
-* **Last Updated By/Date** - TODO: Your Name, Month Year
+* **Author** - LiveLabs Team August 2026
+* **Last Updated By/Date** - LiveLabs Team August 2026

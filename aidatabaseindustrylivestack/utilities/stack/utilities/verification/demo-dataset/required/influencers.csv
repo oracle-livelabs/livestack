@@ -1,0 +1,484 @@
+influencer_id,handle,display_name,platform,follower_count,engagement_rate,influence_score,niche,city,region,country,is_verified,created_at
+5493,@grid_mike,Grid Mike,Reliability Signal,6177,0.0797,78.73,Outage Restoration,New York,New York,US,0,2026-05-22T14:21:33Z
+5494,@grid_jen,Grid Jen,Compliance Signal,302069,0.0422,91.12,Distribution Automation,Los Angeles,California,US,0,2026-05-22T14:21:33Z
+5495,@grid_alex,Grid Alex,Field Access Bulletin,6625,0.0896,96.52,Customer Operations,Chicago,Illinois,US,0,2026-05-22T14:21:33Z
+5496,@grid_zoe,Grid Zoe,Regulatory Notice,89774,0.0605,92.26,Advanced Metering,Houston,Texas,US,0,2026-05-22T14:21:33Z
+5497,@grid_marcus,Grid Marcus,Capacity Alert,3887,0.0912,93.82,Storm Response,Phoenix,Arizona,US,0,2026-05-22T14:21:33Z
+5498,@grid_lily,Grid Lily,Reliability Signal,9058,0.0622,76.78,Vegetation Management,San Francisco,California,US,0,2026-05-22T14:21:33Z
+5499,@grid_kai,Grid Kai,Production Signal,34765,0.0341,70.82,Production Operations,Miami,Florida,US,0,2026-05-22T14:21:33Z
+5500,@grid_maya,Grid Maya,Field Access Bulletin,44371,0.0523,86.5,Gas Operations,Seattle,Washington,US,0,2026-05-22T14:21:33Z
+5501,@grid_tyler,Grid Tyler,Regulatory Notice,21788,0.0657,79.84,Water Operations,Denver,Colorado,US,0,2026-05-22T14:21:33Z
+5502,@grid_ava,Grid Ava,Capacity Alert,89437,0.0366,74.13,DERMS,Austin,Texas,US,0,2026-05-22T14:21:33Z
+5503,@crew_jen,Crew Jen,HSE and Emissions Notice,56208,0.0316,69.44,HSE and Emissions,Nashville,Tennessee,US,0,2026-05-22T14:21:33Z
+5504,@crew_zoe,Crew Zoe,Compliance Signal,80342,0.0745,100,Power Quality,Portland,Oregon,US,0,2026-05-22T14:21:33Z
+5505,@crew_lily,Crew Lily,Field Access Bulletin,55443,0.0398,71.66,Grid Resilience,Boston,Massachusetts,US,0,2026-05-22T14:21:33Z
+5506,@crew_maya,Crew Maya,Production Signal,7561,0.0707,81.3,Production Operations,Atlanta,Georgia,US,0,2026-05-22T14:21:33Z
+5507,@crew_ava,Crew Ava,Capacity Alert,87282,0.0678,94.32,Mutual Aid,Dallas,Texas,US,0,2026-05-22T14:21:33Z
+5508,@crew_nina,Crew Nina,Reliability Signal,2134,0.101,88.12,Outage Restoration,San Diego,California,US,0,2026-05-22T14:21:33Z
+5509,@crew_ella,Crew Ella,Compliance Signal,5286,0.0447,66.17,Distribution Automation,Minneapolis,Minnesota,US,0,2026-05-22T14:21:33Z
+5510,@crew_aria,Crew Aria,Field Access Bulletin,44604,0.06,78.66,Customer Operations,Detroit,Michigan,US,0,2026-05-22T14:21:33Z
+5511,@crew_luna,Crew Luna,Regulatory Notice,12977,0.0586,81.6,Advanced Metering,Las Vegas,Nevada,US,0,2026-05-22T14:21:33Z
+5512,@crew_mia,Crew Mia,Capacity Alert,23875,0.0455,81.62,Storm Response,Brooklyn,New York,US,0,2026-05-22T14:21:33Z
+5513,@lineman_alex,Lineman Alex,Production Signal,8050,0.1117,100,Production Operations,New York,New York,US,0,2026-05-22T14:21:33Z
+5514,@lineman_lily,Lineman Lily,HSE and Emissions Notice,11294,0.079,87.64,HSE and Emissions,Los Angeles,California,US,0,2026-05-22T14:21:33Z
+5515,@lineman_tyler,Lineman Tyler,Field Access Bulletin,789440,0.0404,84.8,Gas Operations,Chicago,Illinois,US,1,2026-05-22T14:21:33Z
+5516,@lineman_nina,Lineman Nina,Regulatory Notice,29601,0.0304,75.05,Water Operations,Houston,Texas,US,0,2026-05-22T14:21:33Z
+5517,@lineman_finn,Lineman Finn,Capacity Alert,52846,0.071,89.08,DERMS,Phoenix,Arizona,US,0,2026-05-22T14:21:33Z
+5518,@lineman_luna,Lineman Luna,Reliability Signal,2463,0.082,78.94,Critical Load,San Francisco,California,US,0,2026-05-22T14:21:33Z
+5519,@lineman_noah,Lineman Noah,Compliance Signal,758179,0.0411,89.85,Power Quality,Miami,Florida,US,1,2026-05-22T14:21:33Z
+5520,@lineman_ruby,Lineman Ruby,Production Signal,8371,0.0859,95.25,Production Operations,Seattle,Washington,US,0,2026-05-22T14:21:33Z
+5521,@lineman_dane,Lineman Dane,Regulatory Notice,1928,0.0734,76.72,Remote Monitoring,Denver,Colorado,US,0,2026-05-22T14:21:33Z
+5522,@lineman_hope,Lineman Hope,Capacity Alert,15857,0.0252,59.74,Mutual Aid,Austin,Texas,US,0,2026-05-22T14:21:33Z
+5523,@outage_zoe,Outage Zoe,Reliability Signal,3679,0.0756,79.75,Outage Restoration,Nashville,Tennessee,US,0,2026-05-22T14:21:33Z
+5524,@outage_maya,Outage Maya,Compliance Signal,6626,0.1024,99.76,Distribution Automation,Portland,Oregon,US,0,2026-05-22T14:21:33Z
+5525,@outage_nina,Outage Nina,HSE and Emissions Notice,8820,0.0325,69.26,HSE and Emissions,Boston,Massachusetts,US,0,2026-05-22T14:21:33Z
+5526,@outage_aria,Outage Aria,Regulatory Notice,98419,0.0456,89.66,Advanced Metering,Atlanta,Georgia,US,0,2026-05-22T14:21:33Z
+5527,@outage_mia,Outage Mia,Production Signal,5246,0.0835,82.07,Production Operations,Dallas,Texas,US,0,2026-05-22T14:21:33Z
+5528,@outage_ruby,Outage Ruby,Reliability Signal,94157,0.0266,71.23,Vegetation Management,San Diego,California,US,0,2026-05-22T14:21:33Z
+5529,@outage_faye,Outage Faye,Compliance Signal,9489,0.07,82.17,Field Safety,Minneapolis,Minnesota,US,0,2026-05-22T14:21:33Z
+5530,@outage_jace,Outage Jace,Field Access Bulletin,50978,0.0785,96.1,Gas Operations,Detroit,Michigan,US,0,2026-05-22T14:21:33Z
+5531,@outage_omar,Outage Omar,Regulatory Notice,46244,0.0276,68.17,Water Operations,Las Vegas,Nevada,US,0,2026-05-22T14:21:33Z
+5532,@outage_tess,Outage Tess,Capacity Alert,3467,0.0993,86.92,DERMS,Brooklyn,New York,US,0,2026-05-22T14:21:33Z
+5533,@meter_marcus,Meter Marcus,Reliability Signal,78557,0.0558,91.76,Critical Load,New York,New York,US,0,2026-05-22T14:21:33Z
+5534,@meter_ava,Meter Ava,Production Signal,2685095,0.0151,85.01,Production Operations,Los Angeles,California,US,1,2026-05-22T14:21:33Z
+5535,@meter_finn,Meter Finn,Field Access Bulletin,41930,0.0767,91.86,Grid Resilience,Chicago,Illinois,US,0,2026-05-22T14:21:33Z
+5536,@meter_mia,Meter Mia,HSE and Emissions Notice,6712,0.0925,92.21,HSE and Emissions,Houston,Texas,US,0,2026-05-22T14:21:33Z
+5537,@meter_max,Meter Max,Capacity Alert,1363,0.1033,97.44,Mutual Aid,Phoenix,Arizona,US,0,2026-05-22T14:21:33Z
+5538,@meter_hope,Meter Hope,Reliability Signal,4528,0.0672,85.36,Outage Restoration,San Francisco,California,US,0,2026-05-22T14:21:33Z
+5539,@meter_nora,Meter Nora,Compliance Signal,332568,0.0289,77.34,Distribution Automation,Miami,Florida,US,0,2026-05-22T14:21:33Z
+5540,@meter_tess,Meter Tess,Field Access Bulletin,806030,0.0445,93.99,Customer Operations,Seattle,Washington,US,1,2026-05-22T14:21:33Z
+5541,@meter_yuri,Meter Yuri,Production Signal,5367,0.0951,95.67,Production Operations,Denver,Colorado,US,0,2026-05-22T14:21:33Z
+5542,@meter_sarah,Meter Sarah,Capacity Alert,6796,0.0969,89.11,Storm Response,Austin,Texas,US,0,2026-05-22T14:21:33Z
+5543,@substation_lily,Substation Lily,Reliability Signal,7924,0.0869,90.75,Vegetation Management,Nashville,Tennessee,US,0,2026-05-22T14:21:33Z
+5544,@substation_nina,Substation Nina,Compliance Signal,5656,0.0729,82.49,Field Safety,Portland,Oregon,US,0,2026-05-22T14:21:33Z
+5545,@substation_luna,Substation Luna,Field Access Bulletin,51024,0.0322,72.05,Gas Operations,Boston,Massachusetts,US,0,2026-05-22T14:21:33Z
+5546,@substation_ruby,Substation Ruby,Regulatory Notice,6667,0.0415,63.78,Water Operations,Atlanta,Georgia,US,0,2026-05-22T14:21:33Z
+5547,@substation_hope,Substation Hope,HSE and Emissions Notice,94934,0.0493,80.29,HSE and Emissions,Dallas,Texas,US,0,2026-05-22T14:21:33Z
+5548,@substation_omar,Substation Omar,Production Signal,5021,0.0996,100,Production Operations,San Diego,California,US,0,2026-05-22T14:21:33Z
+5549,@substation_vince,Substation Vince,Compliance Signal,6028,0.0572,73.99,Power Quality,Minneapolis,Minnesota,US,0,2026-05-22T14:21:33Z
+5550,@substation_cass,Substation Cass,Field Access Bulletin,86396,0.0768,100,Grid Resilience,Detroit,Michigan,US,0,2026-05-22T14:21:33Z
+5551,@substation_zoe,Substation Zoe,Regulatory Notice,2529,0.0546,74.54,Remote Monitoring,Las Vegas,Nevada,US,0,2026-05-22T14:21:33Z
+5552,@substation_ava,Substation Ava,Capacity Alert,22401,0.0642,78.3,Mutual Aid,Brooklyn,New York,US,0,2026-05-22T14:21:33Z
+5553,@feeder_kai,Feeder Kai,Reliability Signal,814099,0.0286,91.81,Outage Restoration,New York,New York,US,1,2026-05-22T14:21:33Z
+5554,@feeder_ella,Feeder Ella,Compliance Signal,1244,0.0977,79.7,Distribution Automation,Los Angeles,California,US,0,2026-05-22T14:21:33Z
+5555,@feeder_noah,Feeder Noah,Production Signal,58942,0.0601,87.15,Production Operations,Chicago,Illinois,US,0,2026-05-22T14:21:33Z
+5556,@feeder_faye,Feeder Faye,Regulatory Notice,863615,0.0202,73.79,Advanced Metering,Houston,Texas,US,1,2026-05-22T14:21:33Z
+5557,@feeder_nora,Feeder Nora,Capacity Alert,87716,0.0282,69.48,Storm Response,Phoenix,Arizona,US,0,2026-05-22T14:21:33Z
+5558,@feeder_vince,Feeder Vince,HSE and Emissions Notice,7052,0.1026,97.38,HSE and Emissions,San Francisco,California,US,0,2026-05-22T14:21:33Z
+5559,@feeder_dev,Feeder Dev,Compliance Signal,4724299,0.0192,89.2,Field Safety,Miami,Florida,US,1,2026-05-22T14:21:33Z
+5560,@feeder_lily,Feeder Lily,Field Access Bulletin,9601,0.0558,69.31,Gas Operations,Seattle,Washington,US,0,2026-05-22T14:21:33Z
+5561,@feeder_drew,Feeder Drew,Regulatory Notice,7770,0.1145,100,Water Operations,Denver,Colorado,US,0,2026-05-22T14:21:33Z
+5562,@feeder_mia,Feeder Mia,Production Signal,7882748,0.0082,90.9,Production Operations,Austin,Texas,US,1,2026-05-22T14:21:33Z
+5563,@storm_maya,Storm Maya,Reliability Signal,8666,0.0916,94.37,Critical Load,Nashville,Tennessee,US,0,2026-05-22T14:21:33Z
+5564,@storm_aria,Storm Aria,Compliance Signal,8506,0.0483,64.79,Power Quality,Portland,Oregon,US,0,2026-05-22T14:21:33Z
+5565,@storm_ruby,Storm Ruby,Field Access Bulletin,6846,0.108,94.35,Grid Resilience,Boston,Massachusetts,US,0,2026-05-22T14:21:33Z
+5566,@storm_jace,Storm Jace,Regulatory Notice,6703192,0.0227,89.18,Remote Monitoring,Atlanta,Georgia,US,1,2026-05-22T14:21:33Z
+5567,@storm_tess,Storm Tess,Capacity Alert,1284,0.0618,63.02,Mutual Aid,Dallas,Texas,US,0,2026-05-22T14:21:33Z
+5568,@storm_cass,Storm Cass,Reliability Signal,77977,0.0515,87.23,Outage Restoration,San Diego,California,US,0,2026-05-22T14:21:33Z
+5569,@storm_lily,Storm Lily,HSE and Emissions Notice,5001,0.1105,100,HSE and Emissions,Minneapolis,Minnesota,US,0,2026-05-22T14:21:33Z
+5570,@storm_ella,Storm Ella,Field Access Bulletin,9864,0.0888,99.64,Customer Operations,Detroit,Michigan,US,0,2026-05-22T14:21:33Z
+5571,@storm_ivy,Storm Ivy,Regulatory Notice,9668,0.1108,100,Advanced Metering,Las Vegas,Nevada,US,0,2026-05-22T14:21:33Z
+5572,@storm_hope,Storm Hope,Capacity Alert,3334,0.1056,91.72,Storm Response,Brooklyn,New York,US,0,2026-05-22T14:21:33Z
+5573,@dispatch_tyler,Dispatch Tyler,Reliability Signal,14552,0.0323,72.98,Vegetation Management,New York,New York,US,0,2026-05-22T14:21:33Z
+5574,@dispatch_luna,Dispatch Luna,Compliance Signal,5619,0.0354,66.89,Field Safety,Los Angeles,California,US,0,2026-05-22T14:21:33Z
+5575,@dispatch_dane,Dispatch Dane,Field Access Bulletin,1056,0.0653,70.54,Gas Operations,Chicago,Illinois,US,0,2026-05-22T14:21:33Z
+5576,@dispatch_omar,Dispatch Omar,Production Signal,635445,0.024,88.73,Production Operations,Houston,Texas,US,1,2026-05-22T14:21:33Z
+5577,@dispatch_yuri,Dispatch Yuri,Capacity Alert,547701,0.018,70.99,DERMS,Phoenix,Arizona,US,1,2026-05-22T14:21:33Z
+5578,@dispatch_zoe,Dispatch Zoe,Reliability Signal,5506678,0.023,87.77,Critical Load,San Francisco,California,US,1,2026-05-22T14:21:33Z
+5579,@dispatch_drew,Dispatch Drew,Compliance Signal,545667,0.0158,76.12,Power Quality,Miami,Florida,US,1,2026-05-22T14:21:33Z
+5580,@dispatch_ivy,Dispatch Ivy,HSE and Emissions Notice,5484,0.0942,95.42,HSE and Emissions,Seattle,Washington,US,0,2026-05-22T14:21:33Z
+5581,@dispatch_ines,Dispatch Ines,Regulatory Notice,9451785,0.0193,99.5,Remote Monitoring,Denver,Colorado,US,1,2026-05-22T14:21:33Z
+5582,@dispatch_tess,Dispatch Tess,Capacity Alert,43115,0.0438,78.65,Mutual Aid,Austin,Texas,US,0,2026-05-22T14:21:33Z
+5583,@field_ava,Field Ava,Production Signal,9148,0.0654,74.99,Production Operations,Nashville,Tennessee,US,0,2026-05-22T14:21:33Z
+5584,@field_mia,Field Mia,Compliance Signal,7766,0.1045,100,Distribution Automation,Portland,Oregon,US,0,2026-05-22T14:21:33Z
+5585,@field_hope,Field Hope,Field Access Bulletin,5537,0.0476,72.56,Customer Operations,Boston,Massachusetts,US,0,2026-05-22T14:21:33Z
+5586,@field_tess,Field Tess,Regulatory Notice,1315,0.0479,55.1,Advanced Metering,Atlanta,Georgia,US,0,2026-05-22T14:21:33Z
+5587,@field_sarah,Field Sarah,Capacity Alert,5539,0.0721,80.21,Storm Response,Dallas,Texas,US,0,2026-05-22T14:21:33Z
+5593,@reliability_cole,Reliability Cole,Reliability Signal,8092,0.1148,100,Vegetation Management,San Diego,California,US,0,2026-05-22T14:21:33Z
+5594,@reliability_ivy,Reliability Ivy,Compliance Signal,4655,0.0742,78.22,Field Safety,Minneapolis,Minnesota,US,0,2026-05-22T14:21:33Z
+5595,@reliability_kara,Reliability Kara,Production Signal,568697,0.0259,85.24,Production Operations,Detroit,Michigan,US,1,2026-05-22T14:21:33Z
+5596,@reliability_xena,Reliability Xena,HSE and Emissions Notice,7488,0.045,68.54,HSE and Emissions,Las Vegas,Nevada,US,0,2026-05-22T14:21:33Z
+5597,@reliability_marcus,Reliability Marcus,Capacity Alert,96082,0.0465,84.56,DERMS,Brooklyn,New York,US,0,2026-05-22T14:21:33Z
+5598,@reliability_aria,Reliability Aria,Reliability Signal,90617,0.0323,79.84,Critical Load,New York,New York,US,0,2026-05-22T14:21:33Z
+5599,@reliability_dane,Reliability Dane,Compliance Signal,6177759,0.0099,84.61,Power Quality,Los Angeles,California,US,1,2026-05-22T14:21:33Z
+5600,@reliability_reed,Reliability Reed,Field Access Bulletin,638626,0.0201,85.75,Grid Resilience,Chicago,Illinois,US,1,2026-05-22T14:21:33Z
+5601,@reliability_dev,Reliability Dev,Regulatory Notice,22451,0.0716,88.44,Remote Monitoring,Houston,Texas,US,0,2026-05-22T14:21:33Z
+5602,@reliability_ava,Reliability Ava,Production Signal,8549,0.0958,95.1,Production Operations,Phoenix,Arizona,US,0,2026-05-22T14:21:33Z
+5603,@vegetation_nina,Vegetation Nina,Reliability Signal,58481,0.0391,76.76,Outage Restoration,San Francisco,California,US,0,2026-05-22T14:21:33Z
+5604,@vegetation_ruby,Vegetation Ruby,Compliance Signal,3387,0.0539,71.79,Distribution Automation,Miami,Florida,US,0,2026-05-22T14:21:33Z
+5605,@vegetation_omar,Vegetation Omar,Field Access Bulletin,8577,0.1114,97.46,Customer Operations,Seattle,Washington,US,0,2026-05-22T14:21:33Z
+5606,@vegetation_cass,Vegetation Cass,Regulatory Notice,74626,0.0255,75.75,Advanced Metering,Denver,Colorado,US,0,2026-05-22T14:21:33Z
+5607,@vegetation_ava,Vegetation Ava,HSE and Emissions Notice,25186,0.0392,66.7,HSE and Emissions,Austin,Texas,US,0,2026-05-22T14:21:33Z
+5608,@vegetation_ivy,Vegetation Ivy,Reliability Signal,9586,0.079,89.75,Vegetation Management,Nashville,Tennessee,US,0,2026-05-22T14:21:33Z
+5609,@vegetation_liam,Vegetation Liam,Production Signal,68106,0.0725,93.44,Production Operations,Portland,Oregon,US,0,2026-05-22T14:21:33Z
+5610,@vegetation_zara,Vegetation Zara,Field Access Bulletin,13251,0.0789,93.2,Gas Operations,Boston,Massachusetts,US,0,2026-05-22T14:21:33Z
+5611,@vegetation_maya,Vegetation Maya,Regulatory Notice,683850,0.044,92.53,Water Operations,Atlanta,Georgia,US,1,2026-05-22T14:21:33Z
+5612,@vegetation_mia,Vegetation Mia,Capacity Alert,7866,0.0577,79.31,DERMS,Dallas,Texas,US,0,2026-05-22T14:21:33Z
+5613,@transformer_drew,Transformer Drew,Reliability Signal,6392,0.0331,58.65,Critical Load,San Diego,California,US,0,2026-05-22T14:21:33Z
+5614,@transformer_cleo,Transformer Cleo,Compliance Signal,7037,0.1165,100,Power Quality,Minneapolis,Minnesota,US,0,2026-05-22T14:21:33Z
+5615,@transformer_sage,Transformer Sage,Field Access Bulletin,42421,0.0566,87.89,Grid Resilience,Detroit,Michigan,US,0,2026-05-22T14:21:33Z
+5616,@transformer_jen,Transformer Jen,Production Signal,47232,0.0677,84.69,Production Operations,Las Vegas,Nevada,US,0,2026-05-22T14:21:33Z
+5617,@transformer_finn,Transformer Finn,Capacity Alert,3632,0.0533,66.56,Mutual Aid,Brooklyn,New York,US,0,2026-05-22T14:21:33Z
+5618,@transformer_faye,Transformer Faye,HSE and Emissions Notice,386163,0.0327,87.87,HSE and Emissions,New York,New York,US,0,2026-05-22T14:21:33Z
+5619,@transformer_uma,Transformer Uma,Compliance Signal,321729,0.0383,84.14,Distribution Automation,Los Angeles,California,US,0,2026-05-22T14:21:33Z
+5620,@transformer_zoe,Transformer Zoe,Field Access Bulletin,5692,0.0422,61.13,Customer Operations,Chicago,Illinois,US,0,2026-05-22T14:21:33Z
+5621,@transformer_owen,Transformer Owen,Regulatory Notice,8557710,0.0112,91.35,Advanced Metering,Houston,Texas,US,1,2026-05-22T14:21:33Z
+5622,@transformer_hope,Transformer Hope,Capacity Alert,17549,0.0713,84.48,Storm Response,Phoenix,Arizona,US,0,2026-05-22T14:21:33Z
+5623,@voltage_ella,Voltage Ella,Production Signal,3635,0.0733,73.57,Production Operations,San Francisco,California,US,0,2026-05-22T14:21:33Z
+5624,@voltage_faye,Voltage Faye,Compliance Signal,79754,0.0342,81.31,Field Safety,Miami,Florida,US,0,2026-05-22T14:21:33Z
+5625,@voltage_vince,Voltage Vince,Field Access Bulletin,4819,0.0977,93.1,Gas Operations,Seattle,Washington,US,0,2026-05-22T14:21:33Z
+5626,@voltage_lily,Voltage Lily,Regulatory Notice,8069,0.0907,87.23,Water Operations,Denver,Colorado,US,0,2026-05-22T14:21:33Z
+5627,@voltage_mia,Voltage Mia,Capacity Alert,49151,0.044,72.43,DERMS,Austin,Texas,US,0,2026-05-22T14:21:33Z
+5628,@voltage_liam,Voltage Liam,Reliability Signal,73476,0.0785,98.73,Critical Load,Nashville,Tennessee,US,0,2026-05-22T14:21:33Z
+5629,@voltage_cass,Voltage Cass,HSE and Emissions Notice,2005,0.0995,92.3,HSE and Emissions,Portland,Oregon,US,0,2026-05-22T14:21:33Z
+5630,@voltage_nina,Voltage Nina,Production Signal,82730,0.078,91.56,Production Operations,Boston,Massachusetts,US,0,2026-05-22T14:21:33Z
+5631,@voltage_cleo,Voltage Cleo,Regulatory Notice,73923,0.0728,95.21,Remote Monitoring,Atlanta,Georgia,US,0,2026-05-22T14:21:33Z
+5632,@voltage_tess,Voltage Tess,Capacity Alert,96728,0.065,97.28,Mutual Aid,Dallas,Texas,US,0,2026-05-22T14:21:33Z
+5633,@water_finn,Water Finn,Reliability Signal,60774,0.0514,77.88,Outage Restoration,San Diego,California,US,0,2026-05-22T14:21:33Z
+5634,@water_hope,Water Hope,Compliance Signal,142033,0.0314,78.06,Distribution Automation,Minneapolis,Minnesota,US,0,2026-05-22T14:21:33Z
+5635,@water_yuri,Water Yuri,Field Access Bulletin,496465,0.0242,80.75,Customer Operations,Detroit,Michigan,US,0,2026-05-22T14:21:33Z
+5636,@water_ava,Water Ava,Regulatory Notice,77501,0.0531,81.46,Advanced Metering,Las Vegas,Nevada,US,0,2026-05-22T14:21:33Z
+5637,@water_max,Water Max,Production Signal,9391,0.0948,98.01,Production Operations,Brooklyn,New York,US,0,2026-05-22T14:21:33Z
+5638,@water_tess,Water Tess,Reliability Signal,51854,0.0261,74.23,Vegetation Management,New York,New York,US,0,2026-05-22T14:21:33Z
+5639,@water_marcus,Water Marcus,Compliance Signal,8093,0.0305,56.02,Field Safety,Los Angeles,California,US,0,2026-05-22T14:21:33Z
+5640,@water_mia,Water Mia,HSE and Emissions Notice,3500,0.0579,71.9,HSE and Emissions,Chicago,Illinois,US,0,2026-05-22T14:21:33Z
+5641,@water_nora,Water Nora,Regulatory Notice,68297,0.0653,96.31,Water Operations,Houston,Texas,US,0,2026-05-22T14:21:33Z
+5642,@water_sarah,Water Sarah,Capacity Alert,79110,0.0685,97.13,DERMS,Phoenix,Arizona,US,0,2026-05-22T14:21:33Z
+5643,@gas_aria,Gas Aria,Reliability Signal,857143,0.0391,91.17,Critical Load,San Francisco,California,US,1,2026-05-22T14:21:33Z
+5644,@gas_jace,Gas Jace,Production Signal,79968,0.0727,91.23,Production Operations,Miami,Florida,US,0,2026-05-22T14:21:33Z
+5645,@gas_cass,Gas Cass,Field Access Bulletin,2253,0.0999,83.97,Grid Resilience,Seattle,Washington,US,0,2026-05-22T14:21:33Z
+5646,@gas_ella,Gas Ella,Regulatory Notice,70995,0.0672,93.15,Remote Monitoring,Denver,Colorado,US,0,2026-05-22T14:21:33Z
+5647,@gas_hope,Gas Hope,Capacity Alert,6164,0.0687,76.48,Mutual Aid,Austin,Texas,US,0,2026-05-22T14:21:33Z
+5648,@gas_zara,Gas Zara,Reliability Signal,4620,0.0855,88.83,Outage Restoration,Nashville,Tennessee,US,0,2026-05-22T14:21:33Z
+5649,@gas_nina,Gas Nina,Compliance Signal,725963,0.0364,86.15,Distribution Automation,Portland,Oregon,US,1,2026-05-22T14:21:33Z
+5650,@gas_faye,Gas Faye,Field Access Bulletin,8549,0.0671,78.25,Customer Operations,Boston,Massachusetts,US,0,2026-05-22T14:21:33Z
+5651,@gas_xena,Gas Xena,HSE and Emissions Notice,9306,0.054,78.46,HSE and Emissions,Atlanta,Georgia,US,0,2026-05-22T14:21:33Z
+5652,@gas_ava,Gas Ava,Capacity Alert,77268,0.0263,70.65,Storm Response,Dallas,Texas,US,0,2026-05-22T14:21:33Z
+5653,@microgrid_owen,Microgrid Owen,Reliability Signal,9096,0.0399,63.22,Vegetation Management,San Diego,California,US,0,2026-05-22T14:21:33Z
+5654,@microgrid_liam,Microgrid Liam,Compliance Signal,7370,0.088,96.3,Field Safety,Minneapolis,Minnesota,US,0,2026-05-22T14:21:33Z
+5655,@microgrid_mike,Microgrid Mike,Field Access Bulletin,55574,0.0378,69.87,Gas Operations,Detroit,Michigan,US,0,2026-05-22T14:21:33Z
+5656,@microgrid_luna,Microgrid Luna,Regulatory Notice,292676,0.0214,80.59,Water Operations,Las Vegas,Nevada,US,0,2026-05-22T14:21:33Z
+5657,@microgrid_nora,Microgrid Nora,Capacity Alert,791333,0.0204,84.78,DERMS,Brooklyn,New York,US,1,2026-05-22T14:21:33Z
+5658,@microgrid_jen,Microgrid Jen,Production Signal,84396,0.0441,88.66,Production Operations,New York,New York,US,0,2026-05-22T14:21:33Z
+5659,@microgrid_jack,Microgrid Jack,Compliance Signal,6679,0.0623,80.1,Power Quality,Los Angeles,California,US,0,2026-05-22T14:21:33Z
+5660,@microgrid_omar,Microgrid Omar,Field Access Bulletin,232255,0.032,86.8,Grid Resilience,Chicago,Illinois,US,0,2026-05-22T14:21:33Z
+5661,@microgrid_alex,Microgrid Alex,Regulatory Notice,7010150,0.015,93.43,Remote Monitoring,Houston,Texas,US,1,2026-05-22T14:21:33Z
+5662,@microgrid_mia,Microgrid Mia,HSE and Emissions Notice,9638,0.1038,96.61,HSE and Emissions,Phoenix,Arizona,US,0,2026-05-22T14:21:33Z
+5663,@battery_luna,Battery Luna,Reliability Signal,70976,0.0666,93.23,Outage Restoration,San Francisco,California,US,0,2026-05-22T14:21:33Z
+5664,@battery_omar,Battery Omar,Compliance Signal,73081,0.0382,80.21,Distribution Automation,Miami,Florida,US,0,2026-05-22T14:21:33Z
+5665,@battery_zoe,Battery Zoe,Production Signal,2509,0.1002,86.42,Production Operations,Seattle,Washington,US,0,2026-05-22T14:21:33Z
+5666,@battery_ivy,Battery Ivy,Regulatory Notice,33307,0.0374,70.88,Advanced Metering,Denver,Colorado,US,0,2026-05-22T14:21:33Z
+5667,@battery_tess,Battery Tess,Capacity Alert,2896,0.0845,80.8,Storm Response,Austin,Texas,US,0,2026-05-22T14:21:33Z
+5668,@battery_maya,Battery Maya,Reliability Signal,1433,0.0545,67.27,Vegetation Management,Nashville,Tennessee,US,0,2026-05-22T14:21:33Z
+5669,@battery_cleo,Battery Cleo,Compliance Signal,106499,0.0414,77.29,Field Safety,Portland,Oregon,US,0,2026-05-22T14:21:33Z
+5670,@battery_xena,Battery Xena,Field Access Bulletin,76572,0.0671,93.73,Gas Operations,Boston,Massachusetts,US,0,2026-05-22T14:21:33Z
+5671,@battery_nina,Battery Nina,Regulatory Notice,9519,0.0824,85.29,Water Operations,Atlanta,Georgia,US,0,2026-05-22T14:21:33Z
+5672,@battery_hope,Battery Hope,Production Signal,9360452,0.0117,94.93,Production Operations,Dallas,Texas,US,1,2026-05-22T14:21:33Z
+5673,@solar_jack,Solar Jack,HSE and Emissions Notice,86628,0.0693,99.34,HSE and Emissions,San Diego,California,US,0,2026-05-22T14:21:33Z
+5674,@solar_reed,Solar Reed,Compliance Signal,3282,0.1053,100,Power Quality,Minneapolis,Minnesota,US,0,2026-05-22T14:21:33Z
+5675,@solar_kai,Solar Kai,Field Access Bulletin,124455,0.0282,68.22,Grid Resilience,Detroit,Michigan,US,0,2026-05-22T14:21:33Z
+5676,@solar_cleo,Solar Cleo,Regulatory Notice,84096,0.0591,94.88,Remote Monitoring,Las Vegas,Nevada,US,0,2026-05-22T14:21:33Z
+5677,@solar_yuri,Solar Yuri,Capacity Alert,8420,0.0564,81.68,Mutual Aid,Brooklyn,New York,US,0,2026-05-22T14:21:33Z
+5678,@solar_ella,Solar Ella,Reliability Signal,2447,0.1147,91.38,Outage Restoration,New York,New York,US,0,2026-05-22T14:21:33Z
+5679,@solar_kara,Solar Kara,Production Signal,99697,0.0694,88.38,Production Operations,Los Angeles,California,US,0,2026-05-22T14:21:33Z
+5680,@solar_jen,Solar Jen,Field Access Bulletin,6814,0.0576,73.85,Customer Operations,Chicago,Illinois,US,0,2026-05-22T14:21:33Z
+5681,@solar_noah,Solar Noah,Regulatory Notice,3185,0.1083,92.75,Advanced Metering,Houston,Texas,US,0,2026-05-22T14:21:33Z
+5682,@solar_tess,Solar Tess,Capacity Alert,200009,0.0354,76.53,Storm Response,Phoenix,Arizona,US,0,2026-05-22T14:21:33Z
+5683,@ev_mia,Ev Mia,Reliability Signal,9528,0.0666,84.2,Vegetation Management,San Francisco,California,US,0,2026-05-22T14:21:33Z
+5684,@ev_tess,Ev Tess,HSE and Emissions Notice,6302,0.0348,56.5,HSE and Emissions,Miami,Florida,US,0,2026-05-22T14:21:33Z
+5685,@ev_ava,Ev Ava,Field Access Bulletin,922103,0.0325,87.64,Gas Operations,Seattle,Washington,US,1,2026-05-22T14:21:33Z
+5686,@ev_hope,Ev Hope,Production Signal,11040,0.04,65.49,Production Operations,Denver,Colorado,US,0,2026-05-22T14:21:33Z
+5687,@ev_sarah,Ev Sarah,Capacity Alert,81253,0.0755,100,DERMS,Austin,Texas,US,0,2026-05-22T14:21:33Z
+5693,@derms_noah,Derms Noah,Reliability Signal,3900,0.1185,100,Critical Load,Nashville,Tennessee,US,0,2026-05-22T14:21:33Z
+5694,@derms_vince,Derms Vince,Compliance Signal,484703,0.0369,84.55,Power Quality,Portland,Oregon,US,0,2026-05-22T14:21:33Z
+5695,@derms_drew,Derms Drew,Field Access Bulletin,2523,0.0532,74.96,Grid Resilience,Boston,Massachusetts,US,0,2026-05-22T14:21:33Z
+5696,@derms_liam,Derms Liam,Regulatory Notice,84233,0.0526,81.74,Remote Monitoring,Atlanta,Georgia,US,0,2026-05-22T14:21:33Z
+5697,@derms_marcus,Derms Marcus,Capacity Alert,237315,0.0385,81.85,Mutual Aid,Dallas,Texas,US,0,2026-05-22T14:21:33Z
+5698,@derms_cleo,Derms Cleo,Production Signal,8368,0.0822,96.18,Production Operations,San Diego,California,US,0,2026-05-22T14:21:33Z
+5699,@derms_beau,Derms Beau,Compliance Signal,94118,0.0638,95.53,Distribution Automation,Minneapolis,Minnesota,US,0,2026-05-22T14:21:33Z
+5700,@derms_luna,Derms Luna,HSE and Emissions Notice,3114,0.0617,73.7,HSE and Emissions,Detroit,Michigan,US,0,2026-05-22T14:21:33Z
+5701,@derms_sage,Derms Sage,Regulatory Notice,40637,0.0392,68.84,Advanced Metering,Las Vegas,Nevada,US,0,2026-05-22T14:21:33Z
+5702,@derms_ava,Derms Ava,Capacity Alert,581062,0.0418,87.19,Storm Response,Brooklyn,New York,US,1,2026-05-22T14:21:33Z
+5703,@critical_ivy,Critical Ivy,Reliability Signal,9954,0.0583,82.55,Vegetation Management,New York,New York,US,0,2026-05-22T14:21:33Z
+5704,@critical_xena,Critical Xena,Compliance Signal,11133723,0.0244,99.57,Field Safety,Los Angeles,California,US,1,2026-05-22T14:21:33Z
+5705,@critical_aria,Critical Aria,Production Signal,1146,0.0586,63.67,Production Operations,Chicago,Illinois,US,0,2026-05-22T14:21:33Z
+5706,@critical_reed,Critical Reed,Regulatory Notice,10997,0.0609,84.52,Water Operations,Houston,Texas,US,0,2026-05-22T14:21:33Z
+5707,@critical_ava,Critical Ava,Capacity Alert,51384,0.0394,76.21,DERMS,Phoenix,Arizona,US,0,2026-05-22T14:21:33Z
+5708,@critical_jace,Critical Jace,Reliability Signal,3647,0.0566,69.48,Critical Load,San Francisco,California,US,0,2026-05-22T14:21:33Z
+5709,@critical_zoe,Critical Zoe,Compliance Signal,7887,0.0386,63.49,Power Quality,Miami,Florida,US,0,2026-05-22T14:21:33Z
+5710,@critical_cleo,Critical Cleo,Field Access Bulletin,4453,0.0678,83.1,Grid Resilience,Seattle,Washington,US,0,2026-05-22T14:21:33Z
+5711,@critical_cass,Critical Cass,HSE and Emissions Notice,3299,0.1039,97.91,HSE and Emissions,Denver,Colorado,US,0,2026-05-22T14:21:33Z
+5712,@critical_mia,Critical Mia,Production Signal,4080,0.0447,69.39,Production Operations,Austin,Texas,US,0,2026-05-22T14:21:33Z
+5713,@customer_leo,Customer Leo,Reliability Signal,9238,0.0316,60.41,Outage Restoration,Nashville,Tennessee,US,0,2026-05-22T14:21:33Z
+5714,@customer_zara,Customer Zara,Compliance Signal,4649,0.1003,93.58,Distribution Automation,Portland,Oregon,US,0,2026-05-22T14:21:33Z
+5715,@customer_jack,Customer Jack,Field Access Bulletin,15247,0.0467,67.6,Customer Operations,Boston,Massachusetts,US,0,2026-05-22T14:21:33Z
+5716,@customer_vince,Customer Vince,Regulatory Notice,86577,0.0643,85.24,Advanced Metering,Atlanta,Georgia,US,0,2026-05-22T14:21:33Z
+5717,@customer_finn,Customer Finn,Capacity Alert,7569,0.0873,90.19,Storm Response,Dallas,Texas,US,0,2026-05-22T14:21:33Z
+5718,@customer_reed,Customer Reed,Reliability Signal,9816708,0.0161,84.54,Vegetation Management,San Diego,California,US,1,2026-05-22T14:21:33Z
+5719,@customer_cole,Customer Cole,Production Signal,596894,0.026,75.41,Production Operations,Minneapolis,Minnesota,US,1,2026-05-22T14:21:33Z
+5720,@customer_liam,Customer Liam,Field Access Bulletin,30405,0.0747,92.61,Gas Operations,Detroit,Michigan,US,0,2026-05-22T14:21:33Z
+5721,@customer_kai,Customer Kai,Regulatory Notice,79222,0.0261,70.53,Water Operations,Las Vegas,Nevada,US,0,2026-05-22T14:21:33Z
+5722,@customer_hope,Customer Hope,HSE and Emissions Notice,8031,0.0895,94.79,HSE and Emissions,Brooklyn,New York,US,0,2026-05-22T14:21:33Z
+5723,@callcenter_ruby,Callcenter Ruby,Reliability Signal,7502,0.0424,62.58,Critical Load,New York,New York,US,0,2026-05-22T14:21:33Z
+5724,@callcenter_cass,Callcenter Cass,Compliance Signal,5747,0.0405,60.37,Power Quality,Los Angeles,California,US,0,2026-05-22T14:21:33Z
+5725,@callcenter_ivy,Callcenter Ivy,Field Access Bulletin,34668,0.0732,88.82,Grid Resilience,Chicago,Illinois,US,0,2026-05-22T14:21:33Z
+5726,@callcenter_zara,Callcenter Zara,Production Signal,36872,0.0773,91.98,Production Operations,Houston,Texas,US,0,2026-05-22T14:21:33Z
+5727,@callcenter_mia,Callcenter Mia,Capacity Alert,4037,0.1042,92.98,Mutual Aid,Phoenix,Arizona,US,0,2026-05-22T14:21:33Z
+5728,@callcenter_xena,Callcenter Xena,Reliability Signal,79140,0.0401,79.03,Outage Restoration,San Francisco,California,US,0,2026-05-22T14:21:33Z
+5729,@callcenter_luna,Callcenter Luna,Compliance Signal,69732,0.0665,84.32,Distribution Automation,Miami,Florida,US,0,2026-05-22T14:21:33Z
+5730,@callcenter_vince,Callcenter Vince,Field Access Bulletin,128285,0.027,67.96,Customer Operations,Seattle,Washington,US,0,2026-05-22T14:21:33Z
+5731,@callcenter_aria,Callcenter Aria,Regulatory Notice,97703,0.0749,91.1,Advanced Metering,Denver,Colorado,US,0,2026-05-22T14:21:33Z
+5732,@callcenter_tess,Callcenter Tess,Capacity Alert,388660,0.0303,81.76,Storm Response,Austin,Texas,US,0,2026-05-22T14:21:33Z
+5733,@restoration_max,Restoration Max,HSE and Emissions Notice,6065,0.0986,99.67,HSE and Emissions,Nashville,Tennessee,US,0,2026-05-22T14:21:33Z
+5734,@restoration_sarah,Restoration Sarah,Compliance Signal,4256,0.094,90.45,Field Safety,Portland,Oregon,US,0,2026-05-22T14:21:33Z
+5743,@mutualaid_cleo,Mutualaid Cleo,Field Access Bulletin,7536,0.0386,73.17,Gas Operations,Boston,Massachusetts,US,0,2026-05-22T14:21:33Z
+5744,@mutualaid_jen,Mutualaid Jen,Regulatory Notice,71170,0.067,98.13,Water Operations,Atlanta,Georgia,US,0,2026-05-22T14:21:33Z
+5745,@mutualaid_faye,Mutualaid Faye,Capacity Alert,9773,0.1023,100,DERMS,Dallas,Texas,US,0,2026-05-22T14:21:33Z
+5746,@mutualaid_zoe,Mutualaid Zoe,Reliability Signal,71390,0.053,86.65,Critical Load,San Diego,California,US,0,2026-05-22T14:21:33Z
+5747,@mutualaid_hope,Mutualaid Hope,Compliance Signal,6759,0.06,82.57,Power Quality,Minneapolis,Minnesota,US,0,2026-05-22T14:21:33Z
+5748,@mutualaid_lily,Mutualaid Lily,Production Signal,63805,0.0326,72.96,Production Operations,Detroit,Michigan,US,0,2026-05-22T14:21:33Z
+5749,@mutualaid_jace,Mutualaid Jace,Regulatory Notice,379967,0.0261,75.36,Remote Monitoring,Las Vegas,Nevada,US,0,2026-05-22T14:21:33Z
+5750,@mutualaid_maya,Mutualaid Maya,Capacity Alert,79452,0.0426,81.42,Mutual Aid,Brooklyn,New York,US,0,2026-05-22T14:21:33Z
+5751,@mutualaid_liam,Mutualaid Liam,Reliability Signal,925068,0.0439,93.42,Outage Restoration,New York,New York,US,1,2026-05-22T14:21:33Z
+5752,@mutualaid_ava,Mutualaid Ava,HSE and Emissions Notice,2238,0.1081,88.94,HSE and Emissions,Los Angeles,California,US,0,2026-05-22T14:21:33Z
+5753,@safety_dane,Safety Dane,Field Access Bulletin,7040,0.1078,100,Customer Operations,Chicago,Illinois,US,0,2026-05-22T14:21:33Z
+5754,@safety_zoe,Safety Zoe,Regulatory Notice,81582,0.0698,99.24,Advanced Metering,Houston,Texas,US,0,2026-05-22T14:21:33Z
+5755,@safety_ines,Safety Ines,Production Signal,789139,0.0164,84.81,Production Operations,Phoenix,Arizona,US,1,2026-05-22T14:21:33Z
+5756,@safety_maya,Safety Maya,Reliability Signal,180162,0.0377,86.83,Vegetation Management,San Francisco,California,US,0,2026-05-22T14:21:33Z
+5757,@safety_nora,Safety Nora,Compliance Signal,89385,0.0645,97.27,Field Safety,Miami,Florida,US,0,2026-05-22T14:21:33Z
+5758,@safety_nina,Safety Nina,Field Access Bulletin,5544,0.1067,95.53,Gas Operations,Seattle,Washington,US,0,2026-05-22T14:21:33Z
+5759,@safety_sage,Safety Sage,Regulatory Notice,5337,0.0976,99.86,Water Operations,Denver,Colorado,US,0,2026-05-22T14:21:33Z
+5760,@safety_aria,Safety Aria,Capacity Alert,9198716,0.0085,93.31,DERMS,Austin,Texas,US,1,2026-05-22T14:21:33Z
+5761,@safety_wren,Safety Wren,Reliability Signal,8885,0.0754,86.41,Critical Load,Nashville,Tennessee,US,0,2026-05-22T14:21:33Z
+5762,@safety_mia,Safety Mia,Production Signal,1249,0.0832,80.13,Production Operations,Portland,Oregon,US,0,2026-05-22T14:21:33Z
+5763,@inspection_faye,Inspection Faye,HSE and Emissions Notice,4590,0.0672,85.22,HSE and Emissions,Boston,Massachusetts,US,0,2026-05-22T14:21:33Z
+5764,@inspection_lily,Inspection Lily,Regulatory Notice,54616,0.0266,65.59,Remote Monitoring,Atlanta,Georgia,US,0,2026-05-22T14:21:33Z
+5765,@inspection_liam,Inspection Liam,Capacity Alert,9550,0.0814,84.14,Mutual Aid,Dallas,Texas,US,0,2026-05-22T14:21:33Z
+5766,@inspection_nina,Inspection Nina,Reliability Signal,13601515,0.0183,88.13,Outage Restoration,San Diego,California,US,1,2026-05-22T14:21:33Z
+5767,@inspection_tess,Inspection Tess,Compliance Signal,6650,0.0379,65.52,Distribution Automation,Minneapolis,Minnesota,US,0,2026-05-22T14:21:33Z
+5768,@inspection_luna,Inspection Luna,Field Access Bulletin,24711,0.0711,84.44,Customer Operations,Detroit,Michigan,US,0,2026-05-22T14:21:33Z
+5769,@inspection_zara,Inspection Zara,Production Signal,2415,0.0363,53.65,Production Operations,Las Vegas,Nevada,US,0,2026-05-22T14:21:33Z
+5770,@inspection_ruby,Inspection Ruby,Capacity Alert,67123,0.0443,86.04,Storm Response,Brooklyn,New York,US,0,2026-05-22T14:21:33Z
+5771,@inspection_jen,Inspection Jen,Reliability Signal,752019,0.0427,85.8,Vegetation Management,New York,New York,US,1,2026-05-22T14:21:33Z
+5772,@inspection_hope,Inspection Hope,Compliance Signal,2699,0.0969,85.87,Field Safety,Los Angeles,California,US,0,2026-05-22T14:21:33Z
+5773,@pressure_gus,Pressure Gus,Field Access Bulletin,31717,0.049,76.67,Gas Operations,Chicago,Illinois,US,0,2026-05-22T14:21:33Z
+5774,@pressure_maya,Pressure Maya,HSE and Emissions Notice,4907,0.1142,100,HSE and Emissions,Houston,Texas,US,0,2026-05-22T14:21:33Z
+5775,@pressure_pia,Pressure Pia,Capacity Alert,687155,0.0263,77.22,DERMS,Phoenix,Arizona,US,1,2026-05-22T14:21:33Z
+5776,@pressure_aria,Pressure Aria,Production Signal,110388,0.0211,74.7,Production Operations,San Francisco,California,US,0,2026-05-22T14:21:33Z
+5777,@pressure_yuri,Pressure Yuri,Compliance Signal,22499,0.0319,64.76,Power Quality,Miami,Florida,US,0,2026-05-22T14:21:33Z
+5778,@pressure_ruby,Pressure Ruby,Field Access Bulletin,86329,0.0512,86.99,Grid Resilience,Seattle,Washington,US,0,2026-05-22T14:21:33Z
+5779,@pressure_alex,Pressure Alex,Regulatory Notice,1082,0.1018,92.88,Remote Monitoring,Denver,Colorado,US,0,2026-05-22T14:21:33Z
+5780,@pressure_jace,Pressure Jace,Capacity Alert,89341,0.0734,99.62,Mutual Aid,Austin,Texas,US,0,2026-05-22T14:21:33Z
+5781,@pressure_cole,Pressure Cole,Reliability Signal,689267,0.0345,81.91,Outage Restoration,Nashville,Tennessee,US,1,2026-05-22T14:21:33Z
+5782,@pressure_tess,Pressure Tess,Compliance Signal,7716,0.1051,92.93,Distribution Automation,Portland,Oregon,US,0,2026-05-22T14:21:33Z
+5783,@leak_hope,Leak Hope,Production Signal,3370,0.1145,100,Production Operations,Boston,Massachusetts,US,0,2026-05-22T14:21:33Z
+5784,@leak_ava,Leak Ava,Regulatory Notice,660501,0.023,79.8,Advanced Metering,Atlanta,Georgia,US,1,2026-05-22T14:21:33Z
+5785,@leak_tess,Leak Tess,HSE and Emissions Notice,70135,0.0308,66.79,HSE and Emissions,Dallas,Texas,US,0,2026-05-22T14:21:33Z
+5786,@leak_mia,Leak Mia,Reliability Signal,520311,0.0227,81.18,Vegetation Management,San Diego,California,US,1,2026-05-22T14:21:33Z
+5787,@leak_sarah,Leak Sarah,Compliance Signal,47947,0.0331,77.55,Field Safety,Minneapolis,Minnesota,US,0,2026-05-22T14:21:33Z
+5793,@streetlight_ines,Streetlight Ines,Field Access Bulletin,63879,0.0371,80.85,Gas Operations,Detroit,Michigan,US,0,2026-05-22T14:21:33Z
+5794,@streetlight_nina,Streetlight Nina,Regulatory Notice,109031,0.0394,73.62,Water Operations,Las Vegas,Nevada,US,0,2026-05-22T14:21:33Z
+5795,@streetlight_wren,Streetlight Wren,Production Signal,27484,0.0264,68.99,Production Operations,Brooklyn,New York,US,0,2026-05-22T14:21:33Z
+5796,@streetlight_ruby,Streetlight Ruby,Reliability Signal,5328,0.0609,78.56,Critical Load,New York,New York,US,0,2026-05-22T14:21:33Z
+5797,@streetlight_marcus,Streetlight Marcus,Compliance Signal,44226,0.0443,84.85,Power Quality,Los Angeles,California,US,0,2026-05-22T14:21:33Z
+5798,@streetlight_omar,Streetlight Omar,Field Access Bulletin,784008,0.0349,89.47,Grid Resilience,Chicago,Illinois,US,1,2026-05-22T14:21:33Z
+5799,@streetlight_owen,Streetlight Owen,Regulatory Notice,8285,0.0669,87.84,Remote Monitoring,Houston,Texas,US,0,2026-05-22T14:21:33Z
+5800,@streetlight_cass,Streetlight Cass,Capacity Alert,15227,0.0262,60.01,Mutual Aid,Phoenix,Arizona,US,0,2026-05-22T14:21:33Z
+5801,@streetlight_gus,Streetlight Gus,HSE and Emissions Notice,721791,0.035,84.74,HSE and Emissions,San Francisco,California,US,1,2026-05-22T14:21:33Z
+5802,@streetlight_ava,Streetlight Ava,Production Signal,631439,0.0254,74.99,Production Operations,Miami,Florida,US,1,2026-05-22T14:21:33Z
+5803,@ami_jace,Ami Jace,Field Access Bulletin,2512,0.1096,97.51,Customer Operations,Seattle,Washington,US,0,2026-05-22T14:21:33Z
+5804,@ami_ella,Ami Ella,Regulatory Notice,5892,0.0407,63.1,Advanced Metering,Denver,Colorado,US,0,2026-05-22T14:21:33Z
+5805,@ami_zara,Ami Zara,Capacity Alert,6737,0.1087,98.2,Storm Response,Austin,Texas,US,0,2026-05-22T14:21:33Z
+5806,@ami_faye,Ami Faye,Reliability Signal,9689,0.0824,91.91,Vegetation Management,Nashville,Tennessee,US,0,2026-05-22T14:21:33Z
+5807,@ami_ava,Ami Ava,Compliance Signal,1811,0.0909,83.94,Field Safety,Portland,Oregon,US,0,2026-05-22T14:21:33Z
+5808,@ami_vince,Ami Vince,Field Access Bulletin,48795,0.0252,74.71,Gas Operations,Boston,Massachusetts,US,0,2026-05-22T14:21:33Z
+5809,@ami_ruby,Ami Ruby,Production Signal,4747,0.1095,93.86,Production Operations,Atlanta,Georgia,US,0,2026-05-22T14:21:33Z
+5810,@ami_lily,Ami Lily,Capacity Alert,3368,0.091,89.59,DERMS,Dallas,Texas,US,0,2026-05-22T14:21:33Z
+5811,@ami_reed,Ami Reed,Reliability Signal,834721,0.0371,90.06,Critical Load,San Diego,California,US,1,2026-05-22T14:21:33Z
+5812,@ami_mia,Ami Mia,HSE and Emissions Notice,3953,0.0851,82.83,HSE and Emissions,Minneapolis,Minnesota,US,0,2026-05-22T14:21:33Z
+5813,@sensor_kara,Sensor Kara,Field Access Bulletin,2643,0.0897,93.87,Grid Resilience,Detroit,Michigan,US,0,2026-05-22T14:21:33Z
+5814,@sensor_aria,Sensor Aria,Regulatory Notice,8952,0.0844,83.51,Remote Monitoring,Las Vegas,Nevada,US,0,2026-05-22T14:21:33Z
+5815,@sensor_dev,Sensor Dev,Capacity Alert,70083,0.0497,79.07,Mutual Aid,Brooklyn,New York,US,0,2026-05-22T14:21:33Z
+5816,@sensor_jace,Sensor Jace,Production Signal,7301,0.0732,88.47,Production Operations,New York,New York,US,0,2026-05-22T14:21:33Z
+5817,@sensor_finn,Sensor Finn,Compliance Signal,2280,0.081,74.81,Distribution Automation,Los Angeles,California,US,0,2026-05-22T14:21:33Z
+5818,@sensor_cass,Sensor Cass,Field Access Bulletin,94817,0.0695,88.24,Customer Operations,Chicago,Illinois,US,0,2026-05-22T14:21:33Z
+5819,@sensor_ines,Sensor Ines,Regulatory Notice,7171,0.0964,100,Advanced Metering,Houston,Texas,US,0,2026-05-22T14:21:33Z
+5820,@sensor_ella,Sensor Ella,Capacity Alert,1255,0.0736,70.24,Storm Response,Phoenix,Arizona,US,0,2026-05-22T14:21:33Z
+5821,@sensor_beau,Sensor Beau,Reliability Signal,4681,0.0325,54.89,Vegetation Management,San Francisco,California,US,0,2026-05-22T14:21:33Z
+5822,@sensor_hope,Sensor Hope,Compliance Signal,23149,0.0429,70.15,Field Safety,Miami,Florida,US,0,2026-05-22T14:21:33Z
+5823,@relay_liam,Relay Liam,HSE and Emissions Notice,6375497,0.017,94.92,HSE and Emissions,Seattle,Washington,US,1,2026-05-22T14:21:33Z
+5824,@relay_luna,Relay Luna,Regulatory Notice,65424,0.0623,89.71,Water Operations,Denver,Colorado,US,0,2026-05-22T14:21:33Z
+5825,@relay_jen,Relay Jen,Capacity Alert,99289,0.0548,82.86,DERMS,Austin,Texas,US,0,2026-05-22T14:21:33Z
+5826,@relay_omar,Relay Omar,Reliability Signal,11502,0.0533,74.27,Critical Load,Nashville,Tennessee,US,0,2026-05-22T14:21:33Z
+5827,@relay_mia,Relay Mia,Compliance Signal,41146,0.0375,76.57,Power Quality,Portland,Oregon,US,0,2026-05-22T14:21:33Z
+5828,@relay_zoe,Relay Zoe,Field Access Bulletin,378978,0.0413,89.26,Grid Resilience,Boston,Massachusetts,US,0,2026-05-22T14:21:33Z
+5829,@relay_reed,Relay Reed,Regulatory Notice,3541,0.1079,100,Remote Monitoring,Atlanta,Georgia,US,0,2026-05-22T14:21:33Z
+5830,@relay_ivy,Relay Ivy,Production Signal,4337,0.1093,94.23,Production Operations,Dallas,Texas,US,0,2026-05-22T14:21:33Z
+5831,@relay_lily,Relay Lily,Reliability Signal,1499,0.0385,62.95,Outage Restoration,San Diego,California,US,0,2026-05-22T14:21:33Z
+5832,@relay_tess,Relay Tess,Compliance Signal,8431,0.0438,73.05,Distribution Automation,Minneapolis,Minnesota,US,0,2026-05-22T14:21:33Z
+5833,@protection_nora,Protection Nora,Field Access Bulletin,5937,0.0699,80.78,Customer Operations,Detroit,Michigan,US,0,2026-05-22T14:21:33Z
+5834,@protection_mia,Protection Mia,HSE and Emissions Notice,7756,0.0641,84.69,HSE and Emissions,Las Vegas,Nevada,US,0,2026-05-22T14:21:33Z
+5835,@protection_marcus,Protection Marcus,Capacity Alert,82068,0.046,88.05,Storm Response,Brooklyn,New York,US,0,2026-05-22T14:21:33Z
+5836,@protection_tess,Protection Tess,Reliability Signal,41708,0.0355,72.56,Vegetation Management,New York,New York,US,0,2026-05-22T14:21:33Z
+5837,@protection_max,Protection Max,Production Signal,7392716,0.0175,82.99,Production Operations,Los Angeles,California,US,1,2026-05-22T14:21:33Z
+5838,@protection_ava,Protection Ava,Field Access Bulletin,419899,0.0433,82.53,Gas Operations,Chicago,Illinois,US,0,2026-05-22T14:21:33Z
+5839,@protection_yuri,Protection Yuri,Regulatory Notice,48765,0.0472,75.94,Water Operations,Houston,Texas,US,0,2026-05-22T14:21:33Z
+5840,@protection_hope,Protection Hope,Capacity Alert,334511,0.0161,80.63,DERMS,Phoenix,Arizona,US,0,2026-05-22T14:21:33Z
+5841,@protection_finn,Protection Finn,Reliability Signal,870586,0.0293,88.64,Critical Load,San Francisco,California,US,1,2026-05-22T14:21:33Z
+5842,@protection_sarah,Protection Sarah,Compliance Signal,26024,0.0439,70.35,Power Quality,Miami,Florida,US,0,2026-05-22T14:21:33Z
+5843,@switching_omar,Switching Omar,Field Access Bulletin,6032,0.0821,87.4,Grid Resilience,Seattle,Washington,US,0,2026-05-22T14:21:33Z
+5844,@switching_ivy,Switching Ivy,Production Signal,3066,0.0489,62.08,Production Operations,Denver,Colorado,US,0,2026-05-22T14:21:33Z
+5845,@switching_maya,Switching Maya,HSE and Emissions Notice,5943,0.0753,78.48,HSE and Emissions,Austin,Texas,US,0,2026-05-22T14:21:33Z
+5846,@switching_xena,Switching Xena,Reliability Signal,46661,0.0276,76.32,Outage Restoration,Nashville,Tennessee,US,0,2026-05-22T14:21:33Z
+5847,@switching_hope,Switching Hope,Compliance Signal,13866,0.0423,69.45,Distribution Automation,Portland,Oregon,US,0,2026-05-22T14:21:33Z
+5848,@switching_aria,Switching Aria,Field Access Bulletin,11734,0.0465,78.42,Customer Operations,Boston,Massachusetts,US,0,2026-05-22T14:21:33Z
+5849,@switching_jen,Switching Jen,Regulatory Notice,838986,0.0371,87.02,Advanced Metering,Atlanta,Georgia,US,1,2026-05-22T14:21:33Z
+5850,@switching_reed,Switching Reed,Capacity Alert,6401,0.082,85.9,Storm Response,Dallas,Texas,US,0,2026-05-22T14:21:33Z
+5851,@switching_ruby,Switching Ruby,Production Signal,23833,0.0299,69.13,Production Operations,San Diego,California,US,0,2026-05-22T14:21:33Z
+5852,@switching_ava,Switching Ava,Compliance Signal,648016,0.0431,91.64,Field Safety,Minneapolis,Minnesota,US,1,2026-05-22T14:21:33Z
+5853,@controlroom_pia,Controlroom Pia,Field Access Bulletin,2676,0.0664,68.25,Gas Operations,Detroit,Michigan,US,0,2026-05-22T14:21:33Z
+5854,@controlroom_ruby,Controlroom Ruby,Regulatory Notice,87797,0.067,90.57,Water Operations,Las Vegas,Nevada,US,0,2026-05-22T14:21:33Z
+5855,@controlroom_cole,Controlroom Cole,Capacity Alert,9417,0.0857,93.45,DERMS,Brooklyn,New York,US,0,2026-05-22T14:21:33Z
+5856,@controlroom_cass,Controlroom Cass,HSE and Emissions Notice,6483,0.0479,65.22,HSE and Emissions,New York,New York,US,0,2026-05-22T14:21:33Z
+5857,@controlroom_nora,Controlroom Nora,Compliance Signal,6535,0.0675,87.5,Power Quality,Los Angeles,California,US,0,2026-05-22T14:21:33Z
+5858,@controlroom_ivy,Controlroom Ivy,Production Signal,8633,0.0525,69.95,Production Operations,Chicago,Illinois,US,0,2026-05-22T14:21:33Z
+5859,@controlroom_tyler,Controlroom Tyler,Regulatory Notice,33087,0.064,84.49,Remote Monitoring,Houston,Texas,US,0,2026-05-22T14:21:33Z
+5860,@controlroom_zara,Controlroom Zara,Capacity Alert,5455,0.0455,72.35,Mutual Aid,Phoenix,Arizona,US,0,2026-05-22T14:21:33Z
+5861,@controlroom_kara,Controlroom Kara,Reliability Signal,9868,0.0496,67.82,Outage Restoration,San Francisco,California,US,0,2026-05-22T14:21:33Z
+5862,@controlroom_mia,Controlroom Mia,Compliance Signal,6950,0.1021,100,Distribution Automation,Miami,Florida,US,0,2026-05-22T14:21:33Z
+5863,@distribution_reed,Distribution Reed,Field Access Bulletin,12394209,0.0168,97.57,Customer Operations,Seattle,Washington,US,1,2026-05-22T14:21:33Z
+5864,@distribution_cleo,Distribution Cleo,Regulatory Notice,611894,0.0168,76.83,Advanced Metering,Denver,Colorado,US,1,2026-05-22T14:21:33Z
+5865,@distribution_ella,Distribution Ella,Production Signal,11855,0.0748,81.45,Production Operations,Austin,Texas,US,0,2026-05-22T14:21:33Z
+5866,@distribution_jen,Distribution Jen,Reliability Signal,434121,0.0429,94.52,Vegetation Management,Nashville,Tennessee,US,0,2026-05-22T14:21:33Z
+5867,@distribution_tess,Distribution Tess,HSE and Emissions Notice,6710,0.0411,63.65,HSE and Emissions,Portland,Oregon,US,0,2026-05-22T14:21:33Z
+5868,@distribution_faye,Distribution Faye,Field Access Bulletin,1464,0.0341,60.53,Gas Operations,Boston,Massachusetts,US,0,2026-05-22T14:21:33Z
+5869,@distribution_aria,Distribution Aria,Regulatory Notice,47904,0.0458,79.13,Water Operations,Atlanta,Georgia,US,0,2026-05-22T14:21:33Z
+5870,@distribution_zoe,Distribution Zoe,Capacity Alert,42788,0.0304,75.01,DERMS,Dallas,Texas,US,0,2026-05-22T14:21:33Z
+5871,@distribution_vince,Distribution Vince,Reliability Signal,3902,0.0756,83.68,Critical Load,San Diego,California,US,0,2026-05-22T14:21:33Z
+5872,@distribution_hope,Distribution Hope,Production Signal,46166,0.05,75.97,Production Operations,Minneapolis,Minnesota,US,0,2026-05-22T14:21:33Z
+5873,@transmission_sage,Transmission Sage,Field Access Bulletin,2998,0.0359,62.2,Grid Resilience,Detroit,Michigan,US,0,2026-05-22T14:21:33Z
+5874,@transmission_faye,Transmission Faye,Regulatory Notice,35398,0.0661,86.4,Remote Monitoring,Las Vegas,Nevada,US,0,2026-05-22T14:21:33Z
+5875,@transmission_owen,Transmission Owen,Capacity Alert,36972,0.0655,80.79,Mutual Aid,Brooklyn,New York,US,0,2026-05-22T14:21:33Z
+5876,@transmission_lily,Transmission Lily,Reliability Signal,3844,0.1161,100,Outage Restoration,New York,New York,US,0,2026-05-22T14:21:33Z
+5877,@transmission_yuri,Transmission Yuri,Compliance Signal,8020,0.0708,82.86,Distribution Automation,Los Angeles,California,US,0,2026-05-22T14:21:33Z
+5878,@transmission_liam,Transmission Liam,HSE and Emissions Notice,5470,0.0879,88.63,HSE and Emissions,Chicago,Illinois,US,0,2026-05-22T14:21:33Z
+5879,@transmission_leo,Transmission Leo,Production Signal,60328,0.0606,93.04,Production Operations,Houston,Texas,US,0,2026-05-22T14:21:33Z
+5880,@transmission_nina,Transmission Nina,Capacity Alert,7602,0.086,86.32,Storm Response,Phoenix,Arizona,US,0,2026-05-22T14:21:33Z
+5881,@transmission_mike,Transmission Mike,Reliability Signal,88061,0.0645,90.36,Vegetation Management,San Francisco,California,US,0,2026-05-22T14:21:33Z
+5882,@transmission_tess,Transmission Tess,Compliance Signal,3161,0.0302,58.18,Field Safety,Miami,Florida,US,0,2026-05-22T14:21:33Z
+5883,@resilience_tess,Resilience Tess,Field Access Bulletin,41135,0.0678,87.89,Gas Operations,Seattle,Washington,US,0,2026-05-22T14:21:33Z
+5884,@resilience_hope,Resilience Hope,Regulatory Notice,2564,0.1073,93.63,Water Operations,Denver,Colorado,US,0,2026-05-22T14:21:33Z
+5885,@resilience_mia,Resilience Mia,Capacity Alert,5311,0.0345,63.83,DERMS,Austin,Texas,US,0,2026-05-22T14:21:33Z
+5886,@resilience_ava,Resilience Ava,Production Signal,1360,0.0883,77.8,Production Operations,Nashville,Tennessee,US,0,2026-05-22T14:21:33Z
+5887,@resilience_sarah,Resilience Sarah,Compliance Signal,6747,0.0963,96.91,Power Quality,Portland,Oregon,US,0,2026-05-22T14:21:33Z
+5893,@load_uma,Load Uma,Field Access Bulletin,823635,0.0366,95.54,Grid Resilience,Boston,Massachusetts,US,1,2026-05-22T14:21:33Z
+5894,@load_jace,Load Jace,HSE and Emissions Notice,2039,0.1034,87.58,HSE and Emissions,Atlanta,Georgia,US,0,2026-05-22T14:21:33Z
+5895,@load_leo,Load Leo,Capacity Alert,54750,0.0313,75.07,Mutual Aid,Dallas,Texas,US,0,2026-05-22T14:21:33Z
+5896,@load_ella,Load Ella,Reliability Signal,9139,0.0651,73.86,Outage Restoration,San Diego,California,US,0,2026-05-22T14:21:33Z
+5897,@load_marcus,Load Marcus,Compliance Signal,365256,0.0346,80.07,Distribution Automation,Minneapolis,Minnesota,US,0,2026-05-22T14:21:33Z
+5898,@load_zara,Load Zara,Production Signal,9471,0.0547,80.29,Production Operations,Detroit,Michigan,US,0,2026-05-22T14:21:33Z
+5899,@load_pia,Load Pia,Regulatory Notice,3206,0.0689,79.69,Advanced Metering,Las Vegas,Nevada,US,0,2026-05-22T14:21:33Z
+5900,@load_faye,Load Faye,Capacity Alert,75243,0.0278,67.32,Storm Response,Brooklyn,New York,US,0,2026-05-22T14:21:33Z
+5901,@load_jack,Load Jack,Reliability Signal,67893,0.0596,94.42,Vegetation Management,New York,New York,US,0,2026-05-22T14:21:33Z
+5902,@load_ava,Load Ava,Compliance Signal,5797,0.0598,75.08,Field Safety,Los Angeles,California,US,0,2026-05-22T14:21:33Z
+5903,@peak_vince,Peak Vince,Field Access Bulletin,68844,0.0662,89.65,Gas Operations,Chicago,Illinois,US,0,2026-05-22T14:21:33Z
+5904,@peak_liam,Peak Liam,Regulatory Notice,60403,0.0418,84.88,Water Operations,Houston,Texas,US,0,2026-05-22T14:21:33Z
+5905,@peak_cleo,Peak Cleo,HSE and Emissions Notice,29035,0.0615,91.47,HSE and Emissions,Phoenix,Arizona,US,0,2026-05-22T14:21:33Z
+5906,@peak_luna,Peak Luna,Reliability Signal,4235,0.1144,98.19,Critical Load,San Francisco,California,US,0,2026-05-22T14:21:33Z
+5907,@peak_ava,Peak Ava,Compliance Signal,78670,0.0511,86.01,Power Quality,Miami,Florida,US,0,2026-05-22T14:21:33Z
+5908,@peak_jen,Peak Jen,Field Access Bulletin,334256,0.0352,89.68,Grid Resilience,Seattle,Washington,US,0,2026-05-22T14:21:33Z
+5909,@peak_xena,Peak Xena,Regulatory Notice,554600,0.0295,82.23,Remote Monitoring,Denver,Colorado,US,1,2026-05-22T14:21:33Z
+5910,@peak_omar,Peak Omar,Capacity Alert,50315,0.0495,83.05,Mutual Aid,Austin,Texas,US,0,2026-05-22T14:21:33Z
+5911,@peak_faye,Peak Faye,Reliability Signal,5352,0.0859,90.92,Outage Restoration,Nashville,Tennessee,US,0,2026-05-22T14:21:33Z
+5912,@peak_mia,Peak Mia,Production Signal,2338,0.1068,92.32,Production Operations,Portland,Oregon,US,0,2026-05-22T14:21:33Z
+5913,@demand_wren,Demand Wren,Field Access Bulletin,9036,0.0598,77.43,Customer Operations,Boston,Massachusetts,US,0,2026-05-22T14:21:33Z
+5914,@demand_omar,Demand Omar,Regulatory Notice,83970,0.0273,76.61,Advanced Metering,Atlanta,Georgia,US,0,2026-05-22T14:21:33Z
+5915,@demand_gus,Demand Gus,Capacity Alert,66001,0.0344,71.31,Storm Response,Dallas,Texas,US,0,2026-05-22T14:21:33Z
+5916,@demand_ivy,Demand Ivy,HSE and Emissions Notice,1632,0.0669,78.86,HSE and Emissions,San Diego,California,US,0,2026-05-22T14:21:33Z
+5917,@demand_finn,Demand Finn,Compliance Signal,1056,0.0485,55.76,Field Safety,Minneapolis,Minnesota,US,0,2026-05-22T14:21:33Z
+5918,@demand_maya,Demand Maya,Field Access Bulletin,5422031,0.0131,79.76,Gas Operations,Detroit,Michigan,US,1,2026-05-22T14:21:33Z
+5919,@demand_mike,Demand Mike,Production Signal,5652,0.0806,81.36,Production Operations,Las Vegas,Nevada,US,0,2026-05-22T14:21:33Z
+5920,@demand_xena,Demand Xena,Capacity Alert,54036,0.0383,71.67,DERMS,Brooklyn,New York,US,0,2026-05-22T14:21:33Z
+5921,@demand_pia,Demand Pia,Reliability Signal,8772,0.0356,62.92,Critical Load,New York,New York,US,0,2026-05-22T14:21:33Z
+5922,@demand_hope,Demand Hope,Compliance Signal,86456,0.0575,93.67,Power Quality,Los Angeles,California,US,0,2026-05-22T14:21:33Z
+5923,@utility_xena,Utility Xena,Field Access Bulletin,3216,0.0768,81.49,Grid Resilience,Chicago,Illinois,US,0,2026-05-22T14:21:33Z
+5924,@utility_reed,Utility Reed,Regulatory Notice,5708,0.0719,87.33,Remote Monitoring,Houston,Texas,US,0,2026-05-22T14:21:33Z
+5925,@utility_jace,Utility Jace,Capacity Alert,4007,0.0554,76.46,Mutual Aid,Phoenix,Arizona,US,0,2026-05-22T14:21:33Z
+5926,@utility_cleo,Utility Cleo,Production Signal,4094,0.0507,76,Production Operations,San Francisco,California,US,0,2026-05-22T14:21:33Z
+5927,@utility_mia,Utility Mia,HSE and Emissions Notice,32642,0.0341,78.93,HSE and Emissions,Miami,Florida,US,0,2026-05-22T14:21:33Z
+5928,@utility_ella,Utility Ella,Field Access Bulletin,52060,0.067,84.04,Customer Operations,Seattle,Washington,US,0,2026-05-22T14:21:33Z
+5929,@utility_maya,Utility Maya,Regulatory Notice,934987,0.0428,85.33,Advanced Metering,Denver,Colorado,US,1,2026-05-22T14:21:33Z
+5930,@utility_jen,Utility Jen,Capacity Alert,927037,0.022,84.3,Storm Response,Austin,Texas,US,1,2026-05-22T14:21:33Z
+5931,@utility_zara,Utility Zara,Reliability Signal,54261,0.0678,97.27,Vegetation Management,Nashville,Tennessee,US,0,2026-05-22T14:21:33Z
+5932,@utility_tess,Utility Tess,Compliance Signal,2982,0.1165,100,Field Safety,Portland,Oregon,US,0,2026-05-22T14:21:33Z
+5933,@power_yuri,Power Yuri,Production Signal,8064,0.0964,100,Production Operations,Boston,Massachusetts,US,0,2026-05-22T14:21:33Z
+5934,@power_tess,Power Tess,Regulatory Notice,5662,0.0819,89.01,Water Operations,Atlanta,Georgia,US,0,2026-05-22T14:21:33Z
+5935,@power_nora,Power Nora,Capacity Alert,4155,0.0691,84.99,DERMS,Dallas,Texas,US,0,2026-05-22T14:21:33Z
+5936,@power_hope,Power Hope,Reliability Signal,50893,0.0754,89.21,Critical Load,San Diego,California,US,0,2026-05-22T14:21:33Z
+5937,@power_max,Power Max,Compliance Signal,7543,0.0766,82.6,Power Quality,Minneapolis,Minnesota,US,0,2026-05-22T14:21:33Z
+5938,@power_mia,Power Mia,HSE and Emissions Notice,2918,0.113,100,HSE and Emissions,Detroit,Michigan,US,0,2026-05-22T14:21:33Z
+5939,@power_finn,Power Finn,Regulatory Notice,943884,0.0161,78.39,Remote Monitoring,Las Vegas,Nevada,US,1,2026-05-22T14:21:33Z
+5940,@power_ava,Power Ava,Production Signal,6747,0.0894,96.42,Production Operations,Brooklyn,New York,US,0,2026-05-22T14:21:33Z
+5941,@power_marcus,Power Marcus,Reliability Signal,32405,0.03,72.05,Outage Restoration,New York,New York,US,0,2026-05-22T14:21:33Z
+5942,@power_sarah,Power Sarah,Compliance Signal,706026,0.0163,75.33,Distribution Automation,Los Angeles,California,US,1,2026-05-22T14:21:33Z
+5943,@energy_zara,Energy Zara,Field Access Bulletin,47128,0.052,85.7,Customer Operations,Chicago,Illinois,US,0,2026-05-22T14:21:33Z
+5944,@energy_vince,Energy Vince,Regulatory Notice,19375,0.0414,72.03,Advanced Metering,Houston,Texas,US,0,2026-05-22T14:21:33Z
+5945,@energy_reed,Energy Reed,Capacity Alert,3524,0.1099,100,Storm Response,Phoenix,Arizona,US,0,2026-05-22T14:21:33Z
+5946,@energy_liam,Energy Liam,Reliability Signal,11607,0.0545,70,Vegetation Management,San Francisco,California,US,0,2026-05-22T14:21:33Z
+5947,@energy_hope,Energy Hope,Production Signal,57840,0.0764,100,Production Operations,Miami,Florida,US,0,2026-05-22T14:21:33Z
+5948,@energy_cleo,Energy Cleo,Field Access Bulletin,1603,0.0674,72.01,Gas Operations,Seattle,Washington,US,0,2026-05-22T14:21:33Z
+5949,@energy_ivy,Energy Ivy,HSE and Emissions Notice,65673,0.056,92.5,HSE and Emissions,Denver,Colorado,US,0,2026-05-22T14:21:33Z
+5950,@energy_luna,Energy Luna,Capacity Alert,61264,0.0502,77.27,DERMS,Austin,Texas,US,0,2026-05-22T14:21:33Z
+5951,@energy_ella,Energy Ella,Reliability Signal,12049878,0.0177,92.54,Critical Load,Nashville,Tennessee,US,1,2026-05-22T14:21:33Z
+5952,@energy_ava,Energy Ava,Compliance Signal,39705,0.0496,78.93,Power Quality,Portland,Oregon,US,0,2026-05-22T14:21:33Z
+5953,@service_beau,Service Beau,Field Access Bulletin,3405,0.114,96.3,Grid Resilience,Boston,Massachusetts,US,0,2026-05-22T14:21:33Z
+5954,@service_xena,Service Xena,Production Signal,2338,0.0336,51.12,Production Operations,Atlanta,Georgia,US,0,2026-05-22T14:21:33Z
+5955,@service_uma,Service Uma,Capacity Alert,3155,0.1189,100,Mutual Aid,Dallas,Texas,US,0,2026-05-22T14:21:33Z
+5956,@service_reed,Service Reed,Reliability Signal,84630,0.079,100,Outage Restoration,San Diego,California,US,0,2026-05-22T14:21:33Z
+5957,@service_nora,Service Nora,Compliance Signal,9758110,0.0129,95.76,Distribution Automation,Minneapolis,Minnesota,US,1,2026-05-22T14:21:33Z
+5958,@service_jace,Service Jace,Field Access Bulletin,4236,0.1067,94.63,Customer Operations,Detroit,Michigan,US,0,2026-05-22T14:21:33Z
+5959,@service_gus,Service Gus,Regulatory Notice,7616,0.0884,84.15,Advanced Metering,Las Vegas,Nevada,US,0,2026-05-22T14:21:33Z
+5960,@service_cleo,Service Cleo,HSE and Emissions Notice,644630,0.0257,83.57,HSE and Emissions,Brooklyn,New York,US,1,2026-05-22T14:21:33Z
+5961,@service_leo,Service Leo,Production Signal,660685,0.043,87.69,Production Operations,New York,New York,US,1,2026-05-22T14:21:33Z
+5962,@service_mia,Service Mia,Compliance Signal,48571,0.0379,82.21,Field Safety,Los Angeles,California,US,0,2026-05-22T14:21:33Z
+5963,@response_cass,Response Cass,Field Access Bulletin,72795,0.0585,89.98,Gas Operations,Chicago,Illinois,US,0,2026-05-22T14:21:33Z
+5964,@response_zara,Response Zara,Regulatory Notice,5279,0.055,76.76,Water Operations,Houston,Texas,US,0,2026-05-22T14:21:33Z
+5965,@response_xena,Response Xena,Capacity Alert,42857,0.0569,79.67,DERMS,Phoenix,Arizona,US,0,2026-05-22T14:21:33Z
+5966,@response_vince,Response Vince,Reliability Signal,1091,0.0701,79.15,Critical Load,San Francisco,California,US,0,2026-05-22T14:21:33Z
+5967,@response_tess,Response Tess,Compliance Signal,9311,0.1017,100,Power Quality,Miami,Florida,US,0,2026-05-22T14:21:33Z
+5968,@response_reed,Response Reed,Production Signal,66291,0.0767,95.92,Production Operations,Seattle,Washington,US,0,2026-05-22T14:21:33Z
+5969,@response_omar,Response Omar,Regulatory Notice,8451,0.0841,95.5,Remote Monitoring,Denver,Colorado,US,0,2026-05-22T14:21:33Z
+5970,@response_liam,Response Liam,Capacity Alert,35697,0.0793,94.74,Mutual Aid,Austin,Texas,US,0,2026-05-22T14:21:33Z
+5971,@response_jace,Response Jace,HSE and Emissions Notice,87027,0.0491,86.64,HSE and Emissions,Nashville,Tennessee,US,0,2026-05-22T14:21:33Z
+5972,@response_hope,Response Hope,Compliance Signal,7300,0.0859,88.52,Distribution Automation,Portland,Oregon,US,0,2026-05-22T14:21:33Z
+5973,@planner_dev,Planner Dev,Field Access Bulletin,7163,0.0391,62.19,Customer Operations,Boston,Massachusetts,US,0,2026-05-22T14:21:33Z
+5974,@planner_cass,Planner Cass,Regulatory Notice,11674,0.0356,62.34,Advanced Metering,Atlanta,Georgia,US,0,2026-05-22T14:21:33Z
+5975,@planner_beau,Planner Beau,Production Signal,1623,0.0566,66.77,Production Operations,Dallas,Texas,US,0,2026-05-22T14:21:33Z
+5976,@planner_zara,Planner Zara,Reliability Signal,8988,0.1001,94.09,Vegetation Management,San Diego,California,US,0,2026-05-22T14:21:33Z
+5977,@planner_yuri,Planner Yuri,Compliance Signal,2217,0.0593,71.58,Field Safety,Minneapolis,Minnesota,US,0,2026-05-22T14:21:33Z
+5978,@planner_xena,Planner Xena,Field Access Bulletin,46783,0.0532,85.9,Gas Operations,Detroit,Michigan,US,0,2026-05-22T14:21:33Z
+5979,@planner_wren,Planner Wren,Regulatory Notice,63987,0.0417,73.9,Water Operations,Las Vegas,Nevada,US,0,2026-05-22T14:21:33Z
+5980,@planner_vince,Planner Vince,Capacity Alert,94974,0.0759,100,DERMS,Brooklyn,New York,US,0,2026-05-22T14:21:33Z
+5981,@planner_uma,Planner Uma,Reliability Signal,81393,0.0573,86.19,Critical Load,New York,New York,US,0,2026-05-22T14:21:33Z
+5982,@planner_tess,Planner Tess,HSE and Emissions Notice,5530,0.1038,96.39,HSE and Emissions,Los Angeles,California,US,0,2026-05-22T14:21:33Z
+5983,@operator_sarah,Operator Sarah,Field Access Bulletin,391377,0.0251,78.35,Grid Resilience,Chicago,Illinois,US,0,2026-05-22T14:21:33Z
+5993,@journey_mike,Journey Mike,Regulatory Notice,5752003,0.0058,75.9,Remote Monitoring,Houston,Texas,US,1,2026-05-22T14:21:33Z
+5994,@journey_jen,Journey Jen,Capacity Alert,6436,0.0598,76.28,Mutual Aid,Phoenix,Arizona,US,0,2026-05-22T14:21:33Z
+5995,@journey_alex,Journey Alex,Reliability Signal,7230,0.0569,72.43,Outage Restoration,San Francisco,California,US,0,2026-05-22T14:21:33Z
+5996,@journey_zoe,Journey Zoe,Compliance Signal,494304,0.0152,73.14,Distribution Automation,Miami,Florida,US,0,2026-05-22T14:21:33Z
+5997,@journey_marcus,Journey Marcus,Field Access Bulletin,804109,0.0407,92.37,Customer Operations,Seattle,Washington,US,1,2026-05-22T14:21:33Z
+5998,@journey_lily,Journey Lily,Production Signal,1727,0.0758,84.77,Production Operations,Denver,Colorado,US,0,2026-05-22T14:21:33Z
+5999,@journey_kai,Journey Kai,Capacity Alert,7947,0.0729,83.11,Storm Response,Austin,Texas,US,0,2026-05-22T14:21:33Z
+6000,@journey_maya,Journey Maya,Reliability Signal,29731,0.0742,92.14,Vegetation Management,Nashville,Tennessee,US,0,2026-05-22T14:21:33Z
+6001,@journey_tyler,Journey Tyler,Compliance Signal,5606,0.0487,64.43,Field Safety,Portland,Oregon,US,0,2026-05-22T14:21:33Z
+6002,@journey_ava,Journey Ava,HSE and Emissions Notice,7781,0.0856,96.02,HSE and Emissions,Boston,Massachusetts,US,0,2026-05-22T14:21:33Z
+6003,@outcomes_jen,Outcomes Jen,Regulatory Notice,532478,0.035,83.69,Water Operations,Atlanta,Georgia,US,1,2026-05-22T14:21:33Z
+6004,@outcomes_zoe,Outcomes Zoe,Capacity Alert,4845,0.058,72.65,DERMS,Dallas,Texas,US,0,2026-05-22T14:21:33Z
+6005,@outcomes_lily,Outcomes Lily,Production Signal,547261,0.0441,90.2,Production Operations,San Diego,California,US,1,2026-05-22T14:21:33Z
+6006,@outcomes_maya,Outcomes Maya,Compliance Signal,4999,0.0723,74.36,Power Quality,Minneapolis,Minnesota,US,0,2026-05-22T14:21:33Z
+6007,@outcomes_ava,Outcomes Ava,Field Access Bulletin,756864,0.0401,84.85,Grid Resilience,Detroit,Michigan,US,1,2026-05-22T14:21:33Z
+6008,@outcomes_nina,Outcomes Nina,Regulatory Notice,88083,0.0257,65.47,Remote Monitoring,Las Vegas,Nevada,US,0,2026-05-22T14:21:33Z
+6009,@outcomes_ella,Outcomes Ella,Capacity Alert,5937,0.0998,89.36,Mutual Aid,Brooklyn,New York,US,0,2026-05-22T14:21:33Z
+6010,@outcomes_aria,Outcomes Aria,Reliability Signal,58383,0.039,82.88,Outage Restoration,New York,New York,US,0,2026-05-22T14:21:33Z
+6011,@outcomes_luna,Outcomes Luna,Compliance Signal,5143,0.0597,69.33,Distribution Automation,Los Angeles,California,US,0,2026-05-22T14:21:33Z
+6012,@outcomes_mia,Outcomes Mia,Production Signal,9635,0.0904,100,Production Operations,Chicago,Illinois,US,0,2026-05-22T14:21:33Z

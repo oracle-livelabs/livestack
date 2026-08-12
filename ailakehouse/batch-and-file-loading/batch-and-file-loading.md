@@ -76,16 +76,15 @@ Perform the following set of steps to select the product master CSV for this wal
 
 1. In the Cloud Store file list, locate `product_master_raw.csv`.
 2. Select only `product_master_raw.csv` for this walkthrough.
-3. Do not select demand signal files in this scene. Demand ingest is demonstrated in the real-time streaming scene.
 
 The batch file set used by this scene is:
 
-| Source file | Bronze target table | Expected rows |
-| --- | --- | ---: |
-| `product_master_raw.csv` | `PRODUCT_MASTER_RAW` | 38 |
-| `orders_pos_raw.csv` | `ORDERS_POS_RAW` | 59 |
-| `inventory_snapshot_raw.csv` | `INVENTORY_SNAPSHOT_RAW` | 42 |
-| `product_images_manifest_raw.csv` | `PRODUCT_IMAGES_MANIFEST_RAW` | 37 |
+| Source file                       | Bronze target table           | Expected rows |
+| -----------------------------------| -------------------------------| --------------:|
+| `product_master_raw.csv`          | `PRODUCT_MASTER_RAW`          | 38            |
+| `orders_pos_raw.csv`              | `ORDERS_POS_RAW`              | 59            |
+| `inventory_snapshot_raw.csv`      | `INVENTORY_SNAPSHOT_RAW`      | 42            |
+| `product_images_manifest_raw.csv` | `PRODUCT_IMAGES_MANIFEST_RAW` | 37            |
 
 ## Task 6: Add the file and review settings
 
@@ -165,11 +164,7 @@ For PeakGear, this means file-based source data becomes part of the same trusted
 
 You can move to the next scene.
 
-## Credits & Build Notes
-- **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-12
-
 ## Acknowledgements
 
-* **Author** - TODO: Your Name, Your Title, Your Organization
-* **Last Updated By/Date** - TODO: Your Name, Month Year
+* **Author** - LiveLabs Team, July 2026
+* **Last Updated By/Date** - LiveLabs Team, July 2026

@@ -25,7 +25,7 @@ services:
       - ./db:/workspace/app/db:ro,z
       - ./scripts/bootstrap_db.sh:/opt/oracle/scripts/startup/20-bootstrap_db.sh:ro,z
     healthcheck:
-      test: ["CMD-SHELL", "[ \"$$(cat /opt/oracle/oradata/.app_schema_bootstrap_done 2>/dev/null)\" = 'READY:2026.07.01.1' ] && echo 'SELECT 1 FROM dual;' | sqlplus -L -s system/$${ORACLE_PWD:-oracle}@localhost:1521/FREEPDB1 || exit 1"]
+      test: ["CMD-SHELL", "[ \"$$(cat /opt/oracle/oradata/.app_schema_bootstrap_done 2>/dev/null)\" = 'READY:2026.07.02.1' ] && echo 'SELECT 1 FROM dual;' | sqlplus -L -s system/$${ORACLE_PWD:-oracle}@localhost:1521/FREEPDB1 || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 40

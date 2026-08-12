@@ -1,0 +1,23 @@
+.CollapsibleNavigationListItemVariants_multiVariantStyles_compound_0__dhvo8ye:not(:active) {
+  background-color: var(--backgroundColorHover__ibpjpp9);
+  border-color: var(--borderColorHover__ibpjppa);
+  color: var(--labelColorHover__ibpjpp8);
+}
+.CollapsibleNavigationListItemVariants_multiVariantStyles_compound_2__dhvo8yg {
+  background-color: var(--backgroundColorActive__ibpjppe);
+  border-color: var(--borderColorActive__ibpjppg);
+  color: var(--labelColorActive__ibpjppf);
+}
+.CollapsibleNavigationListItemVariants_multiVariantStyles_compound_3__dhvo8yh {
+  outline-style: dotted;
+  outline-offset: -1px;
+  outline-width: 1px;
+  outline-color: var(--oj-c-border-keyboard-focus);
+}
+@media (hover: hover) {
+  .CollapsibleNavigationListItemVariants_multiVariantStyles_compound_1__dhvo8yf:hover:not(:active) {
+    background-color: var(--backgroundColorHover__ibpjpp9);
+    border-color: var(--borderColorHover__ibpjppa);
+    color: var(--labelColorHover__ibpjpp8);
+  }
+}

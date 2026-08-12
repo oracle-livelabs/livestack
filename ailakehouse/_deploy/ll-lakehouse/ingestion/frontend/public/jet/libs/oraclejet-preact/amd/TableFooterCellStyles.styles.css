@@ -1,0 +1,54 @@
+.TableFooterCellStyles_tableFooterCellStyles_base__1axh81o0 {
+  border-top: var(--gridlineWidth__efrfp90) solid color-mix(in srgb, var(--oj-c-border-divider-opaque-color) var(--oj-c-border-divider-opaque-percent), var(--oj-current-bg-color, var(--oj-c-page-background-neutral0)));
+  box-sizing: border-box;
+  color: var(--oj-c-text-icon-primary);
+  font-size: var(--oj-c-body-md-font-size);
+  height: calc(var(--oj-c-table-row-height) + var(--gridlineWidth__efrfp90));
+  overflow: hidden;
+  position: sticky;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  z-index: 100005;
+}
+.TableFooterCellStyles_tableFooterCellStyles_base__1axh81o0:focus {
+  outline-style: none;
+}
+.TableFooterCellStyles_tableFooterCellStyles_stickyColumn__1axh81o1 {
+  z-index: 100006;
+}
+.TableFooterCellStyles_tableFooterCellStyles_stickyEdge__1axh81o2 {
+  z-index: 100007;
+}
+.TableFooterCellStyles_tableFooterCellStyles_focused__1axh81o3::after {
+  content: "";
+  display: block;
+  inset: 0;
+  outline-color: var(--oj-c-border-keyboard-focus);
+  outline-offset: -1px;
+  outline-style: dotted;
+  outline-width: 1px;
+  pointer-events: none;
+  position: absolute;
+}
+.TableFooterCellStyles_tableFooterCellStyles_active__1axh81o4 {
+  background-image: linear-gradient(var(--oj-c-overlay-hover), var(--oj-c-overlay-hover));
+}
+.TableFooterCellStyles_tableFooterCellStyles_activeSelected__1axh81o5 {
+  background-image: 
+    linear-gradient(
+      var(--oj-c-collection-header-surface-selected),
+      var(--oj-c-collection-header-surface-selected)
+    ),
+    linear-gradient(var(--oj-c-overlay-hover), var(--oj-c-overlay-hover));
+}
+.TableFooterCellStyles_tableFooterCellStyles_hover__1axh81o6 {
+  background-image: linear-gradient(var(--oj-c-overlay-hover), var(--oj-c-overlay-hover));
+}
+.TableFooterCellStyles_tableFooterCellStyles_hoverSelected__1axh81o7 {
+  background-image: 
+    linear-gradient(
+      var(--oj-c-collection-header-surface-selected),
+      var(--oj-c-collection-header-surface-selected)
+    ),
+    linear-gradient(var(--oj-c-overlay-hover), var(--oj-c-overlay-hover));
+}

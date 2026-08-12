@@ -1,0 +1,24 @@
+# Local environment configuration. Keep the documented template public.
+.env
+.env.*
+!.env.example
+
+# Database wallets, private keys, and certificate stores.
+/Wallet_*.zip
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.sso
+
+# Local/generated distribution artifacts.
+/build_dev.zip
+/install-peakgear.zip
+
+# Local agent and runtime state.
+.omx/
+ords-config/
+
+# Operating-system metadata.
+.DS_Store

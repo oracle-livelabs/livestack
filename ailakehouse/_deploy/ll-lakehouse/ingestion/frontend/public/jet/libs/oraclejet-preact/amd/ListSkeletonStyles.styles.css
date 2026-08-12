@@ -1,0 +1,49 @@
+@keyframes ListSkeletonStyles__skeletonContainerAnimation__1xtn1230 {
+  0% {
+    opacity: 0.05;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
+.ListSkeletonStyles_listSkeletonStyles_bar__1xtn1231 {
+  background-color: rgb(var(--oj-c-palette-neutral-170));
+}
+.ListSkeletonStyles_listSkeletonStyles_row__1xtn1232 {
+  align-items: center;
+  background-color: inherit;
+  border-inline-end: var(--gridlineWidth__63ilwe0) solid transparent;
+  border-inline-start: var(--gridlineWidth__63ilwe0) solid transparent;
+  box-sizing: border-box;
+  display: flex;
+  padding-inline-end: var(--oj-c-list-cell-padding-horizontal);
+  padding-inline-start: var(--oj-c-list-cell-padding-horizontal);
+}
+.ListSkeletonStyles_listSkeletonStyles_cell__1xtn1233 {
+  overflow: hidden;
+  position: relative;
+}
+.ListSkeletonStyles_listSkeletonStyles_cell__1xtn1233:focus {
+  outline-style: none;
+}
+.ListSkeletonStyles_listSkeletonStyles_innerCell__1xtn1234 {
+  animation-name: ListSkeletonStyles__skeletonContainerAnimation__1xtn1230;
+  animation-iteration-count: infinite;
+  animation-delay: 50ms;
+  animation-direction: alternate;
+  animation-duration: 1.5s;
+  height: 100%;
+  opacity: 0.001;
+  overflow: hidden;
+}
+.ListSkeletonStyles_listSkeletonStyles_focus__1xtn1235::after {
+  content: "";
+  display: block;
+  inset: 0;
+  outline-color: var(--oj-c-border-keyboard-focus);
+  outline-offset: -1px;
+  outline-style: dotted;
+  outline-width: 1px;
+  pointer-events: none;
+  position: absolute;
+}

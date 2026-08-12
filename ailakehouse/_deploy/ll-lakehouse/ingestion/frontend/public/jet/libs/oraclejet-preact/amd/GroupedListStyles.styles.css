@@ -1,0 +1,10 @@
+.GroupedListStyles_stuckHeader__1svo25f0 {
+  background-image: linear-gradient(var(--groupHeaderBgColorSticky__11yn0c70), var(--groupHeaderBgColorSticky__11yn0c70));
+  z-index: 1;
+}
+.GroupedListStyles_stuckHeader__1svo25f0[data-oj-listview-sticky] {
+  border-top-color: transparent;
+}
+.GroupedListStyles_stuckHeader__1svo25f0[data-oj-listview-group]:first-of-type {
+  box-shadow: var(--oj-c-box-shadow-sm);
+}

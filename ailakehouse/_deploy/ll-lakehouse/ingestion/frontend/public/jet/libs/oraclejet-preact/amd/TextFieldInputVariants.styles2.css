@@ -1,0 +1,71 @@
+.TextFieldInputVariants_multiVariantStyles_styleVariant_default__11kmtfy0 {
+  font-size: var(--oj-c-body-md-font-size);
+}
+.TextFieldInputVariants_multiVariantStyles_insideLabel_hasInsideLabel__11kmtfy6 {
+  min-height: var(--insideEdgeHeight__w6gg1yg);
+  padding-top: var(--insideEdgePaddingTop__w6gg1yh);
+  padding-bottom: 0;
+}
+.TextFieldInputVariants_multiVariantStyles_insideLabel_hasInsideLabel__11kmtfy6:hover {
+  background-color: transparent;
+}
+.TextFieldInputVariants_multiVariantStyles_disabled_isDisabled__11kmtfy8 {
+  color: var(--textColorDisabled__w6gg1ye);
+}
+.TextFieldInputVariants_multiVariantStyles_disabled_notDisabled__11kmtfy9 {
+  color: var(--textColor__w6gg1yb);
+}
+.TextFieldInputVariants_multiVariantStyles_type_isPassword__11kmtfya::-ms-reveal {
+  display: none;
+}
+.TextFieldInputVariants_multiVariantStyles_startContent_hasStartContent__11kmtfyc {
+  padding-inline-start: var(--iconToTextPadding__w6gg1y7);
+}
+.TextFieldInputVariants_multiVariantStyles_prefix_hasPrefix__11kmtfyg {
+  padding-inline-start: var(--oj-c-size-units, 0.25rem);
+}
+.TextFieldInputVariants_multiVariantStyles_compound_0__11kmtfyo {
+  padding-top: calc((var(--height__w6gg1yi) - 1rem * var(--oj-c-body-md-line-height))/ 2 - 1px);
+  padding-bottom: calc((var(--height__w6gg1yi) - 1rem * var(--oj-c-body-md-line-height))/ 2 - 1px);
+  resize: none;
+}
+.TextFieldInputVariants_multiVariantStyles_compound_1__11kmtfyp {
+  margin: 0;
+}
+.TextFieldInputVariants_multiVariantStyles_compound_2__11kmtfyq::-ms-reveal {
+  display: none;
+}
+.TextFieldInputVariants_multiVariantStyles_compound_3__11kmtfyr {
+  padding-inline-start: var(--textToEdgePadding__w6gg1y9);
+}
+.TextFieldInputVariants_multiVariantStyles_compound_4__11kmtfys {
+  padding-inline-end: var(--textToEdgePadding__w6gg1y9);
+}
+.TextFieldInputVariants_multiVariantStyles_compound_5__11kmtfyt {
+  padding-top: 0;
+  padding-bottom: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-block-start-width: calc(var(--insideEdgeFontSize__kn3t7f4) * var(--insideEdgeLineHeight__kn3t7f6) + var(--insideEdgePositionTop__kn3t7fa));
+  border-block-end-width: calc(0.25rem + var(--oj-c-density-units, 0px));
+}
+.TextFieldInputVariants_multiVariantStyles_compound_6__11kmtfyu {
+  animation-name: var(--placeholderAnimationName__w6gg1yf);
+  animation-duration: var(--oj-c-duration-2xl);
+  animation-timing-function: var(--oj-c-easing-exit);
+}
+.TextFieldInputVariants_multiVariantStyles_compound_8__11kmtfyv {
+  padding-inline-start: var(--iconToTextPadding__w6gg1y7);
+}
+.TextFieldInputVariants_multiVariantStyles_compound_9__11kmtfyw {
+  padding-inline-end: var(--oj-c-size-units, 0.25rem);
+}
+.TextFieldInputVariants_multiVariantStyles_compound_10__11kmtfyx {
+  padding-inline-end: var(--oj-c-size-units, 0.25rem);
+}
+.TextFieldInputVariants_multiVariantStyles_compound_11__11kmtfyy {
+  padding-inline-end: var(--oj-c-size-units, 0.25rem);
+}
+.TextFieldInputVariants_multiVariantStyles_compound_12__11kmtfyz {
+  padding-inline-end: var(--textToEdgePadding__w6gg1y9);
+}

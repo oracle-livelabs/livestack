@@ -1,0 +1,12 @@
+oj-c-accordion-item-multiple:not(.oj-complete){
+  visibility: hidden;
+}
+
+oj-c-accordion-item-multiple{
+	display: block;
+}
+
+oj-c-accordion-item-multiple[hidden]
+{
+  display: none;
+}

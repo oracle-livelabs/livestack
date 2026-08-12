@@ -1,0 +1,1722 @@
+{
+  "schema": "GOLD",
+  "source": "ORDS REST Enabled SQL endpoint",
+  "endpoint": "https://gvghzhqdv0tmywp-singaporedemomain.adb.us-phoenix-1.oraclecloudapps.com/ords/gold/_/sql",
+  "exported_at_utc": "2026-05-07T08:11:14Z",
+  "read_only_sql_only": true,
+  "tables": [
+    {
+      "table_name": "ADB_CHAT_PROMPTS",
+      "status": "exported",
+      "csv_file": "ADB_CHAT_PROMPTS.csv",
+      "row_count_database": 0,
+      "row_count_exported": 0,
+      "columns": [
+        {
+          "name": "ID",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "CONVERSATION_ID",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "CONVERSATION_PROMPT_ID",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "PROFILE_NAME",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "PROMPT",
+          "data_type": "CLOB"
+        },
+        {
+          "name": "PROMPT_RESPONSE",
+          "data_type": "CLOB"
+        },
+        {
+          "name": "CREATED",
+          "data_type": "TIMESTAMP(6) WITH TIME ZONE"
+        },
+        {
+          "name": "SHOWSQL",
+          "data_type": "CLOB"
+        },
+        {
+          "name": "PROMPT_ACTION",
+          "data_type": "VARCHAR2"
+        }
+      ]
+    },
+    {
+      "table_name": "AILHEMPLOYEE",
+      "status": "exported",
+      "csv_file": "AILHEMPLOYEE.csv",
+      "row_count_database": 10,
+      "row_count_exported": 10,
+      "columns": [
+        {
+          "name": "EMPLOYEE_ID",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "FIRST_NAME",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "LAST_NAME",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "EMAIL",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "HIRE_DATE",
+          "data_type": "DATE"
+        }
+      ]
+    },
+    {
+      "table_name": "ASK_ORACLE_AUTO_VISUAL_LOG",
+      "status": "exported",
+      "csv_file": "ASK_ORACLE_AUTO_VISUAL_LOG.csv",
+      "row_count_database": 38,
+      "row_count_exported": 38,
+      "columns": [
+        {
+          "name": "AUTO_VISUAL_ID",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "CONVERSATION_ID",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "CONVERSATION_PROMPT_ID",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "CHART_INTENT",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "VISUAL_TYPE",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "VISUAL_PAYLOAD",
+          "data_type": "CLOB"
+        },
+        {
+          "name": "AGENT_TEAM_NAME",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "AGENT_PROFILE_NAME",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "RUN_SUCCESS_FLAG",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "ERROR_MESSAGE",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "CREATED_ON",
+          "data_type": "TIMESTAMP(6)"
+        },
+        {
+          "name": "UPDATED_ON",
+          "data_type": "TIMESTAMP(6)"
+        }
+      ]
+    },
+    {
+      "table_name": "CLOUD_INGEST_LOG$",
+      "status": "exported",
+      "csv_file": "CLOUD_INGEST_LOG.csv",
+      "row_count_database": 8,
+      "row_count_exported": 8,
+      "columns": [
+        {
+          "name": "OWNER",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "CLIENT_ID",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "INGEST_ID",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "CALLER_ID",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "SYSTS",
+          "data_type": "TIMESTAMP(6) WITH TIME ZONE"
+        },
+        {
+          "name": "AUDSID",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "CUR_TIME",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "ENTRY_TYPE",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "DETAILS",
+          "data_type": "CLOB"
+        }
+      ]
+    },
+    {
+      "table_name": "CONVERSATION_TIME",
+      "status": "exported",
+      "csv_file": "CONVERSATION_TIME.csv",
+      "row_count_database": 48,
+      "row_count_exported": 48,
+      "columns": [
+        {
+          "name": "CONVERSATION_PROMPT_ID",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "CONVERSATION_ID",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "START_TIME",
+          "data_type": "TIMESTAMP(6) WITH TIME ZONE"
+        },
+        {
+          "name": "END_TIME",
+          "data_type": "TIMESTAMP(6) WITH TIME ZONE"
+        },
+        {
+          "name": "AGENT_CONVERSATION_ID",
+          "data_type": "CLOB"
+        }
+      ]
+    },
+    {
+      "table_name": "CUSTOMEREXTENSION",
+      "status": "exported",
+      "csv_file": "CUSTOMEREXTENSION.csv",
+      "row_count_database": 148129,
+      "row_count_exported": 148129,
+      "columns": [
+        {
+          "name": "CUST_ID",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "LAST_NAME",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "FIRST_NAME",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "EMAIL",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "AGE",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "COMMUTE_DISTANCE",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "CREDIT_BALANCE",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "EDUCATION",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "FULL_TIME",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "GENDER",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "HOUSEHOLD_SIZE",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "INCOME",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "INCOME_LEVEL",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "INSUFF_FUNDS_INCIDENTS",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "JOB_TYPE",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "LATE_MORT_RENT_PMTS",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "MARITAL_STATUS",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "MORTGAGE_AMT",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "NUM_CARS",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "NUM_MORTGAGES",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "PET",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "RENT_OWN",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "SEGMENT_ID",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "WORK_EXPERIENCE",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "YRS_CURRENT_EMPLOYER",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "YRS_RESIDENCE",
+          "data_type": "NUMBER"
+        }
+      ]
+    },
+    {
+      "table_name": "CUSTOMER_ORDER_STATUS",
+      "status": "exported",
+      "csv_file": "CUSTOMER_ORDER_STATUS.csv",
+      "row_count_database": 5,
+      "row_count_exported": 5,
+      "columns": [
+        {
+          "name": "ORDER_ID",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "CUSTOMER_NAME",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "ORDER_NUMBER",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "PRODUCT_ID",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "PRODUCT_NAME",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "STATUS",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "UPDATED_AT",
+          "data_type": "TIMESTAMP(6)"
+        }
+      ]
+    },
+    {
+      "table_name": "CUSTOMER_SEGMENT",
+      "status": "exported",
+      "csv_file": "CUSTOMER_SEGMENT.csv",
+      "row_count_database": 10,
+      "row_count_exported": 10,
+      "columns": [
+        {
+          "name": "SEGMENT_ID",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "NAME",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "SHORT_NAME",
+          "data_type": "VARCHAR2"
+        }
+      ]
+    },
+    {
+      "table_name": "DBTOOLS$EXECUTION_HISTORY",
+      "status": "exported",
+      "csv_file": "DBTOOLS_EXECUTION_HISTORY.csv",
+      "row_count_database": 170,
+      "row_count_exported": 170,
+      "columns": [
+        {
+          "name": "ID",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "HASH",
+          "data_type": "CLOB"
+        },
+        {
+          "name": "CREATED_BY",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "CREATED_ON",
+          "data_type": "TIMESTAMP(6) WITH TIME ZONE"
+        },
+        {
+          "name": "UPDATED_BY",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "UPDATED_ON",
+          "data_type": "TIMESTAMP(6) WITH TIME ZONE"
+        },
+        {
+          "name": "STATEMENT",
+          "data_type": "CLOB"
+        },
+        {
+          "name": "TIMES",
+          "data_type": "NUMBER"
+        }
+      ]
+    },
+    {
+      "table_name": "DIM_CUSTOMER",
+      "status": "exported",
+      "csv_file": "DIM_CUSTOMER.csv",
+      "row_count_database": 255000,
+      "row_count_exported": 255000,
+      "columns": [
+        {
+          "name": "CUSTOMER_SK",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "SOURCE_SYSTEM",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "SOURCE_CUSTOMER_ID",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "CUSTOMER_NAME",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "CUSTOMER_TYPE",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "EMAIL",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "PHONE",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "LOYALTY_TIER",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "MARKET_SEGMENT",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "AGE",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "EDUCATION",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "GENDER",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "HOUSEHOLD_SIZE",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "INCOME",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "INCOME_LEVEL",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "JOB_TYPE",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "MARITAL_STATUS",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "NUM_CARS",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "PET",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "REGISTRATION_DATE",
+          "data_type": "DATE"
+        },
+        {
+          "name": "INSERT_DT",
+          "data_type": "TIMESTAMP(6)"
+        },
+        {
+          "name": "UPDATE_DT",
+          "data_type": "TIMESTAMP(6)"
+        }
+      ]
+    },
+    {
+      "table_name": "DIM_PRODUCT",
+      "status": "exported",
+      "csv_file": "DIM_PRODUCT.csv",
+      "row_count_database": 20000,
+      "row_count_exported": 20000,
+      "columns": [
+        {
+          "name": "PRODUCT_SK",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "SOURCE_SYSTEM",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "SOURCE_PRODUCT_ID",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "SKU",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "PRODUCT_NAME",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "CATEGORY",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "CURRENT_COST_PRICE",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "CURRENT_RETAIL_PRICE",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "INSERT_DT",
+          "data_type": "TIMESTAMP(6)"
+        },
+        {
+          "name": "UPDATE_DT",
+          "data_type": "TIMESTAMP(6)"
+        }
+      ]
+    },
+    {
+      "table_name": "DIM_STORE",
+      "status": "exported",
+      "csv_file": "DIM_STORE.csv",
+      "row_count_database": 50,
+      "row_count_exported": 50,
+      "columns": [
+        {
+          "name": "STORE_SK",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "SOURCE_SYSTEM",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "SOURCE_STORE_ID",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "LOCATION",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "MANAGER_NAME",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "CHANNEL_TYPE",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "STORE_TYPE",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "OPENED_DATE",
+          "data_type": "DATE"
+        },
+        {
+          "name": "INSERT_DT",
+          "data_type": "TIMESTAMP(6)"
+        },
+        {
+          "name": "UPDATE_DT",
+          "data_type": "TIMESTAMP(6)"
+        }
+      ]
+    },
+    {
+      "table_name": "DIM_TIME",
+      "status": "exported",
+      "csv_file": "DIM_TIME.csv",
+      "row_count_database": 4018,
+      "row_count_exported": 4018,
+      "columns": [
+        {
+          "name": "DATE_KEY",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "FULL_DATE",
+          "data_type": "DATE"
+        },
+        {
+          "name": "DAY_OF_MONTH",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "DAY_OF_WEEK_NUM",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "DAY_OF_WEEK_NAME",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "DAY_NAME_SHORT",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "DAY_OF_YEAR",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "WEEK_OF_YEAR",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "IS_WEEKEND",
+          "data_type": "CHAR"
+        },
+        {
+          "name": "MONTH_NUM",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "MONTH_NAME",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "MONTH_NAME_SHORT",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "MONTH_START_DATE",
+          "data_type": "DATE"
+        },
+        {
+          "name": "MONTH_END_DATE",
+          "data_type": "DATE"
+        },
+        {
+          "name": "MONTH_KEY",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "MONTH_DISPLAY",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "MONTH_SORT",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "QUARTER_NUM",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "QUARTER_NAME",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "QUARTER_START_DATE",
+          "data_type": "DATE"
+        },
+        {
+          "name": "QUARTER_END_DATE",
+          "data_type": "DATE"
+        },
+        {
+          "name": "QUARTER_KEY",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "QUARTER_DISPLAY",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "QUARTER_SORT",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "YEAR_NUM",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "YEAR_START_DATE",
+          "data_type": "DATE"
+        },
+        {
+          "name": "YEAR_END_DATE",
+          "data_type": "DATE"
+        },
+        {
+          "name": "YEAR_KEY",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "YEAR_DISPLAY",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "YEAR_SORT",
+          "data_type": "NUMBER"
+        }
+      ]
+    },
+    {
+      "table_name": "DIM_VENDOR",
+      "status": "exported",
+      "csv_file": "DIM_VENDOR.csv",
+      "row_count_database": 1000,
+      "row_count_exported": 1000,
+      "columns": [
+        {
+          "name": "VENDOR_SK",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "SOURCE_SYSTEM",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "SOURCE_VENDOR_ID",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "VENDOR_NAME",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "REGION",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "RATING",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "ONBOARDING_DATE",
+          "data_type": "DATE"
+        },
+        {
+          "name": "INSERT_DT",
+          "data_type": "TIMESTAMP(6)"
+        },
+        {
+          "name": "UPDATE_DT",
+          "data_type": "TIMESTAMP(6)"
+        }
+      ]
+    },
+    {
+      "table_name": "FACT_B2B_CONTRACTS",
+      "status": "exported",
+      "csv_file": "FACT_B2B_CONTRACTS.csv",
+      "row_count_database": 9028,
+      "row_count_exported": 9028,
+      "columns": [
+        {
+          "name": "B2B_FACT_ID",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "PARTNER_ID",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "CONTRACT_ID",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "OPPORTUNITY_ID",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "REGION",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "MARKET_SEGMENT",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "ACTIVE_FROM",
+          "data_type": "DATE"
+        },
+        {
+          "name": "EXPIRES_ON",
+          "data_type": "DATE"
+        },
+        {
+          "name": "ANNUAL_CONTRACT_VALUE",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "PIPELINE_AMOUNT",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "PIPELINE_STAGE",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "IS_ACTIVE",
+          "data_type": "NUMBER"
+        }
+      ]
+    },
+    {
+      "table_name": "FACT_B2B_PIPELINE",
+      "status": "exported",
+      "csv_file": "FACT_B2B_PIPELINE.csv",
+      "row_count_database": 2120,
+      "row_count_exported": 2120,
+      "columns": [
+        {
+          "name": "OPPORTUNITY_SK",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "OPPORTUNITY_ID",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "PARTNER_CUSTOMER_SK",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "STAGE_SK",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "CREATED_DATE_KEY",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "EXPECTED_CLOSE_DATE_KEY",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "AMOUNT_AMT",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "PROBABILITY_PCT",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "REGION",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "IS_CLOSED_FLAG",
+          "data_type": "CHAR"
+        },
+        {
+          "name": "IS_WON_FLAG",
+          "data_type": "CHAR"
+        },
+        {
+          "name": "SRC_SYSTEM",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "CREATED_TS",
+          "data_type": "TIMESTAMP(6)"
+        },
+        {
+          "name": "UPDATED_TS",
+          "data_type": "TIMESTAMP(6)"
+        }
+      ]
+    },
+    {
+      "table_name": "FACT_INVENTORY_MOVEMENT",
+      "status": "exported",
+      "csv_file": "FACT_INVENTORY_MOVEMENT.csv",
+      "row_count_database": 300000,
+      "row_count_exported": 300000,
+      "columns": [
+        {
+          "name": "INVENTORY_FACT_ID",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "SNAPSHOT_DATE",
+          "data_type": "DATE"
+        },
+        {
+          "name": "STORE_ID",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "PRODUCT_ID",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "STOCK_ON_HAND",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "REORDER_LEVEL",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "IS_REORDER_ALERT",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "IS_OUT_OF_STOCK",
+          "data_type": "NUMBER"
+        }
+      ]
+    },
+    {
+      "table_name": "FACT_PROCUREMENT",
+      "status": "exported",
+      "csv_file": "FACT_PROCUREMENT.csv",
+      "row_count_database": 8303,
+      "row_count_exported": 8303,
+      "columns": [
+        {
+          "name": "PROCUREMENT_FACT_ID",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "PO_NUMBER",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "VENDOR_ID",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "VENDOR_REGION",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "CREATION_DATE",
+          "data_type": "DATE"
+        },
+        {
+          "name": "PO_STATUS",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "TOTAL_AMOUNT",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "VENDOR_RATING",
+          "data_type": "NUMBER"
+        }
+      ]
+    },
+    {
+      "table_name": "FACT_PROCUREMENT_ALL",
+      "status": "exported",
+      "csv_file": "FACT_PROCUREMENT_ALL.csv",
+      "row_count_database": 200000,
+      "row_count_exported": 200000,
+      "columns": [
+        {
+          "name": "PROCUREMENT_FACT_ID",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "PO_NUMBER",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "VENDOR_ID",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "VENDOR_REGION",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "CREATION_DATE",
+          "data_type": "DATE"
+        },
+        {
+          "name": "PO_STATUS",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "TOTAL_AMOUNT",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "VENDOR_RATING",
+          "data_type": "NUMBER"
+        }
+      ]
+    },
+    {
+      "table_name": "FACT_SALES",
+      "status": "exported",
+      "csv_file": "FACT_SALES.csv",
+      "row_count_database": 899985,
+      "row_count_exported": 899985,
+      "columns": [
+        {
+          "name": "SALES_FACT_ID",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "TXN_ID",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "TXN_TIMESTAMP",
+          "data_type": "TIMESTAMP(6)"
+        },
+        {
+          "name": "STORE_ID",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "PRODUCT_ID",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "CUSTOMER_ID",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "CHANNEL_TYPE",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "QTY_SOLD",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "UNIT_RETAIL_PRICE",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "UNIT_COST_PRICE",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "TOTAL_SALE_AMOUNT",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "TOTAL_MARGIN_AMOUNT",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "TXN_DATE_KEY",
+          "data_type": "NUMBER"
+        }
+      ]
+    },
+    {
+      "table_name": "FACT_SUPPLIER_FEEDS",
+      "status": "exported",
+      "csv_file": "FACT_SUPPLIER_FEEDS.csv",
+      "row_count_database": 774835,
+      "row_count_exported": 774835,
+      "columns": [
+        {
+          "name": "FEED_FACT_ID",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "RECORD_DATE",
+          "data_type": "DATE"
+        },
+        {
+          "name": "PRODUCT_ID",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "SUPPLIER_ID",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "COMPETITOR_NAME",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "AVAILABLE_QTY",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "COMPETITOR_LIST_PRICE",
+          "data_type": "NUMBER"
+        }
+      ]
+    },
+    {
+      "table_name": "MY_VECTOR_TABLE",
+      "status": "exported",
+      "csv_file": "MY_VECTOR_TABLE.csv",
+      "row_count_database": 11,
+      "row_count_exported": 11,
+      "columns": [
+        {
+          "name": "CONTENT",
+          "data_type": "CLOB"
+        },
+        {
+          "name": "ATTRIBUTES",
+          "data_type": "JSON"
+        },
+        {
+          "name": "EMBEDDING",
+          "data_type": "VECTOR"
+        }
+      ]
+    },
+    {
+      "table_name": "MY_VECTOR_TABLE_V2",
+      "status": "exported",
+      "csv_file": "MY_VECTOR_TABLE_V2.csv",
+      "row_count_database": 11,
+      "row_count_exported": 11,
+      "columns": [
+        {
+          "name": "CONTENT",
+          "data_type": "CLOB"
+        },
+        {
+          "name": "ATTRIBUTES",
+          "data_type": "JSON"
+        },
+        {
+          "name": "EMBEDDING",
+          "data_type": "VECTOR"
+        }
+      ]
+    },
+    {
+      "table_name": "NATE_STORM_PATH",
+      "status": "exported",
+      "csv_file": "NATE_STORM_PATH.csv",
+      "row_count_database": 8,
+      "row_count_exported": 8,
+      "columns": [
+        {
+          "name": "GEOMETRY",
+          "data_type": "SDO_GEOMETRY"
+        },
+        {
+          "name": "SS",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "STORMNUM",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "STORMTYPE",
+          "data_type": "VARCHAR2"
+        }
+      ]
+    },
+    {
+      "table_name": "PIN_CONVERSATIONS",
+      "status": "exported",
+      "csv_file": "PIN_CONVERSATIONS.csv",
+      "row_count_database": 2,
+      "row_count_exported": 2,
+      "columns": [
+        {
+          "name": "ID",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "CONVERSATION_ID",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "CREATED",
+          "data_type": "TIMESTAMP(6) WITH TIME ZONE"
+        }
+      ]
+    },
+    {
+      "table_name": "PIPELINE$27$417_STATUS",
+      "status": "exported",
+      "csv_file": "PIPELINE_27_417_STATUS.csv",
+      "row_count_database": 5,
+      "row_count_exported": 5,
+      "columns": [
+        {
+          "name": "ID",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "NAME",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "BYTES",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "CHECKSUM",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "PARAMS",
+          "data_type": "CLOB"
+        },
+        {
+          "name": "LAST_MODIFIED",
+          "data_type": "TIMESTAMP(6) WITH TIME ZONE"
+        },
+        {
+          "name": "STATUS",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "ERROR_CODE",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "ERROR_MESSAGE",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "START_TIME",
+          "data_type": "TIMESTAMP(6) WITH TIME ZONE"
+        },
+        {
+          "name": "END_TIME",
+          "data_type": "TIMESTAMP(6) WITH TIME ZONE"
+        },
+        {
+          "name": "SID",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "SERIAL#",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "ROWS_LOADED",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "OPERATION_ID",
+          "data_type": "NUMBER"
+        }
+      ]
+    },
+    {
+      "table_name": "PIPELINE$30$497_STATUS",
+      "status": "exported",
+      "csv_file": "PIPELINE_30_497_STATUS.csv",
+      "row_count_database": 5,
+      "row_count_exported": 5,
+      "columns": [
+        {
+          "name": "ID",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "NAME",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "BYTES",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "CHECKSUM",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "PARAMS",
+          "data_type": "CLOB"
+        },
+        {
+          "name": "LAST_MODIFIED",
+          "data_type": "TIMESTAMP(6) WITH TIME ZONE"
+        },
+        {
+          "name": "STATUS",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "ERROR_CODE",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "ERROR_MESSAGE",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "START_TIME",
+          "data_type": "TIMESTAMP(6) WITH TIME ZONE"
+        },
+        {
+          "name": "END_TIME",
+          "data_type": "TIMESTAMP(6) WITH TIME ZONE"
+        },
+        {
+          "name": "SID",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "SERIAL#",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "ROWS_LOADED",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "OPERATION_ID",
+          "data_type": "NUMBER"
+        }
+      ]
+    },
+    {
+      "table_name": "PRODUCT_MANUALS_SOURCE",
+      "status": "exported",
+      "csv_file": "PRODUCT_MANUALS_SOURCE.csv",
+      "row_count_database": 5,
+      "row_count_exported": 5,
+      "columns": [
+        {
+          "name": "PRODUCT_ID",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "DOC_NAME",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "PAR_URL",
+          "data_type": "VARCHAR2"
+        }
+      ]
+    },
+    {
+      "table_name": "PRODUCT_VECTOR_STORE",
+      "status": "exported",
+      "csv_file": "PRODUCT_VECTOR_STORE.csv",
+      "row_count_database": 15,
+      "row_count_exported": 15,
+      "columns": [
+        {
+          "name": "PRODUCT_ID",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "DOC_NAME",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "CHUNK_OFFSET",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "CHUNK_LENGTH",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "CHUNK_TEXT",
+          "data_type": "CLOB"
+        },
+        {
+          "name": "CHUNK_VECTOR",
+          "data_type": "VECTOR"
+        }
+      ]
+    },
+    {
+      "table_name": "REPLACE_TXN_ID",
+      "status": "exported",
+      "csv_file": "REPLACE_TXN_ID.csv",
+      "row_count_database": 100,
+      "row_count_exported": 100,
+      "columns": [
+        {
+          "name": "OLD_TXN_ID",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "NEW_TXN_ID",
+          "data_type": "NUMBER"
+        }
+      ]
+    },
+    {
+      "table_name": "RETURNS_AUDIT_BY_STORE",
+      "status": "exported",
+      "csv_file": "RETURNS_AUDIT_BY_STORE.csv",
+      "row_count_database": 100,
+      "row_count_exported": 100,
+      "columns": [
+        {
+          "name": "EMAIL",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "PHONE",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "TRANSACTION_ID",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "RETURN_REASON",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "STORE_ID",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "REVIEW_FLAG",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "RISK_SCORE",
+          "data_type": "NUMBER"
+        }
+      ]
+    },
+    {
+      "table_name": "STORE_ADDRESS",
+      "status": "exported",
+      "csv_file": "STORE_ADDRESS.csv",
+      "row_count_database": 50,
+      "row_count_exported": 50,
+      "columns": [
+        {
+          "name": "STORE_SK",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "STREET",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "CITY",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "REGION",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "POSTAL_CODE",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "COUNTRY_CODE",
+          "data_type": "CHAR"
+        }
+      ]
+    },
+    {
+      "table_name": "STORE_ADDRESS_GEO",
+      "status": "exported",
+      "csv_file": "STORE_ADDRESS_GEO.csv",
+      "row_count_database": 0,
+      "row_count_exported": 0,
+      "columns": [
+        {
+          "name": "houseNumber",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "street",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "settlement",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "region",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "postalCode",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "country",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "x",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "y",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "matchCode",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "STORE_SK",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "STREET",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "CITY",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "REGION",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "POSTAL_CODE",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "COUNTRY_CODE",
+          "data_type": "CHAR"
+        }
+      ]
+    },
+    {
+      "table_name": "STORE_GEO",
+      "status": "exported",
+      "csv_file": "STORE_GEO.csv",
+      "row_count_database": 50,
+      "row_count_exported": 50,
+      "columns": [
+        {
+          "name": "STORE_SK",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "SOURCE_SYSTEM",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "SOURCE_STORE_ID",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "LOCATION",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "MANAGER_NAME",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "CHANNEL_TYPE",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "STORE_TYPE",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "OPENED_DATE",
+          "data_type": "DATE"
+        },
+        {
+          "name": "INSERT_DT",
+          "data_type": "TIMESTAMP(6)"
+        },
+        {
+          "name": "UPDATE_DT",
+          "data_type": "TIMESTAMP(6)"
+        },
+        {
+          "name": "GEOCODE_AS_GEOM",
+          "data_type": "SDO_GEOMETRY"
+        }
+      ]
+    },
+    {
+      "table_name": "STORE_GEOCODE",
+      "status": "exported",
+      "csv_file": "STORE_GEOCODE.csv",
+      "row_count_database": 50,
+      "row_count_exported": 50,
+      "columns": [
+        {
+          "name": "LOCATION_GEO",
+          "data_type": "SDO_GEOMETRY"
+        },
+        {
+          "name": "STORE_SK",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "SOURCE_SYSTEM",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "SOURCE_STORE_ID",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "LOCATION",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "MANAGER_NAME",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "CHANNEL_TYPE",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "STORE_TYPE",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "OPENED_DATE",
+          "data_type": "DATE"
+        },
+        {
+          "name": "INSERT_DT",
+          "data_type": "TIMESTAMP(6)"
+        },
+        {
+          "name": "UPDATE_DT",
+          "data_type": "TIMESTAMP(6)"
+        }
+      ]
+    },
+    {
+      "table_name": "STORE_STORM_50KM",
+      "status": "exported",
+      "csv_file": "STORE_STORM_50KM.csv",
+      "row_count_database": 3,
+      "row_count_exported": 3,
+      "columns": [
+        {
+          "name": "STORE_SK",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "LOCATION",
+          "data_type": "VARCHAR2"
+        },
+        {
+          "name": "GEOCODE_AS_GEOM",
+          "data_type": "SDO_GEOMETRY"
+        },
+        {
+          "name": "DISTANCE_KM",
+          "data_type": "NUMBER"
+        },
+        {
+          "name": "IMPACT_ZONE",
+          "data_type": "CHAR"
+        }
+      ]
+    },
+    {
+      "table_name": "_SHARE_198V1_TRACK_200_V_INVENTORY_SHARE",
+      "status": "exported",
+      "csv_file": "SHARE_198V1_TRACK_200_V_INVENTORY_SHARE.csv",
+      "row_count_database": 1,
+      "row_count_exported": 1,
+      "columns": [
+        {
+          "name": "NUM_ROWS",
+          "data_type": "NUMBER"
+        }
+      ]
+    }
+  ]
+}

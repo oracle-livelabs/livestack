@@ -1,4 +1,4 @@
-# Scene 8 Product Catalog
+# Scene 9 Product Catalog
 
 ## Introduction
 
@@ -85,11 +85,7 @@ For the business, this means teams can trust one product foundation across merch
 
 You can move to the next scene.
 
-## Credits & Build Notes
-- **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-12
-
 ## Acknowledgements
 
-* **Author** - TODO: Your Name, Your Title, Your Organization
-* **Last Updated By/Date** - TODO: Your Name, Month Year
+* **Author** - LiveLabs Team August 2026
+* **Last Updated By/Date** - LiveLabs Team August 2026

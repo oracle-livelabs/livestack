@@ -1,0 +1,172 @@
+%% PeakGear LiveStack current architecture
+%% Render with any Mermaid-compatible viewer.
+
+flowchart LR
+  User["Demo user / seller"]
+  Browser["Browser\nPeakGear UI\nhttp://host:8505"]
+
+  subgraph OCI["OCI / Terraform Provisioning"]
+    TF["Terraform\ncreates compute + ADB\npasses metadata"]
+    ADB["Autonomous Database\nADB 23ai / 26ai\nschema PG"]
+    OCIObj["OCI Object Storage\nPAR URLs / wallet archive\nimage upload target"]
+    OCIAPI["OCI API key metadata\nuser / tenancy / fingerprint / private key"]
+    GenAI["OCI Generative AI\ncohere.command-a-03-2025\ncohere.embed-v4.0 configured"]
+  end
+
+  subgraph Host["OCI Compute Host / Oracle Linux"]
+    Inst["inst.sh\npackages, firewall,\npodman-compose, build_dev.zip"]
+    SetEnv["init/setenv.sh + variable.sh\nmetadata -> /home/opc/ingestion/.env"]
+    WalletSvc["adb-wallet.service\none-time wallet download\n/home/opc/ingestion/wallet"]
+    LoadSvc["adb-load.service / adb-load.sh\none-time SQLcl ADB bootstrap"]
+    PodmanSvc["user-podman.service\nstarts compose stack"]
+    Done["Marker files\n.wallet_done\n.adb_load_done"]
+  end
+
+  subgraph Compose["Podman Compose Stack / /home/opc/ingestion"]
+    App["app container\nNode API + React build\npublic port 8505"]
+    LocalDB["db container\nOracle Free 23ai\nFREEPDB1 / PG"]
+    LocalORDS["ords container\nlocal ORDS\npublic port 8181"]
+    ORDSSetup["ords-pg-setup\none-shot PG ORDS enablement"]
+    PrivateAI["privateai container\nembedding API\ninternal port 8080"]
+    Ollama["ollama container\nllama3.2 fallback\npublic port 11434"]
+
+    subgraph GGSA["GoldenGate Stream Analytics container"]
+      OSA["OSA UI/API\npublic port 8085\nadmin osaadmin"]
+      Kafka["Kafka broker\npublic port 9092\ninternal localhost:19092"]
+      Spark["Spark runtime\nports 4040-4050, 6066,\n7077, 28080-28083"]
+      OSAStore["OSA MySQL + deployed pipelines\npersistent volumes"]
+    end
+
+    SignalGen["signal-generator\nFaker demand events\nhttp://ggsa:18088"]
+
+    Gravitino["Gravitino Iceberg REST\nADW catalog backend\npublic port 1525"]
+    GravitinoArchive["ADW-enabled Gravitino ZIP\nstaged at install time"]
+  end
+
+  subgraph ADBLayer["ADB PG Lakehouse / External Data Plane"]
+    Bronze["Bronze layer\nPG.BRONZE_* including\nBRONZE_DEMAND_SIGNALS"]
+    Silver["Silver layer\nPG.SILVER_*"]
+    Gold["Gold + app objects\ncatalog, orders, inventory,\nagent support views"]
+    ADBProfiles["DBMS_CLOUD_AI profiles\nPG_GENAI_PROFILE\nCOHERE_RAG"]
+    ReturnAgentADB["ADB Select AI Agent team\nRETURN_ADVISOR_TEAM\nnotebook return advisor tools"]
+    ADBORDS["ADB ORDS / DB Actions\nData Studio, Data Transforms"]
+  end
+
+  subgraph LocalDBLayer["Local App DB PG / Operational App Data"]
+    AppTables["Core app tables\nproducts, brands, orders,\ncustomers, inventory,\nfulfillment, social signals"]
+    Vectors["Vector tables + ONNX\nPRODUCT_EMBEDDINGS\nSIGNAL_EMBEDDINGS\nALL_MINILM_L12_V2"]
+    AppAgents["App DB Select AI agents\nSOCIAL_TREND_TEAM\nFULFILLMENT_TEAM\nCOMMERCE_TEAM"]
+    Audit["AI agent audit logs\nservice events\nuser/session state"]
+  end
+
+  subgraph DemoFlows["Primary Demo Flows"]
+    StreamingFlow["Real-Time Streaming\nstart/stop generator\nKafka -> OSA -> ADB Bronze"]
+    LakehouseFlow["AI Lakehouse setup\nwallet connect, seed,\nBronze/Silver/Gold status"]
+    AskDataFlow["Ask Your Data\nSelect AI when OCI GenAI is available\nOllama fallback otherwise"]
+    WebshopFlow["PeakGear Webshop\nsemantic search, visual search,\nAsk PeakGear returns agent"]
+    AgentFlow["LiveStack Agents\noperations agent workflows\ntrend, fulfillment, commerce"]
+    IcebergFlow["Gravitino / OCI Object Storage\nIceberg catalog for Data Transforms"]
+  end
+
+  User --> Browser
+  Browser --> App
+
+  TF --> ADB
+  TF --> OCIObj
+  TF --> OCIAPI
+  TF --> Inst
+  OCIAPI --> SetEnv
+
+  Inst --> SetEnv
+  SetEnv --> WalletSvc
+  WalletSvc --> Done
+  WalletSvc --> LoadSvc
+  LoadSvc --> Done
+  LoadSvc --> ADB
+  LoadSvc --> Bronze
+  LoadSvc --> Silver
+  LoadSvc --> Gold
+  LoadSvc --> ADBProfiles
+  LoadSvc --> ReturnAgentADB
+  Done --> PodmanSvc
+  PodmanSvc --> App
+  PodmanSvc --> LocalDB
+  PodmanSvc --> GGSA
+
+  App --> LocalDB
+  App --> LocalORDS
+  ORDSSetup --> LocalORDS
+  ORDSSetup --> LocalDB
+  LocalDB --> AppTables
+  LocalDB --> Vectors
+  LocalDB --> AppAgents
+  LocalDB --> Audit
+
+  App --> PrivateAI
+  App --> Ollama
+  App --> OSA
+  App --> SignalGen
+  App --> ADB
+  App --> ADBORDS
+  App --> ReturnAgentADB
+
+  PrivateAI --> Vectors
+  Ollama --> AskDataFlow
+
+  GenAI --> ADBProfiles
+  ADBProfiles --> AskDataFlow
+  ADBProfiles --> AppAgents
+  ADBProfiles --> ReturnAgentADB
+
+  SignalGen --> Kafka
+  Kafka --> OSA
+  OSA --> Spark
+  OSA --> OSAStore
+  OSA --> Bronze
+
+  ADB --> Bronze
+  ADB --> Silver
+  ADB --> Gold
+  ADB --> ADBProfiles
+  ADB --> ADBORDS
+
+  GravitinoArchive --> Gravitino
+  Gravitino --> ADB
+  Gravitino --> OCIObj
+  ADBORDS -. external REST / catalog connection .-> Gravitino
+
+  Browser --> StreamingFlow
+  Browser --> LakehouseFlow
+  Browser --> AskDataFlow
+  Browser --> WebshopFlow
+  Browser --> AgentFlow
+  Browser --> IcebergFlow
+
+  StreamingFlow --> SignalGen
+  StreamingFlow --> OSA
+  StreamingFlow --> Bronze
+  LakehouseFlow --> ADB
+  LakehouseFlow --> ADBORDS
+  AskDataFlow --> AppAgents
+  AskDataFlow --> AppTables
+  WebshopFlow --> PrivateAI
+  WebshopFlow --> Vectors
+  WebshopFlow --> ReturnAgentADB
+  AgentFlow --> AppAgents
+  AgentFlow --> Audit
+  IcebergFlow --> Gravitino
+  IcebergFlow --> OCIObj
+
+  classDef user fill:#F7E1B5,stroke:#AA643B,color:#2F241F;
+  classDef host fill:#E7EEF7,stroke:#437C94,color:#172A33;
+  classDef db fill:#E8F2EA,stroke:#4C825C,color:#14301F;
+  classDef stream fill:#FFF1E6,stroke:#C74634,color:#36160F;
+  classDef ai fill:#EFE8F5,stroke:#796087,color:#22172B;
+  classDef storage fill:#F4F4F0,stroke:#7A7368,color:#222;
+
+  class User,Browser user;
+  class Inst,SetEnv,WalletSvc,LoadSvc,PodmanSvc,Done host;
+  class ADB,LocalDB,LocalORDS,ORDSSetup,Bronze,Silver,Gold,ADBORDS,AppTables,Vectors,Audit db;
+  class OSA,Kafka,Spark,SignalGen,OSAStore,StreamingFlow stream;
+  class GenAI,OCIAPI,ADBProfiles,ReturnAgentADB,AppAgents,PrivateAI,Ollama,AskDataFlow,WebshopFlow,AgentFlow ai;
+  class OCIObj,Gravitino,GravitinoArchive,IcebergFlow storage;

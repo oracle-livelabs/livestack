@@ -1,0 +1,101 @@
+{
+  "requestStatuses": [
+    {
+      "internal": "pending",
+      "code": "submitted",
+      "label": "Submitted",
+      "description": "The resident request has been received and is awaiting agency triage."
+    },
+    {
+      "internal": "confirmed",
+      "code": "accepted",
+      "label": "Accepted",
+      "description": "The agency has accepted the request into its operating queue."
+    },
+    {
+      "internal": "processing",
+      "code": "in_review",
+      "label": "In Review",
+      "description": "Agency staff are reviewing eligibility, evidence, or service requirements."
+    },
+    {
+      "internal": "shipped",
+      "code": "in_progress",
+      "label": "In Progress",
+      "aliases": ["routed"],
+      "description": "Work has moved from review into active service resolution."
+    },
+    {
+      "internal": "delivered",
+      "code": "completed",
+      "label": "Completed",
+      "description": "The requested service or eligibility action has been completed."
+    },
+    {
+      "internal": "returned",
+      "code": "needs_follow_up",
+      "label": "Needs Follow-Up",
+      "aliases": ["reopened"],
+      "description": "The request needs additional resident or agency follow-up."
+    },
+    {
+      "internal": "cancelled",
+      "code": "cancelled",
+      "label": "Cancelled",
+      "description": "The request is no longer active."
+    }
+  ],
+  "serviceTaskStatuses": [
+    {
+      "internal": "preparing",
+      "code": "intake",
+      "label": "Intake",
+      "description": "The service task is being prepared for assignment."
+    },
+    {
+      "internal": "picked",
+      "code": "assigned",
+      "label": "Assigned",
+      "description": "An in-state service team or center owns the task."
+    },
+    {
+      "internal": "packed",
+      "code": "scheduled",
+      "label": "Scheduled",
+      "description": "The service task has been placed on the operating schedule."
+    },
+    {
+      "internal": "shipped",
+      "code": "dispatched",
+      "label": "Dispatched",
+      "aliases": ["routed"],
+      "description": "The assigned team has been dispatched from the service center."
+    },
+    {
+      "internal": "in_transit",
+      "code": "in_progress",
+      "label": "In Progress",
+      "aliases": ["active route"],
+      "description": "The assigned team is actively working the service task."
+    },
+    {
+      "internal": "out_for_delivery",
+      "code": "field_resolution_underway",
+      "label": "Field Resolution Underway",
+      "aliases": ["field response"],
+      "description": "The assigned in-state team is actively resolving the request in the resident's service area."
+    },
+    {
+      "internal": "delivered",
+      "code": "completed",
+      "label": "Completed",
+      "description": "The service task has been completed."
+    },
+    {
+      "internal": "exception",
+      "code": "blocked",
+      "label": "Blocked",
+      "description": "An issue is preventing the service task from moving forward."
+    }
+  ]
+}

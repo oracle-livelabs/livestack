@@ -1,0 +1,12 @@
+case_id,case_ref,case_type,status,review_score,loss_amount,event_count
+1,CASE-GOLD-001,Swapped Item Suspected,escalated,96.0,7236.0,6
+2,CASE-GOLD-002,High Value No Receipt,escalated,96.0,15018.0,13
+3,CASE-GOLD-003,Serial Return Pattern,escalated,94.0,4800.0,4
+4,CASE-GOLD-004,No Receipt Return,escalated,93.0,4860.0,4
+5,CASE-GOLD-005,Duplicate Receipt Presented,escalated,92.0,11442.0,11
+6,CASE-GOLD-006,Price Tag Tampering,reviewing,86.0,3366.0,3
+7,CASE-GOLD-007,Box Content Mismatch,reviewing,83.0,7350.0,7
+8,CASE-GOLD-008,Used Item Returned,reviewing,83.0,9126.0,9
+9,CASE-GOLD-009,Return After Event Use,reviewing,81.0,13026.0,13
+10,CASE-GOLD-010,Wardrobing Pattern,reviewing,81.0,5028.0,6
+11,CASE-GOLD-011,Excessive Return Frequency,reviewing,78.0,4188.0,4

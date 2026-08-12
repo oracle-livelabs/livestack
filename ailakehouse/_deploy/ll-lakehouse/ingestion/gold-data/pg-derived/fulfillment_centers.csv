@@ -1,0 +1,51 @@
+center_id,center_name,center_type,address_line1,city,state_province,postal_code,country,latitude,longitude,capacity_units,current_load_pct
+1,PeakGear Dallas Store 001,store,6769 Sunset Ln,Dallas,TX,75206,US,32.74442,-96.8569,76500,36
+2,PeakGear San Diego Store 002,store,6221 Washington Ln,San Diego,CA,92105,US,32.74798,-117.17978,78000,37
+3,PeakGear Columbus Store 003,store,1821 Broad Ct,Columbus,OH,43203,US,39.98107,-82.82035,79500,38
+4,PeakGear Austin Store 004,store,1906 Oak Blvd,Austin,TX,78702,US,30.23642,-97.84765,81000,39
+5,PeakGear Indianapolis Store 005,store,120 Magnolia Ln,Indianapolis,IN,46202,US,39.83721,-86.00962,82500,40
+6,PeakGear Austin Store 006,store,2500 Park St,Austin,TX,78702,US,30.26139,-97.71217,84000,41
+7,PeakGear Phoenix Store 007,store,973 Spring Way,Phoenix,AZ,85018,US,33.51146,-112.05032,85500,42
+8,PeakGear San Jose Store 008,store,8028 Market Pl,San Jose,CA,95110,US,37.33934,-121.90594,87000,43
+9,PeakGear Philadelphia Store 009,store,8974 Lake Way,Philadelphia,PA,19104,US,39.95196,-75.18515,88500,44
+10,PeakGear Los Angeles Store 010,store,1099 School Blvd,Los Angeles,CA,90012,US,34.0452,-118.34853,90000,45
+11,PeakGear Columbus Store 011,store,1747 Spruce Ln,Columbus,OH,43203,US,39.90162,-83.10825,91500,46
+12,PeakGear Columbus Store 012,store,9089 Elm Ct,Columbus,OH,43201,US,39.96496,-82.92377,93000,47
+13,PeakGear Houston Store 013,store,1772 Church Blvd,Houston,TX,77007,US,29.79972,-95.39714,94500,48
+14,PeakGear San Francisco Store 014,store,2213 Chestnut Ave,San Francisco,CA,94103,US,37.80418,-122.40993,96000,49
+15,PeakGear San Francisco Store 015,store,2651 Spring Ave,San Francisco,CA,94109,US,37.79276,-122.4038,97500,50
+16,PeakGear Philadelphia Store 016,store,8822 Lake Ct,Philadelphia,PA,19104,US,39.95196,-75.18515,99000,51
+17,PeakGear San Jose Store 017,store,7641 Elm Dr,San Jose,CA,95113,US,37.37831,-121.85976,100500,52
+18,PeakGear Philadelphia Store 018,store,1424 Riverside Pl,Philadelphia,PA,19102,US,39.94982,-75.18098,102000,53
+19,PeakGear Phoenix Store 019,store,3820 Hawthorn Dr,Phoenix,AZ,85012,US,33.49264,-112.08014,103500,54
+20,PeakGear Austin Store 020,store,5466 Center Ave,Austin,TX,78704,US,30.28153,-97.73997,105000,55
+21,PeakGear Phoenix Store 021,store,9336 Cherry Pl,Phoenix,AZ,85008,US,33.47187,-112.03005,106500,56
+22,PeakGear San Diego Store 022,store,2714 Washington St,San Diego,CA,92102,US,32.75274,-117.14808,108000,57
+23,PeakGear Austin Store 023,store,2423 Cherry Ln,Austin,TX,78704,US,30.29322,-97.77041,109500,58
+24,PeakGear Seattle Store 024,store,8637 Main Ln,Seattle,WA,98101,US,47.60005,-122.32902,111000,59
+25,PeakGear Philadelphia Store 025,store,3645 Oak St,Philadelphia,PA,19103,US,39.724,-75.64487,112500,60
+26,PeakGear San Antonio Store 026,store,9818 Hawthorn Way,San Antonio,TX,78205,US,29.38482,-98.51267,114000,61
+27,PeakGear Seattle Store 027,store,2636 Highland Dr,Seattle,WA,98104,US,47.62974,-122.34279,115500,62
+28,PeakGear San Diego Store 028,store,4089 Forest Ln,San Diego,CA,92101,US,32.73526,-117.14903,117000,63
+29,PeakGear Fort Worth Store 029,store,4743 Cherry Rd,Fort Worth,TX,76102,US,32.74777,-97.33487,118500,64
+30,PeakGear Seattle Store 030,store,7890 Valley Way,Seattle,WA,98101,US,47.60421,-122.33854,120000,65
+31,PeakGear Chicago Store 031,store,2339 Spruce Ave,Chicago,IL,60654,US,41.9334,-87.64117,121500,66
+32,PeakGear Jacksonville Store 032,store,975 Market Ln,Jacksonville,FL,32202,US,30.32382,-81.65551,123000,67
+33,PeakGear Fort Worth Store 033,store,380 Elm Dr,Fort Worth,TX,76107,US,32.75552448979592,-97.48977632653062,124500,68
+34,PeakGear Jacksonville Store 034,store,4175 Pine Ln,Jacksonville,FL,32206,US,30.22222,-81.56782,126000,69
+35,PeakGear Los Angeles Store 035,store,8722 Highland Dr,Los Angeles,CA,90013,US,34.0354,-118.34853,127500,70
+36,PeakGear Austin Store 036,store,7995 Main Dr,Austin,TX,78704,US,30.17784,-97.75638,129000,71
+37,PeakGear Houston Store 037,store,6078 Magnolia Ct,Houston,TX,77002,US,30.25211,-95.41027,130500,72
+38,PeakGear San Jose Store 038,store,5243 Center Ave,San Jose,CA,95128,US,37.25924,-121.87327,132000,73
+39,PeakGear Austin Store 039,store,6575 Poplar Ave,Austin,TX,78704,US,30.29138,-97.74716,133500,74
+40,PeakGear Fort Worth Store 040,store,6408 Washington Pl,Fort Worth,TX,76102,US,32.72595,-97.33595,135000,75
+41,PeakGear Indianapolis Store 041,store,9315 Spring Ln,Indianapolis,IN,46202,US,39.7988,-86.20414,136500,76
+42,PeakGear Austin Store 042,store,3810 Highland Dr,Austin,TX,78701,US,30.33774,-97.75766,138000,77
+43,PeakGear San Antonio Store 043,store,5944 Cedar Ln,San Antonio,TX,78230,US,29.63173,-98.60976,139500,78
+44,PeakGear Charlotte Store 044,store,694 Birch Way,Charlotte,NC,28206,US,35.22613,-80.76774,141000,79
+45,PeakGear Los Angeles Store 045,store,4974 Elm St,Los Angeles,CA,90012,US,33.96006,-118.23854,142500,35
+46,PeakGear Austin Store 046,store,6875 Chestnut Rd,Austin,TX,78701,US,30.27377,-97.71553,144000,36
+47,PeakGear San Diego Store 047,store,2241 Hill Pl,San Diego,CA,92104,US,32.68587,-117.07798,145500,37
+48,PeakGear Houston Store 048,store,3342 Forest Ln,Houston,TX,77004,US,29.86525,-95.19182,147000,38
+49,PeakGear San Antonio Store 049,store,7587 Spring Dr,San Antonio,TX,78230,US,29.54064,-98.54219,148500,39
+50,PeakGear Phoenix Store 050,store,5283 Cherry Blvd,Phoenix,AZ,85018,US,33.47187,-112.03005,150000,40

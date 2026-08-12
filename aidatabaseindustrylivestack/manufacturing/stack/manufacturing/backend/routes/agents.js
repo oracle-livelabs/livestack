@@ -980,20 +980,54 @@ router.post('/chat', async (req, res) => {
             // Get structured route data with coordinates for map visualization
             try {
               const routeDataRes = await db.execute(
-                `SELECT fc.center_name, fc.city, fc.state_province,
-                        fc.latitude AS center_lat, fc.longitude AS center_lon,
-                        i.quantity_on_hand,
-                        ROUND(SDO_GEOM.SDO_DISTANCE(
-                          c.location, fc.location, 0.005, 'unit=MILE'), 1) AS distance_mi
-                 FROM customers c
-                 CROSS JOIN fulfillment_centers fc
-                 JOIN inventory i ON fc.center_id = i.center_id
-                 JOIN products p ON i.product_id = p.product_id
-                 WHERE c.email = :email
-                   AND UPPER(p.product_name) LIKE '%' || UPPER(:pname) || '%'
-                   AND i.quantity_on_hand > 0
-                   AND fc.is_active = 1
-                 ORDER BY SDO_GEOM.SDO_DISTANCE(c.location, fc.location, 0.005, 'unit=MILE')
+                `WITH customer_loc AS (
+                   SELECT customer.location
+                   FROM customers customer
+                   WHERE customer.email = :email
+                     AND customer.location IS NOT NULL
+                 ),
+                 indexed_candidates AS (
+                   SELECT /*+ LEADING(customer_loc) USE_NL(center) INDEX(center idx_fc_spatial) */
+                          center.center_id, center.center_name, center.city, center.state_province,
+                          center.latitude AS center_lat, center.longitude AS center_lon,
+                          center.location AS center_location,
+                          customer_loc.location AS customer_location
+                   FROM customer_loc
+                   JOIN fulfillment_centers center
+                     ON SDO_NN(
+                          center.location,
+                          customer_loc.location,
+                          'sdo_batch_size=50 unit=MILE'
+                        ) = 'TRUE'
+                   WHERE center.is_active = 1
+                 ),
+                 available_candidates AS (
+                   SELECT candidate.*, inventory.quantity_on_hand
+                   FROM indexed_candidates candidate
+                   JOIN inventory
+                     ON inventory.center_id = candidate.center_id
+                   JOIN products product
+                     ON inventory.product_id = product.product_id
+                   WHERE UPPER(product.product_name) LIKE '%' || UPPER(:pname) || '%'
+                     AND inventory.quantity_on_hand > 0
+                 ),
+                 measured_candidates AS (
+                   SELECT candidate.*,
+                          ROUND(
+                            SDO_GEOM.SDO_DISTANCE(
+                              candidate.customer_location,
+                              candidate.center_location,
+                              0.005,
+                              'unit=MILE'
+                            ),
+                            1
+                          ) AS distance_mi
+                   FROM available_candidates candidate
+                 )
+                 SELECT center_name, city, state_province,
+                        center_lat, center_lon, quantity_on_hand, distance_mi
+                 FROM measured_candidates
+                 ORDER BY distance_mi, center_id
                  FETCH FIRST 5 ROWS ONLY`,
                 { email: customerEmail, pname: productName }
               );

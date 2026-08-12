@@ -1,0 +1,10 @@
+.MessageBannerVariants_multiVariantStyles_severity_error__15mgzlb0 {
+  --backgroundColor__l2hi9d0: var(--oj-c-surface-danger-low);
+  --startIconColor__l2hi9d1: var(--oj-c-text-icon-danger);
+  --summaryTextColor__l2hi9d3: var(--oj-c-text-icon-danger);
+}
+.MessageBannerVariants_multiVariantStyles_severity_warning__15mgzlb1 {
+  --backgroundColor__l2hi9d0: var(--oj-c-surface-warning-low);
+  --startIconColor__l2hi9d1: var(--oj-c-text-icon-warning);
+  --summaryTextColor__l2hi9d3: var(--oj-c-text-icon-warning);
+}

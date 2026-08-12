@@ -1,4 +1,4 @@
-# Scene 10 Returns Risk Network
+# Scene 11 Returns Risk Network
 
 ## Introduction
 
@@ -96,11 +96,7 @@ For the business, this means service and operations teams can prioritize suspici
 
 You can move to the next scene.
 
-## Credits & Build Notes
-- **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-12
-
 ## Acknowledgements
 
-* **Author** - TODO: Your Name, Your Title, Your Organization
-* **Last Updated By/Date** - TODO: Your Name, Month Year
+* **Author** - LiveLabs Team August 2026
+* **Last Updated By/Date** - LiveLabs Team August 2026

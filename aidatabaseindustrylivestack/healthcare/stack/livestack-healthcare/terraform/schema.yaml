@@ -1,0 +1,50 @@
+title: Healthcare LiveStack OCI Terraform
+schemaVersion: 1.1.0
+version: "20260602"
+locale: en
+groupings:
+  - title: Required OCI Settings
+    variables:
+      - region
+      - compartment_ocid
+      - ssh_public_key
+      - adb_admin_password
+  - title: Optional Simple Settings
+    variables:
+      - stack_name
+      - ssh_ingress_cidr
+      - app_ingress_cidr
+      - app_source_archive_url
+variables:
+  region:
+    type: string
+    title: Region
+    required: true
+  compartment_ocid:
+    type: oci:identity:compartment:id
+    title: Compartment OCID
+    required: true
+  ssh_public_key:
+    type: oci:core:ssh:publickey
+    title: SSH Public Key
+    required: true
+  adb_admin_password:
+    type: password
+    title: Autonomous Database ADMIN Password
+    required: true
+  stack_name:
+    type: string
+    title: Stack Name
+    required: false
+  ssh_ingress_cidr:
+    type: string
+    title: SSH Ingress CIDR
+    required: false
+  app_ingress_cidr:
+    type: string
+    title: App Ingress CIDR
+    required: false
+  app_source_archive_url:
+    type: string
+    title: Healthcare Source Archive URL
+    required: false

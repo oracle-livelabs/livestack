@@ -289,6 +289,7 @@ END;
 /
 
 DECLARE
+    TYPE t_numbers IS TABLE OF NUMBER;
     v_active_source           app_dataset_state.active_source%TYPE;
     v_metadata_count          PLS_INTEGER;
     v_spatial_index_count     PLS_INTEGER;
@@ -305,6 +306,10 @@ DECLARE
     v_valid_zones             PLS_INTEGER;
     v_shipment_count          PLS_INTEGER;
     v_valid_routes            PLS_INTEGER;
+    v_nn_center_ids           t_numbers;
+    v_nn_distances            t_numbers;
+    v_nn_sql_id               VARCHAR2(13);
+    v_nn_plan_lines           PLS_INTEGER;
 BEGIN
     manufacturing_security_pkg.set_user_context('analyst_raj');
 
@@ -492,6 +497,81 @@ BEGIN
       AND route.distance_km = route.expected_distance_km
       AND route.estimated_hours = route.expected_hours;
 
+    EXECUTE IMMEDIATE q'~
+        WITH origin AS (
+            SELECT location
+            FROM (
+                SELECT customer.location
+                FROM customers customer
+                WHERE customer.location IS NOT NULL
+                ORDER BY customer.customer_id
+            )
+            WHERE ROWNUM = 1
+        ),
+        indexed_candidates AS (
+            SELECT /*+ GATHER_PLAN_STATISTICS LEADING(origin) USE_NL(center) INDEX(center idx_fc_spatial) */
+                   /* MANUFACTURING_SPATIAL_NN_PROOF */
+                   center.center_id,
+                   center.location AS center_location,
+                   origin.location AS origin_location
+            FROM origin
+            JOIN fulfillment_centers center
+              ON SDO_NN(
+                    center.location,
+                    origin.location,
+                    'sdo_batch_size=50 unit=KM'
+                 ) = 'TRUE'
+            WHERE center.is_active = 1
+        ),
+        measured_candidates AS (
+            SELECT candidate.center_id,
+                   ROUND(
+                       SDO_GEOM.SDO_DISTANCE(
+                           candidate.origin_location,
+                           candidate.center_location,
+                           0.005,
+                           'unit=KM'
+                       ),
+                       2
+                   ) AS distance_km
+            FROM indexed_candidates candidate
+        )
+        SELECT center_id, distance_km
+        FROM measured_candidates
+        ORDER BY distance_km, center_id
+        FETCH FIRST 3 ROWS ONLY
+    ~'
+    BULK COLLECT INTO v_nn_center_ids, v_nn_distances;
+
+    SELECT sql_id
+    INTO v_nn_sql_id
+    FROM (
+        SELECT plan.sql_id,
+               ROW_NUMBER() OVER (
+                   ORDER BY sql_cursor.last_active_time DESC,
+                            plan.child_number,
+                            plan.id
+               ) AS recency_rank
+        FROM sys.v_$sql_plan plan
+        JOIN sys.v_$sql sql_cursor
+          ON sql_cursor.sql_id = plan.sql_id
+         AND sql_cursor.child_number = plan.child_number
+        WHERE plan.operation = 'DOMAIN INDEX'
+          AND plan.object_owner = USER
+          AND plan.object_name = 'IDX_FC_SPATIAL'
+          AND sql_cursor.sql_text LIKE '%MANUFACTURING_SPATIAL_NN_PROOF%'
+    )
+    WHERE recency_rank = 1;
+
+    SELECT COUNT(*)
+    INTO v_nn_plan_lines
+    FROM TABLE(DBMS_XPLAN.DISPLAY_CURSOR(v_nn_sql_id, NULL, 'BASIC'))
+    WHERE REGEXP_LIKE(
+        plan_table_output,
+        '[|][[:space:]]*[[:digit:]]+[[:space:]]*[|][[:space:]]*DOMAIN INDEX[^|]*[|][[:space:]]*IDX_FC_SPATIAL[[:space:]]*[|]',
+        'i'
+    );
+
     IF v_metadata_count <> 4
        OR v_spatial_index_count <> 3
        OR v_center_count = 0
@@ -505,7 +585,9 @@ BEGIN
        OR v_zone_count <> v_active_center_count * 4
        OR v_valid_zones <> v_zone_count
        OR v_shipment_count = 0
-       OR v_valid_routes <> v_shipment_count THEN
+       OR v_valid_routes <> v_shipment_count
+       OR v_nn_center_ids.COUNT = 0
+       OR v_nn_plan_lines = 0 THEN
         RAISE_APPLICATION_ERROR(
             -20131,
             'Oracle Spatial readiness is incomplete or stale'
@@ -516,7 +598,8 @@ BEGIN
         'Spatial readiness verified: ' || v_valid_centers ||
         ' plants, ' || v_valid_customers || ' customers, ' ||
         v_valid_regions || ' regions, ' || v_valid_zones ||
-        ' zones, ' || v_valid_routes || ' routes.'
+        ' zones, ' || v_valid_routes || ' routes, SDO_NN plan ' ||
+        v_nn_sql_id || '.'
     );
     manufacturing_security_pkg.clear_user_context;
 EXCEPTION

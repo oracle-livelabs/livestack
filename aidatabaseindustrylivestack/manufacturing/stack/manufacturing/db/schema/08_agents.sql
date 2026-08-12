@@ -204,19 +204,70 @@ CREATE OR REPLACE FUNCTION find_best_fulfillment(
     v_count  NUMBER := 0;
 BEGIN
     FOR rec IN (
-        SELECT fc.center_name, fc.city, fc.state_province,
-               i.quantity_on_hand,
-               ROUND(SDO_GEOM.SDO_DISTANCE(c.location, fc.location, 0.005, 'unit=MILE'), 1) AS distance_mi,
-               ROUND(SDO_GEOM.SDO_DISTANCE(c.location, fc.location, 0.005, 'unit=MILE') / 50, 1) AS est_hours
-        FROM customers c
-        CROSS JOIN fulfillment_centers fc
-        JOIN inventory i ON fc.center_id = i.center_id
-        JOIN products p ON i.product_id = p.product_id
-        WHERE c.email LIKE '%' || p_customer_email || '%'
-          AND UPPER(p.product_name) LIKE '%' || UPPER(p_product_name) || '%'
-          AND fc.is_active = 1
-          AND i.quantity_on_hand > i.quantity_reserved
-        ORDER BY SDO_GEOM.SDO_DISTANCE(c.location, fc.location, 0.005, 'unit=MILE')
+        WITH customer_loc AS (
+            SELECT location
+            FROM (
+                SELECT customer.location
+                FROM customers customer
+                WHERE customer.email LIKE '%' || p_customer_email || '%'
+                  AND customer.location IS NOT NULL
+                ORDER BY CASE
+                             WHEN UPPER(customer.email) = UPPER(p_customer_email) THEN 0
+                             ELSE 1
+                         END,
+                         customer.customer_id
+            )
+            WHERE ROWNUM = 1
+        ),
+        indexed_candidates AS (
+            SELECT /*+ LEADING(customer_loc) USE_NL(center) INDEX(center idx_fc_spatial) */
+                   center.center_id,
+                   center.center_name,
+                   center.city,
+                   center.state_province,
+                   center.location AS center_location,
+                   customer_loc.location AS customer_location
+            FROM customer_loc
+            JOIN fulfillment_centers center
+              ON SDO_NN(
+                    center.location,
+                    customer_loc.location,
+                    'sdo_batch_size=50 unit=MILE'
+                 ) = 'TRUE'
+            WHERE center.is_active = 1
+        ),
+        available_candidates AS (
+            SELECT candidate.*,
+                   inventory.quantity_on_hand
+            FROM indexed_candidates candidate
+            JOIN inventory
+              ON inventory.center_id = candidate.center_id
+            JOIN products product
+              ON inventory.product_id = product.product_id
+            WHERE UPPER(product.product_name) LIKE '%' || UPPER(p_product_name) || '%'
+              AND inventory.quantity_on_hand > inventory.quantity_reserved
+        ),
+        measured_candidates AS (
+            SELECT candidate.*,
+                   ROUND(
+                       SDO_GEOM.SDO_DISTANCE(
+                           candidate.customer_location,
+                           candidate.center_location,
+                           0.005,
+                           'unit=MILE'
+                       ),
+                       1
+                   ) AS distance_mi
+            FROM available_candidates candidate
+        )
+        SELECT center_name,
+               city,
+               state_province,
+               quantity_on_hand,
+               distance_mi,
+               ROUND(distance_mi / 50, 1) AS est_hours
+        FROM measured_candidates
+        ORDER BY distance_mi, center_id
         FETCH FIRST 3 ROWS ONLY
     ) LOOP
         v_result := v_result || rec.center_name || ' (' || rec.city || ', ' || rec.state_province || '): ' ||
@@ -362,9 +413,9 @@ END;
 BEGIN
     DBMS_CLOUD_AI_AGENT.CREATE_TOOL(
         tool_name   => 'FULFILLMENT_ROUTE_TOOL',
-        attributes  => '{"instruction": "Find the best plant capacity center for a manufactured part and synthetic customer using Oracle Spatial distance calculations. Parameters: P_CUSTOMER_EMAIL (partial match), P_PRODUCT_NAME (partial manufactured part match). Returns top 3 nearest centers with distance in miles, estimated routing hours, and capacity levels.",
+        attributes  => '{"instruction": "Find the best plant capacity center for a manufactured part and synthetic customer using Oracle Spatial indexed nearest-neighbor candidate selection and exact distance ranking. Parameters: P_CUSTOMER_EMAIL (partial match), P_PRODUCT_NAME (partial manufactured part match). Returns top 3 nearest centers with distance in miles, estimated routing hours, and capacity levels.",
                         "function": "find_best_fulfillment"}',
-        description => 'Spatial routing to find nearest plant capacity center with capacity for a synthetic customer. Returns distance in miles.'
+        description => 'Index-aware Spatial routing to find the nearest plant capacity center with capacity for a synthetic customer. Returns exact distance in miles.'
     );
 END;
 /

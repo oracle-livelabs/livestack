@@ -1,0 +1,16 @@
+brand_id,brand_name,brand_slug,brand_category,headquarters_city,headquarters_lat,headquarters_lon,founded_year,annual_revenue,social_tier,created_at,updated_at
+1,Northstar Advising Network,northstar,Academic Advising,New York,40.7128,-74.006,2012,325000000,premium,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+2,Riverbend Enrollment Services,riverbend,Academic Support,Chicago,41.8781,-87.6298,2008,210000000,premium,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+3,Summit Career Pathways,summit,Career Readiness,Dallas,32.7767,-96.797,2015,185000000,premium,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+4,ClearPath Wellness Center,clearpath,Student Wellness,Seattle,47.6062,-122.3321,2019,76000000,standard,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+5,Pioneer Academic Support,pioneer,STEM,Denver,39.7392,-104.9903,2016,98000000,standard,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+6,Coastal Access Office,coastal,Student Services,Atlanta,33.749,-84.388,2018,124000000,standard,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+7,Lakeside Financial Aid,lakeside,Learning Resources,Phoenix,33.4484,-112.074,2014,260000000,premium,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+8,Horizon First-Year Experience,horizon,First-Year Experience,Boston,42.3601,-71.0589,2020,54000000,emerging,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+9,Liberty Transfer Center,liberty,Transfer Success,Miami,25.7617,-80.1918,2011,148000000,standard,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+10,Innovation Online Campus,innovation,Online Learning,San Francisco,37.7749,-122.4194,2017,132000000,premium,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+11,Desert Workforce Institute,desert-workforce,Workforce Programs,Houston,29.7604,-95.3698,2013,175000000,premium,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+12,Blue Ridge Graduate College,blue-ridge-grad,Graduate Studies,Nashville,36.1627,-86.7816,2018,84000000,standard,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+13,Civic Promise College,civic-promise,Community College Transfer,Sacramento,38.5816,-121.4944,2005,118000000,standard,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+14,Metro Dual Enrollment Office,metro-dual,Dual Enrollment,Philadelphia,39.9526,-75.1652,2010,96000000,standard,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+15,Evergreen Completion Center,evergreen-completion,Completion Initiatives,Portland,45.5152,-122.6784,2016,142000000,premium,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z

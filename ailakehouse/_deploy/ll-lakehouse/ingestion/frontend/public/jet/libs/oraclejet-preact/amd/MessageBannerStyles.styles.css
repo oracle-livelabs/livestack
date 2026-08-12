@@ -1,0 +1,10 @@
+.MessageBannerStyles_variants_severity_confirmation__15yin4c0 {
+  --backgroundColor__l2hi9d0: var(--oj-c-surface-success-low);
+  --startIconColor__l2hi9d1: var(--oj-c-text-icon-success);
+  --summaryTextColor__l2hi9d3: var(--oj-c-text-icon-success);
+}
+.MessageBannerStyles_variants_severity_info__15yin4c1 {
+  --backgroundColor__l2hi9d0: var(--oj-c-surface-info-low);
+  --startIconColor__l2hi9d1: var(--oj-c-text-icon-info);
+  --summaryTextColor__l2hi9d3: var(--oj-c-text-icon-info);
+}

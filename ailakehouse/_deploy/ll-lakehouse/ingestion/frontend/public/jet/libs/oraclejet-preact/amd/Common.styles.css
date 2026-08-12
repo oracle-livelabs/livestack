@@ -1,0 +1,71 @@
+.Common_preventBrowserTooltipStyle__1v8q9mn0::after {
+  content: "";
+  display: block;
+}
+.Common_textAlignStyles_start__1v8q9mn1 {
+  text-align: start;
+}
+.Common_textAlignStyles_end__1v8q9mn2 {
+  text-align: end;
+}
+.Common_textAlignStyles_left__1v8q9mn3 {
+  text-align: left;
+}
+.Common_textAlignStyles_right__1v8q9mn4 {
+  text-align: right;
+}
+.Common_textAlignStyles_center__1v8q9mn5 {
+  text-align: center;
+}
+.Common_verticalAlignStyles_top__1v8q9mn6 {
+  vertical-align: top;
+}
+.Common_verticalAlignStyles_center__1v8q9mn7 {
+  vertical-align: middle;
+}
+.Common_verticalAlignStyles_bottom__1v8q9mn8 {
+  vertical-align: bottom;
+}
+.Common_justifyContentStyles_start__1v8q9mn9 {
+  justify-content: start;
+}
+.Common_justifyContentStyles_end__1v8q9mna {
+  justify-content: end;
+}
+.Common_justifyContentStyles_left__1v8q9mnb {
+  justify-content: left;
+}
+.Common_justifyContentStyles_right__1v8q9mnc {
+  justify-content: right;
+}
+.Common_justifyContentStyles_center__1v8q9mnd {
+  justify-content: center;
+}
+.Common_overflowStyles_autoScroll__1v8q9mne {
+  overflow: auto;
+}
+.Common_overflowStyles_clip__1v8q9mnf {
+  overflow: clip;
+}
+.Common_overflowStyles_forceScroll__1v8q9mng {
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
+.Common_overflowStyles_hidden__1v8q9mnh {
+  overflow: hidden;
+}
+.Common_overflowStyles_horizontalScroll__1v8q9mni {
+  overflow-x: scroll;
+}
+.Common_overflowStyles_noHorizontalScroll__1v8q9mnj {
+  overflow-x: hidden;
+}
+.Common_overflowStyles_verticalScroll__1v8q9mnk {
+  overflow-y: scroll;
+}
+.Common_overflowStyles_noVerticalScroll__1v8q9mnl {
+  overflow-y: hidden;
+}
+.Common_overflowStyles_visible__1v8q9mnm {
+  overflow: visible;
+}

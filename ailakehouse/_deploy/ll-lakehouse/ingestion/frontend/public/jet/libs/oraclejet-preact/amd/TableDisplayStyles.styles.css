@@ -1,0 +1,14 @@
+.TableDisplayStyles_tableDisplayStyles_base__1vi2mck0 {
+  align-items: stretch;
+  background-color: var(--oj-current-bg-color);
+  box-sizing: border-box;
+  clear: both;
+  display: inline-flex;
+  position: relative;
+}
+.TableDisplayStyles_tableDisplayStyles_internalScroller__1vi2mck1 {
+  overflow: clip;
+}
+.TableDisplayStyles_tableDisplayStyles_externalScroller__1vi2mck2 {
+  overflow: visible;
+}

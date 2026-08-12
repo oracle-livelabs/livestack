@@ -1,0 +1,484 @@
+influencer_id,handle,display_name,platform,follower_count,engagement_rate,influence_score,niche,city,region,country,is_verified,created_at
+1,@trail_signal_01,Trail Signal 01,instagram,29787,0.0419,71.62,Trail Running,New York,New York,US,0,2026-04-13T09:16:47Z
+2,@run_signal_01,Run Signal 01,tiktok,40474,0.0457,78.45,Outdoor Gear,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+3,@hike_signal_01,Hike Signal 01,twitter,289825,0.0381,84.35,Camping,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+4,@camp_signal_01,Camp Signal 01,youtube,4845,0.0496,69.43,Cycling,Houston,Texas,US,0,2026-04-13T09:16:47Z
+5,@bike_signal_01,Bike Signal 01,threads,8767,0.0365,62.32,Fitness Devices,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+6,@fitness_signal_01,Fitness Signal 01,instagram,8757,0.0618,73.6,Activewear,San Francisco,California,US,0,2026-04-13T09:16:47Z
+7,@wearable_signal_01,Wearable Signal 01,tiktok,82123,0.0767,100,Team Sports,Miami,Florida,US,0,2026-04-13T09:16:47Z
+8,@outdoor_signal_01,Outdoor Signal 01,twitter,48455,0.0488,74.64,Creator Trends,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+9,@activewear_signal_01,Activewear Signal 01,youtube,9410,0.0775,79.81,Competitive Pricing,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+10,@team_signal_01,Team Signal 01,threads,5314,0.0358,60.18,POS Transactions,Austin,Texas,US,0,2026-04-13T09:16:47Z
+11,@creator_signal_01,Creator Signal 01,instagram,1884,0.0335,59.83,Inventory Planning,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+12,@price_signal_01,Price Signal 01,tiktok,2955,0.0311,61.13,Returns Audit,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+13,@pos_signal_01,Pos Signal 01,twitter,62427,0.072,95.97,Store Pickup,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+14,@inventory_signal_01,Inventory Signal 01,youtube,6305,0.1018,98.65,Product Catalog,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+15,@returns_signal_01,Returns Signal 01,threads,6623,0.0607,75.6,Product Safety,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+16,@pickup_signal_01,Pickup Signal 01,instagram,21942,0.0745,96.91,Demand Forecasting,San Diego,California,US,0,2026-04-13T09:16:47Z
+17,@catalog_signal_01,Catalog Signal 01,tiktok,1845,0.088,83.27,Customer Propensity,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+18,@safety_signal_01,Safety Signal 01,twitter,9976,0.0765,85.02,Trail Running,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+19,@forecast_signal_01,Forecast Signal 01,youtube,9123,0.0362,71.62,Outdoor Gear,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+20,@loyalty_signal_01,Loyalty Signal 01,threads,9026,0.0951,93.79,Camping,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+21,@trail_signal_02,Trail Signal 02,instagram,3774,0.0615,80.61,Cycling,New York,New York,US,0,2026-04-13T09:16:47Z
+22,@run_signal_02,Run Signal 02,tiktok,83369,0.0622,90.24,Fitness Devices,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+23,@hike_signal_02,Hike Signal 02,twitter,85062,0.0573,85.12,Activewear,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+24,@camp_signal_02,Camp Signal 02,youtube,9133,0.0775,85.5,Team Sports,Houston,Texas,US,0,2026-04-13T09:16:47Z
+25,@bike_signal_02,Bike Signal 02,threads,26237,0.0264,68.42,Creator Trends,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+26,@fitness_signal_02,Fitness Signal 02,instagram,17305,0.0471,82.26,Competitive Pricing,San Francisco,California,US,0,2026-04-13T09:16:47Z
+27,@wearable_signal_02,Wearable Signal 02,tiktok,8926,0.1031,94.94,POS Transactions,Miami,Florida,US,0,2026-04-13T09:16:47Z
+28,@outdoor_signal_02,Outdoor Signal 02,twitter,37898,0.0655,90.3,Inventory Planning,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+29,@activewear_signal_02,Activewear Signal 02,youtube,4482,0.1016,91.6,Returns Audit,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+30,@team_signal_02,Team Signal 02,threads,63731,0.0519,81.88,Store Pickup,Austin,Texas,US,0,2026-04-13T09:16:47Z
+31,@creator_signal_02,Creator Signal 02,instagram,536083,0.0277,88.26,Product Catalog,Nashville,Tennessee,US,1,2026-04-13T09:16:47Z
+32,@price_signal_02,Price Signal 02,tiktok,8576,0.1177,100,Product Safety,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+33,@pos_signal_02,Pos Signal 02,twitter,7341,0.0926,89.01,Demand Forecasting,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+34,@inventory_signal_02,Inventory Signal 02,youtube,509575,0.0215,84.22,Customer Propensity,Atlanta,Georgia,US,1,2026-04-13T09:16:47Z
+35,@returns_signal_02,Returns Signal 02,threads,2336,0.032,60.49,Trail Running,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+36,@pickup_signal_02,Pickup Signal 02,instagram,90248,0.0539,80.52,Outdoor Gear,San Diego,California,US,0,2026-04-13T09:16:47Z
+37,@catalog_signal_02,Catalog Signal 02,tiktok,43754,0.0371,81.17,Camping,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+38,@safety_signal_02,Safety Signal 02,twitter,71571,0.0657,90.66,Cycling,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+39,@forecast_signal_02,Forecast Signal 02,youtube,563253,0.0407,94.21,Fitness Devices,Las Vegas,Nevada,US,1,2026-04-13T09:16:47Z
+40,@loyalty_signal_02,Loyalty Signal 02,threads,27525,0.0475,72.77,Activewear,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+41,@trail_signal_03,Trail Signal 03,instagram,617113,0.0441,96.66,Team Sports,New York,New York,US,1,2026-04-13T09:16:47Z
+42,@run_signal_03,Run Signal 03,tiktok,11615,0.031,69.01,Creator Trends,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+43,@hike_signal_03,Hike Signal 03,twitter,5486,0.0944,87.07,Competitive Pricing,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+44,@camp_signal_03,Camp Signal 03,youtube,68500,0.0706,91.8,POS Transactions,Houston,Texas,US,0,2026-04-13T09:16:47Z
+45,@bike_signal_03,Bike Signal 03,threads,13113440,0.01,83.84,Inventory Planning,Phoenix,Arizona,US,1,2026-04-13T09:16:47Z
+46,@fitness_signal_03,Fitness Signal 03,instagram,74785,0.0584,86.91,Returns Audit,San Francisco,California,US,0,2026-04-13T09:16:47Z
+47,@wearable_signal_03,Wearable Signal 03,tiktok,60707,0.0423,76.63,Store Pickup,Miami,Florida,US,0,2026-04-13T09:16:47Z
+48,@outdoor_signal_03,Outdoor Signal 03,twitter,9805,0.0647,84.17,Product Catalog,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+49,@activewear_signal_03,Activewear Signal 03,youtube,9843,0.074,89.37,Product Safety,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+50,@team_signal_03,Team Signal 03,threads,816891,0.0209,79.09,Demand Forecasting,Austin,Texas,US,1,2026-04-13T09:16:47Z
+51,@creator_signal_03,Creator Signal 03,instagram,4838,0.088,82.74,Customer Propensity,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+52,@price_signal_03,Price Signal 03,tiktok,12017,0.0512,74.88,Trail Running,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+53,@pos_signal_03,Pos Signal 03,twitter,35610,0.0582,90.5,Outdoor Gear,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+54,@inventory_signal_03,Inventory Signal 03,youtube,65652,0.079,100,Camping,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+55,@returns_signal_03,Returns Signal 03,threads,6292,0.0387,71.86,Cycling,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+56,@pickup_signal_03,Pickup Signal 03,instagram,2430,0.0898,81.99,Fitness Devices,San Diego,California,US,0,2026-04-13T09:16:47Z
+57,@catalog_signal_03,Catalog Signal 03,tiktok,934165,0.0317,86.89,Activewear,Minneapolis,Minnesota,US,1,2026-04-13T09:16:47Z
+58,@safety_signal_03,Safety Signal 03,twitter,4304,0.0673,74.41,Team Sports,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+59,@forecast_signal_03,Forecast Signal 03,youtube,1725,0.0626,69.79,Creator Trends,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+60,@loyalty_signal_03,Loyalty Signal 03,threads,62836,0.0564,78.66,Competitive Pricing,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+61,@trail_signal_04,Trail Signal 04,instagram,696723,0.0234,79.61,POS Transactions,New York,New York,US,1,2026-04-13T09:16:47Z
+62,@run_signal_04,Run Signal 04,tiktok,725374,0.0257,88.88,Inventory Planning,Los Angeles,California,US,1,2026-04-13T09:16:47Z
+63,@hike_signal_04,Hike Signal 04,twitter,44952,0.0563,77.54,Returns Audit,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+64,@camp_signal_04,Camp Signal 04,youtube,319361,0.028,74.74,Store Pickup,Houston,Texas,US,0,2026-04-13T09:16:47Z
+65,@bike_signal_04,Bike Signal 04,threads,5602,0.0388,60.54,Product Catalog,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+66,@fitness_signal_04,Fitness Signal 04,instagram,7110,0.1153,100,Product Safety,San Francisco,California,US,0,2026-04-13T09:16:47Z
+67,@wearable_signal_04,Wearable Signal 04,tiktok,7014,0.0837,89.64,Demand Forecasting,Miami,Florida,US,0,2026-04-13T09:16:47Z
+68,@outdoor_signal_04,Outdoor Signal 04,twitter,4793904,0.0155,81.19,Customer Propensity,Seattle,Washington,US,1,2026-04-13T09:16:47Z
+69,@activewear_signal_04,Activewear Signal 04,youtube,22221,0.0287,66.12,Trail Running,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+70,@team_signal_04,Team Signal 04,threads,93758,0.0417,87.56,Outdoor Gear,Austin,Texas,US,0,2026-04-13T09:16:47Z
+71,@creator_signal_04,Creator Signal 04,instagram,875656,0.0217,88.48,Camping,Nashville,Tennessee,US,1,2026-04-13T09:16:47Z
+72,@price_signal_04,Price Signal 04,tiktok,7898,0.085,87.16,Cycling,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+73,@pos_signal_04,Pos Signal 04,twitter,2234,0.0385,67.44,Fitness Devices,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+74,@inventory_signal_04,Inventory Signal 04,youtube,97139,0.0454,88.16,Activewear,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+75,@returns_signal_04,Returns Signal 04,threads,14434057,0.0154,97.91,Team Sports,Dallas,Texas,US,1,2026-04-13T09:16:47Z
+76,@pickup_signal_04,Pickup Signal 04,instagram,67907,0.036,76.32,Creator Trends,San Diego,California,US,0,2026-04-13T09:16:47Z
+77,@catalog_signal_04,Catalog Signal 04,tiktok,6207,0.0675,75.57,Competitive Pricing,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+78,@safety_signal_04,Safety Signal 04,twitter,8857,0.0692,86.97,POS Transactions,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+79,@forecast_signal_04,Forecast Signal 04,youtube,10699,0.0673,86.5,Inventory Planning,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+80,@loyalty_signal_04,Loyalty Signal 04,threads,98266,0.0366,80.17,Returns Audit,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+81,@trail_signal_05,Trail Signal 05,instagram,9487,0.0717,89.28,Store Pickup,New York,New York,US,0,2026-04-13T09:16:47Z
+82,@run_signal_05,Run Signal 05,tiktok,6852,0.0604,75.38,Product Catalog,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+83,@hike_signal_05,Hike Signal 05,twitter,4650,0.0497,70.27,Product Safety,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+84,@camp_signal_05,Camp Signal 05,youtube,15251,0.0782,86.63,Demand Forecasting,Houston,Texas,US,0,2026-04-13T09:16:47Z
+85,@bike_signal_05,Bike Signal 05,threads,2854,0.0862,84.05,Customer Propensity,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+86,@fitness_signal_05,Fitness Signal 05,instagram,3956,0.077,88.11,Trail Running,San Francisco,California,US,0,2026-04-13T09:16:47Z
+87,@wearable_signal_05,Wearable Signal 05,tiktok,156670,0.0329,79.11,Outdoor Gear,Miami,Florida,US,0,2026-04-13T09:16:47Z
+88,@outdoor_signal_05,Outdoor Signal 05,twitter,2163,0.111,95.1,Camping,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+89,@activewear_signal_05,Activewear Signal 05,youtube,85246,0.04,72.35,Cycling,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+90,@team_signal_05,Team Signal 05,threads,92349,0.0389,73.85,Fitness Devices,Austin,Texas,US,0,2026-04-13T09:16:47Z
+91,@creator_signal_05,Creator Signal 05,instagram,5177,0.0869,95.89,Activewear,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+92,@price_signal_05,Price Signal 05,tiktok,9852,0.1129,97.49,Team Sports,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+93,@pos_signal_05,Pos Signal 05,twitter,1417,0.0506,70.96,Creator Trends,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+94,@inventory_signal_05,Inventory Signal 05,youtube,5299,0.0875,88.81,Competitive Pricing,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+95,@returns_signal_05,Returns Signal 05,threads,65292,0.0687,93.5,POS Transactions,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+101,@pickup_signal_05,Pickup Signal 05,instagram,73658,0.0517,83.61,Inventory Planning,San Diego,California,US,0,2026-04-13T09:16:47Z
+102,@catalog_signal_05,Catalog Signal 05,tiktok,4916,0.1162,100,Returns Audit,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+103,@safety_signal_05,Safety Signal 05,twitter,60145,0.0495,82.6,Store Pickup,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+104,@forecast_signal_05,Forecast Signal 05,youtube,32849,0.073,86.31,Product Catalog,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+105,@loyalty_signal_05,Loyalty Signal 05,threads,2363,0.1179,100,Product Safety,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+106,@trail_signal_06,Trail Signal 06,instagram,245920,0.0367,84.7,Demand Forecasting,New York,New York,US,0,2026-04-13T09:16:47Z
+107,@run_signal_06,Run Signal 06,tiktok,9762,0.0823,88.13,Customer Propensity,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+108,@hike_signal_06,Hike Signal 06,twitter,4217,0.0485,73.21,Trail Running,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+109,@camp_signal_06,Camp Signal 06,youtube,4704,0.1195,100,Outdoor Gear,Houston,Texas,US,0,2026-04-13T09:16:47Z
+110,@bike_signal_06,Bike Signal 06,threads,84601,0.0781,100,Camping,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+111,@fitness_signal_06,Fitness Signal 06,instagram,901538,0.0242,77.36,Cycling,San Francisco,California,US,1,2026-04-13T09:16:47Z
+112,@wearable_signal_06,Wearable Signal 06,tiktok,1435,0.0704,81.28,Fitness Devices,Miami,Florida,US,0,2026-04-13T09:16:47Z
+113,@outdoor_signal_06,Outdoor Signal 06,twitter,84089,0.0491,83.86,Activewear,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+114,@activewear_signal_06,Activewear Signal 06,youtube,89858,0.0749,91.43,Team Sports,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+115,@team_signal_06,Team Signal 06,threads,3431,0.0386,69.87,Creator Trends,Austin,Texas,US,0,2026-04-13T09:16:47Z
+116,@creator_signal_06,Creator Signal 06,instagram,39057,0.0548,79.46,Competitive Pricing,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+117,@price_signal_06,Price Signal 06,tiktok,8048,0.1043,100,POS Transactions,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+118,@pos_signal_06,Pos Signal 06,twitter,7988,0.0688,87.07,Inventory Planning,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+119,@inventory_signal_06,Inventory Signal 06,youtube,6754,0.1129,100,Returns Audit,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+120,@returns_signal_06,Returns Signal 06,threads,250289,0.0333,76.21,Store Pickup,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+121,@pickup_signal_06,Pickup Signal 06,instagram,865261,0.0167,71.72,Product Catalog,San Diego,California,US,1,2026-04-13T09:16:47Z
+122,@catalog_signal_06,Catalog Signal 06,tiktok,84982,0.0477,87.31,Product Safety,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+123,@safety_signal_06,Safety Signal 06,twitter,68341,0.0603,91.51,Demand Forecasting,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+124,@forecast_signal_06,Forecast Signal 06,youtube,6828,0.1104,97.28,Customer Propensity,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+125,@loyalty_signal_06,Loyalty Signal 06,threads,754246,0.0386,89.21,Trail Running,Brooklyn,New York,US,1,2026-04-13T09:16:47Z
+126,@trail_signal_07,Trail Signal 07,instagram,7136,0.1019,96.51,Outdoor Gear,New York,New York,US,0,2026-04-13T09:16:47Z
+127,@run_signal_07,Run Signal 07,tiktok,81812,0.0498,88.26,Camping,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+128,@hike_signal_07,Hike Signal 07,twitter,20073,0.0699,92.03,Cycling,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+129,@camp_signal_07,Camp Signal 07,youtube,1668,0.0368,60.28,Fitness Devices,Houston,Texas,US,0,2026-04-13T09:16:47Z
+130,@bike_signal_07,Bike Signal 07,threads,47675,0.0707,93.77,Activewear,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+131,@fitness_signal_07,Fitness Signal 07,instagram,72439,0.0769,98.89,Team Sports,San Francisco,California,US,0,2026-04-13T09:16:47Z
+132,@wearable_signal_07,Wearable Signal 07,tiktok,51330,0.0312,66.31,Creator Trends,Miami,Florida,US,0,2026-04-13T09:16:47Z
+133,@outdoor_signal_07,Outdoor Signal 07,twitter,43850,0.03,70.4,Competitive Pricing,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+134,@activewear_signal_07,Activewear Signal 07,youtube,64111,0.0691,97.82,POS Transactions,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+135,@team_signal_07,Team Signal 07,threads,7956,0.039,68.87,Inventory Planning,Austin,Texas,US,0,2026-04-13T09:16:47Z
+136,@creator_signal_07,Creator Signal 07,instagram,111378,0.03,75.48,Returns Audit,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+137,@price_signal_07,Price Signal 07,tiktok,8309,0.0685,82.94,Store Pickup,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+138,@pos_signal_07,Pos Signal 07,twitter,2495,0.1025,92.12,Product Catalog,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+139,@inventory_signal_07,Inventory Signal 07,youtube,810707,0.0235,79.77,Product Safety,Atlanta,Georgia,US,1,2026-04-13T09:16:47Z
+140,@returns_signal_07,Returns Signal 07,threads,9857127,0.015,93.11,Demand Forecasting,Dallas,Texas,US,1,2026-04-13T09:16:47Z
+141,@pickup_signal_07,Pickup Signal 07,instagram,520064,0.0163,72.9,Customer Propensity,San Diego,California,US,1,2026-04-13T09:16:47Z
+142,@catalog_signal_07,Catalog Signal 07,tiktok,9643,0.0843,90.43,Trail Running,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+143,@safety_signal_07,Safety Signal 07,twitter,82395,0.0614,88.18,Outdoor Gear,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+144,@forecast_signal_07,Forecast Signal 07,youtube,4665,0.0526,63.96,Camping,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+145,@loyalty_signal_07,Loyalty Signal 07,threads,119177,0.0182,64.35,Cycling,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+146,@trail_signal_08,Trail Signal 08,instagram,5760,0.0791,92.22,Fitness Devices,New York,New York,US,0,2026-04-13T09:16:47Z
+147,@run_signal_08,Run Signal 08,tiktok,1710,0.1048,92.59,Activewear,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+148,@hike_signal_08,Hike Signal 08,twitter,9139,0.1056,97.22,Team Sports,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+149,@camp_signal_08,Camp Signal 08,youtube,5194,0.0985,93.43,Creator Trends,Houston,Texas,US,0,2026-04-13T09:16:47Z
+150,@bike_signal_08,Bike Signal 08,threads,6344,0.0359,65.31,Competitive Pricing,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+151,@fitness_signal_08,Fitness Signal 08,instagram,9563,0.1139,100,POS Transactions,San Francisco,California,US,0,2026-04-13T09:16:47Z
+152,@wearable_signal_08,Wearable Signal 08,tiktok,5848,0.0401,67.96,Inventory Planning,Miami,Florida,US,0,2026-04-13T09:16:47Z
+153,@outdoor_signal_08,Outdoor Signal 08,twitter,76624,0.0433,76.58,Returns Audit,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+154,@activewear_signal_08,Activewear Signal 08,youtube,5788,0.0739,88.28,Store Pickup,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+155,@team_signal_08,Team Signal 08,threads,169138,0.0333,73.68,Product Catalog,Austin,Texas,US,0,2026-04-13T09:16:47Z
+156,@creator_signal_08,Creator Signal 08,instagram,2878,0.0503,60.43,Product Safety,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+157,@price_signal_08,Price Signal 08,tiktok,184973,0.0259,69.88,Demand Forecasting,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+158,@pos_signal_08,Pos Signal 08,twitter,1196,0.0689,73.11,Customer Propensity,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+159,@inventory_signal_08,Inventory Signal 08,youtube,706439,0.0267,81.44,Trail Running,Atlanta,Georgia,US,1,2026-04-13T09:16:47Z
+160,@returns_signal_08,Returns Signal 08,threads,597559,0.0282,86.29,Outdoor Gear,Dallas,Texas,US,1,2026-04-13T09:16:47Z
+161,@pickup_signal_08,Pickup Signal 08,instagram,1493,0.0405,53.19,Camping,San Diego,California,US,0,2026-04-13T09:16:47Z
+162,@catalog_signal_08,Catalog Signal 08,tiktok,2285,0.0659,70.08,Cycling,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+163,@safety_signal_08,Safety Signal 08,twitter,7386557,0.0215,96.47,Fitness Devices,Detroit,Michigan,US,1,2026-04-13T09:16:47Z
+164,@forecast_signal_08,Forecast Signal 08,youtube,2718,0.0373,63.59,Activewear,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+165,@loyalty_signal_08,Loyalty Signal 08,threads,5144,0.0562,69.56,Team Sports,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+166,@trail_signal_09,Trail Signal 09,instagram,89451,0.065,93.36,Creator Trends,New York,New York,US,0,2026-04-13T09:16:47Z
+167,@run_signal_09,Run Signal 09,tiktok,90976,0.0703,90.35,Competitive Pricing,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+168,@hike_signal_09,Hike Signal 09,twitter,50566,0.0253,62.29,POS Transactions,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+169,@camp_signal_09,Camp Signal 09,youtube,3355,0.1086,92.99,Inventory Planning,Houston,Texas,US,0,2026-04-13T09:16:47Z
+170,@bike_signal_09,Bike Signal 09,threads,2909,0.1166,100,Returns Audit,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+171,@fitness_signal_09,Fitness Signal 09,instagram,86899,0.0592,88.84,Store Pickup,San Francisco,California,US,0,2026-04-13T09:16:47Z
+172,@wearable_signal_09,Wearable Signal 09,tiktok,28555,0.0446,78.36,Product Catalog,Miami,Florida,US,0,2026-04-13T09:16:47Z
+173,@outdoor_signal_09,Outdoor Signal 09,twitter,2177,0.0878,78.61,Product Safety,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+174,@activewear_signal_09,Activewear Signal 09,youtube,39296,0.0647,82.71,Demand Forecasting,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+175,@team_signal_09,Team Signal 09,threads,32550,0.0302,72.4,Customer Propensity,Austin,Texas,US,0,2026-04-13T09:16:47Z
+176,@creator_signal_09,Creator Signal 09,instagram,490373,0.0225,83.08,Trail Running,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+177,@price_signal_09,Price Signal 09,tiktok,5568,0.0873,91.63,Outdoor Gear,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+178,@pos_signal_09,Pos Signal 09,twitter,2494,0.0727,76.35,Camping,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+179,@inventory_signal_09,Inventory Signal 09,youtube,3105,0.0325,59.52,Cycling,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+180,@returns_signal_09,Returns Signal 09,threads,782810,0.0357,87.24,Fitness Devices,Dallas,Texas,US,1,2026-04-13T09:16:47Z
+181,@pickup_signal_09,Pickup Signal 09,instagram,25754,0.0437,79.91,Activewear,San Diego,California,US,0,2026-04-13T09:16:47Z
+182,@catalog_signal_09,Catalog Signal 09,tiktok,186874,0.0355,75.27,Team Sports,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+183,@safety_signal_09,Safety Signal 09,twitter,50165,0.0475,83.17,Creator Trends,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+184,@forecast_signal_09,Forecast Signal 09,youtube,71195,0.0661,89.66,Competitive Pricing,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+185,@loyalty_signal_09,Loyalty Signal 09,threads,4367,0.0712,85.72,POS Transactions,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+186,@trail_signal_10,Trail Signal 10,instagram,2460,0.1092,88.69,Inventory Planning,New York,New York,US,0,2026-04-13T09:16:47Z
+187,@run_signal_10,Run Signal 10,tiktok,52375,0.0679,91.33,Returns Audit,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+188,@hike_signal_10,Hike Signal 10,twitter,83252,0.0656,90.18,Store Pickup,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+189,@camp_signal_10,Camp Signal 10,youtube,81932,0.0633,90.81,Product Catalog,Houston,Texas,US,0,2026-04-13T09:16:47Z
+190,@bike_signal_10,Bike Signal 10,threads,444724,0.0255,81.11,Product Safety,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+191,@fitness_signal_10,Fitness Signal 10,instagram,2303,0.1172,96.19,Demand Forecasting,San Francisco,California,US,0,2026-04-13T09:16:47Z
+192,@wearable_signal_10,Wearable Signal 10,tiktok,137541,0.0217,71.21,Customer Propensity,Miami,Florida,US,0,2026-04-13T09:16:47Z
+193,@outdoor_signal_10,Outdoor Signal 10,twitter,59271,0.0508,79.48,Trail Running,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+194,@activewear_signal_10,Activewear Signal 10,youtube,5739,0.0809,93.27,Outdoor Gear,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+195,@team_signal_10,Team Signal 10,threads,27744,0.0651,82.34,Camping,Austin,Texas,US,0,2026-04-13T09:16:47Z
+201,@creator_signal_10,Creator Signal 10,instagram,79290,0.0799,100,Cycling,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+202,@price_signal_10,Price Signal 10,tiktok,4215,0.0505,66.83,Fitness Devices,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+203,@pos_signal_10,Pos Signal 10,twitter,7488,0.0427,65.99,Activewear,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+204,@inventory_signal_10,Inventory Signal 10,youtube,3230,0.0609,71.53,Team Sports,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+205,@returns_signal_10,Returns Signal 10,threads,5161709,0.0088,89.13,Creator Trends,Dallas,Texas,US,1,2026-04-13T09:16:47Z
+206,@pickup_signal_10,Pickup Signal 10,instagram,5833,0.042,69.13,Competitive Pricing,San Diego,California,US,0,2026-04-13T09:16:47Z
+207,@catalog_signal_10,Catalog Signal 10,tiktok,255801,0.0396,77.13,POS Transactions,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+208,@safety_signal_10,Safety Signal 10,twitter,818423,0.029,89.5,Inventory Planning,Detroit,Michigan,US,1,2026-04-13T09:16:47Z
+209,@forecast_signal_10,Forecast Signal 10,youtube,2197,0.0457,59.91,Returns Audit,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+210,@loyalty_signal_10,Loyalty Signal 10,threads,978841,0.0189,88.2,Store Pickup,Brooklyn,New York,US,1,2026-04-13T09:16:47Z
+211,@trail_signal_11,Trail Signal 11,instagram,6398,0.0446,63.86,Product Catalog,New York,New York,US,0,2026-04-13T09:16:47Z
+212,@run_signal_11,Run Signal 11,tiktok,1079,0.0332,52.82,Product Safety,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+213,@hike_signal_11,Hike Signal 11,twitter,6583,0.0439,62.92,Demand Forecasting,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+214,@camp_signal_11,Camp Signal 11,youtube,9832,0.0528,75.04,Customer Propensity,Houston,Texas,US,0,2026-04-13T09:16:47Z
+215,@bike_signal_11,Bike Signal 11,threads,9319,0.0426,70.27,Trail Running,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+216,@fitness_signal_11,Fitness Signal 11,instagram,14826,0.0474,70.6,Outdoor Gear,San Francisco,California,US,0,2026-04-13T09:16:47Z
+217,@wearable_signal_11,Wearable Signal 11,tiktok,73437,0.0262,76.63,Camping,Miami,Florida,US,0,2026-04-13T09:16:47Z
+218,@outdoor_signal_11,Outdoor Signal 11,twitter,4575,0.0778,80.35,Cycling,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+219,@activewear_signal_11,Activewear Signal 11,youtube,8690,0.1162,100,Fitness Devices,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+220,@team_signal_11,Team Signal 11,threads,9467,0.0772,83.91,Activewear,Austin,Texas,US,0,2026-04-13T09:16:47Z
+221,@creator_signal_11,Creator Signal 11,instagram,1984,0.0356,57.42,Team Sports,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+222,@price_signal_11,Price Signal 11,tiktok,8439,0.0593,72.49,Creator Trends,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+223,@pos_signal_11,Pos Signal 11,twitter,210156,0.0373,80.61,Competitive Pricing,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+224,@inventory_signal_11,Inventory Signal 11,youtube,9228,0.0374,71.03,POS Transactions,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+225,@returns_signal_11,Returns Signal 11,threads,18590,0.0256,71.87,Inventory Planning,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+226,@pickup_signal_11,Pickup Signal 11,instagram,14112,0.0268,68.39,Returns Audit,San Diego,California,US,0,2026-04-13T09:16:47Z
+227,@catalog_signal_11,Catalog Signal 11,tiktok,4748,0.0826,81.99,Store Pickup,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+228,@safety_signal_11,Safety Signal 11,twitter,46296,0.0616,88.47,Product Catalog,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+229,@forecast_signal_11,Forecast Signal 11,youtube,91080,0.0592,82.04,Product Safety,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+230,@loyalty_signal_11,Loyalty Signal 11,threads,6385,0.1169,99.07,Demand Forecasting,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+231,@trail_signal_12,Trail Signal 12,instagram,62037,0.0606,93.36,Customer Propensity,New York,New York,US,0,2026-04-13T09:16:47Z
+232,@run_signal_12,Run Signal 12,tiktok,63273,0.0546,82.48,Trail Running,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+233,@hike_signal_12,Hike Signal 12,twitter,81377,0.0425,83.99,Outdoor Gear,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+234,@camp_signal_12,Camp Signal 12,youtube,50533,0.0798,98.55,Camping,Houston,Texas,US,0,2026-04-13T09:16:47Z
+235,@bike_signal_12,Bike Signal 12,threads,4297643,0.0242,94.83,Cycling,Phoenix,Arizona,US,1,2026-04-13T09:16:47Z
+236,@fitness_signal_12,Fitness Signal 12,instagram,2270,0.0888,90.13,Fitness Devices,San Francisco,California,US,0,2026-04-13T09:16:47Z
+237,@wearable_signal_12,Wearable Signal 12,tiktok,99614,0.0648,92.77,Activewear,Miami,Florida,US,0,2026-04-13T09:16:47Z
+238,@outdoor_signal_12,Outdoor Signal 12,twitter,9452,0.1028,100,Team Sports,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+239,@activewear_signal_12,Activewear Signal 12,youtube,7114,0.1052,100,Creator Trends,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+240,@team_signal_12,Team Signal 12,threads,14460915,0.0201,88.6,Competitive Pricing,Austin,Texas,US,1,2026-04-13T09:16:47Z
+241,@creator_signal_12,Creator Signal 12,instagram,36186,0.0721,84.65,POS Transactions,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+242,@price_signal_12,Price Signal 12,tiktok,58014,0.0557,87.98,Inventory Planning,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+251,@pos_signal_12,Pos Signal 12,twitter,2480,0.0665,80.29,Returns Audit,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+252,@inventory_signal_12,Inventory Signal 12,youtube,1969,0.0962,91.62,Store Pickup,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+253,@returns_signal_12,Returns Signal 12,threads,4211,0.0792,86.81,Product Catalog,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+254,@pickup_signal_12,Pickup Signal 12,instagram,1053,0.0488,65.41,Product Safety,San Diego,California,US,0,2026-04-13T09:16:47Z
+255,@catalog_signal_12,Catalog Signal 12,tiktok,169228,0.0388,74.68,Demand Forecasting,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+256,@safety_signal_12,Safety Signal 12,twitter,8508,0.0966,97.32,Customer Propensity,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+257,@forecast_signal_12,Forecast Signal 12,youtube,3251,0.0438,67.05,Trail Running,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+258,@loyalty_signal_12,Loyalty Signal 12,threads,7848,0.0487,64.76,Outdoor Gear,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+259,@trail_signal_13,Trail Signal 13,instagram,43333,0.0482,72.54,Camping,New York,New York,US,0,2026-04-13T09:16:47Z
+260,@run_signal_13,Run Signal 13,tiktok,8021,0.0924,100,Cycling,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+261,@hike_signal_13,Hike Signal 13,twitter,626272,0.0264,83.06,Fitness Devices,Chicago,Illinois,US,1,2026-04-13T09:16:47Z
+262,@camp_signal_13,Camp Signal 13,youtube,3617,0.0608,70.1,Activewear,Houston,Texas,US,0,2026-04-13T09:16:47Z
+263,@bike_signal_13,Bike Signal 13,threads,8045,0.1128,100,Team Sports,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+264,@fitness_signal_13,Fitness Signal 13,instagram,96547,0.0342,76.2,Creator Trends,San Francisco,California,US,0,2026-04-13T09:16:47Z
+265,@wearable_signal_13,Wearable Signal 13,tiktok,339661,0.0221,72.47,Competitive Pricing,Miami,Florida,US,0,2026-04-13T09:16:47Z
+266,@outdoor_signal_13,Outdoor Signal 13,twitter,2892,0.0893,81.68,POS Transactions,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+267,@activewear_signal_13,Activewear Signal 13,youtube,1578,0.0717,78.2,Inventory Planning,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+268,@team_signal_13,Team Signal 13,threads,8155,0.1014,100,Returns Audit,Austin,Texas,US,0,2026-04-13T09:16:47Z
+269,@creator_signal_13,Creator Signal 13,instagram,296216,0.0246,71.5,Store Pickup,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+270,@price_signal_13,Price Signal 13,tiktok,25238,0.0482,74.64,Product Catalog,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+271,@pos_signal_13,Pos Signal 13,twitter,35355,0.0724,94.29,Product Safety,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+272,@inventory_signal_13,Inventory Signal 13,youtube,2834,0.0921,88.4,Demand Forecasting,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+273,@returns_signal_13,Returns Signal 13,threads,7036,0.1016,92.26,Customer Propensity,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+274,@pickup_signal_13,Pickup Signal 13,instagram,763640,0.0237,78,Trail Running,San Diego,California,US,1,2026-04-13T09:16:47Z
+275,@catalog_signal_13,Catalog Signal 13,tiktok,6062,0.0817,90.06,Outdoor Gear,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+276,@safety_signal_13,Safety Signal 13,twitter,2753,0.1065,99.51,Camping,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+277,@forecast_signal_13,Forecast Signal 13,youtube,6314,0.0603,80.18,Cycling,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+278,@loyalty_signal_13,Loyalty Signal 13,threads,92039,0.0709,100,Fitness Devices,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+279,@trail_signal_14,Trail Signal 14,instagram,14540,0.0733,86.45,Activewear,New York,New York,US,0,2026-04-13T09:16:47Z
+280,@run_signal_14,Run Signal 14,tiktok,22119,0.0645,90.11,Team Sports,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+281,@hike_signal_14,Hike Signal 14,twitter,5091,0.0367,56.83,Creator Trends,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+282,@camp_signal_14,Camp Signal 14,youtube,3459,0.0614,66.56,Competitive Pricing,Houston,Texas,US,0,2026-04-13T09:16:47Z
+283,@bike_signal_14,Bike Signal 14,threads,35463,0.0607,79.59,POS Transactions,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+284,@fitness_signal_14,Fitness Signal 14,instagram,7430,0.0852,88.95,Inventory Planning,San Francisco,California,US,0,2026-04-13T09:16:47Z
+285,@wearable_signal_14,Wearable Signal 14,tiktok,1959,0.0597,71.28,Returns Audit,Miami,Florida,US,0,2026-04-13T09:16:47Z
+286,@outdoor_signal_14,Outdoor Signal 14,twitter,6266,0.0341,61.94,Store Pickup,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+287,@activewear_signal_14,Activewear Signal 14,youtube,6445,0.0466,64.91,Product Catalog,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+288,@team_signal_14,Team Signal 14,threads,2787,0.06,72.57,Product Safety,Austin,Texas,US,0,2026-04-13T09:16:47Z
+289,@creator_signal_14,Creator Signal 14,instagram,7137,0.1064,97.54,Demand Forecasting,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+290,@price_signal_14,Price Signal 14,tiktok,8437,0.0805,86.52,Customer Propensity,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+291,@pos_signal_14,Pos Signal 14,twitter,939813,0.0435,98.39,Trail Running,Boston,Massachusetts,US,1,2026-04-13T09:16:47Z
+292,@inventory_signal_14,Inventory Signal 14,youtube,62239,0.0684,97.71,Outdoor Gear,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+293,@returns_signal_14,Returns Signal 14,threads,42621,0.0468,85.4,Camping,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+294,@pickup_signal_14,Pickup Signal 14,instagram,1405,0.0754,80.77,Cycling,San Diego,California,US,0,2026-04-13T09:16:47Z
+295,@catalog_signal_14,Catalog Signal 14,tiktok,3182,0.0436,63.3,Fitness Devices,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+301,@safety_signal_14,Safety Signal 14,twitter,3458048,0.007,77.83,Activewear,Detroit,Michigan,US,1,2026-04-13T09:16:47Z
+302,@forecast_signal_14,Forecast Signal 14,youtube,4295973,0.0206,91.15,Team Sports,Las Vegas,Nevada,US,1,2026-04-13T09:16:47Z
+303,@loyalty_signal_14,Loyalty Signal 14,threads,8964,0.0596,75.95,Creator Trends,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+304,@trail_signal_15,Trail Signal 15,instagram,40615,0.0603,90.56,Competitive Pricing,New York,New York,US,0,2026-04-13T09:16:47Z
+305,@run_signal_15,Run Signal 15,tiktok,2596,0.0507,70.71,POS Transactions,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+306,@hike_signal_15,Hike Signal 15,twitter,4591,0.1155,96.33,Inventory Planning,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+307,@camp_signal_15,Camp Signal 15,youtube,61995,0.0553,89.74,Returns Audit,Houston,Texas,US,0,2026-04-13T09:16:47Z
+308,@bike_signal_15,Bike Signal 15,threads,3140,0.0997,86.71,Store Pickup,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+309,@fitness_signal_15,Fitness Signal 15,instagram,5008,0.0865,82.89,Product Catalog,San Francisco,California,US,0,2026-04-13T09:16:47Z
+310,@wearable_signal_15,Wearable Signal 15,tiktok,57153,0.0635,85.6,Product Safety,Miami,Florida,US,0,2026-04-13T09:16:47Z
+311,@outdoor_signal_15,Outdoor Signal 15,twitter,96076,0.0599,93.27,Demand Forecasting,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+312,@activewear_signal_15,Activewear Signal 15,youtube,27122,0.0504,84.44,Customer Propensity,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+313,@team_signal_15,Team Signal 15,threads,84833,0.0568,86.39,Trail Running,Austin,Texas,US,0,2026-04-13T09:16:47Z
+314,@creator_signal_15,Creator Signal 15,instagram,6435,0.0861,94.77,Outdoor Gear,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+315,@price_signal_15,Price Signal 15,tiktok,2551,0.1131,100,Camping,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+316,@pos_signal_15,Pos Signal 15,twitter,3923,0.0781,78.21,Cycling,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+317,@inventory_signal_15,Inventory Signal 15,youtube,7851,0.0685,77.65,Fitness Devices,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+318,@returns_signal_15,Returns Signal 15,threads,1061,0.0549,60.38,Activewear,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+319,@pickup_signal_15,Pickup Signal 15,instagram,9915,0.0415,66.59,Team Sports,San Diego,California,US,0,2026-04-13T09:16:47Z
+320,@catalog_signal_15,Catalog Signal 15,tiktok,60470,0.0321,74.46,Creator Trends,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+321,@safety_signal_15,Safety Signal 15,twitter,147700,0.0353,79.89,Competitive Pricing,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+322,@forecast_signal_15,Forecast Signal 15,youtube,725608,0.0357,81.6,POS Transactions,Las Vegas,Nevada,US,1,2026-04-13T09:16:47Z
+323,@loyalty_signal_15,Loyalty Signal 15,threads,688268,0.0425,88.67,Inventory Planning,Brooklyn,New York,US,1,2026-04-13T09:16:47Z
+324,@trail_signal_16,Trail Signal 16,instagram,1576,0.0683,77.09,Returns Audit,New York,New York,US,0,2026-04-13T09:16:47Z
+325,@run_signal_16,Run Signal 16,tiktok,97421,0.0524,86.75,Store Pickup,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+326,@hike_signal_16,Hike Signal 16,twitter,7687,0.1113,100,Product Catalog,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+327,@camp_signal_16,Camp Signal 16,youtube,3106,0.0347,55.79,Product Safety,Houston,Texas,US,0,2026-04-13T09:16:47Z
+328,@bike_signal_16,Bike Signal 16,threads,882662,0.0214,77.25,Demand Forecasting,Phoenix,Arizona,US,1,2026-04-13T09:16:47Z
+329,@fitness_signal_16,Fitness Signal 16,instagram,7648,0.05,67.63,Customer Propensity,San Francisco,California,US,0,2026-04-13T09:16:47Z
+330,@wearable_signal_16,Wearable Signal 16,tiktok,3626,0.0847,83.59,Trail Running,Miami,Florida,US,0,2026-04-13T09:16:47Z
+331,@outdoor_signal_16,Outdoor Signal 16,twitter,4606,0.0894,94.01,Outdoor Gear,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+332,@activewear_signal_16,Activewear Signal 16,youtube,1268,0.1154,100,Camping,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+333,@team_signal_16,Team Signal 16,threads,73237,0.0673,88.8,Cycling,Austin,Texas,US,0,2026-04-13T09:16:47Z
+334,@creator_signal_16,Creator Signal 16,instagram,248504,0.037,87.46,Fitness Devices,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+335,@price_signal_16,Price Signal 16,tiktok,8209,0.0867,97.74,Activewear,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+336,@pos_signal_16,Pos Signal 16,twitter,4492,0.1138,99.11,Team Sports,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+337,@inventory_signal_16,Inventory Signal 16,youtube,1659,0.1174,100,Creator Trends,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+338,@returns_signal_16,Returns Signal 16,threads,379830,0.0313,84.52,Competitive Pricing,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+339,@pickup_signal_16,Pickup Signal 16,instagram,8595,0.0359,71.88,POS Transactions,San Diego,California,US,0,2026-04-13T09:16:47Z
+340,@catalog_signal_16,Catalog Signal 16,tiktok,6569046,0.0159,85.7,Inventory Planning,Minneapolis,Minnesota,US,1,2026-04-13T09:16:47Z
+341,@safety_signal_16,Safety Signal 16,twitter,65305,0.0338,80.13,Returns Audit,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+342,@forecast_signal_16,Forecast Signal 16,youtube,3638,0.1003,98.6,Store Pickup,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+343,@loyalty_signal_16,Loyalty Signal 16,threads,706258,0.0351,86.45,Product Catalog,Brooklyn,New York,US,1,2026-04-13T09:16:47Z
+344,@trail_signal_17,Trail Signal 17,instagram,4371,0.0508,65.08,Product Safety,New York,New York,US,0,2026-04-13T09:16:47Z
+345,@run_signal_17,Run Signal 17,tiktok,5850,0.1181,100,Demand Forecasting,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+346,@hike_signal_17,Hike Signal 17,twitter,3046,0.0637,74.58,Customer Propensity,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+347,@camp_signal_17,Camp Signal 17,youtube,10341044,0.0076,83.13,Trail Running,Houston,Texas,US,1,2026-04-13T09:16:47Z
+348,@bike_signal_17,Bike Signal 17,threads,2273,0.113,100,Outdoor Gear,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+349,@fitness_signal_17,Fitness Signal 17,instagram,6130,0.0714,83.59,Camping,San Francisco,California,US,0,2026-04-13T09:16:47Z
+350,@wearable_signal_17,Wearable Signal 17,tiktok,5023,0.1149,97.5,Cycling,Miami,Florida,US,0,2026-04-13T09:16:47Z
+351,@outdoor_signal_17,Outdoor Signal 17,twitter,6857,0.1041,91.25,Fitness Devices,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+352,@activewear_signal_17,Activewear Signal 17,youtube,86646,0.0274,69.73,Activewear,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+353,@team_signal_17,Team Signal 17,threads,6412,0.0782,87.4,Team Sports,Austin,Texas,US,0,2026-04-13T09:16:47Z
+354,@creator_signal_17,Creator Signal 17,instagram,1641,0.045,59.42,Creator Trends,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+355,@price_signal_17,Price Signal 17,tiktok,57351,0.0366,78.26,Competitive Pricing,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+356,@pos_signal_17,Pos Signal 17,twitter,93709,0.0425,87.81,POS Transactions,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+357,@inventory_signal_17,Inventory Signal 17,youtube,209800,0.02,81.17,Inventory Planning,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+358,@returns_signal_17,Returns Signal 17,threads,124157,0.0207,76,Returns Audit,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+359,@pickup_signal_17,Pickup Signal 17,instagram,60595,0.0786,97.95,Store Pickup,San Diego,California,US,0,2026-04-13T09:16:47Z
+360,@catalog_signal_17,Catalog Signal 17,tiktok,540568,0.0368,93.96,Product Catalog,Minneapolis,Minnesota,US,1,2026-04-13T09:16:47Z
+361,@safety_signal_17,Safety Signal 17,twitter,71249,0.0568,88.44,Product Safety,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+362,@forecast_signal_17,Forecast Signal 17,youtube,31012,0.0334,72.1,Demand Forecasting,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+363,@loyalty_signal_17,Loyalty Signal 17,threads,11729995,0.0156,93.16,Customer Propensity,Brooklyn,New York,US,1,2026-04-13T09:16:47Z
+364,@trail_signal_18,Trail Signal 18,instagram,88466,0.0436,78.59,Trail Running,New York,New York,US,0,2026-04-13T09:16:47Z
+365,@run_signal_18,Run Signal 18,tiktok,18871,0.0651,88.61,Outdoor Gear,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+366,@hike_signal_18,Hike Signal 18,twitter,29519,0.0522,87.4,Camping,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+367,@camp_signal_18,Camp Signal 18,youtube,6006,0.0997,93.29,Cycling,Houston,Texas,US,0,2026-04-13T09:16:47Z
+368,@bike_signal_18,Bike Signal 18,threads,8331,0.1144,100,Fitness Devices,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+369,@fitness_signal_18,Fitness Signal 18,instagram,64567,0.0465,80.36,Activewear,San Francisco,California,US,0,2026-04-13T09:16:47Z
+370,@wearable_signal_18,Wearable Signal 18,tiktok,919215,0.0342,84.89,Team Sports,Miami,Florida,US,1,2026-04-13T09:16:47Z
+371,@outdoor_signal_18,Outdoor Signal 18,twitter,3541,0.0717,86.69,Creator Trends,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+372,@activewear_signal_18,Activewear Signal 18,youtube,28705,0.0661,84.22,Competitive Pricing,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+373,@team_signal_18,Team Signal 18,threads,5966,0.1023,99.92,POS Transactions,Austin,Texas,US,0,2026-04-13T09:16:47Z
+374,@creator_signal_18,Creator Signal 18,instagram,75948,0.0635,93.51,Inventory Planning,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+375,@price_signal_18,Price Signal 18,tiktok,8257,0.1184,100,Returns Audit,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+376,@pos_signal_18,Pos Signal 18,twitter,17790,0.0259,57.18,Store Pickup,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+377,@inventory_signal_18,Inventory Signal 18,youtube,3269,0.1179,100,Product Catalog,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+378,@returns_signal_18,Returns Signal 18,threads,3926,0.1109,97.96,Product Safety,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+379,@pickup_signal_18,Pickup Signal 18,instagram,4525,0.0879,86.12,Demand Forecasting,San Diego,California,US,0,2026-04-13T09:16:47Z
+380,@catalog_signal_18,Catalog Signal 18,tiktok,2349,0.038,59.5,Customer Propensity,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+381,@safety_signal_18,Safety Signal 18,twitter,5170,0.0565,77.45,Trail Running,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+382,@forecast_signal_18,Forecast Signal 18,youtube,202478,0.0167,76.5,Outdoor Gear,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+383,@loyalty_signal_18,Loyalty Signal 18,threads,7084,0.0329,56.65,Camping,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+384,@trail_signal_19,Trail Signal 19,instagram,276769,0.0439,84.88,Cycling,New York,New York,US,0,2026-04-13T09:16:47Z
+385,@run_signal_19,Run Signal 19,tiktok,77591,0.06,82.75,Fitness Devices,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+386,@hike_signal_19,Hike Signal 19,twitter,519168,0.0338,89.93,Activewear,Chicago,Illinois,US,1,2026-04-13T09:16:47Z
+387,@camp_signal_19,Camp Signal 19,youtube,39278,0.0582,90.58,Team Sports,Houston,Texas,US,0,2026-04-13T09:16:47Z
+388,@bike_signal_19,Bike Signal 19,threads,2699,0.0593,68.07,Creator Trends,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+389,@fitness_signal_19,Fitness Signal 19,instagram,9442,0.0385,61.22,Competitive Pricing,San Francisco,California,US,0,2026-04-13T09:16:47Z
+390,@wearable_signal_19,Wearable Signal 19,tiktok,16428,0.0277,63.07,POS Transactions,Miami,Florida,US,0,2026-04-13T09:16:47Z
+391,@outdoor_signal_19,Outdoor Signal 19,twitter,8808,0.1027,100,Inventory Planning,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+392,@activewear_signal_19,Activewear Signal 19,youtube,1458,0.0817,74.37,Returns Audit,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+393,@team_signal_19,Team Signal 19,threads,3720,0.0573,72.58,Store Pickup,Austin,Texas,US,0,2026-04-13T09:16:47Z
+394,@creator_signal_19,Creator Signal 19,instagram,3937,0.042,70.07,Product Catalog,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+395,@price_signal_19,Price Signal 19,tiktok,4521,0.0783,86.4,Product Safety,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+401,@pos_signal_19,Pos Signal 19,twitter,70065,0.0688,97.98,Demand Forecasting,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+402,@inventory_signal_19,Inventory Signal 19,youtube,76556,0.0456,81.9,Customer Propensity,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+403,@returns_signal_19,Returns Signal 19,threads,6451,0.117,100,Trail Running,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+404,@pickup_signal_19,Pickup Signal 19,instagram,69278,0.076,93.23,Outdoor Gear,San Diego,California,US,0,2026-04-13T09:16:47Z
+405,@catalog_signal_19,Catalog Signal 19,tiktok,4975,0.0842,80.73,Camping,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+406,@safety_signal_19,Safety Signal 19,twitter,9472,0.0843,83.21,Cycling,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+407,@forecast_signal_19,Forecast Signal 19,youtube,1993,0.0376,59.5,Fitness Devices,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+408,@loyalty_signal_19,Loyalty Signal 19,threads,56546,0.0687,97.2,Activewear,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+409,@trail_signal_20,Trail Signal 20,instagram,6832,0.1187,100,Team Sports,New York,New York,US,0,2026-04-13T09:16:47Z
+410,@run_signal_20,Run Signal 20,tiktok,58797,0.031,71.39,Creator Trends,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+411,@hike_signal_20,Hike Signal 20,twitter,26803,0.0624,91.85,Competitive Pricing,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+412,@camp_signal_20,Camp Signal 20,youtube,61915,0.0644,83.14,POS Transactions,Houston,Texas,US,0,2026-04-13T09:16:47Z
+413,@bike_signal_20,Bike Signal 20,threads,264343,0.0252,72.66,Inventory Planning,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+414,@fitness_signal_20,Fitness Signal 20,instagram,4755,0.1098,93.58,Returns Audit,San Francisco,California,US,0,2026-04-13T09:16:47Z
+415,@wearable_signal_20,Wearable Signal 20,tiktok,13347,0.0381,68.8,Store Pickup,Miami,Florida,US,0,2026-04-13T09:16:47Z
+416,@outdoor_signal_20,Outdoor Signal 20,twitter,89649,0.0393,76.12,Product Catalog,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+417,@activewear_signal_20,Activewear Signal 20,youtube,61765,0.031,67.07,Product Safety,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+418,@team_signal_20,Team Signal 20,threads,7256,0.0885,98.54,Demand Forecasting,Austin,Texas,US,0,2026-04-13T09:16:47Z
+419,@creator_signal_20,Creator Signal 20,instagram,1712,0.0895,83.41,Customer Propensity,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+420,@price_signal_20,Price Signal 20,tiktok,30662,0.044,75.03,Trail Running,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+421,@pos_signal_20,Pos Signal 20,twitter,6870,0.1175,100,Outdoor Gear,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+422,@inventory_signal_20,Inventory Signal 20,youtube,12433622,0.0144,90.6,Camping,Atlanta,Georgia,US,1,2026-04-13T09:16:47Z
+423,@returns_signal_20,Returns Signal 20,threads,31121,0.0306,71.67,Cycling,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+424,@pickup_signal_20,Pickup Signal 20,instagram,77424,0.0354,80.16,Fitness Devices,San Diego,California,US,0,2026-04-13T09:16:47Z
+425,@catalog_signal_20,Catalog Signal 20,tiktok,9201,0.0663,76.93,Activewear,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+426,@safety_signal_20,Safety Signal 20,twitter,9368,0.0464,67.97,Team Sports,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+427,@forecast_signal_20,Forecast Signal 20,youtube,937827,0.0307,90.26,Creator Trends,Las Vegas,Nevada,US,1,2026-04-13T09:16:47Z
+428,@loyalty_signal_20,Loyalty Signal 20,threads,467075,0.0282,80.84,Competitive Pricing,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+429,@trail_signal_21,Trail Signal 21,instagram,7965,0.1169,100,POS Transactions,New York,New York,US,0,2026-04-13T09:16:47Z
+430,@run_signal_21,Run Signal 21,tiktok,5153,0.0592,68.49,Inventory Planning,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+431,@hike_signal_21,Hike Signal 21,twitter,1780,0.0698,78.35,Returns Audit,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+432,@camp_signal_21,Camp Signal 21,youtube,9867,0.078,83,Store Pickup,Houston,Texas,US,0,2026-04-13T09:16:47Z
+433,@bike_signal_21,Bike Signal 21,threads,3299,0.115,100,Product Catalog,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+434,@fitness_signal_21,Fitness Signal 21,instagram,8544,0.0906,98.73,Product Safety,San Francisco,California,US,0,2026-04-13T09:16:47Z
+435,@wearable_signal_21,Wearable Signal 21,tiktok,631427,0.0177,71.63,Demand Forecasting,Miami,Florida,US,1,2026-04-13T09:16:47Z
+436,@outdoor_signal_21,Outdoor Signal 21,twitter,1093247,0.0207,84.38,Customer Propensity,Seattle,Washington,US,1,2026-04-13T09:16:47Z
+437,@activewear_signal_21,Activewear Signal 21,youtube,33381,0.0519,87.6,Trail Running,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+438,@team_signal_21,Team Signal 21,threads,6685,0.1123,100,Outdoor Gear,Austin,Texas,US,0,2026-04-13T09:16:47Z
+439,@creator_signal_21,Creator Signal 21,instagram,918783,0.0389,96.84,Camping,Nashville,Tennessee,US,1,2026-04-13T09:16:47Z
+440,@price_signal_21,Price Signal 21,tiktok,99863,0.0775,100,Cycling,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+441,@pos_signal_21,Pos Signal 21,twitter,55779,0.068,94.94,Fitness Devices,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+442,@inventory_signal_21,Inventory Signal 21,youtube,73181,0.0566,79.59,Activewear,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+443,@returns_signal_21,Returns Signal 21,threads,40383,0.0521,86.26,Team Sports,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+444,@pickup_signal_21,Pickup Signal 21,instagram,7328,0.1009,100,Creator Trends,San Diego,California,US,0,2026-04-13T09:16:47Z
+445,@catalog_signal_21,Catalog Signal 21,tiktok,4297,0.0341,68.29,Competitive Pricing,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+446,@safety_signal_21,Safety Signal 21,twitter,587476,0.0253,87.29,POS Transactions,Detroit,Michigan,US,1,2026-04-13T09:16:47Z
+447,@forecast_signal_21,Forecast Signal 21,youtube,4405032,0.0132,81.26,Inventory Planning,Las Vegas,Nevada,US,1,2026-04-13T09:16:47Z
+448,@loyalty_signal_21,Loyalty Signal 21,threads,93991,0.026,74.42,Returns Audit,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+449,@trail_signal_22,Trail Signal 22,instagram,75488,0.079,100,Store Pickup,New York,New York,US,0,2026-04-13T09:16:47Z
+450,@run_signal_22,Run Signal 22,tiktok,7996,0.0802,91.54,Product Catalog,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+451,@hike_signal_22,Hike Signal 22,twitter,7428,0.0312,62.48,Product Safety,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+452,@camp_signal_22,Camp Signal 22,youtube,509830,0.0168,77.79,Demand Forecasting,Houston,Texas,US,1,2026-04-13T09:16:47Z
+453,@bike_signal_22,Bike Signal 22,threads,2521,0.0316,52.82,Customer Propensity,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+454,@fitness_signal_22,Fitness Signal 22,instagram,863390,0.016,75.5,Trail Running,San Francisco,California,US,1,2026-04-13T09:16:47Z
+455,@wearable_signal_22,Wearable Signal 22,tiktok,2669,0.0972,93.59,Outdoor Gear,Miami,Florida,US,0,2026-04-13T09:16:47Z
+456,@outdoor_signal_22,Outdoor Signal 22,twitter,24913,0.0666,91.95,Camping,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+457,@activewear_signal_22,Activewear Signal 22,youtube,1755,0.095,89.76,Cycling,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+458,@team_signal_22,Team Signal 22,threads,5244,0.0347,62.07,Fitness Devices,Austin,Texas,US,0,2026-04-13T09:16:47Z
+459,@creator_signal_22,Creator Signal 22,instagram,95463,0.0552,91.58,Activewear,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+460,@price_signal_22,Price Signal 22,tiktok,35671,0.0283,70.17,Team Sports,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+461,@pos_signal_22,Pos Signal 22,twitter,93250,0.0367,73.75,Creator Trends,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+462,@inventory_signal_22,Inventory Signal 22,youtube,1224,0.11,98.92,Competitive Pricing,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+463,@returns_signal_22,Returns Signal 22,threads,1736,0.0588,63.01,POS Transactions,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+464,@pickup_signal_22,Pickup Signal 22,instagram,6074,0.0422,64.11,Inventory Planning,San Diego,California,US,0,2026-04-13T09:16:47Z
+465,@catalog_signal_22,Catalog Signal 22,tiktok,43532,0.0498,85.57,Returns Audit,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+466,@safety_signal_22,Safety Signal 22,twitter,8926,0.0308,69.91,Store Pickup,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+467,@forecast_signal_22,Forecast Signal 22,youtube,74381,0.0523,91.36,Product Catalog,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+468,@loyalty_signal_22,Loyalty Signal 22,threads,97840,0.0267,78.85,Product Safety,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+469,@trail_signal_23,Trail Signal 23,instagram,5798,0.1064,94.46,Demand Forecasting,New York,New York,US,0,2026-04-13T09:16:47Z
+470,@run_signal_23,Run Signal 23,tiktok,2959,0.0568,73.31,Customer Propensity,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+471,@hike_signal_23,Hike Signal 23,twitter,6226785,0.0232,93.13,Trail Running,Chicago,Illinois,US,1,2026-04-13T09:16:47Z
+472,@camp_signal_23,Camp Signal 23,youtube,5959,0.0398,58.49,Outdoor Gear,Houston,Texas,US,0,2026-04-13T09:16:47Z
+473,@bike_signal_23,Bike Signal 23,threads,17980,0.0773,95.04,Camping,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+474,@fitness_signal_23,Fitness Signal 23,instagram,40859,0.0359,79.59,Cycling,San Francisco,California,US,0,2026-04-13T09:16:47Z
+475,@wearable_signal_23,Wearable Signal 23,tiktok,38292,0.0399,76.16,Fitness Devices,Miami,Florida,US,0,2026-04-13T09:16:47Z
+476,@outdoor_signal_23,Outdoor Signal 23,twitter,9120,0.0568,69.63,Activewear,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+477,@activewear_signal_23,Activewear Signal 23,youtube,2600,0.1177,100,Team Sports,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+478,@team_signal_23,Team Signal 23,threads,9037,0.1093,100,Creator Trends,Austin,Texas,US,0,2026-04-13T09:16:47Z
+479,@creator_signal_23,Creator Signal 23,instagram,13373,0.0381,76.14,Competitive Pricing,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+480,@price_signal_23,Price Signal 23,tiktok,1380,0.0919,79.82,POS Transactions,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+481,@pos_signal_23,Pos Signal 23,twitter,284343,0.0277,78.44,Inventory Planning,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+482,@inventory_signal_23,Inventory Signal 23,youtube,159739,0.0216,78.75,Returns Audit,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+483,@returns_signal_23,Returns Signal 23,threads,57195,0.0797,100,Store Pickup,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+484,@pickup_signal_23,Pickup Signal 23,instagram,750284,0.023,84.47,Product Catalog,San Diego,California,US,1,2026-04-13T09:16:47Z
+485,@catalog_signal_23,Catalog Signal 23,tiktok,5815,0.0498,70.89,Product Safety,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+486,@safety_signal_23,Safety Signal 23,twitter,3015,0.0647,73.5,Demand Forecasting,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+487,@forecast_signal_23,Forecast Signal 23,youtube,9434170,0.0135,95.14,Customer Propensity,Las Vegas,Nevada,US,1,2026-04-13T09:16:47Z
+488,@loyalty_signal_23,Loyalty Signal 23,threads,13529171,0.0231,100,Trail Running,Brooklyn,New York,US,1,2026-04-13T09:16:47Z
+489,@trail_signal_24,Trail Signal 24,instagram,9218,0.0622,85.1,Outdoor Gear,New York,New York,US,0,2026-04-13T09:16:47Z
+490,@run_signal_24,Run Signal 24,tiktok,859551,0.0291,87.65,Camping,Los Angeles,California,US,1,2026-04-13T09:16:47Z
+491,@hike_signal_24,Hike Signal 24,twitter,721604,0.0346,83.1,Cycling,Chicago,Illinois,US,1,2026-04-13T09:16:47Z
+501,@camp_signal_24,Camp Signal 24,youtube,78376,0.0479,78.14,Fitness Devices,Houston,Texas,US,0,2026-04-13T09:16:47Z
+502,@bike_signal_24,Bike Signal 24,threads,5117,0.046,67.17,Activewear,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+503,@fitness_signal_24,Fitness Signal 24,instagram,70818,0.0384,78.47,Team Sports,San Francisco,California,US,0,2026-04-13T09:16:47Z
+504,@wearable_signal_24,Wearable Signal 24,tiktok,981743,0.0417,91.7,Creator Trends,Miami,Florida,US,1,2026-04-13T09:16:47Z
+505,@outdoor_signal_24,Outdoor Signal 24,twitter,52089,0.0532,80.5,Competitive Pricing,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+506,@activewear_signal_24,Activewear Signal 24,youtube,5084,0.1009,96.89,POS Transactions,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+507,@team_signal_24,Team Signal 24,threads,8071,0.0616,77.88,Inventory Planning,Austin,Texas,US,0,2026-04-13T09:16:47Z
+508,@creator_signal_24,Creator Signal 24,instagram,53615,0.0765,89.94,Returns Audit,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+509,@price_signal_24,Price Signal 24,tiktok,39662,0.0321,66.56,Store Pickup,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+510,@pos_signal_24,Pos Signal 24,twitter,695453,0.0169,80.72,Product Catalog,Boston,Massachusetts,US,1,2026-04-13T09:16:47Z
+511,@inventory_signal_24,Inventory Signal 24,youtube,7900,0.0456,64.6,Product Safety,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+512,@returns_signal_24,Returns Signal 24,threads,43517,0.0291,64.06,Demand Forecasting,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+513,@pickup_signal_24,Pickup Signal 24,instagram,11033944,0.0217,100,Customer Propensity,San Diego,California,US,1,2026-04-13T09:16:47Z
+514,@catalog_signal_24,Catalog Signal 24,tiktok,6465,0.0649,75.01,Trail Running,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+515,@safety_signal_24,Safety Signal 24,twitter,5296,0.0951,91.14,Outdoor Gear,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+516,@forecast_signal_24,Forecast Signal 24,youtube,8708,0.0663,77.72,Camping,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+517,@loyalty_signal_24,Loyalty Signal 24,threads,7474,0.0332,61.64,Cycling,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+518,@trail_signal_25,Trail Signal 25,instagram,25893,0.0381,75.48,Fitness Devices,New York,New York,US,0,2026-04-13T09:16:47Z
+519,@run_signal_25,Run Signal 25,tiktok,9968,0.0966,96.72,Activewear,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+520,@hike_signal_25,Hike Signal 25,twitter,9217,0.048,72.18,Team Sports,Chicago,Illinois,US,0,2026-04-13T09:16:47Z

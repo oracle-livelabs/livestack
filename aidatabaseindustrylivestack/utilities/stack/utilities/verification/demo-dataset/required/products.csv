@@ -1,0 +1,32 @@
+product_id,brand_id,sku,product_name,description,category,subcategory,unit_price,unit_cost,weight_kg,is_active,launch_date,tags,created_at,updated_at
+551,85,GRI-00001,Smart Meter Exchange,,Electric Utility,AMI,125,48,0.8,1,2026-03-08,"smart-meter,ami,exchange,field-work",2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+552,85,GRI-00002,Outage Restoration Dispatch,,Electric Utility,Restoration,210,82,0.001,1,2025-06-20,"outage,dispatch,restoration,crew-routing",2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+553,85,GRI-00003,Transformer Load Assessment,,Electric Utility,Transformer,95,35,0.001,1,2025-07-23,"transformer,load,inspection,distribution",2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+554,86,POW-00004,Vegetation Clearance Work Order,,Electric Utility,Vegetation,160,65,0.001,1,2026-01-20,"vegetation,reliability,feeder,work-order",2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+555,86,POW-00005,EV Charger Interconnection Review,,Electric Utility,EV Infrastructure,340,125,0.001,1,2025-02-19,"ev,interconnection,charger,capacity",2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+556,86,POW-00006,Voltage Quality Investigation,,Electric Utility,Voltage,275,98,0.05,1,2024-11-18,"voltage,power-quality,monitoring",2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+557,87,PEA-00007,Feeder Recloser Inspection,,Electric Utility,Protection,420,175,0.001,1,2025-06-20,"recloser,feeder,automation,protection",2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+558,87,PEA-00008,Mobile Substation Deployment,,Electric Utility,Contingency,680,260,1.2,1,2024-12-04,"substation,mobile,contingency,restoration",2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+559,87,PEA-00009,DER Interconnection Queue Review,,Electric Utility,DER Interconnection,285,112,0.001,1,2026-02-18,"der,solar,interconnection,queue",2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+560,88,CLE-00010,Billing Exception Review,,Customer Operations,Billing,180,70,0.001,1,2025-05-10,"billing,collections,customer-service",2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+561,88,CLE-00011,Move In Move Out Request,,Customer Operations,Service Move,140,58,0.001,1,2025-05-20,"move-in,move-out,customer-operations",2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+562,89,FIE-00012,Industrial Customer Service Request,,Field Operations,Industrial Service,260,105,0.001,1,2024-06-18,"industrial-customer,service-request,field-work",2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+563,89,FIE-00013,Field Crew Safety Dispatch,,Field Operations,Crew Dispatch,220,90,0.001,1,2026-01-02,"crew,dispatch,hse,safety",2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+564,90,WAT-00014,Water Main Pressure Inspection,,Water/Wastewater Utility,Pressure,170,68,0.001,1,2024-08-04,"water-main,pressure,inspection",2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+565,90,WAT-00015,Leak Detection Field Visit,,Water/Wastewater Utility,Leak Detection,145,55,0.001,1,2026-01-17,"leak,detection,water,field-work",2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+566,90,WAT-00016,Water Quality Sampling,,Water/Wastewater Utility,Water Quality,210,84,0.001,1,2024-12-29,"water-quality,sampling,regulatory",2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+567,90,WAT-00017,Pump Station Capacity Review,,Water/Wastewater Utility,Pump Station,275,110,0.001,1,2024-12-14,"pump-station,capacity,pressure-zone",2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+568,91,FLW-00018,Wastewater Discharge Compliance Review,,Water/Wastewater Utility,Discharge Compliance,430,180,0.001,1,2026-04-12,"wastewater,discharge,compliance,permit",2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+569,91,FLW-00019,Sewer Overflow Response,,Water/Wastewater Utility,Overflow Response,520,216,0.001,1,2025-10-22,"sewer-overflow,wastewater,emergency",2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+570,92,GAS-00020,Gas Leak Investigation,,Gas Utility,Emergency,520,210,0.001,1,2024-07-18,"gas,leak,emergency,field-crew",2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+571,92,GAS-00021,Regulator Station Inspection,,Gas Utility,Regulator,155,62,0.001,1,2026-01-28,"gas,regulator,inspection",2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+572,92,GAS-00022,Pipeline Pressure Monitoring Review,,Gas Utility,Pressure Monitoring,235,95,0.001,1,2025-11-24,"gas,pipeline,pressure,monitoring",2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+573,92,GAS-00023,Odorization Monitoring Inspection,,Gas Utility,Odorization,225,88,0.001,1,2025-08-10,"gas,odorization,compliance,inspection",2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+574,93,NOR-00024,Well Production Variance Review,,Oil & Gas Upstream,Well Performance,450,180,0.001,1,2025-09-04,"well,production,variance,forecast",2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+575,93,NOR-00025,Artificial Lift Monitoring,,Oil & Gas Upstream,Artificial Lift,360,145,0.001,1,2025-10-22,"artificial-lift,vibration,well",2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+576,93,NOR-00026,Produced Water Handling Review,,Oil & Gas Upstream,Produced Water,310,124,0.001,1,2025-04-20,"produced-water,handling,hse",2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+577,94,BAY-00027,Pipeline Integrity Assessment,,Oil & Gas Midstream,Pipeline Integrity,620,255,0.001,1,2025-09-25,"pipeline,integrity,corrosion,inspection",2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+578,94,BAY-00028,Compressor Station Reliability Review,,Oil & Gas Midstream,Compressor Station,540,220,0.001,1,2026-03-25,"compressor,vibration,reliability",2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+579,95,SAB-00029,LNG Cargo Delay Review,,Oil & Gas Midstream,LNG Logistics,580,240,0.001,1,2025-01-03,"lng,cargo,delay,berth",2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+580,96,GUL-00030,Refinery Hydrocracker Constraint Review,,Oil & Gas Downstream,Refinery Unit,730,300,0.001,1,2026-02-05,"refinery,hydrocracker,throughput,constraint",2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+581,96,GUL-00031,Turnaround Readiness Plan,,Oil & Gas Downstream,Turnaround,610,250,0.001,1,2024-05-29,"turnaround,maintenance,parts,crew",2026-05-22T14:21:33Z,2026-05-22T14:21:33Z

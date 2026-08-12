@@ -1,0 +1,484 @@
+influencer_id,handle,display_name,platform,follower_count,engagement_rate,influence_score,niche,city,region,country,is_verified,created_at
+1,@sled_partner_0001,Constituent Services Signal Source 001,threads,2500,0.018,55,Constituent Services,Denver,Colorado,US,1,2026-03-09T12:00:00Z
+2,@sled_partner_0002,Permits and Licensing Signal Source 002,twitter,3323,0.0207,62.17,Permits and Licensing,Colorado Springs,Colorado,US,0,2026-03-10T12:00:00Z
+3,@sled_partner_0003,Benefits Eligibility Signal Source 003,youtube,4146,0.0234,69.34,Benefits Eligibility,Aurora,Colorado,US,0,2026-03-11T12:00:00Z
+4,@sled_partner_0004,Case Management Signal Source 004,instagram,4969,0.0261,76.51,Case Management,Fort Collins,Colorado,US,0,2026-03-12T12:00:00Z
+5,@sled_partner_0005,Emergency Response Signal Source 005,tiktok,5792,0.0288,83.68,Emergency Response,Lakewood,Colorado,US,1,2026-03-13T12:00:00Z
+6,@sled_partner_0006,Public Works Signal Source 006,threads,6615,0.0315,90,Public Works,Thornton,Colorado,US,0,2026-03-14T12:00:00Z
+7,@sled_partner_0007,Transportation Services Signal Source 007,twitter,7438,0.0342,97.17,Transportation Services,Pueblo,Colorado,US,0,2026-03-15T12:00:00Z
+8,@sled_partner_0008,Tax and Revenue Operations Signal Source 008,youtube,8261,0.0369,61.34,Tax and Revenue Operations,Boulder,Colorado,US,0,2026-03-16T12:00:00Z
+9,@sled_partner_0009,Citizen-Facing Digital Services Signal Source 009,instagram,9084,0.0396,68.51,Citizen-Facing Digital Services,Greeley,Colorado,US,1,2026-03-17T12:00:00Z
+10,@sled_partner_0010,Inspections and Code Enforcement Signal Source 010,tiktok,9907,0.0423,75.68,Inspections and Code Enforcement,Castle Rock,Colorado,US,0,2026-03-18T12:00:00Z
+11,@sled_partner_0011,Grants Management Signal Source 011,threads,10730,0.045,82,Grants Management,Grand Junction,Colorado,US,0,2026-03-19T12:00:00Z
+12,@sled_partner_0012,Health and Human Services Signal Source 012,twitter,11553,0.0477,89.17,Health and Human Services,Broomfield,Colorado,US,0,2026-03-20T12:00:00Z
+13,@sled_partner_0013,Fraud Waste and Abuse Detection Signal Source 013,youtube,12376,0.0504,96.34,Fraud Waste and Abuse Detection,Durango,Colorado,US,1,2026-03-21T12:00:00Z
+14,@sled_partner_0014,Policy Compliance Signal Source 014,instagram,13199,0.0531,60.51,Policy Compliance,Montrose,Colorado,US,0,2026-03-22T12:00:00Z
+15,@sled_partner_0015,Records Management Signal Source 015,tiktok,14022,0.0558,67.68,Records Management,Steamboat Springs,Colorado,US,0,2026-03-23T12:00:00Z
+16,@sled_partner_0016,Interagency Workflows Signal Source 016,threads,14845,0.0585,74,Interagency Workflows,Alamosa,Colorado,US,0,2026-03-24T12:00:00Z
+17,@sled_partner_0017,Business Licensing Signal Source 017,twitter,15668,0.0612,81.17,Business Licensing,Glenwood Springs,Colorado,US,1,2026-03-25T12:00:00Z
+18,@sled_partner_0018,Public Assistance Programs Signal Source 018,youtube,16491,0.0639,88.34,Public Assistance Programs,Idaho Springs,Colorado,US,0,2026-03-26T12:00:00Z
+19,@sled_partner_0019,Accessibility Services Signal Source 019,instagram,17314,0.0666,95.51,Accessibility Services,Cañon City,Colorado,US,0,2026-03-27T12:00:00Z
+20,@sled_partner_0020,Transparency and Auditability Signal Source 020,tiktok,18137,0.018,59.68,Transparency and Auditability,Salida,Colorado,US,0,2026-03-28T12:00:00Z
+21,@sled_partner_0021,Constituent Services Signal Source 021,threads,18960,0.0207,66,Constituent Services,Gunnison,Colorado,US,1,2026-03-29T12:00:00Z
+22,@sled_partner_0022,Permits and Licensing Signal Source 022,twitter,19783,0.0234,73.17,Permits and Licensing,Leadville,Colorado,US,0,2026-03-30T12:00:00Z
+23,@sled_partner_0023,Benefits Eligibility Signal Source 023,youtube,20606,0.0261,80.34,Benefits Eligibility,Walsenburg,Colorado,US,0,2026-03-31T12:00:00Z
+24,@sled_partner_0024,Case Management Signal Source 024,instagram,21429,0.0288,87.51,Case Management,Trinidad,Colorado,US,0,2026-04-01T12:00:00Z
+25,@sled_partner_0025,Emergency Response Signal Source 025,tiktok,22252,0.0315,94.68,Emergency Response,Sterling,Colorado,US,1,2026-04-02T12:00:00Z
+26,@sled_partner_0026,Public Works Signal Source 026,threads,23075,0.0342,58,Public Works,Fort Morgan,Colorado,US,0,2026-04-03T12:00:00Z
+27,@sled_partner_0027,Transportation Services Signal Source 027,twitter,23898,0.0369,65.17,Transportation Services,Yuma,Colorado,US,0,2026-04-04T12:00:00Z
+28,@sled_partner_0028,Tax and Revenue Operations Signal Source 028,youtube,24721,0.0396,72.34,Tax and Revenue Operations,Burlington,Colorado,US,0,2026-04-05T12:00:00Z
+29,@sled_partner_0029,Citizen-Facing Digital Services Signal Source 029,instagram,25544,0.0423,79.51,Citizen-Facing Digital Services,Craig,Colorado,US,1,2026-04-06T12:00:00Z
+30,@sled_partner_0030,Inspections and Code Enforcement Signal Source 030,tiktok,26367,0.045,86.68,Inspections and Code Enforcement,Telluride,Colorado,US,0,2026-04-07T12:00:00Z
+31,@sled_partner_0031,Grants Management Signal Source 031,threads,27190,0.0477,93,Grants Management,Cortez,Colorado,US,0,2026-04-08T12:00:00Z
+32,@sled_partner_0032,Health and Human Services Signal Source 032,twitter,28013,0.0504,57.17,Health and Human Services,Denver,Colorado,US,0,2026-04-09T12:00:00Z
+33,@sled_partner_0033,Fraud Waste and Abuse Detection Signal Source 033,youtube,28836,0.0531,64.34,Fraud Waste and Abuse Detection,Colorado Springs,Colorado,US,1,2026-04-10T12:00:00Z
+34,@sled_partner_0034,Policy Compliance Signal Source 034,instagram,29659,0.0558,71.51,Policy Compliance,Aurora,Colorado,US,0,2026-04-11T12:00:00Z
+35,@sled_partner_0035,Records Management Signal Source 035,tiktok,30482,0.0585,78.68,Records Management,Fort Collins,Colorado,US,0,2026-04-12T12:00:00Z
+36,@sled_partner_0036,Interagency Workflows Signal Source 036,threads,31305,0.0612,85,Interagency Workflows,Lakewood,Colorado,US,0,2026-04-13T12:00:00Z
+37,@sled_partner_0037,Business Licensing Signal Source 037,twitter,32128,0.0639,92.17,Business Licensing,Thornton,Colorado,US,1,2026-04-14T12:00:00Z
+38,@sled_partner_0038,Public Assistance Programs Signal Source 038,youtube,32951,0.0666,56.34,Public Assistance Programs,Pueblo,Colorado,US,0,2026-04-15T12:00:00Z
+39,@sled_partner_0039,Accessibility Services Signal Source 039,instagram,33774,0.018,63.51,Accessibility Services,Boulder,Colorado,US,0,2026-04-16T12:00:00Z
+40,@sled_partner_0040,Transparency and Auditability Signal Source 040,tiktok,34597,0.0207,70.68,Transparency and Auditability,Greeley,Colorado,US,0,2026-04-17T12:00:00Z
+41,@sled_partner_0041,Constituent Services Signal Source 041,threads,35420,0.0234,77,Constituent Services,Castle Rock,Colorado,US,1,2026-04-18T12:00:00Z
+42,@sled_partner_0042,Permits and Licensing Signal Source 042,twitter,36243,0.0261,84.17,Permits and Licensing,Grand Junction,Colorado,US,0,2026-04-19T12:00:00Z
+43,@sled_partner_0043,Benefits Eligibility Signal Source 043,youtube,37066,0.0288,91.34,Benefits Eligibility,Broomfield,Colorado,US,0,2026-04-20T12:00:00Z
+44,@sled_partner_0044,Case Management Signal Source 044,instagram,37889,0.0315,55.51,Case Management,Durango,Colorado,US,0,2026-04-21T12:00:00Z
+45,@sled_partner_0045,Emergency Response Signal Source 045,tiktok,38712,0.0342,62.68,Emergency Response,Montrose,Colorado,US,1,2026-04-22T12:00:00Z
+46,@sled_partner_0046,Public Works Signal Source 046,threads,39535,0.0369,69,Public Works,Steamboat Springs,Colorado,US,0,2026-04-23T12:00:00Z
+47,@sled_partner_0047,Transportation Services Signal Source 047,twitter,40358,0.0396,76.17,Transportation Services,Alamosa,Colorado,US,0,2026-04-24T12:00:00Z
+48,@sled_partner_0048,Tax and Revenue Operations Signal Source 048,youtube,41181,0.0423,83.34,Tax and Revenue Operations,Glenwood Springs,Colorado,US,0,2026-04-25T12:00:00Z
+49,@sled_partner_0049,Citizen-Facing Digital Services Signal Source 049,instagram,42004,0.045,90.51,Citizen-Facing Digital Services,Idaho Springs,Colorado,US,1,2026-04-26T12:00:00Z
+50,@sled_partner_0050,Inspections and Code Enforcement Signal Source 050,tiktok,42827,0.0477,97.68,Inspections and Code Enforcement,Cañon City,Colorado,US,0,2026-04-27T12:00:00Z
+51,@sled_partner_0051,Grants Management Signal Source 051,threads,43650,0.0504,61,Grants Management,Salida,Colorado,US,0,2026-04-28T12:00:00Z
+52,@sled_partner_0052,Health and Human Services Signal Source 052,twitter,44473,0.0531,68.17,Health and Human Services,Gunnison,Colorado,US,0,2026-04-29T12:00:00Z
+53,@sled_partner_0053,Fraud Waste and Abuse Detection Signal Source 053,youtube,45296,0.0558,75.34,Fraud Waste and Abuse Detection,Leadville,Colorado,US,1,2026-04-30T12:00:00Z
+54,@sled_partner_0054,Policy Compliance Signal Source 054,instagram,46119,0.0585,82.51,Policy Compliance,Walsenburg,Colorado,US,0,2026-05-01T12:00:00Z
+55,@sled_partner_0055,Records Management Signal Source 055,tiktok,46942,0.0612,89.68,Records Management,Trinidad,Colorado,US,0,2026-05-02T12:00:00Z
+56,@sled_partner_0056,Interagency Workflows Signal Source 056,threads,47765,0.0639,96,Interagency Workflows,Sterling,Colorado,US,0,2026-05-03T12:00:00Z
+57,@sled_partner_0057,Business Licensing Signal Source 057,twitter,48588,0.0666,60.17,Business Licensing,Fort Morgan,Colorado,US,1,2026-05-04T12:00:00Z
+58,@sled_partner_0058,Public Assistance Programs Signal Source 058,youtube,49411,0.018,67.34,Public Assistance Programs,Yuma,Colorado,US,0,2026-05-05T12:00:00Z
+59,@sled_partner_0059,Accessibility Services Signal Source 059,instagram,50234,0.0207,74.51,Accessibility Services,Burlington,Colorado,US,0,2026-05-06T12:00:00Z
+60,@sled_partner_0060,Transparency and Auditability Signal Source 060,tiktok,51057,0.0234,81.68,Transparency and Auditability,Craig,Colorado,US,0,2026-05-07T12:00:00Z
+61,@sled_partner_0061,Constituent Services Signal Source 061,threads,51880,0.0261,88,Constituent Services,Telluride,Colorado,US,1,2026-05-08T12:00:00Z
+62,@sled_partner_0062,Permits and Licensing Signal Source 062,twitter,52703,0.0288,95.17,Permits and Licensing,Cortez,Colorado,US,0,2026-05-09T12:00:00Z
+63,@sled_partner_0063,Benefits Eligibility Signal Source 063,youtube,53526,0.0315,59.34,Benefits Eligibility,Denver,Colorado,US,0,2026-05-10T12:00:00Z
+64,@sled_partner_0064,Case Management Signal Source 064,instagram,54349,0.0342,66.51,Case Management,Colorado Springs,Colorado,US,0,2026-05-11T12:00:00Z
+65,@sled_partner_0065,Emergency Response Signal Source 065,tiktok,55172,0.0369,73.68,Emergency Response,Aurora,Colorado,US,1,2026-05-12T12:00:00Z
+66,@sled_partner_0066,Public Works Signal Source 066,threads,55995,0.0396,80,Public Works,Fort Collins,Colorado,US,0,2026-05-13T12:00:00Z
+67,@sled_partner_0067,Transportation Services Signal Source 067,twitter,56818,0.0423,87.17,Transportation Services,Lakewood,Colorado,US,0,2026-05-14T12:00:00Z
+68,@sled_partner_0068,Tax and Revenue Operations Signal Source 068,youtube,57641,0.045,94.34,Tax and Revenue Operations,Thornton,Colorado,US,0,2026-05-15T12:00:00Z
+69,@sled_partner_0069,Citizen-Facing Digital Services Signal Source 069,instagram,58464,0.0477,58.51,Citizen-Facing Digital Services,Pueblo,Colorado,US,1,2026-05-16T12:00:00Z
+70,@sled_partner_0070,Inspections and Code Enforcement Signal Source 070,tiktok,59287,0.0504,65.68,Inspections and Code Enforcement,Boulder,Colorado,US,0,2026-05-17T12:00:00Z
+71,@sled_partner_0071,Grants Management Signal Source 071,threads,60110,0.0531,72,Grants Management,Greeley,Colorado,US,0,2026-03-09T12:00:00Z
+72,@sled_partner_0072,Health and Human Services Signal Source 072,twitter,60933,0.0558,79.17,Health and Human Services,Castle Rock,Colorado,US,0,2026-03-10T12:00:00Z
+73,@sled_partner_0073,Fraud Waste and Abuse Detection Signal Source 073,youtube,61756,0.0585,86.34,Fraud Waste and Abuse Detection,Grand Junction,Colorado,US,1,2026-03-11T12:00:00Z
+74,@sled_partner_0074,Policy Compliance Signal Source 074,instagram,62579,0.0612,93.51,Policy Compliance,Broomfield,Colorado,US,0,2026-03-12T12:00:00Z
+75,@sled_partner_0075,Records Management Signal Source 075,tiktok,63402,0.0639,57.68,Records Management,Durango,Colorado,US,0,2026-03-13T12:00:00Z
+76,@sled_partner_0076,Interagency Workflows Signal Source 076,threads,64225,0.0666,64,Interagency Workflows,Montrose,Colorado,US,0,2026-03-14T12:00:00Z
+77,@sled_partner_0077,Business Licensing Signal Source 077,twitter,65048,0.018,71.17,Business Licensing,Steamboat Springs,Colorado,US,1,2026-03-15T12:00:00Z
+78,@sled_partner_0078,Public Assistance Programs Signal Source 078,youtube,65871,0.0207,78.34,Public Assistance Programs,Alamosa,Colorado,US,0,2026-03-16T12:00:00Z
+79,@sled_partner_0079,Accessibility Services Signal Source 079,instagram,66694,0.0234,85.51,Accessibility Services,Glenwood Springs,Colorado,US,0,2026-03-17T12:00:00Z
+80,@sled_partner_0080,Transparency and Auditability Signal Source 080,tiktok,67517,0.0261,92.68,Transparency and Auditability,Idaho Springs,Colorado,US,0,2026-03-18T12:00:00Z
+81,@sled_partner_0081,Constituent Services Signal Source 081,threads,68340,0.0288,56,Constituent Services,Cañon City,Colorado,US,1,2026-03-19T12:00:00Z
+82,@sled_partner_0082,Permits and Licensing Signal Source 082,twitter,69163,0.0315,63.17,Permits and Licensing,Salida,Colorado,US,0,2026-03-20T12:00:00Z
+83,@sled_partner_0083,Benefits Eligibility Signal Source 083,youtube,69986,0.0342,70.34,Benefits Eligibility,Gunnison,Colorado,US,0,2026-03-21T12:00:00Z
+84,@sled_partner_0084,Case Management Signal Source 084,instagram,70809,0.0369,77.51,Case Management,Leadville,Colorado,US,0,2026-03-22T12:00:00Z
+85,@sled_partner_0085,Emergency Response Signal Source 085,tiktok,71632,0.0396,84.68,Emergency Response,Walsenburg,Colorado,US,1,2026-03-23T12:00:00Z
+86,@sled_partner_0086,Public Works Signal Source 086,threads,72455,0.0423,91,Public Works,Trinidad,Colorado,US,0,2026-03-24T12:00:00Z
+87,@sled_partner_0087,Transportation Services Signal Source 087,twitter,73278,0.045,55.17,Transportation Services,Sterling,Colorado,US,0,2026-03-25T12:00:00Z
+88,@sled_partner_0088,Tax and Revenue Operations Signal Source 088,youtube,74101,0.0477,62.34,Tax and Revenue Operations,Fort Morgan,Colorado,US,0,2026-03-26T12:00:00Z
+89,@sled_partner_0089,Citizen-Facing Digital Services Signal Source 089,instagram,74924,0.0504,69.51,Citizen-Facing Digital Services,Yuma,Colorado,US,1,2026-03-27T12:00:00Z
+90,@sled_partner_0090,Inspections and Code Enforcement Signal Source 090,tiktok,75747,0.0531,76.68,Inspections and Code Enforcement,Burlington,Colorado,US,0,2026-03-28T12:00:00Z
+91,@sled_partner_0091,Grants Management Signal Source 091,threads,76570,0.0558,83,Grants Management,Craig,Colorado,US,0,2026-03-29T12:00:00Z
+92,@sled_partner_0092,Health and Human Services Signal Source 092,twitter,77393,0.0585,90.17,Health and Human Services,Telluride,Colorado,US,0,2026-03-30T12:00:00Z
+93,@sled_partner_0093,Fraud Waste and Abuse Detection Signal Source 093,youtube,78216,0.0612,97.34,Fraud Waste and Abuse Detection,Cortez,Colorado,US,1,2026-03-31T12:00:00Z
+94,@sled_partner_0094,Policy Compliance Signal Source 094,instagram,79039,0.0639,61.51,Policy Compliance,Denver,Colorado,US,0,2026-04-01T12:00:00Z
+95,@sled_partner_0095,Records Management Signal Source 095,tiktok,79862,0.0666,68.68,Records Management,Colorado Springs,Colorado,US,0,2026-04-02T12:00:00Z
+96,@sled_partner_0096,Interagency Workflows Signal Source 096,threads,80685,0.018,75,Interagency Workflows,Aurora,Colorado,US,0,2026-04-03T12:00:00Z
+97,@sled_partner_0097,Business Licensing Signal Source 097,twitter,81508,0.0207,82.17,Business Licensing,Fort Collins,Colorado,US,1,2026-04-04T12:00:00Z
+98,@sled_partner_0098,Public Assistance Programs Signal Source 098,youtube,82331,0.0234,89.34,Public Assistance Programs,Lakewood,Colorado,US,0,2026-04-05T12:00:00Z
+99,@sled_partner_0099,Accessibility Services Signal Source 099,instagram,83154,0.0261,96.51,Accessibility Services,Thornton,Colorado,US,0,2026-04-06T12:00:00Z
+100,@sled_partner_0100,Transparency and Auditability Signal Source 100,tiktok,83977,0.0288,60.68,Transparency and Auditability,Pueblo,Colorado,US,0,2026-04-07T12:00:00Z
+101,@sled_partner_0101,Constituent Services Signal Source 101,threads,84800,0.0315,67,Constituent Services,Boulder,Colorado,US,1,2026-04-08T12:00:00Z
+102,@sled_partner_0102,Permits and Licensing Signal Source 102,twitter,85623,0.0342,74.17,Permits and Licensing,Greeley,Colorado,US,0,2026-04-09T12:00:00Z
+103,@sled_partner_0103,Benefits Eligibility Signal Source 103,youtube,86446,0.0369,81.34,Benefits Eligibility,Castle Rock,Colorado,US,0,2026-04-10T12:00:00Z
+104,@sled_partner_0104,Case Management Signal Source 104,instagram,87269,0.0396,88.51,Case Management,Grand Junction,Colorado,US,0,2026-04-11T12:00:00Z
+105,@sled_partner_0105,Emergency Response Signal Source 105,tiktok,88092,0.0423,95.68,Emergency Response,Broomfield,Colorado,US,1,2026-04-12T12:00:00Z
+106,@sled_partner_0106,Public Works Signal Source 106,threads,88915,0.045,59,Public Works,Durango,Colorado,US,0,2026-04-13T12:00:00Z
+107,@sled_partner_0107,Transportation Services Signal Source 107,twitter,89738,0.0477,66.17,Transportation Services,Montrose,Colorado,US,0,2026-04-14T12:00:00Z
+108,@sled_partner_0108,Tax and Revenue Operations Signal Source 108,youtube,90561,0.0504,73.34,Tax and Revenue Operations,Steamboat Springs,Colorado,US,0,2026-04-15T12:00:00Z
+109,@sled_partner_0109,Citizen-Facing Digital Services Signal Source 109,instagram,91384,0.0531,80.51,Citizen-Facing Digital Services,Alamosa,Colorado,US,1,2026-04-16T12:00:00Z
+110,@sled_partner_0110,Inspections and Code Enforcement Signal Source 110,tiktok,92207,0.0558,87.68,Inspections and Code Enforcement,Glenwood Springs,Colorado,US,0,2026-04-17T12:00:00Z
+111,@sled_partner_0111,Grants Management Signal Source 111,threads,93030,0.0585,94,Grants Management,Idaho Springs,Colorado,US,0,2026-04-18T12:00:00Z
+112,@sled_partner_0112,Health and Human Services Signal Source 112,twitter,93853,0.0612,58.17,Health and Human Services,Cañon City,Colorado,US,0,2026-04-19T12:00:00Z
+113,@sled_partner_0113,Fraud Waste and Abuse Detection Signal Source 113,youtube,94676,0.0639,65.34,Fraud Waste and Abuse Detection,Salida,Colorado,US,1,2026-04-20T12:00:00Z
+114,@sled_partner_0114,Policy Compliance Signal Source 114,instagram,95499,0.0666,72.51,Policy Compliance,Gunnison,Colorado,US,0,2026-04-21T12:00:00Z
+115,@sled_partner_0115,Records Management Signal Source 115,tiktok,96322,0.018,79.68,Records Management,Leadville,Colorado,US,0,2026-04-22T12:00:00Z
+116,@sled_partner_0116,Interagency Workflows Signal Source 116,threads,97145,0.0207,86,Interagency Workflows,Walsenburg,Colorado,US,0,2026-04-23T12:00:00Z
+117,@sled_partner_0117,Business Licensing Signal Source 117,twitter,97968,0.0234,93.17,Business Licensing,Trinidad,Colorado,US,1,2026-04-24T12:00:00Z
+118,@sled_partner_0118,Public Assistance Programs Signal Source 118,youtube,98791,0.0261,57.34,Public Assistance Programs,Sterling,Colorado,US,0,2026-04-25T12:00:00Z
+119,@sled_partner_0119,Accessibility Services Signal Source 119,instagram,99614,0.0288,64.51,Accessibility Services,Fort Morgan,Colorado,US,0,2026-04-26T12:00:00Z
+120,@sled_partner_0120,Transparency and Auditability Signal Source 120,tiktok,100437,0.0315,71.68,Transparency and Auditability,Yuma,Colorado,US,0,2026-04-27T12:00:00Z
+121,@sled_partner_0121,Constituent Services Signal Source 121,threads,101260,0.0342,78,Constituent Services,Burlington,Colorado,US,1,2026-04-28T12:00:00Z
+122,@sled_partner_0122,Permits and Licensing Signal Source 122,twitter,102083,0.0369,85.17,Permits and Licensing,Craig,Colorado,US,0,2026-04-29T12:00:00Z
+123,@sled_partner_0123,Benefits Eligibility Signal Source 123,youtube,102906,0.0396,92.34,Benefits Eligibility,Telluride,Colorado,US,0,2026-04-30T12:00:00Z
+124,@sled_partner_0124,Case Management Signal Source 124,instagram,103729,0.0423,56.51,Case Management,Cortez,Colorado,US,0,2026-05-01T12:00:00Z
+125,@sled_partner_0125,Emergency Response Signal Source 125,tiktok,104552,0.045,63.68,Emergency Response,Denver,Colorado,US,1,2026-05-02T12:00:00Z
+126,@sled_partner_0126,Public Works Signal Source 126,threads,105375,0.0477,70,Public Works,Colorado Springs,Colorado,US,0,2026-05-03T12:00:00Z
+127,@sled_partner_0127,Transportation Services Signal Source 127,twitter,106198,0.0504,77.17,Transportation Services,Aurora,Colorado,US,0,2026-05-04T12:00:00Z
+128,@sled_partner_0128,Tax and Revenue Operations Signal Source 128,youtube,107021,0.0531,84.34,Tax and Revenue Operations,Fort Collins,Colorado,US,0,2026-05-05T12:00:00Z
+129,@sled_partner_0129,Citizen-Facing Digital Services Signal Source 129,instagram,107844,0.0558,91.51,Citizen-Facing Digital Services,Lakewood,Colorado,US,1,2026-05-06T12:00:00Z
+130,@sled_partner_0130,Inspections and Code Enforcement Signal Source 130,tiktok,108667,0.0585,55.68,Inspections and Code Enforcement,Thornton,Colorado,US,0,2026-05-07T12:00:00Z
+131,@sled_partner_0131,Grants Management Signal Source 131,threads,109490,0.0612,62,Grants Management,Pueblo,Colorado,US,0,2026-05-08T12:00:00Z
+132,@sled_partner_0132,Health and Human Services Signal Source 132,twitter,110313,0.0639,69.17,Health and Human Services,Boulder,Colorado,US,0,2026-05-09T12:00:00Z
+133,@sled_partner_0133,Fraud Waste and Abuse Detection Signal Source 133,youtube,111136,0.0666,76.34,Fraud Waste and Abuse Detection,Greeley,Colorado,US,1,2026-05-10T12:00:00Z
+134,@sled_partner_0134,Policy Compliance Signal Source 134,instagram,111959,0.018,83.51,Policy Compliance,Castle Rock,Colorado,US,0,2026-05-11T12:00:00Z
+135,@sled_partner_0135,Records Management Signal Source 135,tiktok,112782,0.0207,90.68,Records Management,Grand Junction,Colorado,US,0,2026-05-12T12:00:00Z
+136,@sled_partner_0136,Interagency Workflows Signal Source 136,threads,113605,0.0234,97,Interagency Workflows,Broomfield,Colorado,US,0,2026-05-13T12:00:00Z
+137,@sled_partner_0137,Business Licensing Signal Source 137,twitter,114428,0.0261,61.17,Business Licensing,Durango,Colorado,US,1,2026-05-14T12:00:00Z
+138,@sled_partner_0138,Public Assistance Programs Signal Source 138,youtube,115251,0.0288,68.34,Public Assistance Programs,Montrose,Colorado,US,0,2026-05-15T12:00:00Z
+139,@sled_partner_0139,Accessibility Services Signal Source 139,instagram,116074,0.0315,75.51,Accessibility Services,Steamboat Springs,Colorado,US,0,2026-05-16T12:00:00Z
+140,@sled_partner_0140,Transparency and Auditability Signal Source 140,tiktok,116897,0.0342,82.68,Transparency and Auditability,Alamosa,Colorado,US,0,2026-05-17T12:00:00Z
+141,@sled_partner_0141,Constituent Services Signal Source 141,threads,117720,0.0369,89,Constituent Services,Glenwood Springs,Colorado,US,1,2026-03-09T12:00:00Z
+142,@sled_partner_0142,Permits and Licensing Signal Source 142,twitter,118543,0.0396,96.17,Permits and Licensing,Idaho Springs,Colorado,US,0,2026-03-10T12:00:00Z
+143,@sled_partner_0143,Benefits Eligibility Signal Source 143,youtube,119366,0.0423,60.34,Benefits Eligibility,Cañon City,Colorado,US,0,2026-03-11T12:00:00Z
+144,@sled_partner_0144,Case Management Signal Source 144,instagram,120189,0.045,67.51,Case Management,Salida,Colorado,US,0,2026-03-12T12:00:00Z
+145,@sled_partner_0145,Emergency Response Signal Source 145,tiktok,121012,0.0477,74.68,Emergency Response,Gunnison,Colorado,US,1,2026-03-13T12:00:00Z
+146,@sled_partner_0146,Public Works Signal Source 146,threads,121835,0.0504,81,Public Works,Leadville,Colorado,US,0,2026-03-14T12:00:00Z
+147,@sled_partner_0147,Transportation Services Signal Source 147,twitter,122658,0.0531,88.17,Transportation Services,Walsenburg,Colorado,US,0,2026-03-15T12:00:00Z
+148,@sled_partner_0148,Tax and Revenue Operations Signal Source 148,youtube,123481,0.0558,95.34,Tax and Revenue Operations,Trinidad,Colorado,US,0,2026-03-16T12:00:00Z
+149,@sled_partner_0149,Citizen-Facing Digital Services Signal Source 149,instagram,124304,0.0585,59.51,Citizen-Facing Digital Services,Sterling,Colorado,US,1,2026-03-17T12:00:00Z
+150,@sled_partner_0150,Inspections and Code Enforcement Signal Source 150,tiktok,125127,0.0612,66.68,Inspections and Code Enforcement,Fort Morgan,Colorado,US,0,2026-03-18T12:00:00Z
+151,@sled_partner_0151,Grants Management Signal Source 151,threads,125950,0.0639,73,Grants Management,Yuma,Colorado,US,0,2026-03-19T12:00:00Z
+152,@sled_partner_0152,Health and Human Services Signal Source 152,twitter,126773,0.0666,80.17,Health and Human Services,Burlington,Colorado,US,0,2026-03-20T12:00:00Z
+153,@sled_partner_0153,Fraud Waste and Abuse Detection Signal Source 153,youtube,127596,0.018,87.34,Fraud Waste and Abuse Detection,Craig,Colorado,US,1,2026-03-21T12:00:00Z
+154,@sled_partner_0154,Policy Compliance Signal Source 154,instagram,128419,0.0207,94.51,Policy Compliance,Telluride,Colorado,US,0,2026-03-22T12:00:00Z
+155,@sled_partner_0155,Records Management Signal Source 155,tiktok,129242,0.0234,58.68,Records Management,Cortez,Colorado,US,0,2026-03-23T12:00:00Z
+156,@sled_partner_0156,Interagency Workflows Signal Source 156,threads,130065,0.0261,65,Interagency Workflows,Denver,Colorado,US,0,2026-03-24T12:00:00Z
+157,@sled_partner_0157,Business Licensing Signal Source 157,twitter,130888,0.0288,72.17,Business Licensing,Colorado Springs,Colorado,US,1,2026-03-25T12:00:00Z
+158,@sled_partner_0158,Public Assistance Programs Signal Source 158,youtube,131711,0.0315,79.34,Public Assistance Programs,Aurora,Colorado,US,0,2026-03-26T12:00:00Z
+159,@sled_partner_0159,Accessibility Services Signal Source 159,instagram,132534,0.0342,86.51,Accessibility Services,Fort Collins,Colorado,US,0,2026-03-27T12:00:00Z
+160,@sled_partner_0160,Transparency and Auditability Signal Source 160,tiktok,133357,0.0369,93.68,Transparency and Auditability,Lakewood,Colorado,US,0,2026-03-28T12:00:00Z
+161,@sled_partner_0161,Constituent Services Signal Source 161,threads,134180,0.0396,57,Constituent Services,Thornton,Colorado,US,1,2026-03-29T12:00:00Z
+162,@sled_partner_0162,Permits and Licensing Signal Source 162,twitter,135003,0.0423,64.17,Permits and Licensing,Pueblo,Colorado,US,0,2026-03-30T12:00:00Z
+163,@sled_partner_0163,Benefits Eligibility Signal Source 163,youtube,135826,0.045,71.34,Benefits Eligibility,Boulder,Colorado,US,0,2026-03-31T12:00:00Z
+164,@sled_partner_0164,Case Management Signal Source 164,instagram,136649,0.0477,78.51,Case Management,Greeley,Colorado,US,0,2026-04-01T12:00:00Z
+165,@sled_partner_0165,Emergency Response Signal Source 165,tiktok,137472,0.0504,85.68,Emergency Response,Castle Rock,Colorado,US,1,2026-04-02T12:00:00Z
+166,@sled_partner_0166,Public Works Signal Source 166,threads,138295,0.0531,92,Public Works,Grand Junction,Colorado,US,0,2026-04-03T12:00:00Z
+167,@sled_partner_0167,Transportation Services Signal Source 167,twitter,139118,0.0558,56.17,Transportation Services,Broomfield,Colorado,US,0,2026-04-04T12:00:00Z
+168,@sled_partner_0168,Tax and Revenue Operations Signal Source 168,youtube,139941,0.0585,63.34,Tax and Revenue Operations,Durango,Colorado,US,0,2026-04-05T12:00:00Z
+169,@sled_partner_0169,Citizen-Facing Digital Services Signal Source 169,instagram,140764,0.0612,70.51,Citizen-Facing Digital Services,Montrose,Colorado,US,1,2026-04-06T12:00:00Z
+170,@sled_partner_0170,Inspections and Code Enforcement Signal Source 170,tiktok,141587,0.0639,77.68,Inspections and Code Enforcement,Steamboat Springs,Colorado,US,0,2026-04-07T12:00:00Z
+171,@sled_partner_0171,Grants Management Signal Source 171,threads,142410,0.0666,84,Grants Management,Alamosa,Colorado,US,0,2026-04-08T12:00:00Z
+172,@sled_partner_0172,Health and Human Services Signal Source 172,twitter,143233,0.018,91.17,Health and Human Services,Glenwood Springs,Colorado,US,0,2026-04-09T12:00:00Z
+173,@sled_partner_0173,Fraud Waste and Abuse Detection Signal Source 173,youtube,144056,0.0207,55.34,Fraud Waste and Abuse Detection,Idaho Springs,Colorado,US,1,2026-04-10T12:00:00Z
+174,@sled_partner_0174,Policy Compliance Signal Source 174,instagram,144879,0.0234,62.51,Policy Compliance,Cañon City,Colorado,US,0,2026-04-11T12:00:00Z
+175,@sled_partner_0175,Records Management Signal Source 175,tiktok,145702,0.0261,69.68,Records Management,Salida,Colorado,US,0,2026-04-12T12:00:00Z
+176,@sled_partner_0176,Interagency Workflows Signal Source 176,threads,146525,0.0288,76,Interagency Workflows,Gunnison,Colorado,US,0,2026-04-13T12:00:00Z
+177,@sled_partner_0177,Business Licensing Signal Source 177,twitter,147348,0.0315,83.17,Business Licensing,Leadville,Colorado,US,1,2026-04-14T12:00:00Z
+178,@sled_partner_0178,Public Assistance Programs Signal Source 178,youtube,148171,0.0342,90.34,Public Assistance Programs,Walsenburg,Colorado,US,0,2026-04-15T12:00:00Z
+179,@sled_partner_0179,Accessibility Services Signal Source 179,instagram,148994,0.0369,97.51,Accessibility Services,Trinidad,Colorado,US,0,2026-04-16T12:00:00Z
+180,@sled_partner_0180,Transparency and Auditability Signal Source 180,tiktok,149817,0.0396,61.68,Transparency and Auditability,Sterling,Colorado,US,0,2026-04-17T12:00:00Z
+181,@sled_partner_0181,Constituent Services Signal Source 181,threads,150640,0.0423,68,Constituent Services,Fort Morgan,Colorado,US,1,2026-04-18T12:00:00Z
+182,@sled_partner_0182,Permits and Licensing Signal Source 182,twitter,151463,0.045,75.17,Permits and Licensing,Yuma,Colorado,US,0,2026-04-19T12:00:00Z
+183,@sled_partner_0183,Benefits Eligibility Signal Source 183,youtube,152286,0.0477,82.34,Benefits Eligibility,Burlington,Colorado,US,0,2026-04-20T12:00:00Z
+184,@sled_partner_0184,Case Management Signal Source 184,instagram,153109,0.0504,89.51,Case Management,Craig,Colorado,US,0,2026-04-21T12:00:00Z
+185,@sled_partner_0185,Emergency Response Signal Source 185,tiktok,153932,0.0531,96.68,Emergency Response,Telluride,Colorado,US,1,2026-04-22T12:00:00Z
+186,@sled_partner_0186,Public Works Signal Source 186,threads,154755,0.0558,60,Public Works,Cortez,Colorado,US,0,2026-04-23T12:00:00Z
+187,@sled_partner_0187,Transportation Services Signal Source 187,twitter,155578,0.0585,67.17,Transportation Services,Denver,Colorado,US,0,2026-04-24T12:00:00Z
+188,@sled_partner_0188,Tax and Revenue Operations Signal Source 188,youtube,156401,0.0612,74.34,Tax and Revenue Operations,Colorado Springs,Colorado,US,0,2026-04-25T12:00:00Z
+189,@sled_partner_0189,Citizen-Facing Digital Services Signal Source 189,instagram,157224,0.0639,81.51,Citizen-Facing Digital Services,Aurora,Colorado,US,1,2026-04-26T12:00:00Z
+190,@sled_partner_0190,Inspections and Code Enforcement Signal Source 190,tiktok,158047,0.0666,88.68,Inspections and Code Enforcement,Fort Collins,Colorado,US,0,2026-04-27T12:00:00Z
+191,@sled_partner_0191,Grants Management Signal Source 191,threads,158870,0.018,95,Grants Management,Lakewood,Colorado,US,0,2026-04-28T12:00:00Z
+192,@sled_partner_0192,Health and Human Services Signal Source 192,twitter,159693,0.0207,59.17,Health and Human Services,Thornton,Colorado,US,0,2026-04-29T12:00:00Z
+193,@sled_partner_0193,Fraud Waste and Abuse Detection Signal Source 193,youtube,160516,0.0234,66.34,Fraud Waste and Abuse Detection,Pueblo,Colorado,US,1,2026-04-30T12:00:00Z
+194,@sled_partner_0194,Policy Compliance Signal Source 194,instagram,161339,0.0261,73.51,Policy Compliance,Boulder,Colorado,US,0,2026-05-01T12:00:00Z
+195,@sled_partner_0195,Records Management Signal Source 195,tiktok,162162,0.0288,80.68,Records Management,Greeley,Colorado,US,0,2026-05-02T12:00:00Z
+196,@sled_partner_0196,Interagency Workflows Signal Source 196,threads,162985,0.0315,87,Interagency Workflows,Castle Rock,Colorado,US,0,2026-05-03T12:00:00Z
+197,@sled_partner_0197,Business Licensing Signal Source 197,twitter,163808,0.0342,94.17,Business Licensing,Grand Junction,Colorado,US,1,2026-05-04T12:00:00Z
+198,@sled_partner_0198,Public Assistance Programs Signal Source 198,youtube,164631,0.0369,58.34,Public Assistance Programs,Broomfield,Colorado,US,0,2026-05-05T12:00:00Z
+199,@sled_partner_0199,Accessibility Services Signal Source 199,instagram,165454,0.0396,65.51,Accessibility Services,Durango,Colorado,US,0,2026-05-06T12:00:00Z
+200,@sled_partner_0200,Transparency and Auditability Signal Source 200,tiktok,166277,0.0423,72.68,Transparency and Auditability,Montrose,Colorado,US,0,2026-05-07T12:00:00Z
+201,@sled_partner_0201,Constituent Services Signal Source 201,threads,167100,0.045,79,Constituent Services,Steamboat Springs,Colorado,US,1,2026-05-08T12:00:00Z
+202,@sled_partner_0202,Permits and Licensing Signal Source 202,twitter,167923,0.0477,86.17,Permits and Licensing,Alamosa,Colorado,US,0,2026-05-09T12:00:00Z
+203,@sled_partner_0203,Benefits Eligibility Signal Source 203,youtube,168746,0.0504,93.34,Benefits Eligibility,Glenwood Springs,Colorado,US,0,2026-05-10T12:00:00Z
+204,@sled_partner_0204,Case Management Signal Source 204,instagram,169569,0.0531,57.51,Case Management,Idaho Springs,Colorado,US,0,2026-05-11T12:00:00Z
+205,@sled_partner_0205,Emergency Response Signal Source 205,tiktok,170392,0.0558,64.68,Emergency Response,Cañon City,Colorado,US,1,2026-05-12T12:00:00Z
+206,@sled_partner_0206,Public Works Signal Source 206,threads,171215,0.0585,71,Public Works,Salida,Colorado,US,0,2026-05-13T12:00:00Z
+207,@sled_partner_0207,Transportation Services Signal Source 207,twitter,172038,0.0612,78.17,Transportation Services,Gunnison,Colorado,US,0,2026-05-14T12:00:00Z
+208,@sled_partner_0208,Tax and Revenue Operations Signal Source 208,youtube,172861,0.0639,85.34,Tax and Revenue Operations,Leadville,Colorado,US,0,2026-05-15T12:00:00Z
+209,@sled_partner_0209,Citizen-Facing Digital Services Signal Source 209,instagram,173684,0.0666,92.51,Citizen-Facing Digital Services,Walsenburg,Colorado,US,1,2026-05-16T12:00:00Z
+210,@sled_partner_0210,Inspections and Code Enforcement Signal Source 210,tiktok,174507,0.018,56.68,Inspections and Code Enforcement,Trinidad,Colorado,US,0,2026-05-17T12:00:00Z
+211,@sled_partner_0211,Grants Management Signal Source 211,threads,175330,0.0207,63,Grants Management,Sterling,Colorado,US,0,2026-03-09T12:00:00Z
+212,@sled_partner_0212,Health and Human Services Signal Source 212,twitter,176153,0.0234,70.17,Health and Human Services,Fort Morgan,Colorado,US,0,2026-03-10T12:00:00Z
+213,@sled_partner_0213,Fraud Waste and Abuse Detection Signal Source 213,youtube,176976,0.0261,77.34,Fraud Waste and Abuse Detection,Yuma,Colorado,US,1,2026-03-11T12:00:00Z
+214,@sled_partner_0214,Policy Compliance Signal Source 214,instagram,177799,0.0288,84.51,Policy Compliance,Burlington,Colorado,US,0,2026-03-12T12:00:00Z
+215,@sled_partner_0215,Records Management Signal Source 215,tiktok,178622,0.0315,91.68,Records Management,Craig,Colorado,US,0,2026-03-13T12:00:00Z
+216,@sled_partner_0216,Interagency Workflows Signal Source 216,threads,179445,0.0342,55,Interagency Workflows,Telluride,Colorado,US,0,2026-03-14T12:00:00Z
+217,@sled_partner_0217,Business Licensing Signal Source 217,twitter,180268,0.0369,62.17,Business Licensing,Cortez,Colorado,US,1,2026-03-15T12:00:00Z
+218,@sled_partner_0218,Public Assistance Programs Signal Source 218,youtube,181091,0.0396,69.34,Public Assistance Programs,Denver,Colorado,US,0,2026-03-16T12:00:00Z
+219,@sled_partner_0219,Accessibility Services Signal Source 219,instagram,181914,0.0423,76.51,Accessibility Services,Colorado Springs,Colorado,US,0,2026-03-17T12:00:00Z
+220,@sled_partner_0220,Transparency and Auditability Signal Source 220,tiktok,182737,0.045,83.68,Transparency and Auditability,Aurora,Colorado,US,0,2026-03-18T12:00:00Z
+221,@sled_partner_0221,Constituent Services Signal Source 221,threads,183560,0.0477,90,Constituent Services,Fort Collins,Colorado,US,1,2026-03-19T12:00:00Z
+222,@sled_partner_0222,Permits and Licensing Signal Source 222,twitter,184383,0.0504,97.17,Permits and Licensing,Lakewood,Colorado,US,0,2026-03-20T12:00:00Z
+223,@sled_partner_0223,Benefits Eligibility Signal Source 223,youtube,185206,0.0531,61.34,Benefits Eligibility,Thornton,Colorado,US,0,2026-03-21T12:00:00Z
+224,@sled_partner_0224,Case Management Signal Source 224,instagram,186029,0.0558,68.51,Case Management,Pueblo,Colorado,US,0,2026-03-22T12:00:00Z
+225,@sled_partner_0225,Emergency Response Signal Source 225,tiktok,186852,0.0585,75.68,Emergency Response,Boulder,Colorado,US,1,2026-03-23T12:00:00Z
+226,@sled_partner_0226,Public Works Signal Source 226,threads,187675,0.0612,82,Public Works,Greeley,Colorado,US,0,2026-03-24T12:00:00Z
+227,@sled_partner_0227,Transportation Services Signal Source 227,twitter,188498,0.0639,89.17,Transportation Services,Castle Rock,Colorado,US,0,2026-03-25T12:00:00Z
+228,@sled_partner_0228,Tax and Revenue Operations Signal Source 228,youtube,189321,0.0666,96.34,Tax and Revenue Operations,Grand Junction,Colorado,US,0,2026-03-26T12:00:00Z
+229,@sled_partner_0229,Citizen-Facing Digital Services Signal Source 229,instagram,190144,0.018,60.51,Citizen-Facing Digital Services,Broomfield,Colorado,US,1,2026-03-27T12:00:00Z
+230,@sled_partner_0230,Inspections and Code Enforcement Signal Source 230,tiktok,190967,0.0207,67.68,Inspections and Code Enforcement,Durango,Colorado,US,0,2026-03-28T12:00:00Z
+231,@sled_partner_0231,Grants Management Signal Source 231,threads,191790,0.0234,74,Grants Management,Montrose,Colorado,US,0,2026-03-29T12:00:00Z
+232,@sled_partner_0232,Health and Human Services Signal Source 232,twitter,192613,0.0261,81.17,Health and Human Services,Steamboat Springs,Colorado,US,0,2026-03-30T12:00:00Z
+233,@sled_partner_0233,Fraud Waste and Abuse Detection Signal Source 233,youtube,193436,0.0288,88.34,Fraud Waste and Abuse Detection,Alamosa,Colorado,US,1,2026-03-31T12:00:00Z
+234,@sled_partner_0234,Policy Compliance Signal Source 234,instagram,194259,0.0315,95.51,Policy Compliance,Glenwood Springs,Colorado,US,0,2026-04-01T12:00:00Z
+235,@sled_partner_0235,Records Management Signal Source 235,tiktok,195082,0.0342,59.68,Records Management,Idaho Springs,Colorado,US,0,2026-04-02T12:00:00Z
+236,@sled_partner_0236,Interagency Workflows Signal Source 236,threads,195905,0.0369,66,Interagency Workflows,Cañon City,Colorado,US,0,2026-04-03T12:00:00Z
+237,@sled_partner_0237,Business Licensing Signal Source 237,twitter,196728,0.0396,73.17,Business Licensing,Salida,Colorado,US,1,2026-04-04T12:00:00Z
+238,@sled_partner_0238,Public Assistance Programs Signal Source 238,youtube,197551,0.0423,80.34,Public Assistance Programs,Gunnison,Colorado,US,0,2026-04-05T12:00:00Z
+239,@sled_partner_0239,Accessibility Services Signal Source 239,instagram,198374,0.045,87.51,Accessibility Services,Leadville,Colorado,US,0,2026-04-06T12:00:00Z
+240,@sled_partner_0240,Transparency and Auditability Signal Source 240,tiktok,199197,0.0477,94.68,Transparency and Auditability,Walsenburg,Colorado,US,0,2026-04-07T12:00:00Z
+241,@sled_partner_0241,Constituent Services Signal Source 241,threads,200020,0.0504,58,Constituent Services,Trinidad,Colorado,US,1,2026-04-08T12:00:00Z
+242,@sled_partner_0242,Permits and Licensing Signal Source 242,twitter,200843,0.0531,65.17,Permits and Licensing,Sterling,Colorado,US,0,2026-04-09T12:00:00Z
+243,@sled_partner_0243,Benefits Eligibility Signal Source 243,youtube,201666,0.0558,72.34,Benefits Eligibility,Fort Morgan,Colorado,US,0,2026-04-10T12:00:00Z
+244,@sled_partner_0244,Case Management Signal Source 244,instagram,202489,0.0585,79.51,Case Management,Yuma,Colorado,US,0,2026-04-11T12:00:00Z
+245,@sled_partner_0245,Emergency Response Signal Source 245,tiktok,203312,0.0612,86.68,Emergency Response,Burlington,Colorado,US,1,2026-04-12T12:00:00Z
+246,@sled_partner_0246,Public Works Signal Source 246,threads,204135,0.0639,93,Public Works,Craig,Colorado,US,0,2026-04-13T12:00:00Z
+247,@sled_partner_0247,Transportation Services Signal Source 247,twitter,204958,0.0666,57.17,Transportation Services,Telluride,Colorado,US,0,2026-04-14T12:00:00Z
+248,@sled_partner_0248,Tax and Revenue Operations Signal Source 248,youtube,205781,0.018,64.34,Tax and Revenue Operations,Cortez,Colorado,US,0,2026-04-15T12:00:00Z
+249,@sled_partner_0249,Citizen-Facing Digital Services Signal Source 249,instagram,206604,0.0207,71.51,Citizen-Facing Digital Services,Denver,Colorado,US,1,2026-04-16T12:00:00Z
+250,@sled_partner_0250,Inspections and Code Enforcement Signal Source 250,tiktok,207427,0.0234,78.68,Inspections and Code Enforcement,Colorado Springs,Colorado,US,0,2026-04-17T12:00:00Z
+251,@sled_partner_0251,Grants Management Signal Source 251,threads,208250,0.0261,85,Grants Management,Aurora,Colorado,US,0,2026-04-18T12:00:00Z
+252,@sled_partner_0252,Health and Human Services Signal Source 252,twitter,209073,0.0288,92.17,Health and Human Services,Fort Collins,Colorado,US,0,2026-04-19T12:00:00Z
+253,@sled_partner_0253,Fraud Waste and Abuse Detection Signal Source 253,youtube,209896,0.0315,56.34,Fraud Waste and Abuse Detection,Lakewood,Colorado,US,1,2026-04-20T12:00:00Z
+254,@sled_partner_0254,Policy Compliance Signal Source 254,instagram,210719,0.0342,63.51,Policy Compliance,Thornton,Colorado,US,0,2026-04-21T12:00:00Z
+255,@sled_partner_0255,Records Management Signal Source 255,tiktok,211542,0.0369,70.68,Records Management,Pueblo,Colorado,US,0,2026-04-22T12:00:00Z
+256,@sled_partner_0256,Interagency Workflows Signal Source 256,threads,212365,0.0396,77,Interagency Workflows,Boulder,Colorado,US,0,2026-04-23T12:00:00Z
+257,@sled_partner_0257,Business Licensing Signal Source 257,twitter,213188,0.0423,84.17,Business Licensing,Greeley,Colorado,US,1,2026-04-24T12:00:00Z
+258,@sled_partner_0258,Public Assistance Programs Signal Source 258,youtube,214011,0.045,91.34,Public Assistance Programs,Castle Rock,Colorado,US,0,2026-04-25T12:00:00Z
+259,@sled_partner_0259,Accessibility Services Signal Source 259,instagram,214834,0.0477,55.51,Accessibility Services,Grand Junction,Colorado,US,0,2026-04-26T12:00:00Z
+260,@sled_partner_0260,Transparency and Auditability Signal Source 260,tiktok,215657,0.0504,62.68,Transparency and Auditability,Broomfield,Colorado,US,0,2026-04-27T12:00:00Z
+261,@sled_partner_0261,Constituent Services Signal Source 261,threads,216480,0.0531,69,Constituent Services,Durango,Colorado,US,1,2026-04-28T12:00:00Z
+262,@sled_partner_0262,Permits and Licensing Signal Source 262,twitter,217303,0.0558,76.17,Permits and Licensing,Montrose,Colorado,US,0,2026-04-29T12:00:00Z
+263,@sled_partner_0263,Benefits Eligibility Signal Source 263,youtube,218126,0.0585,83.34,Benefits Eligibility,Steamboat Springs,Colorado,US,0,2026-04-30T12:00:00Z
+264,@sled_partner_0264,Case Management Signal Source 264,instagram,218949,0.0612,90.51,Case Management,Alamosa,Colorado,US,0,2026-05-01T12:00:00Z
+265,@sled_partner_0265,Emergency Response Signal Source 265,tiktok,219772,0.0639,97.68,Emergency Response,Glenwood Springs,Colorado,US,1,2026-05-02T12:00:00Z
+266,@sled_partner_0266,Public Works Signal Source 266,threads,220595,0.0666,61,Public Works,Idaho Springs,Colorado,US,0,2026-05-03T12:00:00Z
+267,@sled_partner_0267,Transportation Services Signal Source 267,twitter,221418,0.018,68.17,Transportation Services,Cañon City,Colorado,US,0,2026-05-04T12:00:00Z
+268,@sled_partner_0268,Tax and Revenue Operations Signal Source 268,youtube,222241,0.0207,75.34,Tax and Revenue Operations,Salida,Colorado,US,0,2026-05-05T12:00:00Z
+269,@sled_partner_0269,Citizen-Facing Digital Services Signal Source 269,instagram,223064,0.0234,82.51,Citizen-Facing Digital Services,Gunnison,Colorado,US,1,2026-05-06T12:00:00Z
+270,@sled_partner_0270,Inspections and Code Enforcement Signal Source 270,tiktok,223887,0.0261,89.68,Inspections and Code Enforcement,Leadville,Colorado,US,0,2026-05-07T12:00:00Z
+271,@sled_partner_0271,Grants Management Signal Source 271,threads,224710,0.0288,96,Grants Management,Walsenburg,Colorado,US,0,2026-05-08T12:00:00Z
+272,@sled_partner_0272,Health and Human Services Signal Source 272,twitter,225533,0.0315,60.17,Health and Human Services,Trinidad,Colorado,US,0,2026-05-09T12:00:00Z
+273,@sled_partner_0273,Fraud Waste and Abuse Detection Signal Source 273,youtube,226356,0.0342,67.34,Fraud Waste and Abuse Detection,Sterling,Colorado,US,1,2026-05-10T12:00:00Z
+274,@sled_partner_0274,Policy Compliance Signal Source 274,instagram,227179,0.0369,74.51,Policy Compliance,Fort Morgan,Colorado,US,0,2026-05-11T12:00:00Z
+275,@sled_partner_0275,Records Management Signal Source 275,tiktok,228002,0.0396,81.68,Records Management,Yuma,Colorado,US,0,2026-05-12T12:00:00Z
+276,@sled_partner_0276,Interagency Workflows Signal Source 276,threads,228825,0.0423,88,Interagency Workflows,Burlington,Colorado,US,0,2026-05-13T12:00:00Z
+277,@sled_partner_0277,Business Licensing Signal Source 277,twitter,229648,0.045,95.17,Business Licensing,Craig,Colorado,US,1,2026-05-14T12:00:00Z
+278,@sled_partner_0278,Public Assistance Programs Signal Source 278,youtube,230471,0.0477,59.34,Public Assistance Programs,Telluride,Colorado,US,0,2026-05-15T12:00:00Z
+279,@sled_partner_0279,Accessibility Services Signal Source 279,instagram,231294,0.0504,66.51,Accessibility Services,Cortez,Colorado,US,0,2026-05-16T12:00:00Z
+280,@sled_partner_0280,Transparency and Auditability Signal Source 280,tiktok,232117,0.0531,73.68,Transparency and Auditability,Denver,Colorado,US,0,2026-05-17T12:00:00Z
+281,@sled_partner_0281,Constituent Services Signal Source 281,threads,232940,0.0558,80,Constituent Services,Colorado Springs,Colorado,US,1,2026-03-09T12:00:00Z
+282,@sled_partner_0282,Permits and Licensing Signal Source 282,twitter,233763,0.0585,87.17,Permits and Licensing,Aurora,Colorado,US,0,2026-03-10T12:00:00Z
+283,@sled_partner_0283,Benefits Eligibility Signal Source 283,youtube,234586,0.0612,94.34,Benefits Eligibility,Fort Collins,Colorado,US,0,2026-03-11T12:00:00Z
+284,@sled_partner_0284,Case Management Signal Source 284,instagram,235409,0.0639,58.51,Case Management,Lakewood,Colorado,US,0,2026-03-12T12:00:00Z
+285,@sled_partner_0285,Emergency Response Signal Source 285,tiktok,236232,0.0666,65.68,Emergency Response,Thornton,Colorado,US,1,2026-03-13T12:00:00Z
+286,@sled_partner_0286,Public Works Signal Source 286,threads,237055,0.018,72,Public Works,Pueblo,Colorado,US,0,2026-03-14T12:00:00Z
+287,@sled_partner_0287,Transportation Services Signal Source 287,twitter,237878,0.0207,79.17,Transportation Services,Boulder,Colorado,US,0,2026-03-15T12:00:00Z
+288,@sled_partner_0288,Tax and Revenue Operations Signal Source 288,youtube,238701,0.0234,86.34,Tax and Revenue Operations,Greeley,Colorado,US,0,2026-03-16T12:00:00Z
+289,@sled_partner_0289,Citizen-Facing Digital Services Signal Source 289,instagram,239524,0.0261,93.51,Citizen-Facing Digital Services,Castle Rock,Colorado,US,1,2026-03-17T12:00:00Z
+290,@sled_partner_0290,Inspections and Code Enforcement Signal Source 290,tiktok,240347,0.0288,57.68,Inspections and Code Enforcement,Grand Junction,Colorado,US,0,2026-03-18T12:00:00Z
+291,@sled_partner_0291,Grants Management Signal Source 291,threads,241170,0.0315,64,Grants Management,Broomfield,Colorado,US,0,2026-03-19T12:00:00Z
+292,@sled_partner_0292,Health and Human Services Signal Source 292,twitter,241993,0.0342,71.17,Health and Human Services,Durango,Colorado,US,0,2026-03-20T12:00:00Z
+293,@sled_partner_0293,Fraud Waste and Abuse Detection Signal Source 293,youtube,242816,0.0369,78.34,Fraud Waste and Abuse Detection,Montrose,Colorado,US,1,2026-03-21T12:00:00Z
+294,@sled_partner_0294,Policy Compliance Signal Source 294,instagram,243639,0.0396,85.51,Policy Compliance,Steamboat Springs,Colorado,US,0,2026-03-22T12:00:00Z
+295,@sled_partner_0295,Records Management Signal Source 295,tiktok,244462,0.0423,92.68,Records Management,Alamosa,Colorado,US,0,2026-03-23T12:00:00Z
+296,@sled_partner_0296,Interagency Workflows Signal Source 296,threads,245285,0.045,56,Interagency Workflows,Glenwood Springs,Colorado,US,0,2026-03-24T12:00:00Z
+297,@sled_partner_0297,Business Licensing Signal Source 297,twitter,246108,0.0477,63.17,Business Licensing,Idaho Springs,Colorado,US,1,2026-03-25T12:00:00Z
+298,@sled_partner_0298,Public Assistance Programs Signal Source 298,youtube,246931,0.0504,70.34,Public Assistance Programs,Cañon City,Colorado,US,0,2026-03-26T12:00:00Z
+299,@sled_partner_0299,Accessibility Services Signal Source 299,instagram,247754,0.0531,77.51,Accessibility Services,Salida,Colorado,US,0,2026-03-27T12:00:00Z
+300,@sled_partner_0300,Transparency and Auditability Signal Source 300,tiktok,248577,0.0558,84.68,Transparency and Auditability,Gunnison,Colorado,US,0,2026-03-28T12:00:00Z
+301,@sled_partner_0301,Constituent Services Signal Source 301,threads,249400,0.0585,91,Constituent Services,Leadville,Colorado,US,1,2026-03-29T12:00:00Z
+302,@sled_partner_0302,Permits and Licensing Signal Source 302,twitter,250223,0.0612,55.17,Permits and Licensing,Walsenburg,Colorado,US,0,2026-03-30T12:00:00Z
+303,@sled_partner_0303,Benefits Eligibility Signal Source 303,youtube,251046,0.0639,62.34,Benefits Eligibility,Trinidad,Colorado,US,0,2026-03-31T12:00:00Z
+304,@sled_partner_0304,Case Management Signal Source 304,instagram,251869,0.0666,69.51,Case Management,Sterling,Colorado,US,0,2026-04-01T12:00:00Z
+305,@sled_partner_0305,Emergency Response Signal Source 305,tiktok,2692,0.018,76.68,Emergency Response,Fort Morgan,Colorado,US,1,2026-04-02T12:00:00Z
+306,@sled_partner_0306,Public Works Signal Source 306,threads,3515,0.0207,83,Public Works,Yuma,Colorado,US,0,2026-04-03T12:00:00Z
+307,@sled_partner_0307,Transportation Services Signal Source 307,twitter,4338,0.0234,90.17,Transportation Services,Burlington,Colorado,US,0,2026-04-04T12:00:00Z
+308,@sled_partner_0308,Tax and Revenue Operations Signal Source 308,youtube,5161,0.0261,97.34,Tax and Revenue Operations,Craig,Colorado,US,0,2026-04-05T12:00:00Z
+309,@sled_partner_0309,Citizen-Facing Digital Services Signal Source 309,instagram,5984,0.0288,61.51,Citizen-Facing Digital Services,Telluride,Colorado,US,1,2026-04-06T12:00:00Z
+310,@sled_partner_0310,Inspections and Code Enforcement Signal Source 310,tiktok,6807,0.0315,68.68,Inspections and Code Enforcement,Cortez,Colorado,US,0,2026-04-07T12:00:00Z
+311,@sled_partner_0311,Grants Management Signal Source 311,threads,7630,0.0342,75,Grants Management,Denver,Colorado,US,0,2026-04-08T12:00:00Z
+312,@sled_partner_0312,Health and Human Services Signal Source 312,twitter,8453,0.0369,82.17,Health and Human Services,Colorado Springs,Colorado,US,0,2026-04-09T12:00:00Z
+313,@sled_partner_0313,Fraud Waste and Abuse Detection Signal Source 313,youtube,9276,0.0396,89.34,Fraud Waste and Abuse Detection,Aurora,Colorado,US,1,2026-04-10T12:00:00Z
+314,@sled_partner_0314,Policy Compliance Signal Source 314,instagram,10099,0.0423,96.51,Policy Compliance,Fort Collins,Colorado,US,0,2026-04-11T12:00:00Z
+315,@sled_partner_0315,Records Management Signal Source 315,tiktok,10922,0.045,60.68,Records Management,Lakewood,Colorado,US,0,2026-04-12T12:00:00Z
+316,@sled_partner_0316,Interagency Workflows Signal Source 316,threads,11745,0.0477,67,Interagency Workflows,Thornton,Colorado,US,0,2026-04-13T12:00:00Z
+317,@sled_partner_0317,Business Licensing Signal Source 317,twitter,12568,0.0504,74.17,Business Licensing,Pueblo,Colorado,US,1,2026-04-14T12:00:00Z
+318,@sled_partner_0318,Public Assistance Programs Signal Source 318,youtube,13391,0.0531,81.34,Public Assistance Programs,Boulder,Colorado,US,0,2026-04-15T12:00:00Z
+319,@sled_partner_0319,Accessibility Services Signal Source 319,instagram,14214,0.0558,88.51,Accessibility Services,Greeley,Colorado,US,0,2026-04-16T12:00:00Z
+320,@sled_partner_0320,Transparency and Auditability Signal Source 320,tiktok,15037,0.0585,95.68,Transparency and Auditability,Castle Rock,Colorado,US,0,2026-04-17T12:00:00Z
+321,@sled_partner_0321,Constituent Services Signal Source 321,threads,15860,0.0612,59,Constituent Services,Grand Junction,Colorado,US,1,2026-04-18T12:00:00Z
+322,@sled_partner_0322,Permits and Licensing Signal Source 322,twitter,16683,0.0639,66.17,Permits and Licensing,Broomfield,Colorado,US,0,2026-04-19T12:00:00Z
+323,@sled_partner_0323,Benefits Eligibility Signal Source 323,youtube,17506,0.0666,73.34,Benefits Eligibility,Durango,Colorado,US,0,2026-04-20T12:00:00Z
+324,@sled_partner_0324,Case Management Signal Source 324,instagram,18329,0.018,80.51,Case Management,Montrose,Colorado,US,0,2026-04-21T12:00:00Z
+325,@sled_partner_0325,Emergency Response Signal Source 325,tiktok,19152,0.0207,87.68,Emergency Response,Steamboat Springs,Colorado,US,1,2026-04-22T12:00:00Z
+326,@sled_partner_0326,Public Works Signal Source 326,threads,19975,0.0234,94,Public Works,Alamosa,Colorado,US,0,2026-04-23T12:00:00Z
+327,@sled_partner_0327,Transportation Services Signal Source 327,twitter,20798,0.0261,58.17,Transportation Services,Glenwood Springs,Colorado,US,0,2026-04-24T12:00:00Z
+328,@sled_partner_0328,Tax and Revenue Operations Signal Source 328,youtube,21621,0.0288,65.34,Tax and Revenue Operations,Idaho Springs,Colorado,US,0,2026-04-25T12:00:00Z
+329,@sled_partner_0329,Citizen-Facing Digital Services Signal Source 329,instagram,22444,0.0315,72.51,Citizen-Facing Digital Services,Cañon City,Colorado,US,1,2026-04-26T12:00:00Z
+330,@sled_partner_0330,Inspections and Code Enforcement Signal Source 330,tiktok,23267,0.0342,79.68,Inspections and Code Enforcement,Salida,Colorado,US,0,2026-04-27T12:00:00Z
+331,@sled_partner_0331,Grants Management Signal Source 331,threads,24090,0.0369,86,Grants Management,Gunnison,Colorado,US,0,2026-04-28T12:00:00Z
+332,@sled_partner_0332,Health and Human Services Signal Source 332,twitter,24913,0.0396,93.17,Health and Human Services,Leadville,Colorado,US,0,2026-04-29T12:00:00Z
+333,@sled_partner_0333,Fraud Waste and Abuse Detection Signal Source 333,youtube,25736,0.0423,57.34,Fraud Waste and Abuse Detection,Walsenburg,Colorado,US,1,2026-04-30T12:00:00Z
+334,@sled_partner_0334,Policy Compliance Signal Source 334,instagram,26559,0.045,64.51,Policy Compliance,Trinidad,Colorado,US,0,2026-05-01T12:00:00Z
+335,@sled_partner_0335,Records Management Signal Source 335,tiktok,27382,0.0477,71.68,Records Management,Sterling,Colorado,US,0,2026-05-02T12:00:00Z
+336,@sled_partner_0336,Interagency Workflows Signal Source 336,threads,28205,0.0504,78,Interagency Workflows,Fort Morgan,Colorado,US,0,2026-05-03T12:00:00Z
+337,@sled_partner_0337,Business Licensing Signal Source 337,twitter,29028,0.0531,85.17,Business Licensing,Yuma,Colorado,US,1,2026-05-04T12:00:00Z
+338,@sled_partner_0338,Public Assistance Programs Signal Source 338,youtube,29851,0.0558,92.34,Public Assistance Programs,Burlington,Colorado,US,0,2026-05-05T12:00:00Z
+339,@sled_partner_0339,Accessibility Services Signal Source 339,instagram,30674,0.0585,56.51,Accessibility Services,Craig,Colorado,US,0,2026-05-06T12:00:00Z
+340,@sled_partner_0340,Transparency and Auditability Signal Source 340,tiktok,31497,0.0612,63.68,Transparency and Auditability,Telluride,Colorado,US,0,2026-05-07T12:00:00Z
+341,@sled_partner_0341,Constituent Services Signal Source 341,threads,32320,0.0639,70,Constituent Services,Cortez,Colorado,US,1,2026-05-08T12:00:00Z
+342,@sled_partner_0342,Permits and Licensing Signal Source 342,twitter,33143,0.0666,77.17,Permits and Licensing,Denver,Colorado,US,0,2026-05-09T12:00:00Z
+343,@sled_partner_0343,Benefits Eligibility Signal Source 343,youtube,33966,0.018,84.34,Benefits Eligibility,Colorado Springs,Colorado,US,0,2026-05-10T12:00:00Z
+344,@sled_partner_0344,Case Management Signal Source 344,instagram,34789,0.0207,91.51,Case Management,Aurora,Colorado,US,0,2026-05-11T12:00:00Z
+345,@sled_partner_0345,Emergency Response Signal Source 345,tiktok,35612,0.0234,55.68,Emergency Response,Fort Collins,Colorado,US,1,2026-05-12T12:00:00Z
+346,@sled_partner_0346,Public Works Signal Source 346,threads,36435,0.0261,62,Public Works,Lakewood,Colorado,US,0,2026-05-13T12:00:00Z
+347,@sled_partner_0347,Transportation Services Signal Source 347,twitter,37258,0.0288,69.17,Transportation Services,Thornton,Colorado,US,0,2026-05-14T12:00:00Z
+348,@sled_partner_0348,Tax and Revenue Operations Signal Source 348,youtube,38081,0.0315,76.34,Tax and Revenue Operations,Pueblo,Colorado,US,0,2026-05-15T12:00:00Z
+349,@sled_partner_0349,Citizen-Facing Digital Services Signal Source 349,instagram,38904,0.0342,83.51,Citizen-Facing Digital Services,Boulder,Colorado,US,1,2026-05-16T12:00:00Z
+350,@sled_partner_0350,Inspections and Code Enforcement Signal Source 350,tiktok,39727,0.0369,90.68,Inspections and Code Enforcement,Greeley,Colorado,US,0,2026-05-17T12:00:00Z
+351,@sled_partner_0351,Grants Management Signal Source 351,threads,40550,0.0396,97,Grants Management,Castle Rock,Colorado,US,0,2026-03-09T12:00:00Z
+352,@sled_partner_0352,Health and Human Services Signal Source 352,twitter,41373,0.0423,61.17,Health and Human Services,Grand Junction,Colorado,US,0,2026-03-10T12:00:00Z
+353,@sled_partner_0353,Fraud Waste and Abuse Detection Signal Source 353,youtube,42196,0.045,68.34,Fraud Waste and Abuse Detection,Broomfield,Colorado,US,1,2026-03-11T12:00:00Z
+354,@sled_partner_0354,Policy Compliance Signal Source 354,instagram,43019,0.0477,75.51,Policy Compliance,Durango,Colorado,US,0,2026-03-12T12:00:00Z
+355,@sled_partner_0355,Records Management Signal Source 355,tiktok,43842,0.0504,82.68,Records Management,Montrose,Colorado,US,0,2026-03-13T12:00:00Z
+356,@sled_partner_0356,Interagency Workflows Signal Source 356,threads,44665,0.0531,89,Interagency Workflows,Steamboat Springs,Colorado,US,0,2026-03-14T12:00:00Z
+357,@sled_partner_0357,Business Licensing Signal Source 357,twitter,45488,0.0558,96.17,Business Licensing,Alamosa,Colorado,US,1,2026-03-15T12:00:00Z
+358,@sled_partner_0358,Public Assistance Programs Signal Source 358,youtube,46311,0.0585,60.34,Public Assistance Programs,Glenwood Springs,Colorado,US,0,2026-03-16T12:00:00Z
+359,@sled_partner_0359,Accessibility Services Signal Source 359,instagram,47134,0.0612,67.51,Accessibility Services,Idaho Springs,Colorado,US,0,2026-03-17T12:00:00Z
+360,@sled_partner_0360,Transparency and Auditability Signal Source 360,tiktok,47957,0.0639,74.68,Transparency and Auditability,Cañon City,Colorado,US,0,2026-03-18T12:00:00Z
+361,@sled_partner_0361,Constituent Services Signal Source 361,threads,48780,0.0666,81,Constituent Services,Salida,Colorado,US,1,2026-03-19T12:00:00Z
+362,@sled_partner_0362,Permits and Licensing Signal Source 362,twitter,49603,0.018,88.17,Permits and Licensing,Gunnison,Colorado,US,0,2026-03-20T12:00:00Z
+363,@sled_partner_0363,Benefits Eligibility Signal Source 363,youtube,50426,0.0207,95.34,Benefits Eligibility,Leadville,Colorado,US,0,2026-03-21T12:00:00Z
+364,@sled_partner_0364,Case Management Signal Source 364,instagram,51249,0.0234,59.51,Case Management,Walsenburg,Colorado,US,0,2026-03-22T12:00:00Z
+365,@sled_partner_0365,Emergency Response Signal Source 365,tiktok,52072,0.0261,66.68,Emergency Response,Trinidad,Colorado,US,1,2026-03-23T12:00:00Z
+366,@sled_partner_0366,Public Works Signal Source 366,threads,52895,0.0288,73,Public Works,Sterling,Colorado,US,0,2026-03-24T12:00:00Z
+367,@sled_partner_0367,Transportation Services Signal Source 367,twitter,53718,0.0315,80.17,Transportation Services,Fort Morgan,Colorado,US,0,2026-03-25T12:00:00Z
+368,@sled_partner_0368,Tax and Revenue Operations Signal Source 368,youtube,54541,0.0342,87.34,Tax and Revenue Operations,Yuma,Colorado,US,0,2026-03-26T12:00:00Z
+369,@sled_partner_0369,Citizen-Facing Digital Services Signal Source 369,instagram,55364,0.0369,94.51,Citizen-Facing Digital Services,Burlington,Colorado,US,1,2026-03-27T12:00:00Z
+370,@sled_partner_0370,Inspections and Code Enforcement Signal Source 370,tiktok,56187,0.0396,58.68,Inspections and Code Enforcement,Craig,Colorado,US,0,2026-03-28T12:00:00Z
+371,@sled_partner_0371,Grants Management Signal Source 371,threads,57010,0.0423,65,Grants Management,Telluride,Colorado,US,0,2026-03-29T12:00:00Z
+372,@sled_partner_0372,Health and Human Services Signal Source 372,twitter,57833,0.045,72.17,Health and Human Services,Cortez,Colorado,US,0,2026-03-30T12:00:00Z
+373,@sled_partner_0373,Fraud Waste and Abuse Detection Signal Source 373,youtube,58656,0.0477,79.34,Fraud Waste and Abuse Detection,Denver,Colorado,US,1,2026-03-31T12:00:00Z
+374,@sled_partner_0374,Policy Compliance Signal Source 374,instagram,59479,0.0504,86.51,Policy Compliance,Colorado Springs,Colorado,US,0,2026-04-01T12:00:00Z
+375,@sled_partner_0375,Records Management Signal Source 375,tiktok,60302,0.0531,93.68,Records Management,Aurora,Colorado,US,0,2026-04-02T12:00:00Z
+376,@sled_partner_0376,Interagency Workflows Signal Source 376,threads,61125,0.0558,57,Interagency Workflows,Fort Collins,Colorado,US,0,2026-04-03T12:00:00Z
+377,@sled_partner_0377,Business Licensing Signal Source 377,twitter,61948,0.0585,64.17,Business Licensing,Lakewood,Colorado,US,1,2026-04-04T12:00:00Z
+378,@sled_partner_0378,Public Assistance Programs Signal Source 378,youtube,62771,0.0612,71.34,Public Assistance Programs,Thornton,Colorado,US,0,2026-04-05T12:00:00Z
+379,@sled_partner_0379,Accessibility Services Signal Source 379,instagram,63594,0.0639,78.51,Accessibility Services,Pueblo,Colorado,US,0,2026-04-06T12:00:00Z
+380,@sled_partner_0380,Transparency and Auditability Signal Source 380,tiktok,64417,0.0666,85.68,Transparency and Auditability,Boulder,Colorado,US,0,2026-04-07T12:00:00Z
+381,@sled_partner_0381,Constituent Services Signal Source 381,threads,65240,0.018,92,Constituent Services,Greeley,Colorado,US,1,2026-04-08T12:00:00Z
+382,@sled_partner_0382,Permits and Licensing Signal Source 382,twitter,66063,0.0207,56.17,Permits and Licensing,Castle Rock,Colorado,US,0,2026-04-09T12:00:00Z
+383,@sled_partner_0383,Benefits Eligibility Signal Source 383,youtube,66886,0.0234,63.34,Benefits Eligibility,Grand Junction,Colorado,US,0,2026-04-10T12:00:00Z
+384,@sled_partner_0384,Case Management Signal Source 384,instagram,67709,0.0261,70.51,Case Management,Broomfield,Colorado,US,0,2026-04-11T12:00:00Z
+385,@sled_partner_0385,Emergency Response Signal Source 385,tiktok,68532,0.0288,77.68,Emergency Response,Durango,Colorado,US,1,2026-04-12T12:00:00Z
+386,@sled_partner_0386,Public Works Signal Source 386,threads,69355,0.0315,84,Public Works,Montrose,Colorado,US,0,2026-04-13T12:00:00Z
+387,@sled_partner_0387,Transportation Services Signal Source 387,twitter,70178,0.0342,91.17,Transportation Services,Steamboat Springs,Colorado,US,0,2026-04-14T12:00:00Z
+388,@sled_partner_0388,Tax and Revenue Operations Signal Source 388,youtube,71001,0.0369,55.34,Tax and Revenue Operations,Alamosa,Colorado,US,0,2026-04-15T12:00:00Z
+389,@sled_partner_0389,Citizen-Facing Digital Services Signal Source 389,instagram,71824,0.0396,62.51,Citizen-Facing Digital Services,Glenwood Springs,Colorado,US,1,2026-04-16T12:00:00Z
+390,@sled_partner_0390,Inspections and Code Enforcement Signal Source 390,tiktok,72647,0.0423,69.68,Inspections and Code Enforcement,Idaho Springs,Colorado,US,0,2026-04-17T12:00:00Z
+391,@sled_partner_0391,Grants Management Signal Source 391,threads,73470,0.045,76,Grants Management,Cañon City,Colorado,US,0,2026-04-18T12:00:00Z
+392,@sled_partner_0392,Health and Human Services Signal Source 392,twitter,74293,0.0477,83.17,Health and Human Services,Salida,Colorado,US,0,2026-04-19T12:00:00Z
+393,@sled_partner_0393,Fraud Waste and Abuse Detection Signal Source 393,youtube,75116,0.0504,90.34,Fraud Waste and Abuse Detection,Gunnison,Colorado,US,1,2026-04-20T12:00:00Z
+394,@sled_partner_0394,Policy Compliance Signal Source 394,instagram,75939,0.0531,97.51,Policy Compliance,Leadville,Colorado,US,0,2026-04-21T12:00:00Z
+395,@sled_partner_0395,Records Management Signal Source 395,tiktok,76762,0.0558,61.68,Records Management,Walsenburg,Colorado,US,0,2026-04-22T12:00:00Z
+396,@sled_partner_0396,Interagency Workflows Signal Source 396,threads,77585,0.0585,68,Interagency Workflows,Trinidad,Colorado,US,0,2026-04-23T12:00:00Z
+397,@sled_partner_0397,Business Licensing Signal Source 397,twitter,78408,0.0612,75.17,Business Licensing,Sterling,Colorado,US,1,2026-04-24T12:00:00Z
+398,@sled_partner_0398,Public Assistance Programs Signal Source 398,youtube,79231,0.0639,82.34,Public Assistance Programs,Fort Morgan,Colorado,US,0,2026-04-25T12:00:00Z
+399,@sled_partner_0399,Accessibility Services Signal Source 399,instagram,80054,0.0666,89.51,Accessibility Services,Yuma,Colorado,US,0,2026-04-26T12:00:00Z
+400,@sled_partner_0400,Transparency and Auditability Signal Source 400,tiktok,80877,0.018,96.68,Transparency and Auditability,Burlington,Colorado,US,0,2026-04-27T12:00:00Z
+401,@sled_partner_0401,Constituent Services Signal Source 401,threads,81700,0.0207,60,Constituent Services,Craig,Colorado,US,1,2026-04-28T12:00:00Z
+402,@sled_partner_0402,Permits and Licensing Signal Source 402,twitter,82523,0.0234,67.17,Permits and Licensing,Telluride,Colorado,US,0,2026-04-29T12:00:00Z
+403,@sled_partner_0403,Benefits Eligibility Signal Source 403,youtube,83346,0.0261,74.34,Benefits Eligibility,Cortez,Colorado,US,0,2026-04-30T12:00:00Z
+404,@sled_partner_0404,Case Management Signal Source 404,instagram,84169,0.0288,81.51,Case Management,Denver,Colorado,US,0,2026-05-01T12:00:00Z
+405,@sled_partner_0405,Emergency Response Signal Source 405,tiktok,84992,0.0315,88.68,Emergency Response,Colorado Springs,Colorado,US,1,2026-05-02T12:00:00Z
+406,@sled_partner_0406,Public Works Signal Source 406,threads,85815,0.0342,95,Public Works,Aurora,Colorado,US,0,2026-05-03T12:00:00Z
+407,@sled_partner_0407,Transportation Services Signal Source 407,twitter,86638,0.0369,59.17,Transportation Services,Fort Collins,Colorado,US,0,2026-05-04T12:00:00Z
+408,@sled_partner_0408,Tax and Revenue Operations Signal Source 408,youtube,87461,0.0396,66.34,Tax and Revenue Operations,Lakewood,Colorado,US,0,2026-05-05T12:00:00Z
+409,@sled_partner_0409,Citizen-Facing Digital Services Signal Source 409,instagram,88284,0.0423,73.51,Citizen-Facing Digital Services,Thornton,Colorado,US,1,2026-05-06T12:00:00Z
+410,@sled_partner_0410,Inspections and Code Enforcement Signal Source 410,tiktok,89107,0.045,80.68,Inspections and Code Enforcement,Pueblo,Colorado,US,0,2026-05-07T12:00:00Z
+411,@sled_partner_0411,Grants Management Signal Source 411,threads,89930,0.0477,87,Grants Management,Boulder,Colorado,US,0,2026-05-08T12:00:00Z
+412,@sled_partner_0412,Health and Human Services Signal Source 412,twitter,90753,0.0504,94.17,Health and Human Services,Greeley,Colorado,US,0,2026-05-09T12:00:00Z
+413,@sled_partner_0413,Fraud Waste and Abuse Detection Signal Source 413,youtube,91576,0.0531,58.34,Fraud Waste and Abuse Detection,Castle Rock,Colorado,US,1,2026-05-10T12:00:00Z
+414,@sled_partner_0414,Policy Compliance Signal Source 414,instagram,92399,0.0558,65.51,Policy Compliance,Grand Junction,Colorado,US,0,2026-05-11T12:00:00Z
+415,@sled_partner_0415,Records Management Signal Source 415,tiktok,93222,0.0585,72.68,Records Management,Broomfield,Colorado,US,0,2026-05-12T12:00:00Z
+416,@sled_partner_0416,Interagency Workflows Signal Source 416,threads,94045,0.0612,79,Interagency Workflows,Durango,Colorado,US,0,2026-05-13T12:00:00Z
+417,@sled_partner_0417,Business Licensing Signal Source 417,twitter,94868,0.0639,86.17,Business Licensing,Montrose,Colorado,US,1,2026-05-14T12:00:00Z
+418,@sled_partner_0418,Public Assistance Programs Signal Source 418,youtube,95691,0.0666,93.34,Public Assistance Programs,Steamboat Springs,Colorado,US,0,2026-05-15T12:00:00Z
+419,@sled_partner_0419,Accessibility Services Signal Source 419,instagram,96514,0.018,57.51,Accessibility Services,Alamosa,Colorado,US,0,2026-05-16T12:00:00Z
+420,@sled_partner_0420,Transparency and Auditability Signal Source 420,tiktok,97337,0.0207,64.68,Transparency and Auditability,Glenwood Springs,Colorado,US,0,2026-05-17T12:00:00Z
+421,@sled_partner_0421,Constituent Services Signal Source 421,threads,98160,0.0234,71,Constituent Services,Idaho Springs,Colorado,US,1,2026-03-09T12:00:00Z
+422,@sled_partner_0422,Permits and Licensing Signal Source 422,twitter,98983,0.0261,78.17,Permits and Licensing,Cañon City,Colorado,US,0,2026-03-10T12:00:00Z
+423,@sled_partner_0423,Benefits Eligibility Signal Source 423,youtube,99806,0.0288,85.34,Benefits Eligibility,Salida,Colorado,US,0,2026-03-11T12:00:00Z
+424,@sled_partner_0424,Case Management Signal Source 424,instagram,100629,0.0315,92.51,Case Management,Gunnison,Colorado,US,0,2026-03-12T12:00:00Z
+425,@sled_partner_0425,Emergency Response Signal Source 425,tiktok,101452,0.0342,56.68,Emergency Response,Leadville,Colorado,US,1,2026-03-13T12:00:00Z
+426,@sled_partner_0426,Public Works Signal Source 426,threads,102275,0.0369,63,Public Works,Walsenburg,Colorado,US,0,2026-03-14T12:00:00Z
+427,@sled_partner_0427,Transportation Services Signal Source 427,twitter,103098,0.0396,70.17,Transportation Services,Trinidad,Colorado,US,0,2026-03-15T12:00:00Z
+428,@sled_partner_0428,Tax and Revenue Operations Signal Source 428,youtube,103921,0.0423,77.34,Tax and Revenue Operations,Sterling,Colorado,US,0,2026-03-16T12:00:00Z
+429,@sled_partner_0429,Citizen-Facing Digital Services Signal Source 429,instagram,104744,0.045,84.51,Citizen-Facing Digital Services,Fort Morgan,Colorado,US,1,2026-03-17T12:00:00Z
+430,@sled_partner_0430,Inspections and Code Enforcement Signal Source 430,tiktok,105567,0.0477,91.68,Inspections and Code Enforcement,Yuma,Colorado,US,0,2026-03-18T12:00:00Z
+431,@sled_partner_0431,Grants Management Signal Source 431,threads,106390,0.0504,55,Grants Management,Burlington,Colorado,US,0,2026-03-19T12:00:00Z
+432,@sled_partner_0432,Health and Human Services Signal Source 432,twitter,107213,0.0531,62.17,Health and Human Services,Craig,Colorado,US,0,2026-03-20T12:00:00Z
+433,@sled_partner_0433,Fraud Waste and Abuse Detection Signal Source 433,youtube,108036,0.0558,69.34,Fraud Waste and Abuse Detection,Telluride,Colorado,US,1,2026-03-21T12:00:00Z
+434,@sled_partner_0434,Policy Compliance Signal Source 434,instagram,108859,0.0585,76.51,Policy Compliance,Cortez,Colorado,US,0,2026-03-22T12:00:00Z
+435,@sled_partner_0435,Records Management Signal Source 435,tiktok,109682,0.0612,83.68,Records Management,Denver,Colorado,US,0,2026-03-23T12:00:00Z
+436,@sled_partner_0436,Interagency Workflows Signal Source 436,threads,110505,0.0639,90,Interagency Workflows,Colorado Springs,Colorado,US,0,2026-03-24T12:00:00Z
+437,@sled_partner_0437,Business Licensing Signal Source 437,twitter,111328,0.0666,97.17,Business Licensing,Aurora,Colorado,US,1,2026-03-25T12:00:00Z
+438,@sled_partner_0438,Public Assistance Programs Signal Source 438,youtube,112151,0.018,61.34,Public Assistance Programs,Fort Collins,Colorado,US,0,2026-03-26T12:00:00Z
+439,@sled_partner_0439,Accessibility Services Signal Source 439,instagram,112974,0.0207,68.51,Accessibility Services,Lakewood,Colorado,US,0,2026-03-27T12:00:00Z
+440,@sled_partner_0440,Transparency and Auditability Signal Source 440,tiktok,113797,0.0234,75.68,Transparency and Auditability,Thornton,Colorado,US,0,2026-03-28T12:00:00Z
+441,@sled_partner_0441,Constituent Services Signal Source 441,threads,114620,0.0261,82,Constituent Services,Pueblo,Colorado,US,1,2026-03-29T12:00:00Z
+442,@sled_partner_0442,Permits and Licensing Signal Source 442,twitter,115443,0.0288,89.17,Permits and Licensing,Boulder,Colorado,US,0,2026-03-30T12:00:00Z
+443,@sled_partner_0443,Benefits Eligibility Signal Source 443,youtube,116266,0.0315,96.34,Benefits Eligibility,Greeley,Colorado,US,0,2026-03-31T12:00:00Z
+444,@sled_partner_0444,Case Management Signal Source 444,instagram,117089,0.0342,60.51,Case Management,Castle Rock,Colorado,US,0,2026-04-01T12:00:00Z
+445,@sled_partner_0445,Emergency Response Signal Source 445,tiktok,117912,0.0369,67.68,Emergency Response,Grand Junction,Colorado,US,1,2026-04-02T12:00:00Z
+446,@sled_partner_0446,Public Works Signal Source 446,threads,118735,0.0396,74,Public Works,Broomfield,Colorado,US,0,2026-04-03T12:00:00Z
+447,@sled_partner_0447,Transportation Services Signal Source 447,twitter,119558,0.0423,81.17,Transportation Services,Durango,Colorado,US,0,2026-04-04T12:00:00Z
+448,@sled_partner_0448,Tax and Revenue Operations Signal Source 448,youtube,120381,0.045,88.34,Tax and Revenue Operations,Montrose,Colorado,US,0,2026-04-05T12:00:00Z
+449,@sled_partner_0449,Citizen-Facing Digital Services Signal Source 449,instagram,121204,0.0477,95.51,Citizen-Facing Digital Services,Steamboat Springs,Colorado,US,1,2026-04-06T12:00:00Z
+450,@sled_partner_0450,Inspections and Code Enforcement Signal Source 450,tiktok,122027,0.0504,59.68,Inspections and Code Enforcement,Alamosa,Colorado,US,0,2026-04-07T12:00:00Z
+451,@sled_partner_0451,Grants Management Signal Source 451,threads,122850,0.0531,66,Grants Management,Glenwood Springs,Colorado,US,0,2026-04-08T12:00:00Z
+452,@sled_partner_0452,Health and Human Services Signal Source 452,twitter,123673,0.0558,73.17,Health and Human Services,Idaho Springs,Colorado,US,0,2026-04-09T12:00:00Z
+453,@sled_partner_0453,Fraud Waste and Abuse Detection Signal Source 453,youtube,124496,0.0585,80.34,Fraud Waste and Abuse Detection,Cañon City,Colorado,US,1,2026-04-10T12:00:00Z
+454,@sled_partner_0454,Policy Compliance Signal Source 454,instagram,125319,0.0612,87.51,Policy Compliance,Salida,Colorado,US,0,2026-04-11T12:00:00Z
+455,@sled_partner_0455,Records Management Signal Source 455,tiktok,126142,0.0639,94.68,Records Management,Gunnison,Colorado,US,0,2026-04-12T12:00:00Z
+456,@sled_partner_0456,Interagency Workflows Signal Source 456,threads,126965,0.0666,58,Interagency Workflows,Leadville,Colorado,US,0,2026-04-13T12:00:00Z
+457,@sled_partner_0457,Business Licensing Signal Source 457,twitter,127788,0.018,65.17,Business Licensing,Walsenburg,Colorado,US,1,2026-04-14T12:00:00Z
+458,@sled_partner_0458,Public Assistance Programs Signal Source 458,youtube,128611,0.0207,72.34,Public Assistance Programs,Trinidad,Colorado,US,0,2026-04-15T12:00:00Z
+459,@sled_partner_0459,Accessibility Services Signal Source 459,instagram,129434,0.0234,79.51,Accessibility Services,Sterling,Colorado,US,0,2026-04-16T12:00:00Z
+460,@sled_partner_0460,Transparency and Auditability Signal Source 460,tiktok,130257,0.0261,86.68,Transparency and Auditability,Fort Morgan,Colorado,US,0,2026-04-17T12:00:00Z
+461,@sled_partner_0461,Constituent Services Signal Source 461,threads,131080,0.0288,93,Constituent Services,Yuma,Colorado,US,1,2026-04-18T12:00:00Z
+462,@sled_partner_0462,Permits and Licensing Signal Source 462,twitter,131903,0.0315,57.17,Permits and Licensing,Burlington,Colorado,US,0,2026-04-19T12:00:00Z
+463,@sled_partner_0463,Benefits Eligibility Signal Source 463,youtube,132726,0.0342,64.34,Benefits Eligibility,Craig,Colorado,US,0,2026-04-20T12:00:00Z
+464,@sled_partner_0464,Case Management Signal Source 464,instagram,133549,0.0369,71.51,Case Management,Telluride,Colorado,US,0,2026-04-21T12:00:00Z
+465,@sled_partner_0465,Emergency Response Signal Source 465,tiktok,134372,0.0396,78.68,Emergency Response,Cortez,Colorado,US,1,2026-04-22T12:00:00Z
+466,@sled_partner_0466,Public Works Signal Source 466,threads,135195,0.0423,85,Public Works,Denver,Colorado,US,0,2026-04-23T12:00:00Z
+467,@sled_partner_0467,Transportation Services Signal Source 467,twitter,136018,0.045,92.17,Transportation Services,Colorado Springs,Colorado,US,0,2026-04-24T12:00:00Z
+468,@sled_partner_0468,Tax and Revenue Operations Signal Source 468,youtube,136841,0.0477,56.34,Tax and Revenue Operations,Aurora,Colorado,US,0,2026-04-25T12:00:00Z
+469,@sled_partner_0469,Citizen-Facing Digital Services Signal Source 469,instagram,137664,0.0504,63.51,Citizen-Facing Digital Services,Fort Collins,Colorado,US,1,2026-04-26T12:00:00Z
+470,@sled_partner_0470,Inspections and Code Enforcement Signal Source 470,tiktok,138487,0.0531,70.68,Inspections and Code Enforcement,Lakewood,Colorado,US,0,2026-04-27T12:00:00Z
+471,@sled_partner_0471,Grants Management Signal Source 471,threads,139310,0.0558,77,Grants Management,Thornton,Colorado,US,0,2026-04-28T12:00:00Z
+472,@sled_partner_0472,Health and Human Services Signal Source 472,twitter,140133,0.0585,84.17,Health and Human Services,Pueblo,Colorado,US,0,2026-04-29T12:00:00Z
+473,@sled_partner_0473,Fraud Waste and Abuse Detection Signal Source 473,youtube,140956,0.0612,91.34,Fraud Waste and Abuse Detection,Boulder,Colorado,US,1,2026-04-30T12:00:00Z
+474,@sled_partner_0474,Policy Compliance Signal Source 474,instagram,141779,0.0639,55.51,Policy Compliance,Greeley,Colorado,US,0,2026-05-01T12:00:00Z
+475,@sled_partner_0475,Records Management Signal Source 475,tiktok,142602,0.0666,62.68,Records Management,Castle Rock,Colorado,US,0,2026-05-02T12:00:00Z
+476,@sled_partner_0476,Interagency Workflows Signal Source 476,threads,143425,0.018,69,Interagency Workflows,Grand Junction,Colorado,US,0,2026-05-03T12:00:00Z
+477,@sled_partner_0477,Business Licensing Signal Source 477,twitter,144248,0.0207,76.17,Business Licensing,Broomfield,Colorado,US,1,2026-05-04T12:00:00Z
+478,@sled_partner_0478,Public Assistance Programs Signal Source 478,youtube,145071,0.0234,83.34,Public Assistance Programs,Durango,Colorado,US,0,2026-05-05T12:00:00Z
+479,@sled_partner_0479,Accessibility Services Signal Source 479,instagram,145894,0.0261,90.51,Accessibility Services,Montrose,Colorado,US,0,2026-05-06T12:00:00Z
+480,@sled_partner_0480,Transparency and Auditability Signal Source 480,tiktok,146717,0.0288,97.68,Transparency and Auditability,Steamboat Springs,Colorado,US,0,2026-05-07T12:00:00Z
+481,@sled_partner_0481,Constituent Services Signal Source 481,threads,147540,0.0315,61,Constituent Services,Alamosa,Colorado,US,1,2026-05-08T12:00:00Z
+482,@sled_partner_0482,Permits and Licensing Signal Source 482,twitter,148363,0.0342,68.17,Permits and Licensing,Glenwood Springs,Colorado,US,0,2026-05-09T12:00:00Z
+483,@sled_partner_0483,Benefits Eligibility Signal Source 483,youtube,149186,0.0369,75.34,Benefits Eligibility,Idaho Springs,Colorado,US,0,2026-05-10T12:00:00Z

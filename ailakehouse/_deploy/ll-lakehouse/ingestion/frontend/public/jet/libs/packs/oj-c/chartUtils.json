@@ -1,0 +1,162 @@
+[
+  {
+    "id": "oj-c.chartUtils",
+    "name": "chartUtils",
+    "ojmodulecontainer": "oj-c.chartUtils",
+    "memberof": "oj-c",
+    "longname": "oj-c.chartUtils",
+    "kind": "namespace",
+    "scope": "static",
+    "meta": {
+      "filename": "chartUtils.ts",
+      "path": "web/components/oj-c/chart-utils"
+    },
+    "pack": "oj-c",
+    "classdesc": "A collection of utility functions related to dimensions of chart sub elements like y-axis, x-axis, and y2-axis.",
+    "ojmodule": "chart-utils"
+  },
+  {
+    "id": "oj-c.chartUtils#getYaxis",
+    "name": "getYaxis",
+    "memberof": "oj-c.chartUtils",
+    "meta": {
+      "filename": "chartUtils.ts",
+      "path": "web/components/oj-c/chart-utils"
+    },
+    "kind": "function",
+    "longname": "oj-c.chartUtils#getYaxis",
+    "scope": "instance",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "object"
+          ]
+        },
+        "tstype": {
+          "target": "Type",
+          "value": "{ getPreferredSize: (width: number, height: number) => { width: number; height: number; }; bounds: Dimension; }",
+          "jsdocOverride": true,
+          "for": "returns"
+        }
+      }
+    ],
+    "ojexports": true,
+    "description": "",
+    "params": [
+      {
+        "name": "element",
+        "description": "An oj-c-line-chart or oj-c-area-chart element.",
+        "type": {
+          "names": [
+            "HTMLElement"
+          ]
+        },
+        "tstype": [
+          {
+            "target": "Type",
+            "value": "HTMLElement",
+            "jsdocOverride": true,
+            "for": "element"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "oj-c.chartUtils#getY2axis",
+    "name": "getY2axis",
+    "memberof": "oj-c.chartUtils",
+    "meta": {
+      "filename": "chartUtils.ts",
+      "path": "web/components/oj-c/chart-utils"
+    },
+    "kind": "function",
+    "longname": "oj-c.chartUtils#getY2axis",
+    "scope": "instance",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "object"
+          ]
+        },
+        "tstype": {
+          "target": "Type",
+          "value": "{ getPreferredSize: (width: number, height: number) => { width: number; height: number; }; bounds: Dimension; }",
+          "jsdocOverride": true,
+          "for": "returns"
+        }
+      }
+    ],
+    "ojexports": true,
+    "description": "",
+    "params": [
+      {
+        "name": "element",
+        "description": "An oj-c-line-chart or oj-c-area-chart element.",
+        "type": {
+          "names": [
+            "HTMLElement"
+          ]
+        },
+        "tstype": [
+          {
+            "target": "Type",
+            "value": "HTMLElement",
+            "jsdocOverride": true,
+            "for": "element"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "oj-c.chartUtils#getXaxis",
+    "name": "getXaxis",
+    "memberof": "oj-c.chartUtils",
+    "meta": {
+      "filename": "chartUtils.ts",
+      "path": "web/components/oj-c/chart-utils"
+    },
+    "kind": "function",
+    "longname": "oj-c.chartUtils#getXaxis",
+    "scope": "instance",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "object"
+          ]
+        },
+        "tstype": {
+          "target": "Type",
+          "value": "{ getPreferredSize: (width: number, height: number) => { width: number; height: number; }; bounds: Dimension; }",
+          "jsdocOverride": true,
+          "for": "returns"
+        }
+      }
+    ],
+    "ojexports": true,
+    "description": "",
+    "params": [
+      {
+        "name": "element",
+        "description": "An oj-c-line-chart or oj-c-area-chart element.",
+        "type": {
+          "names": [
+            "HTMLElement"
+          ]
+        },
+        "tstype": [
+          {
+            "target": "Type",
+            "value": "HTMLElement",
+            "jsdocOverride": true,
+            "for": "element"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,32 @@
+center_id,center_name,center_type,address_line1,city,state_province,postal_code,country,latitude,longitude,capacity_units,current_load_pct,is_active,operating_hours,created_at
+1,Denver County Eligibility Service Center,distribution,100 County Services Plaza,Denver,Colorado,80202,US,39.7392,-104.9903,85000,48,1,00:00-24:00,2026-03-19T12:00:00Z
+2,Colorado Springs Resident Services Hub,warehouse,101 County Services Plaza,Colorado Springs,Colorado,80903,US,38.8339,-104.8214,88750,55,1,06:00-22:00,2026-03-20T12:00:00Z
+3,Arapahoe County Medicaid Eligibility Office,micro,102 County Services Plaza,Aurora,Colorado,80012,US,39.7294,-104.8319,92500,62,1,06:00-22:00,2026-03-21T12:00:00Z
+4,Fort Collins Regional Operations Center,store,103 County Services Plaza,Fort Collins,Colorado,80521,US,40.5853,-105.0844,96250,69,1,06:00-22:00,2026-03-22T12:00:00Z
+5,Jefferson County Eligibility Service Center,distribution,104 County Services Plaza,Lakewood,Colorado,80226,US,39.7047,-105.0814,100000,76,1,06:00-22:00,2026-03-23T12:00:00Z
+6,Thornton Resident Services Hub,warehouse,105 County Services Plaza,Thornton,Colorado,80229,US,39.868,-104.9719,103750,83,1,00:00-24:00,2026-03-24T12:00:00Z
+7,Pueblo County Medicaid Eligibility Office,micro,106 County Services Plaza,Pueblo,Colorado,81003,US,38.2544,-104.6091,107500,90,1,06:00-22:00,2026-03-25T12:00:00Z
+8,Boulder Regional Operations Center,store,107 County Services Plaza,Boulder,Colorado,80302,US,40.015,-105.2705,111250,54,1,06:00-22:00,2026-03-26T12:00:00Z
+9,Weld County Eligibility Service Center,distribution,108 County Services Plaza,Greeley,Colorado,80631,US,40.4233,-104.7091,115000,61,1,06:00-22:00,2026-03-27T12:00:00Z
+10,Castle Rock Resident Services Hub,warehouse,109 County Services Plaza,Castle Rock,Colorado,80104,US,39.3722,-104.8561,118750,68,1,06:00-22:00,2026-03-28T12:00:00Z
+11,Mesa County Medicaid Eligibility Office,micro,110 County Services Plaza,Grand Junction,Colorado,81501,US,39.0639,-108.5506,122500,75,1,00:00-24:00,2026-03-29T12:00:00Z
+12,Broomfield Regional Operations Center,store,111 County Services Plaza,Broomfield,Colorado,80020,US,39.9205,-105.0867,126250,82,1,06:00-22:00,2026-03-30T12:00:00Z
+13,La Plata County Eligibility Service Center,distribution,112 County Services Plaza,Durango,Colorado,81301,US,37.2753,-107.8801,130000,89,1,06:00-22:00,2026-03-31T12:00:00Z
+14,Montrose Resident Services Hub,warehouse,113 County Services Plaza,Montrose,Colorado,81401,US,38.4783,-107.8762,133750,53,1,06:00-22:00,2026-04-01T12:00:00Z
+15,Routt County Medicaid Eligibility Office,micro,114 County Services Plaza,Steamboat Springs,Colorado,80487,US,40.485,-106.8317,137500,60,1,06:00-22:00,2026-04-02T12:00:00Z
+16,Alamosa Regional Operations Center,store,115 County Services Plaza,Alamosa,Colorado,81101,US,37.4695,-105.87,141250,67,1,00:00-24:00,2026-04-03T12:00:00Z
+17,Garfield County Eligibility Service Center,distribution,116 County Services Plaza,Glenwood Springs,Colorado,81601,US,39.5505,-107.3248,145000,74,1,06:00-22:00,2026-04-04T12:00:00Z
+18,Idaho Springs Resident Services Hub,warehouse,117 County Services Plaza,Idaho Springs,Colorado,80452,US,39.7425,-105.5136,148750,81,1,06:00-22:00,2026-04-05T12:00:00Z
+19,Fremont County Medicaid Eligibility Office,micro,118 County Services Plaza,Cañon City,Colorado,81212,US,38.4494,-105.2253,152500,88,1,06:00-22:00,2026-04-06T12:00:00Z
+20,Salida Regional Operations Center,store,119 County Services Plaza,Salida,Colorado,81201,US,38.5347,-105.9989,156250,52,1,06:00-22:00,2026-04-07T12:00:00Z
+21,Gunnison County Eligibility Service Center,distribution,120 County Services Plaza,Gunnison,Colorado,81230,US,38.5458,-106.9253,160000,59,1,00:00-24:00,2026-03-19T12:00:00Z
+22,Leadville Resident Services Hub,warehouse,121 County Services Plaza,Leadville,Colorado,80461,US,39.2508,-106.2925,163750,66,1,06:00-22:00,2026-03-20T12:00:00Z
+23,Huerfano County Medicaid Eligibility Office,micro,122 County Services Plaza,Walsenburg,Colorado,81089,US,37.6242,-104.7803,167500,73,1,06:00-22:00,2026-03-21T12:00:00Z
+24,Trinidad Regional Operations Center,store,123 County Services Plaza,Trinidad,Colorado,81082,US,37.1695,-104.5005,171250,80,1,06:00-22:00,2026-03-22T12:00:00Z
+25,Logan County Eligibility Service Center,distribution,124 County Services Plaza,Sterling,Colorado,80751,US,40.6255,-103.2077,175000,87,1,06:00-22:00,2026-03-23T12:00:00Z
+26,Fort Morgan Resident Services Hub,warehouse,125 County Services Plaza,Fort Morgan,Colorado,80701,US,40.2503,-103.7999,178750,51,1,00:00-24:00,2026-03-24T12:00:00Z
+27,Yuma County Medicaid Eligibility Office,micro,126 County Services Plaza,Yuma,Colorado,80759,US,40.1222,-102.7252,182500,58,1,06:00-22:00,2026-03-25T12:00:00Z
+28,Burlington Regional Operations Center,store,127 County Services Plaza,Burlington,Colorado,80807,US,39.3061,-102.2694,186250,65,1,06:00-22:00,2026-03-26T12:00:00Z
+29,Moffat County Eligibility Service Center,distribution,128 County Services Plaza,Craig,Colorado,81625,US,40.5153,-107.5464,190000,72,1,06:00-22:00,2026-03-27T12:00:00Z
+30,Telluride Resident Services Hub,warehouse,129 County Services Plaza,Telluride,Colorado,81435,US,37.9375,-107.8123,193750,79,1,06:00-22:00,2026-03-28T12:00:00Z
+31,Montezuma County Medicaid Eligibility Office,micro,130 County Services Plaza,Cortez,Colorado,81321,US,37.3489,-108.5859,197500,86,1,00:00-24:00,2026-03-29T12:00:00Z

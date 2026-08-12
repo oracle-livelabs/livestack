@@ -1,0 +1,131 @@
+{
+  "name": "picto-chart-item",
+  "version": "20.0.2",
+  "jetVersion": "^20.0.2",
+  "pack": "oj-c",
+  "type": "composite",
+  "dependencyScope": "runtime",
+  "license": "https://opensource.org/licenses/UPL",
+  "implements": [
+    "CPictoChartItemElement"
+  ],
+  "status": [
+    {
+      "type": "candidate",
+      "since": "20.0.0"
+    }
+  ],
+  "subcomponentType": "data",
+  "description": "The oj-c-picto-chart-item element is used to declare properties for picto chart items",
+  "displayName": "PictoChartItem",
+  "main": "oj-c/picto-chart-item",
+  "help": "oj-c.PictoChartItem.html",
+  "since": "20.0.0",
+  "properties": {
+    "categories": {
+      "type": "Array<string>",
+      "description": "An array of category strings corresponding to the picto chart items.",
+      "displayName": "Categories",
+      "help": "#categories",
+      "value": []
+    },
+    "drilling": {
+      "type": "string",
+      "description": "Whether drilling is enabled on the item.",
+      "displayName": "Drilling",
+      "help": "#drilling",
+      "enumValues": [
+        "off",
+        "inherit",
+        "on"
+      ],
+      "value": "inherit"
+    },
+    "color": {
+      "type": "string",
+      "description": "The color of the item. Does not apply if custom image is specified.",
+      "displayName": "Color",
+      "help": "#color"
+    },
+    "columnSpan": {
+      "type": "string",
+      "description": "The number of columns each shape (or custom image) spans. Used for creating a picto chart with mixed item sizes.",
+      "displayName": "Column Span",
+      "help": "#columnSpan"
+    },
+    "count": {
+      "type": "string",
+      "description": "Specifies the number of times that the shape (or custom image) is drawn.",
+      "displayName": "Count",
+      "help": "#count"
+    },
+    "name": {
+      "type": "string",
+      "description": "The name of the item. Used for default tooltip and accessibility.",
+      "displayName": "Name",
+      "help": "#name"
+    },
+    "rowSpan": {
+      "type": "string",
+      "description": "The name of the item. Used for default tooltip and accessibility.",
+      "displayName": "Row Span",
+      "help": "#rowSpan"
+    },
+    "shape": {
+      "type": "string",
+      "description": "The shape of the item. Can take the name of a built-in shape or the SVG path commands for a custom shape.",
+      "displayName": "Shape",
+      "help": "#shape",
+      "value": "rectangle"
+    },
+    "shortDesc": {
+      "type": "string",
+      "description": "The description of the item. This is used for customizing the tooltip text.",
+      "displayName": "ShortDesc",
+      "help": "#shortDesc"
+    }
+  },
+  "methods": {
+    "setProperty": {
+      "description": "Sets a property or a single subproperty for complex properties and notifies the component of the change, triggering a corresponding event.",
+      "help": "#setProperty",
+      "params": [
+        {
+          "name": "property",
+          "description": "The property name to set. Supports dot notation for subproperty access.",
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "description": "The new value to set the property to.",
+          "type": "any"
+        }
+      ],
+      "return": "void"
+    },
+    "getProperty": {
+      "description": "Retrieves the value of a property or a subproperty.",
+      "help": "#getProperty",
+      "params": [
+        {
+          "name": "property",
+          "description": "The property name to get. Supports dot notation for subproperty access.",
+          "type": "string"
+        }
+      ],
+      "return": "any"
+    },
+    "setProperties": {
+      "description": "Performs a batch set of properties.",
+      "help": "#setProperties",
+      "params": [
+        {
+          "name": "properties",
+          "description": "An object containing the property and value pairs to set.",
+          "type": "object"
+        }
+      ],
+      "return": "void"
+    }
+  }
+}

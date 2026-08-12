@@ -42,7 +42,7 @@ INSERT INTO app_provisioning_state (
     provisioning_status
 ) VALUES (
     1,
-    '2026.07.01.1',
+    '2026.07.02.1',
     'PROVISIONING'
 );
 

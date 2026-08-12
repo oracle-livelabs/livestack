@@ -1,0 +1,319 @@
+{
+  "name": "picto-chart",
+  "version": "20.0.2",
+  "jetVersion": "^20.0.2",
+  "pack": "oj-c",
+  "type": "composite",
+  "dependencyScope": "runtime",
+  "license": "https://opensource.org/licenses/UPL",
+  "implements": [
+    "CPictoChartElement"
+  ],
+  "description": "A picto chart is an interactive data visualization of textual data. PictoChart uses icons to visualize an absolute number, or the relative sizes of the different parts of a population.",
+  "displayName": "Picto Chart",
+  "main": "oj-c/picto-chart",
+  "help": "oj-c.PictoChart.html",
+  "status": [
+    {
+      "type": "candidate",
+      "since": "20.0.0"
+    }
+  ],
+  "extension": {
+    "vbdt": {
+      "module": "oj-c/picto-chart",
+      "defaultColumns": 12,
+      "minColumns": 6
+    },
+    "oracle": {
+      "icon": "oj-ux-ico-picto-chart",
+      "uxSpecs": [
+        "picto-chart"
+      ]
+    },
+    "webelement": {
+      "package": "@oracle/oraclejet-core-pack",
+      "version": "20.0.2",
+      "docUrl": "https://www.oracle.com/webfolder/technetwork/jet/cpwdtsdoc/classes/PictoChartWebElement.html",
+      "export": "findPictoChart",
+      "main": "@oracle/oraclejet-core-pack/webdriver"
+    }
+  },
+  "since": "20.0.0",
+  "requirements": [
+    {
+      "type": "anyOf",
+      "label": "accessibility",
+      "properties": [
+        "aria-label",
+        "aria-labelledby"
+      ]
+    }
+  ],
+  "properties": {
+    "data": {
+      "type": "DataProvider|null",
+      "description": "Specifies the DataProvider for the sections and items of the picto-chart",
+      "displayName": "Data",
+      "help": "#data",
+      "value": null
+    },
+    "hiddenCategories": {
+      "type": "Array<string>",
+      "description": "An array of categories that will be hidden.",
+      "displayName": "Hidden Categories",
+      "help": "#hiddenCategories",
+      "writeback": true,
+      "value": []
+    },
+    "highlightMatch": {
+      "type": "string",
+      "description": "The matching condition for the highlightedCategories option. By default, highlightMatch is 'all' and only items whose categories match all of the values specified in the highlightedCategories array will be highlighted. If highlightMatch is 'any', then items that match at least one of the highlightedCategories values will be highlighted.",
+      "displayName": "Highlight Match",
+      "help": "#highlightMatch",
+      "enumValues": [
+        "all",
+        "any"
+      ],
+      "value": "all"
+    },
+    "highlightedCategories": {
+      "type": "Array<string>",
+      "description": "An array of categories that will be highlighted.",
+      "displayName": "Highlighted Categories",
+      "help": "#highlightedCategories",
+      "writeback": true,
+      "value": []
+    },
+    "hoverBehavior": {
+      "type": "string",
+      "description": "Defines the behavior applied when hovering over data items.",
+      "displayName": "Hover Behavior",
+      "help": "#hoverBehavior",
+      "propertyEditorValues": {
+        "dim": {
+          "description": "Dimming hover behavior is applied.",
+          "displayName": "Dim"
+        },
+        "none": {
+          "description": "No hover behavior will be applied.",
+          "displayName": "None"
+        }
+      },
+      "enumValues": [
+        "none",
+        "dim"
+      ],
+      "value": "none"
+    },
+    "layout": {
+      "type": "string",
+      "description": "The direction in which the items are laid out.",
+      "displayName": "Layout",
+      "help": "#layout",
+      "propertyEditorValues": {
+        "vertical": {
+          "description": "Items will be vertically placed in available space.",
+          "displayName": "Vertical"
+        },
+        "horizontal": {
+          "description": "Items will be horizontally stacked.",
+          "displayName": "Horizontal"
+        }
+      },
+      "enumValues": [
+        "horizontal",
+        "vertical"
+      ],
+      "value": "horizontal"
+    },
+    "drilling": {
+      "type": "string",
+      "description": "Drillable items will show a pointer cursor on hover and fire an ojDrill event on click (double click if selection is enabled).",
+      "displayName": "Drilling",
+      "help": "#drilling",
+      "enumValues": [
+        "off",
+        "on"
+      ],
+      "value": "off"
+    },
+    "layoutOrigin": {
+      "type": "string",
+      "description": "Defines where the first item is rendered. The subsequent items follow the first item according to the layout.",
+      "displayName": "Layout Origin",
+      "help": "#layoutOrigin",
+      "enumValues": [
+        "topStart",
+        "topEnd",
+        "bottomStart",
+        "bottomEnd"
+      ],
+      "value": "topStart"
+    },
+    "columnCount": {
+      "type": "number",
+      "description": "Specifies the column count.",
+      "displayName": "Column Count",
+      "help": "#columnCount"
+    },
+    "columnWidth": {
+      "type": "number|string",
+      "description": "Specifies the column width.",
+      "displayName": "Column Width",
+      "help": "#columnWidth"
+    },
+    "contextMenuConfig": {
+      "type": "object",
+      "description": "Specifies a context menu configuration.",
+      "displayName": "Context Menu Config",
+      "help": "#contextMenuConfig",
+      "properties": {
+        "accessibleLabel": {
+          "type": "string"
+        },
+        "items": {
+          "type": "function"
+        }
+      }
+    },
+    "rowCount": {
+      "type": "number",
+      "description": "Specifies the row count.",
+      "displayName": "Row Count",
+      "help": "#rowCount"
+    },
+    "rowHeight": {
+      "type": "number|string",
+      "description": "Specifies the row height.",
+      "displayName": "Row Height",
+      "help": "#rowHeight"
+    },
+    "selectionMode": {
+      "type": "string",
+      "description": "Specifies the selection mode.",
+      "displayName": "Selection Mode",
+      "help": "#selectionMode",
+      "enumValues": [
+        "none",
+        "multiple",
+        "single"
+      ],
+      "value": "none"
+    },
+    "selection": {
+      "type": "Array<string|number>",
+      "description": "An array of id strings, used to define the selected objects.",
+      "displayName": "Selection",
+      "help": "#selection",
+      "writeback": true,
+      "value": []
+    }
+  },
+  "events": {
+    "ojContextMenuAction": {
+      "bubbles": true,
+      "description": "Triggered when a menu item is clicked, whether by keyboard, mouse, or touch events.",
+      "eventGroup": "common",
+      "displayName": "onOjContextMenuAction",
+      "detail": {
+        "menuItemKey": {
+          "type": "string"
+        },
+        "contextMenuContext": {
+          "type": "object"
+        }
+      }
+    },
+    "ojContextMenuSelection": {
+      "bubbles": true,
+      "description": "Triggered when a select menu item is clicked, whether by keyboard, mouse, or touch events.",
+      "eventGroup": "common",
+      "displayName": "onOjContextMenuSelection",
+      "help": "#event:ojContextMenuSelection",
+      "detail": {
+        "value": {
+          "type": "string|Array<string>"
+        },
+        "contextMenuContext": {
+          "type": "object"
+        },
+        "menuSelectionGroupKey": {
+          "type": "string"
+        }
+      }
+    },
+    "ojDrill": {
+      "description": "Triggered during a drill gesture (single click on the pictochart item).",
+      "help": "#event:drill",
+      "detail": {
+        "id": {
+          "type": "any",
+          "description": "The id of the drilled item."
+        }
+      }
+    }
+  },
+  "slots": {
+    "itemTemplate": {
+      "description": "The itemTemplate slot is used to map each data item in the component. See the Help documentation for more information.",
+      "displayName": "itemTemplate",
+      "help": "#itemTemplate",
+      "maxItems": 1,
+      "data": {
+        "data": {
+          "type": "any"
+        },
+        "key": {
+          "type": "any"
+        },
+        "index": {
+          "type": "number"
+        }
+      }
+    }
+  },
+  "methods": {
+    "setProperty": {
+      "description": "Sets a property or a single subproperty for complex properties and notifies the component of the change, triggering a corresponding event.",
+      "help": "#setProperty",
+      "params": [
+        {
+          "name": "property",
+          "description": "The property name to set. Supports dot notation for subproperty access.",
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "description": "The new value to set the property to.",
+          "type": "any"
+        }
+      ],
+      "return": "void"
+    },
+    "getProperty": {
+      "description": "Retrieves the value of a property or a subproperty.",
+      "help": "#getProperty",
+      "params": [
+        {
+          "name": "property",
+          "description": "The property name to get. Supports dot notation for subproperty access.",
+          "type": "string"
+        }
+      ],
+      "return": "any"
+    },
+    "setProperties": {
+      "description": "Performs a batch set of properties.",
+      "help": "#setProperties",
+      "params": [
+        {
+          "name": "properties",
+          "description": "An object containing the property and value pairs to set.",
+          "type": "object"
+        }
+      ],
+      "return": "void"
+    }
+  }
+}

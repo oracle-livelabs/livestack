@@ -196,6 +196,7 @@ export const api = {
   fulfillment: {
     kpis: () => apiFetch('/fulfillment/kpis'),
     centers: () => apiFetch('/fulfillment/centers'),
+    spatialReadiness: () => apiFetch('/fulfillment/spatial-readiness'),
     nearest: (params) => {
       const qs = new URLSearchParams(params).toString();
       return apiFetch(`/fulfillment/nearest?${qs}`);

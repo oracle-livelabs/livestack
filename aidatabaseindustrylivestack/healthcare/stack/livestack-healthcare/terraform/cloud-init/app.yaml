@@ -1,0 +1,44 @@
+#cloud-config
+package_update: true
+packages:
+  - curl
+  - git
+  - jq
+  - podman
+  - python3
+  - python3-pip
+  - tar
+  - unzip
+
+write_files:
+  - path: /opt/healthcare-livestack/oci-runtime.env
+    permissions: "0644"
+    owner: root:root
+    content: |
+      APP_PORT=${app_port}
+      ORDS_PORT=${ords_port}
+      ORDS_BIND_ADDRESS=${ords_bind_address}
+      EXPOSE_ORDS_PUBLIC=${expose_ords_public}
+      OLLAMA_BASE_URL=http://${ollama_private_ip}:${ollama_port}
+      OLLAMA_MODEL=${ollama_model}
+      APP_SOURCE_ARCHIVE_URL=${app_source_archive_url}
+      APP_SOURCE_ARCHIVE_SHA256=${app_source_archive_sha256}
+      APP_SOURCE_ARCHIVE_STRIP_COMPONENTS=${app_source_archive_strip_components}
+      AUTO_START_APP=${auto_start_app}
+      ORACLE_USER=${oracle_user}
+      ORACLE_CONNECTION_STRING=${oracle_connection_string}
+      ORACLE_POOL_MIN=${oracle_pool_min}
+      ORACLE_POOL_MAX=${oracle_pool_max}
+      ORACLE_POOL_INCREMENT=${oracle_pool_increment}
+      ADB_DB_NAME=${adb_db_name}
+      ADB_OCID=${adb_id}
+      ADB_IS_MTLS_CONNECTION_REQUIRED=${adb_is_mtls_connection_required}
+  - path: /usr/local/sbin/bootstrap-healthcare-app-vm.sh
+    permissions: "0755"
+    owner: root:root
+    content: |
+      ${bootstrap_app_vm_script}
+
+runcmd:
+  - [bash, -lc, "mkdir -p /opt/healthcare-livestack"]
+  - [bash, -lc, "/usr/local/sbin/bootstrap-healthcare-app-vm.sh 2>&1 | tee /var/log/healthcare-app-bootstrap.log"]

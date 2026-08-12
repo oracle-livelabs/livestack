@@ -1,0 +1,4 @@
+STORE_SK,LOCATION,GEOCODE_AS_GEOM,DISTANCE_KM,IMPACT_ZONE
+3,"1821 Broad Ct, Columbus, OH 43203","{""point"": {""directposition"": [-82.82035, 39.98107]}, ""srid"": 4326}",28.46,Within 50 KM of Storm Path
+11,"1747 Spruce Ln, Columbus, OH 43203","{""point"": {""directposition"": [-83.10825, 39.90162]}, ""srid"": 4326}",40.79,Within 50 KM of Storm Path
+12,"9089 Elm Ct, Columbus, OH 43201","{""point"": {""directposition"": [-82.92377, 39.96496]}, ""srid"": 4326}",33.8,Within 50 KM of Storm Path

@@ -1,0 +1,484 @@
+influencer_id,handle,display_name,platform,follower_count,engagement_rate,influence_score,niche,city,region,country,is_verified,created_at
+1,@fda_watch,CMS Watch,Supply Quality Notice,29787,0.0419,71.62,FDA,New York,New York,US,0,2026-04-13T09:16:47Z
+2,@ema_review,Quality Review Review,Compliance Signal,40474,0.0457,78.45,Quality Review,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+3,@gxp_compliance,GxP Compliance,Cold Chain Bulletin,289825,0.0381,84.35,GxP,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+4,@gxp_audit,Quality Audit,Regulatory Notice,4845,0.0496,69.43,Care Logistics,Houston,Texas,US,0,2026-04-13T09:16:47Z
+5,@protocol_feed,Protocol Feed,Capacity Alert,8767,0.0365,62.32,Port Logistics,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+6,@port_status,Port Status,Supply Quality Notice,8757,0.0618,73.6,GMP Utilities,San Francisco,California,US,0,2026-04-13T09:16:47Z
+7,@care logistics_coordinator,Care Logistics Coordinator,Compliance Signal,82123,0.0767,100,Vaccine Products,Miami,Florida,US,0,2026-04-13T09:16:47Z
+8,@vaccine_controlroom,Vaccine Controlroom,Cold Chain Bulletin,48455,0.0488,74.64,Protocol Operations,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+9,@waterworks_lab,Waterworks Lab,Regulatory Notice,9410,0.0775,79.81,Care Delivery Supplies,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+10,@formulation_tracker,Formulation Tracker,Capacity Alert,5314,0.0358,60.18,Device Packaging,Austin,Texas,US,0,2026-04-13T09:16:47Z
+11,@aseptic_flow,Aseptic Flow,Supply Quality Notice,1884,0.0335,59.83,Steriles,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+12,@trial supply_hub,Trial Supply Hub,Compliance Signal,2955,0.0311,61.13,Sterility Assurance,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+13,@device_release,Device Release,Cold Chain Bulletin,62427,0.072,95.97,Manufacturer Quality,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+14,@assay_watchlist,Assay Watchlist,Regulatory Notice,6305,0.1018,98.65,Component Risk,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+15,@sterility_bridge,Sterility Bridge,Capacity Alert,6623,0.0607,75.6,Care Logistics Logistics,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+16,@aseptic_ops,Aseptic Ops,Supply Quality Notice,21942,0.0745,96.91,FDA,San Diego,California,US,0,2026-04-13T09:16:47Z
+17,@excipient_intel,Excipient Intel,Compliance Signal,1845,0.088,83.27,Quality Review,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+18,@pv_wire,PV Wire,Cold Chain Bulletin,9976,0.0765,85.02,GxP,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+19,@supply_ledger,Supply Ledger,Regulatory Notice,9123,0.0362,71.62,Care Logistics,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+20,@tariff_registry,Tariff Registry,Capacity Alert,9026,0.0951,93.79,Port Logistics,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+21,@freight_matrix,Freight Matrix,Supply Quality Notice,3774,0.0615,80.61,GMP Utilities,New York,New York,US,0,2026-04-13T09:16:47Z
+22,@purity_bulletins,Purity Bulletins,Compliance Signal,83369,0.0622,90.24,Vaccine Products,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+23,@storage_bulletin,Storage Bulletin,Cold Chain Bulletin,85062,0.0573,85.12,Protocol Operations,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+24,@compat_notice,Compat Notice,Regulatory Notice,9133,0.0775,85.5,Care Delivery Supplies,Houston,Texas,US,0,2026-04-13T09:16:47Z
+25,@allocation_network,Allocation Network,Capacity Alert,26237,0.0264,68.42,Device Packaging,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+26,@component_map,Component Map,Supply Quality Notice,17305,0.0471,82.26,Steriles,San Francisco,California,US,0,2026-04-13T09:16:47Z
+27,@plant_control,Plant Control,Compliance Signal,8926,0.1031,94.94,Sterility Assurance,Miami,Florida,US,0,2026-04-13T09:16:47Z
+28,@safety_queue,Safety Queue,Cold Chain Bulletin,37898,0.0655,90.3,Manufacturer Quality,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+29,@import_channel,Import Channel,Regulatory Notice,4482,0.1016,91.6,Component Risk,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+30,@export_alerts,Export Alerts,Capacity Alert,63731,0.0519,81.88,Care Logistics Logistics,Austin,Texas,US,0,2026-04-13T09:16:47Z
+31,@quality_weekly,Quality Weekly,Supply Quality Notice,536083,0.0277,88.26,FDA,Nashville,Tennessee,US,1,2026-04-13T09:16:47Z
+32,@compliance_market,Compliance Market,Compliance Signal,8576,0.1177,100,Quality Review,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+33,@regdesk_index,Regdesk Index,Cold Chain Bulletin,7341,0.0926,89.01,GxP,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+34,@pvwatch_office,PV Watch Office,Regulatory Notice,509575,0.0215,84.22,Care Logistics,Atlanta,Georgia,US,1,2026-04-13T09:16:47Z
+35,@labdesk_risk,Labdesk Risk,Capacity Alert,2336,0.032,60.49,Port Logistics,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+36,@route_observer,Route Observer,Supply Quality Notice,90248,0.0539,80.52,GMP Utilities,San Diego,California,US,0,2026-04-13T09:16:47Z
+37,@rail_desk,Rail Desk,Compliance Signal,43754,0.0371,81.17,Vaccine Products,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+38,@barge_signal,Barge Signal,Cold Chain Bulletin,71571,0.0657,90.66,Protocol Operations,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+39,@gulf_safety,Gulf Safety,Regulatory Notice,563253,0.0407,94.21,Care Delivery Supplies,Las Vegas,Nevada,US,1,2026-04-13T09:16:47Z
+40,@pacific_screen,Pacific Screen,Capacity Alert,27525,0.0475,72.77,Device Packaging,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+41,@midwest_node,Midwest Node,Supply Quality Notice,617113,0.0441,96.66,Steriles,New York,New York,US,1,2026-04-13T09:16:47Z
+42,@northeast_source,Northeast Source,Compliance Signal,11615,0.031,69.01,Sterility Assurance,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+43,@southwest_pulse,Southwest Pulse,Cold Chain Bulletin,5486,0.0944,87.07,Manufacturer Quality,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+44,@vaccine_updates,Vaccine Updates,Regulatory Notice,68500,0.0706,91.8,Component Risk,Houston,Texas,US,0,2026-04-13T09:16:47Z
+45,@protocoldesk_monitor,Protocoldesk Monitor,Capacity Alert,13113440,0.01,83.84,Care Logistics Logistics,Phoenix,Arizona,US,1,2026-04-13T09:16:47Z
+46,@gxpdesk_routing,GxPDesk Routing,Supply Quality Notice,74785,0.0584,86.91,FDA,San Francisco,California,US,0,2026-04-13T09:16:47Z
+47,@portsupply_forecast,Portsupply Forecast,Compliance Signal,60707,0.0423,76.63,Quality Review,Miami,Florida,US,0,2026-04-13T09:16:47Z
+48,@coldchainops_brief,Care Logisticsops Brief,Cold Chain Bulletin,9805,0.0647,84.17,GxP,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+49,@fdawatch_planner,CMS Watch Planner,Regulatory Notice,9843,0.074,89.37,Care Logistics,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+50,@emaupdates_report,Quality Review Updates Report,Capacity Alert,816891,0.0209,79.09,Port Logistics,Austin,Texas,US,1,2026-04-13T09:16:47Z
+51,@fda_watch2,CMS Watch,Supply Quality Notice,4838,0.088,82.74,GMP Utilities,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+52,@ema_review2,Quality Review Review,Compliance Signal,12017,0.0512,74.88,Vaccine Products,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+53,@gxp_compliance2,GxP Compliance,Cold Chain Bulletin,35610,0.0582,90.5,Protocol Operations,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+54,@gxp_audit2,Quality Audit,Regulatory Notice,65652,0.079,100,Care Delivery Supplies,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+55,@protocol_feed2,Protocol Feed,Capacity Alert,6292,0.0387,71.86,Device Packaging,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+56,@port_status2,Port Status,Supply Quality Notice,2430,0.0898,81.99,Steriles,San Diego,California,US,0,2026-04-13T09:16:47Z
+57,@care logistics_coordinator2,Care Logistics Coordinator,Compliance Signal,934165,0.0317,86.89,Sterility Assurance,Minneapolis,Minnesota,US,1,2026-04-13T09:16:47Z
+58,@vaccine_controlroom2,Vaccine Controlroom,Cold Chain Bulletin,4304,0.0673,74.41,Manufacturer Quality,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+59,@waterworks_lab2,Waterworks Lab,Regulatory Notice,1725,0.0626,69.79,Component Risk,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+60,@formulation_tracker2,Formulation Tracker,Capacity Alert,62836,0.0564,78.66,Care Logistics Logistics,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+61,@alkali_flow2,Aseptic Flow,Supply Quality Notice,696723,0.0234,79.61,FDA,New York,New York,US,1,2026-04-13T09:16:47Z
+62,@trial supply_hub2,Trial Supply Hub,Compliance Signal,725374,0.0257,88.88,Quality Review,Los Angeles,California,US,1,2026-04-13T09:16:47Z
+63,@device_release2,Device Release,Cold Chain Bulletin,44952,0.0563,77.54,GxP,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+64,@catalyst_watchlist2,Assay Watchlist,Regulatory Notice,319361,0.028,74.74,Care Logistics,Houston,Texas,US,0,2026-04-13T09:16:47Z
+65,@chlor_bridge2,Sterility Bridge,Capacity Alert,5602,0.0388,60.54,Port Logistics,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+66,@peroxide_ops2,Aseptic Ops,Supply Quality Notice,7110,0.1153,100,GMP Utilities,San Francisco,California,US,0,2026-04-13T09:16:47Z
+67,@citric_intel2,Excipient Intel,Compliance Signal,7014,0.0837,89.64,Vaccine Products,Miami,Florida,US,0,2026-04-13T09:16:47Z
+68,@pv_wire2,PV Wire,Cold Chain Bulletin,4793904,0.0155,81.19,Protocol Operations,Seattle,Washington,US,1,2026-04-13T09:16:47Z
+69,@supply_ledger2,Supply Ledger,Regulatory Notice,22221,0.0287,66.12,Care Delivery Supplies,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+70,@tariff_registry2,Tariff Registry,Capacity Alert,93758,0.0417,87.56,Device Packaging,Austin,Texas,US,0,2026-04-13T09:16:47Z
+71,@freight_matrix2,Freight Matrix,Supply Quality Notice,875656,0.0217,88.48,Steriles,Nashville,Tennessee,US,1,2026-04-13T09:16:47Z
+72,@purity_bulletins2,Purity Bulletins,Compliance Signal,7898,0.085,87.16,Sterility Assurance,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+73,@storage_bulletin2,Storage Bulletin,Cold Chain Bulletin,2234,0.0385,67.44,Manufacturer Quality,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+74,@compat_notice2,Compat Notice,Regulatory Notice,97139,0.0454,88.16,Component Risk,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+75,@allocation_network2,Allocation Network,Capacity Alert,14434057,0.0154,97.91,Care Logistics Logistics,Dallas,Texas,US,1,2026-04-13T09:16:47Z
+76,@component_map2,Component Map,Supply Quality Notice,67907,0.036,76.32,FDA,San Diego,California,US,0,2026-04-13T09:16:47Z
+77,@plant_control2,Plant Control,Compliance Signal,6207,0.0675,75.57,Quality Review,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+78,@safety_queue2,Safety Queue,Cold Chain Bulletin,8857,0.0692,86.97,GxP,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+79,@import_channel2,Import Channel,Regulatory Notice,10699,0.0673,86.5,Care Logistics,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+80,@export_alerts2,Export Alerts,Capacity Alert,98266,0.0366,80.17,Port Logistics,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+81,@quality_weekly2,Quality Weekly,Supply Quality Notice,9487,0.0717,89.28,GMP Utilities,New York,New York,US,0,2026-04-13T09:16:47Z
+82,@compliance_market2,Compliance Market,Compliance Signal,6852,0.0604,75.38,Vaccine Products,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+83,@regdesk_index2,Regdesk Index,Cold Chain Bulletin,4650,0.0497,70.27,Protocol Operations,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+84,@pvwatch_office2,PV Watch Office,Regulatory Notice,15251,0.0782,86.63,Care Delivery Supplies,Houston,Texas,US,0,2026-04-13T09:16:47Z
+85,@labdesk_risk2,Labdesk Risk,Capacity Alert,2854,0.0862,84.05,Device Packaging,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+86,@route_observer2,Route Observer,Supply Quality Notice,3956,0.077,88.11,Steriles,San Francisco,California,US,0,2026-04-13T09:16:47Z
+87,@rail_desk2,Rail Desk,Compliance Signal,156670,0.0329,79.11,Sterility Assurance,Miami,Florida,US,0,2026-04-13T09:16:47Z
+88,@barge_signal2,Barge Signal,Cold Chain Bulletin,2163,0.111,95.1,Manufacturer Quality,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+89,@gulf_safety2,Gulf Safety,Regulatory Notice,85246,0.04,72.35,Component Risk,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+90,@pacific_screen2,Pacific Screen,Capacity Alert,92349,0.0389,73.85,Care Logistics Logistics,Austin,Texas,US,0,2026-04-13T09:16:47Z
+91,@midwest_node2,Midwest Node,Supply Quality Notice,5177,0.0869,95.89,FDA,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+92,@northeast_source2,Northeast Source,Compliance Signal,9852,0.1129,97.49,Quality Review,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+93,@southwest_pulse2,Southwest Pulse,Cold Chain Bulletin,1417,0.0506,70.96,GxP,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+94,@vaccine_updates2,Vaccine Updates,Regulatory Notice,5299,0.0875,88.81,Care Logistics,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+95,@protocoldesk_monitor2,Protocoldesk Monitor,Capacity Alert,65292,0.0687,93.5,Port Logistics,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+101,@gxpdesk_routing2,GxPDesk Routing,Supply Quality Notice,73658,0.0517,83.61,GMP Utilities,San Diego,California,US,0,2026-04-13T09:16:47Z
+102,@portsupply_forecast2,Portsupply Forecast,Compliance Signal,4916,0.1162,100,Vaccine Products,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+103,@coldchainops_brief2,Care Logisticsops Brief,Cold Chain Bulletin,60145,0.0495,82.6,Protocol Operations,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+104,@fdawatch_planner2,CMS Watch Planner,Regulatory Notice,32849,0.073,86.31,Care Delivery Supplies,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+105,@emaupdates_report2,Quality Review Updates Report,Capacity Alert,2363,0.1179,100,Device Packaging,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+106,@fda_watch3,CMS Watch,Supply Quality Notice,245920,0.0367,84.7,Steriles,New York,New York,US,0,2026-04-13T09:16:47Z
+107,@ema_review3,Quality Review Review,Compliance Signal,9762,0.0823,88.13,Sterility Assurance,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+108,@gxp_compliance3,GxP Compliance,Cold Chain Bulletin,4217,0.0485,73.21,Manufacturer Quality,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+109,@gxp_audit3,Quality Audit,Regulatory Notice,4704,0.1195,100,Component Risk,Houston,Texas,US,0,2026-04-13T09:16:47Z
+110,@protocol_feed3,Protocol Feed,Capacity Alert,84601,0.0781,100,Care Logistics Logistics,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+111,@port_status3,Port Status,Supply Quality Notice,901538,0.0242,77.36,FDA,San Francisco,California,US,1,2026-04-13T09:16:47Z
+112,@care logistics_coordinator3,Care Logistics Coordinator,Compliance Signal,1435,0.0704,81.28,Quality Review,Miami,Florida,US,0,2026-04-13T09:16:47Z
+113,@vaccine_controlroom3,Vaccine Controlroom,Cold Chain Bulletin,84089,0.0491,83.86,GxP,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+114,@waterworks_lab3,Waterworks Lab,Regulatory Notice,89858,0.0749,91.43,Care Logistics,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+115,@formulation_tracker3,Formulation Tracker,Capacity Alert,3431,0.0386,69.87,Port Logistics,Austin,Texas,US,0,2026-04-13T09:16:47Z
+116,@alkali_flow3,Aseptic Flow,Supply Quality Notice,39057,0.0548,79.46,GMP Utilities,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+117,@trial supply_hub3,Trial Supply Hub,Compliance Signal,8048,0.1043,100,Vaccine Products,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+118,@device_release3,Device Release,Cold Chain Bulletin,7988,0.0688,87.07,Protocol Operations,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+119,@catalyst_watchlist3,Assay Watchlist,Regulatory Notice,6754,0.1129,100,Care Delivery Supplies,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+120,@chlor_bridge3,Sterility Bridge,Capacity Alert,250289,0.0333,76.21,Device Packaging,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+121,@peroxide_ops3,Aseptic Ops,Supply Quality Notice,865261,0.0167,71.72,Steriles,San Diego,California,US,1,2026-04-13T09:16:47Z
+122,@citric_intel3,Excipient Intel,Compliance Signal,84982,0.0477,87.31,Sterility Assurance,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+123,@pv_wire3,PV Wire,Cold Chain Bulletin,68341,0.0603,91.51,Manufacturer Quality,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+124,@supply_ledger3,Supply Ledger,Regulatory Notice,6828,0.1104,97.28,Component Risk,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+125,@tariff_registry3,Tariff Registry,Capacity Alert,754246,0.0386,89.21,Care Logistics Logistics,Brooklyn,New York,US,1,2026-04-13T09:16:47Z
+126,@freight_matrix3,Freight Matrix,Supply Quality Notice,7136,0.1019,96.51,FDA,New York,New York,US,0,2026-04-13T09:16:47Z
+127,@purity_bulletins3,Purity Bulletins,Compliance Signal,81812,0.0498,88.26,Quality Review,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+128,@storage_bulletin3,Storage Bulletin,Cold Chain Bulletin,20073,0.0699,92.03,GxP,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+129,@compat_notice3,Compat Notice,Regulatory Notice,1668,0.0368,60.28,Care Logistics,Houston,Texas,US,0,2026-04-13T09:16:47Z
+130,@allocation_network3,Allocation Network,Capacity Alert,47675,0.0707,93.77,Port Logistics,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+131,@component_map3,Component Map,Supply Quality Notice,72439,0.0769,98.89,GMP Utilities,San Francisco,California,US,0,2026-04-13T09:16:47Z
+132,@plant_control3,Plant Control,Compliance Signal,51330,0.0312,66.31,Vaccine Products,Miami,Florida,US,0,2026-04-13T09:16:47Z
+133,@safety_queue3,Safety Queue,Cold Chain Bulletin,43850,0.03,70.4,Protocol Operations,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+134,@import_channel3,Import Channel,Regulatory Notice,64111,0.0691,97.82,Care Delivery Supplies,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+135,@export_alerts3,Export Alerts,Capacity Alert,7956,0.039,68.87,Device Packaging,Austin,Texas,US,0,2026-04-13T09:16:47Z
+136,@quality_weekly3,Quality Weekly,Supply Quality Notice,111378,0.03,75.48,Steriles,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+137,@compliance_market3,Compliance Market,Compliance Signal,8309,0.0685,82.94,Sterility Assurance,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+138,@regdesk_index3,Regdesk Index,Cold Chain Bulletin,2495,0.1025,92.12,Manufacturer Quality,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+139,@pvwatch_office3,PV Watch Office,Regulatory Notice,810707,0.0235,79.77,Component Risk,Atlanta,Georgia,US,1,2026-04-13T09:16:47Z
+140,@labdesk_risk3,Labdesk Risk,Capacity Alert,9857127,0.015,93.11,Care Logistics Logistics,Dallas,Texas,US,1,2026-04-13T09:16:47Z
+141,@route_observer3,Route Observer,Supply Quality Notice,520064,0.0163,72.9,FDA,San Diego,California,US,1,2026-04-13T09:16:47Z
+142,@rail_desk3,Rail Desk,Compliance Signal,9643,0.0843,90.43,Quality Review,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+143,@barge_signal3,Barge Signal,Cold Chain Bulletin,82395,0.0614,88.18,GxP,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+144,@gulf_safety3,Gulf Safety,Regulatory Notice,4665,0.0526,63.96,Care Logistics,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+145,@pacific_screen3,Pacific Screen,Capacity Alert,119177,0.0182,64.35,Port Logistics,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+146,@midwest_node3,Midwest Node,Supply Quality Notice,5760,0.0791,92.22,GMP Utilities,New York,New York,US,0,2026-04-13T09:16:47Z
+147,@northeast_source3,Northeast Source,Compliance Signal,1710,0.1048,92.59,Vaccine Products,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+148,@southwest_pulse3,Southwest Pulse,Cold Chain Bulletin,9139,0.1056,97.22,Protocol Operations,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+149,@vaccine_updates3,Vaccine Updates,Regulatory Notice,5194,0.0985,93.43,Care Delivery Supplies,Houston,Texas,US,0,2026-04-13T09:16:47Z
+150,@protocoldesk_monitor3,Protocoldesk Monitor,Capacity Alert,6344,0.0359,65.31,Device Packaging,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+151,@gxpdesk_routing3,GxPDesk Routing,Supply Quality Notice,9563,0.1139,100,Steriles,San Francisco,California,US,0,2026-04-13T09:16:47Z
+152,@portsupply_forecast3,Portsupply Forecast,Compliance Signal,5848,0.0401,67.96,Sterility Assurance,Miami,Florida,US,0,2026-04-13T09:16:47Z
+153,@coldchainops_brief3,Care Logisticsops Brief,Cold Chain Bulletin,76624,0.0433,76.58,Manufacturer Quality,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+154,@fdawatch_planner3,CMS Watch Planner,Regulatory Notice,5788,0.0739,88.28,Component Risk,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+155,@emaupdates_report3,Quality Review Updates Report,Capacity Alert,169138,0.0333,73.68,Care Logistics Logistics,Austin,Texas,US,0,2026-04-13T09:16:47Z
+156,@fda_watch4,CMS Watch,Supply Quality Notice,2878,0.0503,60.43,FDA,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+157,@ema_review4,Quality Review Review,Compliance Signal,184973,0.0259,69.88,Quality Review,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+158,@gxp_compliance4,GxP Compliance,Cold Chain Bulletin,1196,0.0689,73.11,GxP,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+159,@gxp_audit4,Quality Audit,Regulatory Notice,706439,0.0267,81.44,Care Logistics,Atlanta,Georgia,US,1,2026-04-13T09:16:47Z
+160,@protocol_feed4,Protocol Feed,Capacity Alert,597559,0.0282,86.29,Port Logistics,Dallas,Texas,US,1,2026-04-13T09:16:47Z
+161,@port_status4,Port Status,Supply Quality Notice,1493,0.0405,53.19,GMP Utilities,San Diego,California,US,0,2026-04-13T09:16:47Z
+162,@care logistics_coordinator4,Care Logistics Coordinator,Compliance Signal,2285,0.0659,70.08,Vaccine Products,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+163,@vaccine_controlroom4,Vaccine Controlroom,Cold Chain Bulletin,7386557,0.0215,96.47,Protocol Operations,Detroit,Michigan,US,1,2026-04-13T09:16:47Z
+164,@waterworks_lab4,Waterworks Lab,Regulatory Notice,2718,0.0373,63.59,Care Delivery Supplies,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+165,@formulation_tracker4,Formulation Tracker,Capacity Alert,5144,0.0562,69.56,Device Packaging,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+166,@alkali_flow4,Aseptic Flow,Supply Quality Notice,89451,0.065,93.36,Steriles,New York,New York,US,0,2026-04-13T09:16:47Z
+167,@trial supply_hub4,Trial Supply Hub,Compliance Signal,90976,0.0703,90.35,Sterility Assurance,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+168,@device_release4,Device Release,Cold Chain Bulletin,50566,0.0253,62.29,Manufacturer Quality,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+169,@catalyst_watchlist4,Assay Watchlist,Regulatory Notice,3355,0.1086,92.99,Component Risk,Houston,Texas,US,0,2026-04-13T09:16:47Z
+170,@chlor_bridge4,Sterility Bridge,Capacity Alert,2909,0.1166,100,Care Logistics Logistics,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+171,@peroxide_ops4,Aseptic Ops,Supply Quality Notice,86899,0.0592,88.84,FDA,San Francisco,California,US,0,2026-04-13T09:16:47Z
+172,@citric_intel4,Excipient Intel,Compliance Signal,28555,0.0446,78.36,Quality Review,Miami,Florida,US,0,2026-04-13T09:16:47Z
+173,@pv_wire4,PV Wire,Cold Chain Bulletin,2177,0.0878,78.61,GxP,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+174,@supply_ledger4,Supply Ledger,Regulatory Notice,39296,0.0647,82.71,Care Logistics,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+175,@tariff_registry4,Tariff Registry,Capacity Alert,32550,0.0302,72.4,Port Logistics,Austin,Texas,US,0,2026-04-13T09:16:47Z
+176,@freight_matrix4,Freight Matrix,Supply Quality Notice,490373,0.0225,83.08,GMP Utilities,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+177,@purity_bulletins4,Purity Bulletins,Compliance Signal,5568,0.0873,91.63,Vaccine Products,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+178,@storage_bulletin4,Storage Bulletin,Cold Chain Bulletin,2494,0.0727,76.35,Protocol Operations,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+179,@compat_notice4,Compat Notice,Regulatory Notice,3105,0.0325,59.52,Care Delivery Supplies,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+180,@allocation_network4,Allocation Network,Capacity Alert,782810,0.0357,87.24,Device Packaging,Dallas,Texas,US,1,2026-04-13T09:16:47Z
+181,@component_map4,Component Map,Supply Quality Notice,25754,0.0437,79.91,Steriles,San Diego,California,US,0,2026-04-13T09:16:47Z
+182,@plant_control4,Plant Control,Compliance Signal,186874,0.0355,75.27,Sterility Assurance,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+183,@safety_queue4,Safety Queue,Cold Chain Bulletin,50165,0.0475,83.17,Manufacturer Quality,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+184,@import_channel4,Import Channel,Regulatory Notice,71195,0.0661,89.66,Component Risk,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+185,@export_alerts4,Export Alerts,Capacity Alert,4367,0.0712,85.72,Care Logistics Logistics,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+186,@quality_weekly4,Quality Weekly,Supply Quality Notice,2460,0.1092,88.69,FDA,New York,New York,US,0,2026-04-13T09:16:47Z
+187,@compliance_market4,Compliance Market,Compliance Signal,52375,0.0679,91.33,Quality Review,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+188,@regdesk_index4,Regdesk Index,Cold Chain Bulletin,83252,0.0656,90.18,GxP,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+189,@pvwatch_office4,PV Watch Office,Regulatory Notice,81932,0.0633,90.81,Care Logistics,Houston,Texas,US,0,2026-04-13T09:16:47Z
+190,@labdesk_risk4,Labdesk Risk,Capacity Alert,444724,0.0255,81.11,Port Logistics,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+191,@route_observer4,Route Observer,Supply Quality Notice,2303,0.1172,96.19,GMP Utilities,San Francisco,California,US,0,2026-04-13T09:16:47Z
+192,@rail_desk4,Rail Desk,Compliance Signal,137541,0.0217,71.21,Vaccine Products,Miami,Florida,US,0,2026-04-13T09:16:47Z
+193,@barge_signal4,Barge Signal,Cold Chain Bulletin,59271,0.0508,79.48,Protocol Operations,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+194,@gulf_safety4,Gulf Safety,Regulatory Notice,5739,0.0809,93.27,Care Delivery Supplies,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+195,@pacific_screen4,Pacific Screen,Capacity Alert,27744,0.0651,82.34,Device Packaging,Austin,Texas,US,0,2026-04-13T09:16:47Z
+201,@midwest_node4,Midwest Node,Supply Quality Notice,79290,0.0799,100,Steriles,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+202,@northeast_source4,Northeast Source,Compliance Signal,4215,0.0505,66.83,Sterility Assurance,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+203,@southwest_pulse4,Southwest Pulse,Cold Chain Bulletin,7488,0.0427,65.99,Manufacturer Quality,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+204,@vaccine_updates4,Vaccine Updates,Regulatory Notice,3230,0.0609,71.53,Component Risk,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+205,@protocoldesk_monitor4,Protocoldesk Monitor,Capacity Alert,5161709,0.0088,89.13,Care Logistics Logistics,Dallas,Texas,US,1,2026-04-13T09:16:47Z
+206,@gxpdesk_routing4,GxPDesk Routing,Supply Quality Notice,5833,0.042,69.13,FDA,San Diego,California,US,0,2026-04-13T09:16:47Z
+207,@portsupply_forecast4,Portsupply Forecast,Compliance Signal,255801,0.0396,77.13,Quality Review,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+208,@coldchainops_brief4,Care Logisticsops Brief,Cold Chain Bulletin,818423,0.029,89.5,GxP,Detroit,Michigan,US,1,2026-04-13T09:16:47Z
+209,@fdawatch_planner4,CMS Watch Planner,Regulatory Notice,2197,0.0457,59.91,Care Logistics,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+210,@emaupdates_report4,Quality Review Updates Report,Capacity Alert,978841,0.0189,88.2,Port Logistics,Brooklyn,New York,US,1,2026-04-13T09:16:47Z
+211,@fda_watch5,CMS Watch,Supply Quality Notice,6398,0.0446,63.86,GMP Utilities,New York,New York,US,0,2026-04-13T09:16:47Z
+212,@ema_review5,Quality Review Review,Compliance Signal,1079,0.0332,52.82,Vaccine Products,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+213,@gxp_compliance5,GxP Compliance,Cold Chain Bulletin,6583,0.0439,62.92,Protocol Operations,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+214,@gxp_audit5,Quality Audit,Regulatory Notice,9832,0.0528,75.04,Care Delivery Supplies,Houston,Texas,US,0,2026-04-13T09:16:47Z
+215,@protocol_feed5,Protocol Feed,Capacity Alert,9319,0.0426,70.27,Device Packaging,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+216,@port_status5,Port Status,Supply Quality Notice,14826,0.0474,70.6,Steriles,San Francisco,California,US,0,2026-04-13T09:16:47Z
+217,@care logistics_coordinator5,Care Logistics Coordinator,Compliance Signal,73437,0.0262,76.63,Sterility Assurance,Miami,Florida,US,0,2026-04-13T09:16:47Z
+218,@vaccine_controlroom5,Vaccine Controlroom,Cold Chain Bulletin,4575,0.0778,80.35,Manufacturer Quality,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+219,@waterworks_lab5,Waterworks Lab,Regulatory Notice,8690,0.1162,100,Component Risk,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+220,@formulation_tracker5,Formulation Tracker,Capacity Alert,9467,0.0772,83.91,Care Logistics Logistics,Austin,Texas,US,0,2026-04-13T09:16:47Z
+221,@alkali_flow5,Aseptic Flow,Supply Quality Notice,1984,0.0356,57.42,FDA,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+222,@trial supply_hub5,Trial Supply Hub,Compliance Signal,8439,0.0593,72.49,Quality Review,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+223,@device_release5,Device Release,Cold Chain Bulletin,210156,0.0373,80.61,GxP,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+224,@catalyst_watchlist5,Assay Watchlist,Regulatory Notice,9228,0.0374,71.03,Care Logistics,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+225,@chlor_bridge5,Sterility Bridge,Capacity Alert,18590,0.0256,71.87,Port Logistics,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+226,@peroxide_ops5,Aseptic Ops,Supply Quality Notice,14112,0.0268,68.39,GMP Utilities,San Diego,California,US,0,2026-04-13T09:16:47Z
+227,@citric_intel5,Excipient Intel,Compliance Signal,4748,0.0826,81.99,Vaccine Products,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+228,@pv_wire5,PV Wire,Cold Chain Bulletin,46296,0.0616,88.47,Protocol Operations,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+229,@supply_ledger5,Supply Ledger,Regulatory Notice,91080,0.0592,82.04,Care Delivery Supplies,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+230,@tariff_registry5,Tariff Registry,Capacity Alert,6385,0.1169,99.07,Device Packaging,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+231,@freight_matrix5,Freight Matrix,Supply Quality Notice,62037,0.0606,93.36,Steriles,New York,New York,US,0,2026-04-13T09:16:47Z
+232,@purity_bulletins5,Purity Bulletins,Compliance Signal,63273,0.0546,82.48,Sterility Assurance,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+233,@storage_bulletin5,Storage Bulletin,Cold Chain Bulletin,81377,0.0425,83.99,Manufacturer Quality,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+234,@compat_notice5,Compat Notice,Regulatory Notice,50533,0.0798,98.55,Component Risk,Houston,Texas,US,0,2026-04-13T09:16:47Z
+235,@allocation_network5,Allocation Network,Capacity Alert,4297643,0.0242,94.83,Care Logistics Logistics,Phoenix,Arizona,US,1,2026-04-13T09:16:47Z
+236,@component_map5,Component Map,Supply Quality Notice,2270,0.0888,90.13,FDA,San Francisco,California,US,0,2026-04-13T09:16:47Z
+237,@plant_control5,Plant Control,Compliance Signal,99614,0.0648,92.77,Quality Review,Miami,Florida,US,0,2026-04-13T09:16:47Z
+238,@safety_queue5,Safety Queue,Cold Chain Bulletin,9452,0.1028,100,GxP,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+239,@import_channel5,Import Channel,Regulatory Notice,7114,0.1052,100,Care Logistics,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+240,@export_alerts5,Export Alerts,Capacity Alert,14460915,0.0201,88.6,Port Logistics,Austin,Texas,US,1,2026-04-13T09:16:47Z
+241,@quality_weekly5,Quality Weekly,Supply Quality Notice,36186,0.0721,84.65,GMP Utilities,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+242,@compliance_market5,Compliance Market,Compliance Signal,58014,0.0557,87.98,Vaccine Products,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+251,@regdesk_index5,Regdesk Index,Cold Chain Bulletin,2480,0.0665,80.29,Protocol Operations,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+252,@pvwatch_office5,PV Watch Office,Regulatory Notice,1969,0.0962,91.62,Care Delivery Supplies,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+253,@labdesk_risk5,Labdesk Risk,Capacity Alert,4211,0.0792,86.81,Device Packaging,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+254,@route_observer5,Route Observer,Supply Quality Notice,1053,0.0488,65.41,Steriles,San Diego,California,US,0,2026-04-13T09:16:47Z
+255,@rail_desk5,Rail Desk,Compliance Signal,169228,0.0388,74.68,Sterility Assurance,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+256,@barge_signal5,Barge Signal,Cold Chain Bulletin,8508,0.0966,97.32,Manufacturer Quality,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+257,@gulf_safety5,Gulf Safety,Regulatory Notice,3251,0.0438,67.05,Component Risk,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+258,@pacific_screen5,Pacific Screen,Capacity Alert,7848,0.0487,64.76,Care Logistics Logistics,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+259,@midwest_node5,Midwest Node,Supply Quality Notice,43333,0.0482,72.54,FDA,New York,New York,US,0,2026-04-13T09:16:47Z
+260,@northeast_source5,Northeast Source,Compliance Signal,8021,0.0924,100,Quality Review,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+261,@southwest_pulse5,Southwest Pulse,Cold Chain Bulletin,626272,0.0264,83.06,GxP,Chicago,Illinois,US,1,2026-04-13T09:16:47Z
+262,@vaccine_updates5,Vaccine Updates,Regulatory Notice,3617,0.0608,70.1,Care Logistics,Houston,Texas,US,0,2026-04-13T09:16:47Z
+263,@protocoldesk_monitor5,Protocoldesk Monitor,Capacity Alert,8045,0.1128,100,Port Logistics,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+264,@gxpdesk_routing5,GxPDesk Routing,Supply Quality Notice,96547,0.0342,76.2,GMP Utilities,San Francisco,California,US,0,2026-04-13T09:16:47Z
+265,@portsupply_forecast5,Portsupply Forecast,Compliance Signal,339661,0.0221,72.47,Vaccine Products,Miami,Florida,US,0,2026-04-13T09:16:47Z
+266,@coldchainops_brief5,Care Logisticsops Brief,Cold Chain Bulletin,2892,0.0893,81.68,Protocol Operations,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+267,@fdawatch_planner5,CMS Watch Planner,Regulatory Notice,1578,0.0717,78.2,Care Delivery Supplies,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+268,@emaupdates_report5,Quality Review Updates Report,Capacity Alert,8155,0.1014,100,Device Packaging,Austin,Texas,US,0,2026-04-13T09:16:47Z
+269,@fda_watch6,CMS Watch,Supply Quality Notice,296216,0.0246,71.5,Steriles,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+270,@ema_review6,Quality Review Review,Compliance Signal,25238,0.0482,74.64,Sterility Assurance,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+271,@gxp_compliance6,GxP Compliance,Cold Chain Bulletin,35355,0.0724,94.29,Manufacturer Quality,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+272,@gxp_audit6,Quality Audit,Regulatory Notice,2834,0.0921,88.4,Component Risk,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+273,@protocol_feed6,Protocol Feed,Capacity Alert,7036,0.1016,92.26,Care Logistics Logistics,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+274,@port_status6,Port Status,Supply Quality Notice,763640,0.0237,78,FDA,San Diego,California,US,1,2026-04-13T09:16:47Z
+275,@care logistics_coordinator6,Care Logistics Coordinator,Compliance Signal,6062,0.0817,90.06,Quality Review,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+276,@vaccine_controlroom6,Vaccine Controlroom,Cold Chain Bulletin,2753,0.1065,99.51,GxP,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+277,@waterworks_lab6,Waterworks Lab,Regulatory Notice,6314,0.0603,80.18,Care Logistics,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+278,@formulation_tracker6,Formulation Tracker,Capacity Alert,92039,0.0709,100,Port Logistics,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+279,@alkali_flow6,Aseptic Flow,Supply Quality Notice,14540,0.0733,86.45,GMP Utilities,New York,New York,US,0,2026-04-13T09:16:47Z
+280,@trial supply_hub6,Trial Supply Hub,Compliance Signal,22119,0.0645,90.11,Vaccine Products,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+281,@device_release6,Device Release,Cold Chain Bulletin,5091,0.0367,56.83,Protocol Operations,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+282,@catalyst_watchlist6,Assay Watchlist,Regulatory Notice,3459,0.0614,66.56,Care Delivery Supplies,Houston,Texas,US,0,2026-04-13T09:16:47Z
+283,@chlor_bridge6,Sterility Bridge,Capacity Alert,35463,0.0607,79.59,Device Packaging,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+284,@peroxide_ops6,Aseptic Ops,Supply Quality Notice,7430,0.0852,88.95,Steriles,San Francisco,California,US,0,2026-04-13T09:16:47Z
+285,@citric_intel6,Excipient Intel,Compliance Signal,1959,0.0597,71.28,Sterility Assurance,Miami,Florida,US,0,2026-04-13T09:16:47Z
+286,@pv_wire6,PV Wire,Cold Chain Bulletin,6266,0.0341,61.94,Manufacturer Quality,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+287,@supply_ledger6,Supply Ledger,Regulatory Notice,6445,0.0466,64.91,Component Risk,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+288,@tariff_registry6,Tariff Registry,Capacity Alert,2787,0.06,72.57,Care Logistics Logistics,Austin,Texas,US,0,2026-04-13T09:16:47Z
+289,@freight_matrix6,Freight Matrix,Supply Quality Notice,7137,0.1064,97.54,FDA,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+290,@purity_bulletins6,Purity Bulletins,Compliance Signal,8437,0.0805,86.52,Quality Review,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+291,@storage_bulletin6,Storage Bulletin,Cold Chain Bulletin,939813,0.0435,98.39,GxP,Boston,Massachusetts,US,1,2026-04-13T09:16:47Z
+292,@compat_notice6,Compat Notice,Regulatory Notice,62239,0.0684,97.71,Care Logistics,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+293,@allocation_network6,Allocation Network,Capacity Alert,42621,0.0468,85.4,Port Logistics,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+294,@component_map6,Component Map,Supply Quality Notice,1405,0.0754,80.77,GMP Utilities,San Diego,California,US,0,2026-04-13T09:16:47Z
+295,@plant_control6,Plant Control,Compliance Signal,3182,0.0436,63.3,Vaccine Products,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+301,@safety_queue6,Safety Queue,Cold Chain Bulletin,3458048,0.007,77.83,Protocol Operations,Detroit,Michigan,US,1,2026-04-13T09:16:47Z
+302,@import_channel6,Import Channel,Regulatory Notice,4295973,0.0206,91.15,Care Delivery Supplies,Las Vegas,Nevada,US,1,2026-04-13T09:16:47Z
+303,@export_alerts6,Export Alerts,Capacity Alert,8964,0.0596,75.95,Device Packaging,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+304,@quality_weekly6,Quality Weekly,Supply Quality Notice,40615,0.0603,90.56,Steriles,New York,New York,US,0,2026-04-13T09:16:47Z
+305,@compliance_market6,Compliance Market,Compliance Signal,2596,0.0507,70.71,Sterility Assurance,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+306,@regdesk_index6,Regdesk Index,Cold Chain Bulletin,4591,0.1155,96.33,Manufacturer Quality,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+307,@pvwatch_office6,PV Watch Office,Regulatory Notice,61995,0.0553,89.74,Component Risk,Houston,Texas,US,0,2026-04-13T09:16:47Z
+308,@labdesk_risk6,Labdesk Risk,Capacity Alert,3140,0.0997,86.71,Care Logistics Logistics,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+309,@route_observer6,Route Observer,Supply Quality Notice,5008,0.0865,82.89,FDA,San Francisco,California,US,0,2026-04-13T09:16:47Z
+310,@rail_desk6,Rail Desk,Compliance Signal,57153,0.0635,85.6,Quality Review,Miami,Florida,US,0,2026-04-13T09:16:47Z
+311,@barge_signal6,Barge Signal,Cold Chain Bulletin,96076,0.0599,93.27,GxP,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+312,@gulf_safety6,Gulf Safety,Regulatory Notice,27122,0.0504,84.44,Care Logistics,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+313,@pacific_screen6,Pacific Screen,Capacity Alert,84833,0.0568,86.39,Port Logistics,Austin,Texas,US,0,2026-04-13T09:16:47Z
+314,@midwest_node6,Midwest Node,Supply Quality Notice,6435,0.0861,94.77,GMP Utilities,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+315,@northeast_source6,Northeast Source,Compliance Signal,2551,0.1131,100,Vaccine Products,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+316,@southwest_pulse6,Southwest Pulse,Cold Chain Bulletin,3923,0.0781,78.21,Protocol Operations,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+317,@vaccine_updates6,Vaccine Updates,Regulatory Notice,7851,0.0685,77.65,Care Delivery Supplies,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+318,@protocoldesk_monitor6,Protocoldesk Monitor,Capacity Alert,1061,0.0549,60.38,Device Packaging,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+319,@gxpdesk_routing6,GxPDesk Routing,Supply Quality Notice,9915,0.0415,66.59,Steriles,San Diego,California,US,0,2026-04-13T09:16:47Z
+320,@portsupply_forecast6,Portsupply Forecast,Compliance Signal,60470,0.0321,74.46,Sterility Assurance,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+321,@coldchainops_brief6,Care Logisticsops Brief,Cold Chain Bulletin,147700,0.0353,79.89,Manufacturer Quality,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+322,@fdawatch_planner6,CMS Watch Planner,Regulatory Notice,725608,0.0357,81.6,Component Risk,Las Vegas,Nevada,US,1,2026-04-13T09:16:47Z
+323,@emaupdates_report6,Quality Review Updates Report,Capacity Alert,688268,0.0425,88.67,Care Logistics Logistics,Brooklyn,New York,US,1,2026-04-13T09:16:47Z
+324,@fda_watch7,CMS Watch,Supply Quality Notice,1576,0.0683,77.09,FDA,New York,New York,US,0,2026-04-13T09:16:47Z
+325,@ema_review7,Quality Review Review,Compliance Signal,97421,0.0524,86.75,Quality Review,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+326,@gxp_compliance7,GxP Compliance,Cold Chain Bulletin,7687,0.1113,100,GxP,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+327,@gxp_audit7,Quality Audit,Regulatory Notice,3106,0.0347,55.79,Care Logistics,Houston,Texas,US,0,2026-04-13T09:16:47Z
+328,@protocol_feed7,Protocol Feed,Capacity Alert,882662,0.0214,77.25,Port Logistics,Phoenix,Arizona,US,1,2026-04-13T09:16:47Z
+329,@port_status7,Port Status,Supply Quality Notice,7648,0.05,67.63,GMP Utilities,San Francisco,California,US,0,2026-04-13T09:16:47Z
+330,@care logistics_coordinator7,Care Logistics Coordinator,Compliance Signal,3626,0.0847,83.59,Vaccine Products,Miami,Florida,US,0,2026-04-13T09:16:47Z
+331,@vaccine_controlroom7,Vaccine Controlroom,Cold Chain Bulletin,4606,0.0894,94.01,Protocol Operations,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+332,@waterworks_lab7,Waterworks Lab,Regulatory Notice,1268,0.1154,100,Care Delivery Supplies,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+333,@formulation_tracker7,Formulation Tracker,Capacity Alert,73237,0.0673,88.8,Device Packaging,Austin,Texas,US,0,2026-04-13T09:16:47Z
+334,@alkali_flow7,Aseptic Flow,Supply Quality Notice,248504,0.037,87.46,Steriles,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+335,@trial supply_hub7,Trial Supply Hub,Compliance Signal,8209,0.0867,97.74,Sterility Assurance,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+336,@device_release7,Device Release,Cold Chain Bulletin,4492,0.1138,99.11,Manufacturer Quality,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+337,@catalyst_watchlist7,Assay Watchlist,Regulatory Notice,1659,0.1174,100,Component Risk,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+338,@chlor_bridge7,Sterility Bridge,Capacity Alert,379830,0.0313,84.52,Care Logistics Logistics,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+339,@peroxide_ops7,Aseptic Ops,Supply Quality Notice,8595,0.0359,71.88,FDA,San Diego,California,US,0,2026-04-13T09:16:47Z
+340,@citric_intel7,Excipient Intel,Compliance Signal,6569046,0.0159,85.7,Quality Review,Minneapolis,Minnesota,US,1,2026-04-13T09:16:47Z
+341,@pv_wire7,PV Wire,Cold Chain Bulletin,65305,0.0338,80.13,GxP,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+342,@supply_ledger7,Supply Ledger,Regulatory Notice,3638,0.1003,98.6,Care Logistics,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+343,@tariff_registry7,Tariff Registry,Capacity Alert,706258,0.0351,86.45,Port Logistics,Brooklyn,New York,US,1,2026-04-13T09:16:47Z
+344,@freight_matrix7,Freight Matrix,Supply Quality Notice,4371,0.0508,65.08,GMP Utilities,New York,New York,US,0,2026-04-13T09:16:47Z
+345,@purity_bulletins7,Purity Bulletins,Compliance Signal,5850,0.1181,100,Vaccine Products,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+346,@storage_bulletin7,Storage Bulletin,Cold Chain Bulletin,3046,0.0637,74.58,Protocol Operations,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+347,@compat_notice7,Compat Notice,Regulatory Notice,10341044,0.0076,83.13,Care Delivery Supplies,Houston,Texas,US,1,2026-04-13T09:16:47Z
+348,@allocation_network7,Allocation Network,Capacity Alert,2273,0.113,100,Device Packaging,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+349,@component_map7,Component Map,Supply Quality Notice,6130,0.0714,83.59,Steriles,San Francisco,California,US,0,2026-04-13T09:16:47Z
+350,@plant_control7,Plant Control,Compliance Signal,5023,0.1149,97.5,Sterility Assurance,Miami,Florida,US,0,2026-04-13T09:16:47Z
+351,@safety_queue7,Safety Queue,Cold Chain Bulletin,6857,0.1041,91.25,Manufacturer Quality,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+352,@import_channel7,Import Channel,Regulatory Notice,86646,0.0274,69.73,Component Risk,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+353,@export_alerts7,Export Alerts,Capacity Alert,6412,0.0782,87.4,Care Logistics Logistics,Austin,Texas,US,0,2026-04-13T09:16:47Z
+354,@quality_weekly7,Quality Weekly,Supply Quality Notice,1641,0.045,59.42,FDA,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+355,@compliance_market7,Compliance Market,Compliance Signal,57351,0.0366,78.26,Quality Review,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+356,@regdesk_index7,Regdesk Index,Cold Chain Bulletin,93709,0.0425,87.81,GxP,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+357,@pvwatch_office7,PV Watch Office,Regulatory Notice,209800,0.02,81.17,Care Logistics,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+358,@labdesk_risk7,Labdesk Risk,Capacity Alert,124157,0.0207,76,Port Logistics,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+359,@route_observer7,Route Observer,Supply Quality Notice,60595,0.0786,97.95,GMP Utilities,San Diego,California,US,0,2026-04-13T09:16:47Z
+360,@rail_desk7,Rail Desk,Compliance Signal,540568,0.0368,93.96,Vaccine Products,Minneapolis,Minnesota,US,1,2026-04-13T09:16:47Z
+361,@barge_signal7,Barge Signal,Cold Chain Bulletin,71249,0.0568,88.44,Protocol Operations,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+362,@gulf_safety7,Gulf Safety,Regulatory Notice,31012,0.0334,72.1,Care Delivery Supplies,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+363,@pacific_screen7,Pacific Screen,Capacity Alert,11729995,0.0156,93.16,Device Packaging,Brooklyn,New York,US,1,2026-04-13T09:16:47Z
+364,@midwest_node7,Midwest Node,Supply Quality Notice,88466,0.0436,78.59,Steriles,New York,New York,US,0,2026-04-13T09:16:47Z
+365,@northeast_source7,Northeast Source,Compliance Signal,18871,0.0651,88.61,Sterility Assurance,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+366,@southwest_pulse7,Southwest Pulse,Cold Chain Bulletin,29519,0.0522,87.4,Manufacturer Quality,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+367,@vaccine_updates7,Vaccine Updates,Regulatory Notice,6006,0.0997,93.29,Component Risk,Houston,Texas,US,0,2026-04-13T09:16:47Z
+368,@protocoldesk_monitor7,Protocoldesk Monitor,Capacity Alert,8331,0.1144,100,Care Logistics Logistics,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+369,@gxpdesk_routing7,GxPDesk Routing,Supply Quality Notice,64567,0.0465,80.36,FDA,San Francisco,California,US,0,2026-04-13T09:16:47Z
+370,@portsupply_forecast7,Portsupply Forecast,Compliance Signal,919215,0.0342,84.89,Quality Review,Miami,Florida,US,1,2026-04-13T09:16:47Z
+371,@coldchainops_brief7,Care Logisticsops Brief,Cold Chain Bulletin,3541,0.0717,86.69,GxP,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+372,@fdawatch_planner7,CMS Watch Planner,Regulatory Notice,28705,0.0661,84.22,Care Logistics,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+373,@emaupdates_report7,Quality Review Updates Report,Capacity Alert,5966,0.1023,99.92,Port Logistics,Austin,Texas,US,0,2026-04-13T09:16:47Z
+374,@fda_watch8,CMS Watch,Supply Quality Notice,75948,0.0635,93.51,GMP Utilities,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+375,@ema_review8,Quality Review Review,Compliance Signal,8257,0.1184,100,Vaccine Products,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+376,@gxp_compliance8,GxP Compliance,Cold Chain Bulletin,17790,0.0259,57.18,Protocol Operations,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+377,@gxp_audit8,Quality Audit,Regulatory Notice,3269,0.1179,100,Care Delivery Supplies,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+378,@protocol_feed8,Protocol Feed,Capacity Alert,3926,0.1109,97.96,Device Packaging,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+379,@port_status8,Port Status,Supply Quality Notice,4525,0.0879,86.12,Steriles,San Diego,California,US,0,2026-04-13T09:16:47Z
+380,@care logistics_coordinator8,Care Logistics Coordinator,Compliance Signal,2349,0.038,59.5,Sterility Assurance,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+381,@vaccine_controlroom8,Vaccine Controlroom,Cold Chain Bulletin,5170,0.0565,77.45,Manufacturer Quality,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+382,@waterworks_lab8,Waterworks Lab,Regulatory Notice,202478,0.0167,76.5,Component Risk,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+383,@formulation_tracker8,Formulation Tracker,Capacity Alert,7084,0.0329,56.65,Care Logistics Logistics,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+384,@alkali_flow8,Aseptic Flow,Supply Quality Notice,276769,0.0439,84.88,FDA,New York,New York,US,0,2026-04-13T09:16:47Z
+385,@trial supply_hub8,Trial Supply Hub,Compliance Signal,77591,0.06,82.75,Quality Review,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+386,@device_release8,Device Release,Cold Chain Bulletin,519168,0.0338,89.93,GxP,Chicago,Illinois,US,1,2026-04-13T09:16:47Z
+387,@catalyst_watchlist8,Assay Watchlist,Regulatory Notice,39278,0.0582,90.58,Care Logistics,Houston,Texas,US,0,2026-04-13T09:16:47Z
+388,@chlor_bridge8,Sterility Bridge,Capacity Alert,2699,0.0593,68.07,Port Logistics,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+389,@peroxide_ops8,Aseptic Ops,Supply Quality Notice,9442,0.0385,61.22,GMP Utilities,San Francisco,California,US,0,2026-04-13T09:16:47Z
+390,@citric_intel8,Excipient Intel,Compliance Signal,16428,0.0277,63.07,Vaccine Products,Miami,Florida,US,0,2026-04-13T09:16:47Z
+391,@pv_wire8,PV Wire,Cold Chain Bulletin,8808,0.1027,100,Protocol Operations,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+392,@supply_ledger8,Supply Ledger,Regulatory Notice,1458,0.0817,74.37,Care Delivery Supplies,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+393,@tariff_registry8,Tariff Registry,Capacity Alert,3720,0.0573,72.58,Device Packaging,Austin,Texas,US,0,2026-04-13T09:16:47Z
+394,@freight_matrix8,Freight Matrix,Supply Quality Notice,3937,0.042,70.07,Steriles,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+395,@purity_bulletins8,Purity Bulletins,Compliance Signal,4521,0.0783,86.4,Sterility Assurance,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+401,@storage_bulletin8,Storage Bulletin,Cold Chain Bulletin,70065,0.0688,97.98,Manufacturer Quality,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+402,@compat_notice8,Compat Notice,Regulatory Notice,76556,0.0456,81.9,Component Risk,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+403,@allocation_network8,Allocation Network,Capacity Alert,6451,0.117,100,Care Logistics Logistics,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+404,@component_map8,Component Map,Supply Quality Notice,69278,0.076,93.23,FDA,San Diego,California,US,0,2026-04-13T09:16:47Z
+405,@plant_control8,Plant Control,Compliance Signal,4975,0.0842,80.73,Quality Review,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+406,@safety_queue8,Safety Queue,Cold Chain Bulletin,9472,0.0843,83.21,GxP,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+407,@import_channel8,Import Channel,Regulatory Notice,1993,0.0376,59.5,Care Logistics,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+408,@export_alerts8,Export Alerts,Capacity Alert,56546,0.0687,97.2,Port Logistics,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+409,@quality_weekly8,Quality Weekly,Supply Quality Notice,6832,0.1187,100,GMP Utilities,New York,New York,US,0,2026-04-13T09:16:47Z
+410,@compliance_market8,Compliance Market,Compliance Signal,58797,0.031,71.39,Vaccine Products,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+411,@regdesk_index8,Regdesk Index,Cold Chain Bulletin,26803,0.0624,91.85,Protocol Operations,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+412,@pvwatch_office8,PV Watch Office,Regulatory Notice,61915,0.0644,83.14,Care Delivery Supplies,Houston,Texas,US,0,2026-04-13T09:16:47Z
+413,@labdesk_risk8,Labdesk Risk,Capacity Alert,264343,0.0252,72.66,Device Packaging,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+414,@route_observer8,Route Observer,Supply Quality Notice,4755,0.1098,93.58,Steriles,San Francisco,California,US,0,2026-04-13T09:16:47Z
+415,@rail_desk8,Rail Desk,Compliance Signal,13347,0.0381,68.8,Sterility Assurance,Miami,Florida,US,0,2026-04-13T09:16:47Z
+416,@barge_signal8,Barge Signal,Cold Chain Bulletin,89649,0.0393,76.12,Manufacturer Quality,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+417,@gulf_safety8,Gulf Safety,Regulatory Notice,61765,0.031,67.07,Component Risk,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+418,@pacific_screen8,Pacific Screen,Capacity Alert,7256,0.0885,98.54,Care Logistics Logistics,Austin,Texas,US,0,2026-04-13T09:16:47Z
+419,@midwest_node8,Midwest Node,Supply Quality Notice,1712,0.0895,83.41,FDA,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+420,@northeast_source8,Northeast Source,Compliance Signal,30662,0.044,75.03,Quality Review,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+421,@southwest_pulse8,Southwest Pulse,Cold Chain Bulletin,6870,0.1175,100,GxP,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+422,@vaccine_updates8,Vaccine Updates,Regulatory Notice,12433622,0.0144,90.6,Care Logistics,Atlanta,Georgia,US,1,2026-04-13T09:16:47Z
+423,@protocoldesk_monitor8,Protocoldesk Monitor,Capacity Alert,31121,0.0306,71.67,Port Logistics,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+424,@gxpdesk_routing8,GxPDesk Routing,Supply Quality Notice,77424,0.0354,80.16,GMP Utilities,San Diego,California,US,0,2026-04-13T09:16:47Z
+425,@portsupply_forecast8,Portsupply Forecast,Compliance Signal,9201,0.0663,76.93,Vaccine Products,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+426,@coldchainops_brief8,Care Logisticsops Brief,Cold Chain Bulletin,9368,0.0464,67.97,Protocol Operations,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+427,@fdawatch_planner8,CMS Watch Planner,Regulatory Notice,937827,0.0307,90.26,Care Delivery Supplies,Las Vegas,Nevada,US,1,2026-04-13T09:16:47Z
+428,@emaupdates_report8,Quality Review Updates Report,Capacity Alert,467075,0.0282,80.84,Device Packaging,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+429,@fda_watch9,CMS Watch,Supply Quality Notice,7965,0.1169,100,Steriles,New York,New York,US,0,2026-04-13T09:16:47Z
+430,@ema_review9,Quality Review Review,Compliance Signal,5153,0.0592,68.49,Sterility Assurance,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+431,@gxp_compliance9,GxP Compliance,Cold Chain Bulletin,1780,0.0698,78.35,Manufacturer Quality,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+432,@gxp_audit9,Quality Audit,Regulatory Notice,9867,0.078,83,Component Risk,Houston,Texas,US,0,2026-04-13T09:16:47Z
+433,@protocol_feed9,Protocol Feed,Capacity Alert,3299,0.115,100,Care Logistics Logistics,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+434,@port_status9,Port Status,Supply Quality Notice,8544,0.0906,98.73,FDA,San Francisco,California,US,0,2026-04-13T09:16:47Z
+435,@care logistics_coordinator9,Care Logistics Coordinator,Compliance Signal,631427,0.0177,71.63,Quality Review,Miami,Florida,US,1,2026-04-13T09:16:47Z
+436,@vaccine_controlroom9,Vaccine Controlroom,Cold Chain Bulletin,1093247,0.0207,84.38,GxP,Seattle,Washington,US,1,2026-04-13T09:16:47Z
+437,@waterworks_lab9,Waterworks Lab,Regulatory Notice,33381,0.0519,87.6,Care Logistics,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+438,@formulation_tracker9,Formulation Tracker,Capacity Alert,6685,0.1123,100,Port Logistics,Austin,Texas,US,0,2026-04-13T09:16:47Z
+439,@alkali_flow9,Aseptic Flow,Supply Quality Notice,918783,0.0389,96.84,GMP Utilities,Nashville,Tennessee,US,1,2026-04-13T09:16:47Z
+440,@trial supply_hub9,Trial Supply Hub,Compliance Signal,99863,0.0775,100,Vaccine Products,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+441,@device_release9,Device Release,Cold Chain Bulletin,55779,0.068,94.94,Protocol Operations,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+442,@catalyst_watchlist9,Assay Watchlist,Regulatory Notice,73181,0.0566,79.59,Care Delivery Supplies,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+443,@chlor_bridge9,Sterility Bridge,Capacity Alert,40383,0.0521,86.26,Device Packaging,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+444,@peroxide_ops9,Aseptic Ops,Supply Quality Notice,7328,0.1009,100,Steriles,San Diego,California,US,0,2026-04-13T09:16:47Z
+445,@citric_intel9,Excipient Intel,Compliance Signal,4297,0.0341,68.29,Sterility Assurance,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+446,@pv_wire9,PV Wire,Cold Chain Bulletin,587476,0.0253,87.29,Manufacturer Quality,Detroit,Michigan,US,1,2026-04-13T09:16:47Z
+447,@supply_ledger9,Supply Ledger,Regulatory Notice,4405032,0.0132,81.26,Component Risk,Las Vegas,Nevada,US,1,2026-04-13T09:16:47Z
+448,@tariff_registry9,Tariff Registry,Capacity Alert,93991,0.026,74.42,Care Logistics Logistics,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+449,@freight_matrix9,Freight Matrix,Supply Quality Notice,75488,0.079,100,FDA,New York,New York,US,0,2026-04-13T09:16:47Z
+450,@purity_bulletins9,Purity Bulletins,Compliance Signal,7996,0.0802,91.54,Quality Review,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+451,@storage_bulletin9,Storage Bulletin,Cold Chain Bulletin,7428,0.0312,62.48,GxP,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+452,@compat_notice9,Compat Notice,Regulatory Notice,509830,0.0168,77.79,Care Logistics,Houston,Texas,US,1,2026-04-13T09:16:47Z
+453,@allocation_network9,Allocation Network,Capacity Alert,2521,0.0316,52.82,Port Logistics,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+454,@component_map9,Component Map,Supply Quality Notice,863390,0.016,75.5,GMP Utilities,San Francisco,California,US,1,2026-04-13T09:16:47Z
+455,@plant_control9,Plant Control,Compliance Signal,2669,0.0972,93.59,Vaccine Products,Miami,Florida,US,0,2026-04-13T09:16:47Z
+456,@safety_queue9,Safety Queue,Cold Chain Bulletin,24913,0.0666,91.95,Protocol Operations,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+457,@import_channel9,Import Channel,Regulatory Notice,1755,0.095,89.76,Care Delivery Supplies,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+458,@export_alerts9,Export Alerts,Capacity Alert,5244,0.0347,62.07,Device Packaging,Austin,Texas,US,0,2026-04-13T09:16:47Z
+459,@quality_weekly9,Quality Weekly,Supply Quality Notice,95463,0.0552,91.58,Steriles,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+460,@compliance_market9,Compliance Market,Compliance Signal,35671,0.0283,70.17,Sterility Assurance,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+461,@regdesk_index9,Regdesk Index,Cold Chain Bulletin,93250,0.0367,73.75,Manufacturer Quality,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+462,@pvwatch_office9,PV Watch Office,Regulatory Notice,1224,0.11,98.92,Component Risk,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+463,@labdesk_risk9,Labdesk Risk,Capacity Alert,1736,0.0588,63.01,Care Logistics Logistics,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+464,@route_observer9,Route Observer,Supply Quality Notice,6074,0.0422,64.11,FDA,San Diego,California,US,0,2026-04-13T09:16:47Z
+465,@rail_desk9,Rail Desk,Compliance Signal,43532,0.0498,85.57,Quality Review,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+466,@barge_signal9,Barge Signal,Cold Chain Bulletin,8926,0.0308,69.91,GxP,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+467,@gulf_safety9,Gulf Safety,Regulatory Notice,74381,0.0523,91.36,Care Logistics,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+468,@pacific_screen9,Pacific Screen,Capacity Alert,97840,0.0267,78.85,Port Logistics,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+469,@midwest_node9,Midwest Node,Supply Quality Notice,5798,0.1064,94.46,GMP Utilities,New York,New York,US,0,2026-04-13T09:16:47Z
+470,@northeast_source9,Northeast Source,Compliance Signal,2959,0.0568,73.31,Vaccine Products,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+471,@southwest_pulse9,Southwest Pulse,Cold Chain Bulletin,6226785,0.0232,93.13,Protocol Operations,Chicago,Illinois,US,1,2026-04-13T09:16:47Z
+472,@vaccine_updates9,Vaccine Updates,Regulatory Notice,5959,0.0398,58.49,Care Delivery Supplies,Houston,Texas,US,0,2026-04-13T09:16:47Z
+473,@protocoldesk_monitor9,Protocoldesk Monitor,Capacity Alert,17980,0.0773,95.04,Device Packaging,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+474,@gxpdesk_routing9,GxPDesk Routing,Supply Quality Notice,40859,0.0359,79.59,Steriles,San Francisco,California,US,0,2026-04-13T09:16:47Z
+475,@portsupply_forecast9,Portsupply Forecast,Compliance Signal,38292,0.0399,76.16,Sterility Assurance,Miami,Florida,US,0,2026-04-13T09:16:47Z
+476,@coldchainops_brief9,Care Logisticsops Brief,Cold Chain Bulletin,9120,0.0568,69.63,Manufacturer Quality,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+477,@fdawatch_planner9,CMS Watch Planner,Regulatory Notice,2600,0.1177,100,Component Risk,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+478,@emaupdates_report9,Quality Review Updates Report,Capacity Alert,9037,0.1093,100,Care Logistics Logistics,Austin,Texas,US,0,2026-04-13T09:16:47Z
+479,@fda_watch10,CMS Watch,Supply Quality Notice,13373,0.0381,76.14,FDA,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+480,@ema_review10,Quality Review Review,Compliance Signal,1380,0.0919,79.82,Quality Review,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+481,@gxp_compliance10,GxP Compliance,Cold Chain Bulletin,284343,0.0277,78.44,GxP,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+482,@gxp_audit10,Quality Audit,Regulatory Notice,159739,0.0216,78.75,Care Logistics,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+483,@protocol_feed10,Protocol Feed,Capacity Alert,57195,0.0797,100,Port Logistics,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+484,@port_status10,Port Status,Supply Quality Notice,750284,0.023,84.47,GMP Utilities,San Diego,California,US,1,2026-04-13T09:16:47Z
+485,@care logistics_coordinator10,Care Logistics Coordinator,Compliance Signal,5815,0.0498,70.89,Vaccine Products,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+486,@vaccine_controlroom10,Vaccine Controlroom,Cold Chain Bulletin,3015,0.0647,73.5,Protocol Operations,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+487,@waterworks_lab10,Waterworks Lab,Regulatory Notice,9434170,0.0135,95.14,Care Delivery Supplies,Las Vegas,Nevada,US,1,2026-04-13T09:16:47Z
+488,@formulation_tracker10,Formulation Tracker,Capacity Alert,13529171,0.0231,100,Device Packaging,Brooklyn,New York,US,1,2026-04-13T09:16:47Z
+489,@alkali_flow10,Aseptic Flow,Supply Quality Notice,9218,0.0622,85.1,Steriles,New York,New York,US,0,2026-04-13T09:16:47Z
+490,@trial supply_hub10,Trial Supply Hub,Compliance Signal,859551,0.0291,87.65,Sterility Assurance,Los Angeles,California,US,1,2026-04-13T09:16:47Z
+491,@device_release10,Device Release,Cold Chain Bulletin,721604,0.0346,83.1,Manufacturer Quality,Chicago,Illinois,US,1,2026-04-13T09:16:47Z
+501,@catalyst_watchlist10,Assay Watchlist,Regulatory Notice,78376,0.0479,78.14,Component Risk,Houston,Texas,US,0,2026-04-13T09:16:47Z
+502,@chlor_bridge10,Sterility Bridge,Capacity Alert,5117,0.046,67.17,Care Logistics Logistics,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+503,@peroxide_ops10,Aseptic Ops,Supply Quality Notice,70818,0.0384,78.47,FDA,San Francisco,California,US,0,2026-04-13T09:16:47Z
+504,@citric_intel10,Excipient Intel,Compliance Signal,981743,0.0417,91.7,Quality Review,Miami,Florida,US,1,2026-04-13T09:16:47Z
+505,@pv_wire10,PV Wire,Cold Chain Bulletin,52089,0.0532,80.5,GxP,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+506,@supply_ledger10,Supply Ledger,Regulatory Notice,5084,0.1009,96.89,Care Logistics,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+507,@tariff_registry10,Tariff Registry,Capacity Alert,8071,0.0616,77.88,Port Logistics,Austin,Texas,US,0,2026-04-13T09:16:47Z
+508,@freight_matrix10,Freight Matrix,Supply Quality Notice,53615,0.0765,89.94,GMP Utilities,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+509,@purity_bulletins10,Purity Bulletins,Compliance Signal,39662,0.0321,66.56,Vaccine Products,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+510,@storage_bulletin10,Storage Bulletin,Cold Chain Bulletin,695453,0.0169,80.72,Protocol Operations,Boston,Massachusetts,US,1,2026-04-13T09:16:47Z
+511,@compat_notice10,Compat Notice,Regulatory Notice,7900,0.0456,64.6,Care Delivery Supplies,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+512,@allocation_network10,Allocation Network,Capacity Alert,43517,0.0291,64.06,Device Packaging,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+513,@component_map10,Component Map,Supply Quality Notice,11033944,0.0217,100,Steriles,San Diego,California,US,1,2026-04-13T09:16:47Z
+514,@plant_control10,Plant Control,Compliance Signal,6465,0.0649,75.01,Sterility Assurance,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+515,@safety_queue10,Safety Queue,Cold Chain Bulletin,5296,0.0951,91.14,Manufacturer Quality,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+516,@import_channel10,Import Channel,Regulatory Notice,8708,0.0663,77.72,Component Risk,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+517,@export_alerts10,Export Alerts,Capacity Alert,7474,0.0332,61.64,Care Logistics Logistics,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+518,@quality_weekly10,Quality Weekly,Supply Quality Notice,25893,0.0381,75.48,FDA,New York,New York,US,0,2026-04-13T09:16:47Z
+519,@compliance_market10,Compliance Market,Compliance Signal,9968,0.0966,96.72,Quality Review,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+520,@regdesk_index10,Regdesk Index,Cold Chain Bulletin,9217,0.048,72.18,GxP,Chicago,Illinois,US,0,2026-04-13T09:16:47Z

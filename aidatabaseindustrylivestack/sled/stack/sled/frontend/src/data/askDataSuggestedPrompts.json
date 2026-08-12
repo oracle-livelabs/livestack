@@ -1,0 +1,46 @@
+[
+  {
+    "category": "Constituent Services",
+    "text": "Which constituent service requests are at risk of breaching service-level agreements this week?"
+  },
+  {
+    "category": "Permits and Licensing",
+    "text": "Which permits and licensing requests have the longest open backlog by agency team?"
+  },
+  {
+    "category": "Benefits Eligibility",
+    "text": "Which benefits eligibility cases need review because resident need is high and response capacity is low?"
+  },
+  {
+    "category": "Inspections",
+    "text": "Which inspection and code enforcement service requests are delayed by service area?"
+  },
+  {
+    "category": "Public Works",
+    "text": "Which public works service regions show rising request volume and limited field capacity?"
+  },
+  {
+    "category": "Transportation",
+    "text": "Which transportation services have the highest resident demand and service task route pressure?"
+  },
+  {
+    "category": "Health and Human Services",
+    "text": "Which health and human services programs have the highest public assistance program demand?"
+  },
+  {
+    "category": "Fraud and Compliance",
+    "text": "Which service programs show fraud, waste, and abuse or policy compliance risk indicators?"
+  },
+  {
+    "category": "Backlog Reduction",
+    "text": "Which agencies should be prioritized for backlog reduction based on open service requests and SLA risk?"
+  },
+  {
+    "category": "Transparency",
+    "text": "Which records support transparency and auditability for high-priority resident experience cases?"
+  },
+  {
+    "category": "Emergency Response",
+    "text": "Which emergency response and public assistance program areas need near-term capacity adjustments?"
+  }
+]

@@ -1,0 +1,20 @@
+.CollapsibleNavigationListItemBaseTheme_baseTheme__v99af20 {
+  --fontSize__ibpjpp0: var(--oj-c-body-md-font-size);
+  --fontWeight__ibpjpp1: var(--oj-c-body-md-font-weight-semibold);
+  --minHeight__ibpjpp3: calc(12 * var(--oj-c-size-units, 0.25rem));
+  --iconSize__ibpjpp2: calc(5 * var(--oj-c-size-units, 0.25rem));
+  --borderWidth__ibpjpp4: calc(0.75 * var(--oj-c-size-units, 0.25rem));
+  --borderHeight__ibpjpp5: 100%;
+  --paddingHorizontal__ibpjpp6: calc(6 * var(--oj-c-size-units, 0.25rem));
+  --labelColor__ibpjpp7: var(--oj-c-text-icon-secondary);
+  --labelColorHover__ibpjpp8: var(--oj-c-text-icon-primary);
+  --backgroundColorHover__ibpjpp9: var(--oj-c-overlay-hover);
+  --borderColorHover__ibpjppa: transparent;
+  --labelColorSelected__ibpjppb: var(--oj-c-text-icon-primary);
+  --backgroundColorSelected__ibpjppc: transparent;
+  --borderColorSelected__ibpjppd: var(--oj-c-border-selected);
+  --backgroundColorActive__ibpjppe: var(--oj-c-overlay-hover);
+  --labelColorActive__ibpjppf: var(--oj-c-text-icon-primary);
+  --borderColorActive__ibpjppg: transparent;
+  --oj-c-navigation-list-child-item-padding: calc(5 * var(--oj-c-size-units, 0.25rem));
+}

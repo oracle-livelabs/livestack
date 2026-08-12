@@ -1,0 +1,32 @@
+.ListNoDataStyles_listNoDataStyles_base__h2l4zw0 {
+  background-color: inherit;
+  box-sizing: border-box;
+  color: var(--oj-c-text-icon-primary);
+  flex: 1 1 auto;
+  font-size: var(--oj-c-body-md-font-size);
+  overflow: hidden;
+  position: relative;
+}
+.ListNoDataStyles_listNoDataStyles_base__h2l4zw0:focus {
+  outline-style: none;
+}
+.ListNoDataStyles_listNoDataStyles_defaultRenderer__h2l4zw1 {
+  padding-bottom: var(--oj-c-list-cell-padding-vertical);
+  padding-inline-end: var(--oj-c-list-cell-padding-horizontal);
+  padding-inline-start: var(--oj-c-list-cell-padding-horizontal);
+  padding-top: var(--oj-c-list-cell-padding-vertical);
+}
+.ListNoDataStyles_listNoDataStyles_renderer__h2l4zw2 {
+  padding: 0;
+}
+.ListNoDataStyles_listNoDataStyles_focused__h2l4zw3::after {
+  content: "";
+  display: block;
+  inset: 0;
+  outline-color: var(--oj-c-border-keyboard-focus);
+  outline-offset: -1px;
+  outline-style: dotted;
+  outline-width: 1px;
+  pointer-events: none;
+  position: absolute;
+}

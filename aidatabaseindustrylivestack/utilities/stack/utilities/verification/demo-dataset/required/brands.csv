@@ -1,0 +1,13 @@
+brand_id,brand_name,brand_slug,brand_category,headquarters_city,headquarters_lat,headquarters_lon,founded_year,annual_revenue,social_tier,created_at,updated_at
+85,GridBridge Electric,gridbridge,Electric Utility,New York,40.7128,-74.006,2012,325000000,premium,2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+86,PowerPath Utilities,powerpath,Electric Utility,Chicago,41.8781,-87.6298,2008,210000000,premium,2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+87,PeakPoint Grid Services,peakpoint,Electric Utility,Dallas,32.7767,-96.797,2015,185000000,premium,2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+88,ClearPower Customer Ops,clearpower,Customer Operations,Seattle,47.6062,-122.3321,2019,76000000,standard,2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+89,FieldMotion Services,fieldmotion,Field Operations,Denver,39.7392,-104.9903,2016,98000000,standard,2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+90,WaterWorks Utility,waterworks,Water/Wastewater Utility,Boston,42.3601,-71.0589,2020,54000000,emerging,2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+91,FlowGuard Wastewater,flowguard,Water/Wastewater Utility,Seattle,47.6062,-122.3321,2006,118000000,standard,2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+92,GasFlow Operations,gasflow,Gas Utility,Houston,29.7604,-95.3698,2013,175000000,premium,2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+93,North Basin Production,northbasin,Oil & Gas Upstream,Midland,31.9973,-102.0779,1999,612000000,premium,2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+94,Bayou Midstream,bayoumidstream,Oil & Gas Midstream,Lafayette,30.2241,-92.0198,1988,830000000,premium,2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+95,Sabine LNG Logistics,sabinelng,Oil & Gas Midstream,Sabine Pass,29.7322,-93.8708,2009,1240000000,premium,2026-05-22T14:21:33Z,2026-05-22T14:21:33Z
+96,Gulf Refining Operations,gulfrefining,Oil & Gas Downstream,Corpus Christi,27.8006,-97.3964,1972,1850000000,premium,2026-05-22T14:21:33Z,2026-05-22T14:21:33Z

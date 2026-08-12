@@ -123,38 +123,67 @@ CREATE OR REPLACE FUNCTION find_nearest_centers (
     p_max_results   IN NUMBER DEFAULT 3
 ) RETURN SYS_REFCURSOR
 AS
-    v_results SYS_REFCURSOR;
+    v_results     SYS_REFCURSOR;
+    v_max_results PLS_INTEGER := LEAST(GREATEST(NVL(p_max_results, 3), 1), 20);
 BEGIN
     OPEN v_results FOR
-        SELECT fc.center_id,
-               fc.center_name,
-               fc.city,
-               fc.state_province,
-               fc.center_type,
-               i.quantity_on_hand,
-               ROUND(SDO_GEOM.SDO_DISTANCE(
-                   c.location,
-                   fc.location,
-                   0.005,
-                   'unit=MILE'
-               ), 2) AS distance_mi,
-               ROUND(SDO_GEOM.SDO_DISTANCE(
-                   c.location,
-                   fc.location,
-                   0.005,
-                   'unit=MILE'
-               ) / 50, 1) AS estimated_hours  -- rough estimate at 50 mph avg
-        FROM customers c
-        CROSS JOIN fulfillment_centers fc
-        JOIN inventory i ON fc.center_id = i.center_id
-                        AND i.product_id = p_product_id
-        WHERE c.customer_id = p_customer_id
-          AND fc.is_active = 1
-          AND i.quantity_on_hand > i.quantity_reserved
-        ORDER BY SDO_GEOM.SDO_DISTANCE(
-            c.location, fc.location, 0.005, 'unit=MILE'
+        WITH origin AS (
+            SELECT customer.location
+            FROM customers customer
+            WHERE customer.customer_id = p_customer_id
+              AND customer.location IS NOT NULL
+        ),
+        indexed_candidates AS (
+            SELECT /*+ LEADING(origin) USE_NL(center) INDEX(center idx_fc_spatial) */
+                   center.center_id,
+                   center.center_name,
+                   center.city,
+                   center.state_province,
+                   center.center_type,
+                   center.location AS center_location,
+                   origin.location AS origin_location
+            FROM origin
+            JOIN fulfillment_centers center
+              ON SDO_NN(
+                    center.location,
+                    origin.location,
+                    'sdo_batch_size=50 unit=MILE'
+                 ) = 'TRUE'
+            WHERE center.is_active = 1
+        ),
+        available_candidates AS (
+            SELECT candidate.*,
+                   inventory.quantity_on_hand
+            FROM indexed_candidates candidate
+            JOIN inventory
+              ON inventory.center_id = candidate.center_id
+             AND inventory.product_id = p_product_id
+            WHERE inventory.quantity_on_hand > inventory.quantity_reserved
+        ),
+        measured_candidates AS (
+            SELECT candidate.*,
+                   ROUND(
+                       SDO_GEOM.SDO_DISTANCE(
+                           candidate.origin_location,
+                           candidate.center_location,
+                           0.005,
+                           'unit=MILE'
+                       ),
+                       2
+                   ) AS distance_mi
+            FROM available_candidates candidate
         )
-        FETCH FIRST p_max_results ROWS ONLY;
+        SELECT center_id,
+               center_name,
+               city,
+               state_province,
+               center_type,
+               quantity_on_hand,
+               distance_mi,
+               ROUND(distance_mi / 50, 1) AS estimated_hours
+        FROM measured_candidates
+        ORDER BY distance_mi, center_id
+        FETCH FIRST v_max_results ROWS ONLY;
 
     RETURN v_results;
 END;
@@ -183,19 +212,42 @@ BEGIN
             FROM manufacturing_work_orders o
             JOIN customers c ON o.customer_account_id = c.customer_id
             WHERE o.work_order_id = p_work_order_id
+              AND c.location IS NOT NULL
         ),
-        -- Pre-compute distance as a scalar to avoid GROUP BY on SDO_GEOMETRY
-        center_distances AS (
-            SELECT fc.center_id,
+        -- Use the R-tree index to produce candidates before exact measurement.
+        indexed_candidates AS (
+            SELECT /*+ LEADING(cl) USE_NL(fc) INDEX(fc idx_fc_spatial) */
+                   fc.center_id,
                    fc.center_name,
                    fc.city,
                    fc.state_province,
-                   ROUND(SDO_GEOM.SDO_DISTANCE(
-                       cl.location, fc.location, 0.005, 'unit=MILE'
-                   ), 2) AS distance_mi
-            FROM fulfillment_centers fc
-            CROSS JOIN customer_loc cl
+                   fc.location AS center_location,
+                   cl.location AS customer_location
+            FROM customer_loc cl
+            JOIN fulfillment_centers fc
+              ON SDO_NN(
+                    fc.location,
+                    cl.location,
+                    'sdo_batch_size=50 unit=MILE'
+                 ) = 'TRUE'
             WHERE fc.is_active = 1
+        ),
+        -- Pre-compute exact distance as a scalar to avoid GROUP BY on SDO_GEOMETRY.
+        center_distances AS (
+            SELECT candidate.center_id,
+                   candidate.center_name,
+                   candidate.city,
+                   candidate.state_province,
+                   ROUND(
+                       SDO_GEOM.SDO_DISTANCE(
+                           candidate.customer_location,
+                           candidate.center_location,
+                           0.005,
+                           'unit=MILE'
+                       ),
+                       2
+                   ) AS distance_mi
+            FROM indexed_candidates candidate
         ),
         center_scores AS (
             SELECT cd.center_id,

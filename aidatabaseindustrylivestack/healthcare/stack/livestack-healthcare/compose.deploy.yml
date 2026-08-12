@@ -1,0 +1,8 @@
+# OCI deployment override.
+# compose.yml uses DBPORT for the DB host port and also passes it into ORDS.
+# Keep the host DB port in .env as 1532, but let ORDS connect to db:1521 inside
+# the Podman network. Use with: podman compose -f compose.yml -f compose.deploy.yml up -d --build
+services:
+  ords:
+    environment:
+      DBPORT: "1521"

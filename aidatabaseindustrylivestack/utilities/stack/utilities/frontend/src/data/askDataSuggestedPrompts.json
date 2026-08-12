@@ -1,0 +1,46 @@
+[
+  {
+    "category": "Electric Utility",
+    "text": "Which electric feeders have the highest outage risk this week?"
+  },
+  {
+    "category": "Gas Utility",
+    "text": "Which gas pipeline segments show pressure anomalies or integrity risk?"
+  },
+  {
+    "category": "Water Utility",
+    "text": "Which water pressure zones have recurring leak events?"
+  },
+  {
+    "category": "Wastewater",
+    "text": "Which wastewater facilities are approaching compliance thresholds?"
+  },
+  {
+    "category": "Upstream",
+    "text": "Which wells are underperforming versus forecast?"
+  },
+  {
+    "category": "Downstream",
+    "text": "Which refinery units are constraining throughput?"
+  },
+  {
+    "category": "Midstream",
+    "text": "Which LNG shipments are at risk of delay?"
+  },
+  {
+    "category": "Asset Risk",
+    "text": "Which assets should be prioritized before the storm arrives?"
+  },
+  {
+    "category": "Emissions",
+    "text": "Which emissions events require regulatory follow-up?"
+  },
+  {
+    "category": "Customers",
+    "text": "Which customer service requests are breaching SLA?"
+  },
+  {
+    "category": "Maintenance",
+    "text": "Which maintenance plans are blocked by crew or parts availability?"
+  }
+]

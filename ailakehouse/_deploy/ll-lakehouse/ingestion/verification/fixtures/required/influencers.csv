@@ -1,0 +1,3 @@
+influencer_id,handle,display_name,platform,follower_count,engagement_rate,influence_score,niche,city,region,country,is_verified,created_at
+1,@trail_signal_01,Trail Signal 01,instagram,54000,0.045,72,Trail Running,New York,NY,US,1,2026-01-01T08:00:00Z
+2,@run_signal_01,Run Signal 01,tiktok,88000,0.051,81,Outdoor Gear,Los Angeles,CA,US,1,2026-02-20T10:00:00Z

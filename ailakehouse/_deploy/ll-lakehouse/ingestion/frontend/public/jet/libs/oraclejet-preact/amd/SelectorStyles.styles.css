@@ -1,0 +1,12 @@
+.SelectorStyles_base__1lmgp7a0 {
+  cursor: var(--oj-c-cursor-clickable);
+  position: relative;
+  width: calc(9 * var(--oj-c-size-units, 0.25rem));
+  height: calc(9 * var(--oj-c-size-units, 0.25rem));
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}

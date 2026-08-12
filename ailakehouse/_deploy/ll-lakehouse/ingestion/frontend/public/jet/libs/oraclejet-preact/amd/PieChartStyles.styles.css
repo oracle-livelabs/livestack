@@ -1,0 +1,40 @@
+.PieChartStyles_chart__1a5vzfm0 {
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  width: 100%;
+  height: 100%;
+}
+.PieChartStyles_chart__1a5vzfm0:focus-visible {
+  outline: none;
+}
+.PieChartStyles_innerShapes__1a5vzfm1 {
+  pointer-events: none;
+}
+.PieChartStyles_selectedBorder__1a5vzfm2 {
+  fill: rgb(var(--oj-c-palette-neutral-130));
+}
+.PieChartStyles_svg__1a5vzfm3 {
+  width: 100%;
+  height: 100%;
+}
+.PieChartStyles_contrastBorder__1a5vzfm4 {
+  stroke: var(--oj-c-dvt-contrast-line);
+  stroke-width: 1px;
+}
+.PieChartStyles_dimensionStyle__1a5vzfm5 {
+  width: 100%;
+  height: calc(112 * var(--oj-c-size-units, 0.25rem));
+}
+.PieChartStyles_interactiveItemStyle__1a5vzfm6 {
+  cursor: pointer;
+}
+.PieChartStyles_fillerLineStyle__1a5vzfm7 {
+  stroke: var(--oj-c-border-enabled);
+  stroke-width: 1;
+}
+.PieChartStyles_labelStyle__1a5vzfm8 {
+  font-size: var(--oj-c-label-sm-font-size);
+  fill: var(--oj-c-text-icon-primary);
+}

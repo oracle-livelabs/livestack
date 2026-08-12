@@ -1,0 +1,361 @@
+forecast_id,product_id,region,forecast_date,predicted_demand,confidence_low,confidence_high,social_factor,model_version,explanation,created_at
+1,1,Denver County Service Region,2026-06-18,60,49,71,1.05,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":0,""regionDemandIndex"":62}",2026-06-17T11:00:00Z
+2,2,El Paso County Service Region,2026-06-18,77,63,91,1.13,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":1,""regionDemandIndex"":69}",2026-06-16T11:00:00Z
+3,3,Arapahoe County Service Region,2026-06-18,94,77,111,1.21,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":2,""regionDemandIndex"":76}",2026-06-15T11:00:00Z
+4,4,Larimer County Service Region,2026-06-18,111,91,131,1.29,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":3,""regionDemandIndex"":83}",2026-06-14T11:00:00Z
+5,5,Jefferson County Service Region,2026-06-18,128,105,151,1.37,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":4,""regionDemandIndex"":90}",2026-06-13T11:00:00Z
+6,6,Adams County Service Region,2026-06-18,145,119,171,1.45,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":5,""regionDemandIndex"":62}",2026-06-12T11:00:00Z
+7,7,Pueblo County Service Region,2026-06-18,162,133,191,1.53,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":6,""regionDemandIndex"":69}",2026-06-11T11:00:00Z
+8,8,Boulder County Service Region,2026-06-18,179,147,211,1.61,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":7,""regionDemandIndex"":76}",2026-06-17T11:00:00Z
+9,9,Weld County Service Region,2026-06-18,196,161,231,1.69,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":8,""regionDemandIndex"":83}",2026-06-16T11:00:00Z
+10,10,Douglas County Service Region,2026-06-18,213,175,251,1.77,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":9,""regionDemandIndex"":90}",2026-06-15T11:00:00Z
+11,11,Mesa County Service Region,2026-06-18,230,189,271,1.85,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":10,""regionDemandIndex"":62}",2026-06-14T11:00:00Z
+12,12,Broomfield County Service Region,2026-06-18,247,203,291,1.93,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":11,""regionDemandIndex"":69}",2026-06-13T11:00:00Z
+13,13,La Plata County Service Region,2026-06-18,264,216,312,1.05,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":12,""regionDemandIndex"":76}",2026-06-12T11:00:00Z
+14,14,Montrose County Service Region,2026-06-18,281,230,332,1.13,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":13,""regionDemandIndex"":83}",2026-06-11T11:00:00Z
+15,15,Routt County Service Region,2026-06-18,298,244,352,1.21,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":14,""regionDemandIndex"":90}",2026-06-17T11:00:00Z
+16,16,Alamosa County Service Region,2026-06-18,315,258,372,1.29,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":15,""regionDemandIndex"":62}",2026-06-16T11:00:00Z
+17,17,Garfield County Service Region,2026-06-18,332,272,392,1.37,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":16,""regionDemandIndex"":69}",2026-06-15T11:00:00Z
+18,18,Clear Creek County Service Region,2026-06-18,349,286,412,1.45,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":17,""regionDemandIndex"":76}",2026-06-14T11:00:00Z
+19,1,Fremont County Service Region,2026-06-18,366,300,432,1.53,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":18,""regionDemandIndex"":83}",2026-06-13T11:00:00Z
+20,2,Chaffee County Service Region,2026-06-18,383,314,452,1.61,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":19,""regionDemandIndex"":90}",2026-06-12T11:00:00Z
+21,3,Denver County Service Region,2026-06-19,400,328,472,1.69,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":20,""regionDemandIndex"":62}",2026-06-11T11:00:00Z
+22,4,El Paso County Service Region,2026-06-19,417,342,492,1.77,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":21,""regionDemandIndex"":69}",2026-06-17T11:00:00Z
+23,5,Arapahoe County Service Region,2026-06-19,434,356,512,1.85,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":22,""regionDemandIndex"":76}",2026-06-16T11:00:00Z
+24,6,Larimer County Service Region,2026-06-19,451,370,532,1.93,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":23,""regionDemandIndex"":83}",2026-06-15T11:00:00Z
+25,7,Jefferson County Service Region,2026-06-19,468,384,552,1.05,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":24,""regionDemandIndex"":90}",2026-06-14T11:00:00Z
+26,8,Adams County Service Region,2026-06-19,485,398,572,1.13,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":25,""regionDemandIndex"":62}",2026-06-13T11:00:00Z
+27,9,Pueblo County Service Region,2026-06-19,502,412,592,1.21,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":26,""regionDemandIndex"":69}",2026-06-12T11:00:00Z
+28,10,Boulder County Service Region,2026-06-19,519,426,612,1.29,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":27,""regionDemandIndex"":76}",2026-06-11T11:00:00Z
+29,11,Weld County Service Region,2026-06-19,76,62,90,1.37,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":28,""regionDemandIndex"":83}",2026-06-17T11:00:00Z
+30,12,Douglas County Service Region,2026-06-19,93,76,110,1.45,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":29,""regionDemandIndex"":90}",2026-06-16T11:00:00Z
+31,13,Mesa County Service Region,2026-06-19,110,90,130,1.53,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":30,""regionDemandIndex"":62}",2026-06-15T11:00:00Z
+32,14,Broomfield County Service Region,2026-06-19,127,104,150,1.61,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":31,""regionDemandIndex"":69}",2026-06-14T11:00:00Z
+33,15,La Plata County Service Region,2026-06-19,144,118,170,1.69,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":32,""regionDemandIndex"":76}",2026-06-13T11:00:00Z
+34,16,Montrose County Service Region,2026-06-19,161,132,190,1.77,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":33,""regionDemandIndex"":83}",2026-06-12T11:00:00Z
+35,17,Routt County Service Region,2026-06-19,178,146,210,1.85,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":34,""regionDemandIndex"":90}",2026-06-11T11:00:00Z
+36,18,Alamosa County Service Region,2026-06-19,195,160,230,1.93,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":35,""regionDemandIndex"":62}",2026-06-17T11:00:00Z
+37,1,Garfield County Service Region,2026-06-19,212,174,250,1.05,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":36,""regionDemandIndex"":69}",2026-06-16T11:00:00Z
+38,2,Clear Creek County Service Region,2026-06-19,229,188,270,1.13,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":37,""regionDemandIndex"":76}",2026-06-15T11:00:00Z
+39,3,Fremont County Service Region,2026-06-19,246,202,290,1.21,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":38,""regionDemandIndex"":83}",2026-06-14T11:00:00Z
+40,4,Chaffee County Service Region,2026-06-19,263,216,310,1.29,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":39,""regionDemandIndex"":90}",2026-06-13T11:00:00Z
+41,5,Denver County Service Region,2026-06-20,280,230,330,1.37,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":40,""regionDemandIndex"":62}",2026-06-12T11:00:00Z
+42,6,El Paso County Service Region,2026-06-20,297,244,350,1.45,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":41,""regionDemandIndex"":69}",2026-06-11T11:00:00Z
+43,7,Arapahoe County Service Region,2026-06-20,314,257,371,1.53,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":42,""regionDemandIndex"":76}",2026-06-17T11:00:00Z
+44,8,Larimer County Service Region,2026-06-20,331,271,391,1.61,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":43,""regionDemandIndex"":83}",2026-06-16T11:00:00Z
+45,9,Jefferson County Service Region,2026-06-20,348,285,411,1.69,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":44,""regionDemandIndex"":90}",2026-06-15T11:00:00Z
+46,10,Adams County Service Region,2026-06-20,365,299,431,1.77,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":45,""regionDemandIndex"":62}",2026-06-14T11:00:00Z
+47,11,Pueblo County Service Region,2026-06-20,382,313,451,1.85,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":46,""regionDemandIndex"":69}",2026-06-13T11:00:00Z
+48,12,Boulder County Service Region,2026-06-20,399,327,471,1.93,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":47,""regionDemandIndex"":76}",2026-06-12T11:00:00Z
+49,13,Weld County Service Region,2026-06-20,416,341,491,1.05,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":48,""regionDemandIndex"":83}",2026-06-11T11:00:00Z
+50,14,Douglas County Service Region,2026-06-20,433,355,511,1.13,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":49,""regionDemandIndex"":90}",2026-06-17T11:00:00Z
+51,15,Mesa County Service Region,2026-06-20,450,369,531,1.21,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":50,""regionDemandIndex"":62}",2026-06-16T11:00:00Z
+52,16,Broomfield County Service Region,2026-06-20,467,383,551,1.29,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":51,""regionDemandIndex"":69}",2026-06-15T11:00:00Z
+53,17,La Plata County Service Region,2026-06-20,484,397,571,1.37,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":52,""regionDemandIndex"":76}",2026-06-14T11:00:00Z
+54,18,Montrose County Service Region,2026-06-20,501,411,591,1.45,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":53,""regionDemandIndex"":83}",2026-06-13T11:00:00Z
+55,1,Routt County Service Region,2026-06-20,518,425,611,1.53,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":54,""regionDemandIndex"":90}",2026-06-12T11:00:00Z
+56,2,Alamosa County Service Region,2026-06-20,75,61,89,1.61,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":55,""regionDemandIndex"":62}",2026-06-11T11:00:00Z
+57,3,Garfield County Service Region,2026-06-20,92,75,109,1.69,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":56,""regionDemandIndex"":69}",2026-06-17T11:00:00Z
+58,4,Clear Creek County Service Region,2026-06-20,109,89,129,1.77,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":57,""regionDemandIndex"":76}",2026-06-16T11:00:00Z
+59,5,Fremont County Service Region,2026-06-20,126,103,149,1.85,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":58,""regionDemandIndex"":83}",2026-06-15T11:00:00Z
+60,6,Chaffee County Service Region,2026-06-20,143,117,169,1.93,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":59,""regionDemandIndex"":90}",2026-06-14T11:00:00Z
+61,7,Denver County Service Region,2026-06-21,160,131,189,1.05,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":60,""regionDemandIndex"":62}",2026-06-13T11:00:00Z
+62,8,El Paso County Service Region,2026-06-21,177,145,209,1.13,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":61,""regionDemandIndex"":69}",2026-06-12T11:00:00Z
+63,9,Arapahoe County Service Region,2026-06-21,194,159,229,1.21,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":62,""regionDemandIndex"":76}",2026-06-11T11:00:00Z
+64,10,Larimer County Service Region,2026-06-21,211,173,249,1.29,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":63,""regionDemandIndex"":83}",2026-06-17T11:00:00Z
+65,11,Jefferson County Service Region,2026-06-21,228,187,269,1.37,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":64,""regionDemandIndex"":90}",2026-06-16T11:00:00Z
+66,12,Adams County Service Region,2026-06-21,245,201,289,1.45,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":65,""regionDemandIndex"":62}",2026-06-15T11:00:00Z
+67,13,Pueblo County Service Region,2026-06-21,262,215,309,1.53,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":66,""regionDemandIndex"":69}",2026-06-14T11:00:00Z
+68,14,Boulder County Service Region,2026-06-21,279,229,329,1.61,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":67,""regionDemandIndex"":76}",2026-06-13T11:00:00Z
+69,15,Weld County Service Region,2026-06-21,296,243,349,1.69,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":68,""regionDemandIndex"":83}",2026-06-12T11:00:00Z
+70,16,Douglas County Service Region,2026-06-21,313,257,369,1.77,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":69,""regionDemandIndex"":90}",2026-06-11T11:00:00Z
+71,17,Mesa County Service Region,2026-06-21,330,271,389,1.85,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":70,""regionDemandIndex"":62}",2026-06-17T11:00:00Z
+72,18,Broomfield County Service Region,2026-06-21,347,285,409,1.93,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":71,""regionDemandIndex"":69}",2026-06-16T11:00:00Z
+73,1,La Plata County Service Region,2026-06-21,364,298,430,1.05,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":72,""regionDemandIndex"":76}",2026-06-15T11:00:00Z
+74,2,Montrose County Service Region,2026-06-21,381,312,450,1.13,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":73,""regionDemandIndex"":83}",2026-06-14T11:00:00Z
+75,3,Routt County Service Region,2026-06-21,398,326,470,1.21,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":74,""regionDemandIndex"":90}",2026-06-13T11:00:00Z
+76,4,Alamosa County Service Region,2026-06-21,415,340,490,1.29,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":75,""regionDemandIndex"":62}",2026-06-12T11:00:00Z
+77,5,Garfield County Service Region,2026-06-21,432,354,510,1.37,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":76,""regionDemandIndex"":69}",2026-06-11T11:00:00Z
+78,6,Clear Creek County Service Region,2026-06-21,449,368,530,1.45,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":77,""regionDemandIndex"":76}",2026-06-17T11:00:00Z
+79,7,Fremont County Service Region,2026-06-21,466,382,550,1.53,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":78,""regionDemandIndex"":83}",2026-06-16T11:00:00Z
+80,8,Chaffee County Service Region,2026-06-21,483,396,570,1.61,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":79,""regionDemandIndex"":90}",2026-06-15T11:00:00Z
+81,9,Denver County Service Region,2026-06-22,500,410,590,1.69,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":80,""regionDemandIndex"":62}",2026-06-14T11:00:00Z
+82,10,El Paso County Service Region,2026-06-22,517,424,610,1.77,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":81,""regionDemandIndex"":69}",2026-06-13T11:00:00Z
+83,11,Arapahoe County Service Region,2026-06-22,74,61,87,1.85,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":82,""regionDemandIndex"":76}",2026-06-12T11:00:00Z
+84,12,Larimer County Service Region,2026-06-22,91,75,107,1.93,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":83,""regionDemandIndex"":83}",2026-06-11T11:00:00Z
+85,13,Jefferson County Service Region,2026-06-22,108,89,127,1.05,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":84,""regionDemandIndex"":90}",2026-06-17T11:00:00Z
+86,14,Adams County Service Region,2026-06-22,125,103,148,1.13,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":85,""regionDemandIndex"":62}",2026-06-16T11:00:00Z
+87,15,Pueblo County Service Region,2026-06-22,142,116,168,1.21,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":86,""regionDemandIndex"":69}",2026-06-15T11:00:00Z
+88,16,Boulder County Service Region,2026-06-22,159,130,188,1.29,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":87,""regionDemandIndex"":76}",2026-06-14T11:00:00Z
+89,17,Weld County Service Region,2026-06-22,176,144,208,1.37,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":88,""regionDemandIndex"":83}",2026-06-13T11:00:00Z
+90,18,Douglas County Service Region,2026-06-22,193,158,228,1.45,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":89,""regionDemandIndex"":90}",2026-06-12T11:00:00Z
+91,1,Mesa County Service Region,2026-06-22,210,172,248,1.53,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":90,""regionDemandIndex"":62}",2026-06-11T11:00:00Z
+92,2,Broomfield County Service Region,2026-06-22,227,186,268,1.61,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":91,""regionDemandIndex"":69}",2026-06-17T11:00:00Z
+93,3,La Plata County Service Region,2026-06-22,244,200,288,1.69,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":92,""regionDemandIndex"":76}",2026-06-16T11:00:00Z
+94,4,Montrose County Service Region,2026-06-22,261,214,308,1.77,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":93,""regionDemandIndex"":83}",2026-06-15T11:00:00Z
+95,5,Routt County Service Region,2026-06-22,278,228,328,1.85,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":94,""regionDemandIndex"":90}",2026-06-14T11:00:00Z
+96,6,Alamosa County Service Region,2026-06-22,295,242,348,1.93,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":95,""regionDemandIndex"":62}",2026-06-13T11:00:00Z
+97,7,Garfield County Service Region,2026-06-22,312,256,368,1.05,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":96,""regionDemandIndex"":69}",2026-06-12T11:00:00Z
+98,8,Clear Creek County Service Region,2026-06-22,329,270,388,1.13,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":97,""regionDemandIndex"":76}",2026-06-11T11:00:00Z
+99,9,Fremont County Service Region,2026-06-22,346,284,408,1.21,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":98,""regionDemandIndex"":83}",2026-06-17T11:00:00Z
+100,10,Chaffee County Service Region,2026-06-22,363,298,428,1.29,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":99,""regionDemandIndex"":90}",2026-06-16T11:00:00Z
+101,11,Denver County Service Region,2026-06-23,380,312,448,1.37,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":100,""regionDemandIndex"":62}",2026-06-15T11:00:00Z
+102,12,El Paso County Service Region,2026-06-23,397,326,468,1.45,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":101,""regionDemandIndex"":69}",2026-06-14T11:00:00Z
+103,13,Arapahoe County Service Region,2026-06-23,414,339,489,1.53,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":102,""regionDemandIndex"":76}",2026-06-13T11:00:00Z
+104,14,Larimer County Service Region,2026-06-23,431,353,509,1.61,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":103,""regionDemandIndex"":83}",2026-06-12T11:00:00Z
+105,15,Jefferson County Service Region,2026-06-23,448,367,529,1.69,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":104,""regionDemandIndex"":90}",2026-06-11T11:00:00Z
+106,16,Adams County Service Region,2026-06-23,465,381,549,1.77,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":105,""regionDemandIndex"":62}",2026-06-17T11:00:00Z
+107,17,Pueblo County Service Region,2026-06-23,482,395,569,1.85,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":106,""regionDemandIndex"":69}",2026-06-16T11:00:00Z
+108,18,Boulder County Service Region,2026-06-23,499,409,589,1.93,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":107,""regionDemandIndex"":76}",2026-06-15T11:00:00Z
+109,1,Weld County Service Region,2026-06-23,516,423,609,1.05,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":108,""regionDemandIndex"":83}",2026-06-14T11:00:00Z
+110,2,Douglas County Service Region,2026-06-23,73,60,86,1.13,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":109,""regionDemandIndex"":90}",2026-06-13T11:00:00Z
+111,3,Mesa County Service Region,2026-06-23,90,74,106,1.21,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":110,""regionDemandIndex"":62}",2026-06-12T11:00:00Z
+112,4,Broomfield County Service Region,2026-06-23,107,88,126,1.29,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":111,""regionDemandIndex"":69}",2026-06-11T11:00:00Z
+113,5,La Plata County Service Region,2026-06-23,124,102,146,1.37,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":112,""regionDemandIndex"":76}",2026-06-17T11:00:00Z
+114,6,Montrose County Service Region,2026-06-23,141,116,166,1.45,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":113,""regionDemandIndex"":83}",2026-06-16T11:00:00Z
+115,7,Routt County Service Region,2026-06-23,158,130,186,1.53,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":114,""regionDemandIndex"":90}",2026-06-15T11:00:00Z
+116,8,Alamosa County Service Region,2026-06-23,175,144,207,1.61,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":115,""regionDemandIndex"":62}",2026-06-14T11:00:00Z
+117,9,Garfield County Service Region,2026-06-23,192,157,227,1.69,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":116,""regionDemandIndex"":69}",2026-06-13T11:00:00Z
+118,10,Clear Creek County Service Region,2026-06-23,209,171,247,1.77,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":117,""regionDemandIndex"":76}",2026-06-12T11:00:00Z
+119,11,Fremont County Service Region,2026-06-23,226,185,267,1.85,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":118,""regionDemandIndex"":83}",2026-06-11T11:00:00Z
+120,12,Chaffee County Service Region,2026-06-23,243,199,287,1.93,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":119,""regionDemandIndex"":90}",2026-06-17T11:00:00Z
+121,13,Denver County Service Region,2026-06-24,260,213,307,1.05,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":120,""regionDemandIndex"":62}",2026-06-16T11:00:00Z
+122,14,El Paso County Service Region,2026-06-24,277,227,327,1.13,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":121,""regionDemandIndex"":69}",2026-06-15T11:00:00Z
+123,15,Arapahoe County Service Region,2026-06-24,294,241,347,1.21,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":122,""regionDemandIndex"":76}",2026-06-14T11:00:00Z
+124,16,Larimer County Service Region,2026-06-24,311,255,367,1.29,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":123,""regionDemandIndex"":83}",2026-06-13T11:00:00Z
+125,17,Jefferson County Service Region,2026-06-24,328,269,387,1.37,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":124,""regionDemandIndex"":90}",2026-06-12T11:00:00Z
+126,18,Adams County Service Region,2026-06-24,345,283,407,1.45,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":125,""regionDemandIndex"":62}",2026-06-11T11:00:00Z
+127,1,Pueblo County Service Region,2026-06-24,362,297,427,1.53,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":126,""regionDemandIndex"":69}",2026-06-17T11:00:00Z
+128,2,Boulder County Service Region,2026-06-24,379,311,447,1.61,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":127,""regionDemandIndex"":76}",2026-06-16T11:00:00Z
+129,3,Weld County Service Region,2026-06-24,396,325,467,1.69,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":128,""regionDemandIndex"":83}",2026-06-15T11:00:00Z
+130,4,Douglas County Service Region,2026-06-24,413,339,487,1.77,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":129,""regionDemandIndex"":90}",2026-06-14T11:00:00Z
+131,5,Mesa County Service Region,2026-06-24,430,353,507,1.85,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":130,""regionDemandIndex"":62}",2026-06-13T11:00:00Z
+132,6,Broomfield County Service Region,2026-06-24,447,367,527,1.93,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":131,""regionDemandIndex"":69}",2026-06-12T11:00:00Z
+133,7,La Plata County Service Region,2026-06-24,464,380,548,1.05,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":132,""regionDemandIndex"":76}",2026-06-11T11:00:00Z
+134,8,Montrose County Service Region,2026-06-24,481,394,568,1.13,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":133,""regionDemandIndex"":83}",2026-06-17T11:00:00Z
+135,9,Routt County Service Region,2026-06-24,498,408,588,1.21,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":134,""regionDemandIndex"":90}",2026-06-16T11:00:00Z
+136,10,Alamosa County Service Region,2026-06-24,515,422,608,1.29,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":135,""regionDemandIndex"":62}",2026-06-15T11:00:00Z
+137,11,Garfield County Service Region,2026-06-24,72,59,85,1.37,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":136,""regionDemandIndex"":69}",2026-06-14T11:00:00Z
+138,12,Clear Creek County Service Region,2026-06-24,89,73,105,1.45,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":137,""regionDemandIndex"":76}",2026-06-13T11:00:00Z
+139,13,Fremont County Service Region,2026-06-24,106,87,125,1.53,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":138,""regionDemandIndex"":83}",2026-06-12T11:00:00Z
+140,14,Chaffee County Service Region,2026-06-24,123,101,145,1.61,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":139,""regionDemandIndex"":90}",2026-06-11T11:00:00Z
+141,15,Denver County Service Region,2026-06-25,140,115,165,1.69,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":140,""regionDemandIndex"":62}",2026-06-17T11:00:00Z
+142,16,El Paso County Service Region,2026-06-25,157,129,185,1.77,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":141,""regionDemandIndex"":69}",2026-06-16T11:00:00Z
+143,17,Arapahoe County Service Region,2026-06-25,174,143,205,1.85,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":142,""regionDemandIndex"":76}",2026-06-15T11:00:00Z
+144,18,Larimer County Service Region,2026-06-25,191,157,225,1.93,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":143,""regionDemandIndex"":83}",2026-06-14T11:00:00Z
+145,1,Jefferson County Service Region,2026-06-25,208,171,245,1.05,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":144,""regionDemandIndex"":90}",2026-06-13T11:00:00Z
+146,2,Adams County Service Region,2026-06-25,225,185,266,1.13,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":145,""regionDemandIndex"":62}",2026-06-12T11:00:00Z
+147,3,Pueblo County Service Region,2026-06-25,242,198,286,1.21,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":146,""regionDemandIndex"":69}",2026-06-11T11:00:00Z
+148,4,Boulder County Service Region,2026-06-25,259,212,306,1.29,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":147,""regionDemandIndex"":76}",2026-06-17T11:00:00Z
+149,5,Weld County Service Region,2026-06-25,276,226,326,1.37,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":148,""regionDemandIndex"":83}",2026-06-16T11:00:00Z
+150,6,Douglas County Service Region,2026-06-25,293,240,346,1.45,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":149,""regionDemandIndex"":90}",2026-06-15T11:00:00Z
+151,7,Mesa County Service Region,2026-06-25,310,254,366,1.53,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":150,""regionDemandIndex"":62}",2026-06-14T11:00:00Z
+152,8,Broomfield County Service Region,2026-06-25,327,268,386,1.61,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":151,""regionDemandIndex"":69}",2026-06-13T11:00:00Z
+153,9,La Plata County Service Region,2026-06-25,344,282,406,1.69,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":152,""regionDemandIndex"":76}",2026-06-12T11:00:00Z
+154,10,Montrose County Service Region,2026-06-25,361,296,426,1.77,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":153,""regionDemandIndex"":83}",2026-06-11T11:00:00Z
+155,11,Routt County Service Region,2026-06-25,378,310,446,1.85,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":154,""regionDemandIndex"":90}",2026-06-17T11:00:00Z
+156,12,Alamosa County Service Region,2026-06-25,395,324,466,1.93,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":155,""regionDemandIndex"":62}",2026-06-16T11:00:00Z
+157,13,Garfield County Service Region,2026-06-25,412,338,486,1.05,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":156,""regionDemandIndex"":69}",2026-06-15T11:00:00Z
+158,14,Clear Creek County Service Region,2026-06-25,429,352,506,1.13,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":157,""regionDemandIndex"":76}",2026-06-14T11:00:00Z
+159,15,Fremont County Service Region,2026-06-25,446,366,526,1.21,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":158,""regionDemandIndex"":83}",2026-06-13T11:00:00Z
+160,16,Chaffee County Service Region,2026-06-25,463,380,546,1.29,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":159,""regionDemandIndex"":90}",2026-06-12T11:00:00Z
+161,17,Denver County Service Region,2026-06-26,480,394,566,1.37,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":160,""regionDemandIndex"":62}",2026-06-11T11:00:00Z
+162,18,El Paso County Service Region,2026-06-26,497,408,586,1.45,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":161,""regionDemandIndex"":69}",2026-06-17T11:00:00Z
+163,1,Arapahoe County Service Region,2026-06-26,514,421,607,1.53,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":162,""regionDemandIndex"":76}",2026-06-16T11:00:00Z
+164,2,Larimer County Service Region,2026-06-26,71,58,84,1.61,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":163,""regionDemandIndex"":83}",2026-06-15T11:00:00Z
+165,3,Jefferson County Service Region,2026-06-26,88,72,104,1.69,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":164,""regionDemandIndex"":90}",2026-06-14T11:00:00Z
+166,4,Adams County Service Region,2026-06-26,105,86,124,1.77,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":165,""regionDemandIndex"":62}",2026-06-13T11:00:00Z
+167,5,Pueblo County Service Region,2026-06-26,122,100,144,1.85,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":166,""regionDemandIndex"":69}",2026-06-12T11:00:00Z
+168,6,Boulder County Service Region,2026-06-26,139,114,164,1.93,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":167,""regionDemandIndex"":76}",2026-06-11T11:00:00Z
+169,7,Weld County Service Region,2026-06-26,156,128,184,1.05,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":168,""regionDemandIndex"":83}",2026-06-17T11:00:00Z
+170,8,Douglas County Service Region,2026-06-26,173,142,204,1.13,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":169,""regionDemandIndex"":90}",2026-06-16T11:00:00Z
+171,9,Mesa County Service Region,2026-06-26,190,156,224,1.21,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":170,""regionDemandIndex"":62}",2026-06-15T11:00:00Z
+172,10,Broomfield County Service Region,2026-06-26,207,170,244,1.29,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":171,""regionDemandIndex"":69}",2026-06-14T11:00:00Z
+173,11,La Plata County Service Region,2026-06-26,224,184,264,1.37,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":172,""regionDemandIndex"":76}",2026-06-13T11:00:00Z
+174,12,Montrose County Service Region,2026-06-26,241,198,284,1.45,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":173,""regionDemandIndex"":83}",2026-06-12T11:00:00Z
+175,13,Routt County Service Region,2026-06-26,258,212,304,1.53,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":174,""regionDemandIndex"":90}",2026-06-11T11:00:00Z
+176,14,Alamosa County Service Region,2026-06-26,275,226,325,1.61,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":175,""regionDemandIndex"":62}",2026-06-17T11:00:00Z
+177,15,Garfield County Service Region,2026-06-26,292,239,345,1.69,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":176,""regionDemandIndex"":69}",2026-06-16T11:00:00Z
+178,16,Clear Creek County Service Region,2026-06-26,309,253,365,1.77,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":177,""regionDemandIndex"":76}",2026-06-15T11:00:00Z
+179,17,Fremont County Service Region,2026-06-26,326,267,385,1.85,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":178,""regionDemandIndex"":83}",2026-06-14T11:00:00Z
+180,18,Chaffee County Service Region,2026-06-26,343,281,405,1.93,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":179,""regionDemandIndex"":90}",2026-06-13T11:00:00Z
+181,1,Denver County Service Region,2026-06-27,360,295,425,1.05,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":180,""regionDemandIndex"":62}",2026-06-12T11:00:00Z
+182,2,El Paso County Service Region,2026-06-27,377,309,445,1.13,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":181,""regionDemandIndex"":69}",2026-06-11T11:00:00Z
+183,3,Arapahoe County Service Region,2026-06-27,394,323,465,1.21,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":182,""regionDemandIndex"":76}",2026-06-17T11:00:00Z
+184,4,Larimer County Service Region,2026-06-27,411,337,485,1.29,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":183,""regionDemandIndex"":83}",2026-06-16T11:00:00Z
+185,5,Jefferson County Service Region,2026-06-27,428,351,505,1.37,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":184,""regionDemandIndex"":90}",2026-06-15T11:00:00Z
+186,6,Adams County Service Region,2026-06-27,445,365,525,1.45,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":185,""regionDemandIndex"":62}",2026-06-14T11:00:00Z
+187,7,Pueblo County Service Region,2026-06-27,462,379,545,1.53,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":186,""regionDemandIndex"":69}",2026-06-13T11:00:00Z
+188,8,Boulder County Service Region,2026-06-27,479,393,565,1.61,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":187,""regionDemandIndex"":76}",2026-06-12T11:00:00Z
+189,9,Weld County Service Region,2026-06-27,496,407,585,1.69,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":188,""regionDemandIndex"":83}",2026-06-11T11:00:00Z
+190,10,Douglas County Service Region,2026-06-27,513,421,605,1.77,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":189,""regionDemandIndex"":90}",2026-06-17T11:00:00Z
+191,11,Mesa County Service Region,2026-06-27,70,57,83,1.85,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":190,""regionDemandIndex"":62}",2026-06-16T11:00:00Z
+192,12,Broomfield County Service Region,2026-06-27,87,71,103,1.93,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":191,""regionDemandIndex"":69}",2026-06-15T11:00:00Z
+193,13,La Plata County Service Region,2026-06-27,104,85,123,1.05,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":192,""regionDemandIndex"":76}",2026-06-14T11:00:00Z
+194,14,Montrose County Service Region,2026-06-27,121,99,143,1.13,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":193,""regionDemandIndex"":83}",2026-06-13T11:00:00Z
+195,15,Routt County Service Region,2026-06-27,138,113,163,1.21,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":194,""regionDemandIndex"":90}",2026-06-12T11:00:00Z
+196,16,Alamosa County Service Region,2026-06-27,155,127,183,1.29,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":195,""regionDemandIndex"":62}",2026-06-11T11:00:00Z
+197,17,Garfield County Service Region,2026-06-27,172,141,203,1.37,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":196,""regionDemandIndex"":69}",2026-06-17T11:00:00Z
+198,18,Clear Creek County Service Region,2026-06-27,189,155,223,1.45,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":197,""regionDemandIndex"":76}",2026-06-16T11:00:00Z
+199,1,Fremont County Service Region,2026-06-27,206,169,243,1.53,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":198,""regionDemandIndex"":83}",2026-06-15T11:00:00Z
+200,2,Chaffee County Service Region,2026-06-27,223,183,263,1.61,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":199,""regionDemandIndex"":90}",2026-06-14T11:00:00Z
+201,3,Denver County Service Region,2026-06-28,240,197,283,1.69,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":200,""regionDemandIndex"":62}",2026-06-13T11:00:00Z
+202,4,El Paso County Service Region,2026-06-28,257,211,303,1.77,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":201,""regionDemandIndex"":69}",2026-06-12T11:00:00Z
+203,5,Arapahoe County Service Region,2026-06-28,274,225,323,1.85,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":202,""regionDemandIndex"":76}",2026-06-11T11:00:00Z
+204,6,Larimer County Service Region,2026-06-28,291,239,343,1.93,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":203,""regionDemandIndex"":83}",2026-06-17T11:00:00Z
+205,7,Jefferson County Service Region,2026-06-28,308,253,363,1.05,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":204,""regionDemandIndex"":90}",2026-06-16T11:00:00Z
+206,8,Adams County Service Region,2026-06-28,325,267,384,1.13,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":205,""regionDemandIndex"":62}",2026-06-15T11:00:00Z
+207,9,Pueblo County Service Region,2026-06-28,342,280,404,1.21,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":206,""regionDemandIndex"":69}",2026-06-14T11:00:00Z
+208,10,Boulder County Service Region,2026-06-28,359,294,424,1.29,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":207,""regionDemandIndex"":76}",2026-06-13T11:00:00Z
+209,11,Weld County Service Region,2026-06-28,376,308,444,1.37,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":208,""regionDemandIndex"":83}",2026-06-12T11:00:00Z
+210,12,Douglas County Service Region,2026-06-28,393,322,464,1.45,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":209,""regionDemandIndex"":90}",2026-06-11T11:00:00Z
+211,13,Mesa County Service Region,2026-06-28,410,336,484,1.53,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":210,""regionDemandIndex"":62}",2026-06-17T11:00:00Z
+212,14,Broomfield County Service Region,2026-06-28,427,350,504,1.61,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":211,""regionDemandIndex"":69}",2026-06-16T11:00:00Z
+213,15,La Plata County Service Region,2026-06-28,444,364,524,1.69,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":212,""regionDemandIndex"":76}",2026-06-15T11:00:00Z
+214,16,Montrose County Service Region,2026-06-28,461,378,544,1.77,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":213,""regionDemandIndex"":83}",2026-06-14T11:00:00Z
+215,17,Routt County Service Region,2026-06-28,478,392,564,1.85,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":214,""regionDemandIndex"":90}",2026-06-13T11:00:00Z
+216,18,Alamosa County Service Region,2026-06-28,495,406,584,1.93,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":215,""regionDemandIndex"":62}",2026-06-12T11:00:00Z
+217,1,Garfield County Service Region,2026-06-28,512,420,604,1.05,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":216,""regionDemandIndex"":69}",2026-06-11T11:00:00Z
+218,2,Clear Creek County Service Region,2026-06-28,69,57,81,1.13,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":217,""regionDemandIndex"":76}",2026-06-17T11:00:00Z
+219,3,Fremont County Service Region,2026-06-28,86,71,101,1.21,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":218,""regionDemandIndex"":83}",2026-06-16T11:00:00Z
+220,4,Chaffee County Service Region,2026-06-28,103,84,122,1.29,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":219,""regionDemandIndex"":90}",2026-06-15T11:00:00Z
+221,5,Denver County Service Region,2026-06-29,120,98,142,1.37,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":220,""regionDemandIndex"":62}",2026-06-14T11:00:00Z
+222,6,El Paso County Service Region,2026-06-29,137,112,162,1.45,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":221,""regionDemandIndex"":69}",2026-06-13T11:00:00Z
+223,7,Arapahoe County Service Region,2026-06-29,154,126,182,1.53,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":222,""regionDemandIndex"":76}",2026-06-12T11:00:00Z
+224,8,Larimer County Service Region,2026-06-29,171,140,202,1.61,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":223,""regionDemandIndex"":83}",2026-06-11T11:00:00Z
+225,9,Jefferson County Service Region,2026-06-29,188,154,222,1.69,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":224,""regionDemandIndex"":90}",2026-06-17T11:00:00Z
+226,10,Adams County Service Region,2026-06-29,205,168,242,1.77,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":225,""regionDemandIndex"":62}",2026-06-16T11:00:00Z
+227,11,Pueblo County Service Region,2026-06-29,222,182,262,1.85,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":226,""regionDemandIndex"":69}",2026-06-15T11:00:00Z
+228,12,Boulder County Service Region,2026-06-29,239,196,282,1.93,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":227,""regionDemandIndex"":76}",2026-06-14T11:00:00Z
+229,13,Weld County Service Region,2026-06-29,256,210,302,1.05,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":228,""regionDemandIndex"":83}",2026-06-13T11:00:00Z
+230,14,Douglas County Service Region,2026-06-29,273,224,322,1.13,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":229,""regionDemandIndex"":90}",2026-06-12T11:00:00Z
+231,15,Mesa County Service Region,2026-06-29,290,238,342,1.21,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":230,""regionDemandIndex"":62}",2026-06-11T11:00:00Z
+232,16,Broomfield County Service Region,2026-06-29,307,252,362,1.29,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":231,""regionDemandIndex"":69}",2026-06-17T11:00:00Z
+233,17,La Plata County Service Region,2026-06-29,324,266,382,1.37,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":232,""regionDemandIndex"":76}",2026-06-16T11:00:00Z
+234,18,Montrose County Service Region,2026-06-29,341,280,402,1.45,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":233,""regionDemandIndex"":83}",2026-06-15T11:00:00Z
+235,1,Routt County Service Region,2026-06-29,358,294,422,1.53,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":234,""regionDemandIndex"":90}",2026-06-14T11:00:00Z
+236,2,Alamosa County Service Region,2026-06-29,375,308,443,1.61,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":235,""regionDemandIndex"":62}",2026-06-13T11:00:00Z
+237,3,Garfield County Service Region,2026-06-29,392,321,463,1.69,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":236,""regionDemandIndex"":69}",2026-06-12T11:00:00Z
+238,4,Clear Creek County Service Region,2026-06-29,409,335,483,1.77,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":237,""regionDemandIndex"":76}",2026-06-11T11:00:00Z
+239,5,Fremont County Service Region,2026-06-29,426,349,503,1.85,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":238,""regionDemandIndex"":83}",2026-06-17T11:00:00Z
+240,6,Chaffee County Service Region,2026-06-29,443,363,523,1.93,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":239,""regionDemandIndex"":90}",2026-06-16T11:00:00Z
+241,7,Denver County Service Region,2026-06-30,460,377,543,1.05,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":240,""regionDemandIndex"":62}",2026-06-15T11:00:00Z
+242,8,El Paso County Service Region,2026-06-30,477,391,563,1.13,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":241,""regionDemandIndex"":69}",2026-06-14T11:00:00Z
+243,9,Arapahoe County Service Region,2026-06-30,494,405,583,1.21,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":242,""regionDemandIndex"":76}",2026-06-13T11:00:00Z
+244,10,Larimer County Service Region,2026-06-30,511,419,603,1.29,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":243,""regionDemandIndex"":83}",2026-06-12T11:00:00Z
+245,11,Jefferson County Service Region,2026-06-30,68,56,80,1.37,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":244,""regionDemandIndex"":90}",2026-06-11T11:00:00Z
+246,12,Adams County Service Region,2026-06-30,85,70,100,1.45,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":245,""regionDemandIndex"":62}",2026-06-17T11:00:00Z
+247,13,Pueblo County Service Region,2026-06-30,102,84,120,1.53,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":246,""regionDemandIndex"":69}",2026-06-16T11:00:00Z
+248,14,Boulder County Service Region,2026-06-30,119,98,140,1.61,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":247,""regionDemandIndex"":76}",2026-06-15T11:00:00Z
+249,15,Weld County Service Region,2026-06-30,136,112,160,1.69,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":248,""regionDemandIndex"":83}",2026-06-14T11:00:00Z
+250,16,Douglas County Service Region,2026-06-30,153,125,181,1.77,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":249,""regionDemandIndex"":90}",2026-06-13T11:00:00Z
+251,17,Mesa County Service Region,2026-06-30,170,139,201,1.85,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":250,""regionDemandIndex"":62}",2026-06-12T11:00:00Z
+252,18,Broomfield County Service Region,2026-06-30,187,153,221,1.93,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":251,""regionDemandIndex"":69}",2026-06-11T11:00:00Z
+253,1,La Plata County Service Region,2026-06-30,204,167,241,1.05,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":252,""regionDemandIndex"":76}",2026-06-17T11:00:00Z
+254,2,Montrose County Service Region,2026-06-30,221,181,261,1.13,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":253,""regionDemandIndex"":83}",2026-06-16T11:00:00Z
+255,3,Routt County Service Region,2026-06-30,238,195,281,1.21,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":254,""regionDemandIndex"":90}",2026-06-15T11:00:00Z
+256,4,Alamosa County Service Region,2026-06-30,255,209,301,1.29,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":255,""regionDemandIndex"":62}",2026-06-14T11:00:00Z
+257,5,Garfield County Service Region,2026-06-30,272,223,321,1.37,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":256,""regionDemandIndex"":69}",2026-06-13T11:00:00Z
+258,6,Clear Creek County Service Region,2026-06-30,289,237,341,1.45,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":257,""regionDemandIndex"":76}",2026-06-12T11:00:00Z
+259,7,Fremont County Service Region,2026-06-30,306,251,361,1.53,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":258,""regionDemandIndex"":83}",2026-06-11T11:00:00Z
+260,8,Chaffee County Service Region,2026-06-30,323,265,381,1.61,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":259,""regionDemandIndex"":90}",2026-06-17T11:00:00Z
+261,9,Denver County Service Region,2026-07-01,340,279,401,1.69,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":260,""regionDemandIndex"":62}",2026-06-16T11:00:00Z
+262,10,El Paso County Service Region,2026-07-01,357,293,421,1.77,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":261,""regionDemandIndex"":69}",2026-06-15T11:00:00Z
+263,11,Arapahoe County Service Region,2026-07-01,374,307,441,1.85,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":262,""regionDemandIndex"":76}",2026-06-14T11:00:00Z
+264,12,Larimer County Service Region,2026-07-01,391,321,461,1.93,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":263,""regionDemandIndex"":83}",2026-06-13T11:00:00Z
+265,13,Jefferson County Service Region,2026-07-01,408,335,481,1.05,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":264,""regionDemandIndex"":90}",2026-06-12T11:00:00Z
+266,14,Adams County Service Region,2026-07-01,425,349,502,1.13,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":265,""regionDemandIndex"":62}",2026-06-11T11:00:00Z
+267,15,Pueblo County Service Region,2026-07-01,442,362,522,1.21,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":266,""regionDemandIndex"":69}",2026-06-17T11:00:00Z
+268,16,Boulder County Service Region,2026-07-01,459,376,542,1.29,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":267,""regionDemandIndex"":76}",2026-06-16T11:00:00Z
+269,17,Weld County Service Region,2026-07-01,476,390,562,1.37,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":268,""regionDemandIndex"":83}",2026-06-15T11:00:00Z
+270,18,Douglas County Service Region,2026-07-01,493,404,582,1.45,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":269,""regionDemandIndex"":90}",2026-06-14T11:00:00Z
+271,1,Mesa County Service Region,2026-07-01,510,418,602,1.53,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":270,""regionDemandIndex"":62}",2026-06-13T11:00:00Z
+272,2,Broomfield County Service Region,2026-07-01,67,55,79,1.61,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":271,""regionDemandIndex"":69}",2026-06-12T11:00:00Z
+273,3,La Plata County Service Region,2026-07-01,84,69,99,1.69,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":272,""regionDemandIndex"":76}",2026-06-11T11:00:00Z
+274,4,Montrose County Service Region,2026-07-01,101,83,119,1.77,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":273,""regionDemandIndex"":83}",2026-06-17T11:00:00Z
+275,5,Routt County Service Region,2026-07-01,118,97,139,1.85,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":274,""regionDemandIndex"":90}",2026-06-16T11:00:00Z
+276,6,Alamosa County Service Region,2026-07-01,135,111,159,1.93,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":275,""regionDemandIndex"":62}",2026-06-15T11:00:00Z
+277,7,Garfield County Service Region,2026-07-01,152,125,179,1.05,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":276,""regionDemandIndex"":69}",2026-06-14T11:00:00Z
+278,8,Clear Creek County Service Region,2026-07-01,169,139,199,1.13,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":277,""regionDemandIndex"":76}",2026-06-13T11:00:00Z
+279,9,Fremont County Service Region,2026-07-01,186,153,219,1.21,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":278,""regionDemandIndex"":83}",2026-06-12T11:00:00Z
+280,10,Chaffee County Service Region,2026-07-01,203,166,240,1.29,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":279,""regionDemandIndex"":90}",2026-06-11T11:00:00Z
+281,11,Denver County Service Region,2026-07-02,220,180,260,1.37,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":280,""regionDemandIndex"":62}",2026-06-17T11:00:00Z
+282,12,El Paso County Service Region,2026-07-02,237,194,280,1.45,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":281,""regionDemandIndex"":69}",2026-06-16T11:00:00Z
+283,13,Arapahoe County Service Region,2026-07-02,254,208,300,1.53,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":282,""regionDemandIndex"":76}",2026-06-15T11:00:00Z
+284,14,Larimer County Service Region,2026-07-02,271,222,320,1.61,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":283,""regionDemandIndex"":83}",2026-06-14T11:00:00Z
+285,15,Jefferson County Service Region,2026-07-02,288,236,340,1.69,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":284,""regionDemandIndex"":90}",2026-06-13T11:00:00Z
+286,16,Adams County Service Region,2026-07-02,305,250,360,1.77,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":285,""regionDemandIndex"":62}",2026-06-12T11:00:00Z
+287,17,Pueblo County Service Region,2026-07-02,322,264,380,1.85,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":286,""regionDemandIndex"":69}",2026-06-11T11:00:00Z
+288,18,Boulder County Service Region,2026-07-02,339,278,400,1.93,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":287,""regionDemandIndex"":76}",2026-06-17T11:00:00Z
+289,1,Weld County Service Region,2026-07-02,356,292,420,1.05,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":288,""regionDemandIndex"":83}",2026-06-16T11:00:00Z
+290,2,Douglas County Service Region,2026-07-02,373,306,440,1.13,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":289,""regionDemandIndex"":90}",2026-06-15T11:00:00Z
+291,3,Mesa County Service Region,2026-07-02,390,320,460,1.21,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":290,""regionDemandIndex"":62}",2026-06-14T11:00:00Z
+292,4,Broomfield County Service Region,2026-07-02,407,334,480,1.29,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":291,""regionDemandIndex"":69}",2026-06-13T11:00:00Z
+293,5,La Plata County Service Region,2026-07-02,424,348,500,1.37,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":292,""regionDemandIndex"":76}",2026-06-12T11:00:00Z
+294,6,Montrose County Service Region,2026-07-02,441,362,520,1.45,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":293,""regionDemandIndex"":83}",2026-06-11T11:00:00Z
+295,7,Routt County Service Region,2026-07-02,458,376,540,1.53,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":294,""regionDemandIndex"":90}",2026-06-17T11:00:00Z
+296,8,Alamosa County Service Region,2026-07-02,475,390,561,1.61,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":295,""regionDemandIndex"":62}",2026-06-16T11:00:00Z
+297,9,Garfield County Service Region,2026-07-02,492,403,581,1.69,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":296,""regionDemandIndex"":69}",2026-06-15T11:00:00Z
+298,10,Clear Creek County Service Region,2026-07-02,509,417,601,1.77,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":297,""regionDemandIndex"":76}",2026-06-14T11:00:00Z
+299,11,Fremont County Service Region,2026-07-02,66,54,78,1.85,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":298,""regionDemandIndex"":83}",2026-06-13T11:00:00Z
+300,12,Chaffee County Service Region,2026-07-02,83,68,98,1.93,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":299,""regionDemandIndex"":90}",2026-06-12T11:00:00Z
+301,13,Denver County Service Region,2026-07-03,100,82,118,1.05,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":300,""regionDemandIndex"":62}",2026-06-11T11:00:00Z
+302,14,El Paso County Service Region,2026-07-03,117,96,138,1.13,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":301,""regionDemandIndex"":69}",2026-06-17T11:00:00Z
+303,15,Arapahoe County Service Region,2026-07-03,134,110,158,1.21,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":302,""regionDemandIndex"":76}",2026-06-16T11:00:00Z
+304,16,Larimer County Service Region,2026-07-03,151,124,178,1.29,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":303,""regionDemandIndex"":83}",2026-06-15T11:00:00Z
+305,17,Jefferson County Service Region,2026-07-03,168,138,198,1.37,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":304,""regionDemandIndex"":90}",2026-06-14T11:00:00Z
+306,18,Adams County Service Region,2026-07-03,185,152,218,1.45,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":305,""regionDemandIndex"":62}",2026-06-13T11:00:00Z
+307,1,Pueblo County Service Region,2026-07-03,202,166,238,1.53,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":306,""regionDemandIndex"":69}",2026-06-12T11:00:00Z
+308,2,Boulder County Service Region,2026-07-03,219,180,258,1.61,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":307,""regionDemandIndex"":76}",2026-06-11T11:00:00Z
+309,3,Weld County Service Region,2026-07-03,236,194,278,1.69,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":308,""regionDemandIndex"":83}",2026-06-17T11:00:00Z
+310,4,Douglas County Service Region,2026-07-03,253,207,299,1.77,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":309,""regionDemandIndex"":90}",2026-06-16T11:00:00Z
+311,5,Mesa County Service Region,2026-07-03,270,221,319,1.85,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":310,""regionDemandIndex"":62}",2026-06-15T11:00:00Z
+312,6,Broomfield County Service Region,2026-07-03,287,235,339,1.93,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":311,""regionDemandIndex"":69}",2026-06-14T11:00:00Z
+313,7,La Plata County Service Region,2026-07-03,304,249,359,1.05,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":312,""regionDemandIndex"":76}",2026-06-13T11:00:00Z
+314,8,Montrose County Service Region,2026-07-03,321,263,379,1.13,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":313,""regionDemandIndex"":83}",2026-06-12T11:00:00Z
+315,9,Routt County Service Region,2026-07-03,338,277,399,1.21,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":314,""regionDemandIndex"":90}",2026-06-11T11:00:00Z
+316,10,Alamosa County Service Region,2026-07-03,355,291,419,1.29,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":315,""regionDemandIndex"":62}",2026-06-17T11:00:00Z
+317,11,Garfield County Service Region,2026-07-03,372,305,439,1.37,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":316,""regionDemandIndex"":69}",2026-06-16T11:00:00Z
+318,12,Clear Creek County Service Region,2026-07-03,389,319,459,1.45,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":317,""regionDemandIndex"":76}",2026-06-15T11:00:00Z
+319,13,Fremont County Service Region,2026-07-03,406,333,479,1.53,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":318,""regionDemandIndex"":83}",2026-06-14T11:00:00Z
+320,14,Chaffee County Service Region,2026-07-03,423,347,499,1.61,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":319,""regionDemandIndex"":90}",2026-06-13T11:00:00Z
+321,15,Denver County Service Region,2026-07-04,440,361,519,1.69,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":320,""regionDemandIndex"":62}",2026-06-12T11:00:00Z
+322,16,El Paso County Service Region,2026-07-04,457,375,539,1.77,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":321,""regionDemandIndex"":69}",2026-06-11T11:00:00Z
+323,17,Arapahoe County Service Region,2026-07-04,474,389,559,1.85,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":322,""regionDemandIndex"":76}",2026-06-17T11:00:00Z
+324,18,Larimer County Service Region,2026-07-04,491,403,579,1.93,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":323,""regionDemandIndex"":83}",2026-06-16T11:00:00Z
+325,1,Jefferson County Service Region,2026-07-04,508,417,599,1.05,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":324,""regionDemandIndex"":90}",2026-06-15T11:00:00Z
+326,2,Adams County Service Region,2026-07-04,65,53,77,1.13,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":325,""regionDemandIndex"":62}",2026-06-14T11:00:00Z
+327,3,Pueblo County Service Region,2026-07-04,82,67,97,1.21,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":326,""regionDemandIndex"":69}",2026-06-13T11:00:00Z
+328,4,Boulder County Service Region,2026-07-04,99,81,117,1.29,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":327,""regionDemandIndex"":76}",2026-06-12T11:00:00Z
+329,5,Weld County Service Region,2026-07-04,116,95,137,1.37,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":328,""regionDemandIndex"":83}",2026-06-11T11:00:00Z
+330,6,Douglas County Service Region,2026-07-04,133,109,157,1.45,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":329,""regionDemandIndex"":90}",2026-06-17T11:00:00Z
+331,7,Mesa County Service Region,2026-07-04,150,123,177,1.53,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":330,""regionDemandIndex"":62}",2026-06-16T11:00:00Z
+332,8,Broomfield County Service Region,2026-07-04,167,137,197,1.61,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":331,""regionDemandIndex"":69}",2026-06-15T11:00:00Z
+333,9,La Plata County Service Region,2026-07-04,184,151,217,1.69,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":332,""regionDemandIndex"":76}",2026-06-14T11:00:00Z
+334,10,Montrose County Service Region,2026-07-04,201,165,237,1.77,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":333,""regionDemandIndex"":83}",2026-06-13T11:00:00Z
+335,11,Routt County Service Region,2026-07-04,218,179,257,1.85,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":334,""regionDemandIndex"":90}",2026-06-12T11:00:00Z
+336,12,Alamosa County Service Region,2026-07-04,235,193,277,1.93,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":335,""regionDemandIndex"":62}",2026-06-11T11:00:00Z
+337,13,Garfield County Service Region,2026-07-04,252,207,297,1.05,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":336,""regionDemandIndex"":69}",2026-06-17T11:00:00Z
+338,14,Clear Creek County Service Region,2026-07-04,269,221,317,1.13,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":337,""regionDemandIndex"":76}",2026-06-16T11:00:00Z
+339,15,Fremont County Service Region,2026-07-04,286,235,337,1.21,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":338,""regionDemandIndex"":83}",2026-06-15T11:00:00Z
+340,16,Chaffee County Service Region,2026-07-04,303,248,358,1.29,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":339,""regionDemandIndex"":90}",2026-06-14T11:00:00Z
+341,17,Denver County Service Region,2026-07-05,320,262,378,1.37,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":340,""regionDemandIndex"":62}",2026-06-13T11:00:00Z
+342,18,El Paso County Service Region,2026-07-05,337,276,398,1.45,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":341,""regionDemandIndex"":69}",2026-06-12T11:00:00Z
+343,1,Arapahoe County Service Region,2026-07-05,354,290,418,1.53,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":342,""regionDemandIndex"":76}",2026-06-11T11:00:00Z
+344,2,Larimer County Service Region,2026-07-05,371,304,438,1.61,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":343,""regionDemandIndex"":83}",2026-06-17T11:00:00Z
+345,3,Jefferson County Service Region,2026-07-05,388,318,458,1.69,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":344,""regionDemandIndex"":90}",2026-06-16T11:00:00Z
+346,4,Adams County Service Region,2026-07-05,405,332,478,1.77,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":345,""regionDemandIndex"":62}",2026-06-15T11:00:00Z
+347,5,Pueblo County Service Region,2026-07-05,422,346,498,1.85,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":346,""regionDemandIndex"":69}",2026-06-14T11:00:00Z
+348,6,Boulder County Service Region,2026-07-05,439,360,518,1.93,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":347,""regionDemandIndex"":76}",2026-06-13T11:00:00Z
+349,7,Weld County Service Region,2026-07-05,456,374,538,1.05,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":348,""regionDemandIndex"":83}",2026-06-12T11:00:00Z
+350,8,Douglas County Service Region,2026-07-05,473,388,558,1.13,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":349,""regionDemandIndex"":90}",2026-06-11T11:00:00Z
+351,9,Mesa County Service Region,2026-07-05,490,402,578,1.21,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":350,""regionDemandIndex"":62}",2026-06-17T11:00:00Z
+352,10,Broomfield County Service Region,2026-07-05,507,416,598,1.29,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":351,""regionDemandIndex"":69}",2026-06-16T11:00:00Z
+353,11,La Plata County Service Region,2026-07-05,64,52,76,1.37,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":352,""regionDemandIndex"":76}",2026-06-15T11:00:00Z
+354,12,Montrose County Service Region,2026-07-05,81,66,96,1.45,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":353,""regionDemandIndex"":83}",2026-06-14T11:00:00Z
+355,13,Routt County Service Region,2026-07-05,98,80,116,1.53,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":354,""regionDemandIndex"":90}",2026-06-13T11:00:00Z
+356,14,Alamosa County Service Region,2026-07-05,115,94,136,1.61,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":355,""regionDemandIndex"":62}",2026-06-12T11:00:00Z
+357,15,Garfield County Service Region,2026-07-05,132,108,156,1.69,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":356,""regionDemandIndex"":69}",2026-06-11T11:00:00Z
+358,16,Clear Creek County Service Region,2026-07-05,149,122,176,1.77,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":357,""regionDemandIndex"":76}",2026-06-17T11:00:00Z
+359,17,Fremont County Service Region,2026-07-05,166,136,196,1.85,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":358,""regionDemandIndex"":83}",2026-06-16T11:00:00Z
+360,18,Chaffee County Service Region,2026-07-05,183,150,216,1.93,sled_reference_scale_v1,"{""source"":""reference_scale_seed"",""signalIndex"":359,""regionDemandIndex"":90}",2026-06-15T11:00:00Z

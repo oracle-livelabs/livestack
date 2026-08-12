@@ -1,0 +1,2 @@
+define(['exports', 'preact/jsx-runtime', './List-daac1169', 'preact/hooks', './TabbableModeContext-a9c97640', './logger-0f873e29', './flexitem-5db48325', './PRIVATE_List/themes/ListStyles.css', './UNSAFE_GroupedList/themes/GroupedListStyles.css', 'module', './Flex-4b81b412', './Skeleton-3e52c94a'], (function(e,s,t,i,r,o,d,c,l,a,n,u){"use strict";e.VirtualizedListView=function(e){return s.jsx(t.List,{isVirtualized:!0,...e,children:e.children})}}));
+//# sourceMappingURL=VirtualizedListView-1ae7151d.js.map

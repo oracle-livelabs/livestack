@@ -1,0 +1,25 @@
+[Unit]
+Description=Podman Compose App
+After=network-online.target adb-wallet.service adb-load.service
+Wants=network-online.target adb-wallet.service adb-load.service
+
+[Service]
+Type=simple
+Environment=PODMAN_SYSTEMD_UNIT=%n
+Environment=PODMAN_USERNS=keep-id
+Restart=always
+TimeoutStartSec=420
+TimeoutStopSec=420
+WorkingDirectory=/home/opc/ingestion
+
+ExecStartPre=/bin/bash -c '/home/opc/init/setenv.sh'
+
+ExecStartPre=/usr/local/bin/podman-compose down
+#ExecStartPre=/usr/bin/podman-compose down
+
+# Start the compose app
+ExecStart=/usr/local/bin/podman-compose up
+#ExecStart=/usr/bin/podman-compose up
+
+[Install]
+WantedBy=default.target

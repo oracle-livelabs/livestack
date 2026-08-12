@@ -1,0 +1,49 @@
+{
+  "name": "energy-utilities-operations-demo",
+  "version": "1.0.0",
+  "description": "Energy & Utilities Operations - Oracle AI Database 26ai Converged Demo",
+  "main": "backend/server.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "nodemon backend/server.js",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "verify:brand-colors": "node verification/check-brand-colors.js",
+    "verify:contrast": "node verification/check-contrast.js",
+    "verify:focus-semantics": "node verification/check-focus-semantics.js",
+    "verify:askdata-schema-metadata": "node verification/check-askdata-schema-metadata.js",
+    "verify:askdata-suggested-prompts": "node verification/check-askdata-suggested-prompts.js",
+    "verify:askdata-pipeline": "node verification/check-askdata-pipeline.js",
+    "verify:demo-date-reanchor": "node verification/check-demo-date-reanchor.js",
+    "verify:demo-date-windows": "node verification/check-demo-date-windows.js",
+    "verify:utilities-demo-session": "node verification/check-utilities-demo-session-contract.js",
+    "verify:utilities-admin-package": "node verification/check-utilities-admin-package-contract.js",
+    "verify:utilities-ui-integration": "node verification/check-utilities-ui-integration-contract.js",
+    "verify:utilities-durable-restore-recovery": "node verification/check-utilities-durable-restore-recovery-contract.js",
+    "verify:utilities-atomic-generation-lifecycle": "node verification/check-utilities-atomic-generation-lifecycle-contract.js",
+    "verify:utilities-vpd-feature-lifecycle": "node verification/check-utilities-vpd-feature-lifecycle-ut4-contract.js",
+    "verify:utilities-dataset-serving-fence": "node verification/check-utilities-dataset-serving-fence-unit.js",
+    "verify:utilities-comparator-runtime-ui-parity": "node verification/check-utilities-comparator-runtime-ui-parity-contract.js",
+    "verify:utilities-source": "node verification/run-utilities-source-verification.js",
+    "start": "node backend/server.js",
+    "start:prod": "NODE_ENV=production pm2 start backend/server.js --name energy-utilities-operations"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.17",
+    "cors": "^2.8.5",
+    "csv-parse": "^6.2.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "multer": "^2.1.1",
+    "oracledb": "^6.7.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1",
+    "nodemon": "^3.1.4"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

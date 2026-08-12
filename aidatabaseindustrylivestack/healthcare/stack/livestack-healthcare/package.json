@@ -1,0 +1,49 @@
+{
+  "name": "healthcare-livestack",
+  "version": "1.0.0",
+  "description": "Healthcare Care Delivery, Quality Signals, and Care Logistics Intelligence - Oracle 26ai Converged Database Demo",
+  "main": "backend/server.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "nodemon backend/server.js",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "verify:brand-colors": "node verification/check-brand-colors.js",
+    "verify:contrast": "node verification/check-contrast.js",
+    "verify:focus-semantics": "node verification/check-focus-semantics.js",
+    "verify:askdata-schema-metadata": "node verification/check-askdata-schema-metadata.js",
+    "verify:askdata-suggested-prompts": "node verification/check-askdata-suggested-prompts.js",
+    "verify:askdata-pipeline": "node verification/check-askdata-pipeline.js",
+    "verify:demo-date-reanchor": "node verification/check-demo-date-reanchor.js",
+    "verify:demo-date-windows": "node verification/check-demo-date-windows.js",
+    "verify:healthcare-demo-session": "node verification/check-healthcare-demo-session-contract.js",
+    "verify:healthcare-admin-package": "node verification/check-healthcare-admin-package-contract.js",
+    "verify:healthcare-ui-integration": "node verification/check-healthcare-ui-integration-contract.js",
+    "verify:healthcare-durable-restore-recovery": "node verification/check-healthcare-durable-restore-recovery-contract.js",
+    "verify:healthcare-atomic-generation-lifecycle": "node verification/check-healthcare-atomic-generation-lifecycle-contract.js",
+    "verify:healthcare-vpd-feature-lifecycle": "node verification/check-healthcare-vpd-feature-lifecycle-hc4-contract.js",
+    "verify:healthcare-dataset-serving-fence": "node verification/check-healthcare-dataset-serving-fence-unit.js",
+    "verify:healthcare-comparator-runtime-ui-parity": "node verification/check-healthcare-comparator-runtime-ui-parity-contract.js",
+    "verify:healthcare-source": "node verification/run-healthcare-source-verification.js",
+    "start": "node backend/server.js",
+    "start:prod": "NODE_ENV=production pm2 start backend/server.js --name healthcare"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.17",
+    "cors": "^2.8.5",
+    "csv-parse": "^6.2.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "multer": "^2.1.1",
+    "oracledb": "^6.7.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1",
+    "nodemon": "^3.1.4"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
