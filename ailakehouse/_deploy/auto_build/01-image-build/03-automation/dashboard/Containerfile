@@ -1,0 +1,22 @@
+FROM container-registry.oracle.com/os/oraclelinux:9
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
+
+RUN dnf -y install python3 \
+    && dnf clean all \
+    && rm -rf /var/cache/dnf
+
+WORKDIR /opt/dashboard
+
+COPY dashboard.py index.html styles.css app.js /opt/dashboard/
+
+RUN chmod 0555 /opt/dashboard/dashboard.py \
+    && chmod 0444 \
+      /opt/dashboard/index.html \
+      /opt/dashboard/styles.css \
+      /opt/dashboard/app.js
+
+EXPOSE 32180
+
+ENTRYPOINT ["python3", "/opt/dashboard/dashboard.py"]

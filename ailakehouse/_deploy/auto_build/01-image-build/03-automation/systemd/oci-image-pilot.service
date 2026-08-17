@@ -1,0 +1,20 @@
+[Unit]
+Description=OCI image pilot container stack
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+Environment=PATH=/usr/local/bin:/usr/bin:/bin
+WorkingDirectory=/home/opc/oci-image-pilot/ingestion
+ExecStartPre=/home/opc/oci-image-pilot/scripts/configure-instance.sh
+ExecStart=/usr/bin/podman-compose -f compose.yml -f dashboard.compose.yml up -d --remove-orphans
+ExecStop=/usr/bin/podman-compose -f compose.yml -f dashboard.compose.yml stop
+TimeoutStartSec=3600
+TimeoutStopSec=300
+Restart=on-failure
+RestartSec=20
+
+[Install]
+WantedBy=default.target

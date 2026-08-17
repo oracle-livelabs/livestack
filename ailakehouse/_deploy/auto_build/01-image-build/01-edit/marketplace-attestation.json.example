@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "config_file": "~/.oci/config",
+  "profile": "MARKETPLACE_SIGNER",
+  "auth": "security_token",
+  "region": "us-ashburn-1",
+  "crypto_endpoint": "https://<vault-id>-crypto.kms.us-ashburn-1.oraclecloud.com",
+  "key_ocid": "<asymmetric-kms-signing-key-ocid>",
+  "signing_algorithm": "SHA_256_RSA_PKCS_PSS"
+}

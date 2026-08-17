@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>OCI Runtime Services</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <svg class="icon-library" aria-hidden="true">
+    <symbol id="icon-dashboard" viewBox="0 0 24 24">
+      <rect width="7" height="9" x="3" y="3" rx="1"></rect>
+      <rect width="7" height="5" x="14" y="3" rx="1"></rect>
+      <rect width="7" height="9" x="14" y="12" rx="1"></rect>
+      <rect width="7" height="5" x="3" y="16" rx="1"></rect>
+    </symbol>
+    <symbol id="icon-database" viewBox="0 0 24 24">
+      <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+      <path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5"></path>
+      <path d="M3 12c0 1.7 4 3 9 3s9-1.3 9-3"></path>
+    </symbol>
+    <symbol id="icon-notebook" viewBox="0 0 24 24">
+      <path d="M2 6h4M2 10h4M2 14h4M2 18h4"></path>
+      <rect width="16" height="20" x="4" y="2" rx="2"></rect>
+      <path d="M9.5 8h5M9.5 12H16M9.5 16H14"></path>
+    </symbol>
+    <symbol id="icon-model" viewBox="0 0 24 24">
+      <path d="M12 8V4H8"></path>
+      <rect width="16" height="12" x="4" y="8" rx="2"></rect>
+      <path d="M2 14h2M20 14h2M15 13v2M9 13v2"></path>
+    </symbol>
+    <symbol id="icon-web" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="10"></circle>
+      <path d="M2 12h20M12 2a15.3 15.3 0 0 1 0 20M12 2a15.3 15.3 0 0 0 0 20"></path>
+    </symbol>
+    <symbol id="icon-container" viewBox="0 0 24 24">
+      <path d="m21 8-9-5-9 5 9 5 9-5Z"></path>
+      <path d="m3 8 9 5 9-5M3 13l9 5 9-5"></path>
+    </symbol>
+    <symbol id="icon-refresh" viewBox="0 0 24 24">
+      <path d="M20 6v5h-5M4 18v-5h5M18.4 9A7 7 0 0 0 6.1 6.1L4 8M5.6 15A7 7 0 0 0 17.9 17.9L20 16"></path>
+    </symbol>
+    <symbol id="icon-external" viewBox="0 0 24 24">
+      <path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+    </symbol>
+    <symbol id="icon-eye" viewBox="0 0 24 24">
+      <path d="M2.1 12a10 10 0 0 1 19.8 0 10 10 0 0 1-19.8 0"></path>
+      <circle cx="12" cy="12" r="3"></circle>
+    </symbol>
+    <symbol id="icon-eye-off" viewBox="0 0 24 24">
+      <path d="m3 3 18 18M10.6 10.6a2 2 0 0 0 2.8 2.8M9.9 4.2A10.5 10.5 0 0 1 12 4c5 0 8.5 4 9.8 8a12 12 0 0 1-2.1 3.8M6.6 6.6A12 12 0 0 0 2.2 12c1.3 4 4.8 8 9.8 8 1.4 0 2.7-.3 3.8-.8"></path>
+    </symbol>
+    <symbol id="icon-copy" viewBox="0 0 24 24">
+      <rect width="14" height="14" x="8" y="8" rx="2"></rect>
+      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+    </symbol>
+  </svg>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"><svg><use href="#icon-dashboard"></use></svg></span>
+        <span>OCI Runtime Services</span>
+      </div>
+      <button class="icon-button" id="refresh-button" type="button" title="Refresh status" aria-label="Refresh status" disabled>
+        <svg aria-hidden="true"><use href="#icon-refresh"></use></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="login-panel" id="login-panel" aria-labelledby="login-title">
+      <h1 id="login-title">Sign in</h1>
+      <form id="login-form">
+        <label>
+          <span>Username</span>
+          <input id="username" name="username" value="opc" autocomplete="username" required>
+        </label>
+        <label>
+          <span>Password</span>
+          <input id="password" name="password" type="password" autocomplete="current-password" required>
+        </label>
+        <button class="primary-button" type="submit">Sign in</button>
+        <p class="form-error" id="login-error" role="alert" hidden>Login failed.</p>
+      </form>
+    </section>
+
+    <div id="dashboard-content" hidden>
+      <section class="overview" aria-labelledby="page-title">
+        <div>
+          <h1 id="page-title">Runtime services</h1>
+          <p id="summary" aria-live="polite">Checking services...</p>
+        </div>
+        <div class="overall-status" id="overall-status" data-state="checking">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>
+            <strong id="overall-label">Checking</strong>
+            <small id="last-checked">Waiting for status</small>
+          </span>
+        </div>
+      </section>
+      <section class="service-grid" id="service-grid" aria-label="Runtime services"></section>
+    </div>
+  </main>
+
+  <template id="service-card-template">
+    <article class="service-card" data-state="checking">
+      <div class="service-header">
+        <span class="service-icon" aria-hidden="true"><svg><use href="#icon-container"></use></svg></span>
+        <div class="service-heading">
+          <h2></h2>
+          <p class="service-description"></p>
+        </div>
+        <span class="service-state"><span class="status-dot"></span><span class="state-label">Checking</span></span>
+      </div>
+      <p class="service-detail"></p>
+      <dl class="service-values"></dl>
+      <div class="model-list" hidden></div>
+      <a class="service-link" target="_blank" rel="noreferrer" hidden>
+        <span></span><svg aria-hidden="true"><use href="#icon-external"></use></svg>
+      </a>
+    </article>
+  </template>
+</body>
+</html>

@@ -1,0 +1,17 @@
+[Unit]
+Description=Configure Data Transforms ADB and pg-iceberg connections
+After=network-online.target adb-wallet.service adb-load.service user-podman.service
+Wants=network-online.target user-podman.service
+StartLimitIntervalSec=0
+
+[Service]
+Type=oneshot
+TimeoutStartSec=1800
+ExecStartPre=/bin/bash -c '/home/opc/init/setenv.sh'
+ExecStart=/bin/bash /home/opc/init/create-pg-iceberg-connection.sh
+RemainAfterExit=yes
+Restart=on-failure
+RestartSec=60
+
+[Install]
+WantedBy=default.target

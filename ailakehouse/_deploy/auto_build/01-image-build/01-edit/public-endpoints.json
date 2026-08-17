@@ -1,0 +1,12 @@
+{
+  "public_endpoints": [
+    {"name":"Peak Gear LiveStack","url":"http://{host}:8505/","expected_status_codes":[200]},
+    {"name":"Peak Gear API health","url":"http://{host}:8505/api/health","expected_status_codes":[200]},
+    {"name":"Peak Gear lakehouse connection","url":"http://{host}:8505/api/lakehouse/auto","expected_status_codes":[200]},
+    {"name":"ORDS","url":"http://{host}:8181/ords/","expected_status_codes":[200,302,404]},
+    {"name":"Gravitino Iceberg REST","url":"http://{host}:1525/iceberg/v1/config","expected_status_codes":[200]},
+    {"name":"GoldenGate Studio","url":"https://{host}:8501/","expected_status_codes":[200,302],"insecure_tls":true},
+    {"name":"GoldenGate Runtime","url":"http://{host}:8502/","expected_status_codes":[200,302,401,404]},
+    {"name":"GoldenGate Stream Analytics","url":"https://{host}:8085/osa/index.html","expected_status_codes":[200,302],"insecure_tls":true}
+  ]
+}

@@ -1,0 +1,11 @@
+*.pkrvars.hcl
+*.pkrvars.json
+packer-manifest.json
+packer-manifest.json.lock
+.automation/*
+!.automation/
+!.automation/manual-image-capture.json.example
+02-edit-if-needed/local-runtime.env
+data/
+runtime/
+state/

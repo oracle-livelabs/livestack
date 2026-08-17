@@ -1,0 +1,18 @@
+[Unit]
+Description=Seed initial Iceberg product table
+After=network-online.target adb-wallet.service adb-load.service user-podman.service
+Wants=network-online.target user-podman.service
+ConditionPathExists=/home/opc/ingestion/demodata/bronze/product_master_raw.csv
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/opc/ingestion
+Environment=PODMAN_USERNS=keep-id
+TimeoutStartSec=900
+ExecStartPre=/bin/bash -c '/home/opc/init/setenv.sh'
+ExecStartPre=/bin/bash -lc 'source /home/opc/ingestion/.env 2>/dev/null || true; for i in {1..90}; do curl -fsS "http://127.0.0.1:${GRAVITINO_HTTP_PORT:-1525}/iceberg/v1/config" >/dev/null && exit 0; sleep 10; done; echo "Gravitino Iceberg REST endpoint did not become ready." >&2; exit 1'
+ExecStart=/bin/bash -lc '/usr/local/bin/podman-compose --env-file .env -f compose.yml --profile seed run --rm iceberg-seeder'
+ExecStartPost=/bin/bash -lc '/home/opc/init/create-iceberg-adb-external-table.sh'
+
+[Install]
+WantedBy=default.target

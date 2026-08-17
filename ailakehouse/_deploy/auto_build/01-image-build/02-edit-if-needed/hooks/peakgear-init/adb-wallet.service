@@ -1,0 +1,17 @@
+[Unit]
+Description=Download ADB wallet once
+After=network-online.target
+Wants=network-online.target
+Before=user-podman.service
+ConditionPathExists=!/home/opc/ingestion/wallet/.wallet_done
+
+[Service]
+Type=oneshot
+TimeoutStartSec=3600
+ExecStartPre=/bin/bash -c '/home/opc/init/setenv.sh'
+ExecStart=/bin/bash -c '/home/opc/init/adb-wallet.sh && touch /home/opc/ingestion/wallet/.wallet_done'
+ExecStartPost=/bin/bash -c '/home/opc/init/adb-load.sh'
+RemainAfterExit=yes
+
+[Install]
+WantedBy=default.target
