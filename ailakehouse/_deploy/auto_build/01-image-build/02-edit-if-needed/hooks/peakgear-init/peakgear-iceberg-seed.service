@@ -1,0 +1,20 @@
+[Unit]
+Description=Seed the Peak Gear Iceberg product table
+After=network-online.target oci-image-pilot.service peakgear-pg-iceberg.service
+Wants=network-online.target oci-image-pilot.service
+ConditionPathExists=/home/opc/ingestion/demodata/bronze/product_master_raw.csv
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/opc/ingestion
+Environment=PODMAN_USERNS=keep-id
+TimeoutStartSec=900
+ExecStartPre=/bin/bash -lc 'for i in {1..90}; do curl -fsS "http://127.0.0.1:1525/iceberg/v1/config" >/dev/null && exit 0; sleep 10; done; exit 1'
+# The main stack already owns Gravitino.  Do not let this one-shot Compose run
+# create or clean up dependencies in the same project.
+ExecStart=/bin/bash -lc '/usr/bin/podman-compose --env-file .env -f compose.yml --profile seed run --rm --no-deps iceberg-seeder'
+ExecStartPost=/bin/bash -lc '/home/opc/init/create-iceberg-adb-external-table.sh'
+RemainAfterExit=yes
+
+[Install]
+WantedBy=default.target

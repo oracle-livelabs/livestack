@@ -17,6 +17,9 @@ DEFAULT_GRAVITINO_PORT="1525"
 DEFAULT_API_PREFIX="/odi/odi-rest/v1"
 DEFAULT_MAX_ATTEMPTS="60"
 DEFAULT_RETRY_SECONDS="15"
+DEFAULT_DEMO_PROJECT_NAME="peakgear"
+DEFAULT_API_CONNECT_TIMEOUT="15"
+DEFAULT_API_MAX_TIME="60"
 
 WORK_DIR=""
 COOKIE_JAR=""
@@ -25,6 +28,7 @@ API_STATUS=""
 DT_BASE_URL=""
 ICEBERG_REST_URL=""
 CURL_AUTH_CONFIG=""
+DEMO_RESET_COMPLETE=false
 
 log() {
   printf '%s [data-transforms] %s\n' "$(date -Is)" "$*" >&2
@@ -355,6 +359,8 @@ api_request() {
     -c "${COOKIE_JAR}"
     -o "${output_file}"
     -w "%{http_code}"
+    --connect-timeout "${DATA_TRANSFORMS_API_CONNECT_TIMEOUT:-${DEFAULT_API_CONNECT_TIMEOUT}}"
+    --max-time "${DATA_TRANSFORMS_API_MAX_TIME:-${DEFAULT_API_MAX_TIME}}"
     -X "${method}"
     -H "Accept: application/json"
   )
@@ -1006,6 +1012,578 @@ PY
   log "Connection ${connection_name} verified through Data Transforms agent ${agent_name}."
 }
 
+extract_project_id() {
+  local json_file="$1"
+  local project_name="$2"
+
+  "${PYTHON_BIN}" - "${json_file}" "${project_name}" <<'PY'
+import json
+import sys
+
+with open(sys.argv[1], encoding="utf-8") as handle:
+    payload = json.load(handle)
+target = sys.argv[2].casefold()
+items = payload if isinstance(payload, list) else [payload]
+for item in items:
+    if isinstance(item, dict) and str(item.get("name", "")).casefold() == target:
+        identifier = item.get("globalId") or item.get("id") or item.get("objectId")
+        if identifier:
+            print(identifier)
+            break
+else:
+    sys.exit(1)
+PY
+}
+
+ensure_demo_project() {
+  local api_prefix="$1"
+  local project_name="${DATA_TRANSFORMS_DEMO_PROJECT_NAME:-${DEFAULT_DEMO_PROJECT_NAME}}"
+  local detail_file payload_file response_file project_id
+
+  detail_file="${WORK_DIR}/demo-project.json"
+  payload_file="${WORK_DIR}/demo-project-payload.json"
+  response_file="${WORK_DIR}/demo-project-response.json"
+
+  if api_request "GET" "${api_prefix}/projects/name/${project_name}" "" "${detail_file}"; then
+    project_id="$(extract_project_id "${detail_file}" "${project_name}" || true)"
+    if [[ -n "${project_id}" ]]; then
+      log "Data Transforms demo project ${project_name} already exists."
+      printf '%s' "${project_id}" > "${WORK_DIR}/demo-project-id"
+      return 0
+    fi
+  elif [[ "${API_STATUS}" != "404" ]]; then
+    log "Could not look up Data Transforms demo project ${project_name}; HTTP ${API_STATUS}: $(summarize_response "${detail_file}")"
+    return 1
+  fi
+
+  DEMO_PROJECT_NAME="${project_name}" "${PYTHON_BIN}" - "${payload_file}" <<'PY'
+import json
+import os
+import sys
+
+name = os.environ["DEMO_PROJECT_NAME"]
+code = "".join(ch if ch.isalnum() or ch == "_" else "_" for ch in name.upper())
+with open(sys.argv[1], "w", encoding="utf-8") as handle:
+    json.dump({"name": name, "code": code}, handle, separators=(",", ":"))
+PY
+
+  if ! api_request "POST" "${api_prefix}/projects" "${payload_file}" "${response_file}"; then
+    log "Failed to create Data Transforms demo project ${project_name}; HTTP ${API_STATUS}: $(summarize_response "${response_file}")"
+    return 1
+  fi
+  project_id="$(extract_project_id "${response_file}" "${project_name}" || true)"
+  if [[ -z "${project_id}" ]]; then
+    log "Data Transforms created demo project ${project_name}, but did not return its ID."
+    return 1
+  fi
+  log "Created Data Transforms demo project ${project_name}."
+  printf '%s' "${project_id}" > "${WORK_DIR}/demo-project-id"
+}
+
+demo_object_exists() {
+  local json_file="$1"
+  local object_name="$2"
+  local project_name="$3"
+  local name_key="$4"
+  local project_key="$5"
+
+  "${PYTHON_BIN}" - "${json_file}" "${object_name}" "${project_name}" "${name_key}" "${project_key}" <<'PY'
+import json
+import sys
+
+with open(sys.argv[1], encoding="utf-8") as handle:
+    payload = json.load(handle)
+for item in payload if isinstance(payload, list) else []:
+    if (str(item.get(sys.argv[4], "")).casefold() == sys.argv[2].casefold()
+            and str(item.get(sys.argv[5], "")).casefold() == sys.argv[3].casefold()):
+        sys.exit(0)
+sys.exit(1)
+PY
+}
+
+matching_object_ids() {
+  local json_file="$1"
+  local object_name="$2"
+  local name_key="$3"
+  local project_name="${4:-}"
+  local project_key="${5:-}"
+
+  "${PYTHON_BIN}" - "${json_file}" "${object_name}" "${name_key}" "${project_name}" "${project_key}" <<'PY'
+import json
+import sys
+
+with open(sys.argv[1], encoding="utf-8") as handle:
+    items = json.load(handle)
+for item in items if isinstance(items, list) else [items]:
+    if not isinstance(item, dict) or str(item.get(sys.argv[3], "")).casefold() != sys.argv[2].casefold():
+        continue
+    if sys.argv[5] and str(item.get(sys.argv[5], "")).casefold() != sys.argv[4].casefold():
+        continue
+    identifier = item.get("globalId") or item.get("id") or item.get("objectId")
+    if identifier:
+        print(identifier)
+PY
+}
+
+delete_data_transforms_object() {
+  local api_prefix="$1"
+  local endpoint="$2"
+  local response_file="$3"
+
+  if api_request "DELETE" "${api_prefix}${endpoint}" "" "${response_file}"; then
+    return 0
+  fi
+  if [[ "${API_STATUS}" == "404" ]]; then
+    return 0
+  fi
+  log "Failed to remove Data Transforms object at ${endpoint}; HTTP ${API_STATUS}: $(summarize_response "${response_file}")"
+  return 1
+}
+
+reset_demo_data_transforms() {
+  local api_prefix="$1"
+  local project_name="${DATA_TRANSFORMS_DEMO_PROJECT_NAME:-${DEFAULT_DEMO_PROJECT_NAME}}"
+  local flow_name="${DATA_TRANSFORMS_DEMO_DATA_FLOW_NAME:-dataFlow}"
+  local load_name="${DATA_TRANSFORMS_DEMO_DATA_LOAD_NAME:-dataLoad}"
+  local connection_name="${DATA_TRANSFORMS_ICEBERG_CONNECTION_NAME:-${DEFAULT_CONNECTION_NAME}}"
+  local response_file mappings_file loads_file projects_file models_file adb_file connection_file identifier schema_id connection_id
+
+  response_file="${WORK_DIR}/demo-reset-response.json"
+  mappings_file="${WORK_DIR}/demo-reset-mappings.json"
+  loads_file="${WORK_DIR}/demo-reset-loads.json"
+  projects_file="${WORK_DIR}/demo-reset-project.json"
+  models_file="${WORK_DIR}/demo-reset-models.json"
+  adb_file="${WORK_DIR}/demo-reset-adb.json"
+  connection_file="${WORK_DIR}/demo-reset-iceberg.json"
+
+  api_request "GET" "${api_prefix}/bulkload" "" "${loads_file}" || return 1
+  while IFS= read -r identifier; do
+    [[ -n "${identifier}" ]] || continue
+    delete_data_transforms_object "${api_prefix}" "/bulkload/id/${identifier}" "${response_file}" || return 1
+    log "Removed Data Transforms demo data load ${load_name}."
+  done < <(matching_object_ids "${loads_file}" "${load_name}" "bulkLoadName" "${project_name}" "parentProjectName")
+
+  api_request "GET" "${api_prefix}/mappings" "" "${mappings_file}" || return 1
+  while IFS= read -r identifier; do
+    [[ -n "${identifier}" ]] || continue
+    delete_data_transforms_object "${api_prefix}" "/mappings/id/${identifier}" "${response_file}" || return 1
+    log "Removed Data Transforms demo data flow ${flow_name}."
+  done < <(matching_object_ids "${mappings_file}" "${flow_name}" "name" "${project_name}" "projectName")
+
+  if api_request "GET" "${api_prefix}/projects/name/${project_name}" "" "${projects_file}"; then
+    while IFS= read -r identifier; do
+      [[ -n "${identifier}" ]] || continue
+      delete_data_transforms_object "${api_prefix}" "/projects/id/${identifier}" "${response_file}" || return 1
+      log "Removed Data Transforms demo project ${project_name}."
+    done < <(matching_object_ids "${projects_file}" "${project_name}" "name")
+  elif [[ "${API_STATUS}" != "404" ]]; then
+    return 1
+  fi
+
+  api_request "GET" "${api_prefix}/models" "" "${models_file}" || return 1
+  while IFS= read -r identifier; do
+    [[ -n "${identifier}" ]] || continue
+    delete_data_transforms_object "${api_prefix}" "/models/id/${identifier}" "${response_file}" || return 1
+    log "Removed Data Transforms PG model and its imported data entities."
+  done < <(matching_object_ids "${models_file}" "PG" "modelCode")
+
+  connection_id="$(find_adb_connection_id "${api_prefix}" || true)"
+  if [[ -n "${connection_id}" ]] && api_request "GET" "${api_prefix}/dataservers/id/${connection_id}" "" "${adb_file}"; then
+    while IFS= read -r schema_id; do
+      [[ -n "${schema_id}" ]] || continue
+      delete_data_transforms_object "${api_prefix}" "/dataservers/schemas/id/${schema_id}?cascade=true&forceDelete=true" "${response_file}" || return 1
+      log "Removed Data Transforms PG schema metadata."
+    done < <("${PYTHON_BIN}" - "${adb_file}" <<'PY'
+import json,sys
+for schema in json.load(open(sys.argv[1], encoding="utf-8")).get("schemas") or []:
+    if str(schema.get("dataSchema", "")).casefold() == "pg":
+        print(schema.get("globalId") or schema.get("id") or "")
+PY
+)
+  fi
+
+  connection_id="$(find_connection_id "${connection_name}" "${api_prefix}" || true)"
+  if [[ -n "${connection_id}" ]]; then
+    delete_data_transforms_object "${api_prefix}" "/dataservers/id/${connection_id}?cascade=true&forceDelete=true" "${response_file}" || return 1
+    log "Removed Data Transforms Iceberg connection ${connection_name}."
+  fi
+}
+
+ensure_iceberg_gold_schema() {
+  local api_prefix="$1"
+  local connection_name="${DATA_TRANSFORMS_ICEBERG_CONNECTION_NAME:-${DEFAULT_CONNECTION_NAME}}"
+  local connection_id detail_file payload_file response_file schema_id
+
+  connection_id="$(find_connection_id "${connection_name}" "${api_prefix}" || true)"
+  if [[ -z "${connection_id}" ]]; then
+    log "Data Transforms Iceberg connection ${connection_name} is not available for demo data-load provisioning."
+    return 1
+  fi
+  detail_file="${WORK_DIR}/iceberg-connection-detail.json"
+  payload_file="${WORK_DIR}/iceberg-gold-schema-payload.json"
+  response_file="${WORK_DIR}/iceberg-gold-schema-response.json"
+  if ! api_request "GET" "${api_prefix}/dataservers/id/${connection_id}" "" "${detail_file}"; then
+    log "Could not inspect Data Transforms Iceberg connection ${connection_name}; HTTP ${API_STATUS}: $(summarize_response "${detail_file}")"
+    return 1
+  fi
+  schema_id="$("${PYTHON_BIN}" - "${detail_file}" <<'PY'
+import json
+import sys
+
+with open(sys.argv[1], encoding="utf-8") as handle:
+    payload = json.load(handle)
+for schema in payload.get("schemas") or []:
+    if str(schema.get("dataSchema", "")).casefold() == "gold":
+        identifier = schema.get("globalId") or schema.get("id")
+        if identifier:
+            print(identifier)
+            break
+PY
+)"
+  if [[ -n "${schema_id}" ]]; then
+    printf '%s' "${schema_id}" > "${WORK_DIR}/iceberg-gold-schema-id"
+    return 0
+  fi
+
+  ICEBERG_CONNECTION_DETAIL="${detail_file}" "${PYTHON_BIN}" - "${payload_file}" <<'PY'
+import json
+import os
+import sys
+
+with open(os.environ["ICEBERG_CONNECTION_DETAIL"], encoding="utf-8") as handle:
+    connection = json.load(handle)
+name = connection["name"]
+identifier = connection["globalId"]
+with open(sys.argv[1], "w", encoding="utf-8") as handle:
+    json.dump({
+        "schemaShortName": "gold",
+        "parentServer": name,
+        "parentServerGlobalId": identifier,
+        "schemaName": f"{name}.gold",
+        "dataSchema": "gold",
+        "workSchema": "gold",
+        "logicalSchema": f"ADP_S{identifier}_PGOLD_LS",
+        "logicalSchemaTag": "IMPORTED_SCHEMA",
+        "technology": "APACHE_ICEBERG",
+        "default": True,
+    }, handle, separators=(",", ":"))
+PY
+  if ! api_request "POST" "${api_prefix}/dataservers/id/${connection_id}/schemas" "${payload_file}" "${response_file}"; then
+    log "Failed to create Data Transforms Iceberg gold schema; HTTP ${API_STATUS}: $(summarize_response "${response_file}")"
+    return 1
+  fi
+  schema_id="$("${PYTHON_BIN}" - "${response_file}" <<'PY'
+import json
+import sys
+with open(sys.argv[1], encoding="utf-8") as handle:
+    print(json.load(handle).get("globalId", ""))
+PY
+)"
+  [[ -n "${schema_id}" ]] || return 1
+  log "Created Data Transforms Iceberg schema ${connection_name}.gold."
+  printf '%s' "${schema_id}" > "${WORK_DIR}/iceberg-gold-schema-id"
+}
+
+ensure_demo_data_entities() {
+  local api_prefix="$1"
+  local source_table="${DATA_TRANSFORMS_DEMO_DATA_FLOW_SOURCE_TABLE:-PRODUCT_MASTER_RAW_ICEBERG_EXT}"
+  local target_table="${DATA_TRANSFORMS_DEMO_DATA_FLOW_TARGET_TABLE:-GOLD_PRODUCTS}"
+  local connection_id detail_file schema_file schema_response models_file model_file model_response stores_file missing session_id job_file attempt agent_name
+
+  stores_file="${WORK_DIR}/demo-datastores.json"
+  api_request "GET" "${api_prefix}/datastores" "" "${stores_file}" || return 1
+  missing="$(DEMO_STORES_FILE="${stores_file}" DEMO_SOURCE_TABLE="${source_table}" DEMO_TARGET_TABLE="${target_table}" "${PYTHON_BIN}" - <<'PY'
+import json, os
+stores=json.load(open(os.environ["DEMO_STORES_FILE"], encoding="utf-8"))
+names={str(x.get("name", "")).casefold() for x in stores if isinstance(x, dict)}
+print(" ".join(name for name in (os.environ["DEMO_SOURCE_TABLE"], os.environ["DEMO_TARGET_TABLE"]) if name.casefold() not in names))
+PY
+)"
+  [[ -n "${missing}" ]] || return 0
+
+  connection_id="$(find_adb_connection_id "${api_prefix}" || true)"
+  [[ -n "${connection_id}" ]] || return 1
+  agent_name="$(select_agent_name "${api_prefix}" || true)"
+  if [[ -z "${agent_name}" ]]; then
+    log "No Data Transforms agent found; cannot import the demo data entities."
+    return 1
+  fi
+  detail_file="${WORK_DIR}/demo-oracle-detail.json"
+  schema_file="${WORK_DIR}/demo-oracle-schema.json"
+  schema_response="${WORK_DIR}/demo-oracle-schema-response.json"
+  models_file="${WORK_DIR}/demo-models.json"
+  model_file="${WORK_DIR}/demo-oracle-model.json"
+  model_response="${WORK_DIR}/demo-oracle-model-response.json"
+  api_request "GET" "${api_prefix}/dataservers/id/${connection_id}" "" "${detail_file}" || return 1
+  DEMO_ORACLE_DETAIL="${detail_file}" "${PYTHON_BIN}" - "${schema_file}" <<'PY'
+import json, os, sys
+connection=json.load(open(os.environ["DEMO_ORACLE_DETAIL"], encoding="utf-8"))
+schema=next((s for s in connection.get("schemas") or [] if str(s.get("dataSchema", "")).casefold()=="pg"), None)
+if schema is None:
+    identifier=connection["globalId"]
+    schema={"schemaShortName":"PG","parentServer":connection["name"],"parentServerGlobalId":identifier,
+            "schemaName":f"{connection['name']}.PG","dataSchema":"PG","workSchema":"PG",
+            "logicalSchema":f"ADP_S{identifier}_PG_LS","logicalSchemaTag":"IMPORTED_SCHEMA",
+            "technology":"ORACLE","default":True}
+json.dump(schema, open(sys.argv[1], "w", encoding="utf-8"), separators=(",", ":"))
+PY
+  # The JSON producer writes only the payload; decide from the connection detail.
+  if ! "${PYTHON_BIN}" - "${detail_file}" <<'PY'
+import json,sys
+connection=json.load(open(sys.argv[1], encoding="utf-8"))
+sys.exit(0 if any(str(s.get("dataSchema", "")).casefold()=="pg" for s in connection.get("schemas") or []) else 1)
+PY
+  then
+    api_request "POST" "${api_prefix}/dataservers/id/${connection_id}/schemas" "${schema_file}" "${schema_response}" || return 1
+    cp "${schema_response}" "${schema_file}"
+  fi
+  api_request "GET" "${api_prefix}/models" "" "${models_file}" || return 1
+  DEMO_MODELS_FILE="${models_file}" DEMO_SCHEMA_FILE="${schema_file}" DEMO_REVERSE_AGENT="${agent_name}" "${PYTHON_BIN}" - "${model_file}" <<'PY'
+import json, os, sys
+models=json.load(open(os.environ["DEMO_MODELS_FILE"], encoding="utf-8"))
+model=next((m for m in models if str(m.get("modelCode", "")).casefold()=="pg"), None)
+if model is None:
+    model={"modelName":"PG","modelCode":"PG","parentFolder":"DefaultFolder","technologyCode":"ORACLE",
+           "schema":json.load(open(os.environ["DEMO_SCHEMA_FILE"], encoding="utf-8"))}
+model.update(reverseType="CUSTOMIZED",reverseAgent=os.environ["DEMO_REVERSE_AGENT"],reverseContext="GLOBAL",reverseMask="%",reverseObjectTypes=["TABLE"])
+json.dump(model, open(sys.argv[1], "w", encoding="utf-8"), separators=(",", ":"))
+PY
+  if ! "${PYTHON_BIN}" - "${models_file}" <<'PY'
+import json,sys
+sys.exit(0 if any(str(m.get("modelCode", "")).casefold()=="pg" for m in json.load(open(sys.argv[1], encoding="utf-8"))) else 1)
+PY
+  then
+    api_request "POST" "${api_prefix}/models" "${model_file}" "${model_response}" || return 1
+    cp "${model_response}" "${model_file}"
+  fi
+  for missing in ${missing}; do
+    DEMO_MODEL_FILE="${model_file}" DEMO_DATASTORE_NAME="${missing}" DEMO_REVERSE_AGENT="${agent_name}" "${PYTHON_BIN}" - "${WORK_DIR}/demo-reverse-${missing}.json" <<'PY'
+import json, os, sys
+model=json.load(open(os.environ["DEMO_MODEL_FILE"], encoding="utf-8"))
+model.update(reverseType="CUSTOMIZED",reverseAgent=os.environ["DEMO_REVERSE_AGENT"],reverseContext="GLOBAL",reverseMask="%",reverseObjectTypes=["TABLE"],reverseObjList=os.environ["DEMO_DATASTORE_NAME"])
+json.dump(model, open(sys.argv[1], "w", encoding="utf-8"), separators=(",", ":"))
+PY
+    api_request "POST" "${api_prefix}/models/reverse/custom" "${WORK_DIR}/demo-reverse-${missing}.json" "${WORK_DIR}/demo-reverse-response.json" || return 1
+    session_id="$("${PYTHON_BIN}" - "${WORK_DIR}/demo-reverse-response.json" <<'PY'
+import json,sys
+print(json.load(open(sys.argv[1], encoding="utf-8")).get("sessionId", ""))
+PY
+)"
+    [[ -n "${session_id}" ]] || return 1
+    job_file="${WORK_DIR}/demo-reverse-${missing}-job.json"
+    for attempt in {1..24}; do
+      api_request "GET" "${api_prefix}/jobs/sessionId/${session_id}" "" "${job_file}" || return 1
+      if "${PYTHON_BIN}" - "${job_file}" <<'PY'
+import json,sys
+status=json.load(open(sys.argv[1], encoding="utf-8")).get("status")
+sys.exit(0 if status == "DONE" else 1)
+PY
+      then
+        break
+      fi
+      sleep 5
+    done
+    if ! "${PYTHON_BIN}" - "${job_file}" <<'PY'
+import json,sys
+sys.exit(0 if json.load(open(sys.argv[1], encoding="utf-8")).get("status") == "DONE" else 1)
+PY
+    then
+      log "Data Transforms import for ${missing} did not complete within two minutes."
+      return 1
+    fi
+    log "Imported Data Transforms entity ${missing}."
+  done
+  api_request "GET" "${api_prefix}/datastores" "" "${stores_file}" || return 1
+  missing="$(DEMO_STORES_FILE="${stores_file}" DEMO_SOURCE_TABLE="${source_table}" DEMO_TARGET_TABLE="${target_table}" "${PYTHON_BIN}" - <<'PY'
+import json, os
+stores=json.load(open(os.environ["DEMO_STORES_FILE"], encoding="utf-8"))
+names={str(x.get("name", "")).casefold() for x in stores if isinstance(x, dict)}
+print(" ".join(name for name in (os.environ["DEMO_SOURCE_TABLE"], os.environ["DEMO_TARGET_TABLE"]) if name.casefold() not in names))
+PY
+)"
+  [[ -z "${missing}" ]]
+}
+
+ensure_demo_data_flow() {
+  local api_prefix="$1"
+  local project_name="${DATA_TRANSFORMS_DEMO_PROJECT_NAME:-${DEFAULT_DEMO_PROJECT_NAME}}"
+  local flow_name="${DATA_TRANSFORMS_DEMO_DATA_FLOW_NAME:-dataFlow}"
+  local source_table="${DATA_TRANSFORMS_DEMO_DATA_FLOW_SOURCE_TABLE:-PRODUCT_MASTER_RAW_ICEBERG_EXT}"
+  local target_table="${DATA_TRANSFORMS_DEMO_DATA_FLOW_TARGET_TABLE:-GOLD_PRODUCTS}"
+  local mappings_file stores_file project_file payload_file response_file
+
+  mappings_file="${WORK_DIR}/demo-mappings.json"
+  stores_file="${WORK_DIR}/demo-datastores.json"
+  project_file="${WORK_DIR}/demo-project.json"
+  payload_file="${WORK_DIR}/demo-data-flow-payload.json"
+  response_file="${WORK_DIR}/demo-data-flow-response.json"
+  if ! api_request "GET" "${api_prefix}/mappings" "" "${mappings_file}"; then
+    log "Could not list Data Transforms data flows; HTTP ${API_STATUS}: $(summarize_response "${mappings_file}")"
+    return 1
+  fi
+  if demo_object_exists "${mappings_file}" "${flow_name}" "${project_name}" "name" "projectName"; then
+    log "Data Transforms demo data flow ${flow_name} already exists in ${project_name}."
+    return 0
+  fi
+  if ! api_request "GET" "${api_prefix}/projects/name/${project_name}" "" "${project_file}" \
+    || ! api_request "GET" "${api_prefix}/datastores" "" "${stores_file}"; then
+    log "Could not read the Data Transforms metadata needed for demo data flow provisioning."
+    return 1
+  fi
+  DEMO_DATA_FLOW_NAME="${flow_name}" DEMO_SOURCE_TABLE="${source_table}" DEMO_TARGET_TABLE="${target_table}" \
+    "${PYTHON_BIN}" - "${project_file}" "${stores_file}" "${payload_file}" <<'PY'
+import json
+import os
+import sys
+import uuid
+
+project = json.load(open(sys.argv[1], encoding="utf-8"))
+stores = json.load(open(sys.argv[2], encoding="utf-8"))
+source_name, target_name = os.environ["DEMO_SOURCE_TABLE"], os.environ["DEMO_TARGET_TABLE"]
+
+def find(name):
+    for store in stores:
+        if store.get("name", "").casefold() == name.casefold():
+            return store
+    raise ValueError(f"Data entity {name} is not imported yet")
+
+source, target = find(source_name), find(target_name)
+source_columns = {column["name"]: column for column in source.get("columns", [])}
+
+def component(store, is_source):
+    attributes = []
+    for column in store.get("columns", []):
+        attribute = {key: column[key] for key in ("name", "position", "dataType", "dataTypeCode", "length", "scale") if key in column}
+        attribute.update(globalId=str(uuid.uuid4()), syncState="IN_SYNC")
+        if not is_source:
+            source_column = column["name"] if column["name"] in source_columns else ("RAW_SKU" if column["name"] == "SKU" and "RAW_SKU" in source_columns else None)
+            attribute.update(executeOnHint="NO_HINT", insert=bool(source_column), update=bool(source_column), checkNotNull=False, key=False, active=bool(source_column))
+            if source_column:
+                attribute["expressions"] = {"INPUT1": f"Substitution.{column['name']}"}
+        attributes.append(attribute)
+    result = {
+        "name": store["name"], "globalId": str(uuid.uuid4()), "type": "DATASTORE",
+        "uiCoordinates": "94.09375,239.109375" if is_source else "616.09375,230.109375",
+        "boundToDataStoreId": store["globalId"], "boundToDataStoreName": store["name"],
+        "boundToDataStoreType": store.get("dataStoreType", "TABLE"), "boundToDataStoreModel": store["modelCode"],
+        "schemaName": store["schemaName"], "schemaGlobalId": store["schemaGlobalId"],
+        "dataServerName": store["dataServerName"], "dataServerGlobalId": store["dataServerGlobalId"],
+        "technology": store["technologyCode"], "syncState": "IN_SYNC", "deprecated": False,
+        "attributes": attributes,
+    }
+    if is_source:
+        result["connectedTo"] = ["Substitution"]
+    else:
+        result.update(connectedFrom=["Substitution"], integrationType="CONTROL_APPEND", isMaxErrorsAsPercentage=False, options=[])
+    return result
+
+substitution_attributes = []
+for position, target_column in enumerate(target.get("columns", [])):
+    target_name = target_column["name"]
+    source_name = target_name if target_name in source_columns else ("RAW_SKU" if target_name == "SKU" and "RAW_SKU" in source_columns else None)
+    if not source_name:
+        continue
+    data_type = target_column.get("dataType", "VARCHAR2")
+    data_type_code = target_column.get("dataTypeCode", data_type)
+    if data_type == "VARCHAR2":
+        data_type = data_type_code = "VARCHAR"
+    expression = f"{source['name']}.{source_name}"
+    attribute = {"name": target_name, "globalId": str(uuid.uuid4()), "position": position,
+                 "dataType": data_type, "dataTypeCode": data_type_code, "expressions": {"INPUT1": expression},
+                 "syncState": "IN_SYNC", "connectedFrom": [expression]}
+    for key in ("length", "scale"):
+        if key in target_column:
+            attribute[key] = target_column[key]
+    if target_name == "SUBCATEGORY" and source_name == "SUBCATEGORY":
+        attribute["expressions"] = {"INPUT1": f"case {expression} when 'NetSuite' then 'Databricks' else {expression} end"}
+        attribute["substitutionMap"] = {"NetSuite": "Databricks"}
+    substitution_attributes.append(attribute)
+
+payload = {
+    "name": os.environ["DEMO_DATA_FLOW_NAME"],
+    "projectName": project["name"], "projectCode": project["code"], "parentFolder": "DefaultFolder",
+    "attachedSchemas": [source["schemaGlobalId"]], "cleanupOnError": False,
+    "sources": [component(source, True)], "targets": [component(target, False)],
+    "dbfunc_substitutions": [{"name": "Substitution", "globalId": str(uuid.uuid4()), "type": "EXPRESSION",
+                                "uiCoordinates": "416.09375,230.109375", "connectedFrom": [source["name"]],
+                                "connectedTo": [target["name"]], "attributes": substitution_attributes, "deprecated": False}],
+}
+json.dump(payload, open(sys.argv[3], "w", encoding="utf-8"), separators=(",", ":"))
+PY
+  if ! api_request "POST" "${api_prefix}/mappings" "${payload_file}" "${response_file}"; then
+    log "Failed to create Data Transforms demo data flow ${flow_name}; HTTP ${API_STATUS}: $(summarize_response "${response_file}")"
+    return 1
+  fi
+  log "Created Data Transforms demo data flow ${flow_name}."
+}
+
+ensure_demo_data_load() {
+  local api_prefix="$1"
+  local project_name="${DATA_TRANSFORMS_DEMO_PROJECT_NAME:-${DEFAULT_DEMO_PROJECT_NAME}}"
+  local load_name="${DATA_TRANSFORMS_DEMO_DATA_LOAD_NAME:-dataLoad}"
+  local source_table="${DATA_TRANSFORMS_DEMO_DATA_LOAD_SOURCE_TABLE:-GOLD_PRODUCTS}"
+  local project_file oracle_file iceberg_file loads_file payload_file response_file oracle_id
+
+  ensure_iceberg_gold_schema "${api_prefix}" || return 1
+  loads_file="${WORK_DIR}/demo-bulkloads.json"
+  project_file="${WORK_DIR}/demo-project.json"
+  oracle_file="${WORK_DIR}/demo-oracle-connection.json"
+  iceberg_file="${WORK_DIR}/iceberg-connection-detail.json"
+  payload_file="${WORK_DIR}/demo-data-load-payload.json"
+  response_file="${WORK_DIR}/demo-data-load-response.json"
+  if ! api_request "GET" "${api_prefix}/bulkload" "" "${loads_file}"; then
+    log "Could not list Data Transforms data loads; HTTP ${API_STATUS}: $(summarize_response "${loads_file}")"
+    return 1
+  fi
+  if demo_object_exists "${loads_file}" "${load_name}" "${project_name}" "bulkLoadName" "parentProjectName"; then
+    log "Data Transforms demo data load ${load_name} already exists in ${project_name}."
+    return 0
+  fi
+  oracle_id="$(find_adb_connection_id "${api_prefix}" || true)"
+  [[ -n "${oracle_id}" ]] || return 1
+  if ! api_request "GET" "${api_prefix}/projects/name/${project_name}" "" "${project_file}" \
+    || ! api_request "GET" "${api_prefix}/dataservers/id/${oracle_id}" "" "${oracle_file}"; then
+    log "Could not read the Data Transforms metadata needed for demo data load provisioning."
+    return 1
+  fi
+  DEMO_DATA_LOAD_NAME="${load_name}" DEMO_DATA_LOAD_SOURCE_TABLE="${source_table}" \
+    "${PYTHON_BIN}" - "${project_file}" "${oracle_file}" "${iceberg_file}" "${payload_file}" <<'PY'
+import json
+import os
+import sys
+
+project, oracle, iceberg = (json.load(open(path, encoding="utf-8")) for path in sys.argv[1:4])
+source_schema = next((schema for schema in oracle.get("schemas") or [] if schema.get("default")), None)
+target_schema = next((schema for schema in iceberg.get("schemas") or [] if str(schema.get("dataSchema", "")).casefold() == "gold"), None)
+if not source_schema or not target_schema:
+    raise ValueError("Oracle default schema or Iceberg gold schema is not available")
+def model(schema, technology, object_types):
+    return {"technologyCode": technology, "schema": schema, "reverseType": "CUSTOMIZED", "reverseAgent": "Internal",
+            "reverseContext": "GLOBAL", "reverseMask": "%", "reverseObjectTypes": object_types}
+payload = {"bulkLoadName": os.environ["DEMO_DATA_LOAD_NAME"], "parentProjectID": project["globalId"],
+           "parentProjectName": project["name"], "parentFolder": "DefaultFolder", "bulkLoadMode": "ICEBERG_INCREMENTAL",
+           "sourceTechno": "ORACLE", "targetTechno": "APACHE_ICEBERG", "sourceModel": model(source_schema, "ORACLE", ["TABLE", "VIEW"]),
+           "targetModel": model(target_schema, "APACHE_ICEBERG", ["TABLE"]), "chunkSize": 5,
+           "sourceTables": [{"sourceTableName": os.environ["DEMO_DATA_LOAD_SOURCE_TABLE"], "targetPreloadAction": "APPEND"}]}
+json.dump(payload, open(sys.argv[4], "w", encoding="utf-8"), separators=(",", ":"))
+PY
+  if ! api_request "POST" "${api_prefix}/bulkload" "${payload_file}" "${response_file}"; then
+    log "Failed to create Data Transforms demo data load ${load_name}; HTTP ${API_STATUS}: $(summarize_response "${response_file}")"
+    return 1
+  fi
+  if ! "${PYTHON_BIN}" - "${response_file}" <<'PY'
+import json
+import sys
+with open(sys.argv[1], encoding="utf-8") as handle:
+    sys.exit(0 if json.load(handle).get("deploymentStatus") == "VALID" else 1)
+PY
+  then
+    log "Data Transforms created demo data load ${load_name}, but it is not valid yet: $(summarize_response "${response_file}")"
+    return 1
+  fi
+  log "Created valid Data Transforms demo data load ${load_name}."
+}
+
 configure_adb_connection() {
   local api_prefix="$1"
   local username="${DATA_TRANSFORMS_ADB_USERNAME:-${DEFAULT_ADB_USERNAME}}"
@@ -1066,12 +1644,14 @@ PY
 }
 
 attempt_once() {
-  local api_prefix adb_enabled iceberg_enabled connection_id
+  local api_prefix adb_enabled iceberg_enabled demo_enabled demo_reset_enabled connection_id
 
   load_env
   api_prefix="${DATA_TRANSFORMS_API_PREFIX:-${DEFAULT_API_PREFIX}}"
   adb_enabled=true
   iceberg_enabled=true
+  demo_enabled=true
+  demo_reset_enabled=true
 
   if is_disabled "${DATA_TRANSFORMS_ADB_AUTO_CONFIGURE:-true}"; then
     adb_enabled=false
@@ -1079,8 +1659,14 @@ attempt_once() {
   if is_disabled "${DATA_TRANSFORMS_ICEBERG_AUTO_CREATE:-true}"; then
     iceberg_enabled=false
   fi
-  if [[ "${adb_enabled}" == false && "${iceberg_enabled}" == false ]]; then
-    log "Automatic Data Transforms connection configuration is disabled."
+  if is_disabled "${DATA_TRANSFORMS_DEMO_AUTO_CREATE:-true}"; then
+    demo_enabled=false
+  fi
+  if is_disabled "${DATA_TRANSFORMS_DEMO_RESET:-true}"; then
+    demo_reset_enabled=false
+  fi
+  if [[ "${adb_enabled}" == false && "${iceberg_enabled}" == false && "${demo_enabled}" == false ]]; then
+    log "Automatic Data Transforms provisioning is disabled."
     return 0
   fi
 
@@ -1107,6 +1693,13 @@ attempt_once() {
     log "Automatic Data Transforms Oracle connection configuration is disabled."
   fi
 
+  if [[ "${demo_enabled}" == true && "${demo_reset_enabled}" == true && "${DEMO_RESET_COMPLETE}" != true ]]; then
+    reset_demo_data_transforms "${api_prefix}" || return 1
+    DEMO_RESET_COMPLETE=true
+  elif [[ "${demo_enabled}" == true ]]; then
+    [[ "${demo_reset_enabled}" == true ]] || log "Data Transforms demo reset is disabled."
+  fi
+
   if [[ "${iceberg_enabled}" == true ]]; then
     ICEBERG_REST_URL="$(derive_iceberg_rest_url)" || {
       log "Could not derive public Gravitino Iceberg REST URL. Set DATA_TRANSFORMS_ICEBERG_REST_URL if needed."
@@ -1126,6 +1719,15 @@ attempt_once() {
   else
     log "Automatic Data Transforms Iceberg connection creation is disabled."
   fi
+
+  if [[ "${demo_enabled}" == true ]]; then
+    ensure_demo_project "${api_prefix}" || return 1
+    ensure_demo_data_entities "${api_prefix}" || return 1
+    ensure_demo_data_flow "${api_prefix}" || return 1
+    ensure_demo_data_load "${api_prefix}" || return 1
+  else
+    log "Automatic Data Transforms demo project creation is disabled."
+  fi
 }
 
 main() {
@@ -1133,6 +1735,7 @@ main() {
 
   require_tools
   load_env
+  DEMO_RESET_COMPLETE=false
 
   max_attempts="${DATA_TRANSFORMS_ICEBERG_MAX_ATTEMPTS:-${DEFAULT_MAX_ATTEMPTS}}"
   retry_seconds="${DATA_TRANSFORMS_ICEBERG_RETRY_SECONDS:-${DEFAULT_RETRY_SECONDS}}"

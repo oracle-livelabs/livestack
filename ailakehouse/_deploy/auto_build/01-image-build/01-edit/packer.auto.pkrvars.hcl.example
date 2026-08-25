@@ -1,0 +1,42 @@
+# Copy this file to packer.auto.pkrvars.hcl and replace every placeholder.
+# The real file is ignored by git.
+
+oci_config_file = "~/.oci/config"    # Path to your OCI config file. Must exist on your machine.
+oci_profile     = "PACKER"           # OCI CLI profile name to use for the build.
+
+region              = "us-ashburn-1" # OCI region where the build VM will run.
+availability_domain = "<tenancy-prefix>:US-ASHBURN-AD-1" # Availability domain for the build VM.
+
+compartment_ocid       = "<compartment-ocid>"          # Compartment where Packer creates the temporary build VM.
+image_compartment_ocid = "<compartment-ocid>"          # Compartment where the custom image will be created.
+subnet_ocid            = "<subnet-ocid>"              # Existing subnet OCID for the temporary build VM. Use a subnet that can reach OCI services and package sources.
+base_image_ocid        = "<oracle-linux-9-platform-image-ocid>" # Oracle Linux base image OCID.
+
+# Existing dedicated NSG in the build subnet's VCN.
+# Give it exactly one ingress rule: TCP 22 from the tester_source_cidr used by Terraform.
+nsg_ocids = ["<packer-build-nsg-ocid>"]
+
+# Optional only for -PrepareManualCapture when you want browser access before
+# image capture. Use an existing NSG in the same VCN, restricted to your /32
+# and only the application ports you need. Leave empty for normal builds.
+# manual_capture_nsg_ocids = ["<manual-inspection-nsg-ocid>"]
+
+shape          = "VM.Standard.E4.Flex" # Build VM shape.
+ocpus          = 4                     # OCPUs for the build VM.
+memory_in_gbs  = 44                    # Memory for the build VM.
+disk_size_gbs  = 250                   # Boot volume size for the build VM.
+
+assign_public_ip = true  # Use a public IP so the build VM can be reached when needed.
+use_private_ip   = false # Keep false for the normal public build path.
+
+image_name        = "peak-gear-livestack" # Name of the custom image to create.
+skip_create_image = false                 # Keep false for the normal Packer capture path.
+
+# Peak Gear build-only inputs. Keep real values in the ignored file.
+# Get the registry username and auth token from Oracle Container Registry.
+# Get the approved GoldenGate Stream Analytics archive from Oracle Software Delivery Cloud.
+# Use a private, direct-download HTTPS URL for each approved archive.
+peakgear_registry_username    = "<oracle-container-registry-username>"
+peakgear_registry_token       = "<oracle-container-registry-auth-token>"
+peakgear_ggsa_archive_url     = "<approved-read-only-ggsa-archive-url>"
+peakgear_gravitino_archive_url = "<approved-read-only-gravitino-archive-url>"

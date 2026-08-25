@@ -544,26 +544,34 @@ FROM   customers c
 CROSS  JOIN fulfillment_centers fc
 JOIN   inventory i
           ON  i.center_id  = fc.center_id
-          AND i.product_id = :product_id
-WHERE  c.customer_id = :customer_id
+          AND i.product_id = (SELECT MIN(product_id) FROM inventory)
+WHERE  c.customer_id = (SELECT MIN(customer_id) FROM customers)
   AND  fc.is_active  = 1
   AND  i.quantity_on_hand > i.quantity_reserved
 ORDER  BY dist_km
 FETCH FIRST 3 ROWS ONLY;`} />
           <SqlBlock code={`-- Demand regions: Oracle SDO_GEOMETRY → GeoJSON
--- SDO_UTIL.TO_GEOJSON converts polygon boundary for frontend rendering
-SELECT r.region_name, r.demand_index,
+-- Aggregate forecasts first so the SDO_GEOMETRY boundary is not grouped
+WITH forecast_summary AS (
+  SELECT UPPER(region) AS forecast_region,
+         AVG(predicted_demand) AS avg_7day_forecast,
+         MAX(social_factor) AS peak_social_factor
+  FROM demand_forecasts
+  WHERE forecast_date BETWEEN
+        (SELECT MIN(forecast_date) FROM demand_forecasts)
+        AND (SELECT MIN(forecast_date) FROM demand_forecasts) + 7
+  GROUP BY UPPER(region)
+)
+SELECT r.region_name,
+       r.demand_index,
        TO_CHAR(SDO_UTIL.TO_GEOJSON(r.boundary)) AS geojson,
-       AVG(df.predicted_demand)  AS avg_7day_forecast,
-       MAX(df.social_factor)     AS peak_social_factor
-FROM   demand_regions r
-LEFT JOIN demand_forecasts df
-       ON UPPER(df.region) = UPPER(r.region_name)
-      AND df.forecast_date BETWEEN TRUNC(SYSDATE)
-                               AND TRUNC(SYSDATE) + 7
-GROUP BY r.region_id, r.region_name,
-         r.demand_index, r.boundary
-ORDER BY r.demand_index DESC;`} />
+       fs.avg_7day_forecast,
+       fs.peak_social_factor
+FROM demand_regions r
+LEFT JOIN forecast_summary fs
+       ON UPPER(r.region_name) LIKE fs.forecast_region || ' %'
+ORDER BY r.demand_index DESC
+FETCH FIRST 25 ROWS ONLY;`} />
           <div>
             <p className="text-xs font-semibold text-[var(--color-text-dim)] uppercase tracking-wider mb-2">Virtual Private Database (VPD)</p>
             <p className="text-[var(--color-text)] leading-relaxed mb-2">
@@ -581,7 +589,10 @@ ORDER BY r.demand_index DESC;`} />
             <FeatureBadge label="SYS_CONTEXT" color="yellow" />
           </div>
           <SqlBlock code={`-- VPD: Set user context before every query
-BEGIN sc_security_ctx.set_user_context('fm_west_maria'); END;
+BEGIN
+  sc_security_ctx.set_user_context('fm_west_maria');
+END;
+/
 
 -- The VPD policy function (transparent to app SQL):
 -- vpd_fulfillment_region() returns:
@@ -589,14 +600,11 @@ BEGIN sc_security_ctx.set_user_context('fm_west_maria'); END;
 --   admin/analyst   → NULL  (no filter, sees all rows)
 --   viewer          → 'is_active = 1'
 
--- Policy attached to FULFILLMENT_CENTERS:
-DBMS_RLS.ADD_POLICY(
-  object_name   => 'FULFILLMENT_CENTERS',
-  policy_name   => 'VPD_FC_REGION',
-  function_schema => USER,
-  policy_function => 'VPD_FULFILLMENT_REGION',
-  statement_types => 'SELECT,UPDATE'
-);`} />
+-- Inspect the policy attached to FULFILLMENT_CENTERS:
+SELECT object_name, policy_name, enable, policy_type, sel,
+       ins, upd, del
+FROM user_policies
+WHERE object_name = 'FULFILLMENT_CENTERS';`} />
           <div>
             <p className="text-[10px] font-semibold text-[var(--color-text-dim)] uppercase tracking-wider mb-2">Spatial Layer Architecture</p>
             <div className="space-y-1">

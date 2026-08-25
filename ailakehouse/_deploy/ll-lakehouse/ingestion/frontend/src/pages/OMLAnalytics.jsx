@@ -166,41 +166,18 @@ function DemandOraclePanel() {
         <FeatureBadge label="12 Training Features" color="green" />
         <FeatureBadge label="In-DB Model Persistence" color="purple" />
       </div>
-      <SqlBlock code={`-- Step 1: Train the model (one-time)
-BEGIN
-  DBMS_DATA_MINING.CREATE_MODEL(
-    model_name      => 'DEMAND_SURGE_MODEL',
-    mining_function => DBMS_DATA_MINING.CLASSIFICATION,
-    data_table_name => 'OML_DEMAND_TRAINING_V',
-    case_id_column_name => 'PRODUCT_ID',
-    target_column_name  => 'SURGE_FLAG',
-    settings_table_name => 'DEMAND_SURGE_SETTINGS'
-    -- ALGO_RANDOM_FOREST, 50 trees, PREP_AUTO_ON
-  );
-END;
-
--- Step 2: Score sporting goods products in real-time SQL
-SELECT p.product_name, p.category,
-
-  -- Random Forest prediction: SURGE or NORMAL
-  PREDICTION(DEMAND_SURGE_MODEL USING
-    p.category, p.unit_price,
-    eng.total_posts, eng.avg_sentiment,
-    eng.total_likes, eng.total_shares,
-    eng.total_views, eng.avg_virality,
-    eng.viral_posts, eng.rising_posts,
-    sales.units_sold, sales.revenue
-  ) AS predicted_surge,
-
-  -- Probability of SURGE class (0.0 – 1.0)
-  ROUND(PREDICTION_PROBABILITY(
-    DEMAND_SURGE_MODEL, 'SURGE' USING ...
-  ) * 100, 1) AS surge_probability
-
-FROM products p
-JOIN product_engagement eng  ...
-JOIN product_sales sales     ...
-ORDER BY surge_probability DESC;`} />
+      <SqlBlock code={`-- Score the seeded Random Forest model in real-time SQL
+SELECT v.product_id,
+       p.product_name,
+       v.category,
+       PREDICTION(DEMAND_SURGE_MODEL USING *) AS predicted_surge,
+       ROUND(PREDICTION_PROBABILITY(
+         DEMAND_SURGE_MODEL, 'SURGE' USING *
+       ) * 100, 1) AS surge_probability
+FROM oml_demand_training_v v
+JOIN products p ON p.product_id = v.product_id
+ORDER BY surge_probability DESC
+FETCH FIRST 25 ROWS ONLY;`} />
       <div className="oml-model-flow">
         <div className="text-[9px] text-center text-[var(--color-text)] font-bold mb-1">DBMS_DATA_MINING Pipeline</div>
         <DiagramBox label="OML_DEMAND_TRAINING_V (650 sporting goods products)" sub="12 features: signal intensity + orders + availability" color="#AA643B" />
@@ -239,40 +216,20 @@ function RFMOraclePanel() {
         <FeatureBadge label="NTILE(4) RFM Labels" color="purple" />
         <FeatureBadge label="Churn Risk Scoring" color="red" />
       </div>
-      <SqlBlock code={`-- Step 1: Train K-Means model (one-time)
-BEGIN
-  DBMS_DATA_MINING.CREATE_MODEL(
-    model_name      => 'CUSTOMER_SEGMENT_MODEL',
-    mining_function => DBMS_DATA_MINING.CLUSTERING,
-    data_table_name => 'OML_CUSTOMER_RFM_V',
-    case_id_column_name => 'CUSTOMER_ID',
-    settings_table_name => 'CUST_SEGMENT_SETTINGS'
-    -- ALGO_KMEANS, 4 clusters, PREP_AUTO_ON
-  );
-END;
-
--- Step 2: Score customers with CLUSTER_ID()
-SELECT c.first_name || ' ' || c.last_name AS full_name,
-
-  -- K-Means cluster assignment
-  CLUSTER_ID(CUSTOMER_SEGMENT_MODEL USING
-    cm.lifetime_value, cm.recency_days,
-    cm.frequency, cm.monetary,
-    cm.avg_order_value, cm.total_items
-  ) AS oml_cluster_id,
-
-  -- Cluster membership probability
-  ROUND(CLUSTER_PROBABILITY(
-    CUSTOMER_SEGMENT_MODEL USING ...
-  ), 3) AS cluster_probability,
-
-  -- RFM quartile labels layered on top
-  NTILE(4) OVER (ORDER BY recency ASC)  AS R,
-  NTILE(4) OVER (ORDER BY frequency DESC) AS F,
-  NTILE(4) OVER (ORDER BY monetary DESC)  AS M
-
-FROM customer_metrics cm
-ORDER BY total_spent DESC;`} />
+      <SqlBlock code={`-- Score the seeded K-Means customer model
+SELECT cm.customer_id,
+       c.first_name || ' ' || c.last_name AS full_name,
+       CLUSTER_ID(CUSTOMER_SEGMENT_MODEL USING *) AS oml_cluster_id,
+       ROUND(CLUSTER_PROBABILITY(
+         CUSTOMER_SEGMENT_MODEL USING *
+       ), 3) AS cluster_probability,
+       NTILE(4) OVER (ORDER BY cm.recency_days ASC) AS recency_quartile,
+       NTILE(4) OVER (ORDER BY cm.frequency DESC) AS frequency_quartile,
+       NTILE(4) OVER (ORDER BY cm.monetary DESC) AS monetary_quartile
+FROM oml_customer_rfm_v cm
+JOIN customers c ON c.customer_id = cm.customer_id
+ORDER BY cm.monetary DESC
+FETCH FIRST 25 ROWS ONLY;`} />
       <div className="oml-model-flow">
         <div className="text-[9px] text-center text-[var(--color-text)] font-bold mb-1">DBMS_DATA_MINING K-Means Pipeline</div>
         <DiagramBox label="OML_CUSTOMER_RFM_V (5,952 customers)" sub="6 features: LTV, recency, frequency, monetary, AOV, items" color="#C74634" />
@@ -311,20 +268,7 @@ function ForecastOraclePanel() {
         <FeatureBadge label="7-Day Moving Average" color="cyan" />
         <FeatureBadge label="Confidence Intervals" color="purple" />
       </div>
-      <SqlBlock code={`-- Step 1: Train GLM model (one-time)
-BEGIN
-  DBMS_DATA_MINING.CREATE_MODEL(
-    model_name      => 'REVENUE_PREDICT_MODEL',
-    mining_function => DBMS_DATA_MINING.REGRESSION,
-    data_table_name => 'OML_REVENUE_TRAINING_V',
-    case_id_column_name => 'ORDER_ID',
-    target_column_name  => 'TARGET_REVENUE',
-    settings_table_name => 'REVENUE_PREDICT_SETTINGS'
-    -- ALGO_GENERALIZED_LINEAR_MODEL, PREP_AUTO_ON
-  );
-END;
-
--- Step 2: Score orders + time-series trend
+      <SqlBlock code={`-- Score the seeded GLM model and calculate the revenue trend
 WITH daily_rev AS (
   SELECT TRUNC(CAST(created_at AS DATE)) AS day,
     SUM(order_total) AS revenue,
@@ -388,28 +332,11 @@ function ClustersOraclePanel() {
         <FeatureBadge label="ONNX Embeddings Available" color="orange" />
         <FeatureBadge label="In-DB Model Persistence" color="yellow" />
       </div>
-      <SqlBlock code={`-- Step 1: Train K-Means model (one-time)
-BEGIN
-  DBMS_DATA_MINING.CREATE_MODEL(
-    model_name      => 'PRODUCT_CLUSTER_MODEL',
-    mining_function => DBMS_DATA_MINING.CLUSTERING,
-    data_table_name => 'OML_PRODUCT_CLUSTER_V',
-    case_id_column_name => 'PRODUCT_ID',
-    settings_table_name => 'PROD_CLUSTER_SETTINGS'
-    -- ALGO_KMEANS, 5 clusters, PREP_AUTO_ON
-  );
-END;
-
--- Step 2: Score sporting goods products with CLUSTER_ID()
+      <SqlBlock code={`-- Score the seeded K-Means product model
 SELECT p.product_name, p.category, p.unit_price,
 
   -- K-Means cluster assignment
-  CLUSTER_ID(PRODUCT_CLUSTER_MODEL USING
-    pcv.unit_price, pcv.weight_kg,
-    pcv.units_sold, pcv.revenue,
-    pcv.order_count, pcv.total_engagement,
-    pcv.avg_sentiment, pcv.avg_virality
-  ) AS cluster_id,
+  CLUSTER_ID(PRODUCT_CLUSTER_MODEL USING *) AS cluster_id,
 
   -- Membership probability (0.0 – 1.0)
   ROUND(CLUSTER_PROBABILITY(
@@ -418,12 +345,8 @@ SELECT p.product_name, p.category, p.unit_price,
 
 FROM OML_PRODUCT_CLUSTER_V pcv
 JOIN products p ON pcv.PRODUCT_ID = p.PRODUCT_ID
-ORDER BY cluster_id, cluster_prob DESC;
-
--- Training view features:
--- unit_price, weight_kg, units_sold, revenue,
--- order_count, total_engagement, avg_sentiment,
--- avg_virality`} />
+ORDER BY cluster_id, cluster_prob DESC
+FETCH FIRST 25 ROWS ONLY;`} />
       <div className="oml-model-flow">
         <div className="text-[9px] text-center text-[var(--color-text)] font-bold mb-1">DBMS_DATA_MINING K-Means Pipeline</div>
         <DiagramBox label="OML_PRODUCT_CLUSTER_V (650 sporting goods products)" sub="8 features: price, sales, signal engagement, sentiment" color="#4F7D7B" />
@@ -461,38 +384,51 @@ function InventoryOraclePanel() {
         <FeatureBadge label="Revenue at Risk" color="red" />
         <FeatureBadge label="Days of Coverage" color="green" />
       </div>
-      <SqlBlock code={`-- OML Capacity Intelligence (actual query)
-SELECT p.product_name, fc.center_name,
-  i.quantity_on_hand, i.reorder_point,
-  df.predicted_demand, df.social_factor AS social_factor,
-
-  -- Real-time OML scoring
-  PREDICTION(DEMAND_SURGE_MODEL USING
-    p.category, p.unit_price,
-    eng.total_posts, eng.avg_sentiment, ...
-  ) AS oml_surge_prediction,
-
-  ROUND(PREDICTION_PROBABILITY(
-    DEMAND_SURGE_MODEL, 'SURGE' USING ...
-  ) * 100, 1) AS oml_surge_probability,
-
-  -- Availability risk metrics
-  CASE WHEN qty = 0 THEN 'OUT_OF_STOCK'
-       WHEN qty < reorder * 0.5 THEN 'CRITICAL'
-       WHEN qty < predicted_demand THEN 'AT_RISK'
-  END AS stock_status,
-
-  -- Days of coverage at predicted consumption rate
-  ROUND(qty / (predicted_demand / 7), 1)
-    AS days_of_supply,
-
-  -- Revenue at risk from capacity shortfall
-  (predicted_demand - qty) * unit_price
-    AS revenue_at_risk
-
+      <SqlBlock code={`-- OML Capacity Intelligence against seeded inventory and forecasts
+WITH latest_forecast AS (
+  SELECT df.*,
+         ROW_NUMBER() OVER (
+           PARTITION BY df.product_id, df.region
+           ORDER BY df.forecast_date DESC
+         ) AS rn
+  FROM demand_forecasts df
+  WHERE df.forecast_date >= TRUNC(SYSDATE)
+),
+scored_products AS (
+  SELECT v.product_id,
+         PREDICTION(DEMAND_SURGE_MODEL USING *) AS oml_surge_prediction,
+         ROUND(PREDICTION_PROBABILITY(
+           DEMAND_SURGE_MODEL, 'SURGE' USING *
+         ) * 100, 1) AS oml_surge_probability
+  FROM oml_demand_training_v v
+)
+SELECT p.product_name,
+       fc.center_name,
+       i.quantity_on_hand,
+       i.reorder_point,
+       f.predicted_demand,
+       f.social_factor,
+       s.oml_surge_prediction,
+       s.oml_surge_probability,
+       CASE
+         WHEN i.quantity_on_hand = 0 THEN 'OUT_OF_STOCK'
+         WHEN i.quantity_on_hand < i.reorder_point * 0.5 THEN 'CRITICAL'
+         WHEN i.quantity_on_hand < f.predicted_demand THEN 'AT_RISK'
+         ELSE 'ADEQUATE'
+       END AS stock_status,
+       ROUND(
+         i.quantity_on_hand / NULLIF(f.predicted_demand / 7, 0),
+         1
+       ) AS days_of_supply,
+       GREATEST(f.predicted_demand - i.quantity_on_hand, 0) * p.unit_price
+         AS revenue_at_risk
 FROM inventory i
-LEFT JOIN latest_forecast df ON df.product_id = p.product_id
-ORDER BY oml_surge_probability DESC;`} />
+JOIN products p ON p.product_id = i.product_id
+JOIN fulfillment_centers fc ON fc.center_id = i.center_id
+JOIN latest_forecast f ON f.product_id = i.product_id AND f.rn = 1
+JOIN scored_products s ON s.product_id = i.product_id
+ORDER BY s.oml_surge_probability DESC
+FETCH FIRST 25 ROWS ONLY;`} />
       <div className="oml-model-flow">
         <div className="text-[9px] text-center text-[var(--color-text)] font-bold mb-1">Capacity Intelligence Pipeline</div>
         <DiagramBox label="DEMAND_SURGE_MODEL (Random Forest)" sub="PREDICTION_PROBABILITY('SURGE') per sporting goods product" color="#796087" />

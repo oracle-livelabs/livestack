@@ -185,8 +185,8 @@ export default function ProductCatalog() {
             Browse products derived from the curated lakehouse export. Catalog, inventory,
             demand signals, and orders all use the same governed product keys.
           </p>
-          <ImportanceButton onClick={() => setShowImportance(true)} />
         </div>
+        <ImportanceButton onClick={() => setShowImportance(true)} />
         <div className="product-catalog-stats">
           <CatalogStat icon={Package} label="Curated products" value={formatNumber(catalogTotal)} accent="#437C94" />
           <CatalogStat icon={Tags} label="Categories" value={formatNumber(categories.length)} accent="#AA643B" />

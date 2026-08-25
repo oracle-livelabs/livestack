@@ -142,7 +142,7 @@ async function handleNarrativeMode(req, res, mode) {
         demoUser: req.demoUser,
         profile: resolvedProfile,
         trace,
-        conversationContext: mode === 'chat' ? history : [],
+        conversationContext: history,
       }),
       timeoutAfter(180000),
     ]);

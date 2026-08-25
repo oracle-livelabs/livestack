@@ -28,7 +28,7 @@ import {
 const BATCH_FILE_LOADING_LABEL = 'Batch & File Loading (Data Studio)';
 const REAL_TIME_STREAMING_LABEL = 'Real-Time Streaming';
 const CHANGE_DATA_CAPTURE_LABEL = 'Change Data Capture (GoldenGate Studio)';
-const DATA_PROCESSING_LABEL = 'Data Processing & Pipelines';
+const DATA_PROCESSING_LABEL = 'Transform Iceberg Data';
 const CONVERGED_QUERIES_LABEL = 'Converged Multi-Model Queries';
 const GRAPH_ANALYTICS_LABEL = 'Graph Analytics';
 const SPATIAL_ANALYTICS_LABEL = 'Spatial Analytics';
@@ -278,8 +278,8 @@ export const LAKEHOUSE_SECTIONS = [
     capabilities: [
       {
         Icon: Wrench,
-        title: 'Data Processing & Pipelines',
-        desc: 'Build end-to-end data pipelines with SQL-based and visual processing. Schedule, orchestrate, and monitor pipeline runs with built-in tooling.',
+        title: 'Transform Iceberg Data',
+        desc: 'Use Oracle Data Transforms to read PeakGear\'s Iceberg-backed Bronze data, apply a business transformation, and write a new Gold product table without changing the original source.',
       },
       {
         Icon: CheckCircle2,

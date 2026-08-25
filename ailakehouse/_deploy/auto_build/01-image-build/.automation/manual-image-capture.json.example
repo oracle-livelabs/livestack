@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "kind": "oci-manual-image-capture",
+  "image_name": "<image-name>",
+  "build_instance_name": "<temporary-packer-instance-name>",
+  "build_instance_ocid": "<temporary-packer-instance-ocid>",
+  "build_instance_public_ip": "<temporary-packer-instance-public-ip>",
+  "compartment_ocid": "<compartment-ocid>",
+  "image_compartment_ocid": "<image-compartment-ocid>",
+  "base_image_ocid": "<oracle-linux-base-image-ocid>",
+  "source_sha256": "<sha256-of-image-build-source>",
+  "region": "<oci-region>",
+  "created_utc": "<utc-timestamp>"
+}

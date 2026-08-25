@@ -492,7 +492,7 @@ export default function SocialFeed() {
           <div>
             <p className="text-xs font-semibold text-[var(--color-text-dim)] uppercase tracking-wider mb-2">What's Happening</p>
             <p className="text-[var(--color-text)] leading-relaxed">
-              The <span className="tone-teal font-mono">vector search bar</span> embeds your query at runtime using <span className="tone-teal font-mono">VECTOR_EMBEDDING(ALL_MINILM_L12_V2)</span> -
+              The <span className="tone-teal font-mono">vector search bar</span> embeds a resident question at runtime using <span className="tone-teal font-mono">VECTOR_EMBEDDING(ALL_MINILM_L12_V2)</span> -
               an ONNX model loaded directly into Oracle. It then computes <span className="tone-sienna font-mono">VECTOR_DISTANCE(COSINE)</span> against{' '}
               <span className="tone-pine">pre-embedded public service vectors</span> and returns the top matches via an <span className="tone-plum font-mono">ANN index</span>
               (approximate nearest neighbor). No external API, no Python, no microservice - the entire embedding + search pipeline runs inside the database.
@@ -512,20 +512,25 @@ export default function SocialFeed() {
             <FeatureBadge label="resident_signal_vectors" color="orange" />
           </div>
           <SqlBlock code={`-- Real-time vector semantic search for public services
--- Embeds user query at runtime, then finds nearest
+-- Embeds the resident question at runtime, then finds the nearest
 -- service vectors via ANN index (cosine distance)
-SELECT service_id, service_name, service_category,
-       estimated_service_value, agency_or_program,
+SELECT s.service_id,
+       s.service_name,
+       s.service_category,
+       s.service_value_proxy AS estimated_service_value,
+       s.program_name AS agency_or_program,
        ROUND(1 - VECTOR_DISTANCE(
-         service_vector,
+         pe.embedding,
          VECTOR_EMBEDDING(ALL_MINILM_L12_V2
-                          USING :query AS DATA),
-         COSINE), 4)             AS similarity_score
-FROM   state_local_government_service_vectors
+                          USING 'permit inspection status escalation' AS DATA),
+         COSINE), 4)          AS similarity_score
+FROM   sled_public_services_v s
+JOIN   product_embeddings pe
+  ON   pe.product_id = s.service_id
 ORDER  BY VECTOR_DISTANCE(
-  service_vector,
+  pe.embedding,
   VECTOR_EMBEDDING(ALL_MINILM_L12_V2
-                   USING :query AS DATA),
+                   USING 'permit inspection status escalation' AS DATA),
   COSINE)
 FETCH APPROXIMATE FIRST 10 ROWS ONLY;`} />
           <div>

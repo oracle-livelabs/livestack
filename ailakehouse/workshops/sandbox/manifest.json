@@ -11,71 +11,75 @@
       "filename": "../../introduction/introduction.md"
     },
     {
-      "title": "Scene 1: Confirm LiveStack Readiness",
+      "title": "Scene: Confirm LiveStack Readiness",
       "filename": "../../livestack-configuration/livestack-configuration.md"
     },
     {
-      "title": "Scene 2: Data Catalog and AI Table Explain",
+      "title": "Scene: Data Catalog and AI Table Explain",
       "filename": "../../data-catalog/data-catalog.md"
     },
     {
-      "title": "Scene 3: Real-Time Streaming Ingest",
+      "title": "Scene: Real-Time Streaming Ingest",
       "filename": "../../ingest-real-time-and-batch-data/ingest-real-time-and-batch-data.md"
     },
     {
-      "title": "Scene 4: Change Data Capture Ingest",
+      "title": "Scene: Change Data Capture Ingest",
       "filename": "../../change-data-capture/change-data-capture.md"
     },
     {
-      "title": "Scene 5: Batch and File Loading Ingest",
+      "title": "Scene: Batch and File Loading Ingest",
       "filename": "../../batch-and-file-loading/batch-and-file-loading.md"
     },
     {
-      "title": "Scene 6: Data Processing and Pipelines",
-      "filename": "../../process-bronze-to-silver/process-bronze-to-silver.md"
-    },
-    {
-      "title": "Scene 7: Add an Apache Iceberg Catalog Server",
+      "title": "Scene: Add an Apache Iceberg Catalog Server",
       "filename": "../../add-catalog-server/add-catalog-server.md"
     },
     {
-      "title": "Scene 8: Operations Dashboard",
+      "title": "Scene: Transform Iceberg Data",
+      "filename": "../../process-bronze-to-silver/process-bronze-to-silver.md"
+    },
+    {
+      "title": "Scene: Load Data to an Apache Iceberg Catalog Server",
+      "filename": "../../load-to-icerberg/load-to-iceberg.md"
+    },
+    {
+      "title": "Scene: Operations Dashboard",
       "filename": "../../operations-dashboard/operations-dashboard.md"
     },
     {
-      "title": "Scene 9: Product Catalog",
+      "title": "Scene: Product Catalog",
       "filename": "../../product-catalog/product-catalog.md"
     },
     {
-      "title": "Scene 10: Retail Demand Sensing",
+      "title": "Scene: Retail Demand Sensing",
       "filename": "../../retail-demand-sensing/retail-demand-sensing.md"
     },
     {
-      "title": "Scene 11: Returns Risk Network",
+      "title": "Scene: Returns Risk Network",
       "filename": "../../returns-risk-network/returns-risk-network.md"
     },
     {
-      "title": "Scene 12: Store Fulfillment Map",
+      "title": "Scene: Store Fulfillment Map",
       "filename": "../../store-fulfillment-map/store-fulfillment-map.md"
     },
     {
-      "title": "Scene 13: Orders and Fulfillment Flow",
+      "title": "Scene: Orders and Fulfillment Flow",
       "filename": "../../orders-and-fulfillment-flow/orders-and-fulfillment-flow.md"
     },
     {
-      "title": "Scene 14: Demand, Revenue, and Inventory Predictions",
+      "title": "Scene: Demand, Revenue, and Inventory Predictions",
       "filename": "../../demand-revenue-and-inventory-predictions/demand-revenue-and-inventory-predictions.md"
     },
     {
-      "title": "Scene 15: PeakGear Webshop and Product Discovery",
+      "title": "Scene: PeakGear Webshop and Product Discovery",
       "filename": "../../peakgear-webshop-and-product-discovery/peakgear-webshop-and-product-discovery.md"
     },
     {
-      "title": "Scene 16: Ask Your Data",
+      "title": "Scene: Ask Your Data",
       "filename": "../../ask-your-data/ask-your-data.md"
     },
     {
-      "title": "Scene 17: Retail Operations Agents",
+      "title": "Scene: Retail Operations Agents",
       "filename": "../../retail-operations-agents/retail-operations-agents.md"
     },
     {

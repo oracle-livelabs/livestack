@@ -12,8 +12,8 @@ const REMARK_PLUGINS = [remarkGfm];
 const PG_USERNAME = 'PG';
 
 const DEFAULT_GUIDE = {
-  title: 'Transform Bronze into Silver with Data Transforms',
-  description: 'Use this guided flow to demonstrate how raw PeakGear Bronze data becomes typed, standardized, deduplicated Silver tables that are ready for Gold views and app use cases.',
+  title: 'Transform Iceberg Data',
+  description: 'This demo shows how PeakGear transforms product data stored in an external Apache Iceberg table. Oracle Data Transforms reads the Iceberg-backed Bronze source, applies a business transformation, and writes the result to a new Gold product table while leaving the original Bronze data unchanged.',
   importance: 'silverProcess',
   markdownUrl: 'https://raw.githubusercontent.com/oracle-livelabs/livestack/refs/heads/main/ailakehouse/process-bronze-to-silver/process-bronze-to-silver.md',
   imageDirectoryUrl: 'https://raw.githubusercontent.com/oracle-livelabs/livestack/refs/heads/main/ailakehouse/process-bronze-to-silver/images/',

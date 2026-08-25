@@ -9,6 +9,7 @@ import {
   Network,
   ServerCog,
   ShoppingCart,
+  Upload,
 } from 'lucide-react';
 import { api } from './utils/api';
 import Welcome, { LAKEHOUSE_SECTIONS } from './pages/Welcome';
@@ -26,6 +27,7 @@ import AIDataLakehouse from './pages/AIDataLakehouse';
 import BronzeDataLoadGuide from './pages/BronzeDataLoadGuide';
 import SilverProcessGuide from './pages/SilverProcessGuide';
 import IcebergCatalogServerGuide from './pages/IcebergCatalogServerGuide';
+import LoadToIcebergGuide from './pages/LoadToIcebergGuide';
 import RealTimeStreaming from './pages/RealTimeStreaming';
 import CustomerCDC from './pages/CustomerCDC';
 import AdminEntry from './pages/AdminEntry';
@@ -59,7 +61,7 @@ const LAKEHOUSE_ORDS_SCHEMA = 'pg';
 const BATCH_FILE_LOADING_LABEL = 'Batch & File Loading (Data Studio)';
 const REAL_TIME_STREAMING_LABEL = 'Real-Time Streaming';
 const CHANGE_DATA_CAPTURE_LABEL = 'Change Data Capture (GoldenGate Studio)';
-const DATA_PROCESSING_LABEL = 'Data Processing & Pipelines';
+const DATA_PROCESSING_LABEL = 'Transform Iceberg Data';
 const DATA_CATALOG_LABEL = 'Data Catalog';
 const MACHINE_LEARNING_MODELS_LABEL = 'Machine Learning Models';
 const ORACLE_MACHINE_LEARNING_LABEL = 'Oracle Machine Learning';
@@ -76,6 +78,7 @@ const REAL_TIME_STREAMING_PAGE_ID = 'streaming';
 const CHANGE_DATA_CAPTURE_PAGE_ID = 'customer-cdc';
 const SILVER_PROCESS_PAGE_ID = 'silver-process';
 const ICEBERG_CATALOG_SERVER_PAGE_ID = 'iceberg-catalog-server';
+const LOAD_TO_ICEBERG_PAGE_ID = 'load-to-iceberg';
 const PROCESS_SIDEBAR_EXCLUSIONS = new Set([
   'Data Quality & Enrichment',
   'Analytics-Ready Datasets',
@@ -120,6 +123,12 @@ const ICEBERG_CATALOG_SERVER_NAV_ITEM = {
   label: 'Add Iceberg Catalog Server',
   Icon: ServerCog,
 };
+const LOAD_TO_ICEBERG_NAV_ITEM = {
+  id: LOAD_TO_ICEBERG_PAGE_ID,
+  pageId: LOAD_TO_ICEBERG_PAGE_ID,
+  label: 'Load Data to Iceberg Catalog Server',
+  Icon: Upload,
+};
 
 const ROUTED_NAV_ITEMS = [
   WELCOME_NAV_ITEM,
@@ -128,6 +137,7 @@ const ROUTED_NAV_ITEMS = [
   BRONZE_DATA_LOAD_NAV_ITEM,
   SILVER_PROCESS_NAV_ITEM,
   ICEBERG_CATALOG_SERVER_NAV_ITEM,
+  LOAD_TO_ICEBERG_NAV_ITEM,
   ...PAGE_NAV_ITEMS,
   ...ADMIN_NAV_ITEMS,
 ];
@@ -177,7 +187,7 @@ const SIDEBAR_GROUPS = [
     id: 'catalog',
     label: 'Catalog',
     iconClass: 'oj-fwk-icon oj-fwk-icon-tree-folder-open',
-    items: workflowItems('catalog'),
+    items: [...workflowItems('catalog'), ICEBERG_CATALOG_SERVER_NAV_ITEM],
   },
   {
     id: 'ingest',
@@ -189,7 +199,7 @@ const SIDEBAR_GROUPS = [
     id: 'transform',
     label: 'Process',
     iconClass: 'oj-fwk-icon oj-fwk-icon-tree-folder-open',
-    items: [...workflowItems('transform', PROCESS_SIDEBAR_EXCLUSIONS), ICEBERG_CATALOG_SERVER_NAV_ITEM],
+    items: [...workflowItems('transform', PROCESS_SIDEBAR_EXCLUSIONS), LOAD_TO_ICEBERG_NAV_ITEM],
   },
   {
     id: 'serve-data',
@@ -246,6 +256,7 @@ const PAGES = {
   [BRONZE_DATA_LOAD_PAGE_ID]: BronzeDataLoadGuide,
   [SILVER_PROCESS_PAGE_ID]: SilverProcessGuide,
   [ICEBERG_CATALOG_SERVER_PAGE_ID]: IcebergCatalogServerGuide,
+  [LOAD_TO_ICEBERG_PAGE_ID]: LoadToIcebergGuide,
 };
 
 function resolveInitialPage() {

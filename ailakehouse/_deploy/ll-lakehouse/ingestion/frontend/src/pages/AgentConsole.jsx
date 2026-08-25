@@ -225,9 +225,6 @@ function ChatAgent({ onActionLogged, runtime }) {
           </div>
           <div>
             <h3 className="text-sm font-bold">Chat with AI Agents</h3>
-            <p className="text-[10px] text-[var(--color-text-dim)]">
-              Ask questions — auto-routed to <span className="font-semibold text-[var(--color-text)]">Signal</span>, <span className="font-semibold text-[var(--color-text)]">Store Service</span>, or <span className="font-semibold text-[var(--color-text)]">Orders & Fulfillment Flow</span> agents
-            </p>
           </div>
         </div>
         {messages.length > 0 && (
@@ -250,10 +247,10 @@ function ChatAgent({ onActionLogged, runtime }) {
           <div className="space-y-3 py-4">
             <div className="text-center mb-4">
               <JetGlyph iconClass="oj-fwk-icon-users" className="agent-console-empty-glyph tone-teal" />
-              <p className="text-sm text-[var(--color-text-dim)]">Ask me anything about your PeakGear sporting goods data</p>
+              <p className="text-sm text-[var(--color-text-dim)]">Ask me about your PeakGear sporting goods data</p>
               <p className="text-[10px] text-[var(--color-text-dim)] mt-1">
                 Powered by <span className="font-semibold text-[var(--color-text)]">
-                  {nativeAgentActive ? 'Oracle Select AI Agent' : 'Ollama (llama3.2)'}
+                  {nativeAgentActive ? 'Oracle Select AI Agent Framework' : 'Ollama (llama3.2)'}
                 </span> for reasoning + Oracle SQL and PL/SQL tools
               </p>
             </div>
@@ -591,7 +588,7 @@ export default function AgentConsole() {
 
 SELECT DBMS_CLOUD_AI_AGENT.RUN_TEAM(
   team_name   => 'SOCIAL_TREND_TEAM',
-  user_prompt => :question
+  user_prompt => 'Which products are trending and need attention?'
 ) AS response
 FROM dual;` : `-- Agent runtime: app orchestration + Ollama + Oracle AI Database 26ai
 -- The app resolves intent -> routes to a specialist team -> executes SQL / PL/SQL in Oracle
@@ -603,11 +600,12 @@ FROM dual;` : `-- Agent runtime: app orchestration + Ollama + Oracle AI Database
 -- 3. Join inventory and fulfillment data in Oracle
 -- 4. Return recommendations and write actions to audit tables
 
--- Agent decisions written back atomically:
-INSERT INTO agent_actions (agent_name, action_type, entity_type,
-  entity_id, decision_payload, confidence, execution_status)
-VALUES ('trend_detection_agent','reorder_flag','product',
-  :product_id, :json_payload, 0.92, 'proposed');`} />
+-- Review the most recent decisions written by the agent runtime:
+SELECT action_id, agent_name, action_type, entity_type,
+       entity_id, confidence, execution_status, created_at
+FROM agent_actions
+ORDER BY created_at DESC
+FETCH FIRST 10 ROWS ONLY;`} />
           {/* Team / Agent / Tools grid */}
           <div>
             <p className="text-[10px] font-semibold text-[var(--color-text-dim)] uppercase tracking-wider mb-2">Agent Teams &amp; Tools</p>
@@ -681,7 +679,7 @@ VALUES ('trend_detection_agent','reorder_flag','product',
           <p className="text-sm text-[var(--color-text-dim)] mt-1">
             {nativeAgentActive ? (
               <>
-                Agent teams use <span className="font-semibold text-[var(--color-text)]">Oracle Select AI Agent</span> with OCI GenAI against the app database
+                Agent teams use <span className="font-semibold text-[var(--color-text)]">Oracle Select AI Agent Framework</span> with OCI GenAI against the app database
               </>
             ) : (
               <>

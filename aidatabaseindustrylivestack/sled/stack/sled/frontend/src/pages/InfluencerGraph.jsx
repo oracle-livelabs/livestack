@@ -877,66 +877,31 @@ export default function InfluencerGraph() {
             <FeatureBadge label="CONNECT BY" color="blue" />
             <FeatureBadge label="Program Attribution" color="green" />
           </div>
-          <SqlBlock code={`-- ISO SQL/PGQ: 5-hop interagency service pathway
-SELECT reached.partner_id, reached.partner_name,
-       reached.constituent_reach, reached.coordination_score
+          <SqlBlock code={`-- ISO SQL/PGQ: public-program vertices from the property graph
+SELECT brand_id,
+       brand_name,
+       brand_category,
+       social_tier
 FROM GRAPH_TABLE(
-  state_local_government_partner_network
-  MATCH
-    (seed IS community_partner {partner_name: :partner})
-    -[e IS service_relationship]->{1,5}    -- 1 to 5 hops
-    (reached IS community_partner)
+  influencer_network
+  MATCH (brand IS brand)
   COLUMNS (
-    reached.partner_id,
-    reached.partner_name,
-    reached.constituent_reach,
-    reached.coordination_score
+    brand.brand_id AS brand_id,
+    brand.brand_name AS brand_name,
+    brand.brand_category AS brand_category,
+    brand.social_tier AS social_tier
   )
 )
-ORDER BY coordination_score DESC
-FETCH FIRST 50 ROWS ONLY;`} />
-          <SqlBlock code={`-- Create the property graph over relational tables
-CREATE PROPERTY GRAPH state_local_government_partner_network
-  VERTEX TABLES (
-    community_partners KEY (partner_id) LABEL community_partner
-      PROPERTIES (partner_id, partner_name, agency_name,
-        source_channel, constituent_reach, collaboration_rate,
-        coordination_score, service_domain, city, region, verified_partner),
-    public_programs KEY (program_id) LABEL public_program
-      PROPERTIES (program_id, program_name,
-        program_category, oversight_tier),
-    public_services KEY (service_id) LABEL public_service
-      PROPERTIES (service_id, service_name,
-        service_category, unit_cost),
-    resident_service_signals KEY (signal_id) LABEL resident_signal
-      PROPERTIES (signal_id, source_channel, received_at,
-        priority_score, sla_risk_flag)
-  )
-  EDGE TABLES (
-    partner_relationships KEY (relationship_id)
-      SOURCE KEY (from_partner)
-        REFERENCES community_partners (partner_id)
-      DESTINATION KEY (to_partner)
-        REFERENCES community_partners (partner_id)
-      LABEL service_relationship
-      PROPERTIES (connection_type, strength,
-        workflow_record_count),
-    program_partner_links KEY (link_id)
-      SOURCE KEY (partner_id)
-        REFERENCES community_partners (partner_id)
-      DESTINATION KEY (program_id)
-        REFERENCES public_programs (program_id)
-      LABEL supports_program
-      PROPERTIES (relationship_type, case_count,
-        avg_service_level, public_value_attributed),
-    signal_service_links KEY (signal_link_id)
-      SOURCE KEY (signal_id)
-        REFERENCES resident_service_signals (signal_id)
-      DESTINATION KEY (service_id)
-        REFERENCES public_services (service_id)
-      LABEL references_service
-      PROPERTIES (confidence_score, evidence_type)
-  );`} />
+ORDER BY brand_name
+FETCH FIRST 10 ROWS ONLY;`} />
+          <SqlBlock code={`-- Graph coverage summary from the underlying relational tables
+SELECT
+  (SELECT COUNT(*) FROM influencers) AS influencer_vertices,
+  (SELECT COUNT(*) FROM brands) AS brand_vertices,
+  (SELECT COUNT(*) FROM products) AS product_vertices,
+  (SELECT COUNT(*) FROM influencer_connections) AS influencer_edges,
+  (SELECT COUNT(*) FROM brand_influencer_links) AS brand_links
+FROM dual;`} />
           <div className="grid grid-cols-2 gap-1.5 mt-2">
             <DiagramBox label="community_partners" sub="Vertex table" color="#C74634" />
             <DiagramBox label="partner_relationships" sub="Edge table" color="#AA643B" />
@@ -976,31 +941,17 @@ CREATE PROPERTY GRAPH state_local_government_partner_network
             <FeatureBadge label="Region Filtering" color="blue" />
             <FeatureBadge label="SLED_SECURITY_PKG / SLED_APP_CTX" color="yellow" />
           </div>
-          <SqlBlock code={`-- VPD policy function (applied to protected graph tables)
-CREATE FUNCTION vpd_graph_community_partners(
-  p_schema VARCHAR2, p_table VARCHAR2
-) RETURN VARCHAR2 AS
-  v_role  VARCHAR2(30) := SYS_CONTEXT('SLED_APP_CTX','ROLE');
-  v_scope VARCHAR2(30) := SYS_CONTEXT('SLED_APP_CTX','ACCESS_SCOPE');
-BEGIN
-  IF SYS_CONTEXT('SLED_APP_CTX','AUTHENTICATED') != 'Y' THEN
-    RETURN '1=0';
-  END IF;
-  IF v_role IN ('admin','analyst') AND v_scope = 'GLOBAL' THEN
-    RETURN '1=1';
-  END IF;
-  IF v_role = 'fulfillment_mgr' AND v_scope = 'REGIONAL' THEN
-    RETURN 'SERVICE_REGION_CODE = SYS_CONTEXT('
-           || '''SLED_APP_CTX'',''REGION'')';
-  END IF;
-  RETURN '1=0';
-END;
-
--- Each policy is installed with DBMS_RLS.CONTEXT_SENSITIVE on:
---   community_partners, resident_service_signals,
---   partner_relationships,
---   program_partner_links,
---   signal_service_links`} />
+          <SqlBlock code={`-- VPD context check for the current session
+SELECT CASE
+         WHEN SYS_CONTEXT('SLED_APP_CTX','AUTHENTICATED') != 'Y' THEN 'no protected rows'
+         WHEN SYS_CONTEXT('SLED_APP_CTX','ACCESS_SCOPE') = 'GLOBAL' THEN 'global access'
+         WHEN SYS_CONTEXT('SLED_APP_CTX','ACCESS_SCOPE') = 'REGIONAL' THEN
+           'regional access for ' || SYS_CONTEXT('SLED_APP_CTX','REGION')
+         ELSE 'no protected rows'
+       END AS vpd_scope,
+       SYS_CONTEXT('SLED_APP_CTX','ROLE') AS role_name,
+       SYS_CONTEXT('SLED_APP_CTX','REGION') AS region
+FROM dual;`} />
         </div>
       </RegisterOraclePanel>
 

@@ -728,30 +728,30 @@ export default function Dashboard() {
 -- Government-facing query surfaces keep demo SQL agency-focused.
 SELECT
   (SELECT COUNT(*)
-     FROM state_local_government_service_requests) AS service_requests_total,
+     FROM sled_service_requests_v) AS service_requests_total,
   (SELECT NVL(SUM(service_value_exposure), 0)
-     FROM state_local_government_service_requests) AS service_value_exposure,
+     FROM sled_service_requests_v) AS service_value_exposure,
   (SELECT COUNT(*)
-     FROM resident_service_signals
+     FROM sled_resident_signals_v
     WHERE urgency_score >= 80) AS critical_service_signals,
   (SELECT COUNT(*)
-     FROM public_service_agent_actions) AS agent_actions,
+     FROM agent_actions) AS agent_actions,
   (SELECT COUNT(*)
-     FROM service_task_routes
-    WHERE route_status = 'active') AS active_service_routes
+     FROM sled_service_task_routes_v
+    WHERE route_status = 'active route') AS active_service_routes
 FROM dual;`} />
           <SqlBlock code={`-- Service and program search: Oracle UPPER() case-insensitive LIKE
 SELECT service_name,
-       agency_or_program_name,
-       COUNT(DISTINCT signal_id) AS signal_count,
-       ROUND(AVG(urgency_score), 2) AS avg_priority
-FROM resident_service_signals_v
-WHERE signal_timestamp >= SYSTIMESTAMP - INTERVAL '7' DAY
-  AND (UPPER(service_name)           LIKE UPPER(:search)
-    OR UPPER(agency_or_program_name) LIKE UPPER(:search)
-    OR UPPER(signal_text)            LIKE UPPER(:search))
-GROUP BY service_id, service_name, agency_or_program_name
-ORDER BY avg_priority DESC;`} />
+       program_name,
+       service_category,
+       COUNT(*) AS service_count,
+       ROUND(AVG(service_value_proxy), 2) AS avg_service_value
+FROM sled_public_services_v
+WHERE REGEXP_LIKE(UPPER(service_name || ' ' || service_category || ' ' || program_name),
+                  'PERMIT|INSPECTION|LICENSE|BENEFIT|PUBLIC WORKS|CASE MANAGEMENT')
+GROUP BY service_name, program_name, service_category
+ORDER BY avg_service_value DESC
+FETCH FIRST 10 ROWS ONLY;`} />
           <div>
             <p className="text-[10px] font-semibold text-[var(--color-text-dim)] uppercase tracking-wider mb-2">Converged Architecture</p>
             <div className="grid grid-cols-3 gap-1.5">

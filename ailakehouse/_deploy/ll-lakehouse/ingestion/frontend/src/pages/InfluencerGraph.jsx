@@ -888,52 +888,36 @@ export default function InfluencerGraph() {
             <FeatureBadge label="No External Graph DB" color="green" />
           </div>
           <SqlBlock code={`-- ISO SQL/PGQ: PeakGear return entities within 3 hops
-SELECT reached.entity_key, reached.entity_type,
-       reached.review_score AS review_score, reached.total_amount
+SELECT DISTINCT entity_key, entity_type,
+       review_score, total_amount
 FROM GRAPH_TABLE(
   returns_relationship_graph
   MATCH
     (seed IS entity)
     -[e IS related_to]->{1,3}
     (reached IS entity)
-  WHERE seed.entity_key = :entity_key
   COLUMNS (
-    reached.entity_key,
-    reached.entity_type,
-    reached.review_score,
-    reached.total_amount
+    reached.entity_key AS entity_key,
+    reached.entity_type AS entity_type,
+    reached.review_score AS review_score,
+    reached.total_amount AS total_amount
   )
 )
 ORDER BY review_score DESC
 FETCH FIRST 25 ROWS ONLY;`} />
-          <SqlBlock code={`-- Create the property graph over relational tables
-CREATE PROPERTY GRAPH returns_relationship_graph
-  VERTEX TABLES (
-    returns_entities KEY (entity_id) LABEL entity
-      PROPERTIES (entity_id, entity_key, display_name,
-        entity_type, review_score, review_level, channel,
-        total_amount, event_count, is_confirmed_returns),
-    returns_cases KEY (case_id) LABEL returns_case
-      PROPERTIES (case_id, case_ref, case_type,
-        status, review_score, return_value)
-  )
-  EDGE TABLES (
-    returns_relationships KEY (relationship_id)
-      SOURCE KEY (from_entity)
-        REFERENCES returns_entities (entity_id)
-      DESTINATION KEY (to_entity)
-        REFERENCES returns_entities (entity_id)
-      LABEL related_to
-      PROPERTIES (relationship_type, strength,
-        event_count, total_amount),
-    returns_case_entities KEY (case_entity_id)
-      SOURCE KEY (case_id)
-        REFERENCES returns_cases (case_id)
-      DESTINATION KEY (entity_id)
-        REFERENCES returns_entities (entity_id)
-      LABEL contains_entity
-      PROPERTIES (role, evidence_score)
-  );`} />
+          <SqlBlock code={`-- Inspect the relational sources behind the seeded property graph
+SELECT 'VERTEX' AS graph_object, 'returns_entities' AS source_table,
+       COUNT(*) AS row_count
+FROM returns_entities
+UNION ALL
+SELECT 'VERTEX', 'returns_cases', COUNT(*)
+FROM returns_cases
+UNION ALL
+SELECT 'EDGE', 'returns_relationships', COUNT(*)
+FROM returns_relationships
+UNION ALL
+SELECT 'EDGE', 'returns_case_entities', COUNT(*)
+FROM returns_case_entities;`} />
           <div className="grid grid-cols-2 gap-1.5 mt-2">
             <DiagramBox label="returns_entities" sub="Accounts, orders, receipts, stores" color="#C74634" />
             <DiagramBox label="returns_relationships" sub="Return relationship edges" color="#AA643B" />
@@ -971,7 +955,7 @@ CREATE PROPERTY GRAPH returns_relationship_graph
           </div>
           <SqlBlock code={`-- API connection context before graph queries
 BEGIN
-  sc_security_ctx.set_user_context(:username);
+  sc_security_ctx.set_user_context('fm_west_maria');
 END;
 /
 
@@ -979,7 +963,6 @@ SELECT entity_key, entity_type, review_score AS review_score
 FROM GRAPH_TABLE (
   returns_relationship_graph
   MATCH (seed IS entity)-[e IS related_to]->(dst IS entity)
-  WHERE seed.entity_key = :entity_key
   COLUMNS (
     dst.entity_key,
     dst.entity_type,

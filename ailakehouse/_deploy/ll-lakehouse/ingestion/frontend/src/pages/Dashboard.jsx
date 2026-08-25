@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import {
   ShoppingCart, TrendingUp, Eye, Truck, Bot, DollarSign,
   Activity, Flame, RefreshCw, Search, X, Package, MapPin,
-  MessageSquare, ChevronRight, Clock, Database, Image as ImageIcon,
+  MessageSquare, ChevronRight, Clock, Image as ImageIcon,
   Upload
 } from 'lucide-react';
 import {
@@ -574,7 +574,6 @@ export default function Dashboard() {
   const [velocityHours, setVelocityHours] = useState(168); // default 7d — wide enough to always show data
   const { data: velocity, loading: loadingVelocity } = useData(() => api.dashboard.velocity(velocityHours), [velocityHours]);
   const { data: revenue } = useData(() => api.dashboard.revenueByCategory());
-  const { data: imSegments } = useData(() => api.dashboard.inmemory());
 
   // Search / filter state
   const [searchInput, setSearchInput] = useState('');
@@ -687,19 +686,15 @@ export default function Dashboard() {
             <FeatureBadge label="Property Graph" color="purple" />
             <FeatureBadge label="Select AI" color="pink" />
             <FeatureBadge label="Vector Search" color="cyan" />
-            <FeatureBadge label="In-Memory Column Store" color="yellow" />
           </div>
           <SqlBlock code={`-- One query. Five workloads. Zero ETL.
 SELECT
-  COUNT(o.order_id)                     AS orders_total,
-  SUM(o.order_total)                    AS revenue_total,
-  COUNT(sp.post_id) FILTER (
-    WHERE sp.momentum_flag = 'viral')   AS critical_signals,
-  COUNT(aa.action_id)                   AS agent_actions,
-  COUNT(s.shipment_id) FILTER (
-    WHERE s.ship_status = 'in_transit') AS shipments_in_transit
-FROM   orders o, social_posts sp,
-       agent_actions aa, shipments s;`} />
+  (SELECT COUNT(*) FROM orders) AS orders_total,
+  (SELECT NVL(SUM(order_total), 0) FROM orders) AS revenue_total,
+  (SELECT COUNT(*) FROM social_posts WHERE momentum_flag = 'viral') AS critical_signals,
+  (SELECT COUNT(*) FROM agent_actions) AS agent_actions,
+  (SELECT COUNT(*) FROM shipments WHERE ship_status = 'in_transit') AS shipments_in_transit
+FROM dual;`} />
           <div className="rounded-lg p-3" style={{ background: 'rgba(76,130,92,0.08)', border: '1px solid rgba(76,130,92,0.28)' }}>
             <p className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: '#4C825C' }}>Challenge Solved</p>
             <p className="text-[var(--color-text)] leading-relaxed">
@@ -710,27 +705,63 @@ FROM   orders o, social_posts sp,
           </div>
           <SqlBlock code={`-- Watched products: one converged query
 WITH semantic AS (
-  SELECT product_id, VECTOR_DISTANCE(embedding, :query_vector, COSINE) AS distance
+  SELECT
+      product_id,
+      VECTOR_DISTANCE(embedding, 'wetsuit', COSINE) AS distance
   FROM product_embeddings
 ),
 demand AS (
-  SELECT product_id, region, predicted_demand, social_factor
+  SELECT
+      product_id,
+      region,
+      predicted_demand,
+      social_factor
   FROM demand_forecasts
 ),
+graph_matches AS (
+  SELECT
+      brand_id,
+      influencer_id
+  FROM GRAPH_TABLE (
+      influencer_network
+      MATCH (i IS INFLUENCER)-[e IS PROMOTES]->(b IS BRAND)
+      COLUMNS (
+          b.BRAND_ID AS brand_id,
+          i.INFLUENCER_ID AS influencer_id
+      )
+  )
+),
 graph AS (
-  SELECT brand_id, COUNT(*) AS network_reach
-  FROM GRAPH_TABLE(influencer_network MATCH ...)
+  SELECT
+      brand_id,
+      COUNT(*) AS network_reach
+  FROM graph_matches
+  GROUP BY brand_id
 )
-SELECT p.product_name, d.region, fc.center_name,
-       SDO_GEOM.SDO_DISTANCE(dr.boundary, fc.location, 0.005, 'unit=KM') AS distance_km,
-       g.network_reach, s.distance
+SELECT
+    p.product_name,
+    d.region,
+    fc.center_name,
+    SDO_GEOM.SDO_DISTANCE(
+        dr.boundary,
+        fc.location,
+        0.005,
+        'unit=KM'
+    ) AS distance_km,
+    g.network_reach
 FROM products p
-JOIN demand d ON d.product_id = p.product_id
-JOIN inventory i ON i.product_id = p.product_id
-JOIN fulfillment_centers fc ON fc.center_id = i.center_id
-JOIN demand_regions dr ON dr.region_name LIKE d.region || ' %'
-LEFT JOIN graph g ON g.brand_id = p.brand_id
-LEFT JOIN semantic s ON s.product_id = p.product_id;`} />
+JOIN demand d
+    ON d.product_id = p.product_id
+JOIN inventory i
+    ON i.product_id = p.product_id
+JOIN fulfillment_centers fc
+    ON fc.center_id = i.center_id
+JOIN demand_regions dr
+    ON dr.region_name LIKE d.region || ' %'
+LEFT JOIN graph g
+    ON g.brand_id = p.brand_id
+LEFT JOIN semantic s
+    ON s.product_id = p.product_id;`} />
           <div>
             <p className="text-[10px] font-semibold text-[var(--color-text-dim)] uppercase tracking-wider mb-2">Converged Architecture</p>
             <div className="grid grid-cols-3 gap-1.5">
@@ -741,7 +772,6 @@ LEFT JOIN semantic s ON s.product_id = p.product_id;`} />
               <DiagramBox label="Select AI" sub="Agents & LLMs" color="#796087" />
               <DiagramBox label="Graph" sub="PGQL / APEX" color="#4F7D7B" />
               <DiagramBox label="Vector" sub="VECTOR_EMBEDDING" color="#A36472" wide />
-              <DiagramBox label="In-Memory" sub="Column Store" color="#AA643B" />
             </div>
             <div className="rounded-lg p-2 text-center mt-2" style={{ background: 'rgba(199,70,52,0.08)', border: '1px dashed rgba(199,70,52,0.3)' }}>
               <p className="text-[9px] text-[var(--color-text-dim)]">All workloads. One transaction. One connection pool.</p>
@@ -749,53 +779,6 @@ LEFT JOIN semantic s ON s.product_id = p.product_id;`} />
             </div>
           </div>
 
-          {/* Live In-Memory Column Store Stats */}
-          {imSegments?.length > 0 && (
-            <div>
-              <div className="flex items-center gap-1.5 mb-2">
-                <Database size={12} className="tone-sienna" />
-                <p className="text-xs font-semibold text-[var(--color-text-dim)] uppercase tracking-wider">In-Memory Column Store — Live</p>
-              </div>
-              <div className="rounded-lg overflow-hidden" style={{ border: '1px solid rgba(170,100,59,0.3)' }}>
-                <table className="w-full text-[10px]">
-                  <thead>
-                    <tr style={{ background: 'rgba(170,100,59,0.12)' }}>
-                      <th className="text-left px-2 py-1.5 text-[var(--color-text)] font-semibold">Table</th>
-                      <th className="text-right px-2 py-1.5 text-[var(--color-text)] font-semibold">Rows</th>
-                      <th className="text-right px-2 py-1.5 text-[var(--color-text)] font-semibold">Disk</th>
-                      <th className="text-right px-2 py-1.5 text-[var(--color-text)] font-semibold">IM Size</th>
-                      <th className="text-right px-2 py-1.5 text-[var(--color-text)] font-semibold">Saved</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {imSegments.map((seg, i) => (
-                      <tr key={seg.TABLE_NAME} style={{ background: i % 2 === 0 ? 'rgba(170,100,59,0.04)' : 'transparent' }}>
-                        <td className="px-2 py-1 font-mono text-[var(--color-text)]">{seg.TABLE_NAME}</td>
-                        <td className="px-2 py-1 text-right text-[var(--color-text-dim)]">{Number(seg.ROW_COUNT || 0).toLocaleString()}</td>
-                        <td className="px-2 py-1 text-right text-[var(--color-text-dim)]">{(seg.DISK_BYTES / 1048576).toFixed(1)} MB</td>
-                        <td className="px-2 py-1 text-right text-[var(--color-text)] font-medium">{(seg.IM_BYTES / 1048576).toFixed(1)} MB</td>
-                        <td className="px-2 py-1 text-right font-medium text-[var(--color-text)]">
-                          {seg.COMPRESSION_PCT}%
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-                <div className="px-2 py-1.5 flex items-center justify-between" style={{ background: 'rgba(170,100,59,0.08)', borderTop: '1px solid rgba(170,100,59,0.2)' }}>
-                  <span className="text-[9px] text-[var(--color-text-dim)]">
-                    Compression: <span className="text-[var(--color-text)] font-mono">{imSegments[0]?.COMPRESSION || 'FOR QUERY HIGH'}</span>
-                  </span>
-                  <span className="text-[9px] font-mono text-[var(--color-text)]">
-                    {imSegments.every(s => s.STATUS === 'COMPLETED') ? '● POPULATED' : '○ POPULATING'}
-                  </span>
-                </div>
-              </div>
-              <p className="text-[9px] text-[var(--color-text-dim)] mt-1.5 leading-relaxed">
-                Oracle In-Memory Column Store keeps hot tables in a compressed columnar format for analytical scans —
-                no ETL to a separate analytics database. Queries against these tables automatically use IMCS when beneficial.
-              </p>
-            </div>
-          )}
         </div>
       </RegisterOraclePanel>
 

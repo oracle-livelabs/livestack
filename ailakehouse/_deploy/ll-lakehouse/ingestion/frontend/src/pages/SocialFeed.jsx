@@ -433,24 +433,34 @@ export default function SocialFeed() {
             <FeatureBadge label="signal_embeddings" color="orange" />
           </div>
           <SqlBlock code={`-- Real-time vector semantic search for sporting goods products
--- Embeds user query at runtime, then finds nearest
--- product vectors via ANN index (cosine distance)
-SELECT p.product_id, p.product_name, p.category,
-       p.unit_price, b.brand_name,
-       ROUND(1 - VECTOR_DISTANCE(
-         pe.embedding,
-         VECTOR_EMBEDDING(ALL_MINILM_L12_V2
-                          USING :query AS DATA),
-         COSINE), 4)             AS similarity_score
-FROM   product_embeddings pe
-JOIN   products p ON pe.product_id = p.product_id
-JOIN   brands   b ON p.brand_id   = b.brand_id
-ORDER  BY VECTOR_DISTANCE(
-  pe.embedding,
-  VECTOR_EMBEDDING(ALL_MINILM_L12_V2
-                   USING :query AS DATA),
-  COSINE)
-FETCH APPROXIMATE FIRST 10 ROWS ONLY;`} />
+-- Embeds the demand-pattern query, then ranks the nearest product vectors
+WITH ranked_products AS (
+  SELECT p.product_id,
+         p.product_name,
+         p.category,
+         p.unit_price,
+         b.brand_name,
+         VECTOR_DISTANCE(
+           pe.embedding,
+           VECTOR_EMBEDDING(
+             ALL_MINILM_L12_V2
+             USING 'trail running shoe demand' AS DATA
+           ),
+           COSINE
+         ) AS distance
+  FROM product_embeddings pe
+  JOIN products p ON pe.product_id = p.product_id
+  JOIN brands b ON p.brand_id = b.brand_id
+)
+SELECT product_id,
+       product_name,
+       category,
+       unit_price,
+       brand_name,
+       ROUND(1 - distance, 4) AS similarity_score
+FROM ranked_products
+ORDER BY distance
+FETCH FIRST 10 ROWS ONLY;`} />
           <div>
             <p className="text-[10px] font-semibold text-[var(--color-text-dim)] uppercase tracking-wider mb-2">Vector Search Pipeline</p>
             <div className="space-y-1.5">

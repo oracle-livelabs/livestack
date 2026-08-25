@@ -4,7 +4,7 @@ import 'leaflet/dist/leaflet.css';
 import { api } from '../utils/api';
 import { useData } from '../hooks/useData';
 import { timeAgo } from '../utils/format';
-import { FeatureBadge, SqlBlock, DiagramBox } from '../components/OracleInfoPanel';
+import { FeatureBadge, DiagramBox } from '../components/OracleInfoPanel';
 import { RegisterOraclePanel } from '../context/OraclePanelContext';
 import { JetButton, JetInputText, JetProgressCircle, JetSelectSingle } from '../components/JetControls';
 import { SceneStoryPanel } from '../components/StateLocalGovernmentStory';
@@ -530,21 +530,6 @@ export default function AgentConsole() {
             <FeatureBadge label="Vector RAG Retrieval" color="cyan" />
             <FeatureBadge label="In-DB ML Scoring" color="green" />
           </div>
-          <SqlBlock code={`-- Agent runtime: app orchestration + Ollama + Oracle AI Database 26ai
--- The app resolves intent -> routes to a specialist team -> executes SQL / PL/SQL in Oracle
--- Ollama (llama3.2) provides reasoning; Oracle remains the data and execution layer
-
--- Example flow:
--- 1. Classify the request as Resident Signal Team
--- 2. Call detect_service_sla_risk(p_hours=>24)
--- 3. Join service capacity and access data in Oracle
--- 4. Return recommendations and write actions to audit tables
-
--- Agent decisions written back atomically:
-INSERT INTO agent_actions (agent_name, action_type, entity_type,
-  entity_id, decision_payload, confidence, execution_status)
-VALUES ('resident_signal_agent','sla_followup','public_service',
-  :service_id, :json_payload, 0.92, 'proposed');`} />
           {/* Team / Agent / Tools grid */}
           <div>
             <p className="text-[10px] font-semibold text-[var(--color-text-dim)] uppercase tracking-wider mb-2">Agent Teams &amp; Tools</p>

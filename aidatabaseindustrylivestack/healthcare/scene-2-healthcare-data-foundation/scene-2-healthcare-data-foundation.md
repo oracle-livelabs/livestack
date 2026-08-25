@@ -50,7 +50,7 @@ The carousel explains the shared data model in business terms: provider networks
 
 Use this page as the bridge into the operating story. The same governed foundation will support the command center, signal search, care pathway graph, logistics map, service requests, analytics, natural-language questions, and AI agent workflows.
 
-    ![Downstream healthcare scenes and loaded data domains highlighted from the Data Foundation page](images/foundation-downstream-handoff.png)
+![Downstream healthcare scenes and loaded data domains highlighted from the Data Foundation page](images/foundation-downstream-handoff.png)
 
 The business value is that teams can make the decision from connected, governed data. Oracle AI Database provides the shared foundation that keeps operational data, analytics, and AI workflows aligned.
 

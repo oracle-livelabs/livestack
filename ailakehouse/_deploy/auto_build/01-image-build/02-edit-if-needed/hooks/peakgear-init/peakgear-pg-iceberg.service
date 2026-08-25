@@ -1,0 +1,16 @@
+[Unit]
+Description=Configure Peak Gear Data Transforms connections
+After=network-online.target oci-image-pilot.service
+Wants=network-online.target oci-image-pilot.service
+StartLimitIntervalSec=0
+
+[Service]
+Type=oneshot
+TimeoutStartSec=1800
+ExecStart=/bin/bash /home/opc/init/create-pg-iceberg-connection.sh
+RemainAfterExit=yes
+Restart=on-failure
+RestartSec=60
+
+[Install]
+WantedBy=default.target

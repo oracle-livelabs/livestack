@@ -469,27 +469,53 @@ export default function Webshop() {
 -- 3. Compare visual intent with webshop_product_image_embeddings
 -- 4. Join webshop_product_attributes for color_family and product_type
 -- 5. Re-rank with semantic score + visual score + color/type boosts
-SELECT p.product_name,
+WITH catalog_matches AS (
+  SELECT p.product_id,
+         p.product_name,
+         ROUND(1 - VECTOR_DISTANCE(
+           pe.embedding,
+           ca.embedding,
+           COSINE
+         ), 4) AS catalog_similarity,
+         ROW_NUMBER() OVER (
+           ORDER BY VECTOR_DISTANCE(pe.embedding, ca.embedding, COSINE)
+         ) AS catalog_rank
+  FROM products p
+  JOIN product_embeddings pe ON pe.product_id = p.product_id
+  CROSS JOIN (
+    SELECT embedding
+    FROM product_embeddings
+    ORDER BY product_id
+    FETCH FIRST 1 ROW ONLY
+  ) ca
+  WHERE p.is_active = 1
+), visual_matches AS (
+  SELECT w.product_id,
+         w.image_filename,
+         ROUND(1 - VECTOR_DISTANCE(
+           w.embedding,
+           va.embedding,
+           COSINE
+         ), 4) AS visual_similarity
+  FROM webshop_product_image_embeddings w
+  CROSS JOIN (
+    SELECT embedding
+    FROM webshop_product_image_embeddings
+    ORDER BY image_filename
+    FETCH FIRST 1 ROW ONLY
+  ) va
+)
+SELECT c.product_name,
        a.color_family,
        a.product_type,
-       w.image_filename,
-       ROUND(1 - VECTOR_DISTANCE(
-         pe.embedding,
-         TO_VECTOR(:catalog_query_vector),
-         COSINE
-       ), 4) AS catalog_similarity,
-       ROUND(1 - VECTOR_DISTANCE(
-         w.embedding,
-         TO_VECTOR(:visual_query_vector),
-         COSINE
-       ), 4) AS visual_similarity
-FROM products p
-JOIN product_embeddings pe ON pe.product_id = p.product_id
-LEFT JOIN webshop_product_image_embeddings w ON w.product_id = p.product_id
-LEFT JOIN webshop_product_attributes a ON a.product_id = p.product_id
-WHERE p.is_active = 1
-ORDER BY catalog_similarity + visual_similarity DESC
-FETCH APPROXIMATE FIRST :candidate_count ROWS ONLY;`} />
+       v.image_filename,
+       c.catalog_similarity,
+       v.visual_similarity
+FROM catalog_matches c
+LEFT JOIN webshop_product_attributes a ON a.product_id = c.product_id
+LEFT JOIN visual_matches v ON v.product_id = c.product_id
+WHERE c.catalog_rank <= 10
+ORDER BY c.catalog_similarity + NVL(v.visual_similarity, 0) DESC;`} />
         </div>
       </RegisterOraclePanel>
 

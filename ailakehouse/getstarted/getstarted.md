@@ -74,5 +74,6 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-* **Author** - LiveLabs Team August 2026
-* **Last Updated By/Date** - LiveLabs Team August 2026
+* **Author** - Kevin Lazarz August 2026
+* **Contributor** - Eugenio Galiano
+* **Last Updated By/Date** - Kevin Lazarz  August 2026

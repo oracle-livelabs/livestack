@@ -878,11 +878,12 @@ export default function AIDataLakehouse({ liveStackReadiness, liveStackStatus })
             <FeatureBadge label="DB Actions" color="orange" />
           </div>
           <SqlBlock
-            code={`-- DB Actions URL derivation
-service_name = value from the ADB connect descriptor
-service_host = strip _medium, _high, _low, or _tpurgent
-schema_path  = admin
-url          = https://<service_host>/ords/<schema_path>/sign-in/?r=_sdw`}
+            code={`-- Inspect the current ADB session used by DB Actions
+SELECT USER AS connected_user,
+       SYS_CONTEXT('USERENV', 'SERVICE_NAME') AS service_name,
+       SYS_CONTEXT('USERENV', 'CURRENT_SCHEMA') AS current_schema,
+       SYS_CONTEXT('USERENV', 'DB_NAME') AS database_name
+FROM dual;`}
           />
         </div>
       </RegisterOraclePanel>

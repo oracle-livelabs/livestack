@@ -2774,11 +2774,23 @@ textarea {
 }
 
 .product-catalog-hero {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 1.25rem;
   align-items: end;
   padding: 1.5rem;
+}
+
+.product-catalog-hero > .streaming-importance-button {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 1;
+}
+
+.product-catalog-hero > div:first-child {
+  padding-right: 13rem;
 }
 
 .product-catalog-hero h2 {
@@ -4227,6 +4239,75 @@ textarea {
 .askdata-loading-progress {
   width: 1rem;
   height: 1rem;
+}
+
+.askdata-markdown {
+  color: var(--color-text);
+}
+
+.askdata-markdown > :first-child {
+  margin-top: 0;
+}
+
+.askdata-markdown > :last-child {
+  margin-bottom: 0;
+}
+
+.askdata-markdown p,
+.askdata-markdown ul,
+.askdata-markdown ol,
+.askdata-markdown blockquote,
+.askdata-markdown pre {
+  margin: 0.5rem 0;
+}
+
+.askdata-markdown ul,
+.askdata-markdown ol {
+  padding-left: 1.35rem;
+}
+
+.askdata-markdown ul {
+  list-style: disc;
+}
+
+.askdata-markdown ol {
+  list-style: decimal;
+}
+
+.askdata-markdown li {
+  padding-left: 0.15rem;
+}
+
+.askdata-markdown strong {
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+.askdata-markdown code {
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.25rem;
+  background: rgba(121, 96, 135, 0.1);
+  color: var(--color-text);
+  font-size: 0.9em;
+}
+
+.askdata-markdown pre {
+  overflow-x: auto;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.45rem;
+  background: var(--color-surface);
+}
+
+.askdata-markdown pre code {
+  padding: 0;
+  background: transparent;
+}
+
+.askdata-markdown a {
+  color: var(--color-accent, #437c94);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
 }
 
 .agent-console-page-glyph {

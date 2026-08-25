@@ -645,6 +645,9 @@ WHENEVER SQLERROR EXIT SQL.SQLCODE
 PROMPT Loading PeakGear demo app data...
 @"${INGESTION_DIR}/db/data/load_all_data.sql"
 
+PROMPT Creating Oracle Machine Learning training views and models...
+@"${INGESTION_DIR}/db/schema/12_oml_models.sql"
+
 PROMPT Loading returns network and fulfillment zone data...
 WHENEVER SQLERROR CONTINUE
 @"${WORK_DIR}/10_fraud_graph.sql"
@@ -694,6 +697,23 @@ BEGIN
   check_table('RETURNS_RELATIONSHIPS');
   check_table('RETURNS_CASES');
   check_table('RETURNS_CASE_ENTITIES');
+
+  BEGIN
+    EXECUTE IMMEDIATE 'SELECT COUNT(*) FROM OML_DEMAND_TRAINING_V' INTO v_count;
+    IF v_count = 0 THEN
+      v_missing := v_missing || 'OML_DEMAND_TRAINING_V is empty; ';
+    END IF;
+  EXCEPTION
+    WHEN OTHERS THEN
+      v_missing := v_missing || 'OML_DEMAND_TRAINING_V missing or unreadable: ' || SQLERRM || '; ';
+  END;
+
+  SELECT COUNT(*) INTO v_count
+  FROM user_mining_models
+  WHERE model_name = 'DEMAND_SURGE_MODEL';
+  IF v_count = 0 THEN
+    v_missing := v_missing || 'DEMAND_SURGE_MODEL is missing; ';
+  END IF;
 
   IF v_missing IS NOT NULL THEN
     RAISE_APPLICATION_ERROR(-20000, 'ADB demo data verification failed: ' || SUBSTR(v_missing, 1, 3000));

@@ -1,0 +1,28 @@
+services:
+  runtime-dashboard:
+    image: localhost/oci-runtime-dashboard:1.0
+    container_name: oci-image-pilot-dashboard
+    hostname: runtime-dashboard
+    user: "0:0"
+    env_file:
+      - ../runtime/dashboard.env
+    ports:
+      - "32180:32180"
+    volumes:
+      - ../runtime/dashboard-services.json:/run/dashboard/services.json:ro,Z
+    healthcheck:
+      test: ["CMD", "python3", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:32180/health', timeout=5)"]
+      interval: 15s
+      timeout: 5s
+      retries: 20
+      start_period: 10s
+    read_only: true
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=16m
+    networks:
+      - default
+    restart: unless-stopped

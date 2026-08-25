@@ -788,6 +788,23 @@ function generatePatternSql(question) {
   const dayWindow = dayMatch ? Math.min(parseInt(dayMatch[1], 10), 365) : null;
   const openStatusPredicate = `LOWER(request_status) NOT IN ('completed', 'routed', 'reopened', 'cancelled')`;
 
+  if (/break(?: this)? down.*program.*service categor|program.*service categor.*break|breakdown by program and service categor/.test(qLower)) {
+    const inspectionFilter = /inspection|code enforcement/.test(qLower)
+      ? `AND (LOWER(service_category) LIKE '%inspection%' OR LOWER(service_category) LIKE '%code enforcement%')`
+      : '';
+    return `SELECT program_name,
+                   service_category,
+                   resident_state AS service_area,
+                   COUNT(DISTINCT service_request_id) AS delayed_requests,
+                   ROUND(AVG(urgency_score), 2) AS avg_priority_score
+            FROM sled_operations_dashboard_v
+            WHERE ${openStatusPredicate}
+              ${inspectionFilter}
+            GROUP BY program_name, service_category, resident_state
+            ORDER BY delayed_requests DESC, avg_priority_score DESC
+            FETCH FIRST ${topN} ROWS ONLY`;
+  }
+
   if (/(pending|open|still).*service requests?.*signal-driven|service requests?.*(pending|open|still).*signal-driven|signal-driven.*service requests?.*(pending|open|still)|service requests?.*resident_signal_id/.test(qLower)) {
     return `SELECT service_request_id,
                    request_status,
@@ -830,6 +847,83 @@ function generatePatternSql(question) {
             WHERE LOWER(request_status) NOT IN ('completed', 'routed', 'reopened', 'cancelled')
             GROUP BY program_name, service_category
             ORDER BY oldest_request_created_at ASC, open_backlog DESC
+            FETCH FIRST ${topN} ROWS ONLY`;
+  }
+
+  if (/highest demand|highest current request demand|seeing the highest demand/.test(qLower)) {
+    return `SELECT service_name,
+                   program_name,
+                   service_category,
+                   COUNT(DISTINCT service_request_id) AS demand_count,
+                   ROUND(AVG(urgency_score), 2) AS avg_urgency_score
+            FROM sled_operations_dashboard_v
+            GROUP BY service_name, program_name, service_category
+            ORDER BY demand_count DESC, avg_urgency_score DESC
+            FETCH FIRST ${topN} ROWS ONLY`;
+  }
+
+  if (/low capacity|below minimum capacity|available capacity below|check capacity for|capacity for/.test(qLower)) {
+    const serviceMatch = q.match(/(?:check\s+)?capacity\s+for\s+(.+?)\s*\??$/i);
+    const serviceName = serviceMatch ? serviceMatch[1].trim().replace(/'/g, "''") : null;
+    const serviceFilter = serviceName ? `AND UPPER(s.service_name) LIKE '%' || UPPER('${serviceName}') || '%'` : '';
+    const capacityFilter = serviceName ? '' : 'AND c.available_capacity < c.minimum_capacity_threshold';
+    return `SELECT s.service_name,
+                   s.program_name,
+                   c.service_access_center_id,
+                   c.available_capacity,
+                   c.minimum_capacity_threshold,
+                   (c.minimum_capacity_threshold - c.available_capacity) AS capacity_gap
+            FROM sled_service_capacity_v c
+            JOIN sled_public_services_v s ON s.service_id = c.service_id
+            WHERE 1 = 1
+              ${serviceFilter}
+              ${capacityFilter}
+            ORDER BY capacity_gap DESC, c.available_capacity ASC
+            FETCH FIRST ${topN} ROWS ONLY`;
+  }
+
+  if (/percentage.*resident.?signal|resident.?signal.*percentage|signal-driven.*percentage|what percentage.*service requests/.test(qLower)) {
+    return `SELECT COUNT(*) AS total_service_requests,
+                   SUM(CASE WHEN resident_signal_id IS NOT NULL THEN 1 ELSE 0 END) AS signal_linked_requests,
+                   ROUND(100 * SUM(CASE WHEN resident_signal_id IS NOT NULL THEN 1 ELSE 0 END) / NULLIF(COUNT(*), 0), 1) AS signal_linked_percentage
+            FROM sled_service_requests_v`;
+  }
+
+  if (/critical resident service signals|critical.*signals.*last 24 hours|resident service signals.*24 hours/.test(qLower)) {
+    return `SELECT resident_signal_id,
+                   source_channel,
+                   urgency_score,
+                   urgency_band,
+                   reach_count,
+                   signal_text,
+                   signal_time
+            FROM sled_resident_signals_v
+            WHERE CAST(signal_time AS DATE) >= SYSDATE - 1
+              AND (urgency_band = 'critical' OR urgency_score >= 75)
+            ORDER BY urgency_score DESC, signal_time DESC
+            FETCH FIRST ${topN} ROWS ONLY`;
+  }
+
+  if (/nearest.*service (?:site|access center).*same-day|same-day.*service (?:site|access center)|service counter slots.*resident/.test(qLower)) {
+    const cityMatch = q.match(/\b(?:in|near)\s+(?:a resident in\s+)?([A-Z][A-Za-z]+(?:\s+[A-Z][A-Za-z]+)*)/);
+    const city = cityMatch ? cityMatch[1].trim().replace(/\?+$/, '') : null;
+    const cityLiteral = city ? city.replace(/'/g, "''") : null;
+    const residentFilter = cityLiteral ? `WHERE UPPER(r.city) = UPPER('${cityLiteral}')` : 'WHERE 1 = 1';
+    return `SELECT c.service_access_center_name,
+                   c.city,
+                   c.state_province,
+                   s.service_name,
+                   cap.available_capacity,
+                   cap.minimum_capacity_threshold,
+                   ROUND(69.0 * SQRT(POWER(c.latitude - r.latitude, 2) + POWER((c.longitude - r.longitude) * COS(r.latitude * ACOS(-1) / 180), 2)), 2) AS distance_miles
+            FROM sled_residents_v r
+            CROSS JOIN sled_service_access_centers_v c
+            JOIN sled_service_capacity_v cap ON cap.service_access_center_id = c.service_access_center_id
+            JOIN sled_public_services_v s ON s.service_id = cap.service_id
+            ${residentFilter}
+              AND c.is_active = 1
+              AND cap.available_capacity > cap.reserved_capacity
+            ORDER BY distance_miles ASC, cap.available_capacity DESC
             FETCH FIRST ${topN} ROWS ONLY`;
   }
 
@@ -1796,7 +1890,7 @@ async function answerQuestion(question, { mode = 'narrate', demoUser = null, pro
   const contextualQuestion = conversationContext.length
     ? `${question}\n\nPrior chat context:\n${conversationContext.slice(-6).map((item) => `${item.role || 'user'}: ${item.content || item.text || ''}`).join('\n')}`
     : question;
-  const result = await runQuestionQuery(question, {
+  const result = await runQuestionQuery(contextualQuestion, {
     mode,
     demoUser,
     profile: resolvedProfile,

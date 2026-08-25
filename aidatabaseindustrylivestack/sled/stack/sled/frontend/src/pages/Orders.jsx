@@ -252,7 +252,7 @@ function OrderDualityPanel({ orderId, onClose }) {
             <div className="p-4 space-y-3">
               {loadingDuality ? (
                 <div className="flex items-center gap-2 text-sm text-[var(--color-text-dim)] py-4 justify-center">
-                  <Loader2 size={14} className="animate-spin" /> Querying SERVICE_REQUESTS_DV duality view…
+                  <Loader2 size={14} className="animate-spin" /> Querying ORDERS_DV duality view…
                 </div>
               ) : dualityError ? (
                 <p className="text-sm tone-red text-center py-4">{dualityError}</p>
@@ -261,7 +261,7 @@ function OrderDualityPanel({ orderId, onClose }) {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <span className="text-[10px] px-2 py-0.5 rounded border font-mono" style={{ background: 'rgba(170,100,59,0.1)', borderColor: 'rgba(170,100,59,0.3)', color: 'var(--color-text)' }}>
-                        SELECT DATA FROM service_requests_dv
+                        SELECT DATA FROM orders_dv
                       </span>
                       <span className="text-[10px] text-[var(--color-text-dim)]">
                         Source: <span className="text-[var(--color-text)] font-mono">{duality.source}</span>
@@ -278,7 +278,7 @@ function OrderDualityPanel({ orderId, onClose }) {
                   <div className="rounded-lg p-3 text-xs leading-relaxed" style={{ background: 'rgba(170,100,59,0.06)', border: '1px dashed rgba(170,100,59,0.3)' }}>
                     <span className="text-[var(--color-text)] font-semibold">JSON Relational Duality View</span>
                     <span className="text-[var(--color-text-dim)]"> - This is the exact same service request data from the relational tab, but accessed through
-                    Oracle's <span className="text-[var(--color-text)] font-mono">SERVICE_REQUESTS_DV</span> duality view. One table stores normalized rows; the duality view exposes them as a
+                    Oracle's <span className="text-[var(--color-text)] font-mono">ORDERS_DV</span> duality view. The normalized tables store the rows; the duality view exposes them as a
                     single JSON document with nested items. Read and write through either interface - same ACID transaction.</span>
                   </div>
 
@@ -555,92 +555,59 @@ export default function Orders() {
         <div className="space-y-4">
           <div>
             <p className="text-xs font-semibold text-[var(--color-text-dim)] uppercase tracking-wider mb-2">
-              JSON Relational Duality Views - Oracle 23ai+
+              JSON Relational Duality Views
             </p>
             <p className="text-sm text-[var(--color-text)] leading-relaxed">
-              Service requests are stored in a classic <span className="tone-ocean font-mono">relational schema</span> - ACID transactions, foreign keys, referential integrity.
-              But Oracle's <span className="font-mono text-[var(--color-text)]">JSON Duality Views</span> let the <em>exact same data</em> be read and updated as JSON documents,
-              without ETL or duplication. Click any service request row and toggle between{' '}
+              The database contains two actual <span className="font-mono text-[var(--color-text)]">JSON Relational Duality Views</span>:
+              <span className="tone-ocean font-mono"> ORDERS_DV</span> for service requests and
+              <span className="tone-ocean font-mono"> PRODUCTS_INVENTORY_DV</span> for the populated public-service catalog.
+              They expose the <em>same relational data</em> as JSON documents without ETL or duplication. Click any service request row and toggle between{' '}
               <span className="font-semibold text-[var(--color-text)]">Relational</span> and <span className="font-semibold text-[var(--color-text)]">JSON Duality</span> to see
               the same data rendered two ways - <em>same transaction, zero sync lag</em>.
             </p>
           </div>
           <div className="flex flex-wrap gap-1.5">
             <FeatureBadge label="JSON Relational Duality Views" color="orange" />
-            <FeatureBadge label="CREATE JSON RELATIONAL DUALITY VIEW" color="yellow" />
-            <FeatureBadge label="WITH UPDATE (read-write)" color="green" />
-            <FeatureBadge label="Nested JSON Projection" color="cyan" />
+            <FeatureBadge label="ORDERS_DV" color="yellow" />
+            <FeatureBadge label="PRODUCTS_INVENTORY_DV" color="green" />
+            <FeatureBadge label="WITH UPDATE (read-write)" color="cyan" />
             <FeatureBadge label="Same ACID Transaction" color="blue" />
             <FeatureBadge label="Zero ETL / Zero Sync" color="purple" />
           </div>
 
-          {/* SERVICE_REQUESTS_DV definition */}
+          {/* PRODUCTS_INVENTORY_DV examples */}
           <div>
             <p className="text-[10px] font-semibold text-[var(--color-text)] uppercase tracking-wider mb-2">
-              SERVICE_REQUESTS_DV - Service Requests + Line Items as JSON
+              PRODUCTS_INVENTORY_DV - Populated Duality View Examples
             </p>
             <p className="text-xs text-[var(--color-text-dim)] mb-2 leading-relaxed">
-              REST-style JSON access to service requests with nested line items. Read-write: inserts through the view update both the service request header and line detail atomically.
+              This is the populated Duality View in the demo dataset. It contains 188 public-service documents, so these examples return rows in the current environment.
             </p>
-            <SqlBlock code={`CREATE JSON RELATIONAL DUALITY VIEW service_requests_dv AS
-SELECT JSON {
-  '_id': r.service_request_id,
-  'constituentId': r.constituent_id,
-  'status': r.service_request_status,
-  'serviceValue': r.service_value,
-  'items': [
-    SELECT JSON {
-      'lineId': l.line_id,
-      'serviceId': l.service_id,
-      'quantity': l.quantity,
-      'estimatedServiceValue': l.estimated_service_value }
-    FROM service_request_lines l WITH UPDATE
-    WHERE l.service_request_id = r.service_request_id ] }
-FROM service_requests r WITH UPDATE;`} />
-          </div>
+            <SqlBlock code={`-- Count JSON documents in the actual Duality View
+SELECT COUNT(*) AS duality_documents
+FROM products_inventory_dv;
 
-          {/* PUBLIC_SERVICES_CAPACITY_DV definition */}
-          <div>
-            <p className="text-[10px] font-semibold text-[var(--color-text)] uppercase tracking-wider mb-2">
-              PUBLIC_SERVICES_CAPACITY_DV - Public Services + Capacity as JSON
-            </p>
-            <p className="text-xs text-[var(--color-text-dim)] mb-2 leading-relaxed">
-              Public services with nested capacity across all service access centers. One document, two tables.
-            </p>
-            <SqlBlock code={`CREATE JSON RELATIONAL DUALITY VIEW public_services_capacity_dv AS
-SELECT JSON {
-  '_id': p.service_id,
-  'serviceCode': p.service_code,
-  'serviceName': p.service_name,
-  'category': p.category,
-  'estimatedServiceValue': p.estimated_service_value,
-  'capacity': [
-    SELECT JSON {
-      'centerId': c.center_id,
-      'availableCapacity': c.available_capacity,
-      'reservedCapacity': c.reserved_capacity }
-    FROM service_capacity c WITH UPDATE
-    WHERE c.service_id = p.service_id ] }
-FROM public_services p WITH UPDATE;`} />
+-- Read fields from one JSON document
+SELECT JSON_VALUE(DATA, '$._id' RETURNING NUMBER) AS service_id,
+       JSON_VALUE(DATA, '$.productName' RETURNING VARCHAR2(200)) AS service_name,
+       JSON_VALUE(DATA, '$.category' RETURNING VARCHAR2(100)) AS category
+FROM products_inventory_dv
+ORDER BY JSON_VALUE(DATA, '$._id' RETURNING NUMBER)
+FETCH FIRST 5 ROWS ONLY;`} />
           </div>
 
           {/* Query example */}
           <div>
             <p className="text-[10px] font-semibold text-[var(--color-text-dim)] uppercase tracking-wider mb-2">
-              How to Query a Duality View
+              How to Query a Real Duality View
             </p>
-            <SqlBlock code={`-- Relational: governed service-request projection
-SELECT r.service_request_id, r.request_status,
-       l.service_id, l.requested_quantity, l.line_service_value
-FROM   sled_service_requests_v r
-JOIN   sled_service_request_lines_v l
-       ON l.service_request_id = r.service_request_id
-WHERE  r.service_request_id = :id;
-
--- Duality: same data as a single JSON document
-SELECT DATA FROM service_requests_dv
-WHERE  JSON_VALUE(DATA, '$._id' RETURNING NUMBER) = :id;
--- Public API: {"_id":1, "status":"In Progress", "items":[...]}`} />
+            <SqlBlock code={`-- Aggregate JSON fields directly from the Duality View
+SELECT JSON_VALUE(DATA, '$.category' RETURNING VARCHAR2(100)) AS category,
+       COUNT(*) AS service_documents
+FROM products_inventory_dv
+GROUP BY JSON_VALUE(DATA, '$.category' RETURNING VARCHAR2(100))
+ORDER BY service_documents DESC
+FETCH FIRST 5 ROWS ONLY;`} />
           </div>
 
           {/* Visual diagram */}
@@ -652,7 +619,7 @@ WHERE  JSON_VALUE(DATA, '$._id' RETURNING NUMBER) = :id;
                 <div className="flex-1 rounded p-2 text-[9px] text-center" style={{ background: '#437C9415', border: '1px solid #437C9440', color: 'var(--color-text)' }}>
                   <div className="font-bold mb-1">SQL View</div>
                   <div>SELECT *</div>
-                  <div>FROM service requests</div>
+                  <div>FROM orders</div>
                   <div className="text-[8px] mt-1 text-[var(--color-text)]">row-by-row</div>
                 </div>
                 <div className="flex flex-col justify-center tone-sienna text-lg">⇔</div>
@@ -671,22 +638,23 @@ WHERE  JSON_VALUE(DATA, '$._id' RETURNING NUMBER) = :id;
           <div className="rounded-lg p-3 space-y-2" style={{ background: 'var(--color-surface-muted)', border: '1px solid var(--color-border)' }}>
             <div className="text-[9px] text-center text-[var(--color-text)] font-bold mb-1">Duality View Architecture</div>
             <DiagramBox label="Service requests + lines" sub="Normalized relational tables - ACID, FK constraints, indexes" color="#437C94" />
-            <div className="text-center text-[10px] text-[var(--color-text)]">↕ CREATE JSON RELATIONAL DUALITY VIEW</div>
-            <DiagramBox label="SERVICE_REQUESTS_DV" sub="JSON document: {_id, status, items: [...]} - WITH UPDATE" color="#AA643B" />
+            <div className="text-center text-[10px] text-[var(--color-text)]">↕ ORDERS_DV · WITH UPDATE</div>
+            <DiagramBox label="ORDERS_DV" sub="Actual service-request JSON document: {_id, status, items: [...]}" color="#AA643B" />
             <div className="text-center text-[10px] text-[var(--color-text)]">↕</div>
-            <DiagramBox label="Public services + capacity" sub="Public service catalog + service access center capacity" color="#437C94" />
-            <div className="text-center text-[10px] text-[var(--color-text)]">↕ CREATE JSON RELATIONAL DUALITY VIEW</div>
-            <DiagramBox label="PUBLIC_SERVICES_CAPACITY_DV" sub="JSON document: {sku, serviceName, capacity: [...]} - WITH UPDATE" color="#AA643B" />
+            <DiagramBox label="Products + inventory" sub="Populated public-service catalog + inventory rows" color="#437C94" />
+            <div className="text-center text-[10px] text-[var(--color-text)]">↕ PRODUCTS_INVENTORY_DV · WITH UPDATE</div>
+            <DiagramBox label="PRODUCTS_INVENTORY_DV" sub="Actual JSON document: {_id, productName, inventory: [...]}" color="#AA643B" />
           </div>
 
           {/* How it works callout */}
           <div className="rounded-lg p-3 text-center" style={{ background: 'rgba(170,100,59,0.06)', border: '1px dashed rgba(170,100,59,0.3)' }}>
             <p className="text-[10px] text-[var(--color-text-dim)] leading-relaxed">
               <strong className="text-[var(--color-text)]">How it works:</strong>{' '}
-              The same service request header and line rows you see in relational
-              queries are exposed as nested JSON documents through <span className="font-mono text-[var(--color-text)]">SERVICE_REQUESTS_DV</span>.
+              The same relational rows are exposed as nested JSON documents through the actual
+              <span className="font-mono text-[var(--color-text)]"> ORDERS_DV</span> and
+              <span className="font-mono text-[var(--color-text)]"> PRODUCTS_INVENTORY_DV</span> views.
               Read or write through either interface - same ACID transaction, same data, zero sync.
-              The <span className="font-mono text-[var(--color-text)]">WITH UPDATE</span> clause makes both views read-write.
+              Their <span className="font-mono text-[var(--color-text)]">WITH UPDATE</span> definitions make both views read-write.
             </p>
           </div>
 
@@ -714,45 +682,20 @@ WHERE  JSON_VALUE(DATA, '$._id' RETURNING NUMBER) = :id;
             <FeatureBadge label="SLED_APP_CTX" color="yellow" />
             <FeatureBadge label="Fail-Closed VPD" color="orange" />
           </div>
-          <SqlBlock code={`-- Shared context-only policy function
-CREATE OR REPLACE FUNCTION vpd_sled_regional (
-    p_schema IN VARCHAR2, p_table IN VARCHAR2
-) RETURN VARCHAR2 AS
-    v_authenticated VARCHAR2(1)  := SYS_CONTEXT('SLED_APP_CTX','AUTHENTICATED');
-    v_role          VARCHAR2(30) := LOWER(SYS_CONTEXT('SLED_APP_CTX','ROLE'));
-    v_scope         VARCHAR2(30) := LOWER(SYS_CONTEXT('SLED_APP_CTX','ACCESS_SCOPE'));
-    v_region        VARCHAR2(30) := UPPER(SYS_CONTEXT('SLED_APP_CTX','REGION'));
-BEGIN
-    IF v_authenticated != 'Y' THEN
-        RETURN '1 = 0';
-    END IF;
+          <SqlBlock code={`-- Trusted session context and the scope it produces
+BEGIN SLED_SECURITY_PKG.SET_USER_CONTEXT('fm_west_maria'); END;
+/
 
-    IF v_scope = 'global' AND v_role IN ('admin','analyst')
-       AND v_region IS NULL THEN
-        RETURN NULL; -- explicit global allowlist only
-    END IF;
-
-    IF v_scope = 'regional' AND v_role = 'fulfillment_mgr'
-       AND v_region IN ('FRONT_RANGE','WESTERN_SLOPE','SOUTHERN_COLORADO') THEN
-        RETURN 'SERVICE_REGION_CODE = SYS_CONTEXT('
-               || '''SLED_APP_CTX'',''REGION'')';
-    END IF;
-
-    RETURN '1 = 0';
-END;
-
--- Canonical all-operation policy on ORDERS:
-DBMS_RLS.ADD_POLICY(
-  object_schema   => USER,
-  object_name     => 'ORDERS',
-  policy_name     => 'VPD_SLED_ORDERS',
-  function_schema => USER,
-  policy_function => 'VPD_SLED_REGIONAL',
-  statement_types => 'SELECT,INSERT,UPDATE,DELETE',
-  update_check    => TRUE,
-  policy_type     => DBMS_RLS.CONTEXT_SENSITIVE,
-  enable          => TRUE
-);`} />
+SELECT CASE
+         WHEN SYS_CONTEXT('SLED_APP_CTX','AUTHENTICATED') != 'Y' THEN 'no protected rows'
+         WHEN SYS_CONTEXT('SLED_APP_CTX','ACCESS_SCOPE') = 'GLOBAL' THEN 'global access'
+         WHEN SYS_CONTEXT('SLED_APP_CTX','ACCESS_SCOPE') = 'REGIONAL' THEN
+           'regional access for ' || SYS_CONTEXT('SLED_APP_CTX','REGION')
+         ELSE 'no protected rows'
+       END AS vpd_scope,
+       SYS_CONTEXT('SLED_APP_CTX','ROLE') AS role_name,
+       SYS_CONTEXT('SLED_APP_CTX','REGION') AS region
+FROM dual;`} />
         </div>
       </RegisterOraclePanel>
 

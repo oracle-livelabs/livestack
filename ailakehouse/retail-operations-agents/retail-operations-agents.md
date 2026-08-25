@@ -1,4 +1,4 @@
-# Scene 17 Retail Operations Agents
+# Retail Operations Agents
 
 ## Introduction
 
@@ -94,5 +94,6 @@ You have completed the PeakGear AI Lakehouse LiveStack Demo runbook.
 
 ## Acknowledgements
 
-* **Author** - LiveLabs Team August 2026
-* **Last Updated By/Date** - LiveLabs Team August 2026
+* **Author** - Kevin Lazarz August 2026
+* **Contributor** - Eugenio Galiano
+* **Last Updated By/Date** - Kevin Lazarz  August 2026

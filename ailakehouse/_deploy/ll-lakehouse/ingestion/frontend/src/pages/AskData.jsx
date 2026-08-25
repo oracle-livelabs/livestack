@@ -1,4 +1,6 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import { api } from '../utils/api';
 import ImportanceModal, { ImportanceButton } from '../components/ImportanceModal';
 import { FeatureBadge, SqlBlock, DiagramBox } from '../components/OracleInfoPanel';
@@ -22,17 +24,6 @@ const EXAMPLE_QUESTIONS = [
   { text: 'What is the total revenue from all customer orders?', category: 'Orders' },
   { text: 'How many orders were completed last month?', category: 'Orders' },
   { text: 'What is our average sentiment score?', category: 'Signals' },
-];
-
-const DATA_SURFACES = [
-  'orders',
-  'sporting goods products',
-  'customers',
-  'signal_bulletins',
-  'brands and partners',
-  'store_sites',
-  'inventory',
-  'shipments',
 ];
 
 const FALLBACK_PROFILES = [
@@ -64,6 +55,25 @@ function getProfileDisplayLabel(name, index = 0) {
 
 function JetGlyph({ iconClass, className = '', style }) {
   return <span className={`oj-fwk-icon ${iconClass} ${className}`.trim()} aria-hidden="true" style={style} />;
+}
+
+const RESPONSE_MARKDOWN_COMPONENTS = {
+  a: ({ node, ...props }) => (
+    <a {...props} target="_blank" rel="noreferrer" />
+  ),
+};
+
+function AssistantMarkdown({ children }) {
+  return (
+    <div className="askdata-markdown">
+      <ReactMarkdown
+        remarkPlugins={[remarkGfm]}
+        components={RESPONSE_MARKDOWN_COMPONENTS}
+      >
+        {children || ''}
+      </ReactMarkdown>
+    </div>
+  );
 }
 
 export default function AskData() {
@@ -277,9 +287,9 @@ export default function AskData() {
             <FeatureBadge label="Live Oracle Schema" color="blue" />
           </div>
           <SqlBlock code={isRuntimeLoading ? `-- Ask Data runtime discovery
--- The app is checking whether the Oracle Select AI profile is available.
--- If OCI GenAI is connected, only Oracle Select AI is offered on this page.
--- If OCI GenAI is unavailable, the local Ollama fallback is shown instead.` : isSelectAiRuntime ? `-- Ask Data runtime: question -> DBMS_CLOUD_AI -> OCI GenAI -> Oracle SQL -> UI answer
+-- The runtime check is still in progress. This seeded query is executable in the meantime.
+SELECT COUNT(*) AS seeded_products
+FROM products;` : isSelectAiRuntime ? `-- Ask Data runtime: question -> DBMS_CLOUD_AI -> OCI GenAI -> Oracle SQL -> UI answer
 -- Active profile: ${profile}
 -- Model: ${activeModelLabel}
 
@@ -352,7 +362,7 @@ FETCH FIRST 5 ROWS ONLY;
             <JetGlyph iconClass="oj-fwk-icon-message-info" className="askdata-page-glyph tone-teal" /> Ask Your Data
           </h2>
           <p className="text-sm text-[var(--color-text-dim)] mt-1">
-            Ask questions in plain English — <span className="tone-plum">{activeRuntimeLabel}</span> drafts SQL and Oracle queries your live data
+            Ask questions in plain English. <span className="tone-plum">{activeRuntimeLabel}</span> generates and executes SQL on your live data.
           </p>
         </div>
         <ImportanceButton onClick={() => setShowImportance(true)} />
@@ -432,25 +442,10 @@ FETCH FIRST 5 ROWS ONLY;
             <div className="space-y-4 py-6">
               <div className="text-center mb-4">
                 <JetGlyph iconClass="oj-fwk-icon-magnifier" className="askdata-empty-glyph tone-teal" />
-                <p className="text-sm text-[var(--color-text-dim)]">Ask anything about your data in plain English</p>
+                <p className="text-sm text-[var(--color-text-dim)]">Ask questions about your data in plain English</p>
                 <p className="text-[10px] text-[var(--color-text-dim)] mt-1">
-                  {activeRuntimeLabel} drafts the SQL, Oracle executes it, and the app explains or displays the results
+                  {activeRuntimeLabel} generates and executes SQL against your database data, and the app displays the results
                 </p>
-              </div>
-
-              {/* Tables available */}
-              <div className="flex flex-wrap justify-center gap-1.5 mb-4">
-                {DATA_SURFACES.map(t => (
-                  <span key={t} className="text-[9px] px-2 py-0.5 rounded-full font-mono"
-                    style={{
-                      background: 'var(--color-surface-muted)',
-                      color: 'var(--color-text)',
-                      border: '1px solid rgba(121,96,135,0.28)',
-                      boxShadow: 'inset 0 2px 0 rgba(121,96,135,0.75)',
-                    }}>
-                    {t}
-                  </span>
-                ))}
               </div>
 
               {/* Example questions */}
@@ -532,9 +527,9 @@ FETCH FIRST 5 ROWS ONLY;
                     {/* Narrate mode: answer text + collapsible SQL */}
                     {msg.mode === 'narrate' && (
                       <>
-                        <div className="px-4 py-3 rounded-2xl rounded-tl-md text-sm leading-relaxed whitespace-pre-wrap"
+                        <div className="px-4 py-3 rounded-2xl rounded-tl-md text-sm leading-relaxed"
                           style={{ background: 'var(--color-surface-muted)', border: '1px solid var(--color-border)' }}>
-                          {msg.text}
+                          <AssistantMarkdown>{msg.text}</AssistantMarkdown>
                         </div>
                         {msg.sql && (
                           <details className="group">
@@ -560,9 +555,9 @@ FETCH FIRST 5 ROWS ONLY;
                     {/* Chat mode: conversational answer + collapsible SQL */}
                     {msg.mode === 'chat' && (
                       <>
-                        <div className="px-4 py-3 rounded-2xl rounded-tl-md text-sm leading-relaxed whitespace-pre-wrap"
+                        <div className="px-4 py-3 rounded-2xl rounded-tl-md text-sm leading-relaxed"
                           style={{ background: 'rgba(67,124,148,0.05)', border: '1px solid rgba(67,124,148,0.2)' }}>
-                          {msg.text}
+                          <AssistantMarkdown>{msg.text}</AssistantMarkdown>
                         </div>
                         {msg.sql && (
                           <details className="group">

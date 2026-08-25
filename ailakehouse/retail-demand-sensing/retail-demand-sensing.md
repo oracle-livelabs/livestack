@@ -1,4 +1,4 @@
-# Scene 10 Retail Demand Sensing
+# Retail Demand Sensing
 
 ## Introduction
 
@@ -94,5 +94,6 @@ You can move to the next scene.
 
 ## Acknowledgements
 
-* **Author** - LiveLabs Team August 2026
-* **Last Updated By/Date** - LiveLabs Team August 2026
+* **Author** - Kevin Lazarz August 2026
+* **Contributor** - Eugenio Galiano
+* **Last Updated By/Date** - Kevin Lazarz  August 2026

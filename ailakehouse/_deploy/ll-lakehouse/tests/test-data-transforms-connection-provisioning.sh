@@ -422,6 +422,138 @@ set -e
 [[ "${failure_output}" != *"${encoded_password}"* ]] || fail "Failed ADB update logged the encoded password."
 [[ "${failure_output}" != *"${failure_token}"* ]] || fail "Failed ADB update logged an authorization token."
 
+WORK_DIR="${TEST_ROOT}/mock-demo"
+mkdir -p "${WORK_DIR}"
+DATA_TRANSFORMS_DEMO_PROJECT_NAME="peakgear"
+DATA_TRANSFORMS_DEMO_DATA_FLOW_NAME="dataFlow"
+DATA_TRANSFORMS_DEMO_DATA_FLOW_SOURCE_TABLE="PRODUCT_MASTER_RAW_ICEBERG_EXT"
+DATA_TRANSFORMS_DEMO_DATA_FLOW_TARGET_TABLE="GOLD_PRODUCTS"
+DATA_TRANSFORMS_DEMO_DATA_LOAD_NAME="dataLoad"
+DATA_TRANSFORMS_DEMO_DATA_LOAD_SOURCE_TABLE="GOLD_PRODUCTS"
+MOCK_FLOW_PAYLOAD_FILE="${WORK_DIR}/flow-payload.json"
+MOCK_LOAD_PAYLOAD_FILE="${WORK_DIR}/load-payload.json"
+
+find_connection_id() {
+  printf 'iceberg-default'
+}
+find_adb_connection_id() {
+  printf 'oracle-default'
+}
+api_request() {
+  local method="$1"
+  local path="$2"
+  local data_file="$3"
+  local output_file="$4"
+
+  API_STATUS=200
+  case "${method} ${path}" in
+    "GET /mock-api/mappings"|"GET /mock-api/bulkload")
+      printf '[]\n' > "${output_file}"
+      ;;
+    "GET /mock-api/projects/name/peakgear")
+      printf '%s\n' '{"name":"peakgear","code":"PEAKGEAR","globalId":"project-default"}' > "${output_file}"
+      ;;
+    "GET /mock-api/datastores")
+      cat > "${output_file}" <<'JSON'
+[
+  {"name":"PRODUCT_MASTER_RAW_ICEBERG_EXT","globalId":"source-store","dataStoreType":"TABLE","modelCode":"SOURCE_MODEL","schemaName":"PG","schemaGlobalId":"oracle-schema","dataServerName":"adb","dataServerGlobalId":"oracle-default","technologyCode":"ORACLE","columns":[{"name":"RAW_SKU","position":1,"dataType":"VARCHAR2","dataTypeCode":"VARCHAR2","length":50},{"name":"SUBCATEGORY","position":2,"dataType":"VARCHAR2","dataTypeCode":"VARCHAR2","length":100}]},
+  {"name":"GOLD_PRODUCTS","globalId":"target-store","dataStoreType":"TABLE","modelCode":"TARGET_MODEL","schemaName":"PG","schemaGlobalId":"oracle-schema","dataServerName":"adb","dataServerGlobalId":"oracle-default","technologyCode":"ORACLE","columns":[{"name":"SKU","position":1,"dataType":"VARCHAR2","dataTypeCode":"VARCHAR2","length":50},{"name":"SUBCATEGORY","position":2,"dataType":"VARCHAR2","dataTypeCode":"VARCHAR2","length":100}]}
+]
+JSON
+      ;;
+    "POST /mock-api/mappings")
+      cp "${data_file}" "${MOCK_FLOW_PAYLOAD_FILE}"
+      printf '%s\n' '{"name":"dataFlow","globalId":"flow-default","projectName":"peakgear"}' > "${output_file}"
+      ;;
+    "GET /mock-api/dataservers/id/iceberg-default")
+      printf '%s\n' '{"name":"pg-iceberg","globalId":"iceberg-default","schemas":[{"globalId":"iceberg-gold","dataSchema":"gold","schemaShortName":"gold","parentServer":"pg-iceberg","parentServerGlobalId":"iceberg-default","schemaName":"pg-iceberg.gold","workSchema":"gold","logicalSchema":"ICEBERG_LS","logicalSchemaTag":"IMPORTED_SCHEMA","technology":"APACHE_ICEBERG","default":true}]}' > "${output_file}"
+      ;;
+    "GET /mock-api/dataservers/id/oracle-default")
+      printf '%s\n' '{"name":"adb","globalId":"oracle-default","schemas":[{"globalId":"oracle-schema","dataSchema":"PG","schemaShortName":"PG","parentServer":"adb","parentServerGlobalId":"oracle-default","schemaName":"adb.PG","workSchema":"PG","logicalSchema":"ORACLE_LS","logicalSchemaTag":"IMPORTED_SCHEMA","technology":"ORACLE","default":true}]}' > "${output_file}"
+      ;;
+    "POST /mock-api/bulkload")
+      cp "${data_file}" "${MOCK_LOAD_PAYLOAD_FILE}"
+      printf '%s\n' '{"bulkLoadName":"dataLoad","globalId":"load-default","parentProjectName":"peakgear","deploymentStatus":"VALID"}' > "${output_file}"
+      ;;
+    *)
+      fail "Unexpected demo mocked API request: ${method} ${path}"
+      ;;
+  esac
+}
+
+ensure_demo_data_flow "/mock-api" || fail "Demo data-flow provisioning failed."
+ensure_demo_data_load "/mock-api" || fail "Demo data-load provisioning failed."
+"${PYTHON_BIN}" - "${MOCK_FLOW_PAYLOAD_FILE}" "${MOCK_LOAD_PAYLOAD_FILE}" <<'PY'
+import json
+import sys
+
+flow = json.load(open(sys.argv[1], encoding="utf-8"))
+load = json.load(open(sys.argv[2], encoding="utf-8"))
+assert flow["name"] == "dataFlow"
+assert flow["projectName"] == "peakgear"
+assert flow["sources"][0]["name"] == "PRODUCT_MASTER_RAW_ICEBERG_EXT"
+assert flow["targets"][0]["name"] == "GOLD_PRODUCTS"
+assert flow["dbfunc_substitutions"][0]["name"] == "Substitution"
+assert flow["dbfunc_substitutions"][0]["attributes"][1]["substitutionMap"] == {"NetSuite": "Databricks"}
+assert load["bulkLoadName"] == "dataLoad"
+assert load["parentProjectName"] == "peakgear"
+assert load["targetModel"]["schema"]["schemaName"] == "pg-iceberg.gold"
+assert load["sourceTables"] == [{"sourceTableName": "GOLD_PRODUCTS", "targetPreloadAction": "APPEND"}]
+assert "dataLoadOptions" not in load
+PY
+
+RESET_CALLS_FILE="${WORK_DIR}/reset-calls.log"
+api_request() {
+  local method="$1"
+  local path="$2"
+  local data_file="$3"
+  local output_file="$4"
+
+  API_STATUS=200
+  printf '%s %s\n' "${method}" "${path}" >> "${RESET_CALLS_FILE}"
+  case "${method} ${path}" in
+    "GET /mock-api/bulkload")
+      printf '%s\n' '[{"bulkLoadName":"dataLoad","parentProjectName":"peakgear","globalId":"load-id"}]' > "${output_file}"
+      ;;
+    "GET /mock-api/mappings")
+      printf '%s\n' '[{"name":"dataFlow","projectName":"peakgear","globalId":"flow-id"}]' > "${output_file}"
+      ;;
+    "GET /mock-api/projects/name/peakgear")
+      printf '%s\n' '{"name":"peakgear","globalId":"project-id"}' > "${output_file}"
+      ;;
+    "GET /mock-api/models")
+      printf '%s\n' '[{"modelCode":"PG","globalId":"model-id"}]' > "${output_file}"
+      ;;
+    "GET /mock-api/dataservers/id/oracle-default")
+      printf '%s\n' '{"name":"adb","globalId":"oracle-default","schemas":[{"dataSchema":"PG","globalId":"pg-schema-id"}]}' > "${output_file}"
+      ;;
+    DELETE\ *)
+      printf '%s\n' '{}' > "${output_file}"
+      ;;
+    *)
+      fail "Unexpected reset mocked API request: ${method} ${path}"
+      ;;
+  esac
+}
+
+reset_demo_data_transforms "/mock-api" || fail "Data Transforms demo reset failed."
+expected_reset_calls="${WORK_DIR}/expected-reset-calls.log"
+cat > "${expected_reset_calls}" <<'EOF'
+GET /mock-api/bulkload
+DELETE /mock-api/bulkload/id/load-id
+GET /mock-api/mappings
+DELETE /mock-api/mappings/id/flow-id
+GET /mock-api/projects/name/peakgear
+DELETE /mock-api/projects/id/project-id
+GET /mock-api/models
+DELETE /mock-api/models/id/model-id
+GET /mock-api/dataservers/id/oracle-default
+DELETE /mock-api/dataservers/schemas/id/pg-schema-id?cascade=true&forceDelete=true
+DELETE /mock-api/dataservers/id/iceberg-default?cascade=true&forceDelete=true
+EOF
+cmp -s "${expected_reset_calls}" "${RESET_CALLS_FILE}" \
+  || fail "Data Transforms demo reset did not use the expected scoped deletion order."
+
 is_disabled false || fail "false must disable provisioning."
 is_disabled 0 || fail "0 must disable provisioning."
 if is_disabled true; then

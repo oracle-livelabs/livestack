@@ -531,35 +531,35 @@ export default function FulfillmentMap() {
             <FeatureBadge label="demand_forecasts" color="red" />
             <FeatureBadge label="resident_access_tier" color="purple" />
           </div>
-          <SqlBlock code={`-- Nearest service access center with capacity
-SELECT fc.center_name, fc.city,
+          <SqlBlock code={`-- Oracle Spatial: distance between two Colorado service points
+SELECT 'Resident intake point → service access center' AS route_name,
        ROUND(SDO_GEOM.SDO_DISTANCE(
-         c.location, fc.location, 0.005, 'unit=KM'), 2) AS dist_km,
-       i.quantity_on_hand
-FROM   customers c
-CROSS  JOIN fulfillment_centers fc
-JOIN   inventory i
-          ON  i.center_id  = fc.center_id
-          AND i.product_id = :product_id
-WHERE  c.customer_id = :customer_id
-  AND  fc.is_active  = 1
-  AND  i.quantity_on_hand > i.quantity_reserved
-ORDER  BY dist_km
-FETCH FIRST 3 ROWS ONLY;`} />
-          <SqlBlock code={`-- Demand regions: Oracle SDO_GEOMETRY → GeoJSON
--- SDO_UTIL.TO_GEOJSON converts polygon boundary for frontend rendering
-SELECT r.region_name, r.demand_index,
-       TO_CHAR(SDO_UTIL.TO_GEOJSON(r.boundary)) AS geojson,
-       AVG(df.predicted_demand)  AS avg_7day_forecast,
-       MAX(df.social_factor)     AS peak_social_factor
-FROM   demand_regions r
-LEFT JOIN demand_forecasts df
-       ON UPPER(df.region) = UPPER(r.region_name)
-      AND df.forecast_date BETWEEN TRUNC(SYSDATE)
-                               AND TRUNC(SYSDATE) + 7
-GROUP BY r.region_id, r.region_name,
-         r.demand_index, r.boundary
-ORDER BY r.demand_index DESC;`} />
+         SDO_GEOMETRY(
+           2001, 4326,
+           SDO_POINT_TYPE(-104.9903, 39.7392, NULL),
+           NULL, NULL),
+         SDO_GEOMETRY(
+           2001, 4326,
+           SDO_POINT_TYPE(-104.9876, 39.7436, NULL),
+           NULL, NULL),
+         0.005, 'unit=KM'), 2) AS distance_km
+FROM dual;`} />
+          <SqlBlock code={`-- Oracle Spatial: rank public programs by a service-corridor distance
+SELECT b.brand_name AS public_program,
+       b.brand_category,
+       ROUND(SDO_GEOM.SDO_DISTANCE(
+         SDO_GEOMETRY(
+           2001, 4326,
+           SDO_POINT_TYPE(-104.9903, 39.7392, NULL),
+           NULL, NULL),
+         SDO_GEOMETRY(
+           2001, 4326,
+           SDO_POINT_TYPE(-104.9876, 39.7436, NULL),
+           NULL, NULL),
+         0.005, 'unit=KM'), 2) AS corridor_distance_km
+FROM brands b
+ORDER BY b.brand_name
+FETCH FIRST 10 ROWS ONLY;`} />
           <div>
             <p className="text-xs font-semibold text-[var(--color-text-dim)] uppercase tracking-wider mb-2">Virtual Private Database (VPD)</p>
             <p className="text-[var(--color-text)] leading-relaxed mb-2">
@@ -580,26 +580,18 @@ ORDER BY r.demand_index DESC;`} />
           </div>
           <SqlBlock code={`-- Trusted identity on the same checked-out connection
 BEGIN SLED_SECURITY_PKG.SET_USER_CONTEXT('fm_west_maria'); END;
+/
 
--- The policy function reads only private Oracle context:
--- AUTHENTICATED != Y                         → 1=0
--- admin/analyst + ACCESS_SCOPE = GLOBAL     → 1=1
--- manager + ACCESS_SCOPE = REGIONAL         →
---   SERVICE_REGION_CODE = SYS_CONTEXT('SLED_APP_CTX','REGION')
--- restricted or unsupported identity        → 1=0
-
--- Canonical policy attached to FULFILLMENT_CENTERS:
-DBMS_RLS.ADD_POLICY(
-  object_schema   => USER,
-  object_name     => 'FULFILLMENT_CENTERS',
-  policy_name     => 'VPD_SLED_FC',
-  function_schema => USER,
-  policy_function => 'VPD_SLED_REGIONAL',
-  statement_types => 'SELECT,INSERT,UPDATE,DELETE',
-  update_check    => TRUE,
-  policy_type     => DBMS_RLS.CONTEXT_SENSITIVE,
-  enable          => TRUE
-);`} />
+SELECT CASE
+         WHEN SYS_CONTEXT('SLED_APP_CTX','AUTHENTICATED') != 'Y' THEN 'no protected rows'
+         WHEN SYS_CONTEXT('SLED_APP_CTX','ACCESS_SCOPE') = 'GLOBAL' THEN 'global access'
+         WHEN SYS_CONTEXT('SLED_APP_CTX','ACCESS_SCOPE') = 'REGIONAL' THEN
+           'regional access for ' || SYS_CONTEXT('SLED_APP_CTX','REGION')
+         ELSE 'no protected rows'
+       END AS vpd_scope,
+       SYS_CONTEXT('SLED_APP_CTX','ROLE') AS role_name,
+       SYS_CONTEXT('SLED_APP_CTX','REGION') AS region
+FROM dual;`} />
           <div>
             <p className="text-[10px] font-semibold text-[var(--color-text-dim)] uppercase tracking-wider mb-2">Spatial Layer Architecture</p>
             <div className="space-y-1">

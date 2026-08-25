@@ -195,6 +195,19 @@ BEGIN
 END;
 /
 
+DECLARE
+  l_exists NUMBER;
+BEGIN
+  SELECT COUNT(*) INTO l_exists FROM user_tables WHERE table_name = 'GOLD_PRODUCTS';
+  IF l_exists = 0 THEN
+    EXECUTE IMMEDIATE 'CREATE TABLE GOLD_PRODUCTS AS SELECT * FROM ' || DBMS_ASSERT.SIMPLE_SQL_NAME(UPPER('$(sql_literal "${ADB_TABLE}")')) || ' WHERE 1=0';
+    DBMS_OUTPUT.PUT_LINE('Created writable target table GOLD_PRODUCTS.');
+  ELSE
+    DBMS_OUTPUT.PUT_LINE('Writable target table GOLD_PRODUCTS already exists.');
+  END IF;
+END;
+/
+
 EXIT
 SQL
 

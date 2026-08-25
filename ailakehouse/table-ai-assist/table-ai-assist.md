@@ -1,4 +1,4 @@
-# Scene 5b Using Table AI Assist in Data Studio
+# Using Table AI Assist in Data Studio
 
 ## Introduction
 

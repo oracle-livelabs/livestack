@@ -133,7 +133,26 @@ case "${command_name}" in
 esac
 EOF
 
-  chmod +x "${case_dir}/podman-compose" "${case_dir}/podman"
+  cat > "${case_dir}/systemctl" <<'EOF'
+#!/usr/bin/env bash
+set -euo pipefail
+printf '%s\n' "$*" >> "${TEST_SYSTEMCTL_ARGS_FILE:?}"
+case " $* " in
+  *" cat "*)
+    exit 0
+    ;;
+  *" stop "*)
+    service="${*: -1}"
+    touch "${TEST_PODMAN_STATE_DIR:?}/${service}-stopped"
+    ;;
+  *" is-active "*)
+    service="${*: -1}"
+    [[ ! -f "${TEST_PODMAN_STATE_DIR:?}/${service}-stopped" ]]
+    ;;
+esac
+EOF
+
+  chmod +x "${case_dir}/podman-compose" "${case_dir}/podman" "${case_dir}/systemctl"
 }
 
 setup_case() {
@@ -233,7 +252,9 @@ run_prepare() {
   PODMAN_COMPOSE_BIN="${case_dir}/podman-compose" \
   TEST_PODMAN_STATE_DIR="${case_dir}/podman-state" \
   TEST_COMPOSE_ARGS_FILE="${case_dir}/compose-args.log" \
+  TEST_SYSTEMCTL_ARGS_FILE="${case_dir}/systemctl-args.log" \
   TEST_MISSING_IMAGE="${missing_image}" \
+  SYSTEMCTL_BIN="${case_dir}/systemctl" \
   bash "${PROJECT_ROOT}/prepare-custom-image.sh"
 }
 
@@ -324,6 +345,14 @@ assert_file_absent "${prepare_dir}/podman-state/mounts/ingestion_oracle-data"
 assert_file_absent "${prepare_dir}/podman-state/mounts/ingestion_frontend-dist"
 assert_file_absent "${prepare_dir}/podman-state/mounts/ingestion_gravitino-logs"
 assert_file_absent "${prepare_dir}/podman-state/mounts/anonymous-runtime-volume"
+for service in iceberg-seed.service pg-iceberg-connection.service user-podman.service; do
+  assert_file_exists "${prepare_dir}/podman-state/${service}-stopped"
+  grep -q -- "stop ${service}" "${prepare_dir}/systemctl-args.log" \
+    || fail "Image preparation did not stop ${service}"
+done
+if grep -q -- 'disable user-podman.service' "${prepare_dir}/systemctl-args.log"; then
+  fail "Image preparation disabled user-podman.service"
+fi
 grep -q -- 'down --remove-orphans' "${prepare_dir}/compose-args.log" \
   || fail "Image preparation did not remove compose containers"
 if grep -q -- 'down --volumes' "${prepare_dir}/compose-args.log"; then

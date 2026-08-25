@@ -1,4 +1,4 @@
-# Scene 5 Batch and File Loading Ingest
+# Batch and File Loading Ingest
 
 ## Introduction
 
@@ -166,5 +166,6 @@ You can move to the next scene.
 
 ## Acknowledgements
 
-* **Author** - LiveLabs Team, July 2026
-* **Last Updated By/Date** - LiveLabs Team, July 2026
+* **Author** - Kevin Lazarz August 2026
+* **Contributor** - Eugenio Galiano
+* **Last Updated By/Date** - Kevin Lazarz  August 2026

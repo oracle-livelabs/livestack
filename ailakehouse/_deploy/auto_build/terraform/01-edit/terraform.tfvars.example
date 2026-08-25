@@ -1,0 +1,70 @@
+ociTenancyOcid          = "<tenancy_ocid>"              # OCI tenancy OCID. Get it from OCI Console -> Tenancy details.
+ociUserOcid             = "<user_ocid>"                 # OCI user OCID. Get it from OCI Console -> Identity -> Users.
+ociCompartmentOcid      = "<workshop_compartment_ocid>" # Compartment where Terraform creates all test resources.
+ociRegionIdentifier     = "us-ashburn-1"                # OCI region where the deployment will run.
+ociHomeRegionIdentifier = "us-ashburn-1"                # Home region of the tenancy. Usually the same as the tenancy home region.
+ociAuthMethod           = "SecurityToken"               # Authentication method. Keep SecurityToken for local interactive runs.
+ociConfigProfile        = "WORKSHOP_TEST"               # OCI CLI profile name from ~/.oci/config.
+resId                   = "peakgear-test-<unique-id>"   # Replace <unique-id>; it becomes part of tenancy-wide Object Storage names.
+resource_name_prefix    = "peak-gear"                   # Prefix added to OCI resources created by Terraform.
+
+ociVcnOcid           = ""                          # Existing VCN OCID. Leave blank unless your environment requires selecting a specific VCN.
+ociPublicSubnetOcid  = "<public_subnet_ocid>"      # Existing public subnet where the test VM will be created.
+ociPrivateSubnetOcid = ""                          # Existing private subnet, only if your deployment uses one.
+resUserPublicKey     = "<ssh_public_key_contents>" # Paste the contents of your SSH public key (.pub file).
+
+# Stage 1 - Custom image testing.
+use_marketplace_image = false # Keep false while testing a custom image before Marketplace publication.
+instance_image_id     = ""    # Custom image OCID to deploy. Leave blank for a normal Packer build. Fill this only when testing an existing image or using -ExistingImageOcid.
+
+instance_count                      = 1                                               # Number of test VMs to create.
+flex_instance_shape                 = "VM.Standard.E4.Flex"                           # OCI compute shape used for the VM.
+instance_shape_config_ocpus         = 4                                               # Number of OCPUs for the flex shape.
+instance_shape_config_memory_in_gbs = 44                                              # Memory (GB) for the flex shape.
+enable_test_access_nsg              = true                                            # Creates a temporary NSG rule so only your IP can access the VM.
+tester_source_cidr                  = "<your-current-public-ip>/32"                   # Your current public IP in CIDR format (for example 203.0.113.10/32).
+allowed_tcp_ports                   = [22, 1525, 8085, 8181, 8501, 8502, 8505, 32180] # Ports opened only for testing.
+# Keep false for normal tests. Set true only for a disposable Peak Gear test that
+# must let the Oracle-managed Data Transforms agent reach TCP 1525; Terraform
+# removes this one-port public rule during cleanup.
+enable_data_transforms_public_test_ingress = true
+
+web_title = "Peak Gear LiveStack" # Title displayed in the runtime dashboard.
+app_user  = "PG"                  # Application username used inside Peak Gear.
+
+# Runtime-only application inputs. Keep the real URL in ignored terraform.tfvars.
+# A pre-authenticated Object Storage URL is a bearer credential and must not be committed.
+additional_metadata = {
+  onnx_model_url = "<approved-private-direct-download-url-for-all_MiniLM_L12_v2.onnx>"
+}
+
+workshop_settings = {
+  database_name         = "PG<UNIQUEID>" # Replace <UNIQUEID>; use 1-12 uppercase letters/numbers so the full name is unique in this OCI region.
+  db_version            = "23ai"         # Oracle Database version to deploy.
+  compute_count         = "2"            # Number of database ECPUs/OCPUs (depends on the database service).
+  storage_tbs           = "1"            # Database storage size in TB.
+  object_storage_prefix = "iceberg"      # Prefix used when creating Object Storage resources.
+  ai_region             = "us-chicago-1" # OCI region used for AI services.
+}
+
+# Default mode used by Green Button deployments.
+# Terraform creates temporary OCI API credentials for ociUserOcid
+# and removes them automatically during destroy.
+peakgear_identity_credentials = {
+  mode                 = "managed" # Recommended. Credentials are created and cleaned up automatically.
+  api_fingerprint      = ""        # Leave blank in managed mode.
+  api_private_key_path = ""        # Leave blank in managed mode.
+  s3_access_key_id     = ""        # Leave blank in managed mode.
+  s3_secret_access_key = ""        # Leave blank in managed mode.
+}
+
+# Use this only if Terraform cannot create temporary IAM credentials.
+# Replace the values below with existing credentials that already have
+# the required OCI and Object Storage permissions.
+# peakgear_identity_credentials = {
+#   mode                 = "existing"
+#   api_fingerprint      = "<existing OCI API-key fingerprint>"      # Existing OCI API key fingerprint.
+#   api_private_key_path = "<absolute path to its private PEM key>"  # Local path to the matching private key.
+#   s3_access_key_id     = "<40-character hexadecimal access key>" # OCI User settings > Customer secret keys > Access key. This is not an OCID.
+#   s3_secret_access_key = "<existing Object Storage customer-secret key>"         # Matching Object Storage secret key.
+# }

@@ -449,11 +449,11 @@ SELECT ROUND(SDO_GEOM.SDO_DISTANCE(
          c.location,               -- SDO_GEOMETRY point
          0.05, 'unit=MILE'), 1)    AS distance_miles
 FROM   fulfillment_centers fc, customers c
-WHERE  fc.center_id = ${order.FULFILLMENT_CENTER_ID || ':center_id'}
-AND    c.customer_id = ${order.CUSTOMER_ID || ':cust_id'};
+WHERE  fc.center_id = ${order.FULFILLMENT_CENTER_ID || '(SELECT MIN(center_id) FROM fulfillment_centers)'}
+AND    c.customer_id = ${order.CUSTOMER_ID || '(SELECT MIN(customer_id) FROM customers)'};
 -- Result: ${distanceMiles ? Math.round(distanceMiles).toLocaleString() + ' miles' : 'N/A'}
 
--- Coordinates stored as SDO_GEOMETRY(2001, 4326, ...)
+-- Coordinates stored as SDO_GEOMETRY(2001, 4326, coordinate)
 -- Spatial R-tree index enables sub-ms proximity queries`}</pre>
                     </div>
                   </>
@@ -521,7 +521,7 @@ export default function Orders() {
               REST-style JSON access to orders with nested line items. Read-write: inserts through the view update both <span className="font-mono text-[var(--color-text)]">orders</span> and{' '}
               <span className="font-mono text-[var(--color-text)]">order_items</span> tables atomically.
             </p>
-            <SqlBlock code={`CREATE JSON RELATIONAL DUALITY VIEW orders_dv AS
+            <SqlBlock code={`CREATE OR REPLACE JSON RELATIONAL DUALITY VIEW orders_dv AS
 SELECT JSON {
   '_id': o.order_id,
   'customerId': o.customer_id,
@@ -546,7 +546,7 @@ FROM orders o WITH UPDATE;`} />
             <p className="text-xs text-[var(--color-text-dim)] mb-2 leading-relaxed">
               Products with nested inventory across all store fulfillment sites. One document, two tables.
             </p>
-            <SqlBlock code={`CREATE JSON RELATIONAL DUALITY VIEW products_inventory_dv AS
+            <SqlBlock code={`CREATE OR REPLACE JSON RELATIONAL DUALITY VIEW products_inventory_dv AS
 SELECT JSON {
   '_id': p.product_id,
   'sku': p.sku,
@@ -574,12 +574,12 @@ SELECT o.order_id, c.full_name, o.order_total,
 FROM   orders o
 JOIN   customers c    ON c.customer_id = o.customer_id
 JOIN   order_items oi ON oi.order_id   = o.order_id
-WHERE  o.order_id = :id;
+FETCH FIRST 10 ROWS ONLY;
 
 -- Duality: same data as a single JSON document
 SELECT DATA FROM orders_dv
-WHERE  JSON_VALUE(DATA, '$._id' RETURNING NUMBER) = :id;
--- Returns: {"_id":1, "status":"routed", "items":[...]}`} />
+FETCH FIRST 1 ROW ONLY;
+-- Returns one JSON document with nested order items`} />
           </div>
 
           {/* Visual diagram */}
@@ -648,33 +648,23 @@ WHERE  JSON_VALUE(DATA, '$._id' RETURNING NUMBER) = :id;
             <FeatureBadge label="sc_security_ctx" color="yellow" />
             <FeatureBadge label="Cascading VPD" color="orange" />
           </div>
-          <SqlBlock code={`-- VPD policy function for ORDERS table
-CREATE OR REPLACE FUNCTION vpd_orders_region (
-    p_schema IN VARCHAR2, p_table IN VARCHAR2
-) RETURN VARCHAR2 AS
-    v_role   VARCHAR2(30);
-    v_region VARCHAR2(100);
+          <SqlBlock code={`-- Activate the seeded regional context and inspect the ORDERS policy
 BEGIN
-    v_role   := sc_security_ctx.get_role();
-    v_region := sc_security_ctx.get_region();
-
-    -- Admin/analyst: full access
-    IF v_role IN ('admin','analyst') THEN RETURN NULL; END IF;
-
-    -- Fulfillment mgr: orders for their region's centers
-    IF v_role = 'fulfillment_mgr' AND v_region IS NOT NULL THEN
-        RETURN 'fulfillment_center_id IN '
-            || '(SELECT center_id FROM fulfillment_centers'
-            || ' WHERE state_province = ''' || v_region || ''')';
-    END IF;
-
-    RETURN NULL;  -- others see all
+  sc_security_ctx.set_user_context('fm_west_maria');
 END;
+/
 
--- Applied via:
-DBMS_RLS.ADD_POLICY('ORDERS','VPD_ORDERS_REGION',
-  policy_function => 'VPD_ORDERS_REGION',
-  statement_types => 'SELECT');`} />
+SELECT object_name, policy_name, enable, policy_type,
+       sel, ins, upd, del
+FROM user_policies
+WHERE object_name = 'ORDERS';
+
+-- The policy is applied transparently to ordinary SQL:
+SELECT order_id, customer_id, fulfillment_center_id, order_status,
+       order_total
+FROM orders
+ORDER BY order_id
+FETCH FIRST 10 ROWS ONLY;`} />
         </div>
       </RegisterOraclePanel>
 

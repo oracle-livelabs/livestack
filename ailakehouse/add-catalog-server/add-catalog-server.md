@@ -1,4 +1,4 @@
-# Scene 7 Add an Apache Iceberg Catalog Server
+# Add an Apache Iceberg Catalog Server
 
 ## Introduction
 
@@ -126,5 +126,6 @@ That makes new processing flows faster to create, keeps table definitions reusab
 
 ## Acknowledgements
 
-* **Author** - LiveLabs Team August 2026
-* **Last Updated By/Date** - LiveLabs Team August 2026
+* **Author** - Kevin Lazarz August 2026
+* **Contributor** - Eugenio Galiano
+* **Last Updated By/Date** - Kevin Lazarz  August 2026

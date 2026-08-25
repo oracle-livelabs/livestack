@@ -407,7 +407,9 @@ export default function App() {
                     <span className={`${iconClass} oj-fwk-icon app-nav-icon`} aria-hidden="true" />
                     <span className="nav-link__body">
                       <span>{replaceCustomerTerms(label, customerProfile)}</span>
-                      <FeatureTagList tags={featureTags?.slice(0, 2)} variant="nav" />
+                      {!['welcome', 'datamodel'].includes(id) && (
+                        <FeatureTagList tags={featureTags?.slice(0, 2)} variant="nav" />
+                      )}
                     </span>
                   </button>
                 ))}

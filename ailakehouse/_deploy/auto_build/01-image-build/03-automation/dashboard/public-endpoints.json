@@ -1,0 +1,9 @@
+{
+  "public_endpoints": [
+    {
+      "name": "Runtime service dashboard",
+      "url": "http://{host}:32180/",
+      "expected_status_codes": [200]
+    }
+  ]
+}

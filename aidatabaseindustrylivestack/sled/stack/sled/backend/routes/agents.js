@@ -909,8 +909,8 @@ router.post('/chat', async (req, res) => {
   let toolsUsed = [];
 
   // Strong signals - worth 3 points each (unambiguously indicate one intent)
-  const trendStrong = ['trending', 'urgent', 'urgency', 'viral', 'virality', 'mega_viral', 'momentum', 'advocate', 'community', 'instagram', 'hashtag', 'rising'];
-  const inventoryStrong = ['capacity', 'service access', 'inventory', 'reorder', 'replenish', 'out of capacity'];
+  const trendStrong = ['trending', 'highest demand', 'urgent', 'urgency', 'viral', 'virality', 'mega_viral', 'momentum', 'advocate', 'community', 'critical resident service signal', 'instagram', 'hashtag', 'rising'];
+  const inventoryStrong = ['capacity', 'service access', 'service site', 'same-day', 'counter slots', 'inventory', 'reorder', 'replenish', 'out of capacity'];
   const commerceStrong = ['service value', 'service request', 'request total', 'agency operations'];
 
   // Weak signals - worth 1 point each (ambiguous, could relate to multiple intents)
@@ -931,266 +931,29 @@ router.post('/chat', async (req, res) => {
     team = 'FULFILLMENT_TEAM'; intent = 'fulfillment';
   }
 
-  // ── Step 2: Try Ollama team reasoning first ─────────────────────────────
+  // ── Step 2: Governed SLED question pipeline ─────────────────────────────
+  // The agent team label is retained for the UI, but all reasoning now uses
+  // the same governed semantic-view SQL path as Ask State and Local Government Data.
   let agentResponse = null;
   let agentUsed = false;
+  let governedResult = null;
   try {
-    agentResponse = await Promise.race([
-      askAgent(team, q),
-      new Promise((_, reject) => setTimeout(() => reject(new Error('timeout')), 8000)),
+    governedResult = await Promise.race([
+      answerQuestion(q, { mode: 'chat', demoUser: req.demoUser }),
+      new Promise((_, reject) => setTimeout(() => reject(new Error('timeout')), 180000)),
     ]);
-    if (agentResponse) {
-      agentUsed = true;
-      toolsUsed.push({ tool: 'Ollama llama3.2', team, status: 'success' });
-    }
-  } catch (agentErr) {
-    toolsUsed.push({ tool: 'Ollama llama3.2', team, status: 'fallback', reason: agentErr.message });
+    agentResponse = governedResult.answer;
+    agentUsed = true;
+    toolsUsed.push({ tool: 'Oracle governed SLED semantic views', status: 'success' });
+    toolsUsed.push({ tool: `Ollama ${governedResult.model || 'llama3.2'}`, status: 'success' });
+  } catch (queryErr) {
+    toolsUsed.push({ tool: 'Oracle governed SLED semantic views', status: 'error', reason: queryErr.message });
   }
 
-  // ── Step 3: Fallback - call PL/SQL tool functions directly ──
-  let fallbackResult = null;
-  let fallbackData = null;
+  const fallbackResult = governedResult?.answer || null;
+  const fallbackData = governedResult?.rows || null;
 
-  try {
-    if (intent === 'trends') {
-      // Extract hours/score params from question if mentioned
-      const hoursMatch = qLower.match(/(\d+)\s*hours?/);
-      const hours = hoursMatch ? parseInt(hoursMatch[1]) : 48;
-      const scoreMatch = qLower.match(/score.*?(\d+)|urgency.*?(\d+)|virality.*?(\d+)/);
-      const minScore = scoreMatch ? parseInt(scoreMatch[1] || scoreMatch[2] || scoreMatch[3]) : 50;
-
-      const trendRes = await db.execute(
-        `SELECT detect_trending_products(:hours, :score) AS result FROM dual`,
-        { hours, score: minScore }
-      );
-      fallbackResult = trendRes.rows[0]?.RESULT || 'No high-demand public services found';
-      toolsUsed.push({ tool: 'detect_trending_products()', params: { hours, minScore }, status: 'success' });
-
-      // Also get structured data
-      const dataRes = await db.execute(
-        `SELECT p.product_name, b.brand_name, p.category,
-                COUNT(DISTINCT sp.post_id) AS mentions,
-                ROUND(AVG(sp.virality_score), 1) AS avg_virality,
-                SUM(sp.views_count) AS total_views,
-                MAX(sp.momentum_flag) AS peak_momentum
-         FROM post_product_mentions ppm
-         JOIN social_posts sp ON ppm.post_id = sp.post_id
-         JOIN products p ON ppm.product_id = p.product_id
-         JOIN brands b ON p.brand_id = b.brand_id
-         WHERE CAST(sp.posted_at AS DATE) >= SYSDATE - :hours/24
-           AND sp.virality_score >= :score
-         GROUP BY p.product_name, b.brand_name, p.category
-         ORDER BY avg_virality DESC
-         FETCH FIRST 10 ROWS ONLY`,
-        { hours, score: minScore }
-      );
-      fallbackData = dataRes.rows;
-
-      // Check for community partner-specific questions
-      const handleMatch = q.match(/@[\w_]+/);
-      if (handleMatch || qLower.includes('advocate') || qLower.includes('influencer')) {
-        const handle = handleMatch ? handleMatch[0] : null;
-        if (handle) {
-          const netRes = await db.execute(
-            `SELECT get_partner_network(:handle) AS result FROM dual`,
-            { handle }
-          );
-          fallbackResult += '\n\n' + (netRes.rows[0]?.RESULT || '');
-          toolsUsed.push({ tool: 'get_partner_network()', params: { handle }, status: 'success' });
-        }
-      }
-
-    } else if (intent === 'fulfillment') {
-      // Extract product name from question
-      const productPatterns = [
-        /["']([^"']+)["']/,                                                           // quoted: "Online Permit Intake"
-        /(?:inventory|stock|check)\s+(?:for|of|on)\s+(?:the\s+)?(.+?)(?:\s+across|\s+at|\s+in|\s*\??\s*$)/i,
-        /(?:ship|deliver|send|route)\s+(?:the\s+)?(.+?)(?:\s+to\s+|\s+for\s+)/i,     // "ship same-day service counter slot to..."
-        /(?:fulfillment|nearest)\s+(?:center\s+)?(?:for|with)\s+(.+?)(?:\s+in\s+stock|\s+to\s+|\s+for\s+|\s*\??\s*$)/i,
-        /(?:for|of|about)\s+(?:the\s+)?([A-Z][A-Za-z\s]+?)(?:\s+across|\s+at|\s+in|\s+to|\s*\??\s*$)/i,
-      ];
-      let productName = null;
-      for (const pat of productPatterns) {
-        const m = q.match(pat);
-        if (m) {
-          let pn = m[1].trim();
-          // Clean up: remove trailing filler words
-          pn = pn.replace(/\s+(earbuds?|headphones?|shoes?|items?|products?)\s*$/i, '').trim();
-          // Skip if the extracted name looks like a non-product phrase
-          if (pn.length >= 3 && !/^(a |the |an |to |in |for )/i.test(pn)) {
-            productName = pn;
-            break;
-          }
-        }
-      }
-
-      // Check if this is a routing question (mentions customer/city)
-      const cityMatch = q.match(/(?:to|in|near)\s+(?:a\s+customer\s+in\s+)?([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)/);
-      const emailMatch = q.match(/[\w.]+@[\w.]+/);
-
-      if (productName && (cityMatch || emailMatch)) {
-        // Spatial routing - find best service access center
-        let customerEmail = emailMatch ? emailMatch[0] : null;
-
-        // If user gave a city name, look up a synthetic resident email in that city
-        if (!customerEmail && cityMatch) {
-          const cityName = cityMatch[1];
-          try {
-            const custRes = await db.execute(
-              `SELECT email FROM customers WHERE UPPER(city) = UPPER(:city) FETCH FIRST 1 ROWS ONLY`,
-              { city: cityName }
-            );
-            if (custRes.rows.length > 0) {
-              customerEmail = custRes.rows[0].EMAIL;
-              toolsUsed.push({ tool: 'customer_lookup', params: { city: cityName }, status: 'success', email: customerEmail });
-            }
-          } catch (_) {}
-        }
-
-        if (customerEmail) {
-          try {
-            const routeRes = await db.execute(
-              `SELECT find_best_fulfillment(:email, :pname) AS result FROM dual`,
-              { email: customerEmail, pname: productName }
-            );
-            fallbackResult = routeRes.rows[0]?.RESULT || 'No public service route found';
-            toolsUsed.push({ tool: 'find_best_fulfillment()', params: { synthetic_resident: customerEmail, public_service_service: productName }, status: 'success' });
-
-            // Get structured route data with coordinates for map visualization
-            try {
-              const routeDataRes = await db.execute(
-                `SELECT fc.center_name, fc.city, fc.state_province,
-                        fc.latitude AS center_lat, fc.longitude AS center_lon,
-                        i.quantity_on_hand,
-                        ROUND(SDO_GEOM.SDO_DISTANCE(
-                          c.location, fc.location, 0.005, 'unit=MILE'), 1) AS distance_mi
-                 FROM customers c
-                 CROSS JOIN fulfillment_centers fc
-                 JOIN inventory i ON fc.center_id = i.center_id
-                 JOIN products p ON i.product_id = p.product_id
-                 WHERE c.email = :email
-                   AND UPPER(p.product_name) LIKE '%' || UPPER(:pname) || '%'
-                   AND i.quantity_on_hand > 0
-                   AND fc.is_active = 1
-                 ORDER BY SDO_GEOM.SDO_DISTANCE(c.location, fc.location, 0.005, 'unit=MILE')
-                 FETCH FIRST 5 ROWS ONLY`,
-                { email: customerEmail, pname: productName }
-              );
-              // Get customer coordinates
-              const custGeo = await db.execute(
-                `SELECT latitude, longitude, city, state_province FROM customers WHERE email = :email`,
-                { email: customerEmail }
-              );
-              if (custGeo.rows.length > 0 && routeDataRes.rows.length > 0) {
-                fallbackData = {
-                  type: 'route',
-                  customer: {
-                    lat: custGeo.rows[0].LATITUDE,
-                    lon: custGeo.rows[0].LONGITUDE,
-                    city: custGeo.rows[0].CITY,
-                    state: custGeo.rows[0].STATE_PROVINCE,
-                  },
-                  product: productName,
-                  centers: routeDataRes.rows.map(r => ({
-                    name: r.CENTER_NAME,
-                    city: r.CITY,
-                    state: r.STATE_PROVINCE,
-                    lat: r.CENTER_LAT,
-                    lon: r.CENTER_LON,
-                    stock: r.QUANTITY_ON_HAND,
-                    distance: r.DISTANCE_MI,
-                  })),
-                };
-              }
-            } catch (geoErr) {
-              logOptionalAgentWarning('Route geo data skipped', geoErr);
-            }
-          } catch (routeErr) {
-            const invRes = await db.execute(
-              `SELECT check_product_inventory(:pname) AS result FROM dual`,
-              { pname: productName }
-            );
-            fallbackResult = invRes.rows[0]?.RESULT || 'No inventory data found';
-            toolsUsed.push({ tool: 'check_product_inventory()', params: { productName }, status: 'success' });
-          }
-        } else {
-          // City not found - fall back to inventory check
-          const invRes = await db.execute(
-            `SELECT check_product_inventory(:pname) AS result FROM dual`,
-            { pname: productName }
-          );
-          fallbackResult = invRes.rows[0]?.RESULT || 'No inventory data found';
-          toolsUsed.push({ tool: 'check_product_inventory()', params: { productName }, status: 'success' });
-        }
-      } else if (productName) {
-        const invRes = await db.execute(
-          `SELECT check_product_inventory(:pname) AS result FROM dual`,
-          { pname: productName }
-        );
-        fallbackResult = invRes.rows[0]?.RESULT || 'No inventory data found';
-        toolsUsed.push({ tool: 'check_product_inventory()', params: { productName }, status: 'success' });
-      } else {
-        // General inventory/fulfillment query
-        const invRes = await db.execute(
-          `SELECT fc.center_name, fc.city, fc.state_province, fc.center_type,
-                  COUNT(i.product_id) AS products_stocked,
-                  SUM(i.quantity_on_hand) AS total_on_hand,
-                  SUM(CASE WHEN i.quantity_on_hand <= i.reorder_point THEN 1 ELSE 0 END) AS low_stock_items
-           FROM fulfillment_centers fc
-           LEFT JOIN inventory i ON fc.center_id = i.center_id
-           WHERE fc.is_active = 1
-           GROUP BY fc.center_name, fc.city, fc.state_province, fc.center_type
-           ORDER BY total_on_hand DESC
-           FETCH FIRST 10 ROWS ONLY`
-        );
-        fallbackData = invRes.rows;
-        fallbackResult = `Service access overview: ${invRes.rows.length} active centers`;
-      toolsUsed.push({ tool: 'SERVICE_OPERATIONS_SQL_TOOL (fallback)', status: 'success' });
-    }
-
-    } else {
-      // Public service operations - general requests and value queries
-      const commerceRes = await db.execute(
-        `SELECT COUNT(*) AS total_service_requests,
-                COUNT(CASE WHEN social_source_id IS NOT NULL THEN 1 END) AS signal_linked_requests,
-                ROUND(SUM(order_total), 2) AS service_value_exposure,
-                ROUND(SUM(CASE WHEN social_source_id IS NOT NULL THEN order_total ELSE 0 END), 2) AS signal_linked_service_value,
-                ROUND(AVG(order_total), 2) AS avg_request_value,
-                COUNT(DISTINCT customer_id) AS constituents_served
-         FROM orders
-         WHERE CAST(created_at AS DATE) >= SYSDATE - 30`
-      );
-      const c = commerceRes.rows[0] || {};
-      const signalPct = c.TOTAL_SERVICE_REQUESTS > 0 ? ((c.SIGNAL_LINKED_REQUESTS / c.TOTAL_SERVICE_REQUESTS) * 100).toFixed(1) : '0';
-
-      fallbackResult = `Last 30 days: ${(c.TOTAL_SERVICE_REQUESTS || 0).toLocaleString()} service requests, $${(c.SERVICE_VALUE_EXPOSURE || 0).toLocaleString()} service value exposure. ` +
-        `${signalPct}% linked to resident signals ($${(c.SIGNAL_LINKED_SERVICE_VALUE || 0).toLocaleString()}). ` +
-        `Avg request value: $${c.AVG_REQUEST_VALUE || 0}. ${(c.CONSTITUENTS_SERVED || 0).toLocaleString()} constituents served.`;
-      fallbackData = [c];
-      toolsUsed.push({ tool: 'SERVICE_OPERATIONS_SQL_TOOL (direct)', status: 'success' });
-
-      // Category breakdown if asked
-      if (qLower.includes('category') || qLower.includes('breakdown')) {
-        const catRes = await db.execute(
-          `SELECT p.category,
-                  COUNT(DISTINCT o.order_id) AS orders,
-                  ROUND(SUM(oi.quantity * oi.unit_price), 2) AS revenue
-           FROM order_items oi
-           JOIN orders o ON oi.order_id = o.order_id
-           JOIN products p ON oi.product_id = p.product_id
-           WHERE CAST(o.created_at AS DATE) >= SYSDATE - 30
-           GROUP BY p.category
-           ORDER BY revenue DESC`
-        );
-        fallbackData = catRes.rows;
-        toolsUsed.push({ tool: 'SERVICE_OPERATIONS_SQL_TOOL (category)', status: 'success' });
-      }
-    }
-  } catch (toolErr) {
-    toolsUsed.push({ tool: 'fallback', status: 'error', reason: toolErr.message });
-  }
-
-  // ── Step 4: Log the chat interaction ──
+  // ── Step 3: Log the chat interaction ──
   await logAction('chat_agent', 'chat_query', intent, null, {
     question: q,
     team: publicTeamName(team),
