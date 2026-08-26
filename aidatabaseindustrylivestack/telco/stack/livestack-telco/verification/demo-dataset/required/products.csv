@@ -1,0 +1,33 @@
+product_id,brand_id,sku,product_name,description,category,subcategory,unit_price,unit_cost,weight_kg,is_active,launch_date,tags,created_at,updated_at
+1541,141,SIG-00001,5G Unlimited Mobile Plan,,Mobile Service,Consumer Wireless,85,32,0.001,1,2024-09-14,"5g,unlimited,mobile,consumer,plan",2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+1542,141,SIG-00002,Premium International Roaming Pass,,Roaming Services,Travel,35,12,0.001,1,2025-06-07,"roaming,international,travel,billing",2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+1543,141,SIG-00003,Number Port-In Activation,,Mobile Service,Activation,25,8,0.001,1,2026-04-11,"activation,port-in,line,subscriber",2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+1544,142,FIB-00004,Gigabit Fiber Install,,Fiber Broadband,Residential Fiber,120,48,0.001,1,2026-03-19,"fiber,gigabit,install,broadband",2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+1545,142,FIB-00005,Fiber Repair Appointment,,Field Operations,Repair,95,36,0.001,1,2026-04-22,"fiber,repair,technician,dispatch",2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+1546,142,FIB-00006,Small Business Fiber SLA,,Enterprise Connectivity,Business Broadband,260,110,0.001,1,2025-02-26,"business,fiber,sla,enterprise",2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+1547,143,PUL-00007,5G Business Consultation,,5G Services,Enterprise Wireless,420,175,0.001,1,2024-07-14,"5g,business,consultation,private-network",2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+1548,143,PUL-00008,Home Wi-Fi Mesh Kit,,Devices,Home Network,180,72,1.2,1,2025-04-12,"wifi,mesh,home-internet,device",2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+1549,143,PUL-00009,Device Upgrade Enrollment,,Mobile Service,Upgrade,55,19,0.001,1,2024-12-28,"upgrade,device,subscriber,retention",2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+1550,144,CLE-00010,Customer Retention Intake,,Customer Retention,Churn Save,0,0,0.001,1,2025-05-17,"retention,churn,save-offer,agent",2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+1551,144,CLE-00011,Outage Follow-Up Call,,Service Assurance,Outage Response,0,0,0.001,1,2026-01-13,"outage,follow-up,customer-care",2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+1552,144,CLE-00012,Fraud Resolution Case,,Security,Account Protection,45,18,0.001,1,2024-08-26,"fraud,sim-swap,account-security",2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+1553,145,ORB-00013,IoT Sensor Gateway Kit,,IoT Connectivity,Industrial IoT,310,122,0.6,1,2024-08-24,"iot,gateway,sensor,enterprise",2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+1554,145,ORB-00014,Fleet Telematics SIM Pack,,IoT Connectivity,Fleet,145,54,0.2,1,2026-01-31,"iot,fleet,telematics,sim",2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+1555,145,ORB-00015,Field Technician Evaluation,,Field Operations,Dispatch,220,90,0.001,1,2024-08-10,"technician,field,dispatch,work-order",2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+1556,146,HOM-00016,Fixed Wireless Home Internet,,Fixed Wireless,Residential Broadband,70,28,0.001,1,2025-11-15,"fixed-wireless,home-internet,broadband",2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+1557,146,HOM-00017,LTE Backup Gateway,,Devices,Business Continuity,115,42,0.5,1,2025-03-22,"lte,backup,gateway,business",2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+1558,146,HOM-00018,Smart Home Connectivity Assessment,,Connected Home,Support,95,36,0.001,1,2024-08-17,"smart-home,coverage,wifi,assessment",2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+1559,147,MET-00019,5G Mobile Hotspot Kit,,Devices,Mobile Broadband,89,31,0.35,1,2026-02-03,"hotspot,5g,mobile-broadband,device",2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+1560,147,MET-00020,SIM Replacement Starter Kit,,Devices,Subscriber Support,15,5,0.05,1,2025-10-26,"sim,replacement,activation,support",2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+1561,147,MET-00021,Connected Device Monitoring Onboarding,,Network Monitoring,Device Operations,210,84,0.4,1,2025-11-25,"device-monitoring,onboarding,iot,network",2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+1562,148,WEL-00022,Student Mobile Plan,,Family Plans,Student,40,16,0.001,1,2024-06-20,"student,family,mobile,plan",2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+1563,148,WEL-00023,Family Data Share Plan,,Family Plans,Shared Data,150,62,0.001,1,2025-10-06,"family,data-share,multi-line,plan",2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+1564,148,WEL-00024,Network Congestion Plan Review,,Service Assurance,Congestion,0,0,0.001,1,2025-06-22,"congestion,plan-review,network",2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+1565,149,SIL-00025,Senior Connected Life Plan,,Connected Life,Senior Mobile,45,18,0.001,1,2025-06-06,"senior,connected-life,mobile,plan",2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+1566,149,SIL-00026,Family Connectivity Support Session,,Connected Life,Family Support,30,12,0.001,1,2025-07-23,"family,family-support,connectivity,support",2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+1567,150,ENT-00027,Enterprise Account Navigation,,Enterprise Connectivity,Account Management,360,145,0.001,1,2026-01-14,"enterprise,account,network,consulting",2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+1568,150,ENT-00028,Edge Compute Reservation,,Enterprise Connectivity,Edge,640,260,0.001,1,2026-04-10,"edge,compute,reservation,enterprise",2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+1569,151,ROA-00029,Fiber Appointment Scheduling,,Field Operations,Scheduling,0,0,0.001,1,2026-01-06,"appointment,fiber,scheduling,dispatch",2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+1570,151,ROA-00030,Roaming Cost Coaching,,Roaming Services,Bill Optimization,25,8,0.001,1,2026-03-31,"roaming,billing,cost-optimization",2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+1571,152,WAV-00031,New Line Activation,,Mobile Service,Growth,30,11,0.001,1,2025-01-27,"new-line,activation,growth",2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+1572,152,WAV-00032,Churn Risk Save Offer,,Customer Retention,Save Offer,20,7,0.001,1,2024-11-04,"churn,save-offer,retention",2026-05-27T11:26:09Z,2026-05-27T11:26:09Z

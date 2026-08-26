@@ -1,0 +1,13 @@
+center_id,center_name,center_type,address_line1,city,state_province,postal_code,country,latitude,longitude,capacity_units,current_load_pct,is_active,operating_hours,created_at
+141,NYC Network Command Center,distribution,,Edison,New Jersey,08817,US,40.5187,-74.4121,240000,0,1,06:00-22:00,2026-05-27T11:26:09Z
+142,Los Angeles Fiber Field Hub,warehouse,,Ontario,California,91761,US,34.0633,-117.6509,320000,0,1,06:00-22:00,2026-05-27T11:26:09Z
+143,Chicago Midwest NOC,distribution,,Joliet,Illinois,60435,US,41.525,-88.0817,210000,0,1,06:00-22:00,2026-05-27T11:26:09Z
+144,Dallas 5G Dispatch Center,warehouse,,Lancaster,Texas,75134,US,32.5921,-96.7561,185000,0,1,06:00-22:00,2026-05-27T11:26:09Z
+145,Atlanta Home Internet Dispatch,distribution,,Union City,Georgia,30291,US,33.5871,-84.5421,220000,0,1,06:00-22:00,2026-05-27T11:26:09Z
+146,Seattle Customer Experience Center,micro,,Kent,Washington,98032,US,47.3809,-122.2348,95000,0,1,06:00-22:00,2026-05-27T11:26:09Z
+147,Miami Connected Life Hub,distribution,,Hialeah,Florida,33012,US,25.8576,-80.2781,120000,0,1,06:00-22:00,2026-05-27T11:26:09Z
+148,Denver IoT Field Center,warehouse,,Aurora,Colorado,80011,US,39.7294,-104.8319,110000,0,1,06:00-22:00,2026-05-27T11:26:09Z
+149,Phoenix Device Logistics Hub,warehouse,,Goodyear,Arizona,85338,US,33.4353,-112.3577,135000,0,1,06:00-22:00,2026-05-27T11:26:09Z
+150,Boston Family Plan Support Center,micro,,Fall River,Massachusetts,02720,US,41.7015,-71.155,88000,0,1,06:00-22:00,2026-05-27T11:26:09Z
+151,Houston Roaming Operations Hub,distribution,,Missouri City,Texas,77459,US,29.6186,-95.5377,150000,0,1,06:00-22:00,2026-05-27T11:26:09Z
+152,Bay Area Enterprise Edge NOC,micro,,Fremont,California,94538,US,37.5485,-121.9886,90000,0,1,06:00-22:00,2026-05-27T11:26:09Z

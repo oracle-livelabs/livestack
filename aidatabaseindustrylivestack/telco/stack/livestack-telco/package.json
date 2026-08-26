@@ -1,0 +1,42 @@
+{
+  "name": "telecom-network-experience-demo",
+  "version": "1.0.0",
+  "description": "Telecommunications Network Experience & Smart Operations - Oracle 26ai Converged Database Demo",
+  "main": "backend/server.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "nodemon backend/server.js",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "verify:brand-colors": "node verification/check-brand-colors.js",
+    "verify:contrast": "node verification/check-contrast.js",
+    "verify:focus-semantics": "node verification/check-focus-semantics.js",
+    "verify:graph-query-contract": "node verification/check-graph-query-contract.js",
+    "verify:askdata-conversation-contract": "node verification/check-askdata-conversation-contract.js",
+    "verify:agent-conversation-contract": "node verification/check-agent-conversation-contract.js",
+    "verify:wave3-bootstrap-contract": "node verification/check-wave3-bootstrap-contract.js",
+    "verify:wave3-generation-contract": "node verification/check-wave3-generation-contract.js",
+    "verify:wave3-rollback-contract": "node verification/check-wave3-rollback-contract.js",
+    "verify:wave3-feature-evidence-contract": "node verification/check-wave3-feature-evidence-contract.js",
+    "start": "node backend/server.js",
+    "start:prod": "NODE_ENV=production pm2 start backend/server.js --name telecom-network-experience"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.17",
+    "cors": "^2.8.5",
+    "csv-parse": "^6.2.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "multer": "^2.1.1",
+    "oracledb": "^6.7.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1",
+    "nodemon": "^3.1.4"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

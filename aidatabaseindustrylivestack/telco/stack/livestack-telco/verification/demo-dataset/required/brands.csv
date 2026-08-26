@@ -1,0 +1,13 @@
+brand_id,brand_name,brand_slug,brand_category,headquarters_city,headquarters_lat,headquarters_lon,founded_year,annual_revenue,social_tier,created_at,updated_at
+141,SignalBridge Mobile,signalbridge,Mobile Service,New York,40.7128,-74.006,2012,825000000,premium,2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+142,FiberPath Broadband,fiberpath,Fiber Broadband,Chicago,41.8781,-87.6298,2008,710000000,premium,2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+143,PulsePoint 5G,pulsepoint5g,5G Services,Dallas,32.7767,-96.797,2015,585000000,premium,2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+144,ClearMind Customer Care,clearmindcare,Customer Retention,Seattle,47.6062,-122.3321,2019,176000000,standard,2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+145,OrbitMotion IoT,orbitmotion,IoT Connectivity,Denver,39.7392,-104.9903,2016,398000000,standard,2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+146,HomeConnect Fixed Wireless,homeconnect,Fixed Wireless,Atlanta,33.749,-84.388,2018,424000000,standard,2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+147,MetroSupply Devices,metrosupply,Devices,Phoenix,33.4484,-112.074,2014,660000000,premium,2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+148,WellNest Family Plans,wellnest,Family Plans,Boston,42.3601,-71.0589,2020,254000000,emerging,2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+149,SilverLine Connected Life,silverline,Connected Life,Miami,25.7617,-80.1918,2011,348000000,standard,2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+150,EnterpriseEdge Services,enterpriseedge,Enterprise Connectivity,San Francisco,37.7749,-122.4194,2017,732000000,premium,2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+151,RoamFlow Mobility,roamflow,Roaming Services,Houston,29.7604,-95.3698,2013,475000000,premium,2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
+152,WaveFirst Mobile,wavefirst,New Line Growth,Nashville,36.1627,-86.7816,2018,284000000,standard,2026-05-27T11:26:09Z,2026-05-27T11:26:09Z
