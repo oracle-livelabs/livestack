@@ -113,6 +113,7 @@ require_entry "scripts/verify-rc-zip.sh"
 require_entry "tests/test-custom-image-preparation.sh"
 require_entry "tests/test-data-transforms-connection-provisioning.sh"
 require_entry "tests/test-wallet-hardening.sh"
+require_entry "tests/test-osa-streaming-restart-safety.sh"
 
 echo "Checking excluded runtime/build artifacts..."
 forbidden_entries="$(
@@ -204,6 +205,8 @@ require_text "init/create-pg-iceberg-connection.sh" 'configure_adb_connection "$
 require_text "init/create-pg-iceberg-connection.sh" "import requests"
 require_text "init/create-pg-iceberg-connection.sh" "jobs/test_connection"
 require_text "init/create-pg-iceberg-connection.sh" "enableCredentialVending"
+require_text "init/create-pg-iceberg-connection.sh" '"s3AccessId": os.environ["S3_ACCESS_ID"]'
+require_text "init/create-pg-iceberg-connection.sh" '"s3SecretKey": os.environ["S3_SECRET_KEY"]'
 require_text "init/create-iceberg-adb-external-table.sh" "DBMS_CLOUD.CREATE_EXTERNAL_TABLE"
 require_text "init/create-iceberg-adb-external-table.sh" "PG_OCI_GENAI_CRED"
 require_text "init/create-iceberg-adb-external-table.sh" "set +u"
@@ -244,6 +247,7 @@ if [[ "${RUN_BUILD}" -eq 1 ]]; then
   bash "${tmp_dir}/tests/test-custom-image-preparation.sh"
   bash "${tmp_dir}/tests/test-data-transforms-connection-provisioning.sh"
   bash "${tmp_dir}/tests/test-wallet-hardening.sh"
+  bash "${tmp_dir}/tests/test-osa-streaming-restart-safety.sh"
   echo "Building frontend from clean extracted archive..."
   cd "${tmp_dir}/ingestion/frontend"
   npm_config_cache="${tmp_dir}/.npm-cache" npm ci --include=dev

@@ -493,6 +493,28 @@ function Read-ReadyForMarketplaceReceipt {
         throw "Ready-for-Marketplace receipt is not valid JSON: $Path"
     }
 
+    # PowerShell 7 materializes ISO-8601 JSON values as DateTime instances.
+    # Receipts intentionally store timestamps as canonical UTC strings, so
+    # normalize them before validating their type or signed payload.
+    foreach ($timestampName in @(
+            "created_utc",
+            "updated_utc",
+            "automated_test_completed_utc",
+            "reboot_test_completed_utc",
+            "cleanup_completed_utc",
+            "inspection_started_utc",
+            "inspection_completed_utc",
+            "inspection_approved_utc"
+        )) {
+        $property = $receipt.PSObject.Properties[$timestampName]
+        if ($null -ne $property -and $property.Value -is [DateTime]) {
+            $property.Value = $property.Value.ToUniversalTime().ToString(
+                "o",
+                [System.Globalization.CultureInfo]::InvariantCulture
+            )
+        }
+    }
+
     Assert-ReadyForMarketplaceReceipt -Receipt $receipt
     return $receipt
 }
@@ -2085,6 +2107,17 @@ function Read-ManualCaptureReceipt {
     }
     catch {
         throw "Manual capture receipt is not valid JSON: $Path"
+    }
+
+    # ConvertFrom-Json materializes ISO-8601 timestamps as DateTime values on
+    # PowerShell 7. Formatting that value through [string] applies the local
+    # time zone and drops the trailing Z, which makes a valid UTC receipt fail
+    # validation on macOS and Linux. Normalize it back to round-trip UTC first.
+    if ($receipt.created_utc -is [DateTime]) {
+        $receipt.created_utc = $receipt.created_utc.ToUniversalTime().ToString(
+            "o",
+            [System.Globalization.CultureInfo]::InvariantCulture
+        )
     }
 
     $expectedProperties = @(

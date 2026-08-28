@@ -792,10 +792,6 @@ function applicationMatchesDesired(application, sourceId, targetId) {
     && Object.entries(TARGET_MAPPING).every(([targetField, sourceField]) => mapping[targetField] === sourceField);
 }
 
-function applicationIsRunning(application) {
-  return application?.catalog?.running === true;
-}
-
 async function fetchSparkStatus(config) {
   if (!config.sparkStatusUrl) return null;
   try {
@@ -900,8 +896,7 @@ async function ensureOsaStreamingPipeline(config) {
   if (existingApplication?.isPublished === true
     && existingSource?.id
     && existingTarget?.id
-    && applicationMatchesDesired(existingApplication, existingSource.id, existingTarget.id)
-    && applicationIsRunning(existingApplication)) {
+    && applicationMatchesDesired(existingApplication, existingSource.id, existingTarget.id)) {
     return {
       ok: true,
       kafkaConnectionId: kafkaConnection.id,
