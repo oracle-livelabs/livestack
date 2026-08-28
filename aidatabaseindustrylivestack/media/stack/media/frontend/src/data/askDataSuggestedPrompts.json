@@ -1,0 +1,38 @@
+[
+  {
+    "text": "Which launch event is at greatest churn or revenue risk this weekend?",
+    "category": "Launch Risk"
+  },
+  {
+    "text": "Which content assets are driving the most campaign value this week?",
+    "category": "Content Performance"
+  },
+  {
+    "text": "Which audience segments have the highest campaign value?",
+    "category": "Audience Segments"
+  },
+  {
+    "text": "How many audience signal posts have urgency score above 80?",
+    "category": "Audience Signals"
+  },
+  {
+    "text": "Which distribution hubs have the most available live-event capacity?",
+    "category": "Live Events"
+  },
+  {
+    "text": "Which studios or publishers have the highest average campaign value?",
+    "category": "Studios"
+  },
+  {
+    "text": "What is the total content revenue from all campaign requests?",
+    "category": "Monetization"
+  },
+  {
+    "text": "How many campaign requests have an audience signal source?",
+    "category": "Personalization"
+  },
+  {
+    "text": "Which creators are producing the fastest-rising audience signals by platform?",
+    "category": "Creator Analytics"
+  }
+]
