@@ -75,15 +75,18 @@ locals {
   wallet_path                       = "${local.automation_root}/${local.artifact_prefix}-wallet.zip"
   generated_api_private_key_path    = "${local.automation_root}/${local.artifact_prefix}-oci-api-key.pem"
   use_existing_identity_credentials = var.identity_credentials.mode == "existing"
-  api_private_key_source_path       = local.use_existing_identity_credentials ? abspath(var.identity_credentials.api_private_key_path) : local_sensitive_file.api_private_key[0].filename
-  api_fingerprint                   = local.use_existing_identity_credentials ? var.identity_credentials.api_fingerprint : oci_identity_api_key.application[0].fingerprint
-  s3_access_key_id                  = local.use_existing_identity_credentials ? var.identity_credentials.s3_access_key_id : oci_identity_customer_secret_key.gravitino[0].id
-  s3_secret_access_key              = local.use_existing_identity_credentials ? var.identity_credentials.s3_secret_access_key : oci_identity_customer_secret_key.gravitino[0].key
-  low_index                         = index(oci_database_autonomous_database.peak_gear.connection_strings[0].profiles.*.consumer_group, "LOW")
-  low_connection                    = oci_database_autonomous_database.peak_gear.connection_strings[0].profiles[local.low_index].value
-  ords_url                          = oci_database_autonomous_database.peak_gear.connection_urls[0].ords_url
-  object_namespace                  = data.oci_objectstorage_namespace.current.namespace
-  object_storage_s3_url             = "https://${local.object_namespace}.compat.objectstorage.${var.context.region}.oraclecloud.com"
+  # Keep every protected runtime artifact under the embedded automation folder.
+  # Existing credentials can originate elsewhere on a developer machine, but the
+  # test harness deliberately stages runtime files only from this ignored folder.
+  api_private_key_source_path = local.use_existing_identity_credentials ? local_sensitive_file.existing_api_private_key[0].filename : local_sensitive_file.api_private_key[0].filename
+  api_fingerprint             = local.use_existing_identity_credentials ? var.identity_credentials.api_fingerprint : oci_identity_api_key.application[0].fingerprint
+  s3_access_key_id            = local.use_existing_identity_credentials ? var.identity_credentials.s3_access_key_id : oci_identity_customer_secret_key.gravitino[0].id
+  s3_secret_access_key        = local.use_existing_identity_credentials ? var.identity_credentials.s3_secret_access_key : oci_identity_customer_secret_key.gravitino[0].key
+  low_index                   = index(oci_database_autonomous_database.peak_gear.connection_strings[0].profiles.*.consumer_group, "LOW")
+  low_connection              = oci_database_autonomous_database.peak_gear.connection_strings[0].profiles[local.low_index].value
+  ords_url                    = oci_database_autonomous_database.peak_gear.connection_urls[0].ords_url
+  object_namespace            = data.oci_objectstorage_namespace.current.namespace
+  object_storage_s3_url       = "https://${local.object_namespace}.compat.objectstorage.${var.context.region}.oraclecloud.com"
 }
 
 resource "oci_database_autonomous_database" "peak_gear" {
@@ -180,6 +183,15 @@ resource "local_sensitive_file" "api_private_key" {
   count = local.use_existing_identity_credentials ? 0 : 1
 
   content              = tls_private_key.application[0].private_key_pem
+  filename             = local.generated_api_private_key_path
+  file_permission      = "0600"
+  directory_permission = "0700"
+}
+
+resource "local_sensitive_file" "existing_api_private_key" {
+  count = local.use_existing_identity_credentials ? 1 : 0
+
+  content              = file(var.identity_credentials.api_private_key_path)
   filename             = local.generated_api_private_key_path
   file_permission      = "0600"
   directory_permission = "0700"

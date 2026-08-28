@@ -205,6 +205,33 @@ assert properties["jdbcUrl"] == "jdbc:oracle:thin:@atp214345_low?TNS_ADMIN=/u01/
 assert properties["dataServerProperties"] == {"fetchSize": "5000"}
 PY
 
+ICEBERG_REST_URL="http://catalog.example.invalid:1525/iceberg"
+GRAVITINO_S3_ACCESS_KEY_ID="example-access-id"
+GRAVITINO_S3_SECRET_ACCESS_KEY="example-secret-key"
+build_connection_payload "${TEST_ROOT}/iceberg-connection-payload.json"
+"${PYTHON_BIN}" - "${TEST_ROOT}/iceberg-connection-payload.json" <<'PY'
+import json
+import sys
+
+with open(sys.argv[1], encoding="utf-8") as handle:
+    payload = json.load(handle)
+
+properties = payload["connectionProperties"]["dataServerProperties"]
+assert properties["restUri"] == "http://catalog.example.invalid:1525/iceberg"
+assert properties["s3AccessId"] == "example-access-id"
+assert properties["s3SecretKey"] == "example-secret-key"
+PY
+
+unset GRAVITINO_S3_ACCESS_KEY_ID GRAVITINO_S3_SECRET_ACCESS_KEY
+set +e
+missing_storage_credentials_output="$(build_connection_payload "${TEST_ROOT}/missing-storage-credentials.json" 2>&1)"
+missing_storage_credentials_status=$?
+set -e
+[[ "${missing_storage_credentials_status}" -ne 0 ]] \
+  || fail "Iceberg payload creation must fail without storage credentials."
+[[ "${missing_storage_credentials_output}" == *"storage credentials are not configured"* ]] \
+  || fail "Missing Iceberg storage credentials must produce a useful diagnostic."
+
 "${PYTHON_BIN}" - \
   "${TEST_ROOT}/connection-detail.json" \
   "${TEST_ROOT}/object-id-only-detail.json" <<'PY'

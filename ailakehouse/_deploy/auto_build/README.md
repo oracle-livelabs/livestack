@@ -3,6 +3,33 @@
 This is the build-and-test automation for the AILakehouse LiveStack. It replaces
 the old manual ZIP-to-VM image-build loop.
 
+## 1. Prepare The Workstation
+
+Run the setup script before creating the OCI profile or filling any local
+variable file. It installs the required Git, Terraform, Packer, PowerShell 7,
+Python, OCI CLI, OpenSSH, and curl tools.
+
+Windows PowerShell:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\setup-workstation.ps1
+```
+
+macOS or Linux Terminal:
+
+```bash
+bash ./setup-workstation.sh
+```
+
+After setup completes, open a new terminal if requested. Then create the local
+OCI security-token profile and continue with the variable files documented in
+`01-image-build/README.md`.
+
+To check a workstation without installing anything, use `-CheckOnly` on
+Windows or `--check` on macOS/Linux.
+
+## 2. Build And Test
+
 ```text
 ll-lakehouse/ingestion  -> application and Compose source
 ll-lakehouse/init       -> first-boot configuration scripts

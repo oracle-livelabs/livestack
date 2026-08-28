@@ -802,6 +802,40 @@ detect_adb_service_name() {
   ' "${tnsnames_file}"
 }
 
+resolve_adb_service_name() {
+  local tnsnames_file="$1"
+  local requested_service_name="$2"
+
+  awk -v requested="${requested_service_name}" '
+    /^[[:space:]]*#/ { next }
+    /^[[:space:]]*[A-Za-z0-9._-]+[[:space:]]*=/ {
+      name=$0
+      sub(/^[[:space:]]*/, "", name)
+      sub(/[[:space:]]*=.*/, "", name)
+      if (requested != "" && tolower(name) == tolower(requested)) {
+        print name
+        found = 1
+        exit
+      }
+      if (first == "") {
+        first = name
+      }
+      if (high == "" && tolower(name) ~ /_high$/) {
+        high = name
+      }
+    }
+    END {
+      if (!found) {
+        if (high != "") {
+          print high
+        } else if (first != "") {
+          print first
+        }
+      }
+    }
+  ' "${tnsnames_file}"
+}
+
 package_osa_wallet() {
   local wallet_dir="$1"
   local wallet_zip="$2"
@@ -860,13 +894,15 @@ configure_osa_adb_connection() {
     fi
   done
 
-  local service_name="${OSA_ADB_SERVICE_NAME:-}"
-  if [[ -z "${service_name}" ]]; then
-    service_name="$(detect_adb_service_name "${wallet_dir}/tnsnames.ora")"
-  fi
+  local requested_service_name="${OSA_ADB_SERVICE_NAME:-}"
+  local service_name
+  service_name="$(resolve_adb_service_name "${wallet_dir}/tnsnames.ora" "${requested_service_name}")"
   if [[ -z "${service_name}" ]]; then
     log "Could not determine the ADB service name from ${wallet_dir}/tnsnames.ora; skipping OSA ADB connection bootstrap"
     return 0
+  fi
+  if [[ -n "${requested_service_name}" && "${service_name}" != "${requested_service_name}" ]]; then
+    log "Using wallet service alias ${service_name} instead of metadata value ${requested_service_name}"
   fi
 
   local username="${OSA_ADB_USERNAME:-PG}"
@@ -892,14 +928,6 @@ configure_osa_adb_connection() {
   local description="${OSA_ADB_CONNECTION_DESCRIPTION:-Autonomous Database connection created automatically from the server wallet.}"
 
   cookie_file="$(mktemp)"
-  wallet_zip="$(mktemp --suffix=.zip)"
-
-  if ! package_osa_wallet "${wallet_dir}" "${wallet_zip}" >/dev/null 2>&1; then
-    log "Failed to package the ADB wallet for OSA; skipping OSA ADB connection bootstrap"
-    rm -f "${cookie_file}" "${wallet_zip}"
-    return 0
-  fi
-
   api_base="$(osa_api_base_url)"
   login_payload="$(jq -cn --arg username "${OSA_ADMIN_USER}" --arg password "${OSA_ADMIN_PASSWORD}" \
     '{username:$username,password:$password}')"
@@ -909,6 +937,29 @@ configure_osa_adb_connection() {
       -X POST "${api_base}/auth/token" \
       --data-binary @- <<<"${login_payload}" >/dev/null; then
     log "Could not authenticate to the local OSA API; skipping OSA ADB connection bootstrap"
+    rm -f "${cookie_file}" "${wallet_zip}"
+    return 0
+  fi
+
+  if ! connections_response="$(curl -kfsS -b "${cookie_file}" "${api_base}/connections/type/DatabaseConnection")"; then
+    log "Could not read existing OSA database connections; skipping OSA ADB connection bootstrap"
+    rm -f "${cookie_file}"
+    return 0
+  fi
+  existing_id="$(jq -r \
+    --arg name "${connection_name}" \
+    --arg display_name "${display_name}" \
+    '.data[]? | select((.wname? == $name) or (.name? == $name) or (.displayName? == $display_name) or (.metadata?.name? == $name) or (.metadata?.displayName? == $display_name)) | .id // empty' \
+    <<<"${connections_response}" | head -n 1)"
+  if [[ -n "${existing_id}" ]]; then
+    log "Reusing existing OSA ADB connection ${connection_name}; preserving its wallet and target bindings"
+    rm -f "${cookie_file}"
+    return 0
+  fi
+
+  wallet_zip="$(mktemp --suffix=.zip)"
+  if ! package_osa_wallet "${wallet_dir}" "${wallet_zip}" >/dev/null 2>&1; then
+    log "Failed to package the ADB wallet for OSA; skipping OSA ADB connection bootstrap"
     rm -f "${cookie_file}" "${wallet_zip}"
     return 0
   fi
@@ -946,18 +997,7 @@ configure_osa_adb_connection() {
       password: $password
     }')"
 
-  if connections_response="$(curl -kfsS -b "${cookie_file}" "${api_base}/connections/type/DatabaseConnection")"; then
-    existing_id="$(jq -r \
-      --arg name "${connection_name}" \
-      --arg display_name "${display_name}" \
-      '.data[]? | select((.wname? == $name) or (.name? == $name) or (.displayName? == $display_name) or (.metadata?.name? == $name) or (.metadata?.displayName? == $display_name)) | .id // empty' \
-      <<<"${connections_response}" | head -n 1)"
-  else
-    existing_id=""
-  fi
-
   connection_payload="$(jq -cn \
-    --arg id "${existing_id}" \
     --arg name "${connection_name}" \
     --arg display_name "${display_name}" \
     --arg description "${description}" \
@@ -968,7 +1008,7 @@ configure_osa_adb_connection() {
       updatedAt: null,
       updatedBy: null,
       name: $name,
-      id: (if $id == "" then null else $id end),
+      id: null,
       displayName: $display_name,
       description: $description,
       attachedTagNames: [],
@@ -977,33 +1017,18 @@ configure_osa_adb_connection() {
       parameters: $parameters
     }')"
 
-  if [[ -n "${existing_id}" ]]; then
-    if ! save_response="$(curl -kfsS -b "${cookie_file}" \
-        -H "Content-Type: application/json" \
-        -X PUT "${api_base}/connections/${existing_id}" \
-        --data-binary @- <<<"${connection_payload}")"; then
-      log "Could not update existing OSA ADB connection ${connection_name}; leaving OSA running"
-      rm -f "${cookie_file}" "${wallet_zip}"
-      return 0
-    fi
-  else
-    if ! save_response="$(curl -kfsS -b "${cookie_file}" \
-        -H "Content-Type: application/json" \
-        -X POST "${api_base}/connections" \
-        --data-binary @- <<<"${connection_payload}")"; then
-      log "Could not create OSA ADB connection ${connection_name}; leaving OSA running"
-      rm -f "${cookie_file}" "${wallet_zip}"
-      return 0
-    fi
+  if ! save_response="$(curl -kfsS -b "${cookie_file}" \
+      -H "Content-Type: application/json" \
+      -X POST "${api_base}/connections" \
+      --data-binary @- <<<"${connection_payload}")"; then
+    log "Could not create OSA ADB connection ${connection_name}; leaving OSA running"
+    rm -f "${cookie_file}" "${wallet_zip}"
+    return 0
   fi
 
   save_success="$(jq -r '.success // false' <<<"${save_response}")"
   if [[ "${save_success}" == "true" ]]; then
-    if [[ -n "${existing_id}" ]]; then
-      log "Updated OSA ADB connection ${connection_name} using service ${service_name}"
-    else
-      log "Created OSA ADB connection ${connection_name} using service ${service_name}"
-    fi
+    log "Created OSA ADB connection ${connection_name} using service ${service_name}"
   else
     log "OSA ADB connection API returned an unsuccessful response for ${connection_name}; leaving OSA running"
   fi
@@ -1150,4 +1175,6 @@ main() {
   monitor_services
 }
 
-main "$@"
+if [[ "${BASH_SOURCE[0]}" == "$0" ]]; then
+  main "$@"
+fi
