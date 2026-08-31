@@ -21,6 +21,30 @@ logs, so those values cannot enter a reusable image.
 
 ## Before Running
 
+### Choose OCI Authentication
+
+Use an existing API-key profile for builds that must run longer than a browser
+session. This profile does not expire, and the automation validates it without
+editing `~/.oci/config`:
+
+```hcl
+# 01-edit/packer.auto.pkrvars.hcl
+oci_profile = "<existing-api-key-profile>"
+
+# ../terraform/01-edit/terraform.tfvars
+ociAuthMethod    = "APIKey"
+ociConfigProfile = "<existing-api-key-profile>"
+```
+
+The selected profile must match `ociTenancyOcid` and `ociUserOcid`. It must
+contain `tenancy`, `user`, `fingerprint`, and `key_file`, and must not contain
+`security_token_file`.
+
+Short-lived browser authentication is optional. Create it with a new profile
+name that does not already exist, use that name in both files, and set
+`ociAuthMethod = "SecurityToken"`. `oci session authenticate` creates or
+replaces the named profile, so never give it the name of an API-key profile.
+
 Create the two ignored local variable files from their templates:
 
 ```powershell
@@ -54,10 +78,16 @@ Windows:
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\03-automation\build-and-test.ps1 -ImageName "my-livestack-v1" -ValidateOnly
 ```
 
-macOS or Linux:
+macOS:
 
 ```bash
-bash ./03-automation/build-and-test.sh -ImageName "my-livestack-v1" -ValidateOnly
+bash ./03-automation/build-and-test-macos.sh -ImageName "my-livestack-v1" -ValidateOnly
+```
+
+Linux:
+
+```bash
+bash ./03-automation/build-and-test-linux.sh -ImageName "my-livestack-v1" -ValidateOnly
 ```
 
 ### 2. Automatic Build And Acceptance Test
@@ -72,10 +102,16 @@ Windows:
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\03-automation\build-and-test.ps1 -ImageName "my-livestack-v1"
 ```
 
-macOS or Linux:
+macOS:
 
 ```bash
-bash ./03-automation/build-and-test.sh -ImageName "my-livestack-v1"
+bash ./03-automation/build-and-test-macos.sh -ImageName "my-livestack-v1"
+```
+
+Linux:
+
+```bash
+bash ./03-automation/build-and-test-linux.sh -ImageName "my-livestack-v1"
 ```
 
 ### 3. Manual Capture Fallback
@@ -95,10 +131,16 @@ Windows:
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\03-automation\build-and-test.ps1 -ImageName "my-livestack-v1" -PrepareManualCapture
 ```
 
-macOS or Linux:
+macOS:
 
 ```bash
-bash ./03-automation/build-and-test.sh -ImageName "my-livestack-v1" -PrepareManualCapture
+bash ./03-automation/build-and-test-macos.sh -ImageName "my-livestack-v1" -PrepareManualCapture
+```
+
+Linux:
+
+```bash
+bash ./03-automation/build-and-test-linux.sh -ImageName "my-livestack-v1" -PrepareManualCapture
 ```
 
 After the Console image is `Available`, test its image OCID through the normal
@@ -110,10 +152,16 @@ Windows:
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\03-automation\build-and-test.ps1 -ExistingImageOcid "ocid1.image..." -ImageName "my-livestack-v1"
 ```
 
-macOS or Linux:
+macOS:
 
 ```bash
-bash ./03-automation/build-and-test.sh -ExistingImageOcid "ocid1.image..." -ImageName "my-livestack-v1"
+bash ./03-automation/build-and-test-macos.sh -ExistingImageOcid "ocid1.image..." -ImageName "my-livestack-v1"
+```
+
+Linux:
+
+```bash
+bash ./03-automation/build-and-test-linux.sh -ExistingImageOcid "ocid1.image..." -ImageName "my-livestack-v1"
 ```
 
 ### 4. Visual Inspection
@@ -129,12 +177,24 @@ Windows:
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\03-automation\build-and-test.ps1 -ExistingImageOcid "ocid1.image..." -ImageName "my-livestack-v1" -InspectionMode
 ```
 
-macOS or Linux:
+macOS:
 
 ```bash
-bash ./03-automation/build-and-test.sh -ExistingImageOcid "ocid1.image..." -ImageName "my-livestack-v1" -InspectionMode
+bash ./03-automation/build-and-test-macos.sh -ExistingImageOcid "ocid1.image..." -ImageName "my-livestack-v1" -InspectionMode
+```
+
+Linux:
+
+```bash
+bash ./03-automation/build-and-test-linux.sh -ExistingImageOcid "ocid1.image..." -ImageName "my-livestack-v1" -InspectionMode
 ```
 
 Use the command printed by inspection to remove the VM when finished. Keep the
 inspection only as long as necessary; its saved Terraform state contains fresh
 generated credentials.
+
+The inspection VM is created by the embedded Terraform project at
+`auto_build/terraform`. The Windows runner uses the `.ps1` implementation;
+the macOS and Linux runners use `build-and-test.py` through their native Bash
+launchers. Both implementations resolve the same embedded Terraform folder;
+they do not use a separate checkout from the top-level Terraform repository.
