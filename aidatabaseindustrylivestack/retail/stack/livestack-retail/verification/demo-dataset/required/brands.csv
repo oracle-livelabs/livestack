@@ -1,0 +1,51 @@
+brand_id,brand_name,brand_slug,brand_category,headquarters_city,headquarters_lat,headquarters_lon,founded_year,annual_revenue,social_tier,created_at,updated_at
+1,UrbanPulse,urbanpulse,Athletic Apparel,New York,40.7128,-74.006,2018,45000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+2,TechNova,technova,Sports Tech,San Francisco,37.7749,-122.4194,2015,120000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+3,GlowKin,glowkin,Outdoor Care,Los Angeles,34.0522,-118.2437,2020,28000000,emerging,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+4,PeakForm,peakform,Fitness,Denver,39.7392,-104.9903,2017,67000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+5,NestCraft,nestcraft,Outdoor Lifestyle,Portland,45.5152,-122.6784,2019,32000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+6,VoltEdge,voltedge,Sports Tech,Austin,30.2672,-97.7431,2016,89000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+7,AuraScent,aurascent,Outdoor Care,Miami,25.7617,-80.1918,2021,15000000,emerging,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+8,TrailBlaze,trailblaze,Outdoor,Seattle,47.6062,-122.3321,2014,95000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+9,LuxeThread,luxethread,Athletic Apparel,New York,40.7128,-74.006,2012,210000000,luxury,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+10,ByteBite,bytebite,Sports Nutrition,Chicago,41.8781,-87.6298,2020,18000000,emerging,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+11,CloudStep,cloudstep,Footwear,Portland,45.5152,-122.6784,2019,42000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+12,ZenBrew,zenbrew,Sports Nutrition,Portland,45.5152,-122.6784,2018,25000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+13,IronCore,ironcore,Fitness,Nashville,36.1627,-86.7816,2016,55000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+14,PixelCraft,pixelcraft,Training Tech,San Jose,37.3382,-121.8863,2017,78000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+15,EverGreen,evergreen,Eco Outdoor Gear,San Francisco,37.7749,-122.4194,2020,22000000,emerging,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+16,SonicWave,sonicwave,Training Audio,Los Angeles,34.0522,-118.2437,2015,110000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+17,PureRoots,pureroots,Recovery,Boulder,40.015,-105.2705,2019,35000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+18,VelvetLine,velvetline,Athletic Apparel,Atlanta,33.749,-84.388,2021,12000000,emerging,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+19,AquaFit,aquafit,Fitness,Miami,25.7617,-80.1918,2018,40000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+20,CrystalView,crystalview,Sport Eyewear,New York,40.7128,-74.006,2016,65000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+21,MoonGlow,moonglow,Outdoor Care,Nashville,36.1627,-86.7816,2022,8000000,emerging,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+22,TerraGear,terragear,Outdoor,Denver,39.7392,-104.9903,2013,88000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+23,NeonNight,neonnight,Athletic Apparel,Las Vegas,36.1699,-115.1398,2021,19000000,emerging,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+24,FrostByte,frostbyte,Sports Tech,Seattle,47.6062,-122.3321,2018,52000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+25,WildRoam,wildroam,Outdoor Travel,Austin,30.2672,-97.7431,2019,30000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+26,OmniWear,omniwear,Sports Wearables,San Francisco,37.7749,-122.4194,2017,145000000,luxury,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+27,FlexiHome,flexihome,Outdoor Lifestyle,Dallas,32.7767,-96.797,2020,27000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+28,BoldBrew,boldbrew,Sports Nutrition,Brooklyn,40.6782,-73.9442,2019,16000000,emerging,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+29,AtomFit,atomfit,Sports Wearables,Boston,42.3601,-71.0589,2016,92000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+30,CoralReef,coralreef,Eco Outdoor Gear,Honolulu,21.3069,-157.8583,2021,11000000,emerging,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+31,StridePro,stridepro,Footwear,Boston,42.3601,-71.0589,2015,75000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+32,NovaSkin,novaskin,Outdoor Care,San Francisco,37.7749,-122.4194,2020,33000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+33,ThunderLift,thunderlift,Fitness,Dallas,32.7767,-96.797,2017,48000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+34,HaloVision,halovision,Sports Tech,San Jose,37.3382,-121.8863,2019,200000000,luxury,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+35,RusticHome,rustichome,Outdoor Lifestyle,Nashville,36.1627,-86.7816,2018,38000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+36,ElectraVibe,electravibe,Training Audio,Chicago,41.8781,-87.6298,2020,20000000,emerging,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+37,ZephyrWind,zephyrwind,Outdoor,Salt Lake City,40.7608,-111.891,2016,60000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+38,QuantumLeap,quantumleap,Sports Tech,Boston,42.3601,-71.0589,2014,180000000,luxury,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+39,SilkVeil,silkveil,Athletic Apparel,New York,40.7128,-74.006,2020,23000000,emerging,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+40,FlameCook,flamecook,Camp Cooking,Houston,29.7604,-95.3698,2019,31000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+41,MindfulTech,mindfultech,Recovery,San Francisco,37.7749,-122.4194,2021,14000000,emerging,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+42,ApexRide,apexride,Sports,Phoenix,33.4484,-112.074,2017,56000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+43,DarkMatter,darkmatter,Training Tech,Los Angeles,34.0522,-118.2437,2018,70000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+44,GoldenHarvest,goldenharvest,Sports Nutrition,Minneapolis,44.9778,-93.265,2016,85000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+45,NightOwl,nightowl,Sports Nutrition,Seattle,47.6062,-122.3321,2020,17000000,emerging,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+46,ClearPath,clearpath,Recovery,Scottsdale,33.4942,-111.9261,2019,28000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+47,SteelGrip,steelgrip,Outdoor Tools,Detroit,42.3314,-83.0458,2014,62000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+48,LunaWear,lunawear,Athletic Apparel,Miami,25.7617,-80.1918,2022,9000000,emerging,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+49,RapidCharge,rapidcharge,Sports Tech,Austin,30.2672,-97.7431,2019,44000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+50,VerdeLife,verdelife,Eco Outdoor Gear,Portland,45.5152,-122.6784,2021,13000000,emerging,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z

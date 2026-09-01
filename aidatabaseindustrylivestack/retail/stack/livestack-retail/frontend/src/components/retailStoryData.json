@@ -1,0 +1,202 @@
+[
+  {
+    "scene": "datamodel",
+    "stage": 1,
+    "phase": "Establish the governed foundation",
+    "current": "Data Foundation",
+    "previous": "Welcome",
+    "next": "Retail Command Center",
+    "title": "Prepare one trusted foundation for the AllTerrain response.",
+    "question": "Can every team trust the same retail facts before the investigation starts?",
+    "what": "Seer Sporting Goods loads or restores the connected products, customers, orders, returns, customer signals, fulfillment geography, vectors, graph relationships, and ML outputs used by the demo.",
+    "why": "The retailer cannot explain or respond to a demand surge if merchandising, operations, fulfillment, and service are working from different versions of the customer and product journey.",
+    "capability": "Oracle AI Database 26ai keeps the relational core, JSON Duality views, Property Graph, Oracle Spatial, Vector Search, and in-database analytics on the same governed foundation.",
+    "decision": "Declare the Seer Sporting Goods dataset ready for one connected investigation.",
+    "handoff": "A governed baseline that every later scene can query without copying the data.",
+    "beats": [
+      "Restore the bundled Seer Sporting Goods dataset and its feature-specific evidence.",
+      "Confirm the live counts for products, orders, signals, graph, spatial, returns, vectors, and models.",
+      "Hand the trusted baseline to Retail Command Center to detect the operating issue."
+    ]
+  },
+  {
+    "scene": "dashboard",
+    "stage": 2,
+    "phase": "Detect the retail operating issue",
+    "current": "Retail Command Center",
+    "previous": "Data Foundation",
+    "next": "Customer Trend Signals",
+    "title": "Spot the AllTerrain demand surge before it becomes an execution problem.",
+    "question": "Where is creator-led demand creating the most urgent inventory, order, and service pressure?",
+    "what": "Retail Command Center brings the AllTerrain Hiking Boots demand story together across orders, inventory, service exposure, customer signals, fulfillment risk, and recent activity.",
+    "why": "A shared operating view helps sellers, analysts, and operations teams detect the same issue early, agree on its business stakes, and choose which signal deserves deeper investigation.",
+    "capability": "Oracle AI Database 26ai combines converged SQL, native JSON evidence, and Database In-Memory execution with the governed retail data already prepared in Data Foundation.",
+    "decision": "Prioritize the AllTerrain demand spike for investigation before inventory pressure spreads.",
+    "handoff": "The demand anomaly and its affected product become the search context for Customer Trend Signals.",
+    "beats": [
+      "Start from the ready Seer Sporting Goods foundation and scan the operating KPIs together.",
+      "Connect AllTerrain demand, order activity, available inventory, fulfillment risk, and service exposure.",
+      "Hand the strongest demand question to Customer Trend Signals for semantic evidence."
+    ]
+  },
+  {
+    "scene": "social",
+    "stage": 3,
+    "phase": "Explain the customer demand signals",
+    "current": "Customer Trend Signals",
+    "previous": "Retail Command Center",
+    "next": "Creator Influence Network",
+    "title": "Separate genuine AllTerrain intent from surface-level activity.",
+    "question": "Are shoppers responding to trail performance, sizing, outdoor use, or only short-lived social attention?",
+    "what": "Customer Trend Signals connects outdoor creator posts, customer reviews, return patterns, sporting-goods demand, and community language around AllTerrain Hiking Boots.",
+    "why": "Understanding why demand is moving prevents the retailer from treating every spike as equivalent and supports better merchandising, inventory, and fulfillment choices.",
+    "capability": "Oracle AI Vector Search executes native embeddings and similarity search inside Oracle AI Database 26ai, while VPD keeps visible signal rows aligned with the selected persona.",
+    "decision": "Treat the signal as product and outdoor-use intent worth tracing through the creator ecosystem.",
+    "handoff": "The strongest semantic themes and matching posts become entry points for the influence graph.",
+    "beats": [
+      "Bring forward the AllTerrain anomaly identified in Retail Command Center.",
+      "Search live vectors for sizing, trail grip, outdoor use, and related-product intent.",
+      "Hand the strongest matching signal to Creator Influence Network to trace how it spreads."
+    ]
+  },
+  {
+    "scene": "graph",
+    "stage": 4,
+    "phase": "Trace the influence path",
+    "current": "Creator Influence Network",
+    "previous": "Customer Trend Signals",
+    "next": "Intelligent Fulfillment Network",
+    "title": "Find the relationships amplifying AllTerrain demand.",
+    "question": "Which creators, communities, products, and brand relationships turn the signal into market reach?",
+    "what": "Creator Influence Network shows how outdoor creators, fitness communities, brand relationships, and product mentions connect to the AllTerrain Hiking Boots demand story.",
+    "why": "Multi-hop relationship context helps the retail team see whether demand is concentrated or network-driven before it commits stock and delivery capacity.",
+    "capability": "Oracle Property Graph and SQL/PGQ execute native GRAPH_TABLE traversals in Oracle AI Database 26ai, with VPD preserving the selected persona's governed scope.",
+    "decision": "Recognize the demand as a connected creator-and-community effect that merits a network response.",
+    "handoff": "The affected demand communities and product relationship paths establish where fulfillment pressure may appear.",
+    "beats": [
+      "Use the strongest customer signal as the starting vertex for the investigation.",
+      "Explore live multi-hop creator, community, brand, and product paths instead of isolated counts.",
+      "Hand the exposed demand network to Intelligent Fulfillment Network for a physical response."
+    ]
+  },
+  {
+    "scene": "fulfillment",
+    "stage": 5,
+    "phase": "Evaluate the fulfillment response",
+    "current": "Intelligent Fulfillment Network",
+    "previous": "Creator Influence Network",
+    "next": "Unified Order Intelligence",
+    "title": "Test whether the retail network can serve the demand safely.",
+    "question": "Which fulfillment centers can cover the affected regions without deepening inventory risk?",
+    "what": "Intelligent Fulfillment Network compares fulfillment centers, service zones, customer proximity, inventory risk, and regional sporting-goods demand after the AllTerrain signal has been traced.",
+    "why": "Location, coverage, and stock context let operations distinguish the nearest option from the option that can actually protect service and inventory outcomes.",
+    "capability": "Oracle Spatial stores SDO_GEOMETRY objects and executes indexed SDO_NN and distance operations in Oracle AI Database 26ai, while VPD limits regional rows to the selected persona.",
+    "decision": "Prioritize centers with the best combination of proximity, coverage, and available inventory.",
+    "handoff": "A feasible fulfillment response becomes the context for inspecting the connected order record.",
+    "beats": [
+      "Use the traced creator-and-community demand path as context for regional pressure.",
+      "Compare live centers, service zones, inventory risk, and customer proximity on one map.",
+      "Hand the preferred fulfillment context to Unified Order Intelligence for record-level proof."
+    ]
+  },
+  {
+    "scene": "orders",
+    "stage": 6,
+    "phase": "Inspect the connected order record",
+    "current": "Unified Order Intelligence",
+    "previous": "Intelligent Fulfillment Network",
+    "next": "Returns Intelligence",
+    "title": "Verify what the customer and fulfillment systems actually recorded.",
+    "question": "Can operations, APIs, fulfillment, and service rely on one consistent order truth?",
+    "what": "Unified Order Intelligence presents connected retail orders, line items, fulfillment activity, and shipment visibility through relational rows and read-only JSON document projections.",
+    "why": "One consistent order record reduces integration gaps at the moment the retailer must explain an allocation, shipment, or later service outcome to a customer.",
+    "capability": "Oracle JSON Relational Duality Views expose the same ACID relational data as nested JSON in Oracle AI Database 26ai, and VPD keeps each persona inside its allowed order scope.",
+    "decision": "Use the governed relational record and its JSON projection as the shared operational truth.",
+    "handoff": "The verified order context becomes evidence for the post-purchase service and returns workflow.",
+    "beats": [
+      "Bring forward the fulfillment context selected in the Spatial scene.",
+      "Compare an order's relational rows with its read-only JSON Duality document.",
+      "Hand the trusted order context to Returns Intelligence for a governed service decision."
+    ]
+  },
+  {
+    "scene": "returns",
+    "stage": 7,
+    "phase": "Govern the post-purchase decision",
+    "current": "Returns Intelligence",
+    "previous": "Unified Order Intelligence",
+    "next": "Retail OML Analytics",
+    "title": "Turn post-purchase evidence into a defensible human decision.",
+    "question": "Does the selected return have enough order, policy, customer, and operational evidence to approve, deny, or request more information?",
+    "what": "Returns Intelligence connects each return request to its order context, policy clauses, customer history, operational events, hybrid evidence retrieval, citation-validated answer synthesis, and an Admin-authorized decision flow.",
+    "why": "A grounded review protects customer trust and margin by showing why the recommendation follows from governed evidence while preventing unauthorized personas from changing the case.",
+    "capability": "Oracle AI Database 26ai combines relational SQL, VPD context, Oracle AI Vector Search, ACID decision writes, and audit-ready database activity; a guarded local model can phrase the retrieved evidence but cannot query Oracle or write a decision.",
+    "decision": "Let Jessica Chen make the final Admin decision only after the evidence and confidence are visible.",
+    "handoff": "The resolved service exposure becomes an input to forward-looking demand, inventory, and customer planning.",
+    "beats": [
+      "Open the return file connected to the governed order and customer journey.",
+      "Ask a question and review citation-validated synthesis over relational and hybrid vector evidence before deciding.",
+      "Hand the service outcome to Retail OML Analytics as planning context, not as an autonomous write."
+    ]
+  },
+  {
+    "scene": "oml",
+    "stage": 8,
+    "phase": "Predict the next retail pressure",
+    "current": "Retail OML Analytics",
+    "previous": "Returns Intelligence",
+    "next": "Ask Retail Data",
+    "title": "Convert the observed journey into forward-looking planning evidence.",
+    "question": "What demand, inventory, revenue, and customer risks should Seer Sporting Goods act on next?",
+    "what": "Retail OML Analytics forecasts AllTerrain Hiking Boots demand, segments customers, predicts revenue, clusters sporting-goods products, and scores inventory risk.",
+    "why": "In-database prediction helps planning and replenishment teams move from explaining the current event to preparing for its likely operational consequences.",
+    "capability": "Oracle Machine Learning uses DBMS_DATA_MINING models, PREDICTION, and CLUSTER_ID inside Oracle AI Database 26ai without moving scoring data to an external analytics store.",
+    "decision": "Prioritize replenishment and customer actions using model results grounded in the same governed journey.",
+    "handoff": "The highest-priority forecast and risk questions become prompts for Ask Retail Data.",
+    "beats": [
+      "Carry forward the demand, order, fulfillment, and service context that shapes planning risk.",
+      "Inspect live model results for demand, customers, revenue, products, and inventory.",
+      "Hand the unresolved planning question to Ask Retail Data for governed SQL exploration."
+    ]
+  },
+  {
+    "scene": "askdata",
+    "stage": 9,
+    "phase": "Question the complete retail journey",
+    "current": "Ask Retail Data",
+    "previous": "Retail OML Analytics",
+    "next": "Retail AI Agent Console",
+    "title": "Question the complete AllTerrain story with visible database proof.",
+    "question": "Can a business user connect demand, inventory, fulfillment, orders, returns, and predictions without losing the source of truth?",
+    "what": "Ask Retail Data lets a user question the live Seer Sporting Goods schema about AllTerrain Hiking Boots, fulfillment risk, signals, creators, orders, returns, and analytical results.",
+    "why": "A visible SQL-assisted workflow lets business users connect findings from the full journey while keeping every answer inspectable against executed database results.",
+    "capability": "The existing application and Ollama flow draft SQL, while Oracle AI Database 26ai remains the source of truth for governed SQL execution and result retrieval.",
+    "decision": "Use the executed SQL and returned rows to support the final retail recommendation or identify the next investigation.",
+    "handoff": "The grounded question and its evidence become the starting context for a governed multi-agent investigation.",
+    "beats": [
+      "Bring forward the highest-priority question identified in Retail OML Analytics.",
+      "Inspect the generated SQL and live Oracle result before relying on the answer.",
+      "Hand the grounded question to the Retail AI Agent Console for cross-domain investigation."
+    ]
+  },
+  {
+    "scene": "agents",
+    "stage": 10,
+    "phase": "Coordinate a governed response",
+    "current": "Retail AI Agent Console",
+    "previous": "Ask Retail Data",
+    "next": "Welcome",
+    "title": "Turn the complete AllTerrain investigation into coordinated, governed action.",
+    "question": "Can specialist agents connect demand, fulfillment, commerce, and return evidence without inventing data or bypassing human authority?",
+    "what": "Retail AI Agent Console routes each question to a bounded demand, fulfillment, commerce, or returns specialist, executes an allowlisted Oracle tool in the selected user's VPD scope, and uses Ollama only to summarize the returned evidence.",
+    "why": "A visible orchestration path shows how the retailer can accelerate cross-domain investigation while keeping operational truth in Oracle and keeping consequential decisions with authorized people.",
+    "capability": "Oracle AI Database 26ai supplies governed relational SQL, Oracle Spatial, Oracle AI Vector Search, VPD enforcement, native JSON provenance, and transactional proposal logging; the local Ollama model cannot execute tools or change retail records.",
+    "decision": "Create review proposals only when Jessica Chen explicitly confirms the Admin-gated cycle, then keep every operational decision under human control.",
+    "handoff": "The traced agent response and optional proposal ledger close the AllTerrain story and return the presenter to Welcome with an auditable outcome.",
+    "beats": [
+      "Bring forward the final cross-domain question and evidence from Ask Retail Data.",
+      "Inspect the selected specialist, Oracle tool, VPD identity, returned rows, and grounded summary.",
+      "Optionally create Admin-confirmed review proposals, then return to Welcome with the complete evidence trail."
+    ]
+  }
+]

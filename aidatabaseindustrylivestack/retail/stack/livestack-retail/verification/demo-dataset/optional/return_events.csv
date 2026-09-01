@@ -1,0 +1,7 @@
+event_id,return_id,event_type,event_note,actor,created_at
+1,1,Case Created,Mobile return request submitted with three images and carrier scan ID.,customer,2026-04-13T08:00:00Z
+2,1,AI Recommendation,Vector policy search and customer graph supported instant approval draft.,returns_ai_agent,2026-04-13T08:20:00Z
+3,2,Store Intake,Associate confirmed tags attached and routed to apparel queue.,store_associate,2026-04-13T06:00:00Z
+4,3,Fraud Signal,Serial mismatch and missing accessories exceeded denial threshold.,returns_ai_agent,2026-04-13T09:30:00Z
+5,4,Information Request,Outbound packing image could not confirm color. Requesting customer photo.,contact_center,2026-04-13T08:30:00Z
+6,5,Review Trend Match,Product review vector cluster found matching fit complaints.,returns_ai_agent,2026-04-13T07:00:00Z
