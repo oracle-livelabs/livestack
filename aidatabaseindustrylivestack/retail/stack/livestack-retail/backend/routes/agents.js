@@ -42,6 +42,52 @@ function routeOnlyAnswer(route) {
   return 'I can investigate retail demand signals, inventory and fulfillment, commerce metrics, or return evidence. This question does not map safely to one of those governed tool domains.';
 }
 
+/**
+ * Keep the Agent Console's Recent Agent Actions feed useful without turning a
+ * read-only question into an operational mutation.  HighTech records the
+ * specialist work it performed; Retail does the same, but stores only bounded
+ * provenance (team, tools, evidence count, and generation) in the existing
+ * append-only audit table.  A regional role may be unable to write this global
+ * audit row under VPD, so audit logging is deliberately best-effort and never
+ * blocks the governed answer.
+ */
+async function logAgentQueryAction({ owner, route, toolResult, synthesis, persisted, correlationId }) {
+  if (!route?.team) return false;
+  const toolKeys = (toolResult?.tools || []).map((tool) => tool.tool_key).filter(Boolean);
+  const evidenceCount = (toolResult?.sources || []).length;
+  const payload = {
+    correlation_id: correlationId,
+    dataset_generation_id: persisted?.generationId || null,
+    team: route.team,
+    intent: route.intent,
+    route_confidence: route.confidence,
+    route_margin: route.margin,
+    tools: toolKeys,
+    evidence_count: evidenceCount,
+    synthesis_mode: synthesis?.mode || null,
+    reason: `Completed governed ${route.intent} investigation with ${toolKeys.length} Oracle tool${toolKeys.length === 1 ? '' : 's'} and ${evidenceCount} evidence source${evidenceCount === 1 ? '' : 's'}.`,
+  };
+  try {
+    await db.executeAsUser(`
+      INSERT INTO agent_actions (
+        agent_name, action_type, entity_type, decision_payload,
+        confidence, execution_status, executed_at
+      ) VALUES (
+        :agentName, 'agent_query_completed', 'agent_query', :payload,
+        :confidence, 'completed', SYSTIMESTAMP
+      )
+    `, {
+      agentName: route.team.toLowerCase(),
+      payload: JSON.stringify(payload),
+      confidence: Number(route.confidence || 0),
+    }, owner?.username);
+    return true;
+  } catch (error) {
+    console.warn('Agent query audit row skipped:', String(error?.message || error).split('\n')[0]);
+    return false;
+  }
+}
+
 router.get('/teams', (_req, res) => res.json(TEAMS));
 router.get('/profiles', (_req, res) => res.json({ profiles: getAvailableProfiles(), activeProfile: DEFAULT_PROFILE, scope: 'request-local' }));
 router.post('/set-profile', (req, res) => {
@@ -102,6 +148,7 @@ router.post('/chat', async (req, res) => {
     };
     const answer = { response: synthesis.answer, claims: synthesis.claims, mode: synthesis.mode, confidence: synthesis.confidence, citationValidation: synthesis.citationValidation, model: synthesis.model || null };
     const persisted = await appendTurn({ conversationId: conversation.id, identity: owner, question, route: resolvedRoute, answer, evidence: { sources: toolResult.sources, contradictions: toolResult.contradictions, insufficientEvidence: toolResult.insufficientEvidence }, telemetry });
+    await logAgentQueryAction({ owner, route: resolvedRoute, toolResult, synthesis, persisted, correlationId });
     const citations = [...new Map((synthesis.claims || []).flatMap((claim) => claim.citations || []).map((item) => [item.id, item])).values()];
     return res.json({
       question, conversationId: conversation.id, turnId: persisted.turnId, team: resolvedRoute.team, intent: resolvedRoute.intent, route: resolvedRoute,

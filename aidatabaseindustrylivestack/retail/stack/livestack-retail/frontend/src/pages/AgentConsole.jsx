@@ -28,6 +28,28 @@ const AGENT_COLORS = {
   returns_triage_agent: '#C74634',
 };
 
+// Keep the audit feed presenter-friendly while retaining the stable names
+// used by the router and Oracle audit table.
+const AGENT_NAME_LABELS = {
+  demand_signal_agent: 'Demand Signal Agent',
+  fulfillment_optimization_agent: 'Fulfillment Optimization Agent',
+  commerce_intelligence_agent: 'Commerce Intelligence Agent',
+  returns_triage_agent: 'Returns Triage Agent',
+};
+
+const ACTION_TYPE_LABELS = {
+  agent_query_completed: 'Agent query completed',
+  review_proposal: 'Review proposal',
+};
+
+const ENTITY_TYPE_LABELS = {
+  agent_query: 'governed question',
+  demand_signals: 'demand signals',
+  fulfillment: 'fulfillment',
+  commerce: 'commerce',
+  returns: 'returns',
+};
+
 const TEAM_INFO = {
   DEMAND_SIGNAL_AGENT: { label: 'Demand Signal Agent', color: '#AA643B', iconClass: 'oj-fwk-icon-sortrelevancehigh', desc: 'Demand and creator signals' },
   FULFILLMENT_OPTIMIZATION_AGENT: { label: 'Fulfillment Optimization Agent', color: '#437C94', iconClass: 'oj-fwk-icon-tree-document', desc: 'Inventory and spatial routing' },
@@ -68,6 +90,12 @@ function messagesFromConversation(conversation) {
 function getProfileDisplayLabel(name, index = 0) {
   if (!name) return `Runtime Profile ${index + 1}`;
   return `Runtime Profile ${index + 1}`;
+}
+
+function labelFor(map, value) {
+  if (!value) return '';
+  const raw = String(value).trim();
+  return map[raw] || raw.replace(/[_-]+/g, ' ').replace(/\b\w/g, (char) => char.toUpperCase());
 }
 
 // ── Fulfillment Route Map (rendered inside chat messages) ─────────────────────
@@ -690,7 +718,7 @@ export default function AgentConsole() {
             <FeatureBadge label="llama3.2" color="pink" />
             <FeatureBadge label="Oracle SQL / SQL-PGQ Tools" color="orange" />
             <FeatureBadge label="Application Orchestration" color="blue" />
-            <FeatureBadge label="agent_actions (Proposal Provenance)" color="blue" />
+            <FeatureBadge label="agent_actions (Question + Proposal Audit)" color="blue" />
             <FeatureBadge label="event_stream (Native JSON)" color="yellow" />
             <FeatureBadge label="Vector RAG Retrieval" color="cyan" />
             <FeatureBadge label="Server-persisted Conversations" color="green" />
@@ -705,6 +733,7 @@ export default function AgentConsole() {
 -- 3. Rank RETURN_EVIDENCE_INDEX with VECTOR_DISTANCE(..., COSINE)
 -- 4. Validate every claim against stable source IDs
 -- 5. Persist the bounded turn and telemetry for this user + dataset generation
+-- 6. Append bounded specialist provenance to agent_actions for the Recent Agent Actions feed
 
 -- Representative allowlisted specialist SQL (the router never generates SQL):
 SELECT from_influencer, to_influencer, connection_type, strength
@@ -748,7 +777,7 @@ INSERT INTO agent_runtime_telemetry (
 
 COMMIT; -- the turn, bounded evidence, context, and telemetry are atomic
 
--- Explicit Admin cycle writes proposals only:
+-- Explicit Admin cycle writes proposals only (separate from question audit rows):
 INSERT INTO agent_actions (agent_name, action_type, entity_type,
   entity_id, decision_payload, confidence, execution_status)
 VALUES ('returns_triage_agent','review_proposal','returns',
@@ -866,9 +895,19 @@ VALUES ('returns_triage_agent','review_proposal','returns',
 
       {/* Recent Actions Feed (last 3) */}
       <div className="glass-card p-5">
-        <h3 className="text-sm font-semibold mb-3 flex items-center gap-2">
-          <JetGlyph iconClass="oj-fwk-icon-calendar-clock" /> Recent Agent Actions
-        </h3>
+        <div className="flex items-start justify-between gap-4 mb-3">
+          <div>
+            <h3 className="text-sm font-semibold flex items-center gap-2">
+              <JetGlyph iconClass="oj-fwk-icon-calendar-clock" /> Recent Agent Actions
+            </h3>
+            <p className="text-[10px] text-[var(--color-text-dim)] mt-1">
+              Durable Oracle audit rows for completed specialist questions and Admin-confirmed review proposals.
+            </p>
+          </div>
+          <span className="text-[9px] font-mono px-2 py-1 rounded-full tone-ocean" style={{ background: 'rgba(67,124,148,0.1)' }}>
+            agent_actions
+          </span>
+        </div>
         <div className="space-y-2">
           {(actions || []).slice(0, 3).map(a => {
             let payload = null;
@@ -880,17 +919,17 @@ VALUES ('returns_triage_agent','review_proposal','returns',
                 <JetGlyph iconClass={statusIcon.iconClass} className={statusIcon.className} />
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2">
-                    <span className="text-sm font-medium">{a.ACTION_TYPE.replace(/_/g, ' ')}</span>
+                    <span className="text-sm font-medium">{labelFor(ACTION_TYPE_LABELS, a.ACTION_TYPE)}</span>
                     <span className="px-1.5 py-0.5 rounded text-[9px] font-medium"
                       style={{
                         background: `${AGENT_COLORS[a.AGENT_NAME] || '#6F757E'}22`,
                         color: 'var(--color-text)',
                         border: `1px solid ${AGENT_COLORS[a.AGENT_NAME] || '#6F757E'}33`,
                       }}>
-                      {a.AGENT_NAME.replace(/_/g, ' ')}
+                      {labelFor(AGENT_NAME_LABELS, a.AGENT_NAME)}
                     </span>
                     {a.ENTITY_TYPE && (
-                      <span className="text-[10px] text-[var(--color-text-dim)]">{a.ENTITY_TYPE} #{a.ENTITY_ID}</span>
+                      <span className="text-[10px] text-[var(--color-text-dim)]">{labelFor(ENTITY_TYPE_LABELS, a.ENTITY_TYPE)}{a.ENTITY_ID ? ` #${a.ENTITY_ID}` : ''}</span>
                     )}
                   </div>
                   {payload && (
