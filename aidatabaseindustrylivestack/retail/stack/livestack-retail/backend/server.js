@@ -246,15 +246,37 @@ async function start() {
     await reconcileOmlAssetsOnStartup();
     await invalidateRestartSensitiveEvidence();
     try {
-      const inMemoryProof = await reestablishActiveInMemoryEvidence();
-      const featurePlanProofs = await reestablishActiveFeaturePlanEvidence();
-      if (!inMemoryProof || !featurePlanProofs) {
-        throw new Error('Active generation evidence is incomplete.');
+      // Oracle In-Memory population is asynchronous. A freshly restarted
+      // database can briefly report one canonical segment as incomplete even
+      // though it becomes fully populated moments later. Retry the complete
+      // proof boundary so a transient population read does not strand the
+      // dataset in FAILED/PENDING readiness for the lifetime of the process.
+      const maxRestartProofAttempts = 3;
+      let restartProofError = null;
+      for (let attempt = 1; attempt <= maxRestartProofAttempts; attempt += 1) {
+        try {
+          const inMemoryProof = await reestablishActiveInMemoryEvidence();
+          const featurePlanProofs = await reestablishActiveFeaturePlanEvidence();
+          if (!inMemoryProof || !featurePlanProofs) {
+            throw new Error('Active generation evidence is incomplete.');
+          }
+          await completeRestartSensitiveReadiness({
+            inMemoryProof,
+            featurePlanProofs,
+          });
+          restartProofError = null;
+          break;
+        } catch (err) {
+          restartProofError = err;
+          if (attempt < maxRestartProofAttempts) {
+            console.warn(
+              `Restart-sensitive Oracle evidence proof attempt ${attempt} failed; retrying: ${err.message}`
+            );
+            await new Promise((resolve) => setTimeout(resolve, 1500));
+          }
+        }
       }
-      await completeRestartSensitiveReadiness({
-        inMemoryProof,
-        featurePlanProofs,
-      });
+      if (restartProofError) throw restartProofError;
     } catch (err) {
       // Invalidation is committed before re-proof. A failed restart proof
       // therefore remains explicitly unavailable rather than falling back to

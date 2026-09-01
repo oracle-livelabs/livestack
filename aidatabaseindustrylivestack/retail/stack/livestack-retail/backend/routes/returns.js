@@ -21,7 +21,8 @@ function parseJson(value, fallback = null) {
 router.get('/audit-readiness', async (req, res) => {
   try {
     const result = await db.executeSystem(`
-      SELECT status, readiness
+      SELECT status,
+             JSON_SERIALIZE(readiness RETURNING CLOB) AS readiness
       FROM app_dataset_readiness
       WHERE readiness_id = 1
     `);
