@@ -208,6 +208,7 @@ PY
 ICEBERG_REST_URL="http://catalog.example.invalid:1525/iceberg"
 GRAVITINO_S3_ACCESS_KEY_ID="example-access-id"
 GRAVITINO_S3_SECRET_ACCESS_KEY="example-secret-key"
+GRAVITINO_S3_REGION="eu-frankfurt-1"
 build_connection_payload "${TEST_ROOT}/iceberg-connection-payload.json"
 "${PYTHON_BIN}" - "${TEST_ROOT}/iceberg-connection-payload.json" <<'PY'
 import json
@@ -218,7 +219,36 @@ with open(sys.argv[1], encoding="utf-8") as handle:
 
 properties = payload["connectionProperties"]["dataServerProperties"]
 assert properties["restUri"] == "http://catalog.example.invalid:1525/iceberg"
-assert properties["s3AccessId"] == "example-access-id"
+assert properties["s3Region"] == "eu-frankfurt-1"
+assert properties["s3AccessID"] == "example-access-id"
+assert properties["s3SecretKey"] == "example-secret-key"
+assert properties["enableCredentialVending"] == "true"
+assert properties["azureAccountKey"] is None
+assert properties["azureClientId"] is None
+assert properties["azureClientSecret"] is None
+assert properties["clientId"] is None
+assert properties["clientSecret"] is None
+assert properties["restPasswd"] is None
+assert "s3Bucket" not in properties
+assert "s3Endpoint" not in properties
+assert "warehouseLocation" not in properties
+connection_properties = payload["connectionProperties"]
+assert set(connection_properties) == {"dataServerProperties", "jdbcBatchUpdateSize", "passwordSecretId", "tokenSecretId", "useSecret"}
+assert connection_properties["passwordSecretId"] is None
+assert connection_properties["tokenSecretId"] is None
+assert connection_properties["useSecret"] == "false"
+PY
+
+build_connection_payload "${TEST_ROOT}/iceberg-create-connection-payload.json" "" create
+"${PYTHON_BIN}" - "${TEST_ROOT}/iceberg-create-connection-payload.json" <<'PY'
+import json
+import sys
+
+with open(sys.argv[1], encoding="utf-8") as handle:
+    properties = json.load(handle)["connectionProperties"]["dataServerProperties"]
+
+assert properties["s3Region"] == "eu-frankfurt-1"
+assert properties["s3AccessID"] == "example-access-id"
 assert properties["s3SecretKey"] == "example-secret-key"
 PY
 
@@ -230,7 +260,7 @@ set -e
 [[ "${missing_storage_credentials_status}" -ne 0 ]] \
   || fail "Iceberg payload creation must fail without storage credentials."
 [[ "${missing_storage_credentials_output}" == *"storage credentials are not configured"* ]] \
-  || fail "Missing Iceberg storage credentials must produce a useful diagnostic."
+  || fail "Missing Iceberg storage settings must produce a useful diagnostic."
 
 "${PYTHON_BIN}" - \
   "${TEST_ROOT}/connection-detail.json" \

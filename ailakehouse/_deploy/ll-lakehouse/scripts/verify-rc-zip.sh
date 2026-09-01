@@ -204,9 +204,12 @@ require_text "init/create-pg-iceberg-connection.sh" 'properties["password"] = ba
 require_text "init/create-pg-iceberg-connection.sh" 'configure_adb_connection "${api_prefix}"'
 require_text "init/create-pg-iceberg-connection.sh" "import requests"
 require_text "init/create-pg-iceberg-connection.sh" "jobs/test_connection"
-require_text "init/create-pg-iceberg-connection.sh" "enableCredentialVending"
-require_text "init/create-pg-iceberg-connection.sh" '"s3AccessId": os.environ["S3_ACCESS_ID"]'
+require_text "init/create-pg-iceberg-connection.sh" '"enableCredentialVending": "true"'
+require_text "init/create-pg-iceberg-connection.sh" '"s3AccessID": os.environ["S3_ACCESS_ID"]'
+require_text "init/create-pg-iceberg-connection.sh" '"s3Region": os.environ["S3_REGION"]'
+require_text "init/create-pg-iceberg-connection.sh" '"azureAccountKey": None'
 require_text "init/create-pg-iceberg-connection.sh" '"s3SecretKey": os.environ["S3_SECRET_KEY"]'
+reject_text "init/create-pg-iceberg-connection.sh" "continuing with the persisted Iceberg connection"
 require_text "init/create-iceberg-adb-external-table.sh" "DBMS_CLOUD.CREATE_EXTERNAL_TABLE"
 require_text "init/create-iceberg-adb-external-table.sh" "PG_OCI_GENAI_CRED"
 require_text "init/create-iceberg-adb-external-table.sh" "set +u"

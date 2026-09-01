@@ -86,7 +86,6 @@ if (-not (Test-Tool 'winget')) {
 Install-WingetPackage -PackageId 'Git.Git' -ToolName 'git'
 Install-WingetPackage -PackageId 'Hashicorp.Terraform' -ToolName 'terraform'
 Install-WingetPackage -PackageId 'Hashicorp.Packer' -ToolName 'packer'
-Install-WingetPackage -PackageId 'Microsoft.PowerShell' -ToolName 'pwsh'
 
 $python312 = Get-Python312
 if ($null -eq $python312) {
@@ -152,7 +151,7 @@ if (-not $CheckOnly -and (Test-Path $ociScripts)) {
     }
 }
 
-$required = @('git', 'terraform', 'packer', 'pwsh', 'ssh', 'curl.exe', 'py')
+$required = @('git', 'terraform', 'packer', 'ssh', 'curl.exe', 'py')
 $missing = @($required | Where-Object { -not (Test-Tool $_) })
 if ($missing.Count -gt 0) {
     Write-Host "Install complete, but open a new PowerShell window before using: $($missing -join ', ')" -ForegroundColor Yellow
@@ -161,12 +160,13 @@ elseif (-not (Test-Tool 'oci')) {
     Write-Host 'OCI CLI was installed. Open a new PowerShell window before using oci.' -ForegroundColor Yellow
 }
 else {
-    Write-Host 'PASS: Git, Terraform, Packer, PowerShell 7, OpenSSH, OCI CLI, Python, and curl are ready.' -ForegroundColor Green
+    Write-Host 'PASS: Git, Terraform, Packer, Windows PowerShell 5.1, OpenSSH, OCI CLI, Python, and curl are ready.' -ForegroundColor Green
 }
 
 Write-Host ''
 if ($Update) {
     Write-Host 'Update mode completed for supported tools.'
 }
-Write-Host 'Next: create a local OCI security-token profile, then fill the ignored project variable files.'
-Write-Host 'Example: oci session authenticate --profile-name WORKSHOP_TEST --region <your-region>'
+Write-Host 'Next: select an existing OCI API-key profile and fill the ignored project variable files.'
+Write-Host 'Set ociAuthMethod = "APIKey" and use the same profile name for Packer and Terraform.'
+Write-Host 'Optional token auth: create a NEW profile name with oci session authenticate; never reuse an API-key profile name.'

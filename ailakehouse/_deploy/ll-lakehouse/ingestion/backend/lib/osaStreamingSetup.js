@@ -26,6 +26,7 @@ const FIXED_APPLICATION_ID = '936bb550-3366-4f77-a8d4-b8f906f9b5d1';
 const TARGET_BINDING_ALIAS = 'PEAKGEAR_DEMAND_SIGNAL_STREAM';
 const TARGET_TABLE_NAME = 'BRONZE_DEMAND_SIGNALS';
 const LEGACY_TARGET_NAMES = ['PeakGear_Silver_Demand_Signals'];
+const refreshedTargetIds = new Set();
 
 const STREAM_FIELDS = [
   ['signal_id', 'text'],
@@ -94,6 +95,9 @@ const PIPELINE_PROPERTIES = {
   'spark.executor.cores': '1',
   'spark.executor.instances': '1',
   'spark.executor.memory': '768',
+  // Spark executors run the JDBC target sink. Keep the wallet URL compatibility
+  // agent on that JVM as well as the OSA and Spark-driver JVMs.
+  'spark.executor.extraJavaOptions': '--add-exports=java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED -javaagent:/u01/osa/osa-base/compat/jdbc-wallet-compat-agent.jar',
   'draft.spark.driver.cores': '1',
   'draft.spark.driver.memory': '768m',
   'draft.spark.executor.cores': '1',
@@ -117,6 +121,25 @@ const PIPELINE_PROPERTIES = {
   'datastream.reset.offset': 'now',
   'datastream.lcrvalue': '',
   'datastream.timestamp': '',
+};
+
+// OSA's internal applications API stores the editable draft. Publishing from
+// the Catalog uses the public v1 pipeline API and requires this complete
+// deployment configuration; PATCH applications/{id} with published:true only
+// leaves the application in Draft mode.
+const PIPELINE_PUBLISH_CONFIG = {
+  batchDuration: 1000,
+  driverCores: 1,
+  driverMemory: 800,
+  enableCheckPointing: false,
+  enableIntermediateTopic: true,
+  exectorCores: 2,
+  executorInstance: 1,
+  executorMemory: 800,
+  intermediateTopicRetentionPeriod: 3600000,
+  logLevel: 'Error',
+  resetOffset: false,
+  topicOffset: 'latest',
 };
 
 function delay(ms) {
@@ -211,6 +234,7 @@ function assertOsaSuccess(response, action) {
 class OsaApi {
   constructor(config) {
     this.baseUrl = normalizeBaseUrl(config.apiBaseUrl);
+    this.pipelineBaseUrl = this.baseUrl.replace(/\/v(?:0\.1|1(?:\.0)?)$/, '/v1');
     this.username = config.adminUser;
     this.password = config.adminPassword;
     this.timeoutMs = config.timeoutMs;
@@ -228,10 +252,10 @@ class OsaApi {
     this.cookie = responseCookies(response.headers);
   }
 
-  async request(path, { method = 'GET', body = null, optional = false } = {}) {
+  async requestAt(baseUrl, path, { method = 'GET', body = null, optional = false } = {}) {
     const payload = body == null ? null : JSON.stringify(body);
     try {
-      const response = await rawRequest(`${this.baseUrl}/${path.replace(/^\/+/, '')}`, {
+      const response = await rawRequest(`${baseUrl}/${path.replace(/^\/+/, '')}`, {
         method,
         timeoutMs: this.timeoutMs,
         headers: {
@@ -245,6 +269,14 @@ class OsaApi {
       if (optional && (err.statusCode === 404 || err.statusCode === 500)) return null;
       throw err;
     }
+  }
+
+  request(path, options) {
+    return this.requestAt(this.baseUrl, path, options);
+  }
+
+  pipelineRequest(path, options) {
+    return this.requestAt(this.pipelineBaseUrl, path, options);
   }
 
   get(path, options) {
@@ -261,6 +293,21 @@ class OsaApi {
 
   patch(path, body) {
     return this.request(path, { method: 'PATCH', body });
+  }
+
+  delete(path) {
+    return this.request(path, { method: 'DELETE' });
+  }
+
+  publishPipeline(id) {
+    return this.pipelineRequest(`pipelines/${id}/publish`, {
+      method: 'PATCH',
+      body: PIPELINE_PUBLISH_CONFIG,
+    });
+  }
+
+  getPublishedPipelines() {
+    return this.pipelineRequest('pipelines?state=published', { optional: true });
   }
 }
 
@@ -511,6 +558,40 @@ function targetPayload(config, adbConnectionId, existingId = '') {
   }, name, 'PeakGear Bronze Demand Signals', 'Bronze ADB target table for source-shaped live demand signals loaded from OSA.');
 }
 
+function shapeMatches(actual, expected) {
+  if (!actual || !expected) return false;
+  if (actual.displayName !== expected.displayName || actual.attachment !== expected.attachment) return false;
+
+  const actualFields = Array.isArray(actual.fields) ? actual.fields : [];
+  return actualFields.length === expected.fields.length
+    && expected.fields.every((expectedField, index) => {
+      const actualField = actualFields[index] || {};
+      return actualField.id === expectedField.id
+        && actualField.typeId === expectedField.typeId
+        && actualField.nullable === expectedField.nullable;
+    });
+}
+
+function sourceMatchesDesired(source, config, kafkaConnectionId) {
+  if (!source || source.typeName !== 'KafkaSource') return false;
+  const parameters = source.parameters || {};
+  return parameters.connectionId === kafkaConnectionId
+    && parameters.contentType === 'JSON'
+    && parameters.topicName === config.topic
+    && parameters.bootstrapserver === undefined
+    && source.beginningIndexType === 'earliest'
+    && source.wname === config.sourceName
+    && shapeMatches(source.producedShape, producedShape());
+}
+
+function targetMatchesDesired(target, config, adbConnectionId) {
+  if (!target || target.typeName !== 'JdbcTarget') return false;
+  return target.parameters?.connectionId === adbConnectionId
+    && target.parameters?.isVectorInsert === false
+    && target.wname === config.targetName
+    && shapeMatches(target.consumedShape, consumedShape());
+}
+
 function sourceStage(config, sourceId, appId, stageId) {
   const sourceAlias = `S${sourceId}`;
   const outputChannelName = `sx_${config.pipelineName}_PeakGear_Demand_Signal_Stream_public`;
@@ -726,6 +807,8 @@ async function getRequiredAdbConnection(api, config) {
 
 async function ensureSource(api, config, kafkaConnectionId) {
   const existing = await findByName(api, 'sources', config.sourceName);
+  if (sourceMatchesDesired(existing, config, kafkaConnectionId)) return existing;
+
   const payload = sourcePayload(config, kafkaConnectionId, existing?.id);
   const response = existing?.id
     ? await api.put(`sources/${existing.id}`, payload)
@@ -734,29 +817,80 @@ async function ensureSource(api, config, kafkaConnectionId) {
   return unwrapOsaData(response) || existing || payload;
 }
 
-async function ensureTarget(api, config, adbConnectionId) {
+async function ensureTarget(api, config, adbConnectionId, { forceRefresh = false } = {}) {
   const existing = await findByName(api, 'targets', config.targetName)
     || (await Promise.all(LEGACY_TARGET_NAMES.map((name) => findByName(api, 'targets', name))))
       .find(Boolean);
 
+  // A target edit makes OSA rediscover the JDBC table metadata. Do it for a
+  // newly created or changed target, but never repeat it for an unchanged
+  // retry: OSA treats every further edit as another DB-target modification.
+  if (!forceRefresh && targetMatchesDesired(existing, config, adbConnectionId)) return existing;
+
   const payload = targetPayload(config, adbConnectionId, existing?.id);
-  const response = existing?.id
-    ? await api.put(`targets/${existing.id}`, payload)
-    : await api.post('targets', payload);
-  assertOsaSuccess(response, `OSA target ${config.targetName} update`);
-  return unwrapOsaData(response) || existing || payload;
+  if (existing?.id) {
+    const response = await api.put(`targets/${existing.id}`, payload);
+    assertOsaSuccess(response, `OSA target ${config.targetName} update`);
+    return unwrapOsaData(response) || existing || payload;
+  }
+
+  const createResponse = await api.post('targets', payload);
+  assertOsaSuccess(createResponse, `OSA target ${config.targetName} create`);
+  const created = unwrapOsaData(createResponse) || payload;
+  const targetId = created?.id || payload.id;
+  const refreshResponse = await api.put(`targets/${targetId}`, targetPayload(config, adbConnectionId, targetId));
+  assertOsaSuccess(refreshResponse, `OSA target ${config.targetName} metadata refresh`);
+  return unwrapOsaData(refreshResponse) || created;
+}
+
+async function recreateTargetAndApplication(api, config, adbConnectionId, existingApplication, target) {
+  // OSA-01213 is not cleared by a no-op PUT. Remove the invalid draft and its
+  // JDBC target, then create both with new identities so OSA rediscovers the
+  // target table metadata before publication.
+  if (existingApplication?.id) {
+    const response = await api.delete(`applications/${existingApplication.id}`);
+    assertOsaSuccess(response, `OSA application ${config.pipelineName} delete`);
+    await delay(Number(process.env.OSA_STREAMING_APPLICATION_DELETE_SETTLE_MS || 5000));
+  }
+  if (target?.id) {
+    const response = await api.delete(`targets/${target.id}`);
+    assertOsaSuccess(response, `OSA target ${config.targetName} delete`);
+    await delay(Number(process.env.OSA_STREAMING_TARGET_DELETE_SETTLE_MS || 5000));
+  }
+
+  const replacement = targetPayload(config, adbConnectionId, crypto.randomUUID());
+  const response = await api.post('targets', replacement);
+  assertOsaSuccess(response, `OSA target ${config.targetName} recreate`);
+  return unwrapOsaData(response) || replacement;
+}
+
+function requiresTargetRefresh(error) {
+  return /OSA-01213\b[\s\S]*DB Connection\/table modified/i.test(String(error?.message || error));
 }
 
 async function unpublishExistingApplication(api, config) {
   const existing = await getExistingApplication(api, config);
 
-  if (existing?.isPublished) {
-    const response = await api.patch(`applications/${existing.id}`, { published: false });
-    assertOsaSuccess(response, `OSA application ${config.pipelineName} unpublish`);
-    await delay(Number(process.env.OSA_STREAMING_UNPUBLISH_SETTLE_MS || 10000));
+  if (!existing?.id) return existing;
+
+  // A failed OSA publish can leave a Draft Spark application running even
+  // though isPublished is false. Explicitly undeploy it before publishing
+  // again, otherwise the next publish competes with that Draft run for the
+  // single local Spark worker and fails with OSA-02503.
+  const response = await api.patch(`applications/${existing.id}`, {
+    published: false,
+    deployDraft: false,
+  });
+  assertOsaSuccess(response, `OSA application ${config.pipelineName} unpublish`);
+
+  const timeoutAttempts = Number(process.env.OSA_STREAMING_UNPUBLISH_MAX_ATTEMPTS || 40);
+  const retryMs = Number(process.env.OSA_STREAMING_UNPUBLISH_RETRY_MS || 3000);
+  for (let attempt = 0; attempt < timeoutAttempts; attempt += 1) {
+    if (!(await sparkApplicationIsRunning(config, existing.id))) return existing;
+    await delay(retryMs);
   }
 
-  return existing;
+  throw new Error(`OSA application ${config.pipelineName} did not release its Draft Spark allocation`);
 }
 
 async function getApplicationCatalogEntity(api, config) {
@@ -814,7 +948,7 @@ async function sparkApplicationIsRunning(config, applicationId) {
     const state = cleanText(app?.state).toUpperCase();
     return state === 'RUNNING'
       && name.includes(normalizedId)
-      && name.endsWith('_public');
+      && (name.endsWith('_public') || name.endsWith('_draft'));
   });
 }
 
@@ -822,8 +956,17 @@ async function confirmApplicationPublished(api, config, applicationId, action) {
   for (let attempt = 0; attempt < 40; attempt += 1) {
     const response = await api.get(`applications/${applicationId}`, { optional: true });
     const application = response?.data || null;
+    const publishedPipelines = unwrapOsaData(await api.getPublishedPipelines());
+    const pipelineRows = Array.isArray(publishedPipelines)
+      ? publishedPipelines
+      : Array.isArray(publishedPipelines?.list)
+        ? publishedPipelines.list
+        : [];
+    const publishedPipeline = pipelineRows.find((pipeline) => pipeline?.id === applicationId
+      && pipeline?.published === true);
     const entity = await findCatalogEntity(api, application?.wname || application?.metadata?.name || applicationId, 'application');
     if (application?.isPublished === true
+      && publishedPipeline
       && (entity?.running === true || await sparkApplicationIsRunning(config, applicationId))) {
       if (entity) application.catalog = entity;
       return application;
@@ -849,7 +992,7 @@ async function ensureApplication(api, config, sourceId, targetId, existing = nul
     const propertiesResponse = await api.put(`applications/${existing.id}/properties`, PIPELINE_PROPERTIES);
     assertOsaSuccess(propertiesResponse, `OSA application ${config.pipelineName} properties update`);
 
-    const publishResponse = await api.patch(`applications/${existing.id}`, { published: true });
+    const publishResponse = await api.publishPipeline(existing.id);
     assertOsaSuccess(publishResponse, `OSA application ${config.pipelineName} publish`);
     const published = await confirmApplicationPublished(api, config, existing.id, `OSA application ${config.pipelineName} publish`)
       || unwrapOsaData(publishResponse)
@@ -870,7 +1013,7 @@ async function ensureApplication(api, config, sourceId, targetId, existing = nul
 
   const propertiesResponse = await api.put(`applications/${applicationId}/properties`, PIPELINE_PROPERTIES);
   assertOsaSuccess(propertiesResponse, `OSA application ${config.pipelineName} properties update`);
-  const publishResponse = await api.patch(`applications/${applicationId}`, { published: true });
+  const publishResponse = await api.publishPipeline(applicationId);
   assertOsaSuccess(publishResponse, `OSA application ${config.pipelineName} publish`);
   const published = await confirmApplicationPublished(api, config, applicationId, `OSA application ${config.pipelineName} publish`)
     || unwrapOsaData(publishResponse)
@@ -909,13 +1052,26 @@ async function ensureOsaStreamingPipeline(config) {
     };
   }
 
-  if (existingApplication?.isPublished) {
+  if (existingApplication) {
     await unpublishExistingApplication(api, config.osa);
   }
 
   const source = await ensureSource(api, config.osa, kafkaConnection.id);
-  const target = await ensureTarget(api, config.osa, adbConnection.id);
-  const application = await ensureApplication(api, config.osa, source.id, target.id, existingApplication);
+  let target = await ensureTarget(api, config.osa, adbConnection.id);
+  let application;
+  try {
+    application = await ensureApplication(api, config.osa, source.id, target.id, existingApplication);
+  } catch (error) {
+    if (!requiresTargetRefresh(error) || refreshedTargetIds.has(target.id)) throw error;
+
+    // A target PUT can be accepted as a no-op, leaving OSA-01213 in place.
+    // Rebuild the affected draft and target once so OSA rediscovers the JDBC
+    // table with a new target identity.
+    refreshedTargetIds.add(target.id);
+    target = await recreateTargetAndApplication(api, config.osa, adbConnection.id, existingApplication, target);
+    await delay(Number(process.env.OSA_STREAMING_TARGET_REFRESH_SETTLE_MS || 15000));
+    application = await ensureApplication(api, config.osa, source.id, target.id);
+  }
 
   return {
     ok: true,

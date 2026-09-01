@@ -708,9 +708,14 @@ build_connection_payload() {
   local global_id="${2:-}"
   local s3_access_id="${DATA_TRANSFORMS_ICEBERG_S3_ACCESS_ID:-${GRAVITINO_S3_ACCESS_KEY_ID:-}}"
   local s3_secret_key="${DATA_TRANSFORMS_ICEBERG_S3_SECRET_KEY:-${GRAVITINO_S3_SECRET_ACCESS_KEY:-}}"
+  local s3_region="${DATA_TRANSFORMS_ICEBERG_S3_REGION:-${GRAVITINO_S3_REGION:-${REGION_IDENTIFIER:-}}}"
 
   if [[ -z "${s3_access_id}" || -z "${s3_secret_key}" ]]; then
     log "Data Transforms Iceberg storage credentials are not configured."
+    return 1
+  fi
+  if [[ -z "${s3_region}" ]]; then
+    log "Data Transforms Iceberg S3 region is required."
     return 1
   fi
 
@@ -723,6 +728,7 @@ build_connection_payload() {
     ICEBERG_STORAGE_TYPE="${DATA_TRANSFORMS_ICEBERG_STORAGE_TYPE:-${DEFAULT_STORAGE_TYPE}}" \
     S3_ACCESS_ID="${s3_access_id}" \
     S3_SECRET_KEY="${s3_secret_key}" \
+    S3_REGION="${s3_region}" \
     "${PYTHON_BIN}" - "${output_file}" <<'PY'
 import json
 import os
@@ -732,25 +738,34 @@ payload = {
     "name": os.environ["CONNECTION_NAME"],
     "technology": "APACHE_ICEBERG",
     "connectionProperties": {
-        "jdbcDriverName": "com.sunopsis.jdbc.driver.file.FileDriver",
-        "jdbcUrl": "jdbc:snps:dbfile",
-        "jdbcFetchArraySize": 30,
         "jdbcBatchUpdateSize": 5000,
-        "targetDOP": 1,
+        "passwordSecretId": None,
+        "tokenSecretId": None,
+        "useSecret": "false",
         "dataServerProperties": {
+            "azureAccountKey": None,
+            "azureClientId": None,
+            "azureClientSecret": None,
             "catalogAuth": "None",
             "catalogName": os.environ["ICEBERG_CATALOG_NAME"],
             "catalogProvider": os.environ["ICEBERG_CATALOG_PROVIDER"],
             "catalogType": os.environ["ICEBERG_CATALOG_TYPE"],
-            "enableCredentialVending": "false",
-            "jdbcBatchUpdateSize": "5000",
+            "clientId": None,
+            "clientSecret": None,
+            "enableCredentialVending": "true",
             "restUri": os.environ["ICEBERG_REST_URL"],
-            "s3AccessId": os.environ["S3_ACCESS_ID"],
+            "restPasswd": None,
+            "s3AccessID": os.environ["S3_ACCESS_ID"],
             "s3SecretKey": os.environ["S3_SECRET_KEY"],
+            "s3Region": os.environ["S3_REGION"],
             "storageType": os.environ["ICEBERG_STORAGE_TYPE"],
         },
     },
 }
+
+# Current Data Transforms releases require a region for Apache Iceberg
+# connections. The REST catalog vends the storage credentials to the managed
+# agent, while these values keep the server-side connection definition valid.
 
 global_id = os.environ.get("CONNECTION_GLOBAL_ID", "")
 if global_id:
@@ -955,15 +970,15 @@ upsert_connection() {
   response_file="${WORK_DIR}/dataserver-response.json"
 
   if [[ -n "${existing_id}" ]]; then
-    build_connection_payload "${payload_file}" "${existing_id}"
+    connection_id="${existing_id}"
+    build_connection_payload "${payload_file}" "${connection_id}"
     if ! api_request "PUT" "${api_prefix}/dataservers" "${payload_file}" "${response_file}"; then
       log "Failed to update ${connection_name}; Data Transforms returned HTTP ${API_STATUS}: $(summarize_response "${response_file}")"
       return 1
     fi
-    connection_id="${existing_id}"
     log "Updated existing Data Transforms connection ${connection_name}."
   else
-    build_connection_payload "${payload_file}"
+    build_connection_payload "${payload_file}" "" create
     if ! api_request "POST" "${api_prefix}/dataservers" "${payload_file}" "${response_file}"; then
       log "Failed to create ${connection_name}; Data Transforms returned HTTP ${API_STATUS}: $(summarize_response "${response_file}")"
       return 1
