@@ -1,0 +1,484 @@
+influencer_id,handle,display_name,platform,follower_count,engagement_rate,influence_score,niche,city,region,country,is_verified,created_at
+1,@premiere_001,Film Discovery 001,instagram,19919,0.055,65.1,Film Discovery,Edison,New Jersey,US,0,2026-05-05T16:30:00Z
+2,@streaming_002,Streaming Strategy 002,tiktok,27838,0.092,82.2,Streaming Strategy,Burbank,California,US,0,2026-05-05T16:30:00Z
+3,@fandom_003,Fan Communities 003,twitter,35757,0.039,48.3,Fan Communities,Joliet,Illinois,US,0,2026-05-05T16:30:00Z
+4,@trailer_004,Trailer Reactions 004,youtube,43676,0.076,65.4,Trailer Reactions,Dallas,Texas,US,0,2026-05-05T16:30:00Z
+5,@rights_005,Sports Rights 005,threads,51595,0.023,82.5,Sports Rights,Miami,Florida,US,1,2026-05-05T16:30:00Z
+6,@liveops_006,Live Event Operations 006,instagram,59514,0.06,48.6,Live Event Operations,Seattle,Washington,US,0,2026-05-05T16:30:00Z
+7,@family_007,Family Entertainment 007,tiktok,67433,0.097,65,Family Entertainment,Goodyear,Arizona,US,0,2026-05-05T16:30:00Z
+8,@globaldrama_008,International Fandom 008,twitter,75352,0.044,82.1,International Fandom,Atlanta,Georgia,US,0,2026-05-05T16:30:00Z
+9,@anime_009,Anime Culture 009,youtube,83271,0.081,48.2,Anime Culture,San Francisco,California,US,0,2026-05-05T16:30:00Z
+10,@music_010,Music Livestreams 010,threads,91190,0.028,65.3,Music Livestreams,Denver,Colorado,US,1,2026-05-05T16:30:00Z
+11,@docu_011,Documentary Forums 011,instagram,99109,0.065,82.4,Documentary Forums,Boston,Massachusetts,US,0,2026-05-05T16:30:00Z
+12,@creator_012,Creator Monetization 012,tiktok,107028,0.102,48.5,Creator Monetization,Washington,District of Columbia,US,0,2026-05-05T16:30:00Z
+13,@moderation_013,Trust and Safety 013,twitter,114947,0.049,65.6,Trust and Safety,Portland,Oregon,US,0,2026-05-05T16:30:00Z
+14,@retention_014,Subscriber Retention 014,youtube,122866,0.086,82,Subscriber Retention,Nashville,Tennessee,US,0,2026-05-05T16:30:00Z
+15,@arpu_015,Premium Economy 015,threads,130785,0.033,48.1,Premium Economy,Austin,Texas,US,1,2026-05-05T16:30:00Z
+16,@watchtime_016,Subscriber Growth 016,instagram,138704,0.07,65.2,Subscriber Growth,Orlando,Florida,US,0,2026-05-05T16:30:00Z
+17,@sports-media_017,Film Discovery 017,tiktok,146623,0.107,82.3,Film Discovery,Las Vegas,Nevada,US,0,2026-05-05T16:30:00Z
+18,@fastchannel_018,Streaming Strategy 018,twitter,154542,0.054,48.4,Streaming Strategy,Minneapolis,Minnesota,US,0,2026-05-05T16:30:00Z
+19,@sportsreel_019,Fan Communities 019,youtube,162461,0.091,65.5,Fan Communities,Charlotte,North Carolina,US,0,2026-05-05T16:30:00Z
+20,@fanbase_020,Trailer Reactions 020,threads,170380,0.038,82.6,Trailer Reactions,Philadelphia,Pennsylvania,US,1,2026-05-05T16:30:00Z
+21,@premiere_021,Sports Rights 021,instagram,178299,0.075,48,Sports Rights,San Diego,California,US,0,2026-05-05T16:30:00Z
+22,@streaming_022,Live Event Operations 022,tiktok,186218,0.022,65.1,Live Event Operations,Raleigh,North Carolina,US,0,2026-05-05T16:30:00Z
+23,@fandom_023,Family Entertainment 023,twitter,194137,0.059,82.2,Family Entertainment,Salt Lake City,Utah,US,0,2026-05-05T16:30:00Z
+24,@trailer_024,International Fandom 024,youtube,202056,0.096,48.3,International Fandom,San Antonio,Texas,US,0,2026-05-05T16:30:00Z
+25,@rights_025,Anime Culture 025,threads,209975,0.043,65.4,Anime Culture,Honolulu,Hawaii,US,1,2026-05-05T16:30:00Z
+26,@liveops_026,Music Livestreams 026,instagram,217894,0.08,82.5,Music Livestreams,Detroit,Michigan,US,0,2026-05-05T16:30:00Z
+27,@family_027,Documentary Forums 027,tiktok,225813,0.027,48.6,Documentary Forums,Kansas City,Missouri,US,0,2026-05-05T16:30:00Z
+28,@globaldrama_028,Creator Monetization 028,twitter,233732,0.064,65,Creator Monetization,New Orleans,Louisiana,US,0,2026-05-05T16:30:00Z
+29,@anime_029,Trust and Safety 029,youtube,241651,0.101,82.1,Trust and Safety,Cleveland,Ohio,US,0,2026-05-05T16:30:00Z
+30,@music_030,Subscriber Retention 030,threads,249570,0.048,48.2,Subscriber Retention,Tampa,Florida,US,1,2026-05-05T16:30:00Z
+31,@docu_031,Premium Economy 031,instagram,257489,0.085,65.3,Premium Economy,Edison,New Jersey,US,0,2026-05-05T16:30:00Z
+32,@creator_032,Subscriber Growth 032,tiktok,265408,0.032,82.4,Subscriber Growth,Burbank,California,US,0,2026-05-05T16:30:00Z
+33,@moderation_033,Film Discovery 033,twitter,273327,0.069,48.5,Film Discovery,Joliet,Illinois,US,0,2026-05-05T16:30:00Z
+34,@retention_034,Streaming Strategy 034,youtube,281246,0.106,65.6,Streaming Strategy,Dallas,Texas,US,0,2026-05-05T16:30:00Z
+35,@arpu_035,Fan Communities 035,threads,289165,0.053,82,Fan Communities,Miami,Florida,US,1,2026-05-05T16:30:00Z
+36,@watchtime_036,Trailer Reactions 036,instagram,297084,0.09,48.1,Trailer Reactions,Seattle,Washington,US,0,2026-05-05T16:30:00Z
+37,@sports-media_037,Sports Rights 037,tiktok,305003,0.037,65.2,Sports Rights,Goodyear,Arizona,US,0,2026-05-05T16:30:00Z
+38,@fastchannel_038,Live Event Operations 038,twitter,312922,0.074,82.3,Live Event Operations,Atlanta,Georgia,US,0,2026-05-05T16:30:00Z
+39,@sportsreel_039,Family Entertainment 039,youtube,320841,0.021,48.4,Family Entertainment,San Francisco,California,US,0,2026-05-05T16:30:00Z
+40,@fanbase_040,International Fandom 040,threads,328760,0.058,65.5,International Fandom,Denver,Colorado,US,1,2026-05-05T16:30:00Z
+41,@premiere_041,Anime Culture 041,instagram,336679,0.095,82.6,Anime Culture,Boston,Massachusetts,US,0,2026-05-05T16:30:00Z
+42,@streaming_042,Music Livestreams 042,tiktok,344598,0.042,48,Music Livestreams,Washington,District of Columbia,US,0,2026-05-05T16:30:00Z
+43,@fandom_043,Documentary Forums 043,twitter,352517,0.079,65.1,Documentary Forums,Portland,Oregon,US,0,2026-05-05T16:30:00Z
+44,@trailer_044,Creator Monetization 044,youtube,360436,0.026,82.2,Creator Monetization,Nashville,Tennessee,US,0,2026-05-05T16:30:00Z
+45,@rights_045,Trust and Safety 045,threads,368355,0.063,48.3,Trust and Safety,Austin,Texas,US,1,2026-05-05T16:30:00Z
+46,@liveops_046,Subscriber Retention 046,instagram,376274,0.1,65.4,Subscriber Retention,Orlando,Florida,US,0,2026-05-05T16:30:00Z
+47,@family_047,Premium Economy 047,tiktok,384193,0.047,82.5,Premium Economy,Las Vegas,Nevada,US,0,2026-05-05T16:30:00Z
+48,@globaldrama_048,Subscriber Growth 048,twitter,392112,0.084,48.6,Subscriber Growth,Minneapolis,Minnesota,US,0,2026-05-05T16:30:00Z
+49,@anime_049,Film Discovery 049,youtube,400031,0.031,65,Film Discovery,Charlotte,North Carolina,US,0,2026-05-05T16:30:00Z
+50,@music_050,Streaming Strategy 050,threads,407950,0.068,82.1,Streaming Strategy,Philadelphia,Pennsylvania,US,1,2026-05-05T16:30:00Z
+51,@docu_051,Fan Communities 051,instagram,415869,0.105,48.2,Fan Communities,San Diego,California,US,0,2026-05-05T16:30:00Z
+52,@creator_052,Trailer Reactions 052,tiktok,423788,0.052,65.3,Trailer Reactions,Raleigh,North Carolina,US,0,2026-05-05T16:30:00Z
+53,@moderation_053,Sports Rights 053,twitter,431707,0.089,82.4,Sports Rights,Salt Lake City,Utah,US,0,2026-05-05T16:30:00Z
+54,@retention_054,Live Event Operations 054,youtube,439626,0.036,48.5,Live Event Operations,San Antonio,Texas,US,0,2026-05-05T16:30:00Z
+55,@arpu_055,Family Entertainment 055,threads,447545,0.073,65.6,Family Entertainment,Honolulu,Hawaii,US,1,2026-05-05T16:30:00Z
+56,@watchtime_056,International Fandom 056,instagram,455464,0.02,82,International Fandom,Detroit,Michigan,US,0,2026-05-05T16:30:00Z
+57,@sports-media_057,Anime Culture 057,tiktok,463383,0.057,48.1,Anime Culture,Kansas City,Missouri,US,0,2026-05-05T16:30:00Z
+58,@fastchannel_058,Music Livestreams 058,twitter,471302,0.094,65.2,Music Livestreams,New Orleans,Louisiana,US,0,2026-05-05T16:30:00Z
+59,@sportsreel_059,Documentary Forums 059,youtube,479221,0.041,82.3,Documentary Forums,Cleveland,Ohio,US,0,2026-05-05T16:30:00Z
+60,@fanbase_060,Creator Monetization 060,threads,487140,0.078,48.4,Creator Monetization,Tampa,Florida,US,1,2026-05-05T16:30:00Z
+61,@premiere_061,Trust and Safety 061,instagram,495059,0.025,65.5,Trust and Safety,Edison,New Jersey,US,0,2026-05-05T16:30:00Z
+62,@streaming_062,Subscriber Retention 062,tiktok,502978,0.062,82.6,Subscriber Retention,Burbank,California,US,0,2026-05-05T16:30:00Z
+63,@fandom_063,Premium Economy 063,twitter,510897,0.099,48,Premium Economy,Joliet,Illinois,US,0,2026-05-05T16:30:00Z
+64,@trailer_064,Subscriber Growth 064,youtube,518816,0.046,65.1,Subscriber Growth,Dallas,Texas,US,0,2026-05-05T16:30:00Z
+65,@rights_065,Film Discovery 065,threads,526735,0.083,82.2,Film Discovery,Miami,Florida,US,1,2026-05-05T16:30:00Z
+66,@liveops_066,Streaming Strategy 066,instagram,534654,0.03,48.3,Streaming Strategy,Seattle,Washington,US,0,2026-05-05T16:30:00Z
+67,@family_067,Fan Communities 067,tiktok,542573,0.067,65.4,Fan Communities,Goodyear,Arizona,US,0,2026-05-05T16:30:00Z
+68,@globaldrama_068,Trailer Reactions 068,twitter,550492,0.104,82.5,Trailer Reactions,Atlanta,Georgia,US,0,2026-05-05T16:30:00Z
+69,@anime_069,Sports Rights 069,youtube,558411,0.051,48.6,Sports Rights,San Francisco,California,US,0,2026-05-05T16:30:00Z
+70,@music_070,Live Event Operations 070,threads,566330,0.088,65,Live Event Operations,Denver,Colorado,US,1,2026-05-05T16:30:00Z
+71,@docu_071,Family Entertainment 071,instagram,574249,0.035,82.1,Family Entertainment,Boston,Massachusetts,US,0,2026-05-05T16:30:00Z
+72,@creator_072,International Fandom 072,tiktok,582168,0.072,48.2,International Fandom,Washington,District of Columbia,US,0,2026-05-05T16:30:00Z
+73,@moderation_073,Anime Culture 073,twitter,590087,0.019,65.3,Anime Culture,Portland,Oregon,US,0,2026-05-05T16:30:00Z
+74,@retention_074,Music Livestreams 074,youtube,598006,0.056,82.4,Music Livestreams,Nashville,Tennessee,US,0,2026-05-05T16:30:00Z
+75,@arpu_075,Documentary Forums 075,threads,605925,0.093,48.5,Documentary Forums,Austin,Texas,US,1,2026-05-05T16:30:00Z
+76,@watchtime_076,Creator Monetization 076,instagram,613844,0.04,65.6,Creator Monetization,Orlando,Florida,US,0,2026-05-05T16:30:00Z
+77,@sports-media_077,Trust and Safety 077,tiktok,621763,0.077,82,Trust and Safety,Las Vegas,Nevada,US,0,2026-05-05T16:30:00Z
+78,@fastchannel_078,Subscriber Retention 078,twitter,629682,0.024,48.1,Subscriber Retention,Minneapolis,Minnesota,US,0,2026-05-05T16:30:00Z
+79,@sportsreel_079,Premium Economy 079,youtube,637601,0.061,65.2,Premium Economy,Charlotte,North Carolina,US,0,2026-05-05T16:30:00Z
+80,@fanbase_080,Subscriber Growth 080,threads,645520,0.098,82.3,Subscriber Growth,Philadelphia,Pennsylvania,US,1,2026-05-05T16:30:00Z
+81,@premiere_081,Film Discovery 081,instagram,653439,0.045,48.4,Film Discovery,San Diego,California,US,0,2026-05-05T16:30:00Z
+82,@streaming_082,Streaming Strategy 082,tiktok,661358,0.082,65.5,Streaming Strategy,Raleigh,North Carolina,US,0,2026-05-05T16:30:00Z
+83,@fandom_083,Fan Communities 083,twitter,669277,0.029,82.6,Fan Communities,Salt Lake City,Utah,US,0,2026-05-05T16:30:00Z
+84,@trailer_084,Trailer Reactions 084,youtube,677196,0.066,48,Trailer Reactions,San Antonio,Texas,US,0,2026-05-05T16:30:00Z
+85,@rights_085,Sports Rights 085,threads,685115,0.103,65.1,Sports Rights,Honolulu,Hawaii,US,1,2026-05-05T16:30:00Z
+86,@liveops_086,Live Event Operations 086,instagram,693034,0.05,82.2,Live Event Operations,Detroit,Michigan,US,0,2026-05-05T16:30:00Z
+87,@family_087,Family Entertainment 087,tiktok,700953,0.087,48.3,Family Entertainment,Kansas City,Missouri,US,0,2026-05-05T16:30:00Z
+88,@globaldrama_088,International Fandom 088,twitter,708872,0.034,65.4,International Fandom,New Orleans,Louisiana,US,0,2026-05-05T16:30:00Z
+89,@anime_089,Anime Culture 089,youtube,716791,0.071,82.5,Anime Culture,Cleveland,Ohio,US,0,2026-05-05T16:30:00Z
+90,@music_090,Music Livestreams 090,threads,724710,0.018,48.6,Music Livestreams,Tampa,Florida,US,1,2026-05-05T16:30:00Z
+91,@docu_091,Documentary Forums 091,instagram,732629,0.055,65,Documentary Forums,Edison,New Jersey,US,0,2026-05-05T16:30:00Z
+92,@creator_092,Creator Monetization 092,tiktok,740548,0.092,82.1,Creator Monetization,Burbank,California,US,0,2026-05-05T16:30:00Z
+93,@moderation_093,Trust and Safety 093,twitter,748467,0.039,48.2,Trust and Safety,Joliet,Illinois,US,0,2026-05-05T16:30:00Z
+94,@retention_094,Subscriber Retention 094,youtube,756386,0.076,65.3,Subscriber Retention,Dallas,Texas,US,0,2026-05-05T16:30:00Z
+95,@arpu_095,Premium Economy 095,threads,764305,0.023,82.4,Premium Economy,Miami,Florida,US,1,2026-05-05T16:30:00Z
+96,@watchtime_096,Subscriber Growth 096,instagram,772224,0.06,48.5,Subscriber Growth,Seattle,Washington,US,0,2026-05-05T16:30:00Z
+97,@sports-media_097,Film Discovery 097,tiktok,780143,0.097,65.6,Film Discovery,Goodyear,Arizona,US,0,2026-05-05T16:30:00Z
+98,@fastchannel_098,Streaming Strategy 098,twitter,788062,0.044,82,Streaming Strategy,Atlanta,Georgia,US,0,2026-05-05T16:30:00Z
+99,@sportsreel_099,Fan Communities 099,youtube,795981,0.081,48.1,Fan Communities,San Francisco,California,US,0,2026-05-05T16:30:00Z
+100,@fanbase_100,Trailer Reactions 100,threads,803900,0.028,65.2,Trailer Reactions,Denver,Colorado,US,1,2026-05-05T16:30:00Z
+101,@premiere_101,Sports Rights 101,instagram,811819,0.065,82.3,Sports Rights,Boston,Massachusetts,US,0,2026-05-05T16:30:00Z
+102,@streaming_102,Live Event Operations 102,tiktok,819738,0.102,48.4,Live Event Operations,Washington,District of Columbia,US,0,2026-05-05T16:30:00Z
+103,@fandom_103,Family Entertainment 103,twitter,827657,0.049,65.5,Family Entertainment,Portland,Oregon,US,0,2026-05-05T16:30:00Z
+104,@trailer_104,International Fandom 104,youtube,835576,0.086,82.6,International Fandom,Nashville,Tennessee,US,0,2026-05-05T16:30:00Z
+105,@rights_105,Anime Culture 105,threads,843495,0.033,48,Anime Culture,Austin,Texas,US,1,2026-05-05T16:30:00Z
+106,@liveops_106,Music Livestreams 106,instagram,851414,0.07,65.1,Music Livestreams,Orlando,Florida,US,0,2026-05-05T16:30:00Z
+107,@family_107,Documentary Forums 107,tiktok,859333,0.107,82.2,Documentary Forums,Las Vegas,Nevada,US,0,2026-05-05T16:30:00Z
+108,@globaldrama_108,Creator Monetization 108,twitter,17252,0.054,48.3,Creator Monetization,Minneapolis,Minnesota,US,0,2026-05-05T16:30:00Z
+109,@anime_109,Trust and Safety 109,youtube,25171,0.091,65.4,Trust and Safety,Charlotte,North Carolina,US,0,2026-05-05T16:30:00Z
+110,@music_110,Subscriber Retention 110,threads,33090,0.038,82.5,Subscriber Retention,Philadelphia,Pennsylvania,US,1,2026-05-05T16:30:00Z
+111,@docu_111,Premium Economy 111,instagram,41009,0.075,48.6,Premium Economy,San Diego,California,US,0,2026-05-05T16:30:00Z
+112,@creator_112,Subscriber Growth 112,tiktok,48928,0.022,65,Subscriber Growth,Raleigh,North Carolina,US,0,2026-05-05T16:30:00Z
+113,@moderation_113,Film Discovery 113,twitter,56847,0.059,82.1,Film Discovery,Salt Lake City,Utah,US,0,2026-05-05T16:30:00Z
+114,@retention_114,Streaming Strategy 114,youtube,64766,0.096,48.2,Streaming Strategy,San Antonio,Texas,US,0,2026-05-05T16:30:00Z
+115,@arpu_115,Fan Communities 115,threads,72685,0.043,65.3,Fan Communities,Honolulu,Hawaii,US,1,2026-05-05T16:30:00Z
+116,@watchtime_116,Trailer Reactions 116,instagram,80604,0.08,82.4,Trailer Reactions,Detroit,Michigan,US,0,2026-05-05T16:30:00Z
+117,@sports-media_117,Sports Rights 117,tiktok,88523,0.027,48.5,Sports Rights,Kansas City,Missouri,US,0,2026-05-05T16:30:00Z
+118,@fastchannel_118,Live Event Operations 118,twitter,96442,0.064,65.6,Live Event Operations,New Orleans,Louisiana,US,0,2026-05-05T16:30:00Z
+119,@sportsreel_119,Family Entertainment 119,youtube,104361,0.101,82,Family Entertainment,Cleveland,Ohio,US,0,2026-05-05T16:30:00Z
+120,@fanbase_120,International Fandom 120,threads,112280,0.048,48.1,International Fandom,Tampa,Florida,US,1,2026-05-05T16:30:00Z
+121,@premiere_121,Anime Culture 121,instagram,120199,0.085,65.2,Anime Culture,Edison,New Jersey,US,0,2026-05-05T16:30:00Z
+122,@streaming_122,Music Livestreams 122,tiktok,128118,0.032,82.3,Music Livestreams,Burbank,California,US,0,2026-05-05T16:30:00Z
+123,@fandom_123,Documentary Forums 123,twitter,136037,0.069,48.4,Documentary Forums,Joliet,Illinois,US,0,2026-05-05T16:30:00Z
+124,@trailer_124,Creator Monetization 124,youtube,143956,0.106,65.5,Creator Monetization,Dallas,Texas,US,0,2026-05-05T16:30:00Z
+125,@rights_125,Trust and Safety 125,threads,151875,0.053,82.6,Trust and Safety,Miami,Florida,US,1,2026-05-05T16:30:00Z
+126,@liveops_126,Subscriber Retention 126,instagram,159794,0.09,48,Subscriber Retention,Seattle,Washington,US,0,2026-05-05T16:30:00Z
+127,@family_127,Premium Economy 127,tiktok,167713,0.037,65.1,Premium Economy,Goodyear,Arizona,US,0,2026-05-05T16:30:00Z
+128,@globaldrama_128,Subscriber Growth 128,twitter,175632,0.074,82.2,Subscriber Growth,Atlanta,Georgia,US,0,2026-05-05T16:30:00Z
+129,@anime_129,Film Discovery 129,youtube,183551,0.021,48.3,Film Discovery,San Francisco,California,US,0,2026-05-05T16:30:00Z
+130,@music_130,Streaming Strategy 130,threads,191470,0.058,65.4,Streaming Strategy,Denver,Colorado,US,1,2026-05-05T16:30:00Z
+131,@docu_131,Fan Communities 131,instagram,199389,0.095,82.5,Fan Communities,Boston,Massachusetts,US,0,2026-05-05T16:30:00Z
+132,@creator_132,Trailer Reactions 132,tiktok,207308,0.042,48.6,Trailer Reactions,Washington,District of Columbia,US,0,2026-05-05T16:30:00Z
+133,@moderation_133,Sports Rights 133,twitter,215227,0.079,65,Sports Rights,Portland,Oregon,US,0,2026-05-05T16:30:00Z
+134,@retention_134,Live Event Operations 134,youtube,223146,0.026,82.1,Live Event Operations,Nashville,Tennessee,US,0,2026-05-05T16:30:00Z
+135,@arpu_135,Family Entertainment 135,threads,231065,0.063,48.2,Family Entertainment,Austin,Texas,US,1,2026-05-05T16:30:00Z
+136,@watchtime_136,International Fandom 136,instagram,238984,0.1,65.3,International Fandom,Orlando,Florida,US,0,2026-05-05T16:30:00Z
+137,@sports-media_137,Anime Culture 137,tiktok,246903,0.047,82.4,Anime Culture,Las Vegas,Nevada,US,0,2026-05-05T16:30:00Z
+138,@fastchannel_138,Music Livestreams 138,twitter,254822,0.084,48.5,Music Livestreams,Minneapolis,Minnesota,US,0,2026-05-05T16:30:00Z
+139,@sportsreel_139,Documentary Forums 139,youtube,262741,0.031,65.6,Documentary Forums,Charlotte,North Carolina,US,0,2026-05-05T16:30:00Z
+140,@fanbase_140,Creator Monetization 140,threads,270660,0.068,82,Creator Monetization,Philadelphia,Pennsylvania,US,1,2026-05-05T16:30:00Z
+141,@premiere_141,Trust and Safety 141,instagram,278579,0.105,48.1,Trust and Safety,San Diego,California,US,0,2026-05-05T16:30:00Z
+142,@streaming_142,Subscriber Retention 142,tiktok,286498,0.052,65.2,Subscriber Retention,Raleigh,North Carolina,US,0,2026-05-05T16:30:00Z
+143,@fandom_143,Premium Economy 143,twitter,294417,0.089,82.3,Premium Economy,Salt Lake City,Utah,US,0,2026-05-05T16:30:00Z
+144,@trailer_144,Subscriber Growth 144,youtube,302336,0.036,48.4,Subscriber Growth,San Antonio,Texas,US,0,2026-05-05T16:30:00Z
+145,@rights_145,Film Discovery 145,threads,310255,0.073,65.5,Film Discovery,Honolulu,Hawaii,US,1,2026-05-05T16:30:00Z
+146,@liveops_146,Streaming Strategy 146,instagram,318174,0.02,82.6,Streaming Strategy,Detroit,Michigan,US,0,2026-05-05T16:30:00Z
+147,@family_147,Fan Communities 147,tiktok,326093,0.057,48,Fan Communities,Kansas City,Missouri,US,0,2026-05-05T16:30:00Z
+148,@globaldrama_148,Trailer Reactions 148,twitter,334012,0.094,65.1,Trailer Reactions,New Orleans,Louisiana,US,0,2026-05-05T16:30:00Z
+149,@anime_149,Sports Rights 149,youtube,341931,0.041,82.2,Sports Rights,Cleveland,Ohio,US,0,2026-05-05T16:30:00Z
+150,@music_150,Live Event Operations 150,threads,349850,0.078,48.3,Live Event Operations,Tampa,Florida,US,1,2026-05-05T16:30:00Z
+151,@docu_151,Family Entertainment 151,instagram,357769,0.025,65.4,Family Entertainment,Edison,New Jersey,US,0,2026-05-05T16:30:00Z
+152,@creator_152,International Fandom 152,tiktok,365688,0.062,82.5,International Fandom,Burbank,California,US,0,2026-05-05T16:30:00Z
+153,@moderation_153,Anime Culture 153,twitter,373607,0.099,48.6,Anime Culture,Joliet,Illinois,US,0,2026-05-05T16:30:00Z
+154,@retention_154,Music Livestreams 154,youtube,381526,0.046,65,Music Livestreams,Dallas,Texas,US,0,2026-05-05T16:30:00Z
+155,@arpu_155,Documentary Forums 155,threads,389445,0.083,82.1,Documentary Forums,Miami,Florida,US,1,2026-05-05T16:30:00Z
+156,@watchtime_156,Creator Monetization 156,instagram,397364,0.03,48.2,Creator Monetization,Seattle,Washington,US,0,2026-05-05T16:30:00Z
+157,@sports-media_157,Trust and Safety 157,tiktok,405283,0.067,65.3,Trust and Safety,Goodyear,Arizona,US,0,2026-05-05T16:30:00Z
+158,@fastchannel_158,Subscriber Retention 158,twitter,413202,0.104,82.4,Subscriber Retention,Atlanta,Georgia,US,0,2026-05-05T16:30:00Z
+159,@sportsreel_159,Premium Economy 159,youtube,421121,0.051,48.5,Premium Economy,San Francisco,California,US,0,2026-05-05T16:30:00Z
+160,@fanbase_160,Subscriber Growth 160,threads,429040,0.088,65.6,Subscriber Growth,Denver,Colorado,US,1,2026-05-05T16:30:00Z
+161,@premiere_161,Film Discovery 161,instagram,436959,0.035,82,Film Discovery,Boston,Massachusetts,US,0,2026-05-05T16:30:00Z
+162,@streaming_162,Streaming Strategy 162,tiktok,444878,0.072,48.1,Streaming Strategy,Washington,District of Columbia,US,0,2026-05-05T16:30:00Z
+163,@fandom_163,Fan Communities 163,twitter,452797,0.019,65.2,Fan Communities,Portland,Oregon,US,0,2026-05-05T16:30:00Z
+164,@trailer_164,Trailer Reactions 164,youtube,460716,0.056,82.3,Trailer Reactions,Nashville,Tennessee,US,0,2026-05-05T16:30:00Z
+165,@rights_165,Sports Rights 165,threads,468635,0.093,48.4,Sports Rights,Austin,Texas,US,1,2026-05-05T16:30:00Z
+166,@liveops_166,Live Event Operations 166,instagram,476554,0.04,65.5,Live Event Operations,Orlando,Florida,US,0,2026-05-05T16:30:00Z
+167,@family_167,Family Entertainment 167,tiktok,484473,0.077,82.6,Family Entertainment,Las Vegas,Nevada,US,0,2026-05-05T16:30:00Z
+168,@globaldrama_168,International Fandom 168,twitter,492392,0.024,48,International Fandom,Minneapolis,Minnesota,US,0,2026-05-05T16:30:00Z
+169,@anime_169,Anime Culture 169,youtube,500311,0.061,65.1,Anime Culture,Charlotte,North Carolina,US,0,2026-05-05T16:30:00Z
+170,@music_170,Music Livestreams 170,threads,508230,0.098,82.2,Music Livestreams,Philadelphia,Pennsylvania,US,1,2026-05-05T16:30:00Z
+171,@docu_171,Documentary Forums 171,instagram,516149,0.045,48.3,Documentary Forums,San Diego,California,US,0,2026-05-05T16:30:00Z
+172,@creator_172,Creator Monetization 172,tiktok,524068,0.082,65.4,Creator Monetization,Raleigh,North Carolina,US,0,2026-05-05T16:30:00Z
+173,@moderation_173,Trust and Safety 173,twitter,531987,0.029,82.5,Trust and Safety,Salt Lake City,Utah,US,0,2026-05-05T16:30:00Z
+174,@retention_174,Subscriber Retention 174,youtube,539906,0.066,48.6,Subscriber Retention,San Antonio,Texas,US,0,2026-05-05T16:30:00Z
+175,@arpu_175,Premium Economy 175,threads,547825,0.103,65,Premium Economy,Honolulu,Hawaii,US,1,2026-05-05T16:30:00Z
+176,@watchtime_176,Subscriber Growth 176,instagram,555744,0.05,82.1,Subscriber Growth,Detroit,Michigan,US,0,2026-05-05T16:30:00Z
+177,@sports-media_177,Film Discovery 177,tiktok,563663,0.087,48.2,Film Discovery,Kansas City,Missouri,US,0,2026-05-05T16:30:00Z
+178,@fastchannel_178,Streaming Strategy 178,twitter,571582,0.034,65.3,Streaming Strategy,New Orleans,Louisiana,US,0,2026-05-05T16:30:00Z
+179,@sportsreel_179,Fan Communities 179,youtube,579501,0.071,82.4,Fan Communities,Cleveland,Ohio,US,0,2026-05-05T16:30:00Z
+180,@fanbase_180,Trailer Reactions 180,threads,587420,0.018,48.5,Trailer Reactions,Tampa,Florida,US,1,2026-05-05T16:30:00Z
+181,@premiere_181,Sports Rights 181,instagram,595339,0.055,65.6,Sports Rights,Edison,New Jersey,US,0,2026-05-05T16:30:00Z
+182,@streaming_182,Live Event Operations 182,tiktok,603258,0.092,82,Live Event Operations,Burbank,California,US,0,2026-05-05T16:30:00Z
+183,@fandom_183,Family Entertainment 183,twitter,611177,0.039,48.1,Family Entertainment,Joliet,Illinois,US,0,2026-05-05T16:30:00Z
+184,@trailer_184,International Fandom 184,youtube,619096,0.076,65.2,International Fandom,Dallas,Texas,US,0,2026-05-05T16:30:00Z
+185,@rights_185,Anime Culture 185,threads,627015,0.023,82.3,Anime Culture,Miami,Florida,US,1,2026-05-05T16:30:00Z
+186,@liveops_186,Music Livestreams 186,instagram,634934,0.06,48.4,Music Livestreams,Seattle,Washington,US,0,2026-05-05T16:30:00Z
+187,@family_187,Documentary Forums 187,tiktok,642853,0.097,65.5,Documentary Forums,Goodyear,Arizona,US,0,2026-05-05T16:30:00Z
+188,@globaldrama_188,Creator Monetization 188,twitter,650772,0.044,82.6,Creator Monetization,Atlanta,Georgia,US,0,2026-05-05T16:30:00Z
+189,@anime_189,Trust and Safety 189,youtube,658691,0.081,48,Trust and Safety,San Francisco,California,US,0,2026-05-05T16:30:00Z
+190,@music_190,Subscriber Retention 190,threads,666610,0.028,65.1,Subscriber Retention,Denver,Colorado,US,1,2026-05-05T16:30:00Z
+191,@docu_191,Premium Economy 191,instagram,674529,0.065,82.2,Premium Economy,Boston,Massachusetts,US,0,2026-05-05T16:30:00Z
+192,@creator_192,Subscriber Growth 192,tiktok,682448,0.102,48.3,Subscriber Growth,Washington,District of Columbia,US,0,2026-05-05T16:30:00Z
+193,@moderation_193,Film Discovery 193,twitter,690367,0.049,65.4,Film Discovery,Portland,Oregon,US,0,2026-05-05T16:30:00Z
+194,@retention_194,Streaming Strategy 194,youtube,698286,0.086,82.5,Streaming Strategy,Nashville,Tennessee,US,0,2026-05-05T16:30:00Z
+195,@arpu_195,Fan Communities 195,threads,706205,0.033,48.6,Fan Communities,Austin,Texas,US,1,2026-05-05T16:30:00Z
+196,@watchtime_196,Trailer Reactions 196,instagram,714124,0.07,65,Trailer Reactions,Orlando,Florida,US,0,2026-05-05T16:30:00Z
+197,@sports-media_197,Sports Rights 197,tiktok,722043,0.107,82.1,Sports Rights,Las Vegas,Nevada,US,0,2026-05-05T16:30:00Z
+198,@fastchannel_198,Live Event Operations 198,twitter,729962,0.054,48.2,Live Event Operations,Minneapolis,Minnesota,US,0,2026-05-05T16:30:00Z
+199,@sportsreel_199,Family Entertainment 199,youtube,737881,0.091,65.3,Family Entertainment,Charlotte,North Carolina,US,0,2026-05-05T16:30:00Z
+200,@fanbase_200,International Fandom 200,threads,745800,0.038,82.4,International Fandom,Philadelphia,Pennsylvania,US,1,2026-05-05T16:30:00Z
+201,@premiere_201,Anime Culture 201,instagram,753719,0.075,48.5,Anime Culture,San Diego,California,US,0,2026-05-05T16:30:00Z
+202,@streaming_202,Music Livestreams 202,tiktok,761638,0.022,65.6,Music Livestreams,Raleigh,North Carolina,US,0,2026-05-05T16:30:00Z
+203,@fandom_203,Documentary Forums 203,twitter,769557,0.059,82,Documentary Forums,Salt Lake City,Utah,US,0,2026-05-05T16:30:00Z
+204,@trailer_204,Creator Monetization 204,youtube,777476,0.096,48.1,Creator Monetization,San Antonio,Texas,US,0,2026-05-05T16:30:00Z
+205,@rights_205,Trust and Safety 205,threads,785395,0.043,65.2,Trust and Safety,Honolulu,Hawaii,US,1,2026-05-05T16:30:00Z
+206,@liveops_206,Subscriber Retention 206,instagram,793314,0.08,82.3,Subscriber Retention,Detroit,Michigan,US,0,2026-05-05T16:30:00Z
+207,@family_207,Premium Economy 207,tiktok,801233,0.027,48.4,Premium Economy,Kansas City,Missouri,US,0,2026-05-05T16:30:00Z
+208,@globaldrama_208,Subscriber Growth 208,twitter,809152,0.064,65.5,Subscriber Growth,New Orleans,Louisiana,US,0,2026-05-05T16:30:00Z
+209,@anime_209,Film Discovery 209,youtube,817071,0.101,82.6,Film Discovery,Cleveland,Ohio,US,0,2026-05-05T16:30:00Z
+210,@music_210,Streaming Strategy 210,threads,824990,0.048,48,Streaming Strategy,Tampa,Florida,US,1,2026-05-05T16:30:00Z
+211,@docu_211,Fan Communities 211,instagram,832909,0.085,65.1,Fan Communities,Edison,New Jersey,US,0,2026-05-05T16:30:00Z
+212,@creator_212,Trailer Reactions 212,tiktok,840828,0.032,82.2,Trailer Reactions,Burbank,California,US,0,2026-05-05T16:30:00Z
+213,@moderation_213,Sports Rights 213,twitter,848747,0.069,48.3,Sports Rights,Joliet,Illinois,US,0,2026-05-05T16:30:00Z
+214,@retention_214,Live Event Operations 214,youtube,856666,0.106,65.4,Live Event Operations,Dallas,Texas,US,0,2026-05-05T16:30:00Z
+215,@arpu_215,Family Entertainment 215,threads,14585,0.053,82.5,Family Entertainment,Miami,Florida,US,1,2026-05-05T16:30:00Z
+216,@watchtime_216,International Fandom 216,instagram,22504,0.09,48.6,International Fandom,Seattle,Washington,US,0,2026-05-05T16:30:00Z
+217,@sports-media_217,Anime Culture 217,tiktok,30423,0.037,65,Anime Culture,Goodyear,Arizona,US,0,2026-05-05T16:30:00Z
+218,@fastchannel_218,Music Livestreams 218,twitter,38342,0.074,82.1,Music Livestreams,Atlanta,Georgia,US,0,2026-05-05T16:30:00Z
+219,@sportsreel_219,Documentary Forums 219,youtube,46261,0.021,48.2,Documentary Forums,San Francisco,California,US,0,2026-05-05T16:30:00Z
+220,@fanbase_220,Creator Monetization 220,threads,54180,0.058,65.3,Creator Monetization,Denver,Colorado,US,1,2026-05-05T16:30:00Z
+221,@premiere_221,Trust and Safety 221,instagram,62099,0.095,82.4,Trust and Safety,Boston,Massachusetts,US,0,2026-05-05T16:30:00Z
+222,@streaming_222,Subscriber Retention 222,tiktok,70018,0.042,48.5,Subscriber Retention,Washington,District of Columbia,US,0,2026-05-05T16:30:00Z
+223,@fandom_223,Premium Economy 223,twitter,77937,0.079,65.6,Premium Economy,Portland,Oregon,US,0,2026-05-05T16:30:00Z
+224,@trailer_224,Subscriber Growth 224,youtube,85856,0.026,82,Subscriber Growth,Nashville,Tennessee,US,0,2026-05-05T16:30:00Z
+225,@rights_225,Film Discovery 225,threads,93775,0.063,48.1,Film Discovery,Austin,Texas,US,1,2026-05-05T16:30:00Z
+226,@liveops_226,Streaming Strategy 226,instagram,101694,0.1,65.2,Streaming Strategy,Orlando,Florida,US,0,2026-05-05T16:30:00Z
+227,@family_227,Fan Communities 227,tiktok,109613,0.047,82.3,Fan Communities,Las Vegas,Nevada,US,0,2026-05-05T16:30:00Z
+228,@globaldrama_228,Trailer Reactions 228,twitter,117532,0.084,48.4,Trailer Reactions,Minneapolis,Minnesota,US,0,2026-05-05T16:30:00Z
+229,@anime_229,Sports Rights 229,youtube,125451,0.031,65.5,Sports Rights,Charlotte,North Carolina,US,0,2026-05-05T16:30:00Z
+230,@music_230,Live Event Operations 230,threads,133370,0.068,82.6,Live Event Operations,Philadelphia,Pennsylvania,US,1,2026-05-05T16:30:00Z
+231,@docu_231,Family Entertainment 231,instagram,141289,0.105,48,Family Entertainment,San Diego,California,US,0,2026-05-05T16:30:00Z
+232,@creator_232,International Fandom 232,tiktok,149208,0.052,65.1,International Fandom,Raleigh,North Carolina,US,0,2026-05-05T16:30:00Z
+233,@moderation_233,Anime Culture 233,twitter,157127,0.089,82.2,Anime Culture,Salt Lake City,Utah,US,0,2026-05-05T16:30:00Z
+234,@retention_234,Music Livestreams 234,youtube,165046,0.036,48.3,Music Livestreams,San Antonio,Texas,US,0,2026-05-05T16:30:00Z
+235,@arpu_235,Documentary Forums 235,threads,172965,0.073,65.4,Documentary Forums,Honolulu,Hawaii,US,1,2026-05-05T16:30:00Z
+236,@watchtime_236,Creator Monetization 236,instagram,180884,0.02,82.5,Creator Monetization,Detroit,Michigan,US,0,2026-05-05T16:30:00Z
+237,@sports-media_237,Trust and Safety 237,tiktok,188803,0.057,48.6,Trust and Safety,Kansas City,Missouri,US,0,2026-05-05T16:30:00Z
+238,@fastchannel_238,Subscriber Retention 238,twitter,196722,0.094,65,Subscriber Retention,New Orleans,Louisiana,US,0,2026-05-05T16:30:00Z
+239,@sportsreel_239,Premium Economy 239,youtube,204641,0.041,82.1,Premium Economy,Cleveland,Ohio,US,0,2026-05-05T16:30:00Z
+240,@fanbase_240,Subscriber Growth 240,threads,212560,0.078,48.2,Subscriber Growth,Tampa,Florida,US,1,2026-05-05T16:30:00Z
+241,@premiere_241,Film Discovery 241,instagram,220479,0.025,65.3,Film Discovery,Edison,New Jersey,US,0,2026-05-05T16:30:00Z
+242,@streaming_242,Streaming Strategy 242,tiktok,228398,0.062,82.4,Streaming Strategy,Burbank,California,US,0,2026-05-05T16:30:00Z
+243,@fandom_243,Fan Communities 243,twitter,236317,0.099,48.5,Fan Communities,Joliet,Illinois,US,0,2026-05-05T16:30:00Z
+244,@trailer_244,Trailer Reactions 244,youtube,244236,0.046,65.6,Trailer Reactions,Dallas,Texas,US,0,2026-05-05T16:30:00Z
+245,@rights_245,Sports Rights 245,threads,252155,0.083,82,Sports Rights,Miami,Florida,US,1,2026-05-05T16:30:00Z
+246,@liveops_246,Live Event Operations 246,instagram,260074,0.03,48.1,Live Event Operations,Seattle,Washington,US,0,2026-05-05T16:30:00Z
+247,@family_247,Family Entertainment 247,tiktok,267993,0.067,65.2,Family Entertainment,Goodyear,Arizona,US,0,2026-05-05T16:30:00Z
+248,@globaldrama_248,International Fandom 248,twitter,275912,0.104,82.3,International Fandom,Atlanta,Georgia,US,0,2026-05-05T16:30:00Z
+249,@anime_249,Anime Culture 249,youtube,283831,0.051,48.4,Anime Culture,San Francisco,California,US,0,2026-05-05T16:30:00Z
+250,@music_250,Music Livestreams 250,threads,291750,0.088,65.5,Music Livestreams,Denver,Colorado,US,1,2026-05-05T16:30:00Z
+251,@docu_251,Documentary Forums 251,instagram,299669,0.035,82.6,Documentary Forums,Boston,Massachusetts,US,0,2026-05-05T16:30:00Z
+252,@creator_252,Creator Monetization 252,tiktok,307588,0.072,48,Creator Monetization,Washington,District of Columbia,US,0,2026-05-05T16:30:00Z
+253,@moderation_253,Trust and Safety 253,twitter,315507,0.019,65.1,Trust and Safety,Portland,Oregon,US,0,2026-05-05T16:30:00Z
+254,@retention_254,Subscriber Retention 254,youtube,323426,0.056,82.2,Subscriber Retention,Nashville,Tennessee,US,0,2026-05-05T16:30:00Z
+255,@arpu_255,Premium Economy 255,threads,331345,0.093,48.3,Premium Economy,Austin,Texas,US,1,2026-05-05T16:30:00Z
+256,@watchtime_256,Subscriber Growth 256,instagram,339264,0.04,65.4,Subscriber Growth,Orlando,Florida,US,0,2026-05-05T16:30:00Z
+257,@sports-media_257,Film Discovery 257,tiktok,347183,0.077,82.5,Film Discovery,Las Vegas,Nevada,US,0,2026-05-05T16:30:00Z
+258,@fastchannel_258,Streaming Strategy 258,twitter,355102,0.024,48.6,Streaming Strategy,Minneapolis,Minnesota,US,0,2026-05-05T16:30:00Z
+259,@sportsreel_259,Fan Communities 259,youtube,363021,0.061,65,Fan Communities,Charlotte,North Carolina,US,0,2026-05-05T16:30:00Z
+260,@fanbase_260,Trailer Reactions 260,threads,370940,0.098,82.1,Trailer Reactions,Philadelphia,Pennsylvania,US,1,2026-05-05T16:30:00Z
+261,@premiere_261,Sports Rights 261,instagram,378859,0.045,48.2,Sports Rights,San Diego,California,US,0,2026-05-05T16:30:00Z
+262,@streaming_262,Live Event Operations 262,tiktok,386778,0.082,65.3,Live Event Operations,Raleigh,North Carolina,US,0,2026-05-05T16:30:00Z
+263,@fandom_263,Family Entertainment 263,twitter,394697,0.029,82.4,Family Entertainment,Salt Lake City,Utah,US,0,2026-05-05T16:30:00Z
+264,@trailer_264,International Fandom 264,youtube,402616,0.066,48.5,International Fandom,San Antonio,Texas,US,0,2026-05-05T16:30:00Z
+265,@rights_265,Anime Culture 265,threads,410535,0.103,65.6,Anime Culture,Honolulu,Hawaii,US,1,2026-05-05T16:30:00Z
+266,@liveops_266,Music Livestreams 266,instagram,418454,0.05,82,Music Livestreams,Detroit,Michigan,US,0,2026-05-05T16:30:00Z
+267,@family_267,Documentary Forums 267,tiktok,426373,0.087,48.1,Documentary Forums,Kansas City,Missouri,US,0,2026-05-05T16:30:00Z
+268,@globaldrama_268,Creator Monetization 268,twitter,434292,0.034,65.2,Creator Monetization,New Orleans,Louisiana,US,0,2026-05-05T16:30:00Z
+269,@anime_269,Trust and Safety 269,youtube,442211,0.071,82.3,Trust and Safety,Cleveland,Ohio,US,0,2026-05-05T16:30:00Z
+270,@music_270,Subscriber Retention 270,threads,450130,0.018,48.4,Subscriber Retention,Tampa,Florida,US,1,2026-05-05T16:30:00Z
+271,@docu_271,Premium Economy 271,instagram,458049,0.055,65.5,Premium Economy,Edison,New Jersey,US,0,2026-05-05T16:30:00Z
+272,@creator_272,Subscriber Growth 272,tiktok,465968,0.092,82.6,Subscriber Growth,Burbank,California,US,0,2026-05-05T16:30:00Z
+273,@moderation_273,Film Discovery 273,twitter,473887,0.039,48,Film Discovery,Joliet,Illinois,US,0,2026-05-05T16:30:00Z
+274,@retention_274,Streaming Strategy 274,youtube,481806,0.076,65.1,Streaming Strategy,Dallas,Texas,US,0,2026-05-05T16:30:00Z
+275,@arpu_275,Fan Communities 275,threads,489725,0.023,82.2,Fan Communities,Miami,Florida,US,1,2026-05-05T16:30:00Z
+276,@watchtime_276,Trailer Reactions 276,instagram,497644,0.06,48.3,Trailer Reactions,Seattle,Washington,US,0,2026-05-05T16:30:00Z
+277,@sports-media_277,Sports Rights 277,tiktok,505563,0.097,65.4,Sports Rights,Goodyear,Arizona,US,0,2026-05-05T16:30:00Z
+278,@fastchannel_278,Live Event Operations 278,twitter,513482,0.044,82.5,Live Event Operations,Atlanta,Georgia,US,0,2026-05-05T16:30:00Z
+279,@sportsreel_279,Family Entertainment 279,youtube,521401,0.081,48.6,Family Entertainment,San Francisco,California,US,0,2026-05-05T16:30:00Z
+280,@fanbase_280,International Fandom 280,threads,529320,0.028,65,International Fandom,Denver,Colorado,US,1,2026-05-05T16:30:00Z
+281,@premiere_281,Anime Culture 281,instagram,537239,0.065,82.1,Anime Culture,Boston,Massachusetts,US,0,2026-05-05T16:30:00Z
+282,@streaming_282,Music Livestreams 282,tiktok,545158,0.102,48.2,Music Livestreams,Washington,District of Columbia,US,0,2026-05-05T16:30:00Z
+283,@fandom_283,Documentary Forums 283,twitter,553077,0.049,65.3,Documentary Forums,Portland,Oregon,US,0,2026-05-05T16:30:00Z
+284,@trailer_284,Creator Monetization 284,youtube,560996,0.086,82.4,Creator Monetization,Nashville,Tennessee,US,0,2026-05-05T16:30:00Z
+285,@rights_285,Trust and Safety 285,threads,568915,0.033,48.5,Trust and Safety,Austin,Texas,US,1,2026-05-05T16:30:00Z
+286,@liveops_286,Subscriber Retention 286,instagram,576834,0.07,65.6,Subscriber Retention,Orlando,Florida,US,0,2026-05-05T16:30:00Z
+287,@family_287,Premium Economy 287,tiktok,584753,0.107,82,Premium Economy,Las Vegas,Nevada,US,0,2026-05-05T16:30:00Z
+288,@globaldrama_288,Subscriber Growth 288,twitter,592672,0.054,48.1,Subscriber Growth,Minneapolis,Minnesota,US,0,2026-05-05T16:30:00Z
+289,@anime_289,Film Discovery 289,youtube,600591,0.091,65.2,Film Discovery,Charlotte,North Carolina,US,0,2026-05-05T16:30:00Z
+290,@music_290,Streaming Strategy 290,threads,608510,0.038,82.3,Streaming Strategy,Philadelphia,Pennsylvania,US,1,2026-05-05T16:30:00Z
+291,@docu_291,Fan Communities 291,instagram,616429,0.075,48.4,Fan Communities,San Diego,California,US,0,2026-05-05T16:30:00Z
+292,@creator_292,Trailer Reactions 292,tiktok,624348,0.022,65.5,Trailer Reactions,Raleigh,North Carolina,US,0,2026-05-05T16:30:00Z
+293,@moderation_293,Sports Rights 293,twitter,632267,0.059,82.6,Sports Rights,Salt Lake City,Utah,US,0,2026-05-05T16:30:00Z
+294,@retention_294,Live Event Operations 294,youtube,640186,0.096,48,Live Event Operations,San Antonio,Texas,US,0,2026-05-05T16:30:00Z
+295,@arpu_295,Family Entertainment 295,threads,648105,0.043,65.1,Family Entertainment,Honolulu,Hawaii,US,1,2026-05-05T16:30:00Z
+296,@watchtime_296,International Fandom 296,instagram,656024,0.08,82.2,International Fandom,Detroit,Michigan,US,0,2026-05-05T16:30:00Z
+297,@sports-media_297,Anime Culture 297,tiktok,663943,0.027,48.3,Anime Culture,Kansas City,Missouri,US,0,2026-05-05T16:30:00Z
+298,@fastchannel_298,Music Livestreams 298,twitter,671862,0.064,65.4,Music Livestreams,New Orleans,Louisiana,US,0,2026-05-05T16:30:00Z
+299,@sportsreel_299,Documentary Forums 299,youtube,679781,0.101,82.5,Documentary Forums,Cleveland,Ohio,US,0,2026-05-05T16:30:00Z
+300,@fanbase_300,Creator Monetization 300,threads,687700,0.048,48.6,Creator Monetization,Tampa,Florida,US,1,2026-05-05T16:30:00Z
+301,@premiere_301,Trust and Safety 301,instagram,695619,0.085,65,Trust and Safety,Edison,New Jersey,US,0,2026-05-05T16:30:00Z
+302,@streaming_302,Subscriber Retention 302,tiktok,703538,0.032,82.1,Subscriber Retention,Burbank,California,US,0,2026-05-05T16:30:00Z
+303,@fandom_303,Premium Economy 303,twitter,711457,0.069,48.2,Premium Economy,Joliet,Illinois,US,0,2026-05-05T16:30:00Z
+304,@trailer_304,Subscriber Growth 304,youtube,719376,0.106,65.3,Subscriber Growth,Dallas,Texas,US,0,2026-05-05T16:30:00Z
+305,@rights_305,Film Discovery 305,threads,727295,0.053,82.4,Film Discovery,Miami,Florida,US,1,2026-05-05T16:30:00Z
+306,@liveops_306,Streaming Strategy 306,instagram,735214,0.09,48.5,Streaming Strategy,Seattle,Washington,US,0,2026-05-05T16:30:00Z
+307,@family_307,Fan Communities 307,tiktok,743133,0.037,65.6,Fan Communities,Goodyear,Arizona,US,0,2026-05-05T16:30:00Z
+308,@globaldrama_308,Trailer Reactions 308,twitter,751052,0.074,82,Trailer Reactions,Atlanta,Georgia,US,0,2026-05-05T16:30:00Z
+309,@anime_309,Sports Rights 309,youtube,758971,0.021,48.1,Sports Rights,San Francisco,California,US,0,2026-05-05T16:30:00Z
+310,@music_310,Live Event Operations 310,threads,766890,0.058,65.2,Live Event Operations,Denver,Colorado,US,1,2026-05-05T16:30:00Z
+311,@docu_311,Family Entertainment 311,instagram,774809,0.095,82.3,Family Entertainment,Boston,Massachusetts,US,0,2026-05-05T16:30:00Z
+312,@creator_312,International Fandom 312,tiktok,782728,0.042,48.4,International Fandom,Washington,District of Columbia,US,0,2026-05-05T16:30:00Z
+313,@moderation_313,Anime Culture 313,twitter,790647,0.079,65.5,Anime Culture,Portland,Oregon,US,0,2026-05-05T16:30:00Z
+314,@retention_314,Music Livestreams 314,youtube,798566,0.026,82.6,Music Livestreams,Nashville,Tennessee,US,0,2026-05-05T16:30:00Z
+315,@arpu_315,Documentary Forums 315,threads,806485,0.063,48,Documentary Forums,Austin,Texas,US,1,2026-05-05T16:30:00Z
+316,@watchtime_316,Creator Monetization 316,instagram,814404,0.1,65.1,Creator Monetization,Orlando,Florida,US,0,2026-05-05T16:30:00Z
+317,@sports-media_317,Trust and Safety 317,tiktok,822323,0.047,82.2,Trust and Safety,Las Vegas,Nevada,US,0,2026-05-05T16:30:00Z
+318,@fastchannel_318,Subscriber Retention 318,twitter,830242,0.084,48.3,Subscriber Retention,Minneapolis,Minnesota,US,0,2026-05-05T16:30:00Z
+319,@sportsreel_319,Premium Economy 319,youtube,838161,0.031,65.4,Premium Economy,Charlotte,North Carolina,US,0,2026-05-05T16:30:00Z
+320,@fanbase_320,Subscriber Growth 320,threads,846080,0.068,82.5,Subscriber Growth,Philadelphia,Pennsylvania,US,1,2026-05-05T16:30:00Z
+321,@premiere_321,Film Discovery 321,instagram,853999,0.105,48.6,Film Discovery,San Diego,California,US,0,2026-05-05T16:30:00Z
+322,@streaming_322,Streaming Strategy 322,tiktok,861918,0.052,65,Streaming Strategy,Raleigh,North Carolina,US,0,2026-05-05T16:30:00Z
+323,@fandom_323,Fan Communities 323,twitter,19837,0.089,82.1,Fan Communities,Salt Lake City,Utah,US,0,2026-05-05T16:30:00Z
+324,@trailer_324,Trailer Reactions 324,youtube,27756,0.036,48.2,Trailer Reactions,San Antonio,Texas,US,0,2026-05-05T16:30:00Z
+325,@rights_325,Sports Rights 325,threads,35675,0.073,65.3,Sports Rights,Honolulu,Hawaii,US,1,2026-05-05T16:30:00Z
+326,@liveops_326,Live Event Operations 326,instagram,43594,0.02,82.4,Live Event Operations,Detroit,Michigan,US,0,2026-05-05T16:30:00Z
+327,@family_327,Family Entertainment 327,tiktok,51513,0.057,48.5,Family Entertainment,Kansas City,Missouri,US,0,2026-05-05T16:30:00Z
+328,@globaldrama_328,International Fandom 328,twitter,59432,0.094,65.6,International Fandom,New Orleans,Louisiana,US,0,2026-05-05T16:30:00Z
+329,@anime_329,Anime Culture 329,youtube,67351,0.041,82,Anime Culture,Cleveland,Ohio,US,0,2026-05-05T16:30:00Z
+330,@music_330,Music Livestreams 330,threads,75270,0.078,48.1,Music Livestreams,Tampa,Florida,US,1,2026-05-05T16:30:00Z
+331,@docu_331,Documentary Forums 331,instagram,83189,0.025,65.2,Documentary Forums,Edison,New Jersey,US,0,2026-05-05T16:30:00Z
+332,@creator_332,Creator Monetization 332,tiktok,91108,0.062,82.3,Creator Monetization,Burbank,California,US,0,2026-05-05T16:30:00Z
+333,@moderation_333,Trust and Safety 333,twitter,99027,0.099,48.4,Trust and Safety,Joliet,Illinois,US,0,2026-05-05T16:30:00Z
+334,@retention_334,Subscriber Retention 334,youtube,106946,0.046,65.5,Subscriber Retention,Dallas,Texas,US,0,2026-05-05T16:30:00Z
+335,@arpu_335,Premium Economy 335,threads,114865,0.083,82.6,Premium Economy,Miami,Florida,US,1,2026-05-05T16:30:00Z
+336,@watchtime_336,Subscriber Growth 336,instagram,122784,0.03,48,Subscriber Growth,Seattle,Washington,US,0,2026-05-05T16:30:00Z
+337,@sports-media_337,Film Discovery 337,tiktok,130703,0.067,65.1,Film Discovery,Goodyear,Arizona,US,0,2026-05-05T16:30:00Z
+338,@fastchannel_338,Streaming Strategy 338,twitter,138622,0.104,82.2,Streaming Strategy,Atlanta,Georgia,US,0,2026-05-05T16:30:00Z
+339,@sportsreel_339,Fan Communities 339,youtube,146541,0.051,48.3,Fan Communities,San Francisco,California,US,0,2026-05-05T16:30:00Z
+340,@fanbase_340,Trailer Reactions 340,threads,154460,0.088,65.4,Trailer Reactions,Denver,Colorado,US,1,2026-05-05T16:30:00Z
+341,@premiere_341,Sports Rights 341,instagram,162379,0.035,82.5,Sports Rights,Boston,Massachusetts,US,0,2026-05-05T16:30:00Z
+342,@streaming_342,Live Event Operations 342,tiktok,170298,0.072,48.6,Live Event Operations,Washington,District of Columbia,US,0,2026-05-05T16:30:00Z
+343,@fandom_343,Family Entertainment 343,twitter,178217,0.019,65,Family Entertainment,Portland,Oregon,US,0,2026-05-05T16:30:00Z
+344,@trailer_344,International Fandom 344,youtube,186136,0.056,82.1,International Fandom,Nashville,Tennessee,US,0,2026-05-05T16:30:00Z
+345,@rights_345,Anime Culture 345,threads,194055,0.093,48.2,Anime Culture,Austin,Texas,US,1,2026-05-05T16:30:00Z
+346,@liveops_346,Music Livestreams 346,instagram,201974,0.04,65.3,Music Livestreams,Orlando,Florida,US,0,2026-05-05T16:30:00Z
+347,@family_347,Documentary Forums 347,tiktok,209893,0.077,82.4,Documentary Forums,Las Vegas,Nevada,US,0,2026-05-05T16:30:00Z
+348,@globaldrama_348,Creator Monetization 348,twitter,217812,0.024,48.5,Creator Monetization,Minneapolis,Minnesota,US,0,2026-05-05T16:30:00Z
+349,@anime_349,Trust and Safety 349,youtube,225731,0.061,65.6,Trust and Safety,Charlotte,North Carolina,US,0,2026-05-05T16:30:00Z
+350,@music_350,Subscriber Retention 350,threads,233650,0.098,82,Subscriber Retention,Philadelphia,Pennsylvania,US,1,2026-05-05T16:30:00Z
+351,@docu_351,Premium Economy 351,instagram,241569,0.045,48.1,Premium Economy,San Diego,California,US,0,2026-05-05T16:30:00Z
+352,@creator_352,Subscriber Growth 352,tiktok,249488,0.082,65.2,Subscriber Growth,Raleigh,North Carolina,US,0,2026-05-05T16:30:00Z
+353,@moderation_353,Film Discovery 353,twitter,257407,0.029,82.3,Film Discovery,Salt Lake City,Utah,US,0,2026-05-05T16:30:00Z
+354,@retention_354,Streaming Strategy 354,youtube,265326,0.066,48.4,Streaming Strategy,San Antonio,Texas,US,0,2026-05-05T16:30:00Z
+355,@arpu_355,Fan Communities 355,threads,273245,0.103,65.5,Fan Communities,Honolulu,Hawaii,US,1,2026-05-05T16:30:00Z
+356,@watchtime_356,Trailer Reactions 356,instagram,281164,0.05,82.6,Trailer Reactions,Detroit,Michigan,US,0,2026-05-05T16:30:00Z
+357,@sports-media_357,Sports Rights 357,tiktok,289083,0.087,48,Sports Rights,Kansas City,Missouri,US,0,2026-05-05T16:30:00Z
+358,@fastchannel_358,Live Event Operations 358,twitter,297002,0.034,65.1,Live Event Operations,New Orleans,Louisiana,US,0,2026-05-05T16:30:00Z
+359,@sportsreel_359,Family Entertainment 359,youtube,304921,0.071,82.2,Family Entertainment,Cleveland,Ohio,US,0,2026-05-05T16:30:00Z
+360,@fanbase_360,International Fandom 360,threads,312840,0.018,48.3,International Fandom,Tampa,Florida,US,1,2026-05-05T16:30:00Z
+361,@premiere_361,Anime Culture 361,instagram,320759,0.055,65.4,Anime Culture,Edison,New Jersey,US,0,2026-05-05T16:30:00Z
+362,@streaming_362,Music Livestreams 362,tiktok,328678,0.092,82.5,Music Livestreams,Burbank,California,US,0,2026-05-05T16:30:00Z
+363,@fandom_363,Documentary Forums 363,twitter,336597,0.039,48.6,Documentary Forums,Joliet,Illinois,US,0,2026-05-05T16:30:00Z
+364,@trailer_364,Creator Monetization 364,youtube,344516,0.076,65,Creator Monetization,Dallas,Texas,US,0,2026-05-05T16:30:00Z
+365,@rights_365,Trust and Safety 365,threads,352435,0.023,82.1,Trust and Safety,Miami,Florida,US,1,2026-05-05T16:30:00Z
+366,@liveops_366,Subscriber Retention 366,instagram,360354,0.06,48.2,Subscriber Retention,Seattle,Washington,US,0,2026-05-05T16:30:00Z
+367,@family_367,Premium Economy 367,tiktok,368273,0.097,65.3,Premium Economy,Goodyear,Arizona,US,0,2026-05-05T16:30:00Z
+368,@globaldrama_368,Subscriber Growth 368,twitter,376192,0.044,82.4,Subscriber Growth,Atlanta,Georgia,US,0,2026-05-05T16:30:00Z
+369,@anime_369,Film Discovery 369,youtube,384111,0.081,48.5,Film Discovery,San Francisco,California,US,0,2026-05-05T16:30:00Z
+370,@music_370,Streaming Strategy 370,threads,392030,0.028,65.6,Streaming Strategy,Denver,Colorado,US,1,2026-05-05T16:30:00Z
+371,@docu_371,Fan Communities 371,instagram,399949,0.065,82,Fan Communities,Boston,Massachusetts,US,0,2026-05-05T16:30:00Z
+372,@creator_372,Trailer Reactions 372,tiktok,407868,0.102,48.1,Trailer Reactions,Washington,District of Columbia,US,0,2026-05-05T16:30:00Z
+373,@moderation_373,Sports Rights 373,twitter,415787,0.049,65.2,Sports Rights,Portland,Oregon,US,0,2026-05-05T16:30:00Z
+374,@retention_374,Live Event Operations 374,youtube,423706,0.086,82.3,Live Event Operations,Nashville,Tennessee,US,0,2026-05-05T16:30:00Z
+375,@arpu_375,Family Entertainment 375,threads,431625,0.033,48.4,Family Entertainment,Austin,Texas,US,1,2026-05-05T16:30:00Z
+376,@watchtime_376,International Fandom 376,instagram,439544,0.07,65.5,International Fandom,Orlando,Florida,US,0,2026-05-05T16:30:00Z
+377,@sports-media_377,Anime Culture 377,tiktok,447463,0.107,82.6,Anime Culture,Las Vegas,Nevada,US,0,2026-05-05T16:30:00Z
+378,@fastchannel_378,Music Livestreams 378,twitter,455382,0.054,48,Music Livestreams,Minneapolis,Minnesota,US,0,2026-05-05T16:30:00Z
+379,@sportsreel_379,Documentary Forums 379,youtube,463301,0.091,65.1,Documentary Forums,Charlotte,North Carolina,US,0,2026-05-05T16:30:00Z
+380,@fanbase_380,Creator Monetization 380,threads,471220,0.038,82.2,Creator Monetization,Philadelphia,Pennsylvania,US,1,2026-05-05T16:30:00Z
+381,@premiere_381,Trust and Safety 381,instagram,479139,0.075,48.3,Trust and Safety,San Diego,California,US,0,2026-05-05T16:30:00Z
+382,@streaming_382,Subscriber Retention 382,tiktok,487058,0.022,65.4,Subscriber Retention,Raleigh,North Carolina,US,0,2026-05-05T16:30:00Z
+383,@fandom_383,Premium Economy 383,twitter,494977,0.059,82.5,Premium Economy,Salt Lake City,Utah,US,0,2026-05-05T16:30:00Z
+384,@trailer_384,Subscriber Growth 384,youtube,502896,0.096,48.6,Subscriber Growth,San Antonio,Texas,US,0,2026-05-05T16:30:00Z
+385,@rights_385,Film Discovery 385,threads,510815,0.043,65,Film Discovery,Honolulu,Hawaii,US,1,2026-05-05T16:30:00Z
+386,@liveops_386,Streaming Strategy 386,instagram,518734,0.08,82.1,Streaming Strategy,Detroit,Michigan,US,0,2026-05-05T16:30:00Z
+387,@family_387,Fan Communities 387,tiktok,526653,0.027,48.2,Fan Communities,Kansas City,Missouri,US,0,2026-05-05T16:30:00Z
+388,@globaldrama_388,Trailer Reactions 388,twitter,534572,0.064,65.3,Trailer Reactions,New Orleans,Louisiana,US,0,2026-05-05T16:30:00Z
+389,@anime_389,Sports Rights 389,youtube,542491,0.101,82.4,Sports Rights,Cleveland,Ohio,US,0,2026-05-05T16:30:00Z
+390,@music_390,Live Event Operations 390,threads,550410,0.048,48.5,Live Event Operations,Tampa,Florida,US,1,2026-05-05T16:30:00Z
+391,@docu_391,Family Entertainment 391,instagram,558329,0.085,65.6,Family Entertainment,Edison,New Jersey,US,0,2026-05-05T16:30:00Z
+392,@creator_392,International Fandom 392,tiktok,566248,0.032,82,International Fandom,Burbank,California,US,0,2026-05-05T16:30:00Z
+393,@moderation_393,Anime Culture 393,twitter,574167,0.069,48.1,Anime Culture,Joliet,Illinois,US,0,2026-05-05T16:30:00Z
+394,@retention_394,Music Livestreams 394,youtube,582086,0.106,65.2,Music Livestreams,Dallas,Texas,US,0,2026-05-05T16:30:00Z
+395,@arpu_395,Documentary Forums 395,threads,590005,0.053,82.3,Documentary Forums,Miami,Florida,US,1,2026-05-05T16:30:00Z
+396,@watchtime_396,Creator Monetization 396,instagram,597924,0.09,48.4,Creator Monetization,Seattle,Washington,US,0,2026-05-05T16:30:00Z
+397,@sports-media_397,Trust and Safety 397,tiktok,605843,0.037,65.5,Trust and Safety,Goodyear,Arizona,US,0,2026-05-05T16:30:00Z
+398,@fastchannel_398,Subscriber Retention 398,twitter,613762,0.074,82.6,Subscriber Retention,Atlanta,Georgia,US,0,2026-05-05T16:30:00Z
+399,@sportsreel_399,Premium Economy 399,youtube,621681,0.021,48,Premium Economy,San Francisco,California,US,0,2026-05-05T16:30:00Z
+400,@fanbase_400,Subscriber Growth 400,threads,629600,0.058,65.1,Subscriber Growth,Denver,Colorado,US,1,2026-05-05T16:30:00Z
+401,@premiere_401,Film Discovery 401,instagram,637519,0.095,82.2,Film Discovery,Boston,Massachusetts,US,0,2026-05-05T16:30:00Z
+402,@streaming_402,Streaming Strategy 402,tiktok,645438,0.042,48.3,Streaming Strategy,Washington,District of Columbia,US,0,2026-05-05T16:30:00Z
+403,@fandom_403,Fan Communities 403,twitter,653357,0.079,65.4,Fan Communities,Portland,Oregon,US,0,2026-05-05T16:30:00Z
+404,@trailer_404,Trailer Reactions 404,youtube,661276,0.026,82.5,Trailer Reactions,Nashville,Tennessee,US,0,2026-05-05T16:30:00Z
+405,@rights_405,Sports Rights 405,threads,669195,0.063,48.6,Sports Rights,Austin,Texas,US,1,2026-05-05T16:30:00Z
+406,@liveops_406,Live Event Operations 406,instagram,677114,0.1,65,Live Event Operations,Orlando,Florida,US,0,2026-05-05T16:30:00Z
+407,@family_407,Family Entertainment 407,tiktok,685033,0.047,82.1,Family Entertainment,Las Vegas,Nevada,US,0,2026-05-05T16:30:00Z
+408,@globaldrama_408,International Fandom 408,twitter,692952,0.084,48.2,International Fandom,Minneapolis,Minnesota,US,0,2026-05-05T16:30:00Z
+409,@anime_409,Anime Culture 409,youtube,700871,0.031,65.3,Anime Culture,Charlotte,North Carolina,US,0,2026-05-05T16:30:00Z
+410,@music_410,Music Livestreams 410,threads,708790,0.068,82.4,Music Livestreams,Philadelphia,Pennsylvania,US,1,2026-05-05T16:30:00Z
+411,@docu_411,Documentary Forums 411,instagram,716709,0.105,48.5,Documentary Forums,San Diego,California,US,0,2026-05-05T16:30:00Z
+412,@creator_412,Creator Monetization 412,tiktok,724628,0.052,65.6,Creator Monetization,Raleigh,North Carolina,US,0,2026-05-05T16:30:00Z
+413,@moderation_413,Trust and Safety 413,twitter,732547,0.089,82,Trust and Safety,Salt Lake City,Utah,US,0,2026-05-05T16:30:00Z
+414,@retention_414,Subscriber Retention 414,youtube,740466,0.036,48.1,Subscriber Retention,San Antonio,Texas,US,0,2026-05-05T16:30:00Z
+415,@arpu_415,Premium Economy 415,threads,748385,0.073,65.2,Premium Economy,Honolulu,Hawaii,US,1,2026-05-05T16:30:00Z
+416,@watchtime_416,Subscriber Growth 416,instagram,756304,0.02,82.3,Subscriber Growth,Detroit,Michigan,US,0,2026-05-05T16:30:00Z
+417,@sports-media_417,Film Discovery 417,tiktok,764223,0.057,48.4,Film Discovery,Kansas City,Missouri,US,0,2026-05-05T16:30:00Z
+418,@fastchannel_418,Streaming Strategy 418,twitter,772142,0.094,65.5,Streaming Strategy,New Orleans,Louisiana,US,0,2026-05-05T16:30:00Z
+419,@sportsreel_419,Fan Communities 419,youtube,780061,0.041,82.6,Fan Communities,Cleveland,Ohio,US,0,2026-05-05T16:30:00Z
+420,@fanbase_420,Trailer Reactions 420,threads,787980,0.078,48,Trailer Reactions,Tampa,Florida,US,1,2026-05-05T16:30:00Z
+421,@premiere_421,Sports Rights 421,instagram,795899,0.025,65.1,Sports Rights,Edison,New Jersey,US,0,2026-05-05T16:30:00Z
+422,@streaming_422,Live Event Operations 422,tiktok,803818,0.062,82.2,Live Event Operations,Burbank,California,US,0,2026-05-05T16:30:00Z
+423,@fandom_423,Family Entertainment 423,twitter,811737,0.099,48.3,Family Entertainment,Joliet,Illinois,US,0,2026-05-05T16:30:00Z
+424,@trailer_424,International Fandom 424,youtube,819656,0.046,65.4,International Fandom,Dallas,Texas,US,0,2026-05-05T16:30:00Z
+425,@rights_425,Anime Culture 425,threads,827575,0.083,82.5,Anime Culture,Miami,Florida,US,1,2026-05-05T16:30:00Z
+426,@liveops_426,Music Livestreams 426,instagram,835494,0.03,48.6,Music Livestreams,Seattle,Washington,US,0,2026-05-05T16:30:00Z
+427,@family_427,Documentary Forums 427,tiktok,843413,0.067,65,Documentary Forums,Goodyear,Arizona,US,0,2026-05-05T16:30:00Z
+428,@globaldrama_428,Creator Monetization 428,twitter,851332,0.104,82.1,Creator Monetization,Atlanta,Georgia,US,0,2026-05-05T16:30:00Z
+429,@anime_429,Trust and Safety 429,youtube,859251,0.051,48.2,Trust and Safety,San Francisco,California,US,0,2026-05-05T16:30:00Z
+430,@music_430,Subscriber Retention 430,threads,17170,0.088,65.3,Subscriber Retention,Denver,Colorado,US,1,2026-05-05T16:30:00Z
+431,@docu_431,Premium Economy 431,instagram,25089,0.035,82.4,Premium Economy,Boston,Massachusetts,US,0,2026-05-05T16:30:00Z
+432,@creator_432,Subscriber Growth 432,tiktok,33008,0.072,48.5,Subscriber Growth,Washington,District of Columbia,US,0,2026-05-05T16:30:00Z
+433,@moderation_433,Film Discovery 433,twitter,40927,0.019,65.6,Film Discovery,Portland,Oregon,US,0,2026-05-05T16:30:00Z
+434,@retention_434,Streaming Strategy 434,youtube,48846,0.056,82,Streaming Strategy,Nashville,Tennessee,US,0,2026-05-05T16:30:00Z
+435,@arpu_435,Fan Communities 435,threads,56765,0.093,48.1,Fan Communities,Austin,Texas,US,1,2026-05-05T16:30:00Z
+436,@watchtime_436,Trailer Reactions 436,instagram,64684,0.04,65.2,Trailer Reactions,Orlando,Florida,US,0,2026-05-05T16:30:00Z
+437,@sports-media_437,Sports Rights 437,tiktok,72603,0.077,82.3,Sports Rights,Las Vegas,Nevada,US,0,2026-05-05T16:30:00Z
+438,@fastchannel_438,Live Event Operations 438,twitter,80522,0.024,48.4,Live Event Operations,Minneapolis,Minnesota,US,0,2026-05-05T16:30:00Z
+439,@sportsreel_439,Family Entertainment 439,youtube,88441,0.061,65.5,Family Entertainment,Charlotte,North Carolina,US,0,2026-05-05T16:30:00Z
+440,@fanbase_440,International Fandom 440,threads,96360,0.098,82.6,International Fandom,Philadelphia,Pennsylvania,US,1,2026-05-05T16:30:00Z
+441,@premiere_441,Anime Culture 441,instagram,104279,0.045,48,Anime Culture,San Diego,California,US,0,2026-05-05T16:30:00Z
+442,@streaming_442,Music Livestreams 442,tiktok,112198,0.082,65.1,Music Livestreams,Raleigh,North Carolina,US,0,2026-05-05T16:30:00Z
+443,@fandom_443,Documentary Forums 443,twitter,120117,0.029,82.2,Documentary Forums,Salt Lake City,Utah,US,0,2026-05-05T16:30:00Z
+444,@trailer_444,Creator Monetization 444,youtube,128036,0.066,48.3,Creator Monetization,San Antonio,Texas,US,0,2026-05-05T16:30:00Z
+445,@rights_445,Trust and Safety 445,threads,135955,0.103,65.4,Trust and Safety,Honolulu,Hawaii,US,1,2026-05-05T16:30:00Z
+446,@liveops_446,Subscriber Retention 446,instagram,143874,0.05,82.5,Subscriber Retention,Detroit,Michigan,US,0,2026-05-05T16:30:00Z
+447,@family_447,Premium Economy 447,tiktok,151793,0.087,48.6,Premium Economy,Kansas City,Missouri,US,0,2026-05-05T16:30:00Z
+448,@globaldrama_448,Subscriber Growth 448,twitter,159712,0.034,65,Subscriber Growth,New Orleans,Louisiana,US,0,2026-05-05T16:30:00Z
+449,@anime_449,Film Discovery 449,youtube,167631,0.071,82.1,Film Discovery,Cleveland,Ohio,US,0,2026-05-05T16:30:00Z
+450,@music_450,Streaming Strategy 450,threads,175550,0.018,48.2,Streaming Strategy,Tampa,Florida,US,1,2026-05-05T16:30:00Z
+451,@docu_451,Fan Communities 451,instagram,183469,0.055,65.3,Fan Communities,Edison,New Jersey,US,0,2026-05-05T16:30:00Z
+452,@creator_452,Trailer Reactions 452,tiktok,191388,0.092,82.4,Trailer Reactions,Burbank,California,US,0,2026-05-05T16:30:00Z
+453,@moderation_453,Sports Rights 453,twitter,199307,0.039,48.5,Sports Rights,Joliet,Illinois,US,0,2026-05-05T16:30:00Z
+454,@retention_454,Live Event Operations 454,youtube,207226,0.076,65.6,Live Event Operations,Dallas,Texas,US,0,2026-05-05T16:30:00Z
+455,@arpu_455,Family Entertainment 455,threads,215145,0.023,82,Family Entertainment,Miami,Florida,US,1,2026-05-05T16:30:00Z
+456,@watchtime_456,International Fandom 456,instagram,223064,0.06,48.1,International Fandom,Seattle,Washington,US,0,2026-05-05T16:30:00Z
+457,@sports-media_457,Anime Culture 457,tiktok,230983,0.097,65.2,Anime Culture,Goodyear,Arizona,US,0,2026-05-05T16:30:00Z
+458,@fastchannel_458,Music Livestreams 458,twitter,238902,0.044,82.3,Music Livestreams,Atlanta,Georgia,US,0,2026-05-05T16:30:00Z
+459,@sportsreel_459,Documentary Forums 459,youtube,246821,0.081,48.4,Documentary Forums,San Francisco,California,US,0,2026-05-05T16:30:00Z
+460,@fanbase_460,Creator Monetization 460,threads,254740,0.028,65.5,Creator Monetization,Denver,Colorado,US,1,2026-05-05T16:30:00Z
+461,@premiere_461,Trust and Safety 461,instagram,262659,0.065,82.6,Trust and Safety,Boston,Massachusetts,US,0,2026-05-05T16:30:00Z
+462,@streaming_462,Subscriber Retention 462,tiktok,270578,0.102,48,Subscriber Retention,Washington,District of Columbia,US,0,2026-05-05T16:30:00Z
+463,@fandom_463,Premium Economy 463,twitter,278497,0.049,65.1,Premium Economy,Portland,Oregon,US,0,2026-05-05T16:30:00Z
+464,@trailer_464,Subscriber Growth 464,youtube,286416,0.086,82.2,Subscriber Growth,Nashville,Tennessee,US,0,2026-05-05T16:30:00Z
+465,@rights_465,Film Discovery 465,threads,294335,0.033,48.3,Film Discovery,Austin,Texas,US,1,2026-05-05T16:30:00Z
+466,@liveops_466,Streaming Strategy 466,instagram,302254,0.07,65.4,Streaming Strategy,Orlando,Florida,US,0,2026-05-05T16:30:00Z
+467,@family_467,Fan Communities 467,tiktok,310173,0.107,82.5,Fan Communities,Las Vegas,Nevada,US,0,2026-05-05T16:30:00Z
+468,@globaldrama_468,Trailer Reactions 468,twitter,318092,0.054,48.6,Trailer Reactions,Minneapolis,Minnesota,US,0,2026-05-05T16:30:00Z
+469,@anime_469,Sports Rights 469,youtube,326011,0.091,65,Sports Rights,Charlotte,North Carolina,US,0,2026-05-05T16:30:00Z
+470,@music_470,Live Event Operations 470,threads,333930,0.038,82.1,Live Event Operations,Philadelphia,Pennsylvania,US,1,2026-05-05T16:30:00Z
+471,@docu_471,Family Entertainment 471,instagram,341849,0.075,48.2,Family Entertainment,San Diego,California,US,0,2026-05-05T16:30:00Z
+472,@creator_472,International Fandom 472,tiktok,349768,0.022,65.3,International Fandom,Raleigh,North Carolina,US,0,2026-05-05T16:30:00Z
+473,@moderation_473,Anime Culture 473,twitter,357687,0.059,82.4,Anime Culture,Salt Lake City,Utah,US,0,2026-05-05T16:30:00Z
+474,@retention_474,Music Livestreams 474,youtube,365606,0.096,48.5,Music Livestreams,San Antonio,Texas,US,0,2026-05-05T16:30:00Z
+475,@arpu_475,Documentary Forums 475,threads,373525,0.043,65.6,Documentary Forums,Honolulu,Hawaii,US,1,2026-05-05T16:30:00Z
+476,@watchtime_476,Creator Monetization 476,instagram,381444,0.08,82,Creator Monetization,Detroit,Michigan,US,0,2026-05-05T16:30:00Z
+477,@sports-media_477,Trust and Safety 477,tiktok,389363,0.027,48.1,Trust and Safety,Kansas City,Missouri,US,0,2026-05-05T16:30:00Z
+478,@fastchannel_478,Subscriber Retention 478,twitter,397282,0.064,65.2,Subscriber Retention,New Orleans,Louisiana,US,0,2026-05-05T16:30:00Z
+479,@sportsreel_479,Premium Economy 479,youtube,405201,0.101,82.3,Premium Economy,Cleveland,Ohio,US,0,2026-05-05T16:30:00Z
+480,@fanbase_480,Subscriber Growth 480,threads,413120,0.048,48.4,Subscriber Growth,Tampa,Florida,US,1,2026-05-05T16:30:00Z
+481,@premiere_481,Film Discovery 481,instagram,421039,0.085,65.5,Film Discovery,Edison,New Jersey,US,0,2026-05-05T16:30:00Z
+482,@streaming_482,Streaming Strategy 482,tiktok,428958,0.032,82.6,Streaming Strategy,Burbank,California,US,0,2026-05-05T16:30:00Z
+483,@fandom_483,Fan Communities 483,twitter,436877,0.069,48,Fan Communities,Joliet,Illinois,US,0,2026-05-05T16:30:00Z

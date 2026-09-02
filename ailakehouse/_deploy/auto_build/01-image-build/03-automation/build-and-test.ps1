@@ -1421,6 +1421,91 @@ function Get-IniValue {
     return ""
 }
 
+function Normalize-OciAuthMethod {
+    param([string]$AuthMethod)
+
+    $normalized = if ([string]::IsNullOrWhiteSpace($AuthMethod)) {
+        "apikey"
+    }
+    else {
+        $AuthMethod.Trim().Replace("_", "").Replace("-", "").ToLowerInvariant()
+    }
+
+    switch ($normalized) {
+        "apikey" { return "APIKey" }
+        "securitytoken" { return "SecurityToken" }
+        default { throw "OCI authentication method must be APIKey or SecurityToken, not '$AuthMethod'." }
+    }
+}
+
+function Get-OciProfileAuthMethod {
+    param(
+        [string]$ConfigFile,
+        [string]$Profile
+    )
+
+    $securityTokenFile = Get-IniValue -Path $ConfigFile -Section $Profile -Name "security_token_file"
+    if (-not [string]::IsNullOrWhiteSpace($securityTokenFile)) {
+        return "SecurityToken"
+    }
+
+    return "APIKey"
+}
+
+function Assert-OciAuthenticationProfile {
+    param(
+        [string]$ConfigFile,
+        [string]$Profile,
+        [string]$AuthMethod,
+        [string]$ExpectedTenancyOcid = "",
+        [string]$ExpectedUserOcid = ""
+    )
+
+    $normalizedAuth = Normalize-OciAuthMethod -AuthMethod $AuthMethod
+    $tenancy = Get-IniValue -Path $ConfigFile -Section $Profile -Name "tenancy"
+    $user = Get-IniValue -Path $ConfigFile -Section $Profile -Name "user"
+    $keyFile = Get-IniValue -Path $ConfigFile -Section $Profile -Name "key_file"
+    $fingerprint = Get-IniValue -Path $ConfigFile -Section $Profile -Name "fingerprint"
+    $securityTokenFile = Get-IniValue -Path $ConfigFile -Section $Profile -Name "security_token_file"
+
+    if ([string]::IsNullOrWhiteSpace($tenancy) -or
+        [string]::IsNullOrWhiteSpace($user) -or
+        [string]::IsNullOrWhiteSpace($keyFile)) {
+        throw "OCI profile '$Profile' in '$ConfigFile' is incomplete. It must define tenancy, user, and key_file."
+    }
+    if (-not [string]::IsNullOrWhiteSpace($ExpectedTenancyOcid) -and $tenancy -ne $ExpectedTenancyOcid) {
+        throw "OCI profile '$Profile' uses tenancy '$tenancy', but terraform.tfvars specifies '$ExpectedTenancyOcid'."
+    }
+    if (-not [string]::IsNullOrWhiteSpace($ExpectedUserOcid) -and $user -ne $ExpectedUserOcid) {
+        throw "OCI profile '$Profile' uses user '$user', but terraform.tfvars specifies '$ExpectedUserOcid'."
+    }
+
+    $configDirectory = Split-Path -Parent $ConfigFile
+    $resolvedKeyFile = Resolve-ConfigurationPath -Path $keyFile -BaseDirectory $configDirectory
+    if (-not (Test-Path -LiteralPath $resolvedKeyFile -PathType Leaf)) {
+        throw "OCI profile '$Profile' key_file does not exist: $resolvedKeyFile"
+    }
+
+    if ($normalizedAuth -eq "APIKey") {
+        if ([string]::IsNullOrWhiteSpace($fingerprint)) {
+            throw "OCI API-key profile '$Profile' must define fingerprint."
+        }
+        if (-not [string]::IsNullOrWhiteSpace($securityTokenFile)) {
+            throw "OCI profile '$Profile' contains security_token_file and is therefore a token profile. Restore or select a clean API-key profile, or set ociAuthMethod = `"SecurityToken`". The automation will not rewrite OCI profiles."
+        }
+        Write-Pass "Using non-expiring OCI API-key profile '$Profile' without modifying it"
+        return
+    }
+
+    if ([string]::IsNullOrWhiteSpace($securityTokenFile)) {
+        throw "OCI security-token profile '$Profile' does not contain security_token_file."
+    }
+    $resolvedTokenFile = Resolve-ConfigurationPath -Path $securityTokenFile -BaseDirectory $configDirectory
+    if (-not (Test-Path -LiteralPath $resolvedTokenFile -PathType Leaf)) {
+        throw "OCI security-token profile '$Profile' token file does not exist: $resolvedTokenFile"
+    }
+}
+
 function Add-SecurityTokenTarget {
     param(
         [object[]]$Targets,
@@ -2503,16 +2588,23 @@ if (-not [string]::IsNullOrWhiteSpace($CleanupInspection)) {
     if ($null -ne $disposableContext) {
         $cleanupSessionTargets = @()
         $cleanupVariableFile = [string]$disposableContext.VariableSnapshotPath
-        $cleanupAuthMethod = Get-AssignmentValue -Path $cleanupVariableFile -Name "ociAuthMethod"
+        $cleanupAuthMethod = Normalize-OciAuthMethod `
+            -AuthMethod (Get-AssignmentValue -Path $cleanupVariableFile -Name "ociAuthMethod")
+        $cleanupProfile = Get-AssignmentValue -Path $cleanupVariableFile -Name "ociConfigProfile"
+        $cleanupRegion = Get-AssignmentValue -Path $cleanupVariableFile -Name "ociRegionIdentifier"
+        if ([string]::IsNullOrWhiteSpace($cleanupProfile) -or [string]::IsNullOrWhiteSpace($cleanupRegion)) {
+            throw "The inspection variable snapshot must define ociConfigProfile and ociRegionIdentifier."
+        }
+        $cleanupOciConfig = Resolve-ExistingFile `
+            -Path (Join-Path (Join-Path $HOME ".oci") "config") `
+            -Label "OCI configuration file"
+        Assert-OciAuthenticationProfile `
+            -ConfigFile $cleanupOciConfig `
+            -Profile $cleanupProfile `
+            -AuthMethod $cleanupAuthMethod `
+            -ExpectedTenancyOcid (Get-AssignmentValue -Path $cleanupVariableFile -Name "ociTenancyOcid") `
+            -ExpectedUserOcid (Get-AssignmentValue -Path $cleanupVariableFile -Name "ociUserOcid")
         if ($cleanupAuthMethod -eq "SecurityToken") {
-            $cleanupProfile = Get-AssignmentValue -Path $cleanupVariableFile -Name "ociConfigProfile"
-            $cleanupRegion = Get-AssignmentValue -Path $cleanupVariableFile -Name "ociRegionIdentifier"
-            if ([string]::IsNullOrWhiteSpace($cleanupProfile) -or [string]::IsNullOrWhiteSpace($cleanupRegion)) {
-                throw "The inspection variable snapshot must define ociConfigProfile and ociRegionIdentifier for SecurityToken authentication."
-            }
-            $cleanupOciConfig = Resolve-ExistingFile `
-                -Path (Join-Path (Join-Path $HOME ".oci") "config") `
-                -Label "OCI configuration file"
             $cleanupSessionTargets = @(Add-SecurityTokenTarget `
                 -Targets $cleanupSessionTargets `
                 -ConfigFile $cleanupOciConfig `
@@ -2610,15 +2702,24 @@ if (Get-Content -LiteralPath $TerraformVariableFile | Where-Object { $_ -notmatc
 }
 
 $sessionTargets = @()
-$terraformAuthMethod = Get-AssignmentValue -Path $TerraformVariableFile -Name "ociAuthMethod"
+$terraformAuthMethod = Normalize-OciAuthMethod `
+    -AuthMethod (Get-AssignmentValue -Path $TerraformVariableFile -Name "ociAuthMethod")
+$terraformProfile = Get-AssignmentValue -Path $TerraformVariableFile -Name "ociConfigProfile"
+$terraformRegion = Get-AssignmentValue -Path $TerraformVariableFile -Name "ociRegionIdentifier"
+$terraformTenancyOcid = Get-AssignmentValue -Path $TerraformVariableFile -Name "ociTenancyOcid"
+$terraformUserOcid = Get-AssignmentValue -Path $TerraformVariableFile -Name "ociUserOcid"
+if ([string]::IsNullOrWhiteSpace($terraformProfile) -or [string]::IsNullOrWhiteSpace($terraformRegion)) {
+    throw "Terraform variables must define ociConfigProfile and ociRegionIdentifier."
+}
+$defaultOciConfig = Join-Path (Join-Path $HOME ".oci") "config"
+$defaultOciConfig = Resolve-ExistingFile -Path $defaultOciConfig -Label "OCI configuration file"
+Assert-OciAuthenticationProfile `
+    -ConfigFile $defaultOciConfig `
+    -Profile $terraformProfile `
+    -AuthMethod $terraformAuthMethod `
+    -ExpectedTenancyOcid $terraformTenancyOcid `
+    -ExpectedUserOcid $terraformUserOcid
 if ($terraformAuthMethod -eq "SecurityToken") {
-    $terraformProfile = Get-AssignmentValue -Path $TerraformVariableFile -Name "ociConfigProfile"
-    $terraformRegion = Get-AssignmentValue -Path $TerraformVariableFile -Name "ociRegionIdentifier"
-    if ([string]::IsNullOrWhiteSpace($terraformProfile) -or [string]::IsNullOrWhiteSpace($terraformRegion)) {
-        throw "Terraform variables must define ociConfigProfile and ociRegionIdentifier for SecurityToken authentication."
-    }
-    $defaultOciConfig = Join-Path (Join-Path $HOME ".oci") "config"
-    $defaultOciConfig = Resolve-ExistingFile -Path $defaultOciConfig -Label "OCI configuration file"
     $sessionTargets = @(Add-SecurityTokenTarget `
         -Targets $sessionTargets `
         -ConfigFile $defaultOciConfig `
@@ -2751,16 +2852,29 @@ $packerConfigFile = Resolve-ConfigurationPath `
     -Path $packerConfigFileValue `
     -BaseDirectory (Split-Path -Parent $PackerVariableFile)
 $packerConfigFile = Resolve-ExistingFile -Path $packerConfigFile -Label "OCI configuration file"
-$sessionTargets = @(Add-SecurityTokenTarget `
-    -Targets $sessionTargets `
+$packerAuthMethod = Get-OciProfileAuthMethod `
+    -ConfigFile $packerConfigFile `
+    -Profile $packerProfile
+Assert-OciAuthenticationProfile `
     -ConfigFile $packerConfigFile `
     -Profile $packerProfile `
-    -Region $packerRegion)
+    -AuthMethod $packerAuthMethod `
+    -ExpectedTenancyOcid $terraformTenancyOcid `
+    -ExpectedUserOcid $terraformUserOcid
+if ($packerAuthMethod -eq "SecurityToken") {
+    $sessionTargets = @(Add-SecurityTokenTarget `
+        -Targets $sessionTargets `
+        -ConfigFile $packerConfigFile `
+        -Profile $packerProfile `
+        -Region $packerRegion)
+}
 $ociPath = Resolve-CommandPath -Name "oci"
+$ociCliAuth = if ($packerAuthMethod -eq "SecurityToken") { "security_token" } else { "api_key" }
 $ociCommonArguments = @(Get-OciCliCommonArguments `
     -ConfigFile $packerConfigFile `
     -Profile $packerProfile `
-    -Region $packerRegion)
+    -Region $packerRegion `
+    -Auth $ociCliAuth)
 
 if (Get-Content -LiteralPath $PackerVariableFile | Where-Object { $_ -notmatch '^\s*#' -and $_ -match '<[^>]+>' }) {
     throw "Packer variable file still contains placeholder values: $PackerVariableFile"

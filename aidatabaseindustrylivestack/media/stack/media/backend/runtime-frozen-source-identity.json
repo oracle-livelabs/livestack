@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "applicationId": "livestack-media",
+  "project": "livestack-media",
+  "service": "app",
+  "stableContainer": "livestack-media-app-1",
+  "source": {
+    "sha256": "3be241a4ab7b6d1fc2ad372539b7328a9fbd5dc3400109617066ddee00ebee10",
+    "fileCount": 249,
+    "bytes": 9908082,
+    "aggregateDefinition": "sha256(lexicographically sorted shasum -a 256 lines with relative ./ paths)",
+    "exclusions": [
+      "**/node_modules/**",
+      "frontend/dist/**",
+      "frontend/public/jet/**",
+      "backend/runtime-frozen-source-identity.json",
+      "verification/runtime/media-runtime-executable-manifest.json",
+      "**/logs/**",
+      "**/evidence/**",
+      "**/coverage/**",
+      "**/.cache/**",
+      "**/*.log",
+      "**/.DS_Store",
+      "**/*.zip"
+    ]
+  },
+  "frontendBuild": {
+    "schemaVersion": 1,
+    "sha256": "cfc09554e233eb1ea7e0e9b866eedbd559569bb465bc1b0a142c4350457914f9",
+    "fileCount": 36,
+    "bytes": 753154
+  },
+  "frontendBundle": {
+    "sha256": "9aeea8e24f51b237a2b65d388620420adb47c6f91e99020094c3c2f9a06a6121",
+    "fileCount": 8058,
+    "bytes": 110736891
+  },
+  "immutableRuntime": {
+    "compose.yml": "3f35792517d27d1c221c76202bb30bd275f86e4cfa13a9f25a856022938e208d",
+    "Containerfile": "208e05fb66098fd6b6cf715093f2d2b1e88f9fce6373c8f30b58e4a87c8c069e",
+    "scripts/podman-stack.sh": "dca213103e8c290eefa34ca06c7efab4a3c36b9ac1f9520b63c1613e69648d0e",
+    ".env": "53d8677a8ec34e3f8d389c0575f2977626b5f3a8b36c74742de38e806cf715b0",
+    ".env.example": "53d8677a8ec34e3f8d389c0575f2977626b5f3a8b36c74742de38e806cf715b0"
+  }
+}

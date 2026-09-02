@@ -1,0 +1,188 @@
+product_id,brand_id,sku,product_name,description,category,subcategory,unit_price,unit_cost,weight_kg,is_active,launch_date,tags,created_at,updated_at
+1,1,URB-00001,StormRunner Trail Shell,,Athletic Apparel,Outerwear,189.99,72,1.2,1,2025-11-24,"athletic-apparel,outerwear,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+2,1,URB-00002,RidgeLine Fleece Hoodie,,Athletic Apparel,Trail Tops,89.99,32,0.6,1,2026-03-01,"athletic-apparel,trail-tops,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+3,1,URB-00003,TrailFlex Training Joggers,,Athletic Apparel,Training Bottoms,74.99,28,0.4,1,2024-11-20,"athletic-apparel,training-bottoms,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+4,1,URB-00004,Summit Graphic Training Tee,,Athletic Apparel,Base Layers,39.99,12,0.2,1,2025-07-31,"athletic-apparel,base-layers,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+5,1,URB-00005,Urban Trail Daypack,,Athletic Apparel,Packs,129.99,48,0.8,1,2025-08-13,"athletic-apparel,packs,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+6,2,TEC-00006,FieldCoach Training Tablet,,Sports Tech,Training Tablets,899.99,420,0.68,1,2025-06-13,"sports-tech,training-tablets,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+7,2,TEC-00007,TrailRun Sport Earbuds,,Sports Tech,Sport Audio,199.99,65,0.05,1,2025-02-15,"sports-tech,sport-audio,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+8,2,TEC-00008,RaceDay Docking Hub,,Sports Tech,GPS Accessories,149.99,52,0.35,1,2024-07-08,"sports-tech,gps-accessories,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+9,2,TEC-00009,SummitPulse GPS Watch,,Sports Tech,Wearables,449.99,180,0.06,1,2026-02-04,"sports-tech,wearables,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+10,2,TEC-00010,Expedition Power Bank,,Sports Tech,Power,79.99,28,0.45,1,2025-11-19,"sports-tech,power,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+11,3,GLO-00011,TrailGuard Anti-Chafe Balm,,Outdoor Care,Trail Care,68.99,18,0.1,1,2024-11-16,"outdoor-care,trail-care,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+12,3,GLO-00012,Recovery Cooling Gel,,Outdoor Care,Recovery,54.99,14,0.15,1,2025-06-14,"outdoor-care,recovery,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+13,3,GLO-00013,SummitShield Sunscreen Stick,,Outdoor Care,Sun Protection,42.99,11,0.12,1,2025-05-19,"outdoor-care,sun-protection,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+14,3,GLO-00014,DewPoint Hydration Spray,,Outdoor Care,Skin Protection,28.99,7,0.12,1,2025-09-28,"outdoor-care,skin-protection,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+15,3,GLO-00015,Vitamin Recovery Balm,,Outdoor Care,Anti-Chafe,58.99,15,0.1,1,2024-07-07,"outdoor-care,anti-chafe,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+16,4,PEA-00016,TitanGrip Dumbbells 50lb,,Fitness,Weights,249.99,95,22.7,1,2024-07-07,"titangrip-dumbbells-50lb,fitness,training,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+17,4,PEA-00017,FlexBand Pro Set,,Fitness,Accessories,49.99,12,0.5,1,2024-12-10,"flexband-pro-set,fitness,training,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+18,4,PEA-00018,AeroSpin Cycle,,Fitness,Cardio,1299.99,520,45,1,2025-11-15,"aerospin-cycle,fitness,training,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+19,4,PEA-00019,CoreBlast Ab Roller,,Fitness,Accessories,34.99,9,1.2,1,2024-10-17,"coreblast-ab-roller,fitness,training,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+20,4,PEA-00020,HydroShock Shaker,,Fitness,Nutrition,24.99,6,0.3,1,2024-10-01,"hydroshock-shaker,fitness,training,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+21,5,NES-00021,TrailBrew Pour-Over Kit,,Outdoor Lifestyle,Camp Kitchen,89.99,32,1.5,1,2024-06-23,"outdoor-lifestyle,camp-kitchen,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+22,5,NES-00022,Stadium Travel Blanket,,Outdoor Lifestyle,Travel Comfort,119.99,42,1.8,1,2024-08-03,"outdoor-lifestyle,travel-comfort,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+23,5,NES-00023,Indoor Training Garden Kit,,Outdoor Lifestyle,Hydration,149.99,55,3.2,1,2025-09-21,"outdoor-lifestyle,hydration,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+24,5,NES-00024,Trailhead Gear Clock,,Outdoor Lifestyle,Storage,79.99,28,0.8,1,2025-01-22,"outdoor-lifestyle,storage,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+25,5,NES-00025,Locker Room Organizer Set,,Outdoor Lifestyle,Training Setup,59.99,18,2.1,1,2024-05-04,"outdoor-lifestyle,training-setup,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+26,6,VOL-00026,FieldCoach Training Tablet,,Sports Tech,Training Tablets,89.99,32,0.3,1,2024-11-15,"sports-tech,training-tablets,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+27,6,VOL-00027,TrailRun Sport Earbuds,,Sports Tech,Sport Audio,549.99,220,8.5,1,2024-11-18,"sports-tech,sport-audio,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+28,6,VOL-00028,RaceDay Docking Hub,,Sports Tech,GPS Accessories,169.99,58,0.9,1,2025-01-08,"sports-tech,gps-accessories,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+29,6,VOL-00029,SummitPulse GPS Watch,,Sports Tech,Wearables,99.99,35,0.08,1,2024-10-24,"sports-tech,wearables,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+30,6,VOL-00030,Expedition Power Bank,,Sports Tech,Power,129.99,42,0.15,1,2025-02-15,"sports-tech,power,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+31,16,SON-00031,TrailBase Portable Speaker,,Training Audio,Speakers,299.99,110,4.5,1,2024-10-03,"training-audio,speakers,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+32,16,SON-00032,StudioRun Training Headphones,,Training Audio,Headphones,349.99,120,0.35,1,2025-11-21,"training-audio,headphones,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+33,16,SON-00033,CoachMic USB Microphone,,Training Audio,Coaching Audio,149.99,52,0.6,1,2024-12-24,"training-audio,coaching-audio,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+34,16,SON-00034,GameDay Soundbar,,Training Audio,Stadium Audio,449.99,175,5.2,1,2025-05-24,"training-audio,stadium-audio,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+35,16,SON-00035,ClipTrail Mini Speaker,,Training Audio,Waterproof Audio,59.99,18,0.2,1,2025-04-27,"training-audio,waterproof-audio,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+36,8,TRA-00036,Summit 65L Backpack,,Outdoor,Backpacks,229.99,85,1.8,1,2025-11-06,"summit-65l-backpack,outdoor,trail,hiking,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+37,8,TRA-00037,AllTerrain Hiking Boots,,Outdoor,Footwear,189.99,68,1.6,1,2026-03-02,"allterrain,hiking-boots,waterproof,trail,hero-product",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+38,8,TRA-00038,UltraLight Tent 2P,,Outdoor,Shelter,399.99,155,1.5,1,2024-05-31,"ultralight-tent-2p,outdoor,trail,hiking,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+39,8,TRA-00039,ThermoFlask 32oz,,Outdoor,Hydration,44.99,14,0.5,1,2024-09-03,"thermoflask-32oz,outdoor,trail,hiking,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+40,8,TRA-00040,HeadLamp 1000 Lumens,,Outdoor,Lighting,69.99,22,0.12,1,2024-11-05,"headlamp-1000-lumens,outdoor,trail,hiking,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+41,9,LUX-00041,StormRunner Trail Shell,,Athletic Apparel,Outerwear,895,320,2.1,1,2024-12-04,"athletic-apparel,outerwear,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+42,9,LUX-00042,RidgeLine Fleece Hoodie,,Athletic Apparel,Trail Tops,650,230,0.6,1,2025-03-25,"athletic-apparel,trail-tops,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+43,9,LUX-00043,TrailFlex Training Joggers,,Athletic Apparel,Training Bottoms,425,165,0.8,1,2025-09-10,"athletic-apparel,training-bottoms,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+44,9,LUX-00044,Summit Graphic Training Tee,,Athletic Apparel,Base Layers,275,95,0.05,1,2024-09-27,"athletic-apparel,base-layers,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+45,9,LUX-00045,Urban Trail Daypack,,Athletic Apparel,Packs,195,72,0.3,1,2025-07-29,"athletic-apparel,packs,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+46,11,CLO-00046,AirGlide Runner,,Footwear,Running,149.99,52,0.6,1,2024-07-28,"airglide-runner,footwear,trail,running,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+47,11,CLO-00047,StreetFlex Sneaker,,Footwear,Casual,119.99,42,0.7,1,2024-05-10,"streetflex-sneaker,footwear,trail,running,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+48,11,CLO-00048,TrailGrip Hiker,,Footwear,Hiking,179.99,65,0.9,1,2024-09-16,"trailgrip-hiker,footwear,trail,running,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+49,11,CLO-00049,SlipStream Slide,,Footwear,Sandals,49.99,15,0.3,1,2024-07-12,"slipstream-slide,footwear,trail,running,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+50,11,CLO-00050,UrbanDash Trainer,,Footwear,Training,134.99,48,0.65,1,2024-08-17,"urbandash-trainer,footwear,trail,running,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+51,14,PIX-00051,RaceSim Performance GPU,,Training Tech,Simulation,799.99,380,1.8,1,2024-09-16,"training-tech,simulation,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+52,14,PIX-00052,Recovery Command Chair,,Training Tech,Recovery Seating,449.99,165,18,1,2024-06-26,"training-tech,recovery-seating,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+53,14,PIX-00053,DrillSwitch Training Controller,,Training Tech,Controllers,79.99,28,0.3,1,2025-07-23,"training-tech,controllers,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+54,14,PIX-00054,PracticeStream Capture Card,,Training Tech,Video Analysis,199.99,72,0.15,1,2024-12-21,"training-tech,video-analysis,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+55,14,PIX-00055,CoachView Curved Display,,Training Tech,Displays,699.99,280,9.5,1,2025-07-17,"training-tech,displays,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+56,26,OMN-00056,OmniRing Performance Tracker,,Sports Wearables,Trackers,349.99,125,0.008,1,2025-12-15,"sports-wearables,trackers,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+57,26,OMN-00057,RouteGuide AR Sport Glasses,,Sports Wearables,Eyewear,1499.99,620,0.05,1,2024-11-02,"sports-wearables,eyewear,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+58,26,OMN-00058,OmniBand Fitness Pro,,Sports Wearables,Bands,249.99,85,0.03,1,2025-06-28,"sports-wearables,bands,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+59,26,OMN-00059,ClipCoach Audio Pod,,Sports Wearables,Audio,599.99,210,0.006,1,2024-05-27,"sports-wearables,audio,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+60,26,OMN-00060,Posture Coach Clip,,Sports Wearables,Recovery,129.99,42,0.02,1,2026-02-23,"sports-wearables,recovery,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+61,29,ATO-00061,OmniRing Performance Tracker,,Sports Wearables,Trackers,299.99,105,0.05,1,2024-05-18,"sports-wearables,trackers,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+62,29,ATO-00062,FitScale Pro,,Fitness,Scales,99.99,35,2.5,1,2025-08-07,"fitscale-pro,fitness,training,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+63,29,ATO-00063,RecoveryGun Mini,,Fitness,Recovery,149.99,52,0.6,1,2026-02-15,"recoverygun-mini,fitness,training,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+64,20,CRY-00064,Titanium Trail Aviators,,Sport Eyewear,Sunglasses,225,82,0.03,1,2024-11-16,"sport-eyewear,sunglasses,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+65,20,CRY-00065,BlueShield Training Glasses,,Sport Eyewear,Protective Eyewear,89.99,28,0.025,1,2025-01-29,"sport-eyewear,protective-eyewear,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+66,20,CRY-00066,Sport Wrap Polarized Shades,,Sport Eyewear,Running,159.99,55,0.035,1,2025-11-30,"sport-eyewear,running,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+67,12,ZEN-00067,Matcha Endurance Starter Kit,,Sports Nutrition,Hydration,49.99,16,0.8,1,2025-02-07,"sports-nutrition,hydration,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+68,12,ZEN-00068,Cold Brew Recovery Tower,,Sports Nutrition,Recovery,79.99,28,2.5,1,2025-05-08,"sports-nutrition,recovery,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+69,12,ZEN-00069,Herbal Recovery Blend,,Sports Nutrition,Energy,24.99,7,0.15,1,2025-11-15,"sports-nutrition,energy,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+70,13,IRO-00070,PowerRack Home Gym,,Fitness,Equipment,1499.99,580,90,1,2024-11-27,"powerrack-home-gym,fitness,training,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+71,13,IRO-00071,Olympic Barbell 45lb,,Fitness,Weights,299.99,115,20.4,1,2025-01-28,"olympic-barbell-45lb,fitness,training,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+72,13,IRO-00072,Rubber Hex Dumbbells,,Fitness,Weights,89.99,32,9.1,1,2025-08-02,"rubber-hex-dumbbells,fitness,training,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+73,15,EVE-00073,RaceDay Docking Hub,,Sports Tech,GPS Accessories,69.99,24,0.3,1,2024-11-26,"sports-tech,gps-accessories,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+74,15,EVE-00074,SummitPulse GPS Watch,,Sports Tech,Wearables,49.99,16,0.8,1,2024-04-15,"sports-tech,wearables,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+75,15,EVE-00075,Urban Trail Daypack,,Athletic Apparel,Packs,45.99,14,0.4,1,2025-03-17,"athletic-apparel,packs,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+76,17,PUR-00076,Adaptogen Recovery Powder,,Recovery,Supplements,39.99,12,0.25,1,2025-10-09,"recovery,supplements,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+77,17,PUR-00077,Joint Support Peptides,,Recovery,Recovery,44.99,14,0.3,1,2024-11-18,"recovery,recovery,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+78,17,PUR-00078,Magnesium Recovery Gummies,,Recovery,Sleep,29.99,8,0.2,1,2025-10-17,"recovery,sleep,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+79,7,AUR-00079,DewPoint Hydration Spray,,Outdoor Care,Skin Protection,125,38,0.15,1,2025-06-27,"outdoor-care,skin-protection,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+80,7,AUR-00080,Locker Room Organizer Set,,Outdoor Lifestyle,Training Setup,42.99,12,0.5,1,2024-08-03,"outdoor-lifestyle,training-setup,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+81,7,AUR-00081,TrailBrew Pour-Over Kit,,Outdoor Lifestyle,Camp Kitchen,58.99,18,0.8,1,2025-03-21,"outdoor-lifestyle,camp-kitchen,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+82,28,BOL-00082,Matcha Endurance Starter Kit,,Sports Nutrition,Hydration,48.99,18,5.4,1,2025-04-23,"sports-nutrition,hydration,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+83,28,BOL-00083,Cold Brew Recovery Tower,,Sports Nutrition,Recovery,32.99,11,0.9,1,2025-03-24,"sports-nutrition,recovery,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+84,28,BOL-00084,Herbal Recovery Blend,,Sports Nutrition,Energy,19.99,6,0.3,1,2026-02-02,"sports-nutrition,energy,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+85,43,DAR-00085,CoachView Curved Display,,Training Tech,Displays,49.99,15,0.8,1,2025-10-26,"training-tech,displays,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+86,43,DAR-00086,RaceSim Performance GPU,,Training Tech,Simulation,179.99,62,0.4,1,2026-01-06,"training-tech,simulation,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+87,43,DAR-00087,Recovery Command Chair,,Training Tech,Recovery Seating,159.99,58,8.5,1,2025-08-24,"training-tech,recovery-seating,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+88,40,FLA-00088,Cast Iron Camp Skillet 12in,,Camp Cooking,Cookware,69.99,24,3.5,1,2025-07-16,"camp-cooking,cookware,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+89,40,FLA-00089,Smart Grill Thermometer,,Camp Cooking,Food Prep,49.99,16,0.08,1,2024-09-06,"camp-cooking,food-prep,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+90,40,FLA-00090,Camp Chef Knife Set,,Camp Cooking,Cutlery,299.99,110,2.8,1,2025-06-10,"camp-cooking,cutlery,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+91,34,HAL-00091,FieldCoach Training Tablet,,Sports Tech,Training Tablets,2499.99,1100,0.45,1,2025-10-18,"sports-tech,training-tablets,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+92,34,HAL-00092,TrailRun Sport Earbuds,,Sports Tech,Sport Audio,199.99,72,0.6,1,2024-05-06,"sports-tech,sport-audio,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+93,34,HAL-00093,CoachMic USB Microphone,,Training Audio,Coaching Audio,299.99,105,0.05,1,2025-09-24,"training-audio,coaching-audio,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+94,1,URB-00094,Cyber Mesh Sneakers,,Footwear,Sneakers,159.99,58,0.7,1,2024-08-07,"cyber-mesh-sneakers,footwear,trail,running,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+95,1,URB-00095,Urban Trail Daypack,,Athletic Apparel,Packs,64.99,22,0.3,1,2025-06-10,"athletic-apparel,packs,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+96,1,URB-00096,StormRunner Trail Shell,,Athletic Apparel,Outerwear,49.99,15,0.25,1,2025-09-21,"athletic-apparel,outerwear,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+97,2,TEC-00097,TrailRun Sport Earbuds,,Sports Tech,Sport Audio,149.99,48,0.04,1,2024-12-11,"sports-tech,sport-audio,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+98,2,TEC-00098,RaceDay Docking Hub,,Sports Tech,GPS Accessories,29.99,8,0.15,1,2024-08-06,"sports-tech,gps-accessories,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+99,3,GLO-00099,DewPoint Hydration Spray,,Outdoor Care,Skin Protection,72.99,20,0.12,1,2025-10-22,"outdoor-care,skin-protection,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+100,3,GLO-00100,Vitamin Recovery Balm,,Outdoor Care,Anti-Chafe,22.99,6,0.03,1,2025-04-02,"outdoor-care,anti-chafe,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+101,4,PEA-00101,Yoga Mat Premium,,Fitness,Yoga,89.99,28,2.5,1,2025-03-13,"yoga-mat-premium,fitness,training,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+102,4,PEA-00102,Pull-Up Bar Doorway,,Fitness,Equipment,44.99,14,2.8,1,2025-02-24,"pull-up-bar-doorway,fitness,training,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+103,5,NES-00103,Indoor Training Garden Kit,,Outdoor Lifestyle,Hydration,69.99,22,1.8,1,2026-01-05,"outdoor-lifestyle,hydration,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+104,5,NES-00104,Trailhead Gear Clock,,Outdoor Lifestyle,Storage,54.99,18,1.2,1,2025-02-24,"outdoor-lifestyle,storage,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+105,6,VOL-00105,Expedition Power Bank,,Sports Tech,Power,179.99,65,0.08,1,2024-08-20,"sports-tech,power,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+106,6,VOL-00106,FieldCoach Training Tablet,,Sports Tech,Training Tablets,299.99,110,0.9,1,2025-08-20,"sports-tech,training-tablets,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+107,16,SON-00107,StudioRun Training Headphones,,Training Audio,Headphones,249.99,88,5.5,1,2025-12-22,"training-audio,headphones,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+108,16,SON-00108,CoachMic USB Microphone,,Training Audio,Coaching Audio,199.99,72,3.8,1,2026-02-27,"training-audio,coaching-audio,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+109,8,TRA-00109,Camping Hammock,,Outdoor,Shelter,59.99,18,0.6,1,2024-07-27,"camping-hammock,outdoor,trail,hiking,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+110,8,TRA-00110,Trekking Poles Carbon,,Outdoor,Accessories,119.99,42,0.5,1,2024-10-31,"trekking-poles-carbon,outdoor,trail,hiking,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+111,9,LUX-00111,StormRunner Trail Shell,,Athletic Apparel,Outerwear,145,52,0.2,1,2024-05-06,"athletic-apparel,outerwear,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+112,11,CLO-00112,WinterGrip Boot,,Footwear,Boots,199.99,72,1.1,1,2025-10-11,"wintergrip-boot,footwear,trail,running,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+113,14,PIX-00113,DrillSwitch Training Controller,,Training Tech,Controllers,129.99,45,0.3,1,2024-08-07,"training-tech,controllers,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+114,26,OMN-00114,ClipCoach Audio Pod,,Sports Wearables,Audio,199.99,68,0.05,1,2025-05-07,"sports-wearables,audio,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+115,24,FRO-00115,Expedition Power Bank,,Sports Tech,Power,79.99,28,1.2,1,2026-01-14,"sports-tech,power,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+116,24,FRO-00116,FieldCoach Training Tablet,,Sports Tech,Training Tablets,149.99,52,0.85,1,2025-11-30,"sports-tech,training-tablets,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+117,24,FRO-00117,TrailRun Sport Earbuds,,Sports Tech,Sport Audio,39.99,12,0.3,1,2025-06-01,"sports-tech,sport-audio,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+118,25,WIL-00118,Trail Organizer Cube Set,,Outdoor Travel,Gear Storage,34.99,10,0.4,1,2025-07-28,"outdoor-travel,gear-storage,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+119,25,WIL-00119,Expedition Neck Pillow,,Outdoor Travel,Travel Comfort,29.99,8,0.3,1,2026-02-18,"outdoor-travel,travel-comfort,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+120,25,WIL-00120,RFID Trail Passport Wallet,,Outdoor Travel,Security,24.99,7,0.1,1,2025-06-25,"outdoor-travel,security,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+121,27,FLE-00121,TrailBrew Pour-Over Kit,,Outdoor Lifestyle,Camp Kitchen,34.99,10,0.3,1,2025-02-27,"outdoor-lifestyle,camp-kitchen,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+122,27,FLE-00122,Stadium Travel Blanket,,Outdoor Lifestyle,Travel Comfort,199.99,72,12,1,2024-09-13,"outdoor-lifestyle,travel-comfort,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+123,27,FLE-00123,Indoor Training Garden Kit,,Outdoor Lifestyle,Hydration,399.99,155,3.5,1,2025-05-31,"outdoor-lifestyle,hydration,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+124,21,MOO-00124,DewPoint Hydration Spray,,Outdoor Care,Skin Protection,38.99,10,0.1,1,2025-05-29,"outdoor-care,skin-protection,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+125,21,MOO-00125,Vitamin Recovery Balm,,Outdoor Care,Anti-Chafe,28.99,7,0.08,1,2025-03-22,"outdoor-care,anti-chafe,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+126,22,TER-00126,Climbing Harness Pro,,Outdoor,Climbing,129.99,45,0.5,1,2024-04-26,"climbing-harness-pro,outdoor,trail,hiking,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+127,22,TER-00127,4-Season Tent 3P,,Outdoor,Shelter,549.99,215,2.8,1,2025-02-09,"4-season-tent-3p,outdoor,trail,hiking,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+128,23,NEO-00128,TrailFlex Training Joggers,,Athletic Apparel,Training Bottoms,149.99,52,0.8,1,2025-07-26,"athletic-apparel,training-bottoms,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+129,23,NEO-00129,Summit Graphic Training Tee,,Athletic Apparel,Base Layers,39.99,12,0.15,1,2024-08-08,"athletic-apparel,base-layers,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+130,19,AQU-00130,Swim Tracker Watch,,Fitness,Wearables,179.99,62,0.04,1,2024-10-25,"swim-tracker-watch,fitness,training,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+131,19,AQU-00131,TrailBase Portable Speaker,,Training Audio,Speakers,69.99,24,0.03,1,2024-10-27,"training-audio,speakers,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+132,31,STR-00132,Marathon Elite Racer,,Footwear,Running,219.99,78,0.22,1,2025-10-18,"marathon-elite-racer,footwear,trail,running,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+133,31,STR-00133,CrossFit WOD Trainer,,Footwear,Training,159.99,55,0.65,1,2024-09-30,"crossfit-wod-trainer,footwear,trail,running,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+134,32,NOV-00134,DewPoint Hydration Spray,,Outdoor Care,Skin Protection,32.99,9,0.2,1,2025-04-20,"outdoor-care,skin-protection,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+135,32,NOV-00135,Vitamin Recovery Balm,,Outdoor Care,Anti-Chafe,28.99,8,0.1,1,2025-06-16,"outdoor-care,anti-chafe,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+136,33,THU-00136,Adjustable Bench,,Fitness,Equipment,349.99,125,22,1,2025-07-28,"adjustable-bench,fitness,training,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+137,33,THU-00137,Battle Ropes 50ft,,Fitness,Equipment,119.99,42,11,1,2024-09-30,"battle-ropes-50ft,fitness,training,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+138,35,RUS-00138,Indoor Training Garden Kit,,Outdoor Lifestyle,Hydration,699.99,280,25,1,2025-01-01,"outdoor-lifestyle,hydration,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+139,35,RUS-00139,Trailhead Gear Clock,,Outdoor Lifestyle,Storage,34.99,10,0.5,1,2026-01-18,"outdoor-lifestyle,storage,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+140,36,ELE-00140,ClipTrail Mini Speaker,,Training Audio,Waterproof Audio,299.99,105,2.2,1,2026-02-08,"training-audio,waterproof-audio,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+141,36,ELE-00141,TrailBase Portable Speaker,,Training Audio,Speakers,179.99,62,4.5,1,2024-08-25,"training-audio,speakers,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+142,37,ZEP-00142,Ultralight Rain Jacket,,Outdoor,Outerwear,149.99,52,0.2,1,2025-09-16,"ultralight-rain-jacket,outdoor,trail,hiking,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+143,37,ZEP-00143,Trekking Backpack 45L,,Outdoor,Backpacks,179.99,65,1.4,1,2025-02-11,"trekking-backpack-45l,outdoor,trail,hiking,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+144,38,QUA-00144,SummitPulse GPS Watch,,Sports Tech,Wearables,3999.99,1800,12,1,2025-01-01,"sports-tech,wearables,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+145,38,QUA-00145,Expedition Power Bank,,Sports Tech,Power,799.99,320,0.8,1,2024-08-04,"sports-tech,power,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+146,39,SIL-00146,StormRunner Trail Shell,,Athletic Apparel,Outerwear,175,62,0.35,1,2025-08-20,"athletic-apparel,outerwear,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+147,39,SIL-00147,RidgeLine Fleece Hoodie,,Athletic Apparel,Trail Tops,89,30,0.08,1,2025-12-23,"athletic-apparel,trail-tops,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+148,40,FLA-00148,Cast Iron Camp Skillet 12in,,Camp Cooking,Cookware,129.99,45,5.5,1,2024-12-13,"camp-cooking,cookware,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+149,40,FLA-00149,Smart Grill Thermometer,,Camp Cooking,Food Prep,59.99,20,0.8,1,2025-11-21,"camp-cooking,food-prep,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+150,41,MIN-00150,Magnesium Recovery Gummies,,Recovery,Sleep,199.99,72,0.06,1,2025-05-17,"recovery,sleep,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+151,41,MIN-00151,Adaptogen Recovery Powder,,Recovery,Supplements,129.99,45,0.03,1,2025-01-02,"recovery,supplements,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+152,42,APE-00152,Carbon Road Bike,,Sports,Cycling,2899.99,1250,7.8,1,2025-10-26,"carbon-road-bike,sports,cycling,performance,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+153,42,APE-00153,Bike Computer GPS,,Sports,Accessories,249.99,88,0.08,1,2025-01-06,"bike-computer-gps,sports,cycling,performance,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+154,43,DAR-00154,PracticeStream Capture Card,,Training Tech,Video Analysis,349.99,125,28,1,2025-01-08,"training-tech,video-analysis,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+155,43,DAR-00155,CoachView Curved Display,,Training Tech,Displays,279.99,98,0.8,1,2024-06-17,"training-tech,displays,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+156,44,GOL-00156,Superfood Trail Mix,,Sports Nutrition,Trail Snacks,34.99,12,0.8,1,2026-02-20,"sports-nutrition,trail-snacks,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+157,44,GOL-00157,Organic Protein Bars 12pk,,Sports Nutrition,Protein,27.99,9,1.2,1,2025-03-10,"sports-nutrition,protein,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+158,44,GOL-00158,Endurance Granola Trio,,Sports Nutrition,Fuel,19.99,6,0.5,1,2024-12-03,"sports-nutrition,fuel,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+159,45,NIG-00159,Herbal Recovery Blend,,Sports Nutrition,Energy,24.99,7,0.34,1,2024-07-08,"sports-nutrition,energy,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+160,45,NIG-00160,Matcha Endurance Starter Kit,,Sports Nutrition,Hydration,21.99,7,0.6,1,2024-12-15,"sports-nutrition,hydration,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+161,46,CLE-00161,Joint Support Peptides,,Recovery,Recovery,54.99,18,0.1,1,2026-03-04,"recovery,recovery,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+162,46,CLE-00162,Magnesium Recovery Gummies,,Recovery,Sleep,89.99,30,0.05,1,2024-08-07,"recovery,sleep,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+163,47,STE-00163,Trail Multi-Tool Pro 18-in-1,,Outdoor Tools,Multi-tools,49.99,16,0.25,1,2025-10-03,"outdoor-tools,multi-tools,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+164,47,STE-00164,Bike Shop Impact Driver 20V,,Outdoor Tools,Maintenance,179.99,62,1.8,1,2025-01-13,"outdoor-tools,maintenance,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+165,48,LUN-00165,Urban Trail Daypack,,Athletic Apparel,Packs,48.99,14,0.01,1,2025-11-07,"athletic-apparel,packs,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+166,48,LUN-00166,StormRunner Trail Shell,,Athletic Apparel,Outerwear,79.99,28,0.4,1,2025-07-09,"athletic-apparel,outerwear,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+167,49,RAP-00167,TrailRun Sport Earbuds,,Sports Tech,Sport Audio,59.99,18,0.15,1,2025-02-24,"sports-tech,sport-audio,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+168,49,RAP-00168,RaceDay Docking Hub,,Sports Tech,GPS Accessories,44.99,14,0.2,1,2025-01-24,"sports-tech,gps-accessories,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+169,50,VER-00169,Trailhead Gear Clock,,Outdoor Lifestyle,Storage,18.99,5,0.12,1,2026-01-25,"outdoor-lifestyle,storage,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+170,50,VER-00170,Locker Room Organizer Set,,Outdoor Lifestyle,Training Setup,89.99,32,3.5,1,2025-11-20,"outdoor-lifestyle,training-setup,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+171,30,COR-00171,Sport Wrap Polarized Shades,,Sport Eyewear,Running,79.99,24,0.035,1,2025-10-27,"sport-eyewear,running,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+172,30,COR-00172,Recovery Cooling Gel,,Outdoor Care,Recovery,24.99,7,0.12,1,2025-10-13,"outdoor-care,recovery,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+173,10,BYT-00173,Smart Grill Thermometer,,Camp Cooking,Food Prep,69.99,24,0.5,1,2025-01-30,"camp-cooking,food-prep,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+174,10,BYT-00174,Camp Chef Knife Set,,Camp Cooking,Cutlery,29.99,9,1.2,1,2025-01-18,"camp-cooking,cutlery,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+175,1,URB-00175,Urban Trail Daypack,,Athletic Apparel,Packs,94.99,34,0.65,1,2024-04-13,"athletic-apparel,packs,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+176,2,TEC-00176,FieldCoach Training Tablet,,Sports Tech,Training Tablets,399.99,155,0.15,1,2025-06-19,"sports-tech,training-tablets,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+177,3,GLO-00177,Recovery Cooling Gel,,Outdoor Care,Recovery,48.99,13,0.1,1,2026-01-21,"outdoor-care,recovery,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+178,4,PEA-00178,Smart Jump Rope,,Fitness,Accessories,39.99,12,0.3,1,2025-03-11,"smart-jump-rope,fitness,training,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+179,16,SON-00179,GameDay Soundbar,,Training Audio,Stadium Audio,399.99,145,8,1,2026-01-28,"training-audio,stadium-audio,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+180,8,TRA-00180,Solar Lantern Collapsible,,Outdoor,Lighting,29.99,8,0.2,1,2024-11-30,"solar-lantern-collapsible,outdoor,trail,hiking,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+181,11,CLO-00181,Barefoot Minimalist Shoe,,Footwear,Minimalist,99.99,35,0.2,1,2025-05-30,"barefoot-minimalist-shoe,footwear,trail,running,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+182,14,PIX-00182,Recovery Command Chair,,Training Tech,Recovery Seating,39.99,12,0.6,1,2025-10-31,"training-tech,recovery-seating,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+183,26,OMN-00183,OmniBand Fitness Pro,,Sports Wearables,Bands,499.99,180,0.055,1,2025-03-09,"sports-wearables,bands,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+184,19,AQU-00184,Resistance Pool Bands,,Fitness,Pool,44.99,14,0.8,1,2025-05-04,"resistance-pool-bands,fitness,training,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+185,31,STR-00185,Recovery Slide Foam,,Footwear,Recovery,64.99,22,0.35,1,2025-07-23,"recovery-slide-foam,footwear,trail,running,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+186,32,NOV-00186,TrailGuard Anti-Chafe Balm,,Outdoor Care,Trail Care,26.99,7,0.08,1,2024-12-31,"outdoor-care,trail-care,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+187,35,RUS-00187,Stadium Travel Blanket,,Outdoor Lifestyle,Travel Comfort,89.99,30,3.5,1,2025-09-26,"outdoor-lifestyle,travel-comfort,sporting-goods",2026-04-13T09:16:47Z,2026-04-13T09:16:47Z

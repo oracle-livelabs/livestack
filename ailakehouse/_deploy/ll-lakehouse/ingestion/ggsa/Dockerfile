@@ -103,8 +103,23 @@ RUN unzip -q /tmp/osa.zip -d /u01 \
  && chown -R mysql:mysql /var/lib/mysql /var/run/mysqld /var/log/mysql
 
 COPY container/entrypoint.sh /usr/local/bin/ggsa-entrypoint.sh
+COPY container/JdbcWalletCompatAgent.java /tmp/JdbcWalletCompatAgent.java
 
-RUN chmod +x /usr/local/bin/ggsa-entrypoint.sh
+RUN mkdir -p /tmp/jdbc-wallet-compat-agent /u01/osa/osa-base/compat \
+ && javac \
+      --add-exports java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED \
+      -d /tmp/jdbc-wallet-compat-agent \
+      /tmp/JdbcWalletCompatAgent.java \
+ && printf 'Premain-Class: com.oracle.livelabs.osa.JdbcWalletCompatAgent\n' \
+      > /tmp/jdbc-wallet-compat-agent.mf \
+ && jar --create \
+      --file /u01/osa/osa-base/compat/jdbc-wallet-compat-agent.jar \
+      --manifest /tmp/jdbc-wallet-compat-agent.mf \
+      -C /tmp/jdbc-wallet-compat-agent . \
+ && rm -rf /tmp/jdbc-wallet-compat-agent /tmp/JdbcWalletCompatAgent.java /tmp/jdbc-wallet-compat-agent.mf \
+ && chmod +x /usr/local/bin/ggsa-entrypoint.sh
+
+ENV JAVA_TOOL_OPTIONS="--add-exports=java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED -javaagent:/u01/osa/osa-base/compat/jdbc-wallet-compat-agent.jar"
 
 WORKDIR /u01/osa/osa-base
 

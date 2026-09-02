@@ -1,0 +1,8 @@
+document_id,return_id,document_type,title,excerpt,similarity_score,source_uri,created_at
+1,1,Policy Clause,VIP save-the-customer override,High lifetime value customer with low risk and visible carrier damage is eligible for instant credit while the claim is routed to carrier recovery.,0.9641,policy://POL-LTV-VIP-OVERRIDE,2026-04-13T08:15:00Z
+2,1,Image Note,Package damage classifier,Vision tag: crushed_corner cracked_shell carrier_label_visible. Damage timestamp aligns with final-mile scan exception.,0.9388,image://return/1/package,2026-04-13T08:16:00Z
+3,2,Policy Clause,30-day apparel return window,Return inside 30 days tags attached unworn condition likely. Manager review only needed if hygiene seal is removed.,0.902,policy://POL-30DAY-UNWORN,2026-04-13T05:30:00Z
+4,3,Serial Evidence,Serial number mismatch,Inbound serial does not match outbound serial. Accessory checklist shows missing charger and adapter.,0.982,wms://serial/order/5,2026-04-13T09:15:00Z
+5,3,Policy Clause,Electronics seal and serial verification,Open-box electronics refund requires serial match and full accessory kit. Mismatch should be denied or escalated to fraud operations.,0.9512,policy://POL-ELECTRONICS-SEAL,2026-04-13T09:16:00Z
+6,4,Customer History,Repeat high-value return cluster,Two prior returns in 67 days with total value above peer segment. Evidence strength is below approval threshold.,0.8815,graph://customer/634/returns,2026-04-13T08:30:00Z
+7,5,Review Trend,Similar size chart complaints,Vector search found nine recent review snippets about inaccurate sizing for adjacent products in the same category.,0.8621,vector://reviews/size-chart,2026-04-13T07:00:00Z

@@ -1,0 +1,5 @@
+policy_id,clause_code,clause_title,category,clause_text,severity,effective_start,effective_end,created_at
+1,POL-30DAY-UNWORN,30-day apparel return window,Apparel,Apparel is eligible for refund within 30 days when labels are attached and the item is unworn. Damaged packaging requires manager review.,standard,2026-01-01,,2026-04-13T10:00:00Z
+2,POL-ELECTRONICS-SEAL,Electronics seal and serial verification,Electronics,Electronics returns require original serial number match intact factory seal for open-box refund and fraud review when accessories are missing.,manager_review,2026-01-01,,2026-04-13T10:00:00Z
+3,POL-LTV-VIP-OVERRIDE,VIP save-the-customer override,Customer Experience,VIP customers with high lifetime value may receive instant credit when return history is low and evidence supports carrier or product defect.,vip_override,2026-01-01,,2026-04-13T10:00:00Z
+4,POL-REPEAT-ABUSE,Repeat return abuse review,Fraud Prevention,Customers with multiple high-value returns in a short window require denial or additional documentation when policy evidence is weak.,deny,2026-01-01,,2026-04-13T10:00:00Z

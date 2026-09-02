@@ -3,8 +3,8 @@ ociUserOcid             = "<user_ocid>"                 # OCI user OCID. Get it 
 ociCompartmentOcid      = "<workshop_compartment_ocid>" # Compartment where Terraform creates all test resources.
 ociRegionIdentifier     = "us-ashburn-1"                # OCI region where the deployment will run.
 ociHomeRegionIdentifier = "us-ashburn-1"                # Home region of the tenancy. Usually the same as the tenancy home region.
-ociAuthMethod           = "SecurityToken"               # Authentication method. Keep SecurityToken for local interactive runs.
-ociConfigProfile        = "WORKSHOP_TEST"               # OCI CLI profile name from ~/.oci/config.
+ociAuthMethod           = "APIKey"                      # Recommended: an existing API-key profile does not expire and is never modified.
+ociConfigProfile        = "DEFAULT"                     # Existing API-key profile from ~/.oci/config; use the same profile in Packer.
 resId                   = "peakgear-test-<unique-id>"   # Replace <unique-id>; it becomes part of tenancy-wide Object Storage names.
 resource_name_prefix    = "peak-gear"                   # Prefix added to OCI resources created by Terraform.
 
