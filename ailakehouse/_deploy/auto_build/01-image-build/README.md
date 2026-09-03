@@ -13,7 +13,7 @@ a Marketplace listing or a Resource Manager ZIP.
 | `01-edit/` | Public endpoint and dashboard-service declarations, plus ignored local Packer values. |
 | `02-edit-if-needed/` | Extra installation, runtime configuration, cleanup, and behavior checks needed only by this LiveStack. |
 | `03-automation/` | Shared Packer launcher, dashboard, build installer, and verification. Do not change it for normal application work. |
-| `../terraform/` | The embedded Terraform project. It creates the ADB, protected runtime files, metadata, and clean test VM. |
+| `demo-code/imagebuild/terraform-play/peak-gear-livestack/` | The paired Terraform project. It creates the ADB, protected runtime files, metadata, and clean test VM. |
 
 Packer reads `ll-lakehouse/ingestion` and `ll-lakehouse/init` directly. It first
 refuses local runtime material such as `.env`, wallets, OCI configuration, or
@@ -31,7 +31,7 @@ editing `~/.oci/config`:
 # 01-edit/packer.auto.pkrvars.hcl
 oci_profile = "<existing-api-key-profile>"
 
-# ../terraform/01-edit/terraform.tfvars
+# demo-code/imagebuild/terraform-play/peak-gear-livestack/01-edit/terraform.tfvars
 ociAuthMethod    = "APIKey"
 ociConfigProfile = "<existing-api-key-profile>"
 ```
@@ -119,7 +119,7 @@ bash ./03-automation/build-and-test-linux.sh -ImageName "my-livestack-v1"
 Use this only when Packer reports its OCI image-capture MIME error. It prepares
 and preserves a running build VM so you can create a custom image in the OCI
 Console. The VM is reachable by SSH using the private key whose public key is
-set as `resUserPublicKey` in `../terraform/01-edit/terraform.tfvars`. The
+set as `resUserPublicKey` in the paired Terraform Play `terraform.tfvars`. The
 launcher finds that key under `~/.ssh`, or you can add `-SshPrivateKeyPath`.
 Its temporary SSH access is removed automatically when you stop the VM for
 image capture. This is not visual inspection and it does not yet have fresh
@@ -193,8 +193,9 @@ Use the command printed by inspection to remove the VM when finished. Keep the
 inspection only as long as necessary; its saved Terraform state contains fresh
 generated credentials.
 
-The inspection VM is created by the embedded Terraform project at
-`auto_build/terraform`. The Windows runner uses the `.ps1` implementation;
-the macOS and Linux runners use `build-and-test.py` through their native Bash
-launchers. Both implementations resolve the same embedded Terraform folder;
-they do not use a separate checkout from the top-level Terraform repository.
+The inspection VM is created by the paired Terraform project at
+`demo-code/imagebuild/terraform-play/peak-gear-livestack`. The Windows runner
+uses the `.ps1` implementation; the macOS and Linux runners use
+`build-and-test.py` through their native Bash launchers. Both implementations
+resolve the same sibling `demo-code` checkout, and `-TerraformDirectory` remains
+available for a nonstandard checkout layout.

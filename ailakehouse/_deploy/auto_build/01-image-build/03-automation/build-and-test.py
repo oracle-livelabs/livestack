@@ -598,28 +598,26 @@ class PipelineContext:
     def resolve_terraform_root(self, requested: str) -> pathlib.Path:
         if requested:
             return require_directory(pathlib.Path(requested), "Terraform test directory")
-        embedded = self.project_root.parent / "terraform"
-        if embedded.is_dir():
-            step("Using embedded Terraform folder 'auto_build/terraform'")
-            return embedded.resolve()
         git_root = self.project_root
         while git_root.parent != git_root and not (git_root / ".git").exists():
             git_root = git_root.parent
-        sibling_repo = git_root.parent / "terraform"
-        bundle_name = self.project_root.parent.name
-        project_name = self.project_root.name
-        candidates = (
-            sibling_repo / bundle_name,
-            sibling_repo / project_name,
-            sibling_repo / "pilot-test-template" / "custom-image",
+        terraform_play = (
+            git_root.parent
+            / "demo-code"
+            / "imagebuild"
+            / "terraform-play"
+            / "peak-gear-livestack"
         )
-        for candidate in candidates:
-            if candidate.is_dir():
-                step(f"Using Terraform folder '{candidate.relative_to(sibling_repo)}'")
-                return candidate.resolve()
+        if terraform_play.is_dir():
+            step(
+                "Using Terraform Play folder 'peak-gear-livestack' from the "
+                "sibling demo-code checkout"
+            )
+            return terraform_play.resolve()
         raise PipelineError(
-            "No paired Terraform folder was found. Keep the repositories beside each other "
-            "or pass -TerraformDirectory explicitly."
+            f"Peak Gear Terraform Play folder was not found at {terraform_play}. "
+            "Keep livestack and demo-code beside each other, or pass "
+            "-TerraformDirectory explicitly for a nonstandard layout."
         )
 
     def refresh_auth(self) -> None:

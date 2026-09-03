@@ -2380,49 +2380,22 @@ function Resolve-ProjectTerraformDirectory {
             -Label "Terraform test directory"
     }
 
-    $embeddedTerraformDirectory = Join-Path (Split-Path -Parent $ProjectRoot) "terraform"
-    if (Test-Path -LiteralPath $embeddedTerraformDirectory -PathType Container) {
-        Write-Step "Using embedded Terraform folder 'auto_build/terraform'"
-        return Resolve-ExistingDirectory `
-            -Path $embeddedTerraformDirectory `
-            -Label "Terraform test directory"
-    }
-
     $gitPath = Resolve-CommandPath -Name "git"
-    $demoRepositoryRoot = Invoke-NativeCommand `
+    $livestackRepositoryRoot = Invoke-NativeCommand `
         -FilePath $gitPath `
         -Arguments @("-C", $ProjectRoot, "rev-parse", "--show-toplevel") `
         -CaptureOutput
-    $workspaceRoot = Split-Path -Parent $demoRepositoryRoot
-    $terraformRepository = Join-Path $workspaceRoot "terraform"
-    $projectName = Split-Path -Leaf $ProjectRoot
-    $bundleName = Split-Path -Leaf (Split-Path -Parent $ProjectRoot)
-    $bundleTerraformDirectory = Join-Path $terraformRepository $bundleName
-    $pairedTerraformDirectory = Join-Path $terraformRepository $projectName
-    $starterTerraformDirectory = Join-Path (Join-Path $terraformRepository "pilot-test-template") "custom-image"
+    $workspaceRoot = Split-Path -Parent $livestackRepositoryRoot
+    $terraformPlayDirectory = Join-Path $workspaceRoot "demo-code\imagebuild\terraform-play\peak-gear-livestack"
 
-    if ($projectName -eq "01-image-build" -and
-        (Test-Path -LiteralPath $bundleTerraformDirectory -PathType Container)) {
-        Write-Step "Using Terraform folder '$bundleName' paired with the two-stage demo-code bundle"
+    if (Test-Path -LiteralPath $terraformPlayDirectory -PathType Container) {
+        Write-Step "Using Terraform Play folder 'peak-gear-livestack' from the sibling demo-code checkout"
         return Resolve-ExistingDirectory `
-            -Path $bundleTerraformDirectory `
-            -Label "Terraform test directory"
-    }
-    if (Test-Path -LiteralPath $pairedTerraformDirectory -PathType Container) {
-        Write-Step "Using paired Terraform folder '$projectName'"
-        return Resolve-ExistingDirectory `
-            -Path $pairedTerraformDirectory `
-            -Label "Terraform test directory"
-    }
-    if ($projectName -eq "custom-image-build-template" -and
-        (Test-Path -LiteralPath $starterTerraformDirectory -PathType Container)) {
-        Write-Step "Using Terraform starter folder 'pilot-test-template/custom-image' for the untouched custom-image template"
-        return Resolve-ExistingDirectory `
-            -Path $starterTerraformDirectory `
+            -Path $terraformPlayDirectory `
             -Label "Terraform test directory"
     }
 
-    throw "No paired Terraform folder was found. Expected $bundleTerraformDirectory for a two-stage bundle or $pairedTerraformDirectory for a standalone image project. Copy the tracked custom-image Terraform starter to the matching path, or pass -TerraformDirectory explicitly for a nonstandard layout."
+    throw "Peak Gear Terraform Play folder was not found at $terraformPlayDirectory. Keep livestack and demo-code beside each other, or pass -TerraformDirectory explicitly for a nonstandard layout."
 }
 
 function Assert-InspectionCleanupCompletedForRecovery {
