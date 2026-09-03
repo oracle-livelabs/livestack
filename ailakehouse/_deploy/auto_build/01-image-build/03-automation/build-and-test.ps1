@@ -2386,16 +2386,16 @@ function Resolve-ProjectTerraformDirectory {
         -Arguments @("-C", $ProjectRoot, "rev-parse", "--show-toplevel") `
         -CaptureOutput
     $workspaceRoot = Split-Path -Parent $livestackRepositoryRoot
-    $terraformPlayDirectory = Join-Path $workspaceRoot "demo-code\imagebuild\terraform-play\peak-gear-livestack"
+    $terraformPlayDirectory = Join-Path $workspaceRoot "Terraform-Repo-Oracle\peak-gear-livestack"
 
     if (Test-Path -LiteralPath $terraformPlayDirectory -PathType Container) {
-        Write-Step "Using Terraform Play folder 'peak-gear-livestack' from the sibling demo-code checkout"
+        Write-Step "Using Terraform Play folder 'peak-gear-livestack' from the sibling Terraform-Repo-Oracle checkout"
         return Resolve-ExistingDirectory `
             -Path $terraformPlayDirectory `
             -Label "Terraform test directory"
     }
 
-    throw "Peak Gear Terraform Play folder was not found at $terraformPlayDirectory. Keep livestack and demo-code beside each other, or pass -TerraformDirectory explicitly for a nonstandard layout."
+    throw "Peak Gear Terraform Play folder was not found at $terraformPlayDirectory. Keep livestack and Terraform-Repo-Oracle beside each other, or pass -TerraformDirectory explicitly for a nonstandard layout."
 }
 
 function Assert-InspectionCleanupCompletedForRecovery {

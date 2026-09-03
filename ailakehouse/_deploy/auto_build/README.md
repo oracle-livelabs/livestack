@@ -48,12 +48,13 @@ installed or used by either Unix workflow.
 ll-lakehouse/ingestion  -> application and Compose source
 ll-lakehouse/init       -> first-boot configuration scripts
 auto_build/01-image-build -> Packer build, test orchestration, dashboard
-demo-code/imagebuild/terraform-play/peak-gear-livestack -> ADB, supporting OCI resources, metadata, test VM
+Terraform-Repo-Oracle/peak-gear-livestack -> ADB, supporting OCI resources, metadata, test VM
 ```
 
 Packer copies the two sibling `ll-lakehouse` source folders directly to a
 temporary build VM. The paired Terraform Play project from the sibling
-`demo-code` checkout then creates a clean ADB and test VM, passes fresh metadata
+`Terraform-Repo-Oracle` checkout creates the acceptance infrastructure.
+It creates a clean ADB and test VM, passes fresh metadata
 to it, checks the services, reboots it, and removes the test resources. It does
 not use `ll-lakehouse/inst.sh` or create a manual ZIP. If the repositories are
 not checked out beside each other, pass `-TerraformDirectory` explicitly.

@@ -125,5 +125,20 @@ class TerraformPlanVariableTests(unittest.TestCase):
         self.assertFalse(PIPELINE.matches_approved_plan_variable("2", 1))
 
 
+class TerraformRepositoryResolutionTests(unittest.TestCase):
+    def test_resolves_public_sibling_peak_gear_project(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            workspace = Path(temporary_directory)
+            project = workspace / "livestack" / "ailakehouse" / "_deploy" / "auto_build" / "01-image-build"
+            (workspace / "livestack" / ".git").mkdir(parents=True)
+            project.mkdir(parents=True)
+            expected = workspace / "Terraform-Repo-Oracle" / "peak-gear-livestack"
+            expected.mkdir(parents=True)
+            context = PIPELINE.PipelineContext.__new__(PIPELINE.PipelineContext)
+            context.project_root = project
+
+            self.assertEqual(context.resolve_terraform_root(""), expected.resolve())
+
+
 if __name__ == "__main__":
     unittest.main()

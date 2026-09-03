@@ -603,20 +603,18 @@ class PipelineContext:
             git_root = git_root.parent
         terraform_play = (
             git_root.parent
-            / "demo-code"
-            / "imagebuild"
-            / "terraform-play"
+            / "Terraform-Repo-Oracle"
             / "peak-gear-livestack"
         )
         if terraform_play.is_dir():
             step(
                 "Using Terraform Play folder 'peak-gear-livestack' from the "
-                "sibling demo-code checkout"
+                "sibling Terraform-Repo-Oracle checkout"
             )
             return terraform_play.resolve()
         raise PipelineError(
             f"Peak Gear Terraform Play folder was not found at {terraform_play}. "
-            "Keep livestack and demo-code beside each other, or pass "
+            "Keep livestack and Terraform-Repo-Oracle beside each other, or pass "
             "-TerraformDirectory explicitly for a nonstandard layout."
         )
 

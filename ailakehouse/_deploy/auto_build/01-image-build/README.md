@@ -13,7 +13,7 @@ a Marketplace listing or a Resource Manager ZIP.
 | `01-edit/` | Public endpoint and dashboard-service declarations, plus ignored local Packer values. |
 | `02-edit-if-needed/` | Extra installation, runtime configuration, cleanup, and behavior checks needed only by this LiveStack. |
 | `03-automation/` | Shared Packer launcher, dashboard, build installer, and verification. Do not change it for normal application work. |
-| `demo-code/imagebuild/terraform-play/peak-gear-livestack/` | The paired Terraform project. It creates the ADB, protected runtime files, metadata, and clean test VM. |
+| `Terraform-Repo-Oracle/peak-gear-livestack/` | The paired Terraform project. It creates the ADB, protected runtime files, metadata, and clean test VM. |
 
 Packer reads `ll-lakehouse/ingestion` and `ll-lakehouse/init` directly. It first
 refuses local runtime material such as `.env`, wallets, OCI configuration, or
@@ -31,7 +31,7 @@ editing `~/.oci/config`:
 # 01-edit/packer.auto.pkrvars.hcl
 oci_profile = "<existing-api-key-profile>"
 
-# demo-code/imagebuild/terraform-play/peak-gear-livestack/01-edit/terraform.tfvars
+# Terraform-Repo-Oracle/peak-gear-livestack/01-edit/terraform.tfvars
 ociAuthMethod    = "APIKey"
 ociConfigProfile = "<existing-api-key-profile>"
 ```
@@ -194,7 +194,7 @@ inspection only as long as necessary; its saved Terraform state contains fresh
 generated credentials.
 
 The inspection VM is created by the paired Terraform project at
-`demo-code/imagebuild/terraform-play/peak-gear-livestack`. The Windows runner
+`Terraform-Repo-Oracle/peak-gear-livestack`. The Windows runner
 uses the `.ps1` implementation; the macOS and Linux runners use
 `build-and-test.py` through their native Bash launchers. Both implementations
 resolve the same sibling `demo-code` checkout, and `-TerraformDirectory` remains
