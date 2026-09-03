@@ -3,6 +3,7 @@ import {
   BarChart3,
   Braces,
   Code2,
+  Database,
   DatabaseZap,
   LayoutDashboard,
   Map,
@@ -30,6 +31,7 @@ import IcebergCatalogServerGuide from './pages/IcebergCatalogServerGuide';
 import LoadToIcebergGuide from './pages/LoadToIcebergGuide';
 import RealTimeStreaming from './pages/RealTimeStreaming';
 import CustomerCDC from './pages/CustomerCDC';
+import DataSources from './pages/DataSources';
 import AdminEntry from './pages/AdminEntry';
 import { OraclePanelProvider } from './context/OraclePanelContext';
 import { UserProvider } from './context/UserContext';
@@ -79,6 +81,7 @@ const CHANGE_DATA_CAPTURE_PAGE_ID = 'customer-cdc';
 const SILVER_PROCESS_PAGE_ID = 'silver-process';
 const ICEBERG_CATALOG_SERVER_PAGE_ID = 'iceberg-catalog-server';
 const LOAD_TO_ICEBERG_PAGE_ID = 'load-to-iceberg';
+const DATA_SOURCES_PAGE_ID = 'data-sources';
 const PROCESS_SIDEBAR_EXCLUSIONS = new Set([
   'Data Quality & Enrichment',
   'Analytics-Ready Datasets',
@@ -129,6 +132,12 @@ const LOAD_TO_ICEBERG_NAV_ITEM = {
   label: 'Load Data to Iceberg Catalog Server',
   Icon: Upload,
 };
+const DATA_SOURCES_NAV_ITEM = {
+  id: DATA_SOURCES_PAGE_ID,
+  pageId: DATA_SOURCES_PAGE_ID,
+  label: 'Data Sources',
+  Icon: Database,
+};
 
 const ROUTED_NAV_ITEMS = [
   WELCOME_NAV_ITEM,
@@ -138,6 +147,7 @@ const ROUTED_NAV_ITEMS = [
   SILVER_PROCESS_NAV_ITEM,
   ICEBERG_CATALOG_SERVER_NAV_ITEM,
   LOAD_TO_ICEBERG_NAV_ITEM,
+  DATA_SOURCES_NAV_ITEM,
   ...PAGE_NAV_ITEMS,
   ...ADMIN_NAV_ITEMS,
 ];
@@ -177,6 +187,7 @@ const AI_LAKEHOUSE_TOOL_NAV_ITEMS = workflowItems('serve-ai')
     id: 'ai-lakehouse-tools-oracle-machine-learning',
     label: ORACLE_MACHINE_LEARNING_LABEL,
   }))
+  .concat(DATA_SOURCES_NAV_ITEM)
   .concat(AI_LAKEHOUSE_TOOL_LINKS.map((item) => ({
     ...item,
     id: `ai-lakehouse-tools-${item.id}`,
@@ -257,6 +268,7 @@ const PAGES = {
   [SILVER_PROCESS_PAGE_ID]: SilverProcessGuide,
   [ICEBERG_CATALOG_SERVER_PAGE_ID]: IcebergCatalogServerGuide,
   [LOAD_TO_ICEBERG_PAGE_ID]: LoadToIcebergGuide,
+  [DATA_SOURCES_PAGE_ID]: DataSources,
 };
 
 function resolveInitialPage() {

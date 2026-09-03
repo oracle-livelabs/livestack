@@ -183,6 +183,131 @@ textarea {
   text-transform: uppercase;
 }
 
+.data-sources-page {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.data-sources-hero {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(79, 125, 123, 0.25);
+  border-radius: 1rem;
+  background: linear-gradient(135deg, rgba(79, 125, 123, 0.11), rgba(255, 255, 255, 0.7));
+}
+
+.data-sources-hero h2 {
+  margin: 0.25rem 0 0;
+}
+
+.data-sources-hero p:not(.section-kicker) {
+  max-width: 48rem;
+  margin: 0.55rem 0 0;
+  color: var(--color-text-dim);
+}
+
+.data-sources-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.data-source-card {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.data-source-card__heading {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.data-source-card__icon {
+  display: grid;
+  place-items: center;
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 0.7rem;
+  color: var(--color-accent);
+  background: rgba(79, 125, 123, 0.12);
+}
+
+.data-source-card__heading p,
+.data-source-card__heading h3,
+.data-source-field span {
+  margin: 0;
+}
+
+.data-source-card__heading p,
+.data-source-field span {
+  color: var(--color-text-dim);
+  font-size: 0.78rem;
+}
+
+.data-source-card__heading h3 {
+  margin-top: 0.1rem;
+  font-size: 1rem;
+}
+
+.data-source-card__fields {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.data-source-field {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.data-source-field .credential-copy-row {
+  justify-content: space-between;
+  min-width: 0;
+  padding: 0.48rem 0.55rem;
+  border: 1px solid rgba(79, 125, 123, 0.2);
+  border-radius: 0.45rem;
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.data-source-field code {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  color: var(--color-text);
+  font-size: 0.78rem;
+}
+
+.data-sources-loading,
+.data-sources-error {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--color-text-dim);
+}
+
+.data-sources-error strong,
+.data-sources-error p {
+  margin: 0;
+}
+
+.data-sources-error p {
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 980px) {
+  .data-sources-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .data-sources-hero {
+    flex-direction: column;
+  }
+}
+
 .app-brand-title {
   margin: 0;
   color: var(--color-sidebar-text);

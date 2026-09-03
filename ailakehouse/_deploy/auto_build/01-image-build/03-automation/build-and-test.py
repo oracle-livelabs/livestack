@@ -659,6 +659,15 @@ def stage_lakehouse_source(context: PipelineContext) -> None:
     source = override.read_text(encoding="utf-8")
     if "http://127.0.0.1:${port}/iceberg/v1/config" not in source:
         raise PipelineError("Peak Gear must probe /iceberg/v1/config as its health endpoint.")
+    required_iceberg_connection_fields = (
+        '"s3AccessID": os.environ["S3_ACCESS_ID"]',
+        '"s3SecretKey": os.environ["S3_SECRET_KEY"]',
+        '"s3Region": os.environ["S3_REGION"]',
+    )
+    if not all(field in source for field in required_iceberg_connection_fields):
+        raise PipelineError(
+            "Peak Gear Data Transforms override must supply the Iceberg S3 credentials and region."
+        )
     for relative in (
         ".env",
         ".oci",
@@ -748,6 +757,24 @@ def validate_local_contract(context: PipelineContext) -> None:
             if ".automation" not in script.parts and ".terraform" not in script.parts:
                 run([bash, "-n", str(script)], capture=True)
     passed("Native Bash syntax validation completed")
+    native_tests = context.script_root / "tests"
+    if native_tests.is_dir():
+        run(
+            [
+                sys.executable,
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                str(native_tests),
+                "-p",
+                "test_*.py",
+            ],
+            cwd=context.script_root,
+            capture=True,
+            env={**os.environ, "PYTHONDONTWRITEBYTECODE": "1"},
+        )
+        passed("Native Python regression tests completed")
 
 
 def source_digest(context: PipelineContext) -> str:
@@ -809,7 +836,7 @@ def confirm_packer_nsg(context: PipelineContext) -> None:
         raise PipelineError("Packer nsg_ocids must contain exactly one dedicated NSG.")
     subnet_doc = oci_json(["network", "subnet", "get", "--subnet-id", context.subnet], context.common)
     nsg_doc = oci_json(
-        ["network", "nsg", "get", "--network-security-group-id", nsgs[0]], context.common
+        ["network", "nsg", "get", "--nsg-id", nsgs[0]], context.common
     )
     subnet = subnet_doc.get("data", {}) if isinstance(subnet_doc, dict) else {}
     nsg = nsg_doc.get("data", {}) if isinstance(nsg_doc, dict) else {}
@@ -823,7 +850,7 @@ def confirm_packer_nsg(context: PipelineContext) -> None:
             "nsg",
             "rules",
             "list",
-            "--network-security-group-id",
+            "--nsg-id",
             nsgs[0],
             "--direction",
             "INGRESS",
@@ -913,10 +940,14 @@ def endpoint_ports(endpoints: list[dict[str, object]]) -> list[int]:
 
 
 def ssh_public_identity(value: str) -> str:
-    parts = value.strip().split()
-    if len(parts) < 2 or not (parts[0].startswith("ssh-") or parts[0].startswith("ecdsa-")):
+    match = re.fullmatch(
+        r"(ssh-(?:rsa|ed25519)|ecdsa-sha2-[A-Za-z0-9-]+)\s+"
+        r"([A-Za-z0-9+/=]+)(?:\s+[^\r\n]*)?",
+        value.strip(),
+    )
+    if not match:
         return ""
-    return f"{parts[0]} {parts[1]}"
+    return f"{match.group(1)} {match.group(2)}"
 
 
 def resolve_ssh_private_key(requested: str, terraform_vars: pathlib.Path) -> pathlib.Path:
@@ -944,6 +975,23 @@ def resolve_ssh_private_key(requested: str, terraform_vars: pathlib.Path) -> pat
         f"No private key under {ssh_directory} matches resUserPublicKey. "
         "Pass -SshPrivateKeyPath with the matching private-key path."
     )
+
+
+def resolve_manual_capture_ssh_public_key(context: PipelineContext) -> str:
+    private_key = resolve_ssh_private_key(
+        context.args.SshPrivateKeyPath, context.terraform_vars
+    )
+    public_key_path = require_file(
+        pathlib.Path(f"{private_key}.pub"), "Manual-capture SSH public key"
+    )
+    public_key = public_key_path.read_text(encoding="utf-8").strip()
+    expected = ssh_public_identity(hcl_string(context.terraform_vars, "resUserPublicKey"))
+    actual = ssh_public_identity(public_key)
+    if not expected or actual != expected:
+        raise PipelineError(
+            f"{public_key_path} does not match resUserPublicKey in {context.terraform_vars}."
+        )
+    return actual
 
 
 def ssh_options(private_key: pathlib.Path, known_hosts: pathlib.Path) -> list[str]:
@@ -1470,6 +1518,15 @@ def wait_for_endpoints(
             )
 
 
+def matches_approved_plan_variable(actual: object, expected: object) -> bool:
+    """Accept Terraform's scalar CLI-input representation without weakening the check."""
+    if isinstance(expected, bool):
+        return actual is expected or actual == str(expected).lower()
+    if isinstance(expected, int):
+        return actual == expected or actual == str(expected)
+    return actual == expected
+
+
 def assert_direct_image_plan(
     context: PipelineContext, plan_path: pathlib.Path, image_ocid: str, ports: list[int]
 ) -> None:
@@ -1486,7 +1543,7 @@ def assert_direct_image_plan(
         expected_variables["expose_login_outputs"] = False
     for name, expected in expected_variables.items():
         actual = variables.get(name, {}).get("value") if isinstance(variables.get(name), dict) else None
-        if actual != expected:
+        if not matches_approved_plan_variable(actual, expected):
             raise PipelineError(f"Terraform plan variable {name} does not match the approved test value.")
     planned_ports = variables.get("allowed_tcp_ports", {}).get("value", [])
     if sorted(planned_ports) != ports:
@@ -1977,10 +2034,17 @@ def manual_instance_name(image_name: str) -> str:
 
 
 def packer_variables(
-    context: PipelineContext, *, manual: bool, instance_name: str = ""
+    context: PipelineContext,
+    *,
+    manual: bool,
+    instance_name: str = "",
+    manual_capture_ssh_public_key: str = "",
 ) -> list[str]:
     values = [f"-var-file={context.packer_vars}", "-var", f"image_name={context.args.ImageName}"]
     if manual:
+        public_key = ssh_public_identity(manual_capture_ssh_public_key)
+        if not public_key:
+            raise PipelineError("Manual capture requires a valid OpenSSH public key.")
         values += [
             "-var",
             "skip_create_image=true",
@@ -1988,18 +2052,33 @@ def packer_variables(
             "manual_capture_mode=true",
             "-var",
             f"build_instance_name={instance_name}",
+            "-var",
+            f"manual_capture_ssh_public_key={public_key}",
         ]
     else:
         values += ["-var", "skip_create_image=false", "-var", "manual_capture_mode=false"]
     return values
 
 
-def validate_packer(context: PipelineContext, *, manual: bool, instance_name: str = "") -> None:
+def validate_packer(
+    context: PipelineContext,
+    *,
+    manual: bool,
+    instance_name: str = "",
+    manual_capture_ssh_public_key: str = "",
+) -> None:
     packer = command_path("packer")
     run([packer, "init", "."], cwd=context.script_root)
     run([packer, "fmt", "-check", "."], cwd=context.script_root)
     run(
-        [packer, "validate"] + packer_variables(context, manual=manual, instance_name=instance_name) + ["."],
+        [packer, "validate"]
+        + packer_variables(
+            context,
+            manual=manual,
+            instance_name=instance_name,
+            manual_capture_ssh_public_key=manual_capture_ssh_public_key,
+        )
+        + ["."],
         cwd=context.script_root,
     )
     passed("Packer initialization, formatting, and validation completed")
@@ -2025,11 +2104,20 @@ def print_manual_instructions(
     print("\nThe next command runs Terraform metadata, service, endpoint, reboot, and cleanup tests.")
 
 
-def prepare_manual_capture(context: PipelineContext, instance_name: str) -> None:
+def prepare_manual_capture(
+    context: PipelineContext,
+    instance_name: str,
+    manual_capture_ssh_public_key: str,
+) -> None:
     digest_before = source_digest(context)
     code, output = run_stream(
         [command_path("packer"), "build", "-on-error=abort"]
-        + packer_variables(context, manual=True, instance_name=instance_name)
+        + packer_variables(
+            context,
+            manual=True,
+            instance_name=instance_name,
+            manual_capture_ssh_public_key=manual_capture_ssh_public_key,
+        )
         + ["."],
         cwd=context.script_root,
     )
@@ -2404,8 +2492,16 @@ def run_pipeline() -> None:
         if args.ResumeManualCaptureInstance:
             resume_manual_capture(context, args.ResumeManualCaptureInstance)
             return
+        manual_capture_ssh_public_key = (
+            resolve_manual_capture_ssh_public_key(context) if args.PrepareManualCapture else ""
+        )
         instance_name = manual_instance_name(args.ImageName) if args.PrepareManualCapture else ""
-        validate_packer(context, manual=args.PrepareManualCapture, instance_name=instance_name)
+        validate_packer(
+            context,
+            manual=args.PrepareManualCapture,
+            instance_name=instance_name,
+            manual_capture_ssh_public_key=manual_capture_ssh_public_key,
+        )
         if args.ValidateOnly:
             passed("Validation-only mode created no OCI resources")
             return
@@ -2442,7 +2538,7 @@ def run_pipeline() -> None:
         confirm_packer_nsg(context)
         context.manifest.unlink(missing_ok=True)
         if args.PrepareManualCapture:
-            prepare_manual_capture(context, instance_name)
+            prepare_manual_capture(context, instance_name, manual_capture_ssh_public_key)
             return
         run(
             [command_path("packer"), "build"]

@@ -50,6 +50,7 @@ are not required for normal PeakGear web-app usage.
 | TCP | 7077, 6066, 4040-4050, 28080-28083 | Spark submission and Spark UIs |
 | TCP | 19080 | Non-TLS OSA endpoint; prefer 8085 instead |
 | TCP | 1521, 1522, 8181, 11434, 3306 | Local databases, ORDS, Ollama, and OSA MySQL; keep private |
+| TCP | 8503, 8504, 27017 | Loyalty MySQL, PostgreSQL source, and MongoDB catalog; keep private until the federation phase |
 
 
 

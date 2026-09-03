@@ -18,6 +18,9 @@ volumes:
   frontend-dist:
   signal-generator-node-modules:
   gravitino-logs:
+  postgres-source-data:
+  loyalty-mysql-data:
+  mongodb-catalog-data:
 
 networks:
   default: {}
@@ -80,6 +83,80 @@ services:
       timeout: 10s
       retries: 40
       start_period: 180s
+    restart: unless-stopped
+
+  # Source system for sportswear orders, returns, inventory, and locations.
+  # Federation and seed data are intentionally added in later phases.
+  postgres-source:
+    hostname: postgres-source
+    image: ${POSTGRES_SOURCE_IMAGE:-docker.io/library/postgres:17.11-bookworm}
+    environment:
+      POSTGRES_DB: ${POSTGRES_SOURCE_DB:-sportswear}
+      POSTGRES_USER: ${POSTGRES_SOURCE_USER:-PG}
+      POSTGRES_PASSWORD: ${DBPASSWORD:-peakgear}
+    ports:
+      - "${POSTGRES_SOURCE_PORT:-8504}:5432"
+    volumes:
+      - postgres-source-data:/var/lib/postgresql/data
+    networks:
+      default:
+        aliases:
+          - postgres-source
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U \"$${POSTGRES_USER}\" -d \"$${POSTGRES_DB}\""]
+      interval: 15s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
+    restart: unless-stopped
+
+  # Source system for the later Loyalty Benefits tutorial extension.
+  loyalty-mysql:
+    hostname: loyalty-mysql
+    image: ${LOYALTY_MYSQL_IMAGE:-docker.io/library/mysql:8.4.11}
+    environment:
+      MYSQL_DATABASE: ${LOYALTY_MYSQL_DATABASE:-loyalty}
+      MYSQL_USER: ${LOYALTY_MYSQL_USER:-PG}
+      MYSQL_PASSWORD: ${DBPASSWORD:-peakgear}
+      MYSQL_ROOT_PASSWORD: ${DBPASSWORD:-peakgear}
+    ports:
+      - "${LOYALTY_MYSQL_PORT:-8503}:3306"
+    volumes:
+      - loyalty-mysql-data:/var/lib/mysql
+    networks:
+      default:
+        aliases:
+          - loyalty-mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -u \"$${MYSQL_USER}\" -p\"$${MYSQL_PASSWORD}\" --silent"]
+      interval: 15s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
+    restart: unless-stopped
+
+  # Source system for the product catalogue and product specifications.
+  mongodb-catalog:
+    hostname: mongodb-catalog
+    image: ${MONGODB_CATALOG_IMAGE:-docker.io/library/mongo:8.0.29}
+    environment:
+      MONGO_INITDB_DATABASE: ${MONGODB_CATALOG_DATABASE:-catalog}
+      MONGO_INITDB_ROOT_USERNAME: ${MONGODB_CATALOG_ROOT_USERNAME:-PG}
+      MONGO_INITDB_ROOT_PASSWORD: ${DBPASSWORD:-peakgear}
+    ports:
+      - "${MONGODB_CATALOG_PORT:-27017}:27017"
+    volumes:
+      - mongodb-catalog-data:/data/db
+    networks:
+      default:
+        aliases:
+          - mongodb-catalog
+    healthcheck:
+      test: ["CMD-SHELL", "test \"$$(mongosh --quiet --username \"$${MONGO_INITDB_ROOT_USERNAME}\" --password \"$${MONGO_INITDB_ROOT_PASSWORD}\" --authenticationDatabase admin --eval 'db.runCommand({ ping: 1 }).ok')\" = 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
     restart: unless-stopped
 
   ords:
@@ -475,6 +552,17 @@ services:
       ADB_WALLET_PASSWORD: ${ADB_WALLET_PASSWORD:-}
       ADB_SERVICE_NAME: ${SERVICE_NAME:-}
       ADB_DB_ACTIONS_URL: ${ORDSURL:-}
+      DBPASSWORD: ${DBPASSWORD:-}
+      SOURCE_PUBLIC_HOST: ${SOURCE_PUBLIC_HOST:-}
+      POSTGRES_SOURCE_PORT: ${POSTGRES_SOURCE_PORT:-8504}
+      POSTGRES_SOURCE_DB: ${POSTGRES_SOURCE_DB:-sportswear}
+      POSTGRES_SOURCE_USER: ${POSTGRES_SOURCE_USER:-PG}
+      LOYALTY_MYSQL_PORT: ${LOYALTY_MYSQL_PORT:-8503}
+      LOYALTY_MYSQL_DATABASE: ${LOYALTY_MYSQL_DATABASE:-loyalty}
+      LOYALTY_MYSQL_USER: ${LOYALTY_MYSQL_USER:-PG}
+      MONGODB_CATALOG_PORT: ${MONGODB_CATALOG_PORT:-27017}
+      MONGODB_CATALOG_DATABASE: ${MONGODB_CATALOG_DATABASE:-catalog}
+      MONGODB_CATALOG_ROOT_USERNAME: ${MONGODB_CATALOG_ROOT_USERNAME:-PG}
       OSA_API_BASE_URL: ${OSA_API_BASE_URL:-}
       OSA_PUBLIC_URL: ${OSA_PUBLIC_URL:-}
       GGSA_OSA_HTTPS_PORT: ${GGSA_OSA_HTTPS_PORT:-8085}

@@ -1,5 +1,11 @@
 # LAKEHOUSE IMAGE BUILD
 
+> **Experimental — use at your own risk.** This deployment is provided for
+> experimentation and demonstration only. It is not a supported product or
+> production reference architecture. You are responsible for validating the
+> configuration, security, costs, data handling, and operational impact in your
+> own environment. No support is provided.
+
 COPY THIS THE WHOLE FOLDER and start building a new image
 This is as example of a base image that can be used to build a new image.
 DO NOT CHANGE

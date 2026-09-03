@@ -110,7 +110,7 @@ RUN mkdir -p /tmp/jdbc-wallet-compat-agent /u01/osa/osa-base/compat \
       --add-exports java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED \
       -d /tmp/jdbc-wallet-compat-agent \
       /tmp/JdbcWalletCompatAgent.java \
- && printf 'Premain-Class: com.oracle.livelabs.osa.JdbcWalletCompatAgent\n' \
+ && printf 'Premain-Class: com.oracle.livelabs.osa.JdbcWalletCompatAgent\nCan-Retransform-Classes: true\n' \
       > /tmp/jdbc-wallet-compat-agent.mf \
  && jar --create \
       --file /u01/osa/osa-base/compat/jdbc-wallet-compat-agent.jar \

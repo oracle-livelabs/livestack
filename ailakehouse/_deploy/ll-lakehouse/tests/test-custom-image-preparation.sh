@@ -60,6 +60,12 @@ services:
     image: localhost/gravitino-iceberg-rest:adw
   iceberg-seeder:
     image: localhost/iceberg-seeder:latest
+  postgres-source:
+    image: docker.io/library/postgres:17.11-bookworm
+  loyalty-mysql:
+    image: docker.io/library/mysql:8.4.11
+  mongodb-catalog:
+    image: docker.io/library/mongo:8.0.29
 CONFIG
     ;;
   *" down --remove-orphans "*)
@@ -211,6 +217,9 @@ ingestion_signal-generator-node-modules
 ingestion_oracle-data
 ingestion_frontend-dist
 ingestion_gravitino-logs
+ingestion_postgres-source-data
+ingestion_loyalty-mysql-data
+ingestion_mongodb-catalog-data
 EOF
   cat > "${state_dir}/attached-volumes" <<'EOF'
 ingestion_app-node-modules
@@ -295,6 +304,16 @@ grep -q 'Ollama model is not fully cached' "${missing_model_dir}/prepare.log" \
   || fail "Missing-model failure did not identify the Ollama cache"
 assert_preflight_did_not_clean "${missing_model_dir}"
 
+echo "Test: missing source database image aborts before cleanup"
+missing_source_image_dir="$(setup_case missing-source-image)"
+if run_prepare "${missing_source_image_dir}" "docker.io/library/postgres:17.11-bookworm" \
+  > "${missing_source_image_dir}/prepare.log" 2>&1; then
+  fail "Image preparation accepted a missing PostgreSQL source image"
+fi
+grep -q 'Offline artifact preflight failed' "${missing_source_image_dir}/prepare.log" \
+  || fail "Missing source image failure did not identify the offline preflight"
+assert_preflight_did_not_clean "${missing_source_image_dir}"
+
 echo "Test: missing Node dependency aborts before cleanup"
 missing_dependency_dir="$(setup_case missing-dependency)"
 rm -f "${missing_dependency_dir}/podman-state/mounts/ingestion_signal-generator-node-modules/kafkajs/package.json"
@@ -344,6 +363,9 @@ done
 assert_file_absent "${prepare_dir}/podman-state/mounts/ingestion_oracle-data"
 assert_file_absent "${prepare_dir}/podman-state/mounts/ingestion_frontend-dist"
 assert_file_absent "${prepare_dir}/podman-state/mounts/ingestion_gravitino-logs"
+assert_file_absent "${prepare_dir}/podman-state/mounts/ingestion_postgres-source-data"
+assert_file_absent "${prepare_dir}/podman-state/mounts/ingestion_loyalty-mysql-data"
+assert_file_absent "${prepare_dir}/podman-state/mounts/ingestion_mongodb-catalog-data"
 assert_file_absent "${prepare_dir}/podman-state/mounts/anonymous-runtime-volume"
 for service in iceberg-seed.service pg-iceberg-connection.service user-podman.service; do
   assert_file_exists "${prepare_dir}/podman-state/${service}-stopped"

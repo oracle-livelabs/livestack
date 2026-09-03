@@ -8,6 +8,7 @@ ENTRYPOINT="${PROJECT_ROOT}/ingestion/ggsa/container/entrypoint.sh"
 DOCKERFILE="${PROJECT_ROOT}/ingestion/ggsa/Dockerfile"
 JDBC_COMPAT_AGENT="${PROJECT_ROOT}/ingestion/ggsa/container/JdbcWalletCompatAgent.java"
 PIPELINE_SETUP="${PROJECT_ROOT}/ingestion/backend/lib/osaStreamingSetup.js"
+JDBC_COMPAT_AGENT_FIXTURES="${PROJECT_ROOT}/tests/fixtures/jdbc-wallet-compat-agent"
 TEST_ROOT="$(mktemp -d "${TMPDIR:-/tmp}/ll-lakehouse-osa-restart-test.XXXXXX")"
 
 test_cleanup() {
@@ -45,17 +46,48 @@ fi
   || fail "The JDBC wallet compatibility agent must be included in the GGSA image build."
 
 if ! rg -q 'jdbc:oracle:thin:@' "${JDBC_COMPAT_AGENT}" \
-  || ! rg -q 'normalizeLegacyWalletUrl' "${JDBC_COMPAT_AGENT}" \
-  || ! rg -q 'DbReferenceBuilder' "${JDBC_COMPAT_AGENT}" \
-  || ! rg -q 'URLEncoder' "${JDBC_COMPAT_AGENT}"; then
-  fail "The compatibility agent must fix both OSA wallet URL paths and URL-encode credentials."
+  || ! rg -q 'OracleDriver' "${JDBC_COMPAT_AGENT}" \
+  || ! rg -q 'ORACLE_DRIVER_CONNECT' "${JDBC_COMPAT_AGENT}" \
+  || ! rg -q 'ClassWriter.COMPUTE_MAXS' "${JDBC_COMPAT_AGENT}" \
+  || ! rg -q 'retransformClasses' "${JDBC_COMPAT_AGENT}" \
+  || ! rg -q 'oracle.net.tns_admin' "${JDBC_COMPAT_AGENT}" \
+  || ! rg -q 'lastIndexOf' "${JDBC_COMPAT_AGENT}" \
+  || ! rg -q 'DBConnectorImpl' "${JDBC_COMPAT_AGENT}" \
+  || ! rg -q 'getADWConnectionString' "${JDBC_COMPAT_AGENT}"; then
+  fail "The compatibility agent must normalize both the Spark driver and OSA target-validation JDBC boundaries."
+fi
+
+if rg -q 'DbReferenceBuilder\|PhysicalConnection' "${JDBC_COMPAT_AGENT}"; then
+  fail "The compatibility agent must not restore broad Spark-reference or physical-connection transformations."
 fi
 
 if ! rg -q 'JdbcWalletCompatAgent.java' "${DOCKERFILE}" \
   || ! rg -q 'jdbc-wallet-compat-agent.jar' "${DOCKERFILE}" \
+  || ! rg -q 'Can-Retransform-Classes: true' "${DOCKERFILE}" \
   || ! rg -q -- '-javaagent:/u01/osa/osa-base/compat/jdbc-wallet-compat-agent.jar' "${DOCKERFILE}"; then
-  fail "The GGSA image must compile and enable the JDBC wallet compatibility agent."
+  fail "The GGSA image must compile, enable, and allow retransformation for the JDBC wallet compatibility agent."
 fi
+
+agent_classes="${TEST_ROOT}/agent-classes"
+fixture_classes="${TEST_ROOT}/fixture-classes"
+agent_manifest="${TEST_ROOT}/agent.mf"
+agent_jar="${TEST_ROOT}/jdbc-wallet-compat-agent.jar"
+mkdir -p "${agent_classes}" "${fixture_classes}"
+javac \
+  --add-exports java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED \
+  -d "${agent_classes}" \
+  "${JDBC_COMPAT_AGENT}"
+printf 'Premain-Class: com.oracle.livelabs.osa.JdbcWalletCompatAgent\nCan-Retransform-Classes: true\n' > "${agent_manifest}"
+jar --create --file "${agent_jar}" --manifest "${agent_manifest}" -C "${agent_classes}" .
+javac -d "${fixture_classes}" \
+  "${JDBC_COMPAT_AGENT_FIXTURES}/OracleDriver.java" \
+  "${JDBC_COMPAT_AGENT_FIXTURES}/DBConnectorImpl.java" \
+  "${JDBC_COMPAT_AGENT_FIXTURES}/JdbcWalletCompatAgentHarness.java"
+java \
+  --add-exports java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED \
+  -javaagent:"${agent_jar}" \
+  -cp "${fixture_classes}" \
+  JdbcWalletCompatAgentHarness
 
 if ! rg -Uq 'existingApplication\?\.isPublished === true[\s\S]{0,400}applicationMatchesDesired\(existingApplication, existingSource\.id, existingTarget\.id\)\) \{' "${PIPELINE_SETUP}"; then
   fail "A matching published pipeline must be reused without requiring a running catalog flag."

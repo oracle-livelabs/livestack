@@ -367,6 +367,9 @@ export const api = {
     validate: apiLakehouseValidate,
     seed: apiLakehouseSeed,
   },
+  dataSources: {
+    list: () => apiFetch('/data-sources'),
+  },
   streamingAnalytics: {
     status: () => apiFetch('/streaming-analytics/status'),
   },

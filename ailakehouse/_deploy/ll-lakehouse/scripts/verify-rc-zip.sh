@@ -111,6 +111,7 @@ require_entry "prepare-custom-image.sh"
 require_entry "scripts/build-rc-zip.sh"
 require_entry "scripts/verify-rc-zip.sh"
 require_entry "tests/test-custom-image-preparation.sh"
+require_entry "tests/test-source-database-compose.sh"
 require_entry "tests/test-data-transforms-connection-provisioning.sh"
 require_entry "tests/test-wallet-hardening.sh"
 require_entry "tests/test-osa-streaming-restart-safety.sh"
@@ -231,6 +232,18 @@ reject_text "ingestion/compose.yml" 'curl -fsS http://127.0.0.1:8080/services/${
 require_text "ingestion/cdc/goldengate-runtime/ensure-pmsrvr.sh" '-u "${admin}:${password}"'
 require_text "ingestion/cdc/goldengate-runtime/start-goldengate-runtime.sh" "-name '*-config.dat' -delete"
 require_text "ingestion/cdc/goldengate-runtime/start-goldengate-runtime.sh" '"${service_manager_run_dir}/session.dat"'
+require_text "ingestion/compose.yml" "hostname: postgres-source"
+require_text "ingestion/compose.yml" '"${POSTGRES_SOURCE_PORT:-8504}:5432"'
+require_text "ingestion/compose.yml" "hostname: loyalty-mysql"
+require_text "ingestion/compose.yml" '"${LOYALTY_MYSQL_PORT:-8503}:3306"'
+require_text "ingestion/compose.yml" "hostname: mongodb-catalog"
+require_text "ingestion/compose.yml" '"${MONGODB_CATALOG_PORT:-27017}:27017"'
+require_text "init/setenv.sh" 'POSTGRES_SOURCE_PORT=${POSTGRES_SOURCE_PORT:-8504}'
+require_text "init/setenv.sh" 'LOYALTY_MYSQL_PORT=${LOYALTY_MYSQL_PORT:-8503}'
+require_text "init/setenv.sh" 'MONGODB_CATALOG_PORT=${MONGODB_CATALOG_PORT:-27017}'
+require_text "init/setenv.sh" 'SOURCE_PUBLIC_HOST=${SOURCE_PUBLIC_HOST:-${PUBLIC_IP}}'
+require_text "ingestion/frontend/src/pages/DataSources.jsx" "Data Sources"
+require_text "ingestion/backend/routes/dataSources.js" 'postgresql://${host}'
 require_text "ingestion/backend/lib/customerCdcSetup.js" 'const STUDIO_TOKEN_CACHE_TTL_MS = 50 * 60 * 1000'
 require_text "ingestion/backend/lib/customerCdcSetup.js" 'activeToken = await studioLogin(config, { force: true })'
 
@@ -248,6 +261,7 @@ if [[ "${RUN_BUILD}" -eq 1 ]]; then
   echo "Testing clean extracted archive..."
   unzip -q "${ZIP_PATH}" -d "${tmp_dir}"
   bash "${tmp_dir}/tests/test-custom-image-preparation.sh"
+  bash "${tmp_dir}/tests/test-source-database-compose.sh"
   bash "${tmp_dir}/tests/test-data-transforms-connection-provisioning.sh"
   bash "${tmp_dir}/tests/test-wallet-hardening.sh"
   bash "${tmp_dir}/tests/test-osa-streaming-restart-safety.sh"
