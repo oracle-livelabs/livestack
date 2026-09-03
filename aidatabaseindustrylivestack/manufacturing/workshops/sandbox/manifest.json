@@ -59,7 +59,7 @@
       "filename": "../../download-livestack/download-livestack-take-it-home.md"
     },
     {
-      "title": "Deploy with Terraform",
+      "title": "Take It Home (OCI): Deploy with Resource Manager",
       "filename": "../../deploy-livestack-terraform/deploy-livestack-terraform.md"
     },
     {
