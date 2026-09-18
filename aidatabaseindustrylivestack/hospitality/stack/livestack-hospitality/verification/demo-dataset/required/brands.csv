@@ -1,0 +1,51 @@
+brand_id,brand_name,brand_slug,brand_category,headquarters_city,headquarters_lat,headquarters_lon,founded_year,annual_revenue,social_tier,created_at,updated_at
+221,Grand Harbor Hotel,harborstone-grand-harbor,Urban Hotel,Houston,29.7604,-95.3698,1998,245000000,premium,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+222,Canyon Reserve Resort,canyon-reserve-resort,Luxury Hospitality,Newark,40.7357,-74.1724,2004,186000000,premium,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+223,Lakeside Chicago Hotel,harborstone-lakeside-inn,Lifestyle Hotel,Chicago,41.8781,-87.6298,1987,132000000,premium,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+224,Summit Resort,harborstone-summit-lodge,Resort Event Sales,Detroit,42.3314,-83.0458,1992,221000000,luxury,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+225,City Center Grand Hotel,harborstone-city-center,Luxury Hotel,Columbus,39.9612,-82.9988,2001,98000000,standard,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+226,Vineyard Resort,harborstone-vineyard-resort,Resort Operations,Des Moines,41.5868,-93.625,1979,154000000,premium,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+227,Shoreline Beach Club,harborstone-beach-club,Folio Payments,Reno,39.5296,-119.8138,2016,91000000,premium,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+228,Landmark Convention Center,landmark-convention-center,Brand Standards,Boston,42.3601,-71.0589,2011,43000000,standard,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+229,Grand Garden Hotel,harborstone-garden-hotel,Urban Hotel,Cleveland,41.4993,-81.6944,1968,275000000,luxury,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+230,Springs Hotel Portland,springs-hotel-portland,Sustainable Hospitality,Portland,45.5152,-122.6784,2018,39000000,emerging,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+231,Airport Hotel Charlotte,harborstone-airport-hotel,Guest Rewards,Charlotte,35.2271,-80.8431,2007,76000000,standard,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+232,Dining and Events Hotel Tulsa,harborstone-dining-events,Guest Protection,Tulsa,36.154,-95.9928,1996,117000000,premium,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+233,Mountain Spa Resort,harborstone-mountain-spa,Hospitality Guest Experience,Minneapolis,44.9778,-93.265,2005,52000000,standard,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+234,Harborstone Gulf Coast Resort and Spa,harborstone-gulf-coast-resort,Revenue Operations,Baton Rouge,30.4515,-91.1871,1974,203000000,premium,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+235,Midwest Convention Hotel,harborstone-midwest-convention-hotel,Group Sales,Indianapolis,39.7684,-86.1581,1989,88000000,standard,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+236,Pacific Center Hotel,pacific-center-hotel,Folio Payments,Los Angeles,34.0522,-118.2437,1994,143000000,premium,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+237,Quality Services Hotel,harborstone-quality-desk,Guest Experience,San Jose,37.3382,-121.8863,2012,69000000,standard,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+238,Service Recovery Hotel,service-recovery-hotel,Group Booking Servicing,Memphis,35.1495,-90.049,2009,58000000,standard,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+239,Harborstone Waterfront Milwaukee,harborstone-waterfront-milwaukee,Association and Government Group,Milwaukee,43.0389,-87.9065,2003,74000000,standard,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+240,Wellness Retreat San Diego,wellness-retreat-san-diego,Wellness Hospitality,San Diego,32.7157,-117.1611,2015,46000000,emerging,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+241,Digital Guest Services Hotel,digital-guest-services-hotel,Digital Guest Services,Phoenix,33.4484,-112.074,2019,34000000,emerging,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+242,Sustainability Lodge,sustainability-lodge,Sustainable Hospitality,Seattle,47.6062,-122.3321,2021,21000000,emerging,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+243,Harborstone Operations Analytics Center,harborstone-operations-analytics,Operations Intelligence,Denver,39.7392,-104.9903,2014,18000000,emerging,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+244,Extended Stay Medical District,harborstone-medical-district-hotel,Group Billing,Philadelphia,39.9526,-75.1652,1999,112000000,premium,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+245,CleanStay Cincinnati Hotel,harborstone-cleanstay-hotel,Guest Services,Cincinnati,39.1031,-84.512,2008,65000000,standard,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+246,Harborstone Bridge Revenue Hotel,harborstone-bridge-hotel,Revenue Management,Atlanta,33.749,-84.388,1991,126000000,premium,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+247,Harborstone Continuity Desk,harborstone-continuity-desk,Guest Experience Operations Risk,Dallas,32.7767,-96.797,2013,47000000,standard,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+248,Harborstone Direct Booking Center,harborstone-direct-booking-desk,Digital Hospitality,Raleigh,35.7796,-78.6382,2006,82000000,standard,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+249,Harborstone Portside Events Hotel,harborstone-portside-hotel,Event Revenue,Savannah,32.0809,-81.0912,1985,157000000,premium,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+250,Extended Stay Kansas City,harborstone-extended-stay,Extended Stay,Kansas City,39.0997,-94.5786,1997,93000000,standard,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+251,Harborstone U.S. Property Portfolio,harborstone-property-portfolio,Property Portfolio,St. Louis,38.627,-90.1994,1982,138000000,premium,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+252,Tech District Hotel,harborstone-tech-district-hotel,Luxury Hospitality,Akron,41.0814,-81.519,2002,71000000,standard,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+253,GreenStay Pittsburgh Hotel,harborstone-sustainability-hotel,Sustainability,Pittsburgh,40.4406,-79.9959,1978,99000000,standard,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+254,Harborstone Guest Protection Desk,harborstone-guest-protection,Guest Protection,Tampa,27.9506,-82.4572,1995,61000000,standard,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+255,Harborstone Signature Events,harborstone-signature-events,Events Operations,Baltimore,39.2904,-76.6122,2000,55000000,standard,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+256,Harborstone Coastal Resort Wilmington,harborstone-coastal-resort-wilmington,Regional Hospitality,Wilmington,34.2257,-77.9447,1993,104000000,premium,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+257,Harborstone Assurance Services Desk,harborstone-assurance-services,Guest Protection,Nashville,36.1627,-86.7816,2006,57000000,standard,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+258,Harborstone Partner Direct Desk,harborstone-partner-direct,Partner Hospitality,San Antonio,29.4241,-98.4936,1990,118000000,premium,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+259,Harborstone Apex Resort Louisville,harborstone-apex-resort,Resort Operations,Louisville,38.2527,-85.7585,2004,67000000,standard,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+260,Harborstone Group Sales Strategy Center,harborstone-group-sales,Long-Stay Hospitality,Omaha,41.2565,-95.9345,1988,149000000,premium,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+261,Harborstone Continuity Operations,harborstone-continuity-operations,Operational Resilience,New Orleans,29.9511,-90.0715,2001,59000000,standard,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+262,Harborstone Channel Watch Austin,harborstone-channel-watch,Channel Intelligence,Austin,30.2672,-97.7431,2020,26000000,emerging,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+263,Harborstone Brand Standards Office,harborstone-brand-standards-office,Brand Standards,Washington,38.9072,-77.0369,2017,31000000,emerging,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+264,Harborstone Brand Standards Desk,harborstone-brand-standards,Brand Standards,Washington,38.9072,-77.0369,2010,44000000,standard,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+265,Harborstone Demand Signals Lab,harborstone-demand-signals,Demand Data,Long Beach,33.7701,-118.1937,2018,29000000,emerging,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+266,Harborstone Property Operations Las Vegas,harborstone-property-operations,Property Operations,Las Vegas,36.1699,-115.1398,2012,51000000,standard,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+267,Harborstone U.S. Property Portfolio Desk,harborstone-property-harborstone-portfolio-insights,Property Portfolio Signals,Cleveland,41.4993,-81.6944,2016,37000000,emerging,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+268,Harborstone Data Connect Center,harborstone-data-connect,Data Services,Salt Lake City,40.7608,-111.891,2009,48000000,standard,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+269,Harborstone Events Exchange Miami,harborstone-events-exchange,Revenue Management,Miami,25.7617,-80.1918,2015,63000000,standard,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z
+270,Harborstone NorthStar Group Sales,harborstone-northstar-lodge,Group Sales,Fargo,46.8772,-96.7898,2008,54000000,standard,2026-09-17T13:44:07Z,2026-09-17T13:44:07Z

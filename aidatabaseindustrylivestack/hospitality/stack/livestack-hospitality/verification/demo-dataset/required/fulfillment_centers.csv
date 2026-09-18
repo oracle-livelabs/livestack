@@ -1,0 +1,31 @@
+center_id,center_name,center_type,address_line1,city,state_province,postal_code,country,latitude,longitude,capacity_units,current_load_pct,is_active,operating_hours,created_at
+221,Summit Grand Edison Metro Hotel,Full-Service Hotel,100 Hospitality Services Way,Edison,New Jersey,08817,US,40.5187,-74.4121,240,15.8,1,08:00-18:00,2026-09-17T13:44:07Z
+222,Airport Hotel Ontario Airport Hotel,Select-Service Hotel,101 Hospitality Services Way,Ontario,California,91761,US,34.0633,-117.6509,190,13.7,1,08:00-18:00,2026-09-17T13:44:07Z
+223,Joliet Gateway Hotel,Select-Service Hotel,102 Hospitality Services Way,Joliet,Illinois,60435,US,41.525,-88.0817,126,19.8,1,08:00-18:00,2026-09-17T13:44:07Z
+224,Harborstone Lancaster South Hotel,Full-Service Hotel,103 Hospitality Services Way,Lancaster,Texas,75134,US,32.5921,-96.7561,205,11.7,1,08:00-18:00,2026-09-17T13:44:07Z
+225,Airport Hotel Union City Atlanta Airport,Select-Service Hotel,104 Hospitality Services Way,Union City,Georgia,30291,US,33.5871,-84.5421,150,17.3,1,08:00-18:00,2026-09-17T13:44:07Z
+226,Extended Stay Kent Valley,Extended-Stay Hotel,105 Hospitality Services Way,Kent,Washington,98032,US,47.3809,-122.2348,132,18.9,1,08:00-18:00,2026-09-17T13:44:07Z
+227,Hialeah Miami Lakes Hotel,Full-Service Hotel,106 Hospitality Services Way,Hialeah,Florida,33012,US,25.8576,-80.2781,145,22.8,1,08:00-18:00,2026-09-17T13:44:07Z
+228,Summit Grand Denver Downtown Hotel,Full-Service Hotel,107 Hospitality Services Way,Denver,Colorado,80202,US,39.7392,-104.9903,250,7.6,1,08:00-18:00,2026-09-17T13:44:07Z
+229,Phoenix West Hotel,Full-Service Hotel,108 Hospitality Services Way,Mesa,Arizona,85201,US,33.4353,-112.3577,170,12.9,1,08:00-18:00,2026-09-17T13:44:07Z
+230,Fall River Waterfront Hotel,Select-Service Hotel,109 Hospitality Services Way,Fall River,Massachusetts,02720,US,41.7015,-71.155,108,23.1,1,08:00-18:00,2026-09-17T13:44:07Z
+231,Airport Hotel Shakopee Valley,Select-Service Hotel,110 Hospitality Services Way,Shakopee,Minnesota,55379,US,44.7974,-93.5272,116,21.6,1,08:00-18:00,2026-09-17T13:44:07Z
+232,Troutdale Extended Stay,Extended-Stay Hotel,111 Hospitality Services Way,Troutdale,Oregon,97060,US,45.539,-122.3872,95,26.3,1,08:00-18:00,2026-09-17T13:44:07Z
+233,Extended Stay Lebanon Nashville,Extended-Stay Hotel,112 Hospitality Services Way,Lebanon,Tennessee,37087,US,36.2081,-86.2911,124,23.4,1,08:00-18:00,2026-09-17T13:44:07Z
+234,Fremont Silicon Valley Hotel,Select-Service Hotel,113 Hospitality Services Way,Fremont,California,94538,US,37.5485,-121.9886,138,18.1,1,08:00-18:00,2026-09-17T13:44:07Z
+235,Grand Garden Detroit Metro Airport,Full-Service Hotel,114 Hospitality Services Way,Romulus,Michigan,48174,US,42.2223,-83.3963,215,9.3,1,08:00-18:00,2026-09-17T13:44:07Z
+236,Middletown Delaware Hotel,Select-Service Hotel,115 Hospitality Services Way,Middletown,Delaware,19709,US,39.4496,-75.7163,102,23.5,1,08:00-18:00,2026-09-17T13:44:07Z
+237,Harborstone Missouri City Gulf Coast Resort,Resort Property,116 Hospitality Services Way,Missouri City,Texas,77459,US,29.6186,-95.5377,220,10.5,1,08:00-18:00,2026-09-17T13:44:07Z
+238,SpringHill Suites West Jordan,Select-Service Hotel,117 Hospitality Services Way,West Jordan,Utah,84084,US,40.6097,-111.9391,118,24.6,1,08:00-18:00,2026-09-17T13:44:07Z
+239,Airport Hotel Concord Mills,Select-Service Hotel,118 Hospitality Services Way,Concord,North Carolina,28027,US,35.4088,-80.5795,112,19.6,1,08:00-18:00,2026-09-17T13:44:07Z
+240,Extended Stay Plainfield Indianapolis,Extended-Stay Hotel,119 Hospitality Services Way,Plainfield,Indiana,46168,US,39.7043,-86.3994,122,26.2,1,08:00-18:00,2026-09-17T13:44:07Z
+241,Harborstone North Las Vegas Hotel,Full-Service Hotel,120 Hospitality Services Way,North Las Vegas,Nevada,89030,US,36.1989,-115.1175,210,12.9,1,08:00-18:00,2026-09-17T13:44:07Z
+242,Edwardsville Kansas City Hotel,Select-Service Hotel,121 Hospitality Services Way,Edwardsville,Kansas,66111,US,39.0614,-94.8193,104,26,1,08:00-18:00,2026-09-17T13:44:07Z
+243,Airport Hotel Etna Columbus,Select-Service Hotel,122 Hospitality Services Way,Etna,Ohio,43018,US,39.9576,-82.6818,110,20,1,08:00-18:00,2026-09-17T13:44:07Z
+244,Sparks Reno Hotel,Select-Service Hotel,123 Hospitality Services Way,Sparks,Nevada,89431,US,39.5349,-119.7527,128,21.1,1,08:00-18:00,2026-09-17T13:44:07Z
+245,Brandon Tampa Extended Stay,Extended-Stay Hotel,124 Hospitality Services Way,Brandon,Florida,33510,US,27.9378,-82.2859,92,26.1,1,08:00-18:00,2026-09-17T13:44:07Z
+246,Extended Stay Aberdeen Chesapeake,Extended-Stay Hotel,125 Hospitality Services Way,Aberdeen,Maryland,21001,US,39.5096,-76.1641,120,19.2,1,08:00-18:00,2026-09-17T13:44:07Z
+247,Airport Hotel New Braunfels Riverwalk,Select-Service Hotel,126 Hospitality Services Way,New Braunfels,Texas,78130,US,29.703,-98.1245,125,15.2,1,08:00-18:00,2026-09-17T13:44:07Z
+248,Olive Branch Memphis Hotel,Select-Service Hotel,127 Hospitality Services Way,Olive Branch,Mississippi,38654,US,34.9618,-89.8295,118,11.9,1,08:00-18:00,2026-09-17T13:44:07Z
+249,Harborstone Kapolei Beach Resort,Resort Property,128 Hospitality Services Way,Kapolei,Hawaii,96707,US,21.335,-158.0581,160,18.8,1,08:00-18:00,2026-09-17T13:44:07Z
+250,SpringHill Suites Anchorage Downtown,Select-Service Hotel,129 Hospitality Services Way,Anchorage,Alaska,99501,US,61.2181,-149.9003,105,19,1,08:00-18:00,2026-09-17T13:44:07Z

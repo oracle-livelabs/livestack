@@ -1,0 +1,25 @@
+[Unit]
+Description=Unified Hospitality LiveStack
+Documentation=man:podman-compose(1)
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+WorkingDirectory=/home/opc/hospitality-livestack
+Delegate=yes
+Environment=XDG_RUNTIME_DIR=/run/user/1000
+Environment=DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+Environment=PODMAN_SYSTEMD_UNIT=%n
+Environment=PODMAN_COMPOSE_PROVIDER=/home/opc/.local/bin/podman-compose
+Environment=PATH=/home/opc/.local/bin:/usr/local/bin:/usr/bin:/bin
+ExecStart=/usr/bin/podman compose -p hospitality-livestack up -d --remove-orphans
+ExecStop=/usr/bin/podman compose -p hospitality-livestack stop
+TimeoutStartSec=0
+TimeoutStopSec=180
+Restart=on-failure
+RestartSec=20
+
+[Install]
+WantedBy=default.target

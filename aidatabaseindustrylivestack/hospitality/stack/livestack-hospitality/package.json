@@ -1,0 +1,61 @@
+{
+  "name": "hospitality-livestack",
+  "version": "1.0.0",
+  "description": "Hospitality Performance Operations, Compliance Signals, and Smart Guest Service - Oracle 26ai Converged Database Demo",
+  "main": "backend/server.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "nodemon backend/server.js",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "verify:hospitality-a-plus-plus": "node verification/check-hospitality-a-plus-plus.js",
+    "verify:brand-colors": "node verification/check-brand-colors.js",
+    "verify:chat-conversation": "node verification/check-chat-conversation.js",
+    "verify:oracle-internals-source": "node verification/check-oracle-internals-source.js",
+    "verify:oracle-internals-sql": "sh scripts/verify_oracle_internals.sh",
+    "verify:signal-velocity-range": "node verification/check-signal-velocity-range.js",
+    "verify:signal-history-seed": "node verification/check-signal-history-seed.js",
+    "verify:demo-dataset-export": "node verification/check-demo-dataset-export.js",
+    "verify:demo-dataset-signal-history": "node verification/check-demo-dataset-signal-history.js",
+    "verify:data-foundation-vpd-client": "node verification/check-data-foundation-vpd-client.js",
+    "verify:contrast": "node verification/check-contrast.js",
+    "verify:demo-restore-capacity": "node verification/check-demo-restore-capacity.js",
+    "verify:usage-telemetry": "node verification/check-usage-telemetry.js",
+    "verify:focus-semantics": "node verification/check-focus-semantics.js",
+    "verify:product-duality": "node verification/check-product-duality-view.js",
+    "verify:spatial-nearest": "node verification/check-spatial-nearest-function.js",
+    "verify:optimal-fulfillment": "node verification/check-optimal-fulfillment.js",
+    "verify:owner-financial-validation": "node verification/check-owner-financial-validation.js",
+    "verify:owner-close-note": "node verification/check-owner-close-note.js",
+    "verify:vpd-source": "node verification/check-vpd-source-contract.js",
+    "verify:vpd-oracle": "node verification/check-vpd-oracle-catalog.js",
+    "verify:vpd-live": "node verification/check-vpd-live-isolation.js",
+    "start": "node backend/server.js",
+    "start:prod": "NODE_ENV=production pm2 start backend/server.js --name hospitality"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.17",
+    "cors": "^2.8.5",
+    "csv-parse": "^6.2.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "multer": "^2.1.1",
+    "oracledb": "^6.7.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1",
+    "nodemon": "^3.1.4"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
