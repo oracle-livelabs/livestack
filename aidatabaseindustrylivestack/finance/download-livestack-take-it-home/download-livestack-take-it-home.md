@@ -734,3 +734,8 @@ This guide is self-service for technical users who can install Podman and run te
 
 - **Author** - LiveLabs Team
 - **Last Updated By/Date** - LiveLabs Team, 2026-06-04
+
+## Acknowledgements
+
+* **Author** - TODO: Your Name, Your Title, Your Organization
+* **Last Updated By/Date** - TODO: Your Name, Month Year

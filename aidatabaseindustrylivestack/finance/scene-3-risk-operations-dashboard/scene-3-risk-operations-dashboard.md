@@ -76,3 +76,8 @@ The point of this view is to show that the same data can support different appli
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
 - **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-29
+
+## Acknowledgements
+
+* **Author** - TODO: Your Name, Your Title, Your Organization
+* **Last Updated By/Date** - TODO: Your Name, Month Year

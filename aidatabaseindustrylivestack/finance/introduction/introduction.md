@@ -2,6 +2,9 @@
 
 ## Introduction
 
+Estimated Workshop Time: TODO - x minutes
+
+
 Financial institutions need faster, better-governed decisions while risk, client, transaction, service, and compliance data often live in separate systems. The **Seer Bank Finance LiveStack** shows how those signals can come together so teams can spot exposure, investigate risk, improve service coverage, and act with more confidence.
 
 At the same time, business users expect faster access to insights, operations teams need visibility across regions and service channels, and executives want AI-assisted recommendations that remain grounded in governed enterprise data. Financial institutions need a way to connect these data domains so they can make faster, more informed decisions while maintaining compliance, reducing risk, and protecting customer trust.
@@ -52,3 +55,8 @@ Before you begin, confirm that you can open the running Seer Bank Finance LiveSt
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
 - **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-22
+
+## Acknowledgements
+
+* **Author** - TODO: Your Name, Your Title, Your Organization
+* **Last Updated By/Date** - TODO: Your Name, Month Year

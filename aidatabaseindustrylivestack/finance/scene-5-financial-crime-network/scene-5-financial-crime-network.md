@@ -134,3 +134,8 @@ The query runs against the `FRAUD_NETWORK` property graph using SQL/PGQ-style tr
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
 - **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-29
+
+## Acknowledgements
+
+* **Author** - TODO: Your Name, Your Title, Your Organization
+* **Last Updated By/Date** - TODO: Your Name, Month Year

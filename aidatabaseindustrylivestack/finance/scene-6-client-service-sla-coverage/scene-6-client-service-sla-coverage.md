@@ -100,3 +100,8 @@ The business value is that teams can make the decision from connected, governed 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
 - **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-29
+
+## Acknowledgements
+
+* **Author** - TODO: Your Name, Your Title, Your Organization
+* **Last Updated By/Date** - TODO: Your Name, Month Year
