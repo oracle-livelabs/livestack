@@ -42,9 +42,9 @@ Perform the following set of steps to find financial products where predicted de
 1. Stay on the **Operational Risk** tab.
 2. Use the scoring window selector if you want to change the time window, then click **Refresh**.
 3. Review the bar chart and financial product table.
-4. Focus on **Secure Document Vault Series B**.
+4. Focus on **Premium Checking Bundle Series B**.
 
-In the current demo dataset, **Secure Document Vault Series B** in **Digital Banking** shows risk severity **53.3**, **+74%** expected impact, **128** forecasted cases, **$3,207.62** revenue impact, **92%** confidence, and an **Escalating** risk state.
+In the current demo dataset, **Premium Checking Bundle Series B** in **Retail Banking** shows risk severity **48.1**, **+74%** expected impact, **121** forecasted cases, **$1,511.91** revenue impact, **98%** confidence, and an **Escalating** risk state.
 
 **Note:** Sample values may change after data refreshes or rebuilds. Verify live output before presenting, then explain the business takeaway.
 
