@@ -85,7 +85,7 @@ const USE_CASES = [
     label: 'Ask Seer Transport Data',
     intro: 'Ask scenario questions that:',
     bullets: [
-      'Explain the Northeast Corridor logistics storyline in plain English',
+      'Explain the Northeast Corridor logistics storyline using natural language',
       'Query live governed transportation data',
       'Inspect evidence behind operational decisions',
     ],

@@ -15,12 +15,15 @@ fi
 
 WALLET_DIR="${INGESTION_DIR}/wallet"
 ADB_LOAD_MARKER="${INGESTION_DIR}/.adb_load_done"
+AI_DATA_CATALOG_MARKER="${INGESTION_DIR}/.ai_data_catalog_done"
+AI_DATA_CATALOG_STORAGE_MARKER="${INGESTION_DIR}/.ai_data_catalog_storage_registered"
 OCI_WALLET_REQUIRED_MARKER="${INGESTION_DIR}/.oci_wallet_required"
 COMPOSE_ENV_FILE="${COMPOSE_ENV_FILE:-${INGESTION_DIR}/.env}"
 COMPOSE_FILE="${COMPOSE_FILE:-${INGESTION_DIR}/compose.yml}"
 HOME_OCI_DIR="${HOME_OCI_DIR:-${OPC_HOME}/.oci}"
 INGESTION_OCI_DIR="${INGESTION_OCI_DIR:-${INGESTION_DIR}/.oci}"
 GOLDENGATE_CERT_DIR="${GOLDENGATE_CERT_DIR:-${INGESTION_DIR}/cdc/goldengate/cert}"
+SOURCE_TLS_DIR="${SOURCE_TLS_DIR:-${INGESTION_DIR}/source-tls}"
 APPLICATION_LOG_DIR="${APPLICATION_LOG_DIR:-${INGESTION_DIR}/logs}"
 INSTALL_LOG="${INSTALL_LOG:-${OPC_HOME}/inst.log}"
 PODMAN_AUTH_FILE="${PODMAN_AUTH_FILE:-${OPC_HOME}/.config/containers/auth.json}"
@@ -30,6 +33,8 @@ PODMAN_COMPOSE_BIN="${PODMAN_COMPOSE_BIN:-}"
 SYSTEMCTL_BIN="${SYSTEMCTL_BIN:-}"
 USER_PODMAN_SERVICE="${USER_PODMAN_SERVICE:-user-podman.service}"
 PG_ICEBERG_CONNECTION_SERVICE="${PG_ICEBERG_CONNECTION_SERVICE:-pg-iceberg-connection.service}"
+PG_AI_DATA_CATALOG_SERVICE="${PG_AI_DATA_CATALOG_SERVICE:-pg-ai-data-catalog.service}"
+PG_AI_CATALOG_BRONZE_SERVICE="${PG_AI_CATALOG_BRONZE_SERVICE:-pg-ai-catalog-bronze.service}"
 ICEBERG_SEED_SERVICE="${ICEBERG_SEED_SERVICE:-iceberg-seed.service}"
 COMPOSE_PROJECT=""
 PRESERVED_OFFLINE_VOLUME_KEYS=(
@@ -178,7 +183,8 @@ ollama_model_is_cached() {
 }
 
 preflight_offline_artifacts() {
-  local config_file
+  local seed_config_file
+  local aihub_config_file
   local project_volumes_file
   local image
   local image_count=0
@@ -197,11 +203,13 @@ preflight_offline_artifacts() {
 
   resolve_runtime_commands
   resolve_compose_project
-  config_file="$(mktemp "${TMPDIR:-/tmp}/ll-lakehouse-compose-config.XXXXXX")"
+  seed_config_file="$(mktemp "${TMPDIR:-/tmp}/ll-lakehouse-compose-seed-config.XXXXXX")"
+  aihub_config_file="$(mktemp "${TMPDIR:-/tmp}/ll-lakehouse-compose-aihub-config.XXXXXX")"
   project_volumes_file="$(mktemp "${TMPDIR:-/tmp}/ll-lakehouse-project-volumes.XXXXXX")"
 
-  if ! run_compose --profile seed config > "${config_file}"; then
-    rm -f "${config_file}" "${project_volumes_file}"
+  if ! run_compose --profile seed config > "${seed_config_file}" \
+    || ! run_compose --profile aihub config > "${aihub_config_file}"; then
+    rm -f "${seed_config_file}" "${aihub_config_file}" "${project_volumes_file}"
     echo "Unable to render the compose configuration. No cleanup was performed." >&2
     exit 1
   fi
@@ -215,7 +223,8 @@ preflight_offline_artifacts() {
       echo "Missing offline container image: ${image}" >&2
       missing=1
     fi
-  done < <(awk '$1 == "image:" && !seen[$2]++ { print $2 }' "${config_file}")
+  done < <(awk '$1 == "image:" && !seen[$2]++ { print $2 }' \
+    "${seed_config_file}" "${aihub_config_file}")
 
   if [[ "${image_count}" -eq 0 ]]; then
     echo "No container images were found in the rendered compose configuration." >&2
@@ -282,7 +291,7 @@ preflight_offline_artifacts() {
     fi
   fi
 
-  rm -f "${config_file}" "${project_volumes_file}"
+  rm -f "${seed_config_file}" "${aihub_config_file}" "${project_volumes_file}"
   if [[ "${missing}" -ne 0 ]]; then
     echo "Offline artifact preflight failed. No cleanup was performed." >&2
     exit 1
@@ -304,7 +313,7 @@ stop_image_capture_services() {
     return 0
   fi
 
-  for service in "${ICEBERG_SEED_SERVICE}" "${PG_ICEBERG_CONNECTION_SERVICE}" "${USER_PODMAN_SERVICE}"; do
+  for service in "${PG_AI_CATALOG_BRONZE_SERVICE}" "${ICEBERG_SEED_SERVICE}" "${PG_ICEBERG_CONNECTION_SERVICE}" "${PG_AI_DATA_CATALOG_SERVICE}" "${USER_PODMAN_SERVICE}"; do
     if ! "${SYSTEMCTL_BIN}" --user cat "${service}" >/dev/null 2>&1; then
       echo "No ${service} user service found; continuing."
       continue
@@ -548,6 +557,7 @@ remove_runtime_credentials() {
   remove_sensitive_directory "${HOME_OCI_DIR}" "home OCI credential"
   remove_sensitive_directory "${INGESTION_OCI_DIR}" "ingestion OCI credential"
   remove_sensitive_directory "${GOLDENGATE_CERT_DIR}" "generated GoldenGate TLS credential"
+  remove_sensitive_directory "${SOURCE_TLS_DIR}" "source database TLS credential"
   remove_sensitive_directory "${APPLICATION_LOG_DIR}" "application log"
 }
 
@@ -581,6 +591,20 @@ if [[ -e "${ADB_LOAD_MARKER}" ]]; then
   echo "Removed ${ADB_LOAD_MARKER}"
 else
   echo "Not present: ${ADB_LOAD_MARKER}"
+fi
+
+if [[ -e "${AI_DATA_CATALOG_MARKER}" ]]; then
+  rm -f "${AI_DATA_CATALOG_MARKER}"
+  echo "Removed ${AI_DATA_CATALOG_MARKER}"
+else
+  echo "Not present: ${AI_DATA_CATALOG_MARKER}"
+fi
+
+if [[ -e "${AI_DATA_CATALOG_STORAGE_MARKER}" ]]; then
+  rm -f "${AI_DATA_CATALOG_STORAGE_MARKER}"
+  echo "Removed ${AI_DATA_CATALOG_STORAGE_MARKER}"
+else
+  echo "Not present: ${AI_DATA_CATALOG_STORAGE_MARKER}"
 fi
 
 remove_configured_wallet_archive

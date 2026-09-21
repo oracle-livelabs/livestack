@@ -1,161 +1,126 @@
-# Scene 6 Transform Iceberg Data
+# Load Data to an Apache Iceberg Catalog Server
 
 ## Introduction
 
-**PeakGear** stores its raw product master data as an **Apache Iceberg** table managed by an external Iceberg Catalog Server. This is the **Bronze** layer: the original source data remains in the Iceberg table, governed by its catalog, and is available to the lakehouse without first copying or ingesting it into another processing store.
+**PeakGear** has prepared product data in an Oracle Autonomous Database table. This scene shows how **Oracle Data Transforms** publishes that data as an **Apache Iceberg** table.
 
-This scene shows that Iceberg tables are not only external data that PeakGear can query. **Oracle Data Transforms** can use the Iceberg-backed Bronze data directly in a transformation pipeline. A preconfigured data flow reads the product master source, applies a simple business transformation, and writes the result to a new transformed table. The original Bronze data remains unchanged.
+The prepared load reads `GOLD_PRODUCTS` from the Oracle `PG` schema and writes it to the `GOLD` namespace in the Iceberg catalog. It appends the data to the target table and leaves the Oracle source unchanged.
 
-**Key message:** Transform Iceberg Data Where It Lives.
+The prepared flow uses **Iceberg incremental load** in **Oracle Data Transforms** to publish the table through the Iceberg Catalog Server.
+
+Other tools that support Iceberg can then use the same product data.
 
 Estimated Time: **10 minutes**
+
+>**Note**: You must have finished the scene Transform Iceberg Data!
 
 ### Objectives
 
 In this scene, you will:
 
-- Open the **Data Processing & Pipelines** demo from the **Process** menu.
-- Open Oracle Data Transforms and sign in with the displayed PG credentials.
-- Open the preconfigured `peakgear` project and its `dataFlow`.
-- Inspect the Iceberg-backed Bronze source and the `SUBCATEGORY` transformation.
-- Execute the flow and confirm that it writes to `GOLD_PRODUCTS` while leaving Bronze unchanged.
-
+- Publish prepared PeakGear product data from Oracle to an Apache Iceberg table.
+- Review where the data comes from and where it will be written.
+- Run the prepared data load.
+- Confirm that the Iceberg table contains the product data.
 
 ## Task 1: Open and sign in to Data Transforms
 
-Perform the following set of steps to open **Data Transforms**:
+Open **Data Transforms**:
 
 1. Click **Open Data Transforms**.
 2. Copy the displayed PG username and password from the **Login information** panel.
 3. Enter those credentials and click **Connect**.
 4. Keep the LiveStack tab open so that you can return to the demo page if needed.
 
-## Task 2: Open the preconfigured PeakGear flow
+## Task 2: Open the preconfigured data load
 
-The environment provisions the project and flow for this demo. You do not need to create a project, connection, source, target, or mapping.
+The environment already contains the project, connections, schemas, and data load for this scene. You do not need to create them manually.
 
 1. From the Data Transforms home page, open **Projects**.
 2. Open the project named `peakgear`.
+   
+  ![2026-08-19-004716](images/2026-08-19-004716.png) 
 
-![2026-08-17-004683](images/2026-08-17-004683.png)
+3. In the project resources, open **Data Loads**.
+4. Open the data load named `dataLoad`.
 
-3. In the project resources, open **Data Flows**.
-4. Open the flow named `dataFlow`.
+  ![2026-08-19-004717](images/2026-08-19-004717.png)
+
+If the project or data load is not visible, wait a moment and refresh the page. The environment may still be finishing its setup.
+
+## Task 3: Inspect the source and target configuration
+
+Review the data load configuration before starting it. The prepared load uses these source and target settings:
+
+| Setting               | Configuration       |
+| -----------------------| ---------------------|
+| Data load             | `dataLoad`          |
+| Project               | `peakgear`          |
+| Source technology     | Oracle              |
+| Source schema         | `PG`                |
+| Source table          | `GOLD_PRODUCTS`     |
+| Target technology     | Apache Iceberg      |
+| Target namespace      | `GOLD`              |
+| Load mode             | Iceberg incremental |
+| Target preload action | Append              |
+
+The source is the transformed product data created in the previous scene. The load publishes that data to the Iceberg catalog; it does not change the Oracle source table.
+
+Confirm these settings in the data load editor:
+
+1. The source model uses the Oracle connection and the `PG` schema.
+2. `GOLD_PRODUCTS` is selected as the source table.
+3. The target model uses the Apache Iceberg connection and the `GOLD` namespace.
+4. The target preload action is **Append**.
+
+![2026-08-19-004718](images/2026-08-19-004718.png)
 
 
-![2026-08-17-004684](images/2026-08-17-004684.png)
+## Task 4: Validate and run the data load
 
-If the project or flow is not visible yet, wait briefly and refresh the page. The first-boot provisioning service creates these objects after the Data Transforms service and the Iceberg catalog are ready.
-
-## Task 3: Inspect the Iceberg Bronze source and transformed target
-
-The flow canvas shows the two data entities already connected:
-
-| Flow element                     | Purpose                                                            |
-| ----------------------------------| --------------------------------------------------------------------|
-| `PRODUCT_MASTER_RAW_ICEBERG_EXT` | The Iceberg-backed Bronze product master source.                   |
-| `Substitution`                   | The expression step that applies the demonstration transformation. |
-| `GOLD_PRODUCTS`                  | The new transformed output table.                                  |
-
-
-![2026-08-17-004685](images/2026-08-17-004685.png)
-
-1. Select `PRODUCT_MASTER_RAW_ICEBERG_EXT` on the canvas.
-2. This the Bronze product data exposed through the Iceberg Catalog Server. The flow uses this source directly; it does not first create a second Bronze copy for the transformation.
-3. Select `GOLD_PRODUCTS`.
-4. Explain that this is a separate target table. The original Iceberg-backed Bronze source remains untouched.
-
-## Task 4: Inspect the transformation
-
-1. Select the **Substitution** expression between the source and target.
-2. Open the mapping for the `SUBCATEGORY` attribute.
-3. Confirm the preconfigured rule:
-
-    ```text
-    NetSuite → Databricks
-    ```
-
-![2026-08-17-004686](images/2026-08-17-004686.png)
-
-This deliberately small transformation makes the point easy to see: the pipeline can apply business logic to data that originates in an externally managed Iceberg table and produce a new result without modifying the Bronze source.
-
-> Our source data is stored externally as an Iceberg table and exposed through the Iceberg Catalog Server. We use that table as our Bronze layer. This flow reads the Iceberg-backed data, applies a simple transformation to the subcategory, and writes the result to a new table. We can incorporate Iceberg-managed data directly into our transformation workflow instead of moving the source somewhere else first.
-
-## Task 5: Run the preconfigured data flow
-
-Perform the following set of steps to execute the transformation:
+Run the prepared data load:
 
 1. Click **Save** if Data Transforms shows unsaved changes.
-2. Click **Validate** and confirm that the flow is valid.
-3. Click **Start**.
+2. Validate the data load and confirm that no validation errors are reported.
+3. Click **Start** to run `dataLoad`.
 
-![2026-08-17-004687](images/2026-08-17-004687.png)
+![2026-08-19-004719](images/2026-08-19-004719.png) 
 
-4. Open **Jobs** in the project resources.
+4. Open the displayed **Job**.
 
-![2026-08-17-004689](images/2026-08-17-004688.png) 
+![2026-08-19-004720](images/2026-08-19-004720.png)
 
-5. Confirm that the `dataFlow` job finishes successfully.
+5. Monitor the job until its status is **Successful** or **Completed**.
 
-![2026-08-17-004690](images/2026-08-17-004689.png)
+![2026-08-19-004721](images/2026-08-19-004721.png)
 
-The target uses an append integration pattern. For a clean, repeatable demonstration, run the flow once in a freshly provisioned environment. Do not repeatedly start the flow merely to refresh the same result, because each successful execution can add another set of target rows.
-
-## Bonus Task: Verify the transformed output
-
-Open a SQL Worksheet using the PG schema and run the following queries. You can find the link to SQL Developer Web in the AI Lakehouse tools section: 
->Username and password are the same as for the Data Transforms demo!
-
-![2026-08-17-004690](images/2026-08-17-004690.png)
+The first run creates or appends `GOLD_PRODUCTS` in the Iceberg `GOLD` namespace. Because the target action is **Append**, start the load again only if you intend to add another copy of the source rows.
 
 
+## Bonus Task: Verify the loaded data
+
+Verify that the catalog server contains the new `GOLD_PRODUCTS` table with the Iceberg catalog REST API:
+
+1. On the **View Login Information** screen, copy the IP address without the port:
+   
+   ![2026-08-19-004722](images/2026-08-19-004722.png)
+
+2. Create the REST API URL by replacing `<IP_ADDRESS>` in the following address with the copied IP address:
+
+  `<IP_ADDRESS>:1525/iceberg/v1/namespaces/gold/tables/GOLD_PRODUCTS`
 
 
-First, compare the Bronze source and transformed target row counts:
-
-```sql
-SELECT 'BRONZE_ICEBERG_SOURCE' AS layer, COUNT(*) AS row_count
-FROM product_master_raw_iceberg_ext
-UNION ALL
-SELECT 'TRANSFORMED_TARGET' AS layer, COUNT(*) AS row_count
-FROM gold_products;
-```
-
-![2026-08-17-004691](images/2026-08-17-004691.png) 
+3. Open the URL in a browser and review the response. It should show the table definition and Iceberg metadata.
 
 
-Then inspect the transformed subcategory values:
+![2026-08-19-004723](images/2026-08-19-004723.png)
 
-```sql
-SELECT subcategory, COUNT(*) AS row_count
-FROM gold_products
-GROUP BY subcategory
-ORDER BY subcategory;
-```
-
-To make the business rule visible, compare the source and target values:
-
-```sql
-SELECT raw_sku, subcategory
-FROM product_master_raw_iceberg_ext
-WHERE subcategory = 'NetSuite'
-FETCH FIRST 10 ROWS ONLY;
-
-SELECT raw_sku, subcategory
-FROM gold_products
-WHERE subcategory = 'Databricks'
-FETCH FIRST 10 ROWS ONLY;
-```
-
-The exact number of rows can vary if the flow has been run previously. Focus on the pattern: Bronze remains an Iceberg-backed source, while the transformed result appears in `GOLD_PRODUCTS` with the substitution applied.
 
 ## Conclusion: Business Outcome
 
-PeakGear can treat externally managed Iceberg tables as active participants in its data engineering workflows, not as isolated data that must be copied before it can be transformed.
+PeakGear can publish prepared product data from Oracle as an Apache Iceberg table. Other tools that support Iceberg can then use the same table without connecting directly to Oracle.
 
-The Iceberg Catalog Server provides the governed Bronze table definition. Data Transforms reads that source, applies a repeatable business rule, and writes a new transformed table while preserving the original Bronze data. This short flow demonstrates a practical lakehouse pattern: retain the source where it is governed, transform it through the pipeline, and make the resulting data product available for downstream analytics, applications, and AI.
-
-You can move to the next scene.
+The load reads `PG.GOLD_PRODUCTS`, writes to the `GOLD` namespace, and leaves the Oracle source unchanged.
 
 ## Acknowledgements
 

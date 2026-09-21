@@ -3,11 +3,11 @@ import {
   BarChart3,
   Braces,
   Code2,
+  Database,
   DatabaseZap,
   LayoutDashboard,
   Map,
   Network,
-  ServerCog,
   ShoppingCart,
   Upload,
 } from 'lucide-react';
@@ -26,10 +26,10 @@ import AskData from './pages/AskData';
 import AIDataLakehouse from './pages/AIDataLakehouse';
 import BronzeDataLoadGuide from './pages/BronzeDataLoadGuide';
 import SilverProcessGuide from './pages/SilverProcessGuide';
-import IcebergCatalogServerGuide from './pages/IcebergCatalogServerGuide';
 import LoadToIcebergGuide from './pages/LoadToIcebergGuide';
 import RealTimeStreaming from './pages/RealTimeStreaming';
 import CustomerCDC from './pages/CustomerCDC';
+import DataSources from './pages/DataSources';
 import AdminEntry from './pages/AdminEntry';
 import { OraclePanelProvider } from './context/OraclePanelContext';
 import { UserProvider } from './context/UserContext';
@@ -77,8 +77,8 @@ const BRONZE_DATA_LOAD_PAGE_ID = 'bronze-load';
 const REAL_TIME_STREAMING_PAGE_ID = 'streaming';
 const CHANGE_DATA_CAPTURE_PAGE_ID = 'customer-cdc';
 const SILVER_PROCESS_PAGE_ID = 'silver-process';
-const ICEBERG_CATALOG_SERVER_PAGE_ID = 'iceberg-catalog-server';
 const LOAD_TO_ICEBERG_PAGE_ID = 'load-to-iceberg';
+const DATA_CATALOG_PAGE_ID = 'data-sources';
 const PROCESS_SIDEBAR_EXCLUSIONS = new Set([
   'Data Quality & Enrichment',
   'Analytics-Ready Datasets',
@@ -117,32 +117,32 @@ const SILVER_PROCESS_NAV_ITEM = {
   label: DATA_PROCESSING_LABEL,
   iconClass: 'oj-fwk-icon oj-fwk-icon-copy',
 };
-const ICEBERG_CATALOG_SERVER_NAV_ITEM = {
-  id: ICEBERG_CATALOG_SERVER_PAGE_ID,
-  pageId: ICEBERG_CATALOG_SERVER_PAGE_ID,
-  label: 'Add Iceberg Catalog Server',
-  Icon: ServerCog,
-};
 const LOAD_TO_ICEBERG_NAV_ITEM = {
   id: LOAD_TO_ICEBERG_PAGE_ID,
   pageId: LOAD_TO_ICEBERG_PAGE_ID,
   label: 'Load Data to Iceberg Catalog Server',
   Icon: Upload,
 };
+const DATA_CATALOG_NAV_ITEM = {
+  id: DATA_CATALOG_PAGE_ID,
+  pageId: DATA_CATALOG_PAGE_ID,
+  label: DATA_CATALOG_LABEL,
+  Icon: Database,
+};
 
-const ROUTED_NAV_ITEMS = [
+const BASE_ROUTED_NAV_ITEMS = [
   WELCOME_NAV_ITEM,
   REAL_TIME_STREAMING_NAV_ITEM,
   CHANGE_DATA_CAPTURE_NAV_ITEM,
   BRONZE_DATA_LOAD_NAV_ITEM,
   SILVER_PROCESS_NAV_ITEM,
-  ICEBERG_CATALOG_SERVER_NAV_ITEM,
   LOAD_TO_ICEBERG_NAV_ITEM,
   ...PAGE_NAV_ITEMS,
   ...ADMIN_NAV_ITEMS,
+  DATA_CATALOG_NAV_ITEM,
 ];
 
-const ROUTED_NAV_LOOKUP = Object.fromEntries(ROUTED_NAV_ITEMS.map((item) => [item.id, item]));
+const routedNavItems = () => BASE_ROUTED_NAV_ITEMS;
 
 const WORKFLOW_SECTION_LOOKUP = Object.fromEntries(LAKEHOUSE_SECTIONS.map((section) => [section.id, section]));
 
@@ -158,36 +158,40 @@ const workflowItems = (sectionId, excludedLabels = new Set()) => (
         : title === CHANGE_DATA_CAPTURE_LABEL
           ? CHANGE_DATA_CAPTURE_PAGE_ID
         : title === BATCH_FILE_LOADING_LABEL
-        ? BRONZE_DATA_LOAD_PAGE_ID
+          ? BRONZE_DATA_LOAD_PAGE_ID
         : title === DATA_PROCESSING_LABEL
           ? SILVER_PROCESS_PAGE_ID
+        : title === DATA_CATALOG_LABEL
+          ? DATA_CATALOG_PAGE_ID
           : undefined,
       actionId: title === MACHINE_LEARNING_MODELS_LABEL
         ? 'adb-oml'
-        : title === DATA_CATALOG_LABEL
-          ? 'adb-data-studio-overview'
         : undefined,
     })) || []
 );
 
-const AI_LAKEHOUSE_TOOL_NAV_ITEMS = workflowItems('serve-ai')
+function aiLakehouseToolNavItems() {
+  const items = workflowItems('serve-ai')
   .filter(({ label }) => label === MACHINE_LEARNING_MODELS_LABEL)
   .map((item) => ({
     ...item,
     id: 'ai-lakehouse-tools-oracle-machine-learning',
     label: ORACLE_MACHINE_LEARNING_LABEL,
-  }))
-  .concat(AI_LAKEHOUSE_TOOL_LINKS.map((item) => ({
+  }));
+
+  return items.concat(AI_LAKEHOUSE_TOOL_LINKS.map((item) => ({
     ...item,
     id: `ai-lakehouse-tools-${item.id}`,
   })));
+}
 
-const SIDEBAR_GROUPS = [
+function sidebarGroups() {
+  return [
   {
     id: 'catalog',
     label: 'Catalog',
     iconClass: 'oj-fwk-icon oj-fwk-icon-tree-folder-open',
-    items: [...workflowItems('catalog'), ICEBERG_CATALOG_SERVER_NAV_ITEM],
+    items: workflowItems('catalog'),
   },
   {
     id: 'ingest',
@@ -227,7 +231,7 @@ const SIDEBAR_GROUPS = [
     id: 'ai-lakehouse-tools',
     label: 'AI Lakehouse tools',
     iconClass: 'oj-fwk-icon oj-fwk-icon-tree-folder-open',
-    items: AI_LAKEHOUSE_TOOL_NAV_ITEMS,
+    items: aiLakehouseToolNavItems(),
   },
   {
     id: 'admin-operations',
@@ -235,11 +239,12 @@ const SIDEBAR_GROUPS = [
     iconClass: 'oj-fwk-icon oj-fwk-icon-tree-folder-open',
     items: ADMIN_NAV_ITEMS.map((item) => ({ ...item, pageId: item.id })),
   },
-];
+  ];
+}
 
 const INITIAL_EXPANDED_NAV_GROUPS = [];
 
-const PAGES = {
+const BASE_PAGES = {
   dashboard: Dashboard,
   webshop: Webshop,
   catalog: ProductCatalog,
@@ -255,16 +260,16 @@ const PAGES = {
   [CHANGE_DATA_CAPTURE_PAGE_ID]: CustomerCDC,
   [BRONZE_DATA_LOAD_PAGE_ID]: BronzeDataLoadGuide,
   [SILVER_PROCESS_PAGE_ID]: SilverProcessGuide,
-  [ICEBERG_CATALOG_SERVER_PAGE_ID]: IcebergCatalogServerGuide,
   [LOAD_TO_ICEBERG_PAGE_ID]: LoadToIcebergGuide,
+  [DATA_CATALOG_PAGE_ID]: DataSources,
 };
 
-function resolveInitialPage() {
+function resolveInitialPage(pages = BASE_PAGES) {
   if (typeof window === 'undefined') return 'welcome';
   const params = new URLSearchParams(window.location.search);
   const page = params.get('page');
   if (page === 'welcome') return 'welcome';
-  return page && PAGES[page] ? page : 'welcome';
+  return page && pages[page] ? page : 'welcome';
 }
 
 function OracleBrand() {
@@ -407,6 +412,12 @@ function buildOmlUrl(connection) {
 }
 
 export default function App() {
+  const pages = BASE_PAGES;
+  const routedNavLookup = useMemo(
+    () => Object.fromEntries(routedNavItems().map((item) => [item.id, item])),
+    [],
+  );
+  const navigationGroups = useMemo(() => sidebarGroups(), []);
   const [activePage, setActivePage] = useState(resolveInitialPage);
   const [expandedNavGroups, setExpandedNavGroups] = useState(() => new Set(INITIAL_EXPANDED_NAV_GROUPS));
   const [isDatasetModalOpen, setIsDatasetModalOpen] = useState(false);
@@ -465,7 +476,7 @@ export default function App() {
     }
   }, []);
 
-  const activeNavItem = ROUTED_NAV_LOOKUP[activePage];
+  const activeNavItem = routedNavLookup[activePage];
   const activePageTitle = activeNavItem?.label || 'Application';
   const lakehouseStatus = useMemo(() => {
     if (!activeLakehouseConnection) {
@@ -724,7 +735,7 @@ export default function App() {
                   <span>{WELCOME_NAV_ITEM.label}</span>
                 </button>
 
-                {SIDEBAR_GROUPS.map(({ id, label, iconClass, items }) => {
+                {navigationGroups.map(({ id, label, iconClass, items }) => {
                   const isExpanded = expandedNavGroups.has(id);
                   const hasActiveItem = items.some((item) => item.pageId === activePage);
                   const groupPanelId = `nav-group-${id}`;
@@ -820,7 +831,7 @@ export default function App() {
                     />
                   ) : (
                     (() => {
-                      const PageComponent = PAGES[activePage];
+                      const PageComponent = pages[activePage];
                       if (!PageComponent) return null;
                       const pageProps = activePage === 'lakehouse'
                           ? {
@@ -831,13 +842,13 @@ export default function App() {
                               genAi: genAiStatus,
                             },
                           }
-                        : activePage === BRONZE_DATA_LOAD_PAGE_ID
+                        : activePage === BRONZE_DATA_LOAD_PAGE_ID || activePage === DATA_CATALOG_PAGE_ID
                           ? {
                             dataStudioUrl: dataLoadingUrl,
                             hasLakehouseConnection: Boolean(activeLakehouseConnection && dataLoadingUrl),
                             pgPassword: activeLakehouseConnection?.schemaPassword,
                           }
-                          : activePage === SILVER_PROCESS_PAGE_ID || activePage === ICEBERG_CATALOG_SERVER_PAGE_ID
+                          : activePage === SILVER_PROCESS_PAGE_ID || activePage === LOAD_TO_ICEBERG_PAGE_ID
                             ? {
                               dataTransformsUrl: dataTransformUrl,
                               hasLakehouseConnection: Boolean(activeLakehouseConnection && dataTransformUrl),

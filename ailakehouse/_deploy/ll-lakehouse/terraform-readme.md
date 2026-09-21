@@ -56,6 +56,30 @@ The startup order is:
 
 `adb-load.service` runs `/home/opc/init/adb-load.sh`. The script connects to ADB with SQLcl, recreates the `PG` user, creates the Bronze and Silver objects, creates the application schema objects, loads the warehouse CSV exports from `/home/opc/ingestion/gold-data`, loads the app seed data, and verifies that all required demo tables contain rows.
 
+The Data Sources page creates `PG`-owned Data Studio catalogs through the
+Terraform load balancer after the compose stack is healthy. Terraform supplies
+the LB FQDN as instance metadata `public_host`; `setenv.sh` writes it to
+`SOURCE_PUBLIC_HOST`. The administrator explicitly selects **Create Database
+Links**. **Replace Database Links** is a separate, deliberate action for a
+deployment whose existing links use old endpoint settings. First boot never
+waits for a source database listener, so building a base image with `inst.sh`
+works even when no FQDN is known yet.
+
+For public Autonomous Database links, provide a CA-signed certificate, private
+key, and CA chain for the LB FQDN as base64 Terraform variables
+`sourceDatabaseTlsCertPemB64`, `sourceDatabaseTlsKeyPemB64`, and
+`sourceDatabaseTlsCaPemB64`, and set `sourceDatabaseTlsEnabled=true`. They are
+written only to `/home/opc/ingestion/source-tls` at boot and removed by
+`prepare-custom-image.sh`; do not store them in the build archive or Git.
+
+- `PG_SPORTSWEAR_CAT`: PostgreSQL `sportswear` through LB TCP 5432 (VM test port 8504)
+- `PG_LOYALTY_MYSQL_CAT`: MySQL `loyalty` through LB TCP 3306 (VM test port 8503)
+- `PG_MONGODB_CATALOG_CAT`: MongoDB `catalog` through LB TCP 27017 (VM test port 8888), when the custom image has `AIHUB=true` and therefore starts MongoDB
+
+All three source credentials use the Terraform-generated shared `dbpassword`.
+The source containers use the same password, and credentials, links, and mounts
+are created as `PG` so that they appear in PG's Data Studio session.
+
 On success it writes:
 
 ```text
@@ -225,7 +249,8 @@ DATA_TRANSFORMS_ICEBERG_CONNECTION_NAME=pg-iceberg
 
 `PG_AI_PROFILE_AUTO_SETUP` may be absent. If absent, it defaults to `true`.
 `DATA_TRANSFORMS_ICEBERG_REST_URL` and `DATA_TRANSFORMS_BASE_URL` may be
-absent when they can be derived from the VM public IP and ADB metadata.
+absent when they can be derived from the VM public IP and ADB metadata. The
+Iceberg REST service uses the VM's direct HTTP port, not the load-balancer FQDN.
 
 Then check the app status:
 

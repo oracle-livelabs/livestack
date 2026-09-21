@@ -1,7 +1,10 @@
 /* Generated entrypoint for the app database gold-data seed. */
 SET SERVEROUTPUT ON
 SET DEFINE OFF
+WHENEVER OSERROR EXIT FAILURE
+WHENEVER SQLERROR EXIT SQL.SQLCODE ROLLBACK
 @@load_gold_seed.sql
+@@bootstrap_context.sql
 @@normalize_seed_dates.sql
 @@enrich_product_descriptions.sql
 @@enrich_webshop_product_attributes.sql

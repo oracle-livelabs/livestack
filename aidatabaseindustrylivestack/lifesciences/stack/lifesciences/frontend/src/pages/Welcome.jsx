@@ -75,7 +75,7 @@ const USE_CASES = [
     label: 'Ask Regulated Supply Data',
     intro: 'Lets sellers and analysts ask scenario questions to:',
     bullets: [
-      'Explain the quality-led storyline in plain English',
+      'Explain the quality-led storyline using natural language',
       'Query live governed life-sciences data',
       'Inspect SQL evidence behind operational decisions',
     ],

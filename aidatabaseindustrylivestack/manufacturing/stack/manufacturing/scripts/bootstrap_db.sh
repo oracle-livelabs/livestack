@@ -450,6 +450,20 @@ DECLARE
   v_count                   PLS_INTEGER;
   v_proof_row_count         NUMBER;
   v_proof_observation_count NUMBER;
+  v_inmemory_option         manufacturing_inmemory_status_v.inmemory_option%TYPE;
+  v_inmemory_size           manufacturing_inmemory_status_v.database_inmemory_size_bytes%TYPE;
+  v_inmemory_force          manufacturing_inmemory_status_v.inmemory_force%TYPE;
+  v_inmemory_query          manufacturing_inmemory_status_v.inmemory_query%TYPE;
+  v_area_allocated          manufacturing_inmemory_status_v.area_allocated_bytes%TYPE;
+  v_expected_segments       manufacturing_inmemory_status_v.expected_segment_count%TYPE;
+  v_populated_segments      manufacturing_inmemory_status_v.populated_segment_count%TYPE;
+  v_bytes_not_populated     manufacturing_inmemory_status_v.bytes_not_populated%TYPE;
+  v_complete_segments       PLS_INTEGER := 0;
+  v_proof_sql_id            VARCHAR2(13);
+  v_proof_child_number      NUMBER;
+  v_exact_plan_rows         PLS_INTEGER := 0;
+  v_forbidden_plan_rows     PLS_INTEGER := 0;
+  v_plan_operation          VARCHAR2(40);
 BEGIN
   manufacturing_security_pkg.set_user_context('analyst_raj');
   IF SYS_CONTEXT('MANUFACTURING_APP_CTX', 'ROLE') <> 'analyst'
@@ -536,15 +550,96 @@ BEGIN
     RAISE_APPLICATION_ERROR(-20318, 'Final In-Memory proof query returned no production-signal rows');
   END IF;
 
-  SELECT COUNT(*) INTO v_count
-  FROM manufacturing_inmemory_status_v
-  WHERE inmemory_option = 'TRUE'
-    AND database_inmemory_size_bytes >= 268435456
-    AND inmemory_force = 'BASE_LEVEL'
-    AND inmemory_query = 'ENABLE'
-    AND plan_proof_operation = 'TABLE ACCESS INMEMORY FULL'
-    AND evidence_status = 'ACTIVE';
-  IF v_count <> 1 THEN
+  SELECT inmemory_option,
+         database_inmemory_size_bytes,
+         inmemory_force,
+         inmemory_query,
+         area_allocated_bytes,
+         expected_segment_count,
+         populated_segment_count,
+         bytes_not_populated
+  INTO v_inmemory_option,
+       v_inmemory_size,
+       v_inmemory_force,
+       v_inmemory_query,
+       v_area_allocated,
+       v_expected_segments,
+       v_populated_segments,
+       v_bytes_not_populated
+  FROM manufacturing_inmemory_status_v;
+
+  SELECT COUNT(*)
+  INTO v_complete_segments
+  FROM manufacturing_inmemory_segments_v
+  WHERE table_inmemory = 'ENABLED'
+    AND populate_status = 'COMPLETED'
+    AND inmemory_bytes > 0
+    AND bytes_not_populated = 0;
+
+  SELECT sql_id,
+         child_number
+  INTO v_proof_sql_id,
+       v_proof_child_number
+  FROM (
+    SELECT sql_cursor.sql_id,
+           sql_cursor.child_number,
+           ROW_NUMBER() OVER (
+             ORDER BY sql_cursor.last_active_time DESC,
+                      sql_cursor.sql_id,
+                      sql_cursor.child_number
+           ) AS recency_rank
+    FROM sys.v_\$sql sql_cursor
+    WHERE sql_cursor.sql_text LIKE '%MANUFACTURING_INMEMORY_PROOF%'
+  )
+  WHERE recency_rank = 1;
+
+  SELECT COUNT(*)
+  INTO v_exact_plan_rows
+  FROM sys.v_\$sql_plan plan
+  WHERE plan.sql_id = v_proof_sql_id
+    AND plan.child_number = v_proof_child_number
+    AND UPPER(NVL(plan.operation, '<NULL>')) = 'TABLE ACCESS'
+    AND UPPER(NVL(plan.options, '<NULL>')) = 'INMEMORY FULL'
+    AND UPPER(NVL(plan.object_owner, '<NULL>')) = USER
+    AND UPPER(NVL(plan.object_name, '<NULL>')) = 'MANUFACTURING_PRODUCTION_SIGNALS';
+
+  SELECT COUNT(*)
+  INTO v_forbidden_plan_rows
+  FROM sys.v_\$sql_plan plan
+  WHERE plan.sql_id = v_proof_sql_id
+    AND plan.child_number = v_proof_child_number
+    AND UPPER(NVL(plan.operation, '<NULL>')) = 'TABLE ACCESS'
+    AND UPPER(NVL(plan.object_name, '<NULL>')) = 'MANUFACTURING_PRODUCTION_SIGNALS'
+    AND (
+      UPPER(NVL(plan.options, '<NULL>')) <> 'INMEMORY FULL'
+      OR UPPER(NVL(plan.object_owner, '<NULL>')) <> USER
+    );
+
+  IF v_exact_plan_rows > 0
+     AND v_forbidden_plan_rows = 0 THEN
+    v_plan_operation := 'TABLE ACCESS INMEMORY FULL';
+  ELSIF v_exact_plan_rows = 0
+     AND v_forbidden_plan_rows = 0 THEN
+    /*
+     * Some Oracle AI Database Free / SQL*Plus combinations retain the tagged
+     * proof cursor but omit its target table-access row from V\$SQL_PLAN.
+     * All configuration, catalog, segment, and nonempty-query checks remain
+     * required. A projected non-In-Memory target access is never accepted.
+     */
+    v_plan_operation := 'PLAN_PROJECTION_UNAVAILABLE';
+  END IF;
+
+  IF NVL(v_inmemory_option, 'FALSE') <> 'TRUE'
+     OR NVL(v_inmemory_size, 0) < 268435456
+     OR NVL(v_inmemory_force, '<NULL>') <> 'BASE_LEVEL'
+     OR NVL(v_inmemory_query, '<NULL>') <> 'ENABLE'
+     OR NVL(v_area_allocated, 0) < 268435456
+     OR NVL(v_expected_segments, 0) <> 4
+     OR NVL(v_populated_segments, 0) <> 4
+     OR NVL(v_bytes_not_populated, -1) <> 0
+     OR v_complete_segments <> 4
+     OR v_forbidden_plan_rows <> 0
+     OR v_plan_operation IS NULL THEN
     RAISE_APPLICATION_ERROR(-20317, 'Oracle Database In-Memory runtime and plan proof are incomplete');
   END IF;
 

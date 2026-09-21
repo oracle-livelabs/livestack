@@ -2,7 +2,7 @@
 # The real file is ignored by git.
 
 oci_config_file = "~/.oci/config"    # Path to your OCI config file. Must exist on your machine.
-oci_profile     = "PACKER"           # OCI CLI profile name to use for the build.
+oci_profile     = "DEFAULT"          # Existing non-expiring API-key profile. Use the same profile in Terraform.
 
 region              = "us-ashburn-1" # OCI region where the build VM will run.
 availability_domain = "<tenancy-prefix>:US-ASHBURN-AD-1" # Availability domain for the build VM.

@@ -1,0 +1,31 @@
+center_id,center_name,center_type,address_line1,city,state_province,postal_code,country,latitude,longitude,capacity_units,current_load_pct,is_active,operating_hours,created_at
+1,NYC Content Operations Hub,distribution,,Edison,New Jersey,08817,US,40.5187,-74.4121,240000,42,1,24x7,2026-05-05T16:30:00Z
+2,Los Angeles Studio Coverage Desk,warehouse,,Burbank,California,91505,US,34.1808,-118.3089,320000,53.25,1,06:00-22:00,2026-05-05T16:30:00Z
+3,Chicago Midwest Ad Ops Hub,distribution,,Joliet,Illinois,60435,US,41.525,-88.0817,210000,64.5,1,06:00-22:00,2026-05-05T16:30:00Z
+4,Dallas Sports Rights Desk,distribution,,Dallas,Texas,75201,US,32.7767,-96.797,260000,75,1,06:00-22:00,2026-05-05T16:30:00Z
+5,Miami International Audience Hub,warehouse,,Miami,Florida,33101,US,25.7617,-80.1918,180000,86.25,1,24x7,2026-05-05T16:30:00Z
+6,Seattle Live Event Operations Hub,micro,,Seattle,Washington,98101,US,47.6062,-122.3321,150000,46.5,1,06:00-22:00,2026-05-05T16:30:00Z
+7,Phoenix FAST Channel Desk,warehouse,,Goodyear,Arizona,85338,US,33.4353,-112.3577,135000,57,1,06:00-22:00,2026-05-05T16:30:00Z
+8,Atlanta Theatrical Launch Desk,distribution,,Atlanta,Georgia,30301,US,33.749,-84.388,190000,68.25,1,06:00-22:00,2026-05-05T16:30:00Z
+9,San Francisco Creator Monetization Hub,micro,,San Francisco,California,94105,US,37.7749,-122.4194,165000,79.5,1,24x7,2026-05-05T16:30:00Z
+10,Denver Retention Forecast Desk,distribution,,Denver,Colorado,80202,US,39.7392,-104.9903,175000,90,1,06:00-22:00,2026-05-05T16:30:00Z
+11,Boston Premium Originals Hub,warehouse,,Boston,Massachusetts,02108,US,42.3601,-71.0589,172000,50.25,1,06:00-22:00,2026-05-05T16:30:00Z
+12,Washington Trust and Safety Desk,distribution,,Washington,District of Columbia,20001,US,38.9072,-77.0369,142000,61.5,1,06:00-22:00,2026-05-05T16:30:00Z
+13,Portland Indie Festival Desk,drop_ship,,Portland,Oregon,97201,US,45.5152,-122.6784,98000,72,1,24x7,2026-05-05T16:30:00Z
+14,Nashville Music Livestream Hub,warehouse,,Nashville,Tennessee,37201,US,36.1627,-86.7816,188000,83.25,1,06:00-22:00,2026-05-05T16:30:00Z
+15,Austin Creator Monetization Hub,micro,,Austin,Texas,78701,US,30.2672,-97.7431,158000,43.5,1,06:00-22:00,2026-05-05T16:30:00Z
+16,Orlando Family Media Desk,distribution,,Orlando,Florida,32801,US,28.5383,-81.3792,146000,54,1,06:00-22:00,2026-05-05T16:30:00Z
+17,Las Vegas Live Event Hub,warehouse,,Las Vegas,Nevada,89101,US,36.1699,-115.1398,205000,65.25,1,24x7,2026-05-05T16:30:00Z
+18,Minneapolis Sports Replay Desk,distribution,,Minneapolis,Minnesota,55401,US,44.9778,-93.265,118000,76.5,1,06:00-22:00,2026-05-05T16:30:00Z
+19,Charlotte Matchday Operations Hub,warehouse,,Charlotte,North Carolina,28202,US,35.2271,-80.8431,152000,87,1,06:00-22:00,2026-05-05T16:30:00Z
+20,Philadelphia Documentary Forum Desk,store,,Philadelphia,Pennsylvania,19103,US,39.9526,-75.1652,108000,47.25,1,06:00-22:00,2026-05-05T16:30:00Z
+21,San Diego Streaming Launch Desk,distribution,,San Diego,California,92101,US,32.7157,-117.1611,136000,58.5,1,24x7,2026-05-05T16:30:00Z
+22,Raleigh Sports Media Community Hub,micro,,Raleigh,North Carolina,27601,US,35.7796,-78.6382,96000,69,1,06:00-22:00,2026-05-05T16:30:00Z
+23,Salt Lake Streaming Coverage Desk,warehouse,,Salt Lake City,Utah,84101,US,40.7608,-111.891,104000,80.25,1,06:00-22:00,2026-05-05T16:30:00Z
+24,San Antonio Spanish-Language Desk,distribution,,San Antonio,Texas,78205,US,29.4241,-98.4936,126000,91.5,1,06:00-22:00,2026-05-05T16:30:00Z
+25,Honolulu International Drama Desk,drop_ship,,Honolulu,Hawaii,96813,US,21.3069,-157.8583,72000,51,1,24x7,2026-05-05T16:30:00Z
+26,Detroit Connected TV Hub,warehouse,,Detroit,Michigan,48226,US,42.3314,-83.0458,121000,62.25,1,06:00-22:00,2026-05-05T16:30:00Z
+27,Kansas City Rights Capacity Desk,distribution,,Kansas City,Missouri,64106,US,39.0997,-94.5786,112000,73.5,1,06:00-22:00,2026-05-05T16:30:00Z
+28,New Orleans Culture Live Desk,store,,New Orleans,Louisiana,70112,US,29.9511,-90.0715,86000,84,1,06:00-22:00,2026-05-05T16:30:00Z
+29,Cleveland Regional Sports Hub,distribution,,Cleveland,Ohio,44114,US,41.4993,-81.6944,101000,44.25,1,24x7,2026-05-05T16:30:00Z
+30,Tampa Subscriber Winback Desk,micro,,Tampa,Florida,33602,US,27.9506,-82.4572,93000,55.5,1,06:00-22:00,2026-05-05T16:30:00Z

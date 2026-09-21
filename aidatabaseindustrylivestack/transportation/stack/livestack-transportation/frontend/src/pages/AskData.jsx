@@ -12,8 +12,8 @@ const MODES = [
     label: 'Explain',
     iconClass: 'oj-fwk-icon-message-info',
     color: '#4F7D7B',
-    desc: 'Plain-English answer',
-    tooltip: 'Answer in plain English without showing the full SQL.',
+    desc: 'Natural-language answer',
+    tooltip: 'Answer using natural language without showing the full SQL.',
   },
   {
     id: 'chat',
@@ -723,7 +723,7 @@ FETCH FIRST 5 ROWS ONLY;
           <JetGlyph iconClass="oj-fwk-icon-message-info" className="askdata-page-glyph tone-teal" /> Ask Seer Transport Data
         </h2>
         <p className="text-sm text-[var(--color-text-dim)] mt-1">
-          Ask questions about shipment orders, service lines, operational signals, logistics terminals, capacity, routes, and exception cases in plain English. The assistant can explain results, show generated SQL, or execute governed queries against the live transportation schema.
+          Ask questions about shipment orders, service lines, operational signals, logistics terminals, capacity, routes, and exception cases using natural language. The assistant can explain results, show generated SQL, or execute governed queries against the live transportation schema.
         </p>
       </div>
 

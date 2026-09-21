@@ -280,10 +280,10 @@ export const api = {
     profiles: () => apiFetch('/selectai/profiles'),
     health: (profile) => apiFetch(`/selectai/health${profile ? `?profile=${encodeURIComponent(profile)}` : ''}`),
     schemaObjects: () => apiFetch('/selectai/schema-objects'),
-    chat: (question, showSql = true, profile, history = []) =>
+    chat: (question, showSql = true, profile) =>
       apiFetch('/selectai/chat', {
         method: 'POST',
-        body: JSON.stringify({ question, showSql, profile, history }),
+        body: JSON.stringify({ question, showSql, profile }),
       }),
     showsql: (question, profile) =>
       apiFetch('/selectai/showsql', {

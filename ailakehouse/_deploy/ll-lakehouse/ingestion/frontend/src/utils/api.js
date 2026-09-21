@@ -133,9 +133,6 @@ export async function apiLakehouseAuto() {
 }
 
 export const api = {
-  icebergCatalog: {
-    config: () => apiFetch('/iceberg-catalog/config'),
-  },
   dashboard: {
     summary: () => apiFetch('/dashboard/summary'),
     trending: (limit = 10, search = '', brand = '') => {
@@ -366,6 +363,20 @@ export const api = {
     auto: apiLakehouseAuto,
     validate: apiLakehouseValidate,
     seed: apiLakehouseSeed,
+  },
+  dataSources: {
+    list: () => apiFetch('/data-sources'),
+  },
+  sourceCatalogs: {
+    create: () => apiFetch('/source-catalogs', { method: 'POST' }),
+    replace: () => apiFetch('/source-catalogs?replace=true', { method: 'POST' }),
+  },
+  awsGlue: {
+    configure: ({ accessKeyId, secretAccessKey, region }) =>
+      apiFetch('/aws-glue', {
+        method: 'POST',
+        body: JSON.stringify({ accessKeyId, secretAccessKey, region }),
+      }),
   },
   streamingAnalytics: {
     status: () => apiFetch('/streaming-analytics/status'),

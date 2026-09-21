@@ -11,5 +11,6 @@ RUN pip install --no-cache-dir "pyiceberg[pyarrow,s3fs]==0.11.1"
 
 WORKDIR /workspace/seeder
 COPY seed_product_master.py /workspace/seeder/seed_product_master.py
+COPY seed_ai_catalog.py /workspace/seeder/seed_ai_catalog.py
 
 ENTRYPOINT ["python", "/workspace/seeder/seed_product_master.py"]

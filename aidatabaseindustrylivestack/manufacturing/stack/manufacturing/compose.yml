@@ -41,6 +41,8 @@ services:
       DBPORT: ${DBPORT:-1521}
       DBSERVICENAME: ${DBSERVICENAME:-FREEPDB1}
       ORACLE_PWD: ${ORACLE_PWD:-oracle}
+      # Required by current ORDS images when they install their database user.
+      ORACLE_USER_PWD: ${ORACLE_USER_PWD:-Ords_26ai_Local!}
       ORACLE_USER: ${ORACLE_USER:-LIVESTACK}
     ports:
       - "${ORDS_PORT:-8181}:8080"

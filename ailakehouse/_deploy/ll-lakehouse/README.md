@@ -1,5 +1,11 @@
 # LAKEHOUSE IMAGE BUILD
 
+> **Experimental — use at your own risk.** This deployment is provided for
+> experimentation and demonstration only. It is not a supported product or
+> production reference architecture. You are responsible for validating the
+> configuration, security, costs, data handling, and operational impact in your
+> own environment. No support is provided.
+
 COPY THIS THE WHOLE FOLDER and start building a new image
 This is as example of a base image that can be used to build a new image.
 DO NOT CHANGE
@@ -76,8 +82,11 @@ The build script recreates `build_dev.zip` with runtime state, local build outpu
 Archive upload is enabled by default. Provide the write-capable PAR prefix as
 `BUILD_ARCHIVE_UPLOAD_URL_PREFIX` in the ignored `.env.kev` file or the process
 environment. An explicitly exported value takes precedence over `.env.kev`.
-Set `UPLOAD_ARCHIVE=false` for a local-only build. Never commit the PAR URL to
-this repository or store it in the custom image.
+Set `UPLOAD_ARCHIVE=false` for a local-only build. Never commit a PAR URL to
+this repository or store it in the custom image. Uploading only writes the ZIP:
+for a standalone `inst.sh` run, the VM's `/home/opc/.env` must separately
+provide `BUILD_ARCHIVE_URL`, a read-capable URL for `build_dev.zip`. Terraform
+deployments instead provide the `build_archive_url` instance-metadata key.
 
 
 
@@ -99,6 +108,11 @@ The standalone permanent-deployment configuration must provide `adbwallet`,
 Gravitino distribution; provide your own read-only build and GoldenGate URLs.
 A base-image build uses the same artifact inputs, but LiveLabs initialization is
 now explicit rather than implicit.
+The custom image fixes the AIHUB choice made in `/home/opc/.env` during
+`inst.sh`; Terraform metadata does not override it. PostgreSQL, Loyalty MySQL,
+Data Sources, and the AWS Glue catalog integration are always included.
+Set `AIHUB=true` only to include the optional MongoDB catalog source. With the
+default `false`, MongoDB is neither started nor returned by Data Sources.
 When OCI metadata is unavailable, `adbwallet` may be either a read-only HTTPS
 PAR URL (recommended for unattended installs) or an absolute path to a wallet ZIP
 already copied to the server, such as `/home/opc/Wallet_lakehousepg.zip`. The

@@ -4,6 +4,24 @@
  */
 
 const oracledb = require('oracledb');
+const { AsyncLocalStorage } = require('node:async_hooks');
+const requestUser = new AsyncLocalStorage();
+
+function runAsUser(username, callback) {
+  return requestUser.run(username || 'admin_jess', callback);
+}
+
+async function prepareConnection(connection) {
+  try {
+    await connection.ping();
+    await connection.execute('BEGIN sc_security_ctx.set_user_context(:username); END;',
+      { username: requestUser.getStore() || 'admin_jess' });
+    return connection;
+  } catch (error) {
+    await connection.close().catch(() => {});
+    throw error;
+  }
+}
 
 // Use Thick mode when wallet-based Oracle AI Database 26ai connections are configured
 // Thin mode (default in 6.x) works for some configs
@@ -137,15 +155,13 @@ async function getConnection() {
   try {
     const pool = await poolPromise;
     const connection = await pool.getConnection();
-    await connection.ping();
-    return connection;
+    return await prepareConnection(connection);
   } catch (err) {
     if (isReconnectError(err)) {
       await resetPool(err.code || err.message || 'connection failure');
       const pool = await poolPromise;
       const connection = await pool.getConnection();
-      await connection.ping();
-      return connection;
+      return await prepareConnection(connection);
     }
     throw err;
   }
@@ -197,7 +213,7 @@ async function executeAsUser(sql, binds = {}, username = null, options = {}) {
     // Default to admin_jess (full access) when no user is specified.
     await connection.execute(
       `BEGIN sc_security_ctx.set_user_context(:username); END;`,
-      { username: username || 'admin_jess' }
+      { username: username || requestUser.getStore() || 'admin_jess' }
     );
     const result = await connection.execute(sql, binds, {
       outFormat: oracledb.OUT_FORMAT_OBJECT,
@@ -228,6 +244,7 @@ async function callProcedure(sql, binds = {}) {
 }
 
 module.exports = {
+  runAsUser,
   initialize,
   getConnection,
   closePool,

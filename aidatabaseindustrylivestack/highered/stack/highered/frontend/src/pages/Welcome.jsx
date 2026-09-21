@@ -76,7 +76,7 @@ const USE_CASES = [
     label: 'Ask Student Success Data',
     intro: 'Lets leaders and analysts ask scenario questions to:',
     bullets: [
-      'Explain the term-level enrollment and retention story in plain English',
+      'Explain the term-level enrollment and retention story using natural language',
       'Query live governed higher-ed data',
       'Inspect evidence behind student success and fundraising decisions',
     ],

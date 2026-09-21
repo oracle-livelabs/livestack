@@ -1,0 +1,37 @@
+# This override is loaded when setenv.sh generates the source TLS bundle at VM
+# startup. Terraform never supplies source-database certificate material.
+services:
+  postgres-source:
+    command:
+      - postgres
+      - -c
+      - ssl=on
+      - -c
+      - ssl_cert_file=/run/peakgear-tls/server.crt
+      - -c
+      - ssl_key_file=/run/peakgear-tls/server.key
+      - -c
+      - ssl_ca_file=/run/peakgear-tls/ca.crt
+    volumes:
+      - ./source-tls:/run/peakgear-tls:ro,z
+
+  loyalty-mysql:
+    command:
+      - --ssl-ca=/run/peakgear-tls/ca.crt
+      - --ssl-cert=/run/peakgear-tls/server.crt
+      - --ssl-key=/run/peakgear-tls/server.key
+    volumes:
+      - ./source-tls:/run/peakgear-tls:ro,z
+
+  mongodb-catalog:
+    command:
+      - mongod
+      - --tlsMode
+      - preferTLS
+      - --tlsCertificateKeyFile
+      - /run/peakgear-tls/server.pem
+      - --tlsCAFile
+      - /run/peakgear-tls/ca.crt
+      - --tlsAllowConnectionsWithoutCertificates
+    volumes:
+      - ./source-tls:/run/peakgear-tls:ro,z

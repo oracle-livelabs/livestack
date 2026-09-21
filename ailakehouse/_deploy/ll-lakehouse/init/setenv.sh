@@ -8,6 +8,7 @@ source /home/opc/init/variable.sh
 # Every supported wallet is created with DBPASSWORD, so expose one derived
 # runtime value instead of accepting a second independently configured secret.
 export ADB_WALLET_PASSWORD="${DBPASSWORD}"
+PUBLIC_ENDPOINT_HOST="${PUBLIC_HOST:-${PUBLIC_IP}}"
 
 export POD_ROOT=/home/opc/ingestion/
 APP_DIR="$POD_ROOT"
@@ -15,6 +16,46 @@ COMPOSE_ENV="$POD_ROOT/.env"
 
 # Ensure the target app directory exists before writing runtime files.
 mkdir -p "$APP_DIR"
+
+SOURCE_TLS_DIR="$APP_DIR/source-tls"
+mkdir -p "$SOURCE_TLS_DIR"
+rm -f "$SOURCE_TLS_DIR/server.crt" "$SOURCE_TLS_DIR/server.key" \
+  "$SOURCE_TLS_DIR/server.pem" "$SOURCE_TLS_DIR/ca.crt"
+
+secure_source_tls_files() {
+  cat "$SOURCE_TLS_DIR/server.crt" "$SOURCE_TLS_DIR/server.key" > "$SOURCE_TLS_DIR/server.pem"
+  chmod 700 "$SOURCE_TLS_DIR"
+  chmod 600 "$SOURCE_TLS_DIR/server.key" "$SOURCE_TLS_DIR/server.pem"
+  chmod 644 "$SOURCE_TLS_DIR/server.crt" "$SOURCE_TLS_DIR/ca.crt"
+  if command -v podman >/dev/null 2>&1 && command -v setfacl >/dev/null 2>&1; then
+    podman unshare setfacl -m 'u:999:rx' "$SOURCE_TLS_DIR" || true
+    podman unshare setfacl -m 'u:999:r' "$SOURCE_TLS_DIR/server.crt" "$SOURCE_TLS_DIR/server.key" "$SOURCE_TLS_DIR/server.pem" "$SOURCE_TLS_DIR/ca.crt" || true
+  fi
+}
+
+source_tls_san="DNS:postgres-source,DNS:mongodb-catalog,DNS:localhost,IP:127.0.0.1"
+if [[ "$PUBLIC_ENDPOINT_HOST" =~ ^([0-9]{1,3}\.){3}[0-9]{1,3}$ ]]; then
+  source_tls_san="${source_tls_san},IP:${PUBLIC_ENDPOINT_HOST}"
+elif [[ "$PUBLIC_ENDPOINT_HOST" == *.* ]]; then
+  source_tls_san="${source_tls_san},DNS:${PUBLIC_ENDPOINT_HOST}"
+fi
+if openssl req -x509 -newkey rsa:2048 -sha256 -days 3650 -nodes \
+  -keyout "$SOURCE_TLS_DIR/server.key" \
+  -out "$SOURCE_TLS_DIR/server.crt" \
+  -subj "/CN=${PUBLIC_ENDPOINT_HOST}" \
+  -addext "subjectAltName=${source_tls_san}" >/dev/null 2>&1 \
+  && cp "$SOURCE_TLS_DIR/server.crt" "$SOURCE_TLS_DIR/ca.crt" \
+  && openssl x509 -in "$SOURCE_TLS_DIR/server.crt" -noout \
+  && openssl pkey -in "$SOURCE_TLS_DIR/server.key" -noout; then
+  secure_source_tls_files
+  source_tls_enabled=true
+  echo "Source database TLS certificate generated for ${PUBLIC_ENDPOINT_HOST}."
+else
+  source_tls_enabled=false
+  echo "Source database TLS is disabled: unable to generate a certificate." >&2
+  rm -f "$SOURCE_TLS_DIR/server.crt" "$SOURCE_TLS_DIR/server.key" \
+    "$SOURCE_TLS_DIR/server.pem" "$SOURCE_TLS_DIR/ca.crt"
+fi
 
 
 # clean up existing things
@@ -95,12 +136,33 @@ fi
   echo "DBPASSWORD=${DBPASSWORD}"
   echo "PASSWORD=${DBPASSWORD}"
   echo "ORACLE_PWD=${DBPASSWORD}"
+  echo "ORACLE_USER_PWD=${DBPASSWORD}"
   echo "APP_SCHEMA_PASSWORD=${DBPASSWORD}"
   echo "GGSA_OSA_HTTPS_PORT=8085"
-  echo "OSA_PUBLIC_URL=https://${PUBLIC_IP}:8085/osa/index.html"
+  echo "OSA_PUBLIC_URL=${OSA_PUBLIC_URL:-https://${PUBLIC_ENDPOINT_HOST}:8085/osa/index.html}"
+  echo "FRONTEND_URL=${FRONTEND_URL:-https://${PUBLIC_ENDPOINT_HOST}:8505}"
   echo "NETSUITE_DB_PORT=1522"
+  echo "NETSUITE_DB_USER=${NETSUITE_DB_USER:-NETSUITE}"
   echo "NETSUITE_DB_PASSWORD=${DBPASSWORD}"
   echo "NETSUITE_DB_CONNECT_STRING=netsuite-db:1521/FREEPDB1"
+  echo "AIHUB=${AIHUB}"
+  echo "SOURCE_DATABASE_TLS_ENABLED=${source_tls_enabled}"
+  echo "POSTGRES_SOURCE_IMAGE=${POSTGRES_SOURCE_IMAGE:-docker.io/library/postgres:17.11-bookworm}"
+  echo "SOURCE_PUBLIC_HOST=${SOURCE_PUBLIC_HOST:-${PUBLIC_ENDPOINT_HOST}}"
+  echo "POSTGRES_SOURCE_PORT=${POSTGRES_SOURCE_PORT:-8504}"
+  echo "POSTGRES_CATALOG_PORT=${POSTGRES_CATALOG_PORT:-5432}"
+  echo "POSTGRES_SOURCE_DB=${POSTGRES_SOURCE_DB:-sportswear}"
+  echo "POSTGRES_SOURCE_USER=${POSTGRES_SOURCE_USER:-PG}"
+  echo "LOYALTY_MYSQL_IMAGE=${LOYALTY_MYSQL_IMAGE:-docker.io/library/mysql:8.4.11}"
+  echo "LOYALTY_MYSQL_PORT=${LOYALTY_MYSQL_PORT:-8503}"
+  echo "LOYALTY_MYSQL_CATALOG_PORT=${LOYALTY_MYSQL_CATALOG_PORT:-3306}"
+  echo "LOYALTY_MYSQL_DATABASE=${LOYALTY_MYSQL_DATABASE:-loyalty}"
+  echo "LOYALTY_MYSQL_USER=${LOYALTY_MYSQL_USER:-PG}"
+  echo "MONGODB_CATALOG_IMAGE=${MONGODB_CATALOG_IMAGE:-docker.io/library/mongo:8.0.29}"
+  echo "MONGODB_CATALOG_PORT=${MONGODB_CATALOG_PORT:-8888}"
+  echo "MONGODB_CATALOG_LINK_PORT=${MONGODB_CATALOG_LINK_PORT:-27017}"
+  echo "MONGODB_CATALOG_DATABASE=${MONGODB_CATALOG_DATABASE:-catalog}"
+  echo "MONGODB_CATALOG_ROOT_USERNAME=${MONGODB_CATALOG_ROOT_USERNAME:-PG}"
   echo "GOLDENGATE_HTTP_PORT=8501"
   echo "GOLDENGATE_RUNTIME_HTTP_PORT=8502"
   echo "GOLDENGATE_RUNTIME_BASE_URL=http://goldengate-runtime"
@@ -121,9 +183,9 @@ fi
   echo "GOLDENGATE_STUDIO_DEPLOYMENT_CONNECTION=PeakGear_GoldenGate_Runtime"
   echo "GOLDENGATE_STUDIO_PIPELINE_NAME=PeakGear_NetSuite_Customers_CDC"
   echo "GOLDENGATE_BASE_URL=https://goldengate-cdc:8443"
-  echo "GOLDENGATE_PUBLIC_URL=https://${PUBLIC_IP}:8501"
-  echo "OGGF_API_SERVER_URL=https://${PUBLIC_IP}:8501"
-  echo "OGGF_API_SERVER_SSL_URL=https://${PUBLIC_IP}:8501"
+  echo "GOLDENGATE_PUBLIC_URL=${GOLDENGATE_PUBLIC_URL:-https://${PUBLIC_ENDPOINT_HOST}:8501}"
+  echo "OGGF_API_SERVER_URL=${OGGF_API_SERVER_URL:-https://${PUBLIC_ENDPOINT_HOST}:8501}"
+  echo "OGGF_API_SERVER_SSL_URL=${OGGF_API_SERVER_SSL_URL:-https://${PUBLIC_ENDPOINT_HOST}:8501}"
   echo "ADB_STUDIO_WALLET_ZIP=/wallet/goldengate-studio-wallet.zip"
   echo "ADB_WALLET_PASSWORD=${ADB_WALLET_PASSWORD:-}"
   echo "GOLDENGATE_STUDIO_FREE_IMAGE=container-registry.oracle.com/goldengate/goldengate-studio-free:23.9.0.25.09"
@@ -165,6 +227,11 @@ fi
   echo "GRAVITINO_S3_ACCESS_KEY_ID=${GRAVITINO_S3_ACCESS_KEY_ID:-}"
   echo "GRAVITINO_S3_SECRET_ACCESS_KEY=${GRAVITINO_S3_SECRET_ACCESS_KEY:-}"
   echo "GRAVITINO_S3_PATH_STYLE_ACCESS=${GRAVITINO_S3_PATH_STYLE_ACCESS:-true}"
+  echo "AI_DATA_CATALOG_ENABLED=${AI_DATA_CATALOG_ENABLED:-false}"
+  echo "AI_DATA_CATALOG_URL=${AI_DATA_CATALOG_URL:-}"
+  echo "AI_DATA_CATALOG_WAREHOUSE=${AI_DATA_CATALOG_WAREHOUSE:-}"
+  echo "AI_DATA_CATALOG_S3_ENDPOINT=${AI_DATA_CATALOG_S3_ENDPOINT:-}"
+  echo "AI_DATA_CATALOG_REGISTER_STORAGE=${AI_DATA_CATALOG_REGISTER_STORAGE:-false}"
   echo "DATA_TRANSFORMS_ADB_AUTO_CONFIGURE=${DATA_TRANSFORMS_ADB_AUTO_CONFIGURE:-true}"
   echo "DATA_TRANSFORMS_ADB_CONNECTION_NAME=${DATA_TRANSFORMS_ADB_CONNECTION_NAME:-${DBNAME:-}}"
   echo "DATA_TRANSFORMS_ADB_USERNAME=${DATA_TRANSFORMS_ADB_USERNAME:-PG}"
@@ -179,6 +246,11 @@ fi
   if [[ -n "${DATA_TRANSFORMS_ICEBERG_REST_URL:-}" ]]; then
     echo "DATA_TRANSFORMS_ICEBERG_REST_URL=${DATA_TRANSFORMS_ICEBERG_REST_URL}"
   fi
+  echo "DATA_TRANSFORMS_AICAT_AUTO_CREATE=${DATA_TRANSFORMS_AICAT_AUTO_CREATE:-true}"
+  echo "DATA_TRANSFORMS_AICAT_CONNECTION_NAME=${DATA_TRANSFORMS_AICAT_CONNECTION_NAME:-pg-aicat}"
+  echo "DATA_TRANSFORMS_AICAT_CATALOG_NAME=${DATA_TRANSFORMS_AICAT_CATALOG_NAME:-oadc_iceberg_rest_catalog}"
+  echo "DATA_TRANSFORMS_AICAT_USERNAME=${DATA_TRANSFORMS_AICAT_USERNAME:-PG}"
+  echo "DATA_TRANSFORMS_ICEBERG_PUBLIC_HOST=${DATA_TRANSFORMS_ICEBERG_PUBLIC_HOST:-${PUBLIC_IP}}"
   if [[ -n "${DATA_TRANSFORMS_AGENT_NAME:-}" ]]; then
     echo "DATA_TRANSFORMS_AGENT_NAME=${DATA_TRANSFORMS_AGENT_NAME}"
   fi
@@ -205,6 +277,9 @@ fi
   echo "MONGODBAPI=\"${MONGODBAPI}\""
   echo "GRAPHURL=${GRAPHURL}"
   echo "PUBLIC_IP=${PUBLIC_IP}"
+  echo "PUBLIC_HOST=${PUBLIC_ENDPOINT_HOST}"
+  echo "PUBLISH_HOST=${PUBLISH_HOST:-${PUBLIC_ENDPOINT_HOST}}"
+  echo "GGSA_PUBLIC_HOST=${GGSA_PUBLIC_HOST:-${PUBLIC_ENDPOINT_HOST}}"
   echo "COMPARTMENT_OCID=${COMPARTMENT_OCID}"
   echo "ENDPOINT=${ENDPOINT}"
   echo "ADB_OCID=${ADB_OCID}"

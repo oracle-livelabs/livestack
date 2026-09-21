@@ -1,0 +1,51 @@
+brand_id,brand_name,brand_slug,brand_category,headquarters_city,headquarters_lat,headquarters_lon,founded_year,annual_revenue,social_tier,created_at,updated_at
+1,Aurora Studios,aurora,Film Studio,Los Angeles,34.0522,-118.2437,1998,920000000,premium,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+2,StreamWave Network,streamwave,Streaming Platform,New York,40.7128,-74.006,2011,1480000000,premium,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+3,CinePulse Pictures,cinepulse,Theatrical Releases,Atlanta,33.749,-84.388,2006,610000000,premium,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+4,SoundStage Live,soundstage,Live Entertainment,Nashville,36.1627,-86.7816,2015,280000000,standard,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+5,Marquee Media Network,marquee,Streaming and Live Entertainment,Seattle,47.6062,-122.3321,2017,540000000,premium,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+6,NeonKids,neonkids,Family Entertainment,Orlando,28.5383,-81.3792,2013,360000000,standard,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+7,SportsCast Plus,sportscast,Sports Media,Dallas,32.7767,-96.797,2009,790000000,premium,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+8,DocuWorld,docuworld,Documentary,Washington,38.9072,-77.0369,2018,140000000,emerging,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+9,KDrama Hub,kdramahub,International Streaming,San Francisco,37.7749,-122.4194,2020,320000000,standard,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+10,IndieFrame,indieframe,Independent Film,Portland,45.5152,-122.6784,2016,95000000,emerging,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+11,AnimeForge,animeforge,Animation,Austin,30.2672,-97.7431,2019,210000000,standard,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+12,LatinStream,latinstream,Spanish-Language Media,Miami,25.7617,-80.1918,2014,260000000,standard,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+13,OrbitPlay Studios,orbitplay,Interactive Storytelling,Raleigh,35.7796,-78.6382,2012,430000000,premium,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+14,PixelForge Media,pixelforge,Interactive Media Studio,San Diego,32.7157,-117.1611,2016,390000000,premium,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+15,Northstar Sports Media,northstar,Sports Media,Minneapolis,44.9778,-93.265,2004,560000000,premium,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+16,Evergreen Streaming,evergreen,Streaming Platform,Denver,39.7392,-104.9903,2010,710000000,premium,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+17,Summit Sports Media,summitsports-media,Sports Media League,Las Vegas,36.1699,-115.1398,2018,180000000,standard,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+18,Horizon Kids Network,horizonkids,Kids Media,Charlotte,35.2271,-80.8431,2008,240000000,standard,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+19,Pulse Music Group,pulsemusic,Music Label,Nashville,36.1627,-86.7816,1997,480000000,premium,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+20,ArcLight Originals,arclight,Premium Originals,Boston,42.3601,-71.0589,2014,330000000,standard,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+21,Mosaic Documentary,mosaicdoc,Documentary Studio,Philadelphia,39.9526,-75.1652,2011,160000000,standard,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+22,Rocket Stream,rocketstream,Mobile Entertainment,San Jose,37.3382,-121.8863,2019,220000000,standard,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+23,Luma FAST,lumafast,FAST Network,Phoenix,33.4484,-112.074,2021,125000000,emerging,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+24,BlueWave Podcasts,bluewavepod,Podcast Network,Chicago,41.8781,-87.6298,2015,175000000,standard,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+25,Atlas Reality,atlasreality,Immersive Media,Los Angeles,34.0522,-118.2437,2020,98000000,emerging,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+26,Vista Newsroom,vistanews,News Media,New York,40.7128,-74.006,1995,620000000,premium,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+27,Global Drama House,globaldrama,International Drama,Honolulu,21.3069,-157.8583,2017,210000000,standard,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+28,Forge Comics Studio,forgecomics,Fandom IP,Portland,45.5152,-122.6784,2007,270000000,standard,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+29,Sonic Arena,sonicarena,Live Music,Austin,30.2672,-97.7431,2013,350000000,premium,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+30,Civic Stream,civicstream,Public Media,Washington,38.9072,-77.0369,2001,190000000,standard,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+31,CloudJourney Studios,cloudjourney,Interactive Media Studio,Salt Lake City,40.7608,-111.891,2016,260000000,standard,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+32,Metro Fandom Lab,metrofandom,Fan Communities,New York,40.7128,-74.006,2022,72000000,emerging,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+33,Champion Reel,championreel,Sports Highlights,Dallas,32.7767,-96.797,2012,410000000,premium,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+34,Silverline Cinema,silverline,Film Distributor,Los Angeles,34.0522,-118.2437,2005,520000000,premium,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+35,BetaRealm Studios,betarealm,Live Entertainment,Seattle,47.6062,-122.3321,2018,305000000,standard,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+36,StageCraft Live,stagecraft,Live Events,Las Vegas,36.1699,-115.1398,2011,295000000,standard,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+37,Oceanic Anime,oceanicanime,Anime Streaming,San Francisco,37.7749,-122.4194,2020,188000000,standard,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+38,Lantana Media,lantana,Spanish-Language Media,San Antonio,29.4241,-98.4936,2009,235000000,standard,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+39,Journeyline Publishing,journeyline,Interactive Storytelling,Austin,30.2672,-97.7431,2015,455000000,premium,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+40,PrimePitch Sports,primepitch,Sports Rights,Miami,25.7617,-80.1918,2014,615000000,premium,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+41,Cobalt Screens,cobaltscreens,Connected TV,Atlanta,33.749,-84.388,2019,148000000,emerging,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+42,Indigo Shorts,indigoshorts,Short Form Video,Los Angeles,34.0522,-118.2437,2021,89000000,emerging,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+43,Helix Reality League,helixleague,Sports Media League,Chicago,41.8781,-87.6298,2017,222000000,standard,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+44,Marquee Classics,marqueeclassics,Catalog Streaming,New York,40.7128,-74.006,1988,340000000,standard,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+45,RidgeLine Outdoors,ridgeline,Adventure Media,Denver,39.7392,-104.9903,2012,118000000,emerging,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+46,BrightSide Learning,brightside,Education Media,Boston,42.3601,-71.0589,2016,126000000,standard,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+47,Nova Kids Network,novakids,Family Media,Orlando,28.5383,-81.3792,2020,104000000,emerging,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+48,Signal House Ads,signalhouse,Ad Tech Media,Phoenix,33.4484,-112.074,2018,210000000,standard,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+49,WideAngle Sports,wideangle,Sports Production,Charlotte,35.2271,-80.8431,2010,370000000,standard,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z
+50,EchoVerse Audio,echoverse,Audio Entertainment,Chicago,41.8781,-87.6298,2013,155000000,standard,2026-05-05T16:30:00Z,2026-05-05T16:30:00Z

@@ -15,6 +15,16 @@ if [[ -z "${BUILD_ARCHIVE_UPLOAD_URL_PREFIX:-}" && -f "${BUILD_ENV_FILE}" ]]; th
   )"
 fi
 
+if [[ -z "${BUILD_ARCHIVE_URL:-}" && -f "${BUILD_ENV_FILE}" ]]; then
+  BUILD_ARCHIVE_URL="$(
+    # The installer needs a read-capable URL. Do not print it because a PAR is
+    # a credential; it is used here only to provide an actionable build warning.
+    # shellcheck disable=SC1090
+    source "${BUILD_ENV_FILE}"
+    printf '%s' "${BUILD_ARCHIVE_URL:-}"
+  )"
+fi
+
 BUILD_ARCHIVE_UPLOAD_URL_PREFIX="${BUILD_ARCHIVE_UPLOAD_URL_PREFIX:-}"
 UPLOAD_ARCHIVE="${UPLOAD_ARCHIVE:-true}"
 
@@ -115,6 +125,9 @@ if [[ "${UPLOAD_ARCHIVE}" == true ]]; then
   echo "Uploading ${ZIP_NAME} to Object Storage..."
   curl --fail --silent --show-error --upload-file "${ZIP_PATH}" "${BUILD_ARCHIVE_UPLOAD_URL_PREFIX}${ZIP_NAME}"
   echo "Uploaded ${ZIP_NAME} to Object Storage."
+  if [[ -z "${BUILD_ARCHIVE_URL:-}" ]]; then
+    echo "WARNING: Uploading the archive does not configure inst.sh. Set BUILD_ARCHIVE_URL to a read-capable URL for ${ZIP_NAME} in /home/opc/.env, or provide Terraform metadata build_archive_url."
+  fi
 else
   echo "Skipped Object Storage upload because UPLOAD_ARCHIVE=false."
 fi

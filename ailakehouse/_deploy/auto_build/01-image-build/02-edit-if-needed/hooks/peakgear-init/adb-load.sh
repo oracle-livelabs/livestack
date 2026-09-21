@@ -341,12 +341,52 @@ preprocess_schema() {
     "${source_file}" > "${target_file}"
 }
 
+extract_between_markers() {
+  local start_marker="$1"
+  local end_marker="$2"
+  local source_file="$3"
+  local target_file="$4"
+
+  awk -v start="${start_marker}" -v end="${end_marker}" '
+    index($0, start) { in_section = 1; next }
+    index($0, end)   { exit }
+    in_section       { print }
+  ' "${source_file}" > "${target_file}"
+}
+
+extract_from_marker() {
+  local start_marker="$1"
+  local source_file="$2"
+  local target_file="$3"
+
+  awk -v start="${start_marker}" '
+    index($0, start) { in_section = 1; next }
+    in_section       { print }
+  ' "${source_file}" > "${target_file}"
+}
+
 preprocess_schema "${INGESTION_DIR}/db/schema/01_tables.sql" "${WORK_DIR}/01_tables.sql"
 preprocess_schema "${INGESTION_DIR}/db/schema/02_json_collections.sql" "${WORK_DIR}/02_json_collections.sql"
 preprocess_schema "${INGESTION_DIR}/db/schema/03_graph.sql" "${WORK_DIR}/03_graph.sql"
 preprocess_schema "${INGESTION_DIR}/db/schema/04_vector.sql" "${WORK_DIR}/04_vector.sql"
 preprocess_schema "${INGESTION_DIR}/db/schema/05_spatial.sql" "${WORK_DIR}/05_spatial.sql"
 preprocess_schema "${INGESTION_DIR}/db/schema/10_fraud_graph.sql" "${WORK_DIR}/10_fraud_graph.sql"
+extract_between_markers \
+  "-- SECTION 1: RUN AS ADMIN" \
+  "-- SECTION 2: RUN AS PG" \
+  "${INGESTION_DIR}/db/schema/06_security.sql" \
+  "${WORK_DIR}/06_security_admin.sql"
+extract_from_marker \
+  "-- SECTION 2: RUN AS PG" \
+  "${INGESTION_DIR}/db/schema/06_security.sql" \
+  "${WORK_DIR}/06_security_schema.sql"
+
+for security_file in "${WORK_DIR}/06_security_admin.sql" "${WORK_DIR}/06_security_schema.sql"; do
+  [[ -s "${security_file}" ]] || {
+    log "Failed to extract required security SQL into ${security_file}."
+    exit 1
+  }
+done
 
 cat > "${WORK_DIR}/admin.sql" <<SQL
 SET ECHO OFF
@@ -646,6 +686,7 @@ END;
 
 @"${WORK_DIR}/04_vector.sql"
 @"${WORK_DIR}/05_spatial.sql"
+@"${WORK_DIR}/06_security_schema.sql"
 
 PROMPT Recreating warehouse gold-data CSV tables...
 WHENEVER SQLERROR CONTINUE
@@ -718,6 +759,43 @@ EXIT
 SQL
 
 run_sql "${WORK_DIR}/pg_bootstrap.sql"
+
+cat > "${WORK_DIR}/security_admin.sql" <<SQL
+SET ECHO OFF
+SET DEFINE OFF
+SET SERVEROUTPUT ON
+WHENEVER SQLERROR EXIT SQL.SQLCODE
+CONNECT ADMIN/"${CONNECT_PASSWORD}"@"${CONNECT_TARGET}"
+@"${WORK_DIR}/06_security_admin.sql"
+EXIT
+SQL
+
+run_sql "${WORK_DIR}/security_admin.sql"
+
+cat > "${WORK_DIR}/security_verify.sql" <<SQL
+SET ECHO OFF
+SET DEFINE OFF
+SET SERVEROUTPUT ON
+WHENEVER SQLERROR EXIT SQL.SQLCODE
+CONNECT ${APP_SCHEMA}/"${SCHEMA_PASSWORD}"@"${CONNECT_TARGET}"
+DECLARE
+  v_valid NUMBER;
+BEGIN
+  SELECT COUNT(*) INTO v_valid
+  FROM user_objects
+  WHERE object_name = 'SC_SECURITY_CTX'
+    AND object_type IN ('PACKAGE', 'PACKAGE BODY')
+    AND status = 'VALID';
+
+  IF v_valid != 2 THEN
+    RAISE_APPLICATION_ERROR(-20001, 'SC_SECURITY_CTX package and body must both be valid.');
+  END IF;
+END;
+/
+EXIT
+SQL
+
+run_sql "${WORK_DIR}/security_verify.sql"
 
 {
   echo "loaded_at=$(date -u +%Y-%m-%dT%H:%M:%SZ)"

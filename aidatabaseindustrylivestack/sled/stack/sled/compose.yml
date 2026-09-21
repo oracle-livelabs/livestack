@@ -37,6 +37,8 @@ services:
       DBPORT: ${DBPORT:-1521}
       DBSERVICENAME: ${DBSERVICENAME:-FREEPDB1}
       ORACLE_PWD: ${ORACLE_PWD:-oracle}
+      # Required by current ORDS images when they install their database user.
+      ORACLE_USER_PWD: ${ORACLE_USER_PWD:-Ords_26ai_Local!}
       ORACLE_USER: ${ORACLE_USER:-LIVESTACK}
     ports:
       - "${ORDS_PORT:-8181}:8080"
@@ -92,7 +94,6 @@ services:
       ORACLE_POOL_INCREMENT: ${ORACLE_POOL_INCREMENT:-1}
       OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-http://ollama:11434}
       OLLAMA_MODEL: ${OLLAMA_MODEL:-llama3.2}
-      ASKDATA_RESULT_SYNTHESIS_ENABLED: ${ASKDATA_RESULT_SYNTHESIS_ENABLED:-1}
       DEMO_USAGE_COUNTER_ENABLED: ${DEMO_USAGE_COUNTER_ENABLED:-}
       DEMO_USAGE_COUNTER_PAR_URL: ${DEMO_USAGE_COUNTER_PAR_URL:-}
       DEMO_USAGE_COUNTER_PREFIX: ${DEMO_USAGE_COUNTER_PREFIX:-state-local-government-demo-usage/events}

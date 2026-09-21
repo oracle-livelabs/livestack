@@ -1,0 +1,15 @@
+[Unit]
+Description=Configure PG Oracle AI Data Catalog mount
+After=network-online.target adb-wallet.service adb-load.service
+Wants=network-online.target adb-wallet.service adb-load.service
+Before=user-podman.service
+
+[Service]
+Type=oneshot
+TimeoutStartSec=900
+ExecStartPre=/bin/bash -c '/home/opc/init/setenv.sh'
+ExecStart=/bin/bash /home/opc/init/configure-ai-data-catalog.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=default.target

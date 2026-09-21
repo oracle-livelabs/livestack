@@ -493,6 +493,28 @@ function Read-ReadyForMarketplaceReceipt {
         throw "Ready-for-Marketplace receipt is not valid JSON: $Path"
     }
 
+    # PowerShell 7 materializes ISO-8601 JSON values as DateTime instances.
+    # Receipts intentionally store timestamps as canonical UTC strings, so
+    # normalize them before validating their type or signed payload.
+    foreach ($timestampName in @(
+            "created_utc",
+            "updated_utc",
+            "automated_test_completed_utc",
+            "reboot_test_completed_utc",
+            "cleanup_completed_utc",
+            "inspection_started_utc",
+            "inspection_completed_utc",
+            "inspection_approved_utc"
+        )) {
+        $property = $receipt.PSObject.Properties[$timestampName]
+        if ($null -ne $property -and $property.Value -is [DateTime]) {
+            $property.Value = $property.Value.ToUniversalTime().ToString(
+                "o",
+                [System.Globalization.CultureInfo]::InvariantCulture
+            )
+        }
+    }
+
     Assert-ReadyForMarketplaceReceipt -Receipt $receipt
     return $receipt
 }
@@ -1399,6 +1421,91 @@ function Get-IniValue {
     return ""
 }
 
+function Normalize-OciAuthMethod {
+    param([string]$AuthMethod)
+
+    $normalized = if ([string]::IsNullOrWhiteSpace($AuthMethod)) {
+        "apikey"
+    }
+    else {
+        $AuthMethod.Trim().Replace("_", "").Replace("-", "").ToLowerInvariant()
+    }
+
+    switch ($normalized) {
+        "apikey" { return "APIKey" }
+        "securitytoken" { return "SecurityToken" }
+        default { throw "OCI authentication method must be APIKey or SecurityToken, not '$AuthMethod'." }
+    }
+}
+
+function Get-OciProfileAuthMethod {
+    param(
+        [string]$ConfigFile,
+        [string]$Profile
+    )
+
+    $securityTokenFile = Get-IniValue -Path $ConfigFile -Section $Profile -Name "security_token_file"
+    if (-not [string]::IsNullOrWhiteSpace($securityTokenFile)) {
+        return "SecurityToken"
+    }
+
+    return "APIKey"
+}
+
+function Assert-OciAuthenticationProfile {
+    param(
+        [string]$ConfigFile,
+        [string]$Profile,
+        [string]$AuthMethod,
+        [string]$ExpectedTenancyOcid = "",
+        [string]$ExpectedUserOcid = ""
+    )
+
+    $normalizedAuth = Normalize-OciAuthMethod -AuthMethod $AuthMethod
+    $tenancy = Get-IniValue -Path $ConfigFile -Section $Profile -Name "tenancy"
+    $user = Get-IniValue -Path $ConfigFile -Section $Profile -Name "user"
+    $keyFile = Get-IniValue -Path $ConfigFile -Section $Profile -Name "key_file"
+    $fingerprint = Get-IniValue -Path $ConfigFile -Section $Profile -Name "fingerprint"
+    $securityTokenFile = Get-IniValue -Path $ConfigFile -Section $Profile -Name "security_token_file"
+
+    if ([string]::IsNullOrWhiteSpace($tenancy) -or
+        [string]::IsNullOrWhiteSpace($user) -or
+        [string]::IsNullOrWhiteSpace($keyFile)) {
+        throw "OCI profile '$Profile' in '$ConfigFile' is incomplete. It must define tenancy, user, and key_file."
+    }
+    if (-not [string]::IsNullOrWhiteSpace($ExpectedTenancyOcid) -and $tenancy -ne $ExpectedTenancyOcid) {
+        throw "OCI profile '$Profile' uses tenancy '$tenancy', but terraform.tfvars specifies '$ExpectedTenancyOcid'."
+    }
+    if (-not [string]::IsNullOrWhiteSpace($ExpectedUserOcid) -and $user -ne $ExpectedUserOcid) {
+        throw "OCI profile '$Profile' uses user '$user', but terraform.tfvars specifies '$ExpectedUserOcid'."
+    }
+
+    $configDirectory = Split-Path -Parent $ConfigFile
+    $resolvedKeyFile = Resolve-ConfigurationPath -Path $keyFile -BaseDirectory $configDirectory
+    if (-not (Test-Path -LiteralPath $resolvedKeyFile -PathType Leaf)) {
+        throw "OCI profile '$Profile' key_file does not exist: $resolvedKeyFile"
+    }
+
+    if ($normalizedAuth -eq "APIKey") {
+        if ([string]::IsNullOrWhiteSpace($fingerprint)) {
+            throw "OCI API-key profile '$Profile' must define fingerprint."
+        }
+        if (-not [string]::IsNullOrWhiteSpace($securityTokenFile)) {
+            throw "OCI profile '$Profile' contains security_token_file and is therefore a token profile. Restore or select a clean API-key profile, or set ociAuthMethod = `"SecurityToken`". The automation will not rewrite OCI profiles."
+        }
+        Write-Pass "Using non-expiring OCI API-key profile '$Profile' without modifying it"
+        return
+    }
+
+    if ([string]::IsNullOrWhiteSpace($securityTokenFile)) {
+        throw "OCI security-token profile '$Profile' does not contain security_token_file."
+    }
+    $resolvedTokenFile = Resolve-ConfigurationPath -Path $securityTokenFile -BaseDirectory $configDirectory
+    if (-not (Test-Path -LiteralPath $resolvedTokenFile -PathType Leaf)) {
+        throw "OCI security-token profile '$Profile' token file does not exist: $resolvedTokenFile"
+    }
+}
+
 function Add-SecurityTokenTarget {
     param(
         [object[]]$Targets,
@@ -2087,6 +2194,17 @@ function Read-ManualCaptureReceipt {
         throw "Manual capture receipt is not valid JSON: $Path"
     }
 
+    # ConvertFrom-Json materializes ISO-8601 timestamps as DateTime values on
+    # PowerShell 7. Formatting that value through [string] applies the local
+    # time zone and drops the trailing Z, which makes a valid UTC receipt fail
+    # validation on macOS and Linux. Normalize it back to round-trip UTC first.
+    if ($receipt.created_utc -is [DateTime]) {
+        $receipt.created_utc = $receipt.created_utc.ToUniversalTime().ToString(
+            "o",
+            [System.Globalization.CultureInfo]::InvariantCulture
+        )
+    }
+
     $expectedProperties = @(
         "base_image_ocid",
         "build_instance_name",
@@ -2262,49 +2380,22 @@ function Resolve-ProjectTerraformDirectory {
             -Label "Terraform test directory"
     }
 
-    $embeddedTerraformDirectory = Join-Path (Split-Path -Parent $ProjectRoot) "terraform"
-    if (Test-Path -LiteralPath $embeddedTerraformDirectory -PathType Container) {
-        Write-Step "Using embedded Terraform folder 'auto_build/terraform'"
-        return Resolve-ExistingDirectory `
-            -Path $embeddedTerraformDirectory `
-            -Label "Terraform test directory"
-    }
-
     $gitPath = Resolve-CommandPath -Name "git"
-    $demoRepositoryRoot = Invoke-NativeCommand `
+    $livestackRepositoryRoot = Invoke-NativeCommand `
         -FilePath $gitPath `
         -Arguments @("-C", $ProjectRoot, "rev-parse", "--show-toplevel") `
         -CaptureOutput
-    $workspaceRoot = Split-Path -Parent $demoRepositoryRoot
-    $terraformRepository = Join-Path $workspaceRoot "terraform"
-    $projectName = Split-Path -Leaf $ProjectRoot
-    $bundleName = Split-Path -Leaf (Split-Path -Parent $ProjectRoot)
-    $bundleTerraformDirectory = Join-Path $terraformRepository $bundleName
-    $pairedTerraformDirectory = Join-Path $terraformRepository $projectName
-    $starterTerraformDirectory = Join-Path (Join-Path $terraformRepository "pilot-test-template") "custom-image"
+    $workspaceRoot = Split-Path -Parent $livestackRepositoryRoot
+    $terraformPlayDirectory = Join-Path $workspaceRoot "Terraform-Repo-Oracle\peak-gear-livestack"
 
-    if ($projectName -eq "01-image-build" -and
-        (Test-Path -LiteralPath $bundleTerraformDirectory -PathType Container)) {
-        Write-Step "Using Terraform folder '$bundleName' paired with the two-stage demo-code bundle"
+    if (Test-Path -LiteralPath $terraformPlayDirectory -PathType Container) {
+        Write-Step "Using Terraform Play folder 'peak-gear-livestack' from the sibling Terraform-Repo-Oracle checkout"
         return Resolve-ExistingDirectory `
-            -Path $bundleTerraformDirectory `
-            -Label "Terraform test directory"
-    }
-    if (Test-Path -LiteralPath $pairedTerraformDirectory -PathType Container) {
-        Write-Step "Using paired Terraform folder '$projectName'"
-        return Resolve-ExistingDirectory `
-            -Path $pairedTerraformDirectory `
-            -Label "Terraform test directory"
-    }
-    if ($projectName -eq "custom-image-build-template" -and
-        (Test-Path -LiteralPath $starterTerraformDirectory -PathType Container)) {
-        Write-Step "Using Terraform starter folder 'pilot-test-template/custom-image' for the untouched custom-image template"
-        return Resolve-ExistingDirectory `
-            -Path $starterTerraformDirectory `
+            -Path $terraformPlayDirectory `
             -Label "Terraform test directory"
     }
 
-    throw "No paired Terraform folder was found. Expected $bundleTerraformDirectory for a two-stage bundle or $pairedTerraformDirectory for a standalone image project. Copy the tracked custom-image Terraform starter to the matching path, or pass -TerraformDirectory explicitly for a nonstandard layout."
+    throw "Peak Gear Terraform Play folder was not found at $terraformPlayDirectory. Keep livestack and Terraform-Repo-Oracle beside each other, or pass -TerraformDirectory explicitly for a nonstandard layout."
 }
 
 function Assert-InspectionCleanupCompletedForRecovery {
@@ -2470,16 +2561,23 @@ if (-not [string]::IsNullOrWhiteSpace($CleanupInspection)) {
     if ($null -ne $disposableContext) {
         $cleanupSessionTargets = @()
         $cleanupVariableFile = [string]$disposableContext.VariableSnapshotPath
-        $cleanupAuthMethod = Get-AssignmentValue -Path $cleanupVariableFile -Name "ociAuthMethod"
+        $cleanupAuthMethod = Normalize-OciAuthMethod `
+            -AuthMethod (Get-AssignmentValue -Path $cleanupVariableFile -Name "ociAuthMethod")
+        $cleanupProfile = Get-AssignmentValue -Path $cleanupVariableFile -Name "ociConfigProfile"
+        $cleanupRegion = Get-AssignmentValue -Path $cleanupVariableFile -Name "ociRegionIdentifier"
+        if ([string]::IsNullOrWhiteSpace($cleanupProfile) -or [string]::IsNullOrWhiteSpace($cleanupRegion)) {
+            throw "The inspection variable snapshot must define ociConfigProfile and ociRegionIdentifier."
+        }
+        $cleanupOciConfig = Resolve-ExistingFile `
+            -Path (Join-Path (Join-Path $HOME ".oci") "config") `
+            -Label "OCI configuration file"
+        Assert-OciAuthenticationProfile `
+            -ConfigFile $cleanupOciConfig `
+            -Profile $cleanupProfile `
+            -AuthMethod $cleanupAuthMethod `
+            -ExpectedTenancyOcid (Get-AssignmentValue -Path $cleanupVariableFile -Name "ociTenancyOcid") `
+            -ExpectedUserOcid (Get-AssignmentValue -Path $cleanupVariableFile -Name "ociUserOcid")
         if ($cleanupAuthMethod -eq "SecurityToken") {
-            $cleanupProfile = Get-AssignmentValue -Path $cleanupVariableFile -Name "ociConfigProfile"
-            $cleanupRegion = Get-AssignmentValue -Path $cleanupVariableFile -Name "ociRegionIdentifier"
-            if ([string]::IsNullOrWhiteSpace($cleanupProfile) -or [string]::IsNullOrWhiteSpace($cleanupRegion)) {
-                throw "The inspection variable snapshot must define ociConfigProfile and ociRegionIdentifier for SecurityToken authentication."
-            }
-            $cleanupOciConfig = Resolve-ExistingFile `
-                -Path (Join-Path (Join-Path $HOME ".oci") "config") `
-                -Label "OCI configuration file"
             $cleanupSessionTargets = @(Add-SecurityTokenTarget `
                 -Targets $cleanupSessionTargets `
                 -ConfigFile $cleanupOciConfig `
@@ -2577,15 +2675,24 @@ if (Get-Content -LiteralPath $TerraformVariableFile | Where-Object { $_ -notmatc
 }
 
 $sessionTargets = @()
-$terraformAuthMethod = Get-AssignmentValue -Path $TerraformVariableFile -Name "ociAuthMethod"
+$terraformAuthMethod = Normalize-OciAuthMethod `
+    -AuthMethod (Get-AssignmentValue -Path $TerraformVariableFile -Name "ociAuthMethod")
+$terraformProfile = Get-AssignmentValue -Path $TerraformVariableFile -Name "ociConfigProfile"
+$terraformRegion = Get-AssignmentValue -Path $TerraformVariableFile -Name "ociRegionIdentifier"
+$terraformTenancyOcid = Get-AssignmentValue -Path $TerraformVariableFile -Name "ociTenancyOcid"
+$terraformUserOcid = Get-AssignmentValue -Path $TerraformVariableFile -Name "ociUserOcid"
+if ([string]::IsNullOrWhiteSpace($terraformProfile) -or [string]::IsNullOrWhiteSpace($terraformRegion)) {
+    throw "Terraform variables must define ociConfigProfile and ociRegionIdentifier."
+}
+$defaultOciConfig = Join-Path (Join-Path $HOME ".oci") "config"
+$defaultOciConfig = Resolve-ExistingFile -Path $defaultOciConfig -Label "OCI configuration file"
+Assert-OciAuthenticationProfile `
+    -ConfigFile $defaultOciConfig `
+    -Profile $terraformProfile `
+    -AuthMethod $terraformAuthMethod `
+    -ExpectedTenancyOcid $terraformTenancyOcid `
+    -ExpectedUserOcid $terraformUserOcid
 if ($terraformAuthMethod -eq "SecurityToken") {
-    $terraformProfile = Get-AssignmentValue -Path $TerraformVariableFile -Name "ociConfigProfile"
-    $terraformRegion = Get-AssignmentValue -Path $TerraformVariableFile -Name "ociRegionIdentifier"
-    if ([string]::IsNullOrWhiteSpace($terraformProfile) -or [string]::IsNullOrWhiteSpace($terraformRegion)) {
-        throw "Terraform variables must define ociConfigProfile and ociRegionIdentifier for SecurityToken authentication."
-    }
-    $defaultOciConfig = Join-Path (Join-Path $HOME ".oci") "config"
-    $defaultOciConfig = Resolve-ExistingFile -Path $defaultOciConfig -Label "OCI configuration file"
     $sessionTargets = @(Add-SecurityTokenTarget `
         -Targets $sessionTargets `
         -ConfigFile $defaultOciConfig `
@@ -2718,16 +2825,29 @@ $packerConfigFile = Resolve-ConfigurationPath `
     -Path $packerConfigFileValue `
     -BaseDirectory (Split-Path -Parent $PackerVariableFile)
 $packerConfigFile = Resolve-ExistingFile -Path $packerConfigFile -Label "OCI configuration file"
-$sessionTargets = @(Add-SecurityTokenTarget `
-    -Targets $sessionTargets `
+$packerAuthMethod = Get-OciProfileAuthMethod `
+    -ConfigFile $packerConfigFile `
+    -Profile $packerProfile
+Assert-OciAuthenticationProfile `
     -ConfigFile $packerConfigFile `
     -Profile $packerProfile `
-    -Region $packerRegion)
+    -AuthMethod $packerAuthMethod `
+    -ExpectedTenancyOcid $terraformTenancyOcid `
+    -ExpectedUserOcid $terraformUserOcid
+if ($packerAuthMethod -eq "SecurityToken") {
+    $sessionTargets = @(Add-SecurityTokenTarget `
+        -Targets $sessionTargets `
+        -ConfigFile $packerConfigFile `
+        -Profile $packerProfile `
+        -Region $packerRegion)
+}
 $ociPath = Resolve-CommandPath -Name "oci"
+$ociCliAuth = if ($packerAuthMethod -eq "SecurityToken") { "security_token" } else { "api_key" }
 $ociCommonArguments = @(Get-OciCliCommonArguments `
     -ConfigFile $packerConfigFile `
     -Profile $packerProfile `
-    -Region $packerRegion)
+    -Region $packerRegion `
+    -Auth $ociCliAuth)
 
 if (Get-Content -LiteralPath $PackerVariableFile | Where-Object { $_ -notmatch '^\s*#' -and $_ -match '<[^>]+>' }) {
     throw "Packer variable file still contains placeholder values: $PackerVariableFile"

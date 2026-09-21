@@ -12,8 +12,8 @@ const MODES = [
     label: 'Explain',
     iconClass: 'oj-fwk-icon-message-info',
     color: '#4F7D7B',
-    desc: 'Plain-English answer',
-    tooltip: 'Answer in plain English without showing the full SQL by default.',
+    desc: 'Natural-language answer',
+    tooltip: 'Answer using natural language without showing the full SQL by default.',
   },
   {
     id: 'chat',
@@ -745,7 +745,7 @@ FETCH FIRST 5 ROWS ONLY;
           <JetGlyph iconClass="oj-fwk-icon-message-info" className="askdata-page-glyph tone-teal" /> Ask Seer Tech Data
         </h2>
         <p className="text-sm text-[var(--color-text-dim)] mt-1">
-          Ask Seer Tech product operations questions in plain English - <span className="tone-plum">Ollama</span> drafts SQL and Oracle queries your live product-intelligence data
+          Ask Seer Tech product operations questions using natural language - <span className="tone-plum">Ollama</span> drafts SQL and Oracle queries your live product-intelligence data
         </p>
       </div>
 

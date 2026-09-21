@@ -1,0 +1,3 @@
+decision_id,return_id,decision_type,decision_summary,confidence_score,created_by,created_at
+1,1,Approve,Draft instant credit and carrier recovery claim. Oracle evidence shows low risk and strong damage match.,0.94,returns_ai_agent,2026-04-13T08:30:00Z
+2,3,Deny,Draft denial due to serial mismatch and missing accessories under electronics policy.,0.91,returns_ai_agent,2026-04-13T09:45:00Z

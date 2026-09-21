@@ -1,0 +1,484 @@
+influencer_id,handle,display_name,platform,follower_count,engagement_rate,influence_score,niche,city,region,country,is_verified,created_at
+2221,@sec_updates_01,Channel Intelligence Stream - Brand Standards 01,instagram,29787,0.0419,71.62,Brand Standards,New York,New York,US,0,2026-09-17T13:44:07Z
+2222,@brandqa_watch_01,Brand QA Monitoring Feed 01,tiktok,40474,0.0457,78.45,Brand QA,Los Angeles,California,US,0,2026-09-17T13:44:07Z
+2223,@brand_standard_bulletin_01,Channel Intelligence Stream - Property Safety 01,twitter,289825,0.0381,84.35,Property Safety,Chicago,Illinois,US,0,2026-09-17T13:44:07Z
+2224,@occupancy_watch_01,Channel Intelligence Stream - Operations Control 01,youtube,4845,0.0496,69.43,Operations Control,Houston,Texas,US,0,2026-09-17T13:44:07Z
+2225,@fed_rateairport-transfer_01,Channel Intelligence Stream - Demand Forecast 01,threads,8767,0.0365,62.32,Demand Forecast,Phoenix,Arizona,US,0,2026-09-17T13:44:07Z
+2226,@revenue_pulse_01,guest Revenue Impact Engine - Revenue 01,instagram,8757,0.0618,73.6,Rate Plans,San Francisco,California,US,0,2026-09-17T13:44:07Z
+2227,@group booking_signal_01,guest Revenue Impact Engine - Group Booking 01,tiktok,82123,0.0767,100,Revenue Operations Risk,Miami,Florida,US,0,2026-09-17T13:44:07Z
+2228,@luxury guestdesk_01,guest Revenue Impact Engine - Luxury Guest 01,twitter,48455,0.0488,74.64,Group Sales,Seattle,Washington,US,0,2026-09-17T13:44:07Z
+2229,@payments_ops_01,Demand Activity Monitor - Payments 01,youtube,9410,0.0775,79.81,Luxury Guest Management,Denver,Colorado,US,0,2026-09-17T13:44:07Z
+2230,@guest_safety_watch_01,OTA Surveillance Engine 01,threads,5314,0.0358,60.18,Cards,Austin,Texas,US,0,2026-09-17T13:44:07Z
+2231,@guest_identity_queue_01,OTA Surveillance Engine - Guest Identity 01,instagram,1884,0.0335,59.83,Payments,Nashville,Tennessee,US,0,2026-09-17T13:44:07Z
+2232,@service recovery_alerts_01,Service Recovery Detection Pipeline 01,tiktok,2955,0.0311,61.13,OTA,Portland,Oregon,US,0,2026-09-17T13:44:07Z
+2233,@availability_monitor_01,Availability Operations Risk Monitor 01,twitter,62427,0.072,95.97,Guest Identity,Boston,Massachusetts,US,0,2026-09-17T13:44:07Z
+2234,@demand_rules_01,Demand Activity Monitor - Demand 01,youtube,6305,0.1018,98.65,Service Recovery Operations,Atlanta,Georgia,US,0,2026-09-17T13:44:07Z
+2235,@revenue operations_daily_01,Revenue Operations Brand Standard Feed 01,threads,6623,0.0607,75.6,Availability Operations Risk,Dallas,Texas,US,0,2026-09-17T13:44:07Z
+2236,@property_ops_01,guest Revenue Impact Engine - Property 01,instagram,21942,0.0745,96.91,Demand Management,San Diego,California,US,0,2026-09-17T13:44:07Z
+2237,@guestexp_signal_01,Guest Revenue Impact Engine - Guest Experience 01,tiktok,1845,0.088,83.27,Revenue Operations,Minneapolis,Minnesota,US,0,2026-09-17T13:44:07Z
+2238,@property property_watch_01,Demand Activity Monitor - Property Portfolio 01,twitter,9976,0.0765,85.02,Property Operations,Detroit,Michigan,US,0,2026-09-17T13:44:07Z
+2239,@booking deposit_trends_01,guest Revenue Impact Engine - Booking Deposits 01,youtube,9123,0.0362,71.62,Guest Experience Desk,Las Vegas,Nevada,US,0,2026-09-17T13:44:07Z
+2240,@group booking_servicing_01,guest Revenue Impact Engine - Lending 01,threads,9026,0.0951,93.79,Property Portfolio Strategy,Brooklyn,New York,US,0,2026-09-17T13:44:07Z
+2241,@sec_updates_02,Channel Intelligence Stream - Brand Standards 02,instagram,3774,0.0615,80.61,Brand Standards,New York,New York,US,0,2026-09-17T13:44:07Z
+2242,@brandqa_watch_02,Brand QA Monitoring Feed 02,tiktok,83369,0.0622,90.24,Brand QA,Los Angeles,California,US,0,2026-09-17T13:44:07Z
+2243,@brand_standard_bulletin_02,Channel Intelligence Stream - Property Safety 02,twitter,85062,0.0573,85.12,Property Safety,Chicago,Illinois,US,0,2026-09-17T13:44:07Z
+2244,@occupancy_watch_02,Channel Intelligence Stream - Operations Control 02,youtube,9133,0.0775,85.5,Operations Control,Houston,Texas,US,0,2026-09-17T13:44:07Z
+2245,@fed_rateairport-transfer_02,Channel Intelligence Stream - Demand Forecast 02,threads,26237,0.0264,68.42,Demand Forecast,Phoenix,Arizona,US,0,2026-09-17T13:44:07Z
+2246,@revenue_pulse_02,guest Revenue Impact Engine - Revenue 02,instagram,17305,0.0471,82.26,Rate Plans,San Francisco,California,US,0,2026-09-17T13:44:07Z
+2247,@group booking_signal_02,guest Revenue Impact Engine - Group Booking 02,tiktok,8926,0.1031,94.94,Revenue Operations Risk,Miami,Florida,US,0,2026-09-17T13:44:07Z
+2248,@luxury guestdesk_02,guest Revenue Impact Engine - Luxury Guest 02,twitter,37898,0.0655,90.3,Group Sales,Seattle,Washington,US,0,2026-09-17T13:44:07Z
+2249,@payments_ops_02,Demand Activity Monitor - Payments 02,youtube,4482,0.1016,91.6,Luxury Guest Management,Denver,Colorado,US,0,2026-09-17T13:44:07Z
+2250,@guest_safety_watch_02,OTA Surveillance Engine 02,threads,63731,0.0519,81.88,Cards,Austin,Texas,US,0,2026-09-17T13:44:07Z
+2251,@guest_identity_queue_02,OTA Surveillance Engine - Guest Identity 02,instagram,536083,0.0277,88.26,Payments,Nashville,Tennessee,US,1,2026-09-17T13:44:07Z
+2252,@service recovery_alerts_02,Service Recovery Detection Pipeline 02,tiktok,8576,0.1177,100,OTA,Portland,Oregon,US,0,2026-09-17T13:44:07Z
+2253,@availability_monitor_02,Availability Operations Risk Monitor 02,twitter,7341,0.0926,89.01,Guest Identity,Boston,Massachusetts,US,0,2026-09-17T13:44:07Z
+2254,@demand_rules_02,Demand Activity Monitor - Demand 02,youtube,509575,0.0215,84.22,Service Recovery Operations,Atlanta,Georgia,US,1,2026-09-17T13:44:07Z
+2255,@revenue operations_daily_02,Revenue Operations Brand Standard Feed 02,threads,2336,0.032,60.49,Availability Operations Risk,Dallas,Texas,US,0,2026-09-17T13:44:07Z
+2256,@property_ops_02,guest Revenue Impact Engine - Property 02,instagram,90248,0.0539,80.52,Demand Management,San Diego,California,US,0,2026-09-17T13:44:07Z
+2257,@guestexp_signal_02,Guest Revenue Impact Engine - Guest Experience 02,tiktok,43754,0.0371,81.17,Revenue Operations,Minneapolis,Minnesota,US,0,2026-09-17T13:44:07Z
+2258,@property property_watch_02,Demand Activity Monitor - Property Portfolio 02,twitter,71571,0.0657,90.66,Property Operations,Detroit,Michigan,US,0,2026-09-17T13:44:07Z
+2259,@booking deposit_trends_02,guest Revenue Impact Engine - Booking Deposits 02,youtube,563253,0.0407,94.21,Guest Experience Desk,Las Vegas,Nevada,US,1,2026-09-17T13:44:07Z
+2260,@group booking_servicing_02,guest Revenue Impact Engine - Lending 02,threads,27525,0.0475,72.77,Property Portfolio Strategy,Brooklyn,New York,US,0,2026-09-17T13:44:07Z
+2261,@sec_updates_03,Channel Intelligence Stream - Brand Standards 03,instagram,617113,0.0441,96.66,Brand Standards,New York,New York,US,1,2026-09-17T13:44:07Z
+2262,@brandqa_watch_03,Brand QA Monitoring Feed 03,tiktok,11615,0.031,69.01,Brand QA,Los Angeles,California,US,0,2026-09-17T13:44:07Z
+2263,@brand_standard_bulletin_03,Channel Intelligence Stream - Property Safety 03,twitter,5486,0.0944,87.07,Property Safety,Chicago,Illinois,US,0,2026-09-17T13:44:07Z
+2264,@occupancy_watch_03,Channel Intelligence Stream - Operations Control 03,youtube,68500,0.0706,91.8,Operations Control,Houston,Texas,US,0,2026-09-17T13:44:07Z
+2265,@fed_rateairport-transfer_03,Channel Intelligence Stream - Demand Forecast 03,threads,13113440,0.01,83.84,Demand Forecast,Phoenix,Arizona,US,1,2026-09-17T13:44:07Z
+2266,@revenue_pulse_03,guest Revenue Impact Engine - Revenue 03,instagram,74785,0.0584,86.91,Rate Plans,San Francisco,California,US,0,2026-09-17T13:44:07Z
+2267,@group booking_signal_03,guest Revenue Impact Engine - Group Booking 03,tiktok,60707,0.0423,76.63,Revenue Operations Risk,Miami,Florida,US,0,2026-09-17T13:44:07Z
+2268,@luxury guestdesk_03,guest Revenue Impact Engine - Luxury Guest 03,twitter,9805,0.0647,84.17,Group Sales,Seattle,Washington,US,0,2026-09-17T13:44:07Z
+2269,@payments_ops_03,Demand Activity Monitor - Payments 03,youtube,9843,0.074,89.37,Luxury Guest Management,Denver,Colorado,US,0,2026-09-17T13:44:07Z
+2270,@guest_safety_watch_03,OTA Surveillance Engine 03,threads,816891,0.0209,79.09,Cards,Austin,Texas,US,1,2026-09-17T13:44:07Z
+2271,@guest_identity_queue_03,OTA Surveillance Engine - Guest Identity 03,instagram,4838,0.088,82.74,Payments,Nashville,Tennessee,US,0,2026-09-17T13:44:07Z
+2272,@service recovery_alerts_03,Service Recovery Detection Pipeline 03,tiktok,12017,0.0512,74.88,OTA,Portland,Oregon,US,0,2026-09-17T13:44:07Z
+2273,@availability_monitor_03,Availability Operations Risk Monitor 03,twitter,35610,0.0582,90.5,Guest Identity,Boston,Massachusetts,US,0,2026-09-17T13:44:07Z
+2274,@demand_rules_03,Demand Activity Monitor - Demand 03,youtube,65652,0.079,100,Service Recovery Operations,Atlanta,Georgia,US,0,2026-09-17T13:44:07Z
+2275,@revenue operations_daily_03,Revenue Operations Brand Standard Feed 03,threads,6292,0.0387,71.86,Availability Operations Risk,Dallas,Texas,US,0,2026-09-17T13:44:07Z
+2276,@property_ops_03,guest Revenue Impact Engine - Property 03,instagram,2430,0.0898,81.99,Demand Management,San Diego,California,US,0,2026-09-17T13:44:07Z
+2277,@guestexp_signal_03,Guest Revenue Impact Engine - Guest Experience 03,tiktok,934165,0.0317,86.89,Revenue Operations,Minneapolis,Minnesota,US,1,2026-09-17T13:44:07Z
+2278,@property property_watch_03,Demand Activity Monitor - Property Portfolio 03,twitter,4304,0.0673,74.41,Property Operations,Detroit,Michigan,US,0,2026-09-17T13:44:07Z
+2279,@booking deposit_trends_03,guest Revenue Impact Engine - Booking Deposits 03,youtube,1725,0.0626,69.79,Guest Experience Desk,Las Vegas,Nevada,US,0,2026-09-17T13:44:07Z
+2280,@group booking_servicing_03,guest Revenue Impact Engine - Lending 03,threads,62836,0.0564,78.66,Property Portfolio Strategy,Brooklyn,New York,US,0,2026-09-17T13:44:07Z
+2281,@sec_updates_04,Channel Intelligence Stream - Brand Standards 04,instagram,696723,0.0234,79.61,Brand Standards,New York,New York,US,1,2026-09-17T13:44:07Z
+2282,@brandqa_watch_04,Brand QA Monitoring Feed 04,tiktok,725374,0.0257,88.88,Brand QA,Los Angeles,California,US,1,2026-09-17T13:44:07Z
+2283,@brand_standard_bulletin_04,Channel Intelligence Stream - Property Safety 04,twitter,44952,0.0563,77.54,Property Safety,Chicago,Illinois,US,0,2026-09-17T13:44:07Z
+2284,@occupancy_watch_04,Channel Intelligence Stream - Operations Control 04,youtube,319361,0.028,74.74,Operations Control,Houston,Texas,US,0,2026-09-17T13:44:07Z
+2285,@fed_rateairport-transfer_04,Channel Intelligence Stream - Demand Forecast 04,threads,5602,0.0388,60.54,Demand Forecast,Phoenix,Arizona,US,0,2026-09-17T13:44:07Z
+2286,@revenue_pulse_04,guest Revenue Impact Engine - Revenue 04,instagram,7110,0.1153,100,Rate Plans,San Francisco,California,US,0,2026-09-17T13:44:07Z
+2287,@group booking_signal_04,guest Revenue Impact Engine - Group Booking 04,tiktok,7014,0.0837,89.64,Revenue Operations Risk,Miami,Florida,US,0,2026-09-17T13:44:07Z
+2288,@luxury guestdesk_04,guest Revenue Impact Engine - Luxury Guest 04,twitter,4793904,0.0155,81.19,Group Sales,Seattle,Washington,US,1,2026-09-17T13:44:07Z
+2289,@payments_ops_04,Demand Activity Monitor - Payments 04,youtube,22221,0.0287,66.12,Luxury Guest Management,Denver,Colorado,US,0,2026-09-17T13:44:07Z
+2290,@guest_safety_watch_04,OTA Surveillance Engine 04,threads,93758,0.0417,87.56,Cards,Austin,Texas,US,0,2026-09-17T13:44:07Z
+2291,@guest_identity_queue_04,OTA Surveillance Engine - Guest Identity 04,instagram,875656,0.0217,88.48,Payments,Nashville,Tennessee,US,1,2026-09-17T13:44:07Z
+2292,@service recovery_alerts_04,Service Recovery Detection Pipeline 04,tiktok,7898,0.085,87.16,OTA,Portland,Oregon,US,0,2026-09-17T13:44:07Z
+2293,@availability_monitor_04,Availability Operations Risk Monitor 04,twitter,2234,0.0385,67.44,Guest Identity,Boston,Massachusetts,US,0,2026-09-17T13:44:07Z
+2294,@demand_rules_04,Demand Activity Monitor - Demand 04,youtube,97139,0.0454,88.16,Service Recovery Operations,Atlanta,Georgia,US,0,2026-09-17T13:44:07Z
+2295,@revenue operations_daily_04,Revenue Operations Brand Standard Feed 04,threads,14434057,0.0154,97.91,Availability Operations Risk,Dallas,Texas,US,1,2026-09-17T13:44:07Z
+2296,@property_ops_04,guest Revenue Impact Engine - Property 04,instagram,67907,0.036,76.32,Demand Management,San Diego,California,US,0,2026-09-17T13:44:07Z
+2297,@guestexp_signal_04,Guest Revenue Impact Engine - Guest Experience 04,tiktok,6207,0.0675,75.57,Revenue Operations,Minneapolis,Minnesota,US,0,2026-09-17T13:44:07Z
+2298,@property property_watch_04,Demand Activity Monitor - Property Portfolio 04,twitter,8857,0.0692,86.97,Property Operations,Detroit,Michigan,US,0,2026-09-17T13:44:07Z
+2299,@booking deposit_trends_04,guest Revenue Impact Engine - Booking Deposits 04,youtube,10699,0.0673,86.5,Guest Experience Desk,Las Vegas,Nevada,US,0,2026-09-17T13:44:07Z
+2300,@group booking_servicing_04,guest Revenue Impact Engine - Lending 04,threads,98266,0.0366,80.17,Property Portfolio Strategy,Brooklyn,New York,US,0,2026-09-17T13:44:07Z
+2301,@sec_updates_05,Channel Intelligence Stream - Brand Standards 05,instagram,9487,0.0717,89.28,Brand Standards,New York,New York,US,0,2026-09-17T13:44:07Z
+2302,@brandqa_watch_05,Brand QA Monitoring Feed 05,tiktok,6852,0.0604,75.38,Brand QA,Los Angeles,California,US,0,2026-09-17T13:44:07Z
+2303,@brand_standard_bulletin_05,Channel Intelligence Stream - Property Safety 05,twitter,4650,0.0497,70.27,Property Safety,Chicago,Illinois,US,0,2026-09-17T13:44:07Z
+2304,@occupancy_watch_05,Channel Intelligence Stream - Operations Control 05,youtube,15251,0.0782,86.63,Operations Control,Houston,Texas,US,0,2026-09-17T13:44:07Z
+2305,@fed_rateairport-transfer_05,Channel Intelligence Stream - Demand Forecast 05,threads,2854,0.0862,84.05,Demand Forecast,Phoenix,Arizona,US,0,2026-09-17T13:44:07Z
+2306,@revenue_pulse_05,guest Revenue Impact Engine - Revenue 05,instagram,3956,0.077,88.11,Rate Plans,San Francisco,California,US,0,2026-09-17T13:44:07Z
+2307,@group booking_signal_05,guest Revenue Impact Engine - Group Booking 05,tiktok,156670,0.0329,79.11,Revenue Operations Risk,Miami,Florida,US,0,2026-09-17T13:44:07Z
+2308,@luxury guestdesk_05,guest Revenue Impact Engine - Luxury Guest 05,twitter,2163,0.111,95.1,Group Sales,Seattle,Washington,US,0,2026-09-17T13:44:07Z
+2309,@payments_ops_05,Demand Activity Monitor - Payments 05,youtube,85246,0.04,72.35,Luxury Guest Management,Denver,Colorado,US,0,2026-09-17T13:44:07Z
+2310,@guest_safety_watch_05,OTA Surveillance Engine 05,threads,92349,0.0389,73.85,Cards,Austin,Texas,US,0,2026-09-17T13:44:07Z
+2311,@guest_identity_queue_05,OTA Surveillance Engine - Guest Identity 05,instagram,5177,0.0869,95.89,Payments,Nashville,Tennessee,US,0,2026-09-17T13:44:07Z
+2312,@service recovery_alerts_05,Service Recovery Detection Pipeline 05,tiktok,9852,0.1129,97.49,OTA,Portland,Oregon,US,0,2026-09-17T13:44:07Z
+2313,@availability_monitor_05,Availability Operations Risk Monitor 05,twitter,1417,0.0506,70.96,Guest Identity,Boston,Massachusetts,US,0,2026-09-17T13:44:07Z
+2314,@demand_rules_05,Demand Activity Monitor - Demand 05,youtube,5299,0.0875,88.81,Service Recovery Operations,Atlanta,Georgia,US,0,2026-09-17T13:44:07Z
+2315,@revenue operations_daily_05,Revenue Operations Brand Standard Feed 05,threads,65292,0.0687,93.5,Availability Operations Risk,Dallas,Texas,US,0,2026-09-17T13:44:07Z
+2316,@property_ops_05,guest Revenue Impact Engine - Property 05,instagram,73658,0.0517,83.61,Demand Management,San Diego,California,US,0,2026-09-17T13:44:07Z
+2317,@guestexp_signal_05,Guest Revenue Impact Engine - Guest Experience 05,tiktok,4916,0.1162,100,Revenue Operations,Minneapolis,Minnesota,US,0,2026-09-17T13:44:07Z
+2318,@property property_watch_05,Demand Activity Monitor - Property Portfolio 05,twitter,60145,0.0495,82.6,Property Operations,Detroit,Michigan,US,0,2026-09-17T13:44:07Z
+2319,@booking deposit_trends_05,guest Revenue Impact Engine - Booking Deposits 05,youtube,32849,0.073,86.31,Guest Experience Desk,Las Vegas,Nevada,US,0,2026-09-17T13:44:07Z
+2320,@group booking_servicing_05,guest Revenue Impact Engine - Lending 05,threads,2363,0.1179,100,Property Portfolio Strategy,Brooklyn,New York,US,0,2026-09-17T13:44:07Z
+2321,@sec_updates_06,Channel Intelligence Stream - Brand Standards 06,instagram,245920,0.0367,84.7,Brand Standards,New York,New York,US,0,2026-09-17T13:44:07Z
+2322,@brandqa_watch_06,Brand QA Monitoring Feed 06,tiktok,9762,0.0823,88.13,Brand QA,Los Angeles,California,US,0,2026-09-17T13:44:07Z
+2323,@brand_standard_bulletin_06,Channel Intelligence Stream - Property Safety 06,twitter,4217,0.0485,73.21,Property Safety,Chicago,Illinois,US,0,2026-09-17T13:44:07Z
+2324,@occupancy_watch_06,Channel Intelligence Stream - Operations Control 06,youtube,4704,0.1195,100,Operations Control,Houston,Texas,US,0,2026-09-17T13:44:07Z
+2325,@fed_rateairport-transfer_06,Channel Intelligence Stream - Demand Forecast 06,threads,84601,0.0781,100,Demand Forecast,Phoenix,Arizona,US,0,2026-09-17T13:44:07Z
+2326,@revenue_pulse_06,guest Revenue Impact Engine - Revenue 06,instagram,901538,0.0242,77.36,Rate Plans,San Francisco,California,US,1,2026-09-17T13:44:07Z
+2327,@group booking_signal_06,guest Revenue Impact Engine - Group Booking 06,tiktok,1435,0.0704,81.28,Revenue Operations Risk,Miami,Florida,US,0,2026-09-17T13:44:07Z
+2328,@luxury guestdesk_06,guest Revenue Impact Engine - Luxury Guest 06,twitter,84089,0.0491,83.86,Group Sales,Seattle,Washington,US,0,2026-09-17T13:44:07Z
+2329,@payments_ops_06,Demand Activity Monitor - Payments 06,youtube,89858,0.0749,91.43,Luxury Guest Management,Denver,Colorado,US,0,2026-09-17T13:44:07Z
+2330,@guest_safety_watch_06,OTA Surveillance Engine 06,threads,3431,0.0386,69.87,Cards,Austin,Texas,US,0,2026-09-17T13:44:07Z
+2331,@guest_identity_queue_06,OTA Surveillance Engine - Guest Identity 06,instagram,39057,0.0548,79.46,Payments,Nashville,Tennessee,US,0,2026-09-17T13:44:07Z
+2332,@service recovery_alerts_06,Service Recovery Detection Pipeline 06,tiktok,8048,0.1043,100,OTA,Portland,Oregon,US,0,2026-09-17T13:44:07Z
+2333,@availability_monitor_06,Availability Operations Risk Monitor 06,twitter,7988,0.0688,87.07,Guest Identity,Boston,Massachusetts,US,0,2026-09-17T13:44:07Z
+2334,@demand_rules_06,Demand Activity Monitor - Demand 06,youtube,6754,0.1129,100,Service Recovery Operations,Atlanta,Georgia,US,0,2026-09-17T13:44:07Z
+2335,@revenue operations_daily_06,Revenue Operations Brand Standard Feed 06,threads,250289,0.0333,76.21,Availability Operations Risk,Dallas,Texas,US,0,2026-09-17T13:44:07Z
+2336,@property_ops_06,guest Revenue Impact Engine - Property 06,instagram,865261,0.0167,71.72,Demand Management,San Diego,California,US,1,2026-09-17T13:44:07Z
+2337,@guestexp_signal_06,Guest Revenue Impact Engine - Guest Experience 06,tiktok,84982,0.0477,87.31,Revenue Operations,Minneapolis,Minnesota,US,0,2026-09-17T13:44:07Z
+2338,@property property_watch_06,Demand Activity Monitor - Property Portfolio 06,twitter,68341,0.0603,91.51,Property Operations,Detroit,Michigan,US,0,2026-09-17T13:44:07Z
+2339,@booking deposit_trends_06,guest Revenue Impact Engine - Booking Deposits 06,youtube,6828,0.1104,97.28,Guest Experience Desk,Las Vegas,Nevada,US,0,2026-09-17T13:44:07Z
+2340,@group booking_servicing_06,guest Revenue Impact Engine - Lending 06,threads,754246,0.0386,89.21,Property Portfolio Strategy,Brooklyn,New York,US,1,2026-09-17T13:44:07Z
+2341,@sec_updates_07,Channel Intelligence Stream - Brand Standards 07,instagram,7136,0.1019,96.51,Brand Standards,New York,New York,US,0,2026-09-17T13:44:07Z
+2342,@brandqa_watch_07,Brand QA Monitoring Feed 07,tiktok,81812,0.0498,88.26,Brand QA,Los Angeles,California,US,0,2026-09-17T13:44:07Z
+2343,@brand_standard_bulletin_07,Channel Intelligence Stream - Property Safety 07,twitter,20073,0.0699,92.03,Property Safety,Chicago,Illinois,US,0,2026-09-17T13:44:07Z
+2344,@occupancy_watch_07,Channel Intelligence Stream - Operations Control 07,youtube,1668,0.0368,60.28,Operations Control,Houston,Texas,US,0,2026-09-17T13:44:07Z
+2345,@fed_rateairport-transfer_07,Channel Intelligence Stream - Demand Forecast 07,threads,47675,0.0707,93.77,Demand Forecast,Phoenix,Arizona,US,0,2026-09-17T13:44:07Z
+2346,@revenue_pulse_07,guest Revenue Impact Engine - Revenue 07,instagram,72439,0.0769,98.89,Rate Plans,San Francisco,California,US,0,2026-09-17T13:44:07Z
+2347,@group booking_signal_07,guest Revenue Impact Engine - Group Booking 07,tiktok,51330,0.0312,66.31,Revenue Operations Risk,Miami,Florida,US,0,2026-09-17T13:44:07Z
+2348,@luxury guestdesk_07,guest Revenue Impact Engine - Luxury Guest 07,twitter,43850,0.03,70.4,Group Sales,Seattle,Washington,US,0,2026-09-17T13:44:07Z
+2349,@payments_ops_07,Demand Activity Monitor - Payments 07,youtube,64111,0.0691,97.82,Luxury Guest Management,Denver,Colorado,US,0,2026-09-17T13:44:07Z
+2350,@guest_safety_watch_07,OTA Surveillance Engine 07,threads,7956,0.039,68.87,Cards,Austin,Texas,US,0,2026-09-17T13:44:07Z
+2351,@guest_identity_queue_07,OTA Surveillance Engine - Guest Identity 07,instagram,111378,0.03,75.48,Payments,Nashville,Tennessee,US,0,2026-09-17T13:44:07Z
+2352,@service recovery_alerts_07,Service Recovery Detection Pipeline 07,tiktok,8309,0.0685,82.94,OTA,Portland,Oregon,US,0,2026-09-17T13:44:07Z
+2353,@availability_monitor_07,Availability Operations Risk Monitor 07,twitter,2495,0.1025,92.12,Guest Identity,Boston,Massachusetts,US,0,2026-09-17T13:44:07Z
+2354,@demand_rules_07,Demand Activity Monitor - Demand 07,youtube,810707,0.0235,79.77,Service Recovery Operations,Atlanta,Georgia,US,1,2026-09-17T13:44:07Z
+2355,@revenue operations_daily_07,Revenue Operations Brand Standard Feed 07,threads,9857127,0.015,93.11,Availability Operations Risk,Dallas,Texas,US,1,2026-09-17T13:44:07Z
+2356,@property_ops_07,guest Revenue Impact Engine - Property 07,instagram,520064,0.0163,72.9,Demand Management,San Diego,California,US,1,2026-09-17T13:44:07Z
+2357,@guestexp_signal_07,Guest Revenue Impact Engine - Guest Experience 07,tiktok,9643,0.0843,90.43,Revenue Operations,Minneapolis,Minnesota,US,0,2026-09-17T13:44:07Z
+2358,@property property_watch_07,Demand Activity Monitor - Property Portfolio 07,twitter,82395,0.0614,88.18,Property Operations,Detroit,Michigan,US,0,2026-09-17T13:44:07Z
+2359,@booking deposit_trends_07,guest Revenue Impact Engine - Booking Deposits 07,youtube,4665,0.0526,63.96,Guest Experience Desk,Las Vegas,Nevada,US,0,2026-09-17T13:44:07Z
+2360,@group booking_servicing_07,guest Revenue Impact Engine - Lending 07,threads,119177,0.0182,64.35,Property Portfolio Strategy,Brooklyn,New York,US,0,2026-09-17T13:44:07Z
+2361,@sec_updates_08,Channel Intelligence Stream - Brand Standards 08,instagram,5760,0.0791,92.22,Brand Standards,New York,New York,US,0,2026-09-17T13:44:07Z
+2362,@brandqa_watch_08,Brand QA Monitoring Feed 08,tiktok,1710,0.1048,92.59,Brand QA,Los Angeles,California,US,0,2026-09-17T13:44:07Z
+2363,@brand_standard_bulletin_08,Channel Intelligence Stream - Property Safety 08,twitter,9139,0.1056,97.22,Property Safety,Chicago,Illinois,US,0,2026-09-17T13:44:07Z
+2364,@occupancy_watch_08,Channel Intelligence Stream - Operations Control 08,youtube,5194,0.0985,93.43,Operations Control,Houston,Texas,US,0,2026-09-17T13:44:07Z
+2365,@fed_rateairport-transfer_08,Channel Intelligence Stream - Demand Forecast 08,threads,6344,0.0359,65.31,Demand Forecast,Phoenix,Arizona,US,0,2026-09-17T13:44:07Z
+2366,@revenue_pulse_08,guest Revenue Impact Engine - Revenue 08,instagram,9563,0.1139,100,Rate Plans,San Francisco,California,US,0,2026-09-17T13:44:07Z
+2367,@group booking_signal_08,guest Revenue Impact Engine - Group Booking 08,tiktok,5848,0.0401,67.96,Revenue Operations Risk,Miami,Florida,US,0,2026-09-17T13:44:07Z
+2368,@luxury guestdesk_08,guest Revenue Impact Engine - Luxury Guest 08,twitter,76624,0.0433,76.58,Group Sales,Seattle,Washington,US,0,2026-09-17T13:44:07Z
+2369,@payments_ops_08,Demand Activity Monitor - Payments 08,youtube,5788,0.0739,88.28,Luxury Guest Management,Denver,Colorado,US,0,2026-09-17T13:44:07Z
+2370,@guest_safety_watch_08,OTA Surveillance Engine 08,threads,169138,0.0333,73.68,Cards,Austin,Texas,US,0,2026-09-17T13:44:07Z
+2371,@guest_identity_queue_08,OTA Surveillance Engine - Guest Identity 08,instagram,2878,0.0503,60.43,Payments,Nashville,Tennessee,US,0,2026-09-17T13:44:07Z
+2372,@service recovery_alerts_08,Service Recovery Detection Pipeline 08,tiktok,184973,0.0259,69.88,OTA,Portland,Oregon,US,0,2026-09-17T13:44:07Z
+2373,@availability_monitor_08,Availability Operations Risk Monitor 08,twitter,1196,0.0689,73.11,Guest Identity,Boston,Massachusetts,US,0,2026-09-17T13:44:07Z
+2374,@demand_rules_08,Demand Activity Monitor - Demand 08,youtube,706439,0.0267,81.44,Service Recovery Operations,Atlanta,Georgia,US,1,2026-09-17T13:44:07Z
+2375,@revenue operations_daily_08,Revenue Operations Brand Standard Feed 08,threads,597559,0.0282,86.29,Availability Operations Risk,Dallas,Texas,US,1,2026-09-17T13:44:07Z
+2376,@property_ops_08,guest Revenue Impact Engine - Property 08,instagram,1493,0.0405,53.19,Demand Management,San Diego,California,US,0,2026-09-17T13:44:07Z
+2377,@guestexp_signal_08,Guest Revenue Impact Engine - Guest Experience 08,tiktok,2285,0.0659,70.08,Revenue Operations,Minneapolis,Minnesota,US,0,2026-09-17T13:44:07Z
+2378,@property property_watch_08,Demand Activity Monitor - Property Portfolio 08,twitter,7386557,0.0215,96.47,Property Operations,Detroit,Michigan,US,1,2026-09-17T13:44:07Z
+2379,@booking deposit_trends_08,guest Revenue Impact Engine - Booking Deposits 08,youtube,2718,0.0373,63.59,Guest Experience Desk,Las Vegas,Nevada,US,0,2026-09-17T13:44:07Z
+2380,@group booking_servicing_08,guest Revenue Impact Engine - Lending 08,threads,5144,0.0562,69.56,Property Portfolio Strategy,Brooklyn,New York,US,0,2026-09-17T13:44:07Z
+2381,@sec_updates_09,Channel Intelligence Stream - Brand Standards 09,instagram,89451,0.065,93.36,Brand Standards,New York,New York,US,0,2026-09-17T13:44:07Z
+2382,@brandqa_watch_09,Brand QA Monitoring Feed 09,tiktok,90976,0.0703,90.35,Brand QA,Los Angeles,California,US,0,2026-09-17T13:44:07Z
+2383,@brand_standard_bulletin_09,Channel Intelligence Stream - Property Safety 09,twitter,50566,0.0253,62.29,Property Safety,Chicago,Illinois,US,0,2026-09-17T13:44:07Z
+2384,@occupancy_watch_09,Channel Intelligence Stream - Operations Control 09,youtube,3355,0.1086,92.99,Operations Control,Houston,Texas,US,0,2026-09-17T13:44:07Z
+2385,@fed_rateairport-transfer_09,Channel Intelligence Stream - Demand Forecast 09,threads,2909,0.1166,100,Demand Forecast,Phoenix,Arizona,US,0,2026-09-17T13:44:07Z
+2386,@revenue_pulse_09,guest Revenue Impact Engine - Revenue 09,instagram,86899,0.0592,88.84,Rate Plans,San Francisco,California,US,0,2026-09-17T13:44:07Z
+2387,@group booking_signal_09,guest Revenue Impact Engine - Group Booking 09,tiktok,28555,0.0446,78.36,Revenue Operations Risk,Miami,Florida,US,0,2026-09-17T13:44:07Z
+2388,@luxury guestdesk_09,guest Revenue Impact Engine - Luxury Guest 09,twitter,2177,0.0878,78.61,Group Sales,Seattle,Washington,US,0,2026-09-17T13:44:07Z
+2389,@payments_ops_09,Demand Activity Monitor - Payments 09,youtube,39296,0.0647,82.71,Luxury Guest Management,Denver,Colorado,US,0,2026-09-17T13:44:07Z
+2390,@guest_safety_watch_09,OTA Surveillance Engine 09,threads,32550,0.0302,72.4,Cards,Austin,Texas,US,0,2026-09-17T13:44:07Z
+2391,@guest_identity_queue_09,OTA Surveillance Engine - Guest Identity 09,instagram,490373,0.0225,83.08,Payments,Nashville,Tennessee,US,0,2026-09-17T13:44:07Z
+2392,@service recovery_alerts_09,Service Recovery Detection Pipeline 09,tiktok,5568,0.0873,91.63,OTA,Portland,Oregon,US,0,2026-09-17T13:44:07Z
+2393,@availability_monitor_09,Availability Operations Risk Monitor 09,twitter,2494,0.0727,76.35,Guest Identity,Boston,Massachusetts,US,0,2026-09-17T13:44:07Z
+2394,@demand_rules_09,Demand Activity Monitor - Demand 09,youtube,3105,0.0325,59.52,Service Recovery Operations,Atlanta,Georgia,US,0,2026-09-17T13:44:07Z
+2395,@revenue operations_daily_09,Revenue Operations Brand Standard Feed 09,threads,782810,0.0357,87.24,Availability Operations Risk,Dallas,Texas,US,1,2026-09-17T13:44:07Z
+2396,@property_ops_09,guest Revenue Impact Engine - Property 09,instagram,25754,0.0437,79.91,Demand Management,San Diego,California,US,0,2026-09-17T13:44:07Z
+2397,@guestexp_signal_09,Guest Revenue Impact Engine - Guest Experience 09,tiktok,186874,0.0355,75.27,Revenue Operations,Minneapolis,Minnesota,US,0,2026-09-17T13:44:07Z
+2398,@property property_watch_09,Demand Activity Monitor - Property Portfolio 09,twitter,50165,0.0475,83.17,Property Operations,Detroit,Michigan,US,0,2026-09-17T13:44:07Z
+2399,@booking deposit_trends_09,guest Revenue Impact Engine - Booking Deposits 09,youtube,71195,0.0661,89.66,Guest Experience Desk,Las Vegas,Nevada,US,0,2026-09-17T13:44:07Z
+2400,@group booking_servicing_09,guest Revenue Impact Engine - Lending 09,threads,4367,0.0712,85.72,Property Portfolio Strategy,Brooklyn,New York,US,0,2026-09-17T13:44:07Z
+2401,@sec_updates_10,Channel Intelligence Stream - Brand Standards 10,instagram,2460,0.1092,88.69,Brand Standards,New York,New York,US,0,2026-09-17T13:44:07Z
+2402,@brandqa_watch_10,Brand QA Monitoring Feed 10,tiktok,52375,0.0679,91.33,Brand QA,Los Angeles,California,US,0,2026-09-17T13:44:07Z
+2403,@brand_standard_bulletin_10,Channel Intelligence Stream - Property Safety 10,twitter,83252,0.0656,90.18,Property Safety,Chicago,Illinois,US,0,2026-09-17T13:44:07Z
+2404,@occupancy_watch_10,Channel Intelligence Stream - Operations Control 10,youtube,81932,0.0633,90.81,Operations Control,Houston,Texas,US,0,2026-09-17T13:44:07Z
+2405,@fed_rateairport-transfer_10,Channel Intelligence Stream - Demand Forecast 10,threads,444724,0.0255,81.11,Demand Forecast,Phoenix,Arizona,US,0,2026-09-17T13:44:07Z
+2406,@revenue_pulse_10,guest Revenue Impact Engine - Revenue 10,instagram,2303,0.1172,96.19,Rate Plans,San Francisco,California,US,0,2026-09-17T13:44:07Z
+2407,@group booking_signal_10,guest Revenue Impact Engine - Group Booking 10,tiktok,137541,0.0217,71.21,Revenue Operations Risk,Miami,Florida,US,0,2026-09-17T13:44:07Z
+2408,@luxury guestdesk_10,guest Revenue Impact Engine - Luxury Guest 10,twitter,59271,0.0508,79.48,Group Sales,Seattle,Washington,US,0,2026-09-17T13:44:07Z
+2409,@payments_ops_10,Demand Activity Monitor - Payments 10,youtube,5739,0.0809,93.27,Luxury Guest Management,Denver,Colorado,US,0,2026-09-17T13:44:07Z
+2410,@guest_safety_watch_10,OTA Surveillance Engine 10,threads,27744,0.0651,82.34,Cards,Austin,Texas,US,0,2026-09-17T13:44:07Z
+2411,@guest_identity_queue_10,OTA Surveillance Engine - Guest Identity 10,instagram,79290,0.0799,100,Payments,Nashville,Tennessee,US,0,2026-09-17T13:44:07Z
+2412,@service recovery_alerts_10,Service Recovery Detection Pipeline 10,tiktok,4215,0.0505,66.83,OTA,Portland,Oregon,US,0,2026-09-17T13:44:07Z
+2413,@availability_monitor_10,Availability Operations Risk Monitor 10,twitter,7488,0.0427,65.99,Guest Identity,Boston,Massachusetts,US,0,2026-09-17T13:44:07Z
+2414,@demand_rules_10,Demand Activity Monitor - Demand 10,youtube,3230,0.0609,71.53,Service Recovery Operations,Atlanta,Georgia,US,0,2026-09-17T13:44:07Z
+2415,@revenue operations_daily_10,Revenue Operations Brand Standard Feed 10,threads,5161709,0.0088,89.13,Availability Operations Risk,Dallas,Texas,US,1,2026-09-17T13:44:07Z
+2416,@property_ops_10,guest Revenue Impact Engine - Property 10,instagram,5833,0.042,69.13,Demand Management,San Diego,California,US,0,2026-09-17T13:44:07Z
+2417,@guestexp_signal_10,Guest Revenue Impact Engine - Guest Experience 10,tiktok,255801,0.0396,77.13,Revenue Operations,Minneapolis,Minnesota,US,0,2026-09-17T13:44:07Z
+2418,@property property_watch_10,Demand Activity Monitor - Property Portfolio 10,twitter,818423,0.029,89.5,Property Operations,Detroit,Michigan,US,1,2026-09-17T13:44:07Z
+2419,@booking deposit_trends_10,guest Revenue Impact Engine - Booking Deposits 10,youtube,2197,0.0457,59.91,Guest Experience Desk,Las Vegas,Nevada,US,0,2026-09-17T13:44:07Z
+2420,@group booking_servicing_10,guest Revenue Impact Engine - Lending 10,threads,978841,0.0189,88.2,Property Portfolio Strategy,Brooklyn,New York,US,1,2026-09-17T13:44:07Z
+2421,@sec_updates_11,Channel Intelligence Stream - Brand Standards 11,instagram,6398,0.0446,63.86,Brand Standards,New York,New York,US,0,2026-09-17T13:44:07Z
+2422,@brandqa_watch_11,Brand QA Monitoring Feed 11,tiktok,1079,0.0332,52.82,Brand QA,Los Angeles,California,US,0,2026-09-17T13:44:07Z
+2423,@brand_standard_bulletin_11,Channel Intelligence Stream - Property Safety 11,twitter,6583,0.0439,62.92,Property Safety,Chicago,Illinois,US,0,2026-09-17T13:44:07Z
+2424,@occupancy_watch_11,Channel Intelligence Stream - Operations Control 11,youtube,9832,0.0528,75.04,Operations Control,Houston,Texas,US,0,2026-09-17T13:44:07Z
+2425,@fed_rateairport-transfer_11,Channel Intelligence Stream - Demand Forecast 11,threads,9319,0.0426,70.27,Demand Forecast,Phoenix,Arizona,US,0,2026-09-17T13:44:07Z
+2426,@revenue_pulse_11,guest Revenue Impact Engine - Revenue 11,instagram,14826,0.0474,70.6,Rate Plans,San Francisco,California,US,0,2026-09-17T13:44:07Z
+2427,@group booking_signal_11,guest Revenue Impact Engine - Group Booking 11,tiktok,73437,0.0262,76.63,Revenue Operations Risk,Miami,Florida,US,0,2026-09-17T13:44:07Z
+2428,@luxury guestdesk_11,guest Revenue Impact Engine - Luxury Guest 11,twitter,4575,0.0778,80.35,Group Sales,Seattle,Washington,US,0,2026-09-17T13:44:07Z
+2429,@payments_ops_11,Demand Activity Monitor - Payments 11,youtube,8690,0.1162,100,Luxury Guest Management,Denver,Colorado,US,0,2026-09-17T13:44:07Z
+2430,@guest_safety_watch_11,OTA Surveillance Engine 11,threads,9467,0.0772,83.91,Cards,Austin,Texas,US,0,2026-09-17T13:44:07Z
+2431,@guest_identity_queue_11,OTA Surveillance Engine - Guest Identity 11,instagram,1984,0.0356,57.42,Payments,Nashville,Tennessee,US,0,2026-09-17T13:44:07Z
+2432,@service recovery_alerts_11,Service Recovery Detection Pipeline 11,tiktok,8439,0.0593,72.49,OTA,Portland,Oregon,US,0,2026-09-17T13:44:07Z
+2433,@availability_monitor_11,Availability Operations Risk Monitor 11,twitter,210156,0.0373,80.61,Guest Identity,Boston,Massachusetts,US,0,2026-09-17T13:44:07Z
+2434,@demand_rules_11,Demand Activity Monitor - Demand 11,youtube,9228,0.0374,71.03,Service Recovery Operations,Atlanta,Georgia,US,0,2026-09-17T13:44:07Z
+2435,@revenue operations_daily_11,Revenue Operations Brand Standard Feed 11,threads,18590,0.0256,71.87,Availability Operations Risk,Dallas,Texas,US,0,2026-09-17T13:44:07Z
+2436,@property_ops_11,guest Revenue Impact Engine - Property 11,instagram,14112,0.0268,68.39,Demand Management,San Diego,California,US,0,2026-09-17T13:44:07Z
+2437,@guestexp_signal_11,Guest Revenue Impact Engine - Guest Experience 11,tiktok,4748,0.0826,81.99,Revenue Operations,Minneapolis,Minnesota,US,0,2026-09-17T13:44:07Z
+2438,@property property_watch_11,Demand Activity Monitor - Property Portfolio 11,twitter,46296,0.0616,88.47,Property Operations,Detroit,Michigan,US,0,2026-09-17T13:44:07Z
+2439,@booking deposit_trends_11,guest Revenue Impact Engine - Booking Deposits 11,youtube,91080,0.0592,82.04,Guest Experience Desk,Las Vegas,Nevada,US,0,2026-09-17T13:44:07Z
+2440,@group booking_servicing_11,guest Revenue Impact Engine - Lending 11,threads,6385,0.1169,99.07,Property Portfolio Strategy,Brooklyn,New York,US,0,2026-09-17T13:44:07Z
+2441,@sec_updates_12,Channel Intelligence Stream - Brand Standards 12,instagram,62037,0.0606,93.36,Brand Standards,New York,New York,US,0,2026-09-17T13:44:07Z
+2442,@brandqa_watch_12,Brand QA Monitoring Feed 12,tiktok,63273,0.0546,82.48,Brand QA,Los Angeles,California,US,0,2026-09-17T13:44:07Z
+2443,@brand_standard_bulletin_12,Channel Intelligence Stream - Property Safety 12,twitter,81377,0.0425,83.99,Property Safety,Chicago,Illinois,US,0,2026-09-17T13:44:07Z
+2444,@occupancy_watch_12,Channel Intelligence Stream - Operations Control 12,youtube,50533,0.0798,98.55,Operations Control,Houston,Texas,US,0,2026-09-17T13:44:07Z
+2445,@fed_rateairport-transfer_12,Channel Intelligence Stream - Demand Forecast 12,threads,4297643,0.0242,94.83,Demand Forecast,Phoenix,Arizona,US,1,2026-09-17T13:44:07Z
+2446,@revenue_pulse_12,guest Revenue Impact Engine - Revenue 12,instagram,2270,0.0888,90.13,Rate Plans,San Francisco,California,US,0,2026-09-17T13:44:07Z
+2447,@group booking_signal_12,guest Revenue Impact Engine - Group Booking 12,tiktok,99614,0.0648,92.77,Revenue Operations Risk,Miami,Florida,US,0,2026-09-17T13:44:07Z
+2448,@luxury guestdesk_12,guest Revenue Impact Engine - Luxury Guest 12,twitter,9452,0.1028,100,Group Sales,Seattle,Washington,US,0,2026-09-17T13:44:07Z
+2449,@payments_ops_12,Demand Activity Monitor - Payments 12,youtube,7114,0.1052,100,Luxury Guest Management,Denver,Colorado,US,0,2026-09-17T13:44:07Z
+2450,@guest_safety_watch_12,OTA Surveillance Engine 12,threads,14460915,0.0201,88.6,Cards,Austin,Texas,US,1,2026-09-17T13:44:07Z
+2451,@guest_identity_queue_12,OTA Surveillance Engine - Guest Identity 12,instagram,36186,0.0721,84.65,Payments,Nashville,Tennessee,US,0,2026-09-17T13:44:07Z
+2452,@service recovery_alerts_12,Service Recovery Detection Pipeline 12,tiktok,58014,0.0557,87.98,OTA,Portland,Oregon,US,0,2026-09-17T13:44:07Z
+2453,@availability_monitor_12,Availability Operations Risk Monitor 12,twitter,2480,0.0665,80.29,Guest Identity,Boston,Massachusetts,US,0,2026-09-17T13:44:07Z
+2454,@demand_rules_12,Demand Activity Monitor - Demand 12,youtube,1969,0.0962,91.62,Service Recovery Operations,Atlanta,Georgia,US,0,2026-09-17T13:44:07Z
+2455,@revenue operations_daily_12,Revenue Operations Brand Standard Feed 12,threads,4211,0.0792,86.81,Availability Operations Risk,Dallas,Texas,US,0,2026-09-17T13:44:07Z
+2456,@property_ops_12,guest Revenue Impact Engine - Property 12,instagram,1053,0.0488,65.41,Demand Management,San Diego,California,US,0,2026-09-17T13:44:07Z
+2457,@guestexp_signal_12,Guest Revenue Impact Engine - Guest Experience 12,tiktok,169228,0.0388,74.68,Revenue Operations,Minneapolis,Minnesota,US,0,2026-09-17T13:44:07Z
+2458,@property property_watch_12,Demand Activity Monitor - Property Portfolio 12,twitter,8508,0.0966,97.32,Property Operations,Detroit,Michigan,US,0,2026-09-17T13:44:07Z
+2459,@booking deposit_trends_12,guest Revenue Impact Engine - Booking Deposits 12,youtube,3251,0.0438,67.05,Guest Experience Desk,Las Vegas,Nevada,US,0,2026-09-17T13:44:07Z
+2460,@group booking_servicing_12,guest Revenue Impact Engine - Lending 12,threads,7848,0.0487,64.76,Property Portfolio Strategy,Brooklyn,New York,US,0,2026-09-17T13:44:07Z
+2461,@sec_updates_13,Channel Intelligence Stream - Brand Standards 13,instagram,43333,0.0482,72.54,Brand Standards,New York,New York,US,0,2026-09-17T13:44:07Z
+2462,@brandqa_watch_13,Brand QA Monitoring Feed 13,tiktok,8021,0.0924,100,Brand QA,Los Angeles,California,US,0,2026-09-17T13:44:07Z
+2463,@brand_standard_bulletin_13,Channel Intelligence Stream - Property Safety 13,twitter,626272,0.0264,83.06,Property Safety,Chicago,Illinois,US,1,2026-09-17T13:44:07Z
+2464,@occupancy_watch_13,Channel Intelligence Stream - Operations Control 13,youtube,3617,0.0608,70.1,Operations Control,Houston,Texas,US,0,2026-09-17T13:44:07Z
+2465,@fed_rateairport-transfer_13,Channel Intelligence Stream - Demand Forecast 13,threads,8045,0.1128,100,Demand Forecast,Phoenix,Arizona,US,0,2026-09-17T13:44:07Z
+2466,@revenue_pulse_13,guest Revenue Impact Engine - Revenue 13,instagram,96547,0.0342,76.2,Rate Plans,San Francisco,California,US,0,2026-09-17T13:44:07Z
+2467,@group booking_signal_13,guest Revenue Impact Engine - Group Booking 13,tiktok,339661,0.0221,72.47,Revenue Operations Risk,Miami,Florida,US,0,2026-09-17T13:44:07Z
+2468,@luxury guestdesk_13,guest Revenue Impact Engine - Luxury Guest 13,twitter,2892,0.0893,81.68,Group Sales,Seattle,Washington,US,0,2026-09-17T13:44:07Z
+2469,@payments_ops_13,Demand Activity Monitor - Payments 13,youtube,1578,0.0717,78.2,Luxury Guest Management,Denver,Colorado,US,0,2026-09-17T13:44:07Z
+2470,@guest_safety_watch_13,OTA Surveillance Engine 13,threads,8155,0.1014,100,Cards,Austin,Texas,US,0,2026-09-17T13:44:07Z
+2471,@guest_identity_queue_13,OTA Surveillance Engine - Guest Identity 13,instagram,296216,0.0246,71.5,Payments,Nashville,Tennessee,US,0,2026-09-17T13:44:07Z
+2472,@service recovery_alerts_13,Service Recovery Detection Pipeline 13,tiktok,25238,0.0482,74.64,OTA,Portland,Oregon,US,0,2026-09-17T13:44:07Z
+2473,@availability_monitor_13,Availability Operations Risk Monitor 13,twitter,35355,0.0724,94.29,Guest Identity,Boston,Massachusetts,US,0,2026-09-17T13:44:07Z
+2474,@demand_rules_13,Demand Activity Monitor - Demand 13,youtube,2834,0.0921,88.4,Service Recovery Operations,Atlanta,Georgia,US,0,2026-09-17T13:44:07Z
+2475,@revenue operations_daily_13,Revenue Operations Brand Standard Feed 13,threads,7036,0.1016,92.26,Availability Operations Risk,Dallas,Texas,US,0,2026-09-17T13:44:07Z
+2476,@property_ops_13,guest Revenue Impact Engine - Property 13,instagram,763640,0.0237,78,Demand Management,San Diego,California,US,1,2026-09-17T13:44:07Z
+2477,@guestexp_signal_13,Guest Revenue Impact Engine - Guest Experience 13,tiktok,6062,0.0817,90.06,Revenue Operations,Minneapolis,Minnesota,US,0,2026-09-17T13:44:07Z
+2478,@property property_watch_13,Demand Activity Monitor - Property Portfolio 13,twitter,2753,0.1065,99.51,Property Operations,Detroit,Michigan,US,0,2026-09-17T13:44:07Z
+2479,@booking deposit_trends_13,guest Revenue Impact Engine - Booking Deposits 13,youtube,6314,0.0603,80.18,Guest Experience Desk,Las Vegas,Nevada,US,0,2026-09-17T13:44:07Z
+2480,@group booking_servicing_13,guest Revenue Impact Engine - Lending 13,threads,92039,0.0709,100,Property Portfolio Strategy,Brooklyn,New York,US,0,2026-09-17T13:44:07Z
+2481,@sec_updates_14,Channel Intelligence Stream - Brand Standards 14,instagram,14540,0.0733,86.45,Brand Standards,New York,New York,US,0,2026-09-17T13:44:07Z
+2482,@brandqa_watch_14,Brand QA Monitoring Feed 14,tiktok,22119,0.0645,90.11,Brand QA,Los Angeles,California,US,0,2026-09-17T13:44:07Z
+2483,@brand_standard_bulletin_14,Channel Intelligence Stream - Property Safety 14,twitter,5091,0.0367,56.83,Property Safety,Chicago,Illinois,US,0,2026-09-17T13:44:07Z
+2484,@occupancy_watch_14,Channel Intelligence Stream - Operations Control 14,youtube,3459,0.0614,66.56,Operations Control,Houston,Texas,US,0,2026-09-17T13:44:07Z
+2485,@fed_rateairport-transfer_14,Channel Intelligence Stream - Demand Forecast 14,threads,35463,0.0607,79.59,Demand Forecast,Phoenix,Arizona,US,0,2026-09-17T13:44:07Z
+2486,@revenue_pulse_14,guest Revenue Impact Engine - Revenue 14,instagram,7430,0.0852,88.95,Rate Plans,San Francisco,California,US,0,2026-09-17T13:44:07Z
+2487,@group booking_signal_14,guest Revenue Impact Engine - Group Booking 14,tiktok,1959,0.0597,71.28,Revenue Operations Risk,Miami,Florida,US,0,2026-09-17T13:44:07Z
+2488,@luxury guestdesk_14,guest Revenue Impact Engine - Luxury Guest 14,twitter,6266,0.0341,61.94,Group Sales,Seattle,Washington,US,0,2026-09-17T13:44:07Z
+2489,@payments_ops_14,Demand Activity Monitor - Payments 14,youtube,6445,0.0466,64.91,Luxury Guest Management,Denver,Colorado,US,0,2026-09-17T13:44:07Z
+2490,@guest_safety_watch_14,OTA Surveillance Engine 14,threads,2787,0.06,72.57,Cards,Austin,Texas,US,0,2026-09-17T13:44:07Z
+2491,@guest_identity_queue_14,OTA Surveillance Engine - Guest Identity 14,instagram,7137,0.1064,97.54,Payments,Nashville,Tennessee,US,0,2026-09-17T13:44:07Z
+2492,@service recovery_alerts_14,Service Recovery Detection Pipeline 14,tiktok,8437,0.0805,86.52,OTA,Portland,Oregon,US,0,2026-09-17T13:44:07Z
+2493,@availability_monitor_14,Availability Operations Risk Monitor 14,twitter,939813,0.0435,98.39,Guest Identity,Boston,Massachusetts,US,1,2026-09-17T13:44:07Z
+2494,@demand_rules_14,Demand Activity Monitor - Demand 14,youtube,62239,0.0684,97.71,Service Recovery Operations,Atlanta,Georgia,US,0,2026-09-17T13:44:07Z
+2495,@revenue operations_daily_14,Revenue Operations Brand Standard Feed 14,threads,42621,0.0468,85.4,Availability Operations Risk,Dallas,Texas,US,0,2026-09-17T13:44:07Z
+2496,@property_ops_14,guest Revenue Impact Engine - Property 14,instagram,1405,0.0754,80.77,Demand Management,San Diego,California,US,0,2026-09-17T13:44:07Z
+2497,@guestexp_signal_14,Guest Revenue Impact Engine - Guest Experience 14,tiktok,3182,0.0436,63.3,Revenue Operations,Minneapolis,Minnesota,US,0,2026-09-17T13:44:07Z
+2498,@property property_watch_14,Demand Activity Monitor - Property Portfolio 14,twitter,3458048,0.007,77.83,Property Operations,Detroit,Michigan,US,1,2026-09-17T13:44:07Z
+2499,@booking deposit_trends_14,guest Revenue Impact Engine - Booking Deposits 14,youtube,4295973,0.0206,91.15,Guest Experience Desk,Las Vegas,Nevada,US,1,2026-09-17T13:44:07Z
+2500,@group booking_servicing_14,guest Revenue Impact Engine - Lending 14,threads,8964,0.0596,75.95,Property Portfolio Strategy,Brooklyn,New York,US,0,2026-09-17T13:44:07Z
+2501,@sec_updates_15,Channel Intelligence Stream - Brand Standards 15,instagram,40615,0.0603,90.56,Brand Standards,New York,New York,US,0,2026-09-17T13:44:07Z
+2502,@brandqa_watch_15,Brand QA Monitoring Feed 15,tiktok,2596,0.0507,70.71,Brand QA,Los Angeles,California,US,0,2026-09-17T13:44:07Z
+2503,@brand_standard_bulletin_15,Channel Intelligence Stream - Property Safety 15,twitter,4591,0.1155,96.33,Property Safety,Chicago,Illinois,US,0,2026-09-17T13:44:07Z
+2504,@occupancy_watch_15,Channel Intelligence Stream - Operations Control 15,youtube,61995,0.0553,89.74,Operations Control,Houston,Texas,US,0,2026-09-17T13:44:07Z
+2505,@fed_rateairport-transfer_15,Channel Intelligence Stream - Demand Forecast 15,threads,3140,0.0997,86.71,Demand Forecast,Phoenix,Arizona,US,0,2026-09-17T13:44:07Z
+2506,@revenue_pulse_15,guest Revenue Impact Engine - Revenue 15,instagram,5008,0.0865,82.89,Rate Plans,San Francisco,California,US,0,2026-09-17T13:44:07Z
+2507,@group booking_signal_15,guest Revenue Impact Engine - Group Booking 15,tiktok,57153,0.0635,85.6,Revenue Operations Risk,Miami,Florida,US,0,2026-09-17T13:44:07Z
+2508,@luxury guestdesk_15,guest Revenue Impact Engine - Luxury Guest 15,twitter,96076,0.0599,93.27,Group Sales,Seattle,Washington,US,0,2026-09-17T13:44:07Z
+2509,@payments_ops_15,Demand Activity Monitor - Payments 15,youtube,27122,0.0504,84.44,Luxury Guest Management,Denver,Colorado,US,0,2026-09-17T13:44:07Z
+2510,@guest_safety_watch_15,OTA Surveillance Engine 15,threads,84833,0.0568,86.39,Cards,Austin,Texas,US,0,2026-09-17T13:44:07Z
+2511,@guest_identity_queue_15,OTA Surveillance Engine - Guest Identity 15,instagram,6435,0.0861,94.77,Payments,Nashville,Tennessee,US,0,2026-09-17T13:44:07Z
+2512,@service recovery_alerts_15,Service Recovery Detection Pipeline 15,tiktok,2551,0.1131,100,OTA,Portland,Oregon,US,0,2026-09-17T13:44:07Z
+2513,@availability_monitor_15,Availability Operations Risk Monitor 15,twitter,3923,0.0781,78.21,Guest Identity,Boston,Massachusetts,US,0,2026-09-17T13:44:07Z
+2514,@demand_rules_15,Demand Activity Monitor - Demand 15,youtube,7851,0.0685,77.65,Service Recovery Operations,Atlanta,Georgia,US,0,2026-09-17T13:44:07Z
+2515,@revenue operations_daily_15,Revenue Operations Brand Standard Feed 15,threads,1061,0.0549,60.38,Availability Operations Risk,Dallas,Texas,US,0,2026-09-17T13:44:07Z
+2516,@property_ops_15,guest Revenue Impact Engine - Property 15,instagram,9915,0.0415,66.59,Demand Management,San Diego,California,US,0,2026-09-17T13:44:07Z
+2517,@guestexp_signal_15,Guest Revenue Impact Engine - Guest Experience 15,tiktok,60470,0.0321,74.46,Revenue Operations,Minneapolis,Minnesota,US,0,2026-09-17T13:44:07Z
+2518,@property property_watch_15,Demand Activity Monitor - Property Portfolio 15,twitter,147700,0.0353,79.89,Property Operations,Detroit,Michigan,US,0,2026-09-17T13:44:07Z
+2519,@booking deposit_trends_15,guest Revenue Impact Engine - Booking Deposits 15,youtube,725608,0.0357,81.6,Guest Experience Desk,Las Vegas,Nevada,US,1,2026-09-17T13:44:07Z
+2520,@group booking_servicing_15,guest Revenue Impact Engine - Lending 15,threads,688268,0.0425,88.67,Property Portfolio Strategy,Brooklyn,New York,US,1,2026-09-17T13:44:07Z
+2521,@sec_updates_16,Channel Intelligence Stream - Brand Standards 16,instagram,1576,0.0683,77.09,Brand Standards,New York,New York,US,0,2026-09-17T13:44:07Z
+2522,@brandqa_watch_16,Brand QA Monitoring Feed 16,tiktok,97421,0.0524,86.75,Brand QA,Los Angeles,California,US,0,2026-09-17T13:44:07Z
+2523,@brand_standard_bulletin_16,Channel Intelligence Stream - Property Safety 16,twitter,7687,0.1113,100,Property Safety,Chicago,Illinois,US,0,2026-09-17T13:44:07Z
+2524,@occupancy_watch_16,Channel Intelligence Stream - Operations Control 16,youtube,3106,0.0347,55.79,Operations Control,Houston,Texas,US,0,2026-09-17T13:44:07Z
+2525,@fed_rateairport-transfer_16,Channel Intelligence Stream - Demand Forecast 16,threads,882662,0.0214,77.25,Demand Forecast,Phoenix,Arizona,US,1,2026-09-17T13:44:07Z
+2526,@revenue_pulse_16,guest Revenue Impact Engine - Revenue 16,instagram,7648,0.05,67.63,Rate Plans,San Francisco,California,US,0,2026-09-17T13:44:07Z
+2527,@group booking_signal_16,guest Revenue Impact Engine - Group Booking 16,tiktok,3626,0.0847,83.59,Revenue Operations Risk,Miami,Florida,US,0,2026-09-17T13:44:07Z
+2528,@luxury guestdesk_16,guest Revenue Impact Engine - Luxury Guest 16,twitter,4606,0.0894,94.01,Group Sales,Seattle,Washington,US,0,2026-09-17T13:44:07Z
+2529,@payments_ops_16,Demand Activity Monitor - Payments 16,youtube,1268,0.1154,100,Luxury Guest Management,Denver,Colorado,US,0,2026-09-17T13:44:07Z
+2530,@guest_safety_watch_16,OTA Surveillance Engine 16,threads,73237,0.0673,88.8,Cards,Austin,Texas,US,0,2026-09-17T13:44:07Z
+2531,@guest_identity_queue_16,OTA Surveillance Engine - Guest Identity 16,instagram,248504,0.037,87.46,Payments,Nashville,Tennessee,US,0,2026-09-17T13:44:07Z
+2532,@service recovery_alerts_16,Service Recovery Detection Pipeline 16,tiktok,8209,0.0867,97.74,OTA,Portland,Oregon,US,0,2026-09-17T13:44:07Z
+2533,@availability_monitor_16,Availability Operations Risk Monitor 16,twitter,4492,0.1138,99.11,Guest Identity,Boston,Massachusetts,US,0,2026-09-17T13:44:07Z
+2534,@demand_rules_16,Demand Activity Monitor - Demand 16,youtube,1659,0.1174,100,Service Recovery Operations,Atlanta,Georgia,US,0,2026-09-17T13:44:07Z
+2535,@revenue operations_daily_16,Revenue Operations Brand Standard Feed 16,threads,379830,0.0313,84.52,Availability Operations Risk,Dallas,Texas,US,0,2026-09-17T13:44:07Z
+2536,@property_ops_16,guest Revenue Impact Engine - Property 16,instagram,8595,0.0359,71.88,Demand Management,San Diego,California,US,0,2026-09-17T13:44:07Z
+2537,@guestexp_signal_16,Guest Revenue Impact Engine - Guest Experience 16,tiktok,6569046,0.0159,85.7,Revenue Operations,Minneapolis,Minnesota,US,1,2026-09-17T13:44:07Z
+2538,@property property_watch_16,Demand Activity Monitor - Property Portfolio 16,twitter,65305,0.0338,80.13,Property Operations,Detroit,Michigan,US,0,2026-09-17T13:44:07Z
+2539,@booking deposit_trends_16,guest Revenue Impact Engine - Booking Deposits 16,youtube,3638,0.1003,98.6,Guest Experience Desk,Las Vegas,Nevada,US,0,2026-09-17T13:44:07Z
+2540,@group booking_servicing_16,guest Revenue Impact Engine - Lending 16,threads,706258,0.0351,86.45,Property Portfolio Strategy,Brooklyn,New York,US,1,2026-09-17T13:44:07Z
+2541,@sec_updates_17,Channel Intelligence Stream - Brand Standards 17,instagram,4371,0.0508,65.08,Brand Standards,New York,New York,US,0,2026-09-17T13:44:07Z
+2542,@brandqa_watch_17,Brand QA Monitoring Feed 17,tiktok,5850,0.1181,100,Brand QA,Los Angeles,California,US,0,2026-09-17T13:44:07Z
+2543,@brand_standard_bulletin_17,Channel Intelligence Stream - Property Safety 17,twitter,3046,0.0637,74.58,Property Safety,Chicago,Illinois,US,0,2026-09-17T13:44:07Z
+2544,@occupancy_watch_17,Channel Intelligence Stream - Operations Control 17,youtube,10341044,0.0076,83.13,Operations Control,Houston,Texas,US,1,2026-09-17T13:44:07Z
+2545,@fed_rateairport-transfer_17,Channel Intelligence Stream - Demand Forecast 17,threads,2273,0.113,100,Demand Forecast,Phoenix,Arizona,US,0,2026-09-17T13:44:07Z
+2546,@revenue_pulse_17,guest Revenue Impact Engine - Revenue 17,instagram,6130,0.0714,83.59,Rate Plans,San Francisco,California,US,0,2026-09-17T13:44:07Z
+2547,@group booking_signal_17,guest Revenue Impact Engine - Group Booking 17,tiktok,5023,0.1149,97.5,Revenue Operations Risk,Miami,Florida,US,0,2026-09-17T13:44:07Z
+2548,@luxury guestdesk_17,guest Revenue Impact Engine - Luxury Guest 17,twitter,6857,0.1041,91.25,Group Sales,Seattle,Washington,US,0,2026-09-17T13:44:07Z
+2549,@payments_ops_17,Demand Activity Monitor - Payments 17,youtube,86646,0.0274,69.73,Luxury Guest Management,Denver,Colorado,US,0,2026-09-17T13:44:07Z
+2550,@guest_safety_watch_17,OTA Surveillance Engine 17,threads,6412,0.0782,87.4,Cards,Austin,Texas,US,0,2026-09-17T13:44:07Z
+2551,@guest_identity_queue_17,OTA Surveillance Engine - Guest Identity 17,instagram,1641,0.045,59.42,Payments,Nashville,Tennessee,US,0,2026-09-17T13:44:07Z
+2552,@service recovery_alerts_17,Service Recovery Detection Pipeline 17,tiktok,57351,0.0366,78.26,OTA,Portland,Oregon,US,0,2026-09-17T13:44:07Z
+2553,@availability_monitor_17,Availability Operations Risk Monitor 17,twitter,93709,0.0425,87.81,Guest Identity,Boston,Massachusetts,US,0,2026-09-17T13:44:07Z
+2554,@demand_rules_17,Demand Activity Monitor - Demand 17,youtube,209800,0.02,81.17,Service Recovery Operations,Atlanta,Georgia,US,0,2026-09-17T13:44:07Z
+2555,@revenue operations_daily_17,Revenue Operations Brand Standard Feed 17,threads,124157,0.0207,76,Availability Operations Risk,Dallas,Texas,US,0,2026-09-17T13:44:07Z
+2556,@property_ops_17,guest Revenue Impact Engine - Property 17,instagram,60595,0.0786,97.95,Demand Management,San Diego,California,US,0,2026-09-17T13:44:07Z
+2557,@guestexp_signal_17,Guest Revenue Impact Engine - Guest Experience 17,tiktok,540568,0.0368,93.96,Revenue Operations,Minneapolis,Minnesota,US,1,2026-09-17T13:44:07Z
+2558,@property property_watch_17,Demand Activity Monitor - Property Portfolio 17,twitter,71249,0.0568,88.44,Property Operations,Detroit,Michigan,US,0,2026-09-17T13:44:07Z
+2559,@booking deposit_trends_17,guest Revenue Impact Engine - Booking Deposits 17,youtube,31012,0.0334,72.1,Guest Experience Desk,Las Vegas,Nevada,US,0,2026-09-17T13:44:07Z
+2560,@group booking_servicing_17,guest Revenue Impact Engine - Lending 17,threads,11729995,0.0156,93.16,Property Portfolio Strategy,Brooklyn,New York,US,1,2026-09-17T13:44:07Z
+2561,@sec_updates_18,Channel Intelligence Stream - Brand Standards 18,instagram,88466,0.0436,78.59,Brand Standards,New York,New York,US,0,2026-09-17T13:44:07Z
+2562,@brandqa_watch_18,Brand QA Monitoring Feed 18,tiktok,18871,0.0651,88.61,Brand QA,Los Angeles,California,US,0,2026-09-17T13:44:07Z
+2563,@brand_standard_bulletin_18,Channel Intelligence Stream - Property Safety 18,twitter,29519,0.0522,87.4,Property Safety,Chicago,Illinois,US,0,2026-09-17T13:44:07Z
+2564,@occupancy_watch_18,Channel Intelligence Stream - Operations Control 18,youtube,6006,0.0997,93.29,Operations Control,Houston,Texas,US,0,2026-09-17T13:44:07Z
+2565,@fed_rateairport-transfer_18,Channel Intelligence Stream - Demand Forecast 18,threads,8331,0.1144,100,Demand Forecast,Phoenix,Arizona,US,0,2026-09-17T13:44:07Z
+2566,@revenue_pulse_18,guest Revenue Impact Engine - Revenue 18,instagram,64567,0.0465,80.36,Rate Plans,San Francisco,California,US,0,2026-09-17T13:44:07Z
+2567,@group booking_signal_18,guest Revenue Impact Engine - Group Booking 18,tiktok,919215,0.0342,84.89,Revenue Operations Risk,Miami,Florida,US,1,2026-09-17T13:44:07Z
+2568,@luxury guestdesk_18,guest Revenue Impact Engine - Luxury Guest 18,twitter,3541,0.0717,86.69,Group Sales,Seattle,Washington,US,0,2026-09-17T13:44:07Z
+2569,@payments_ops_18,Demand Activity Monitor - Payments 18,youtube,28705,0.0661,84.22,Luxury Guest Management,Denver,Colorado,US,0,2026-09-17T13:44:07Z
+2570,@guest_safety_watch_18,OTA Surveillance Engine 18,threads,5966,0.1023,99.92,Cards,Austin,Texas,US,0,2026-09-17T13:44:07Z
+2571,@guest_identity_queue_18,OTA Surveillance Engine - Guest Identity 18,instagram,75948,0.0635,93.51,Payments,Nashville,Tennessee,US,0,2026-09-17T13:44:07Z
+2572,@service recovery_alerts_18,Service Recovery Detection Pipeline 18,tiktok,8257,0.1184,100,OTA,Portland,Oregon,US,0,2026-09-17T13:44:07Z
+2573,@availability_monitor_18,Availability Operations Risk Monitor 18,twitter,17790,0.0259,57.18,Guest Identity,Boston,Massachusetts,US,0,2026-09-17T13:44:07Z
+2574,@demand_rules_18,Demand Activity Monitor - Demand 18,youtube,3269,0.1179,100,Service Recovery Operations,Atlanta,Georgia,US,0,2026-09-17T13:44:07Z
+2575,@revenue operations_daily_18,Revenue Operations Brand Standard Feed 18,threads,3926,0.1109,97.96,Availability Operations Risk,Dallas,Texas,US,0,2026-09-17T13:44:07Z
+2576,@property_ops_18,guest Revenue Impact Engine - Property 18,instagram,4525,0.0879,86.12,Demand Management,San Diego,California,US,0,2026-09-17T13:44:07Z
+2577,@guestexp_signal_18,Guest Revenue Impact Engine - Guest Experience 18,tiktok,2349,0.038,59.5,Revenue Operations,Minneapolis,Minnesota,US,0,2026-09-17T13:44:07Z
+2578,@property property_watch_18,Demand Activity Monitor - Property Portfolio 18,twitter,5170,0.0565,77.45,Property Operations,Detroit,Michigan,US,0,2026-09-17T13:44:07Z
+2579,@booking deposit_trends_18,guest Revenue Impact Engine - Booking Deposits 18,youtube,202478,0.0167,76.5,Guest Experience Desk,Las Vegas,Nevada,US,0,2026-09-17T13:44:07Z
+2580,@group booking_servicing_18,guest Revenue Impact Engine - Lending 18,threads,7084,0.0329,56.65,Property Portfolio Strategy,Brooklyn,New York,US,0,2026-09-17T13:44:07Z
+2581,@sec_updates_19,Channel Intelligence Stream - Brand Standards 19,instagram,276769,0.0439,84.88,Brand Standards,New York,New York,US,0,2026-09-17T13:44:07Z
+2582,@brandqa_watch_19,Brand QA Monitoring Feed 19,tiktok,77591,0.06,82.75,Brand QA,Los Angeles,California,US,0,2026-09-17T13:44:07Z
+2583,@brand_standard_bulletin_19,Channel Intelligence Stream - Property Safety 19,twitter,519168,0.0338,89.93,Property Safety,Chicago,Illinois,US,1,2026-09-17T13:44:07Z
+2584,@occupancy_watch_19,Channel Intelligence Stream - Operations Control 19,youtube,39278,0.0582,90.58,Operations Control,Houston,Texas,US,0,2026-09-17T13:44:07Z
+2585,@fed_rateairport-transfer_19,Channel Intelligence Stream - Demand Forecast 19,threads,2699,0.0593,68.07,Demand Forecast,Phoenix,Arizona,US,0,2026-09-17T13:44:07Z
+2586,@revenue_pulse_19,guest Revenue Impact Engine - Revenue 19,instagram,9442,0.0385,61.22,Rate Plans,San Francisco,California,US,0,2026-09-17T13:44:07Z
+2587,@group booking_signal_19,guest Revenue Impact Engine - Group Booking 19,tiktok,16428,0.0277,63.07,Revenue Operations Risk,Miami,Florida,US,0,2026-09-17T13:44:07Z
+2588,@luxury guestdesk_19,guest Revenue Impact Engine - Luxury Guest 19,twitter,8808,0.1027,100,Group Sales,Seattle,Washington,US,0,2026-09-17T13:44:07Z
+2589,@payments_ops_19,Demand Activity Monitor - Payments 19,youtube,1458,0.0817,74.37,Luxury Guest Management,Denver,Colorado,US,0,2026-09-17T13:44:07Z
+2590,@guest_safety_watch_19,OTA Surveillance Engine 19,threads,3720,0.0573,72.58,Cards,Austin,Texas,US,0,2026-09-17T13:44:07Z
+2591,@guest_identity_queue_19,OTA Surveillance Engine - Guest Identity 19,instagram,3937,0.042,70.07,Payments,Nashville,Tennessee,US,0,2026-09-17T13:44:07Z
+2592,@service recovery_alerts_19,Service Recovery Detection Pipeline 19,tiktok,4521,0.0783,86.4,OTA,Portland,Oregon,US,0,2026-09-17T13:44:07Z
+2593,@availability_monitor_19,Availability Operations Risk Monitor 19,twitter,70065,0.0688,97.98,Guest Identity,Boston,Massachusetts,US,0,2026-09-17T13:44:07Z
+2594,@demand_rules_19,Demand Activity Monitor - Demand 19,youtube,76556,0.0456,81.9,Service Recovery Operations,Atlanta,Georgia,US,0,2026-09-17T13:44:07Z
+2595,@revenue operations_daily_19,Revenue Operations Brand Standard Feed 19,threads,6451,0.117,100,Availability Operations Risk,Dallas,Texas,US,0,2026-09-17T13:44:07Z
+2596,@property_ops_19,guest Revenue Impact Engine - Property 19,instagram,69278,0.076,93.23,Demand Management,San Diego,California,US,0,2026-09-17T13:44:07Z
+2597,@guestexp_signal_19,Guest Revenue Impact Engine - Guest Experience 19,tiktok,4975,0.0842,80.73,Revenue Operations,Minneapolis,Minnesota,US,0,2026-09-17T13:44:07Z
+2598,@property property_watch_19,Demand Activity Monitor - Property Portfolio 19,twitter,9472,0.0843,83.21,Property Operations,Detroit,Michigan,US,0,2026-09-17T13:44:07Z
+2599,@booking deposit_trends_19,guest Revenue Impact Engine - Booking Deposits 19,youtube,1993,0.0376,59.5,Guest Experience Desk,Las Vegas,Nevada,US,0,2026-09-17T13:44:07Z
+2600,@group booking_servicing_19,guest Revenue Impact Engine - Lending 19,threads,56546,0.0687,97.2,Property Portfolio Strategy,Brooklyn,New York,US,0,2026-09-17T13:44:07Z
+2601,@sec_updates_20,Channel Intelligence Stream - Brand Standards 20,instagram,6832,0.1187,100,Brand Standards,New York,New York,US,0,2026-09-17T13:44:07Z
+2602,@brandqa_watch_20,Brand QA Monitoring Feed 20,tiktok,58797,0.031,71.39,Brand QA,Los Angeles,California,US,0,2026-09-17T13:44:07Z
+2603,@brand_standard_bulletin_20,Channel Intelligence Stream - Property Safety 20,twitter,26803,0.0624,91.85,Property Safety,Chicago,Illinois,US,0,2026-09-17T13:44:07Z
+2604,@occupancy_watch_20,Channel Intelligence Stream - Operations Control 20,youtube,61915,0.0644,83.14,Operations Control,Houston,Texas,US,0,2026-09-17T13:44:07Z
+2605,@fed_rateairport-transfer_20,Channel Intelligence Stream - Demand Forecast 20,threads,264343,0.0252,72.66,Demand Forecast,Phoenix,Arizona,US,0,2026-09-17T13:44:07Z
+2606,@revenue_pulse_20,guest Revenue Impact Engine - Revenue 20,instagram,4755,0.1098,93.58,Rate Plans,San Francisco,California,US,0,2026-09-17T13:44:07Z
+2607,@group booking_signal_20,guest Revenue Impact Engine - Group Booking 20,tiktok,13347,0.0381,68.8,Revenue Operations Risk,Miami,Florida,US,0,2026-09-17T13:44:07Z
+2608,@luxury guestdesk_20,guest Revenue Impact Engine - Luxury Guest 20,twitter,89649,0.0393,76.12,Group Sales,Seattle,Washington,US,0,2026-09-17T13:44:07Z
+2609,@payments_ops_20,Demand Activity Monitor - Payments 20,youtube,61765,0.031,67.07,Luxury Guest Management,Denver,Colorado,US,0,2026-09-17T13:44:07Z
+2610,@guest_safety_watch_20,OTA Surveillance Engine 20,threads,7256,0.0885,98.54,Cards,Austin,Texas,US,0,2026-09-17T13:44:07Z
+2611,@guest_identity_queue_20,OTA Surveillance Engine - Guest Identity 20,instagram,1712,0.0895,83.41,Payments,Nashville,Tennessee,US,0,2026-09-17T13:44:07Z
+2612,@service recovery_alerts_20,Service Recovery Detection Pipeline 20,tiktok,30662,0.044,75.03,OTA,Portland,Oregon,US,0,2026-09-17T13:44:07Z
+2613,@availability_monitor_20,Availability Operations Risk Monitor 20,twitter,6870,0.1175,100,Guest Identity,Boston,Massachusetts,US,0,2026-09-17T13:44:07Z
+2614,@demand_rules_20,Demand Activity Monitor - Demand 20,youtube,12433622,0.0144,90.6,Service Recovery Operations,Atlanta,Georgia,US,1,2026-09-17T13:44:07Z
+2615,@revenue operations_daily_20,Revenue Operations Brand Standard Feed 20,threads,31121,0.0306,71.67,Availability Operations Risk,Dallas,Texas,US,0,2026-09-17T13:44:07Z
+2616,@property_ops_20,guest Revenue Impact Engine - Property 20,instagram,77424,0.0354,80.16,Demand Management,San Diego,California,US,0,2026-09-17T13:44:07Z
+2617,@guestexp_signal_20,Guest Revenue Impact Engine - Guest Experience 20,tiktok,9201,0.0663,76.93,Revenue Operations,Minneapolis,Minnesota,US,0,2026-09-17T13:44:07Z
+2618,@property property_watch_20,Demand Activity Monitor - Property Portfolio 20,twitter,9368,0.0464,67.97,Property Operations,Detroit,Michigan,US,0,2026-09-17T13:44:07Z
+2619,@booking deposit_trends_20,guest Revenue Impact Engine - Booking Deposits 20,youtube,937827,0.0307,90.26,Guest Experience Desk,Las Vegas,Nevada,US,1,2026-09-17T13:44:07Z
+2620,@group booking_servicing_20,guest Revenue Impact Engine - Lending 20,threads,467075,0.0282,80.84,Property Portfolio Strategy,Brooklyn,New York,US,0,2026-09-17T13:44:07Z
+2621,@sec_updates_21,Channel Intelligence Stream - Brand Standards 21,instagram,7965,0.1169,100,Brand Standards,New York,New York,US,0,2026-09-17T13:44:07Z
+2622,@brandqa_watch_21,Brand QA Monitoring Feed 21,tiktok,5153,0.0592,68.49,Brand QA,Los Angeles,California,US,0,2026-09-17T13:44:07Z
+2623,@brand_standard_bulletin_21,Channel Intelligence Stream - Property Safety 21,twitter,1780,0.0698,78.35,Property Safety,Chicago,Illinois,US,0,2026-09-17T13:44:07Z
+2624,@occupancy_watch_21,Channel Intelligence Stream - Operations Control 21,youtube,9867,0.078,83,Operations Control,Houston,Texas,US,0,2026-09-17T13:44:07Z
+2625,@fed_rateairport-transfer_21,Channel Intelligence Stream - Demand Forecast 21,threads,3299,0.115,100,Demand Forecast,Phoenix,Arizona,US,0,2026-09-17T13:44:07Z
+2626,@revenue_pulse_21,guest Revenue Impact Engine - Revenue 21,instagram,8544,0.0906,98.73,Rate Plans,San Francisco,California,US,0,2026-09-17T13:44:07Z
+2627,@group booking_signal_21,guest Revenue Impact Engine - Group Booking 21,tiktok,631427,0.0177,71.63,Revenue Operations Risk,Miami,Florida,US,1,2026-09-17T13:44:07Z
+2628,@luxury guestdesk_21,guest Revenue Impact Engine - Luxury Guest 21,twitter,1093247,0.0207,84.38,Group Sales,Seattle,Washington,US,1,2026-09-17T13:44:07Z
+2629,@payments_ops_21,Demand Activity Monitor - Payments 21,youtube,33381,0.0519,87.6,Luxury Guest Management,Denver,Colorado,US,0,2026-09-17T13:44:07Z
+2630,@guest_safety_watch_21,OTA Surveillance Engine 21,threads,6685,0.1123,100,Cards,Austin,Texas,US,0,2026-09-17T13:44:07Z
+2631,@guest_identity_queue_21,OTA Surveillance Engine - Guest Identity 21,instagram,918783,0.0389,96.84,Payments,Nashville,Tennessee,US,1,2026-09-17T13:44:07Z
+2632,@service recovery_alerts_21,Service Recovery Detection Pipeline 21,tiktok,99863,0.0775,100,OTA,Portland,Oregon,US,0,2026-09-17T13:44:07Z
+2633,@availability_monitor_21,Availability Operations Risk Monitor 21,twitter,55779,0.068,94.94,Guest Identity,Boston,Massachusetts,US,0,2026-09-17T13:44:07Z
+2634,@demand_rules_21,Demand Activity Monitor - Demand 21,youtube,73181,0.0566,79.59,Service Recovery Operations,Atlanta,Georgia,US,0,2026-09-17T13:44:07Z
+2635,@revenue operations_daily_21,Revenue Operations Brand Standard Feed 21,threads,40383,0.0521,86.26,Availability Operations Risk,Dallas,Texas,US,0,2026-09-17T13:44:07Z
+2636,@property_ops_21,guest Revenue Impact Engine - Property 21,instagram,7328,0.1009,100,Demand Management,San Diego,California,US,0,2026-09-17T13:44:07Z
+2637,@guestexp_signal_21,Guest Revenue Impact Engine - Guest Experience 21,tiktok,4297,0.0341,68.29,Revenue Operations,Minneapolis,Minnesota,US,0,2026-09-17T13:44:07Z
+2638,@property property_watch_21,Demand Activity Monitor - Property Portfolio 21,twitter,587476,0.0253,87.29,Property Operations,Detroit,Michigan,US,1,2026-09-17T13:44:07Z
+2639,@booking deposit_trends_21,guest Revenue Impact Engine - Booking Deposits 21,youtube,4405032,0.0132,81.26,Guest Experience Desk,Las Vegas,Nevada,US,1,2026-09-17T13:44:07Z
+2640,@group booking_servicing_21,guest Revenue Impact Engine - Lending 21,threads,93991,0.026,74.42,Property Portfolio Strategy,Brooklyn,New York,US,0,2026-09-17T13:44:07Z
+2641,@sec_updates_22,Channel Intelligence Stream - Brand Standards 22,instagram,75488,0.079,100,Brand Standards,New York,New York,US,0,2026-09-17T13:44:07Z
+2642,@brandqa_watch_22,Brand QA Monitoring Feed 22,tiktok,7996,0.0802,91.54,Brand QA,Los Angeles,California,US,0,2026-09-17T13:44:07Z
+2643,@brand_standard_bulletin_22,Channel Intelligence Stream - Property Safety 22,twitter,7428,0.0312,62.48,Property Safety,Chicago,Illinois,US,0,2026-09-17T13:44:07Z
+2644,@occupancy_watch_22,Channel Intelligence Stream - Operations Control 22,youtube,509830,0.0168,77.79,Operations Control,Houston,Texas,US,1,2026-09-17T13:44:07Z
+2645,@fed_rateairport-transfer_22,Channel Intelligence Stream - Demand Forecast 22,threads,2521,0.0316,52.82,Demand Forecast,Phoenix,Arizona,US,0,2026-09-17T13:44:07Z
+2646,@revenue_pulse_22,guest Revenue Impact Engine - Revenue 22,instagram,863390,0.016,75.5,Rate Plans,San Francisco,California,US,1,2026-09-17T13:44:07Z
+2647,@group booking_signal_22,guest Revenue Impact Engine - Group Booking 22,tiktok,2669,0.0972,93.59,Revenue Operations Risk,Miami,Florida,US,0,2026-09-17T13:44:07Z
+2648,@luxury guestdesk_22,guest Revenue Impact Engine - Luxury Guest 22,twitter,24913,0.0666,91.95,Group Sales,Seattle,Washington,US,0,2026-09-17T13:44:07Z
+2649,@payments_ops_22,Demand Activity Monitor - Payments 22,youtube,1755,0.095,89.76,Luxury Guest Management,Denver,Colorado,US,0,2026-09-17T13:44:07Z
+2650,@guest_safety_watch_22,OTA Surveillance Engine 22,threads,5244,0.0347,62.07,Cards,Austin,Texas,US,0,2026-09-17T13:44:07Z
+2651,@guest_identity_queue_22,OTA Surveillance Engine - Guest Identity 22,instagram,95463,0.0552,91.58,Payments,Nashville,Tennessee,US,0,2026-09-17T13:44:07Z
+2652,@service recovery_alerts_22,Service Recovery Detection Pipeline 22,tiktok,35671,0.0283,70.17,OTA,Portland,Oregon,US,0,2026-09-17T13:44:07Z
+2653,@availability_monitor_22,Availability Operations Risk Monitor 22,twitter,93250,0.0367,73.75,Guest Identity,Boston,Massachusetts,US,0,2026-09-17T13:44:07Z
+2654,@demand_rules_22,Demand Activity Monitor - Demand 22,youtube,1224,0.11,98.92,Service Recovery Operations,Atlanta,Georgia,US,0,2026-09-17T13:44:07Z
+2655,@revenue operations_daily_22,Revenue Operations Brand Standard Feed 22,threads,1736,0.0588,63.01,Availability Operations Risk,Dallas,Texas,US,0,2026-09-17T13:44:07Z
+2656,@property_ops_22,guest Revenue Impact Engine - Property 22,instagram,6074,0.0422,64.11,Demand Management,San Diego,California,US,0,2026-09-17T13:44:07Z
+2657,@guestexp_signal_22,Guest Revenue Impact Engine - Guest Experience 22,tiktok,43532,0.0498,85.57,Revenue Operations,Minneapolis,Minnesota,US,0,2026-09-17T13:44:07Z
+2658,@property property_watch_22,Demand Activity Monitor - Property Portfolio 22,twitter,8926,0.0308,69.91,Property Operations,Detroit,Michigan,US,0,2026-09-17T13:44:07Z
+2659,@booking deposit_trends_22,guest Revenue Impact Engine - Booking Deposits 22,youtube,74381,0.0523,91.36,Guest Experience Desk,Las Vegas,Nevada,US,0,2026-09-17T13:44:07Z
+2660,@group booking_servicing_22,guest Revenue Impact Engine - Lending 22,threads,97840,0.0267,78.85,Property Portfolio Strategy,Brooklyn,New York,US,0,2026-09-17T13:44:07Z
+2661,@sec_updates_23,Channel Intelligence Stream - Brand Standards 23,instagram,5798,0.1064,94.46,Brand Standards,New York,New York,US,0,2026-09-17T13:44:07Z
+2662,@brandqa_watch_23,Brand QA Monitoring Feed 23,tiktok,2959,0.0568,73.31,Brand QA,Los Angeles,California,US,0,2026-09-17T13:44:07Z
+2663,@brand_standard_bulletin_23,Channel Intelligence Stream - Property Safety 23,twitter,6226785,0.0232,93.13,Property Safety,Chicago,Illinois,US,1,2026-09-17T13:44:07Z
+2664,@occupancy_watch_23,Channel Intelligence Stream - Operations Control 23,youtube,5959,0.0398,58.49,Operations Control,Houston,Texas,US,0,2026-09-17T13:44:07Z
+2665,@fed_rateairport-transfer_23,Channel Intelligence Stream - Demand Forecast 23,threads,17980,0.0773,95.04,Demand Forecast,Phoenix,Arizona,US,0,2026-09-17T13:44:07Z
+2666,@revenue_pulse_23,guest Revenue Impact Engine - Revenue 23,instagram,40859,0.0359,79.59,Rate Plans,San Francisco,California,US,0,2026-09-17T13:44:07Z
+2667,@group booking_signal_23,guest Revenue Impact Engine - Group Booking 23,tiktok,38292,0.0399,76.16,Revenue Operations Risk,Miami,Florida,US,0,2026-09-17T13:44:07Z
+2668,@luxury guestdesk_23,guest Revenue Impact Engine - Luxury Guest 23,twitter,9120,0.0568,69.63,Group Sales,Seattle,Washington,US,0,2026-09-17T13:44:07Z
+2669,@payments_ops_23,Demand Activity Monitor - Payments 23,youtube,2600,0.1177,100,Luxury Guest Management,Denver,Colorado,US,0,2026-09-17T13:44:07Z
+2670,@guest_safety_watch_23,OTA Surveillance Engine 23,threads,9037,0.1093,100,Cards,Austin,Texas,US,0,2026-09-17T13:44:07Z
+2671,@guest_identity_queue_23,OTA Surveillance Engine - Guest Identity 23,instagram,13373,0.0381,76.14,Payments,Nashville,Tennessee,US,0,2026-09-17T13:44:07Z
+2672,@service recovery_alerts_23,Service Recovery Detection Pipeline 23,tiktok,1380,0.0919,79.82,OTA,Portland,Oregon,US,0,2026-09-17T13:44:07Z
+2673,@availability_monitor_23,Availability Operations Risk Monitor 23,twitter,284343,0.0277,78.44,Guest Identity,Boston,Massachusetts,US,0,2026-09-17T13:44:07Z
+2674,@demand_rules_23,Demand Activity Monitor - Demand 23,youtube,159739,0.0216,78.75,Service Recovery Operations,Atlanta,Georgia,US,0,2026-09-17T13:44:07Z
+2675,@revenue operations_daily_23,Revenue Operations Brand Standard Feed 23,threads,57195,0.0797,100,Availability Operations Risk,Dallas,Texas,US,0,2026-09-17T13:44:07Z
+2676,@property_ops_23,guest Revenue Impact Engine - Property 23,instagram,750284,0.023,84.47,Demand Management,San Diego,California,US,1,2026-09-17T13:44:07Z
+2677,@guestexp_signal_23,Guest Revenue Impact Engine - Guest Experience 23,tiktok,5815,0.0498,70.89,Revenue Operations,Minneapolis,Minnesota,US,0,2026-09-17T13:44:07Z
+2678,@property property_watch_23,Demand Activity Monitor - Property Portfolio 23,twitter,3015,0.0647,73.5,Property Operations,Detroit,Michigan,US,0,2026-09-17T13:44:07Z
+2679,@booking deposit_trends_23,guest Revenue Impact Engine - Booking Deposits 23,youtube,9434170,0.0135,95.14,Guest Experience Desk,Las Vegas,Nevada,US,1,2026-09-17T13:44:07Z
+2680,@group booking_servicing_23,guest Revenue Impact Engine - Lending 23,threads,13529171,0.0231,100,Property Portfolio Strategy,Brooklyn,New York,US,1,2026-09-17T13:44:07Z
+2681,@sec_updates_24,Channel Intelligence Stream - Brand Standards 24,instagram,9218,0.0622,85.1,Brand Standards,New York,New York,US,0,2026-09-17T13:44:07Z
+2682,@brandqa_watch_24,Brand QA Monitoring Feed 24,tiktok,859551,0.0291,87.65,Brand QA,Los Angeles,California,US,1,2026-09-17T13:44:07Z
+2683,@brand_standard_bulletin_24,Channel Intelligence Stream - Property Safety 24,twitter,721604,0.0346,83.1,Property Safety,Chicago,Illinois,US,1,2026-09-17T13:44:07Z
+2684,@occupancy_watch_24,Channel Intelligence Stream - Operations Control 24,youtube,78376,0.0479,78.14,Operations Control,Houston,Texas,US,0,2026-09-17T13:44:07Z
+2685,@fed_rateairport-transfer_24,Channel Intelligence Stream - Demand Forecast 24,threads,5117,0.046,67.17,Demand Forecast,Phoenix,Arizona,US,0,2026-09-17T13:44:07Z
+2686,@revenue_pulse_24,guest Revenue Impact Engine - Revenue 24,instagram,70818,0.0384,78.47,Rate Plans,San Francisco,California,US,0,2026-09-17T13:44:07Z
+2687,@group booking_signal_24,guest Revenue Impact Engine - Group Booking 24,tiktok,981743,0.0417,91.7,Revenue Operations Risk,Miami,Florida,US,1,2026-09-17T13:44:07Z
+2688,@luxury guestdesk_24,guest Revenue Impact Engine - Luxury Guest 24,twitter,52089,0.0532,80.5,Group Sales,Seattle,Washington,US,0,2026-09-17T13:44:07Z
+2689,@payments_ops_24,Demand Activity Monitor - Payments 24,youtube,5084,0.1009,96.89,Luxury Guest Management,Denver,Colorado,US,0,2026-09-17T13:44:07Z
+2690,@guest_safety_watch_24,OTA Surveillance Engine 24,threads,8071,0.0616,77.88,Cards,Austin,Texas,US,0,2026-09-17T13:44:07Z
+2691,@guest_identity_queue_24,OTA Surveillance Engine - Guest Identity 24,instagram,53615,0.0765,89.94,Payments,Nashville,Tennessee,US,0,2026-09-17T13:44:07Z
+2692,@service recovery_alerts_24,Service Recovery Detection Pipeline 24,tiktok,39662,0.0321,66.56,OTA,Portland,Oregon,US,0,2026-09-17T13:44:07Z
+2693,@availability_monitor_24,Availability Operations Risk Monitor 24,twitter,695453,0.0169,80.72,Guest Identity,Boston,Massachusetts,US,1,2026-09-17T13:44:07Z
+2694,@demand_rules_24,Demand Activity Monitor - Demand 24,youtube,7900,0.0456,64.6,Service Recovery Operations,Atlanta,Georgia,US,0,2026-09-17T13:44:07Z
+2695,@revenue operations_daily_24,Revenue Operations Brand Standard Feed 24,threads,43517,0.0291,64.06,Availability Operations Risk,Dallas,Texas,US,0,2026-09-17T13:44:07Z
+2696,@property_ops_24,guest Revenue Impact Engine - Property 24,instagram,11033944,0.0217,100,Demand Management,San Diego,California,US,1,2026-09-17T13:44:07Z
+2697,@guestexp_signal_24,Guest Revenue Impact Engine - Guest Experience 24,tiktok,6465,0.0649,75.01,Revenue Operations,Minneapolis,Minnesota,US,0,2026-09-17T13:44:07Z
+2698,@property property_watch_24,Demand Activity Monitor - Property Portfolio 24,twitter,5296,0.0951,91.14,Property Operations,Detroit,Michigan,US,0,2026-09-17T13:44:07Z
+2699,@booking deposit_trends_24,guest Revenue Impact Engine - Booking Deposits 24,youtube,8708,0.0663,77.72,Guest Experience Desk,Las Vegas,Nevada,US,0,2026-09-17T13:44:07Z
+2700,@group booking_servicing_24,guest Revenue Impact Engine - Lending 24,threads,7474,0.0332,61.64,Property Portfolio Strategy,Brooklyn,New York,US,0,2026-09-17T13:44:07Z
+2701,@sec_updates_25,Channel Intelligence Stream - Brand Standards 25,instagram,25893,0.0381,75.48,Brand Standards,New York,New York,US,0,2026-09-17T13:44:07Z
+2702,@brandqa_watch_25,Brand QA Monitoring Feed 25,tiktok,9968,0.0966,96.72,Brand QA,Los Angeles,California,US,0,2026-09-17T13:44:07Z
+2703,@brand_standard_bulletin_25,Channel Intelligence Stream - Property Safety 25,twitter,9217,0.048,72.18,Property Safety,Chicago,Illinois,US,0,2026-09-17T13:44:07Z

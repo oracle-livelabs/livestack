@@ -293,7 +293,7 @@ FETCH FIRST 5 ROWS ONLY;
  <JetGlyph iconClass="oj-fwk-icon-message-info" className="askdata-page-glyph tone-teal" /> Ask Seer Higher Ed Data
  </h2>
  <p className="text-sm text-[var(--color-text-dim)] mt-1">
- Ask anything about {CUSTOMER_NAME}&apos;s governed student-success data in plain English - <span className="tone-plum">Ollama</span> drafts SQL and Oracle queries your live student-success data
+ Ask anything about {CUSTOMER_NAME}&apos;s governed student-success data using natural language - <span className="tone-plum">Ollama</span> drafts SQL and Oracle queries your live student-success data
  </p>
  <p className="text-xs text-[var(--color-text-dim)] mt-2">
  Answers are generated from governed Oracle SQL over synthetic demo data. Student names and values are fictional.
@@ -367,7 +367,7 @@ FETCH FIRST 5 ROWS ONLY;
  <div className="space-y-4 py-6">
  <div className="text-center mb-4">
  <JetGlyph iconClass="oj-fwk-icon-magnifier" className="askdata-empty-glyph tone-teal" />
- <p className="text-sm text-[var(--color-text-dim)]">Ask anything about {CUSTOMER_NAME}&apos;s governed student-success data in plain English.</p>
+ <p className="text-sm text-[var(--color-text-dim)]">Ask anything about {CUSTOMER_NAME}&apos;s governed student-success data using natural language.</p>
  <p className="text-[10px] text-[var(--color-text-dim)] mt-1">
  Ollama drafts the SQL, Oracle executes it, and the app explains or displays the results
  </p>

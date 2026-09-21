@@ -84,6 +84,7 @@ The following variables are consumed by the immutable compose/runtime contract. 
 | `ORDS_IMAGE` | Oracle ORDS `latest` image | ORDS container image |
 | `OLLAMA_IMAGE` | Ollama `latest` image | Ollama container image |
 | `ORACLE_USER` | `LIVESTACK` | Application schema owner |
+| `ORACLE_USER_PWD` | Demo-only ORDS database-user password | Required by current ORDS container images during initial installation |
 | `ORACLE_PWD` | Demo-only default in `compose.yml`; change it | Oracle administrative password |
 | `APP_SCHEMA_PASSWORD` | Demo-only default in `compose.yml`; change it | Application schema password |
 | `ORACLE_CHARACTERSET` | `AL32UTF8` | Database character set |

@@ -53,6 +53,26 @@ function JetGlyph({ iconClass, className = '', style }) {
   return <span className={`oj-fwk-icon ${iconClass} ${className}`.trim()} aria-hidden="true" style={style} />;
 }
 
+function FulfillmentKpiCard({ iconClass, label, value, meta, badge, color }) {
+  return (
+    <div className="stat-card fulfillment-kpi-card">
+      <div className="fulfillment-kpi-card__top">
+        <div className="fulfillment-kpi-card__icon" style={{ background: `${color}18`, color }}>
+          <JetGlyph iconClass={iconClass} className="fulfillment-kpi-card__glyph" />
+        </div>
+        <span className="fulfillment-kpi-card__badge" style={{ borderColor: `${color}33`, color }}>
+          {badge}
+        </span>
+      </div>
+      <div className="fulfillment-kpi-card__copy">
+        <p className="fulfillment-kpi-card__value">{value}</p>
+        <p className="fulfillment-kpi-card__label">{label}</p>
+      </div>
+      <p className="fulfillment-kpi-card__meta">{meta}</p>
+    </div>
+  );
+}
+
 // ── Helpers ───────────────────────────────────────────────────────────────────
 function centerColor(type) {
   if (type === 'distribution') return '#437C94';
@@ -700,27 +720,39 @@ DBMS_RLS.ADD_POLICY(
       </div>
 
       {/* ── Stats ── */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="stat-card">
-          <JetGlyph iconClass="oj-fwk-icon-grid" className="fulfillment-stat-glyph tone-ocean" />
-          <p className="text-xl font-bold">{(centers || []).length}</p>
-          <p className="text-xs text-[var(--color-text-dim)]">Active Terminals</p>
-        </div>
-        <div className="stat-card">
-          <JetGlyph iconClass="oj-fwk-icon-view" className="fulfillment-stat-glyph tone-pine" />
-          <p className="text-xl font-bold">{formatNumber(totalUnits)}</p>
-          <p className="text-xs text-[var(--color-text-dim)]">Available Capacity</p>
-        </div>
-        <div className="stat-card">
-          <JetGlyph iconClass="oj-fwk-icon-tree-document" className="fulfillment-stat-glyph tone-sienna" />
-          <p className="text-xl font-bold">{formatNumber(pendingShipments)}</p>
-          <p className="text-xs text-[var(--color-text-dim)]">Pending Shipments</p>
-        </div>
-        <div className="stat-card">
-          <JetGlyph iconClass="oj-fwk-icon-message-warning" className="fulfillment-stat-glyph tone-red" />
-          <p className="text-xl font-bold">{(alerts || []).length}</p>
-          <p className="text-xs text-[var(--color-text-dim)]">Capacity Alerts</p>
-        </div>
+      <div className="fulfillment-kpi-grid">
+        <FulfillmentKpiCard
+          iconClass="oj-fwk-icon-grid"
+          color="#437C94"
+          badge="Network footprint"
+          value={formatNumber((centers || []).length)}
+          label="Active Terminals"
+          meta="Terminals represented in the network map"
+        />
+        <FulfillmentKpiCard
+          iconClass="oj-fwk-icon-view"
+          color="#4C825C"
+          badge="Capacity pool"
+          value={formatNumber(totalUnits)}
+          label="Available Capacity"
+          meta="Capacity units available for rerouting"
+        />
+        <FulfillmentKpiCard
+          iconClass="oj-fwk-icon-tree-document"
+          color="#AA643B"
+          badge="Open shipments"
+          value={formatNumber(pendingShipments)}
+          label="Pending Shipments"
+          meta="Shipments awaiting routing or delivery"
+        />
+        <FulfillmentKpiCard
+          iconClass="oj-fwk-icon-message-warning"
+          color="#C74634"
+          badge="At-risk routes"
+          value={formatNumber((alerts || []).length)}
+          label="Capacity Alerts"
+          meta="Capacity alerts requiring operational attention"
+        />
       </div>
 
       {/* ── VPD Context Banner ── */}

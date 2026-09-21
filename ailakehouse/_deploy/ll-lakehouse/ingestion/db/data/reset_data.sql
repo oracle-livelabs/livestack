@@ -9,6 +9,8 @@
  */
 
 SET SERVEROUTPUT ON
+WHENEVER OSERROR EXIT FAILURE
+WHENEVER SQLERROR EXIT SQL.SQLCODE ROLLBACK
 
 PROMPT =====================================================
 PROMPT  Resetting PeakGear Sporting Goods Demo Data
@@ -30,6 +32,15 @@ END;
 /
 
 -- ── Truncate all demo data tables ────────────────────────────
+-- This enrichment table is created after the first seed, so it may not
+-- exist yet. Clear it before its parent products on subsequent seed loads.
+BEGIN
+    EXECUTE IMMEDIATE 'TRUNCATE TABLE webshop_product_attributes';
+EXCEPTION
+    WHEN OTHERS THEN
+        IF SQLCODE != -942 THEN RAISE; END IF;
+END;
+/
 TRUNCATE TABLE agent_actions;
 TRUNCATE TABLE shipments;
 TRUNCATE TABLE order_items;
@@ -69,8 +80,25 @@ END;
 
 PROMPT All demo tables truncated.
 
--- Oracle owns identity backing sequences. They are intentionally left alone
--- because ALTER SEQUENCE on system-generated identity sequences raises ORA-32793.
+-- Seed foreign keys use deterministic IDs starting at 1. Reset identities
+-- through ALTER TABLE, never by altering Oracle-owned backing sequences.
+-- Only reset empty tables; preserve identities of unrelated populated tables.
+DECLARE
+    v_count NUMBER;
+BEGIN
+    FOR c IN (SELECT table_name, column_name, generation_type
+              FROM user_tab_identity_cols) LOOP
+        EXECUTE IMMEDIATE 'SELECT COUNT(*) FROM ' ||
+            DBMS_ASSERT.ENQUOTE_NAME(c.table_name, FALSE) INTO v_count;
+        IF v_count = 0 THEN
+            EXECUTE IMMEDIATE 'ALTER TABLE ' ||
+                DBMS_ASSERT.ENQUOTE_NAME(c.table_name, FALSE) || ' MODIFY ' ||
+                DBMS_ASSERT.ENQUOTE_NAME(c.column_name, FALSE) ||
+                ' GENERATED ' || c.generation_type || ' AS IDENTITY (START WITH 1)';
+        END IF;
+    END LOOP;
+END;
+/
 
 -- Re-enable FK constraints
 BEGIN

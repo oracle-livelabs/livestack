@@ -1,0 +1,12 @@
+[Unit]
+Description=Seed optional AI Catalog bronze sources and PG external tables
+After=network-online.target pg-ai-data-catalog.service user-podman.service
+Wants=network-online.target pg-ai-data-catalog.service
+
+[Service]
+Type=oneshot
+TimeoutStartSec=900
+ExecStart=/bin/bash /home/opc/init/seed-ai-data-catalog.sh
+
+[Install]
+WantedBy=default.target

@@ -724,6 +724,18 @@ PY
 build_connection_payload() {
   local output_file="$1"
   local global_id="${2:-}"
+  local s3_access_id="${DATA_TRANSFORMS_ICEBERG_S3_ACCESS_ID:-${GRAVITINO_S3_ACCESS_KEY_ID:-}}"
+  local s3_secret_key="${DATA_TRANSFORMS_ICEBERG_S3_SECRET_KEY:-${GRAVITINO_S3_SECRET_ACCESS_KEY:-}}"
+  local s3_region="${DATA_TRANSFORMS_ICEBERG_S3_REGION:-${GRAVITINO_S3_REGION:-${REGION_IDENTIFIER:-}}}"
+
+  if [[ -z "${s3_access_id}" || -z "${s3_secret_key}" ]]; then
+    log "Data Transforms Iceberg storage credentials are not configured."
+    return 1
+  fi
+  if [[ -z "${s3_region}" ]]; then
+    log "Data Transforms Iceberg S3 region is required."
+    return 1
+  fi
 
   CONNECTION_GLOBAL_ID="${global_id}" \
     CONNECTION_NAME="${DATA_TRANSFORMS_ICEBERG_CONNECTION_NAME:-${DEFAULT_CONNECTION_NAME}}" \
@@ -732,6 +744,9 @@ build_connection_payload() {
     ICEBERG_CATALOG_PROVIDER="${DATA_TRANSFORMS_ICEBERG_CATALOG_PROVIDER:-${DEFAULT_CATALOG_PROVIDER}}" \
     ICEBERG_CATALOG_TYPE="${DATA_TRANSFORMS_ICEBERG_CATALOG_TYPE:-${DEFAULT_CATALOG_TYPE}}" \
     ICEBERG_STORAGE_TYPE="${DATA_TRANSFORMS_ICEBERG_STORAGE_TYPE:-${DEFAULT_STORAGE_TYPE}}" \
+    S3_ACCESS_ID="${s3_access_id}" \
+    S3_SECRET_KEY="${s3_secret_key}" \
+    S3_REGION="${s3_region}" \
     "${PYTHON_BIN}" - "${output_file}" <<'PY'
 import json
 import os
@@ -741,19 +756,26 @@ payload = {
     "name": os.environ["CONNECTION_NAME"],
     "technology": "APACHE_ICEBERG",
     "connectionProperties": {
-        "jdbcDriverName": "com.sunopsis.jdbc.driver.file.FileDriver",
-        "jdbcUrl": "jdbc:snps:dbfile",
-        "jdbcFetchArraySize": 30,
         "jdbcBatchUpdateSize": 5000,
-        "targetDOP": 1,
+        "passwordSecretId": None,
+        "tokenSecretId": None,
+        "useSecret": "false",
         "dataServerProperties": {
+            "azureAccountKey": None,
+            "azureClientId": None,
+            "azureClientSecret": None,
             "catalogAuth": "None",
             "catalogName": os.environ["ICEBERG_CATALOG_NAME"],
             "catalogProvider": os.environ["ICEBERG_CATALOG_PROVIDER"],
             "catalogType": os.environ["ICEBERG_CATALOG_TYPE"],
-            "enableCredentialVending": "false",
-            "jdbcBatchUpdateSize": "5000",
+            "clientId": None,
+            "clientSecret": None,
+            "enableCredentialVending": "true",
             "restUri": os.environ["ICEBERG_REST_URL"],
+            "restPasswd": None,
+            "s3AccessID": os.environ["S3_ACCESS_ID"],
+            "s3SecretKey": os.environ["S3_SECRET_KEY"],
+            "s3Region": os.environ["S3_REGION"],
             "storageType": os.environ["ICEBERG_STORAGE_TYPE"],
         },
     },

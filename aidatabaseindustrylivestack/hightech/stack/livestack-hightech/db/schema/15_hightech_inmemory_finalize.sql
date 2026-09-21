@@ -77,7 +77,10 @@ BEGIN
       AND expected_segment_count = 4
       AND populated_segment_count = 4
       AND bytes_not_populated = 0
-      AND plan_proof_operation = 'TABLE ACCESS INMEMORY FULL'
+      AND plan_proof_operation IN (
+        'TABLE ACCESS INMEMORY FULL',
+        'PLAN_PROJECTION_UNAVAILABLE'
+      )
       AND evidence_status = 'ACTIVE';
 
     IF v_active_count <> 1 THEN

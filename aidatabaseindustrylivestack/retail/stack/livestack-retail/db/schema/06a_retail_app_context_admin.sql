@@ -1,0 +1,32 @@
+/*
+ * ADMIN phase: bind RETAIL_APP_CTX to the trusted schema package.
+ * Usage: @06a_retail_app_context_admin.sql LIVESTACK
+ */
+WHENEVER OSERROR EXIT FAILURE ROLLBACK
+WHENEVER SQLERROR EXIT SQL.SQLCODE ROLLBACK
+SET SERVEROUTPUT ON
+DEFINE APP_SCHEMA_OWNER = '&1'
+
+DECLARE
+    v_owner VARCHAR2(128);
+    v_count PLS_INTEGER;
+BEGIN
+    v_owner := DBMS_ASSERT.SIMPLE_SQL_NAME(UPPER(TRIM('&&APP_SCHEMA_OWNER')));
+    EXECUTE IMMEDIATE
+        'CREATE OR REPLACE CONTEXT RETAIL_APP_CTX USING ' ||
+        v_owner || '.RETAIL_SECURITY_PKG';
+
+    SELECT COUNT(*) INTO v_count
+    FROM dba_context
+    WHERE namespace = 'RETAIL_APP_CTX'
+      AND schema = v_owner
+      AND package = 'RETAIL_SECURITY_PKG';
+
+    IF v_count <> 1 THEN
+        RAISE_APPLICATION_ERROR(-20221, 'RETAIL_APP_CTX is not bound to RETAIL_SECURITY_PKG');
+    END IF;
+END;
+/
+
+UNDEFINE APP_SCHEMA_OWNER
+EXIT SUCCESS

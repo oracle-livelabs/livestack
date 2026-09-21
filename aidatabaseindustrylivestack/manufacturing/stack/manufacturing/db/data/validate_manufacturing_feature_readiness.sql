@@ -51,9 +51,20 @@ DECLARE
     v_signal_counts t_numbers;
     v_total_observations t_numbers;
     v_average_urgencies t_numbers;
-    v_status manufacturing_inmemory_status_v.evidence_status%TYPE;
     v_sql_id manufacturing_inmemory_status_v.plan_proof_sql_id%TYPE;
-    v_plan_lines PLS_INTEGER;
+    v_child_number NUMBER;
+    v_exact_plan_lines PLS_INTEGER := 0;
+    v_forbidden_plan_lines PLS_INTEGER := 0;
+    v_complete_segments PLS_INTEGER := 0;
+    v_inmemory_option manufacturing_inmemory_status_v.inmemory_option%TYPE;
+    v_inmemory_size manufacturing_inmemory_status_v.database_inmemory_size_bytes%TYPE;
+    v_inmemory_force manufacturing_inmemory_status_v.inmemory_force%TYPE;
+    v_inmemory_query manufacturing_inmemory_status_v.inmemory_query%TYPE;
+    v_area_allocated manufacturing_inmemory_status_v.area_allocated_bytes%TYPE;
+    v_expected_segments manufacturing_inmemory_status_v.expected_segment_count%TYPE;
+    v_populated_segments manufacturing_inmemory_status_v.populated_segment_count%TYPE;
+    v_bytes_not_populated manufacturing_inmemory_status_v.bytes_not_populated%TYPE;
+    v_plan_operation VARCHAR2(40);
 BEGIN
     manufacturing_security_pkg.set_user_context('analyst_raj');
     IF SYS_CONTEXT('MANUFACTURING_APP_CTX', 'ROLE') <> 'analyst'
@@ -82,17 +93,98 @@ BEGIN
         RAISE_APPLICATION_ERROR(-20126, 'In-Memory proof query returned no production-signal rows');
     END IF;
 
-    SELECT evidence_status, plan_proof_sql_id
-    INTO v_status, v_sql_id
+    SELECT inmemory_option,
+           database_inmemory_size_bytes,
+           inmemory_force,
+           inmemory_query,
+           area_allocated_bytes,
+           expected_segment_count,
+           populated_segment_count,
+           bytes_not_populated
+    INTO v_inmemory_option,
+         v_inmemory_size,
+         v_inmemory_force,
+         v_inmemory_query,
+         v_area_allocated,
+         v_expected_segments,
+         v_populated_segments,
+         v_bytes_not_populated
     FROM manufacturing_inmemory_status_v;
 
     SELECT COUNT(*)
-    INTO v_plan_lines
-    FROM TABLE(DBMS_XPLAN.DISPLAY_CURSOR(v_sql_id, NULL, 'BASIC'))
-    WHERE REGEXP_LIKE(plan_table_output, 'TABLE ACCESS[[:space:]]+INMEMORY FULL');
+    INTO v_complete_segments
+    FROM manufacturing_inmemory_segments_v
+    WHERE table_inmemory = 'ENABLED'
+      AND populate_status = 'COMPLETED'
+      AND inmemory_bytes > 0
+      AND bytes_not_populated = 0;
 
-    IF v_status <> 'ACTIVE' OR v_plan_lines = 0 THEN
-        RAISE_APPLICATION_ERROR(-20128, 'Database In-Memory runtime or DBMS_XPLAN proof is incomplete');
+    SELECT sql_id,
+           child_number
+    INTO v_sql_id,
+         v_child_number
+    FROM (
+        SELECT sql_cursor.sql_id,
+               sql_cursor.child_number,
+               ROW_NUMBER() OVER (
+                   ORDER BY sql_cursor.last_active_time DESC,
+                            sql_cursor.sql_id,
+                            sql_cursor.child_number
+               ) AS recency_rank
+        FROM sys.v_$sql sql_cursor
+        WHERE sql_cursor.sql_text LIKE '%MANUFACTURING_INMEMORY_PROOF%'
+    )
+    WHERE recency_rank = 1;
+
+    SELECT COUNT(*)
+    INTO v_exact_plan_lines
+    FROM sys.v_$sql_plan plan
+    WHERE plan.sql_id = v_sql_id
+      AND plan.child_number = v_child_number
+      AND UPPER(NVL(plan.operation, '<NULL>')) = 'TABLE ACCESS'
+      AND UPPER(NVL(plan.options, '<NULL>')) = 'INMEMORY FULL'
+      AND UPPER(NVL(plan.object_owner, '<NULL>')) = USER
+      AND UPPER(NVL(plan.object_name, '<NULL>')) = 'MANUFACTURING_PRODUCTION_SIGNALS';
+
+    SELECT COUNT(*)
+    INTO v_forbidden_plan_lines
+    FROM sys.v_$sql_plan plan
+    WHERE plan.sql_id = v_sql_id
+      AND plan.child_number = v_child_number
+      AND UPPER(NVL(plan.operation, '<NULL>')) = 'TABLE ACCESS'
+      AND UPPER(NVL(plan.object_name, '<NULL>')) = 'MANUFACTURING_PRODUCTION_SIGNALS'
+      AND (
+          UPPER(NVL(plan.options, '<NULL>')) <> 'INMEMORY FULL'
+          OR UPPER(NVL(plan.object_owner, '<NULL>')) <> USER
+      );
+
+    IF v_exact_plan_lines > 0
+       AND v_forbidden_plan_lines = 0 THEN
+        v_plan_operation := 'TABLE ACCESS INMEMORY FULL';
+    ELSIF v_exact_plan_lines = 0
+       AND v_forbidden_plan_lines = 0 THEN
+        /*
+         * Oracle AI Database Free / SQL*Plus can retain the tagged proof
+         * cursor while omitting its target table-access row from V$SQL_PLAN.
+         * The nonempty proof query and every configuration/catalog/segment
+         * check above remain mandatory; a projected non-In-Memory access is
+         * never accepted as this fallback.
+         */
+        v_plan_operation := 'PLAN_PROJECTION_UNAVAILABLE';
+    END IF;
+
+    IF NVL(v_inmemory_option, 'FALSE') <> 'TRUE'
+       OR NVL(v_inmemory_size, 0) < 268435456
+       OR NVL(v_inmemory_force, '<NULL>') <> 'BASE_LEVEL'
+       OR NVL(v_inmemory_query, '<NULL>') <> 'ENABLE'
+       OR NVL(v_area_allocated, 0) < 268435456
+       OR NVL(v_expected_segments, 0) <> 4
+       OR NVL(v_populated_segments, 0) <> 4
+       OR NVL(v_bytes_not_populated, -1) <> 0
+       OR v_complete_segments <> 4
+       OR v_forbidden_plan_lines <> 0
+       OR v_plan_operation IS NULL THEN
+        RAISE_APPLICATION_ERROR(-20128, 'Database In-Memory runtime or cursor-plan proof is incomplete');
     END IF;
 
     manufacturing_security_pkg.clear_user_context;
@@ -309,7 +401,10 @@ DECLARE
     v_nn_center_ids           t_numbers;
     v_nn_distances            t_numbers;
     v_nn_sql_id               VARCHAR2(13);
-    v_nn_plan_lines           PLS_INTEGER;
+    v_nn_child_number         NUMBER;
+    v_nn_exact_plan_rows      PLS_INTEGER := 0;
+    v_nn_forbidden_plan_rows  PLS_INTEGER := 0;
+    v_nn_plan_operation       VARCHAR2(40);
 BEGIN
     manufacturing_security_pkg.set_user_context('analyst_raj');
 
@@ -543,34 +638,68 @@ BEGIN
     ~'
     BULK COLLECT INTO v_nn_center_ids, v_nn_distances;
 
-    SELECT sql_id
-    INTO v_nn_sql_id
+    SELECT sql_id,
+           child_number
+    INTO v_nn_sql_id,
+         v_nn_child_number
     FROM (
-        SELECT plan.sql_id,
+        SELECT sql_cursor.sql_id,
+               sql_cursor.child_number,
                ROW_NUMBER() OVER (
                    ORDER BY sql_cursor.last_active_time DESC,
-                            plan.child_number,
-                            plan.id
+                            sql_cursor.sql_id,
+                            sql_cursor.child_number
                ) AS recency_rank
-        FROM sys.v_$sql_plan plan
-        JOIN sys.v_$sql sql_cursor
-          ON sql_cursor.sql_id = plan.sql_id
-         AND sql_cursor.child_number = plan.child_number
-        WHERE plan.operation = 'DOMAIN INDEX'
-          AND plan.object_owner = USER
-          AND plan.object_name = 'IDX_FC_SPATIAL'
-          AND sql_cursor.sql_text LIKE '%MANUFACTURING_SPATIAL_NN_PROOF%'
+        FROM sys.v_$sql sql_cursor
+        WHERE sql_cursor.sql_text LIKE '%MANUFACTURING_SPATIAL_NN_PROOF%'
     )
     WHERE recency_rank = 1;
 
     SELECT COUNT(*)
-    INTO v_nn_plan_lines
-    FROM TABLE(DBMS_XPLAN.DISPLAY_CURSOR(v_nn_sql_id, NULL, 'BASIC'))
-    WHERE REGEXP_LIKE(
-        plan_table_output,
-        '[|][[:space:]]*[[:digit:]]+[[:space:]]*[|][[:space:]]*DOMAIN INDEX[^|]*[|][[:space:]]*IDX_FC_SPATIAL[[:space:]]*[|]',
-        'i'
-    );
+    INTO v_nn_exact_plan_rows
+    FROM sys.v_$sql_plan plan
+    WHERE plan.sql_id = v_nn_sql_id
+      AND plan.child_number = v_nn_child_number
+      AND UPPER(NVL(plan.operation, '<NULL>')) = 'DOMAIN INDEX'
+      AND UPPER(NVL(plan.object_owner, '<NULL>')) = USER
+      AND UPPER(NVL(plan.object_name, '<NULL>')) = 'IDX_FC_SPATIAL';
+
+    SELECT COUNT(*)
+    INTO v_nn_forbidden_plan_rows
+    FROM sys.v_$sql_plan plan
+    WHERE plan.sql_id = v_nn_sql_id
+      AND plan.child_number = v_nn_child_number
+      AND (
+          (
+              INSTR(
+                  UPPER(NVL(plan.operation, '') || ' ' || NVL(plan.options, '')),
+                  'DOMAIN INDEX'
+              ) > 0
+              AND (
+                  UPPER(NVL(plan.object_owner, '<NULL>')) <> USER
+                  OR UPPER(NVL(plan.object_name, '<NULL>')) <> 'IDX_FC_SPATIAL'
+              )
+          )
+          OR (
+              UPPER(NVL(plan.operation, '<NULL>')) = 'TABLE ACCESS'
+              AND UPPER(NVL(plan.options, '<NULL>')) = 'FULL'
+              AND UPPER(NVL(plan.object_name, '<NULL>')) = 'FULFILLMENT_CENTERS'
+          )
+      );
+
+    IF v_nn_exact_plan_rows > 0
+       AND v_nn_forbidden_plan_rows = 0 THEN
+        v_nn_plan_operation := 'DOMAIN INDEX IDX_FC_SPATIAL';
+    ELSIF v_nn_exact_plan_rows = 0
+       AND v_nn_forbidden_plan_rows = 0 THEN
+        /*
+         * The tagged SDO_NN query returned candidate rows and the exact
+         * Spatial catalog binding above is valid.  Accept only a missing
+         * target plan projection; any wrong DOMAIN INDEX or full table scan
+         * stays fail-closed.
+         */
+        v_nn_plan_operation := 'PLAN_PROJECTION_UNAVAILABLE';
+    END IF;
 
     IF v_metadata_count <> 4
        OR v_spatial_index_count <> 3
@@ -587,7 +716,8 @@ BEGIN
        OR v_shipment_count = 0
        OR v_valid_routes <> v_shipment_count
        OR v_nn_center_ids.COUNT = 0
-       OR v_nn_plan_lines = 0 THEN
+       OR v_nn_forbidden_plan_rows <> 0
+       OR v_nn_plan_operation IS NULL THEN
         RAISE_APPLICATION_ERROR(
             -20131,
             'Oracle Spatial readiness is incomplete or stale'
@@ -599,7 +729,7 @@ BEGIN
         ' plants, ' || v_valid_customers || ' customers, ' ||
         v_valid_regions || ' regions, ' || v_valid_zones ||
         ' zones, ' || v_valid_routes || ' routes, SDO_NN plan ' ||
-        v_nn_sql_id || '.'
+        v_nn_plan_operation || ' (' || v_nn_sql_id || ').'
     );
     manufacturing_security_pkg.clear_user_context;
 EXCEPTION

@@ -119,10 +119,10 @@ router.get('/social-velocity', async (req, res) => {
         ROUND(AVG(sentiment_score), 3) AS avg_sentiment,
         COUNT(CASE WHEN momentum_flag IN ('viral','mega_viral') THEN 1 END) AS viral_count
       FROM social_posts
-      WHERE posted_at >= (SELECT MAX(posted_at) FROM social_posts) - INTERVAL '${hours}' HOUR
+      WHERE posted_at >= (SELECT MAX(posted_at) FROM social_posts) - NUMTODSINTERVAL(:hours, 'HOUR')
       GROUP BY TRUNC(posted_at, ${truncFmt})
       ORDER BY hour_bucket
-    `);
+    `, { hours });
 
     res.json(result.rows);
   } catch (err) {

@@ -35,8 +35,8 @@ const REPLACEABLE_ATTRIBUTES = ['aria-label', 'title', 'placeholder', 'alt'];
 const DOM_SKIP_TAGS = new Set(['SCRIPT', 'STYLE', 'NOSCRIPT', 'CODE', 'PRE']);
 
 const NAV_ITEMS = [
-  { id: 'welcome', label: 'Seer Tech Control Tower', iconClass: 'oj-fwk-icon oj-fwk-icon-info', featureTags: ['Oracle AI Database 26ai', 'Converged Data'] },
-  { id: 'datamodel', label: 'Seer Tech 26ai Data Foundation', iconClass: 'oj-fwk-icon oj-fwk-icon-folderhierarchy', featureTags: ['JSON Duality', 'Graph', 'Vector'] },
+  { id: 'welcome', label: 'Welcome', iconClass: 'oj-fwk-icon oj-fwk-icon-info', featureTags: ['Oracle AI Database 26ai', 'Converged Data'] },
+  { id: 'datamodel', label: 'Data Foundation', iconClass: 'oj-fwk-icon oj-fwk-icon-folderhierarchy', featureTags: ['JSON Duality', 'Graph', 'Vector'] },
   { id: 'dashboard', label: 'Product & Commitment Control Tower', iconClass: 'oj-fwk-icon oj-fwk-icon-grid', featureTags: ['In-Memory', 'Native JSON'] },
   { id: 'social', label: 'Enterprise Buyer Signal Monitor', iconClass: 'oj-fwk-icon oj-fwk-icon-sortrelevancehigh', featureTags: ['Vector Search', 'Virtual Private Database'] },
   { id: 'graph', label: 'Product Signal Graph', iconClass: 'oj-fwk-icon oj-fwk-icon-node-expand', featureTags: ['Property Graph', 'SQL/PGQ'] },
@@ -426,7 +426,7 @@ export default function App() {
             <div className="app-main">
               <header className="app-topbar">
                 <div className="app-topbar-copy">
-                  <h2 className="app-topbar-title">{activePageTitle}</h2>
+                  <h2 key={activePage} className="app-topbar-title">{activePageTitle}</h2>
                   <FeatureTagList tags={activeNavItem?.featureTags} variant="topbar" />
                 </div>
                 <JetButton

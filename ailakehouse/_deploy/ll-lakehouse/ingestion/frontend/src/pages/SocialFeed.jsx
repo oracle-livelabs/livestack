@@ -487,7 +487,7 @@ FETCH FIRST 10 ROWS ONLY;`} />
               <span className="tone-pine font-mono">DBMS_RLS</span> policies filter demand signals and source data
               based on the active user's role and region — applied transparently at the database kernel level.
               {currentUser?.ROLE === 'fulfillment_mgr' ? (
-                <span className="tone-sienna"> Showing only demand signals from <strong>{currentUser.REGION}</strong> sources.</span>
+                <span className="tone-sienna"> Showing North American demand signals for your US store region (<strong>{currentUser.REGION}</strong>).</span>
               ) : (
                 <span className="tone-pine"> Full access — all regions visible.</span>
               )}

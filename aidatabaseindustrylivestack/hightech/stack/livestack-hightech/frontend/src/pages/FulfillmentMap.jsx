@@ -143,13 +143,22 @@ function siteActions(site) {
   return [...new Set(actions)].slice(0, 4);
 }
 
-function FulfillmentStatCard({ iconClass, label, value, subValue, color = '#437C94' }) {
+function FulfillmentKpiCard({ iconClass, label, value, meta, badge, color = '#437C94' }) {
   return (
-    <div className="stat-card">
-      <JetGlyph iconClass={iconClass} className="fulfillment-stat-glyph" style={{ color }} />
-      <p className="text-xl font-bold">{value}</p>
-      <p className="text-xs text-[var(--color-text-dim)]">{label}</p>
-      {subValue && <p className="text-[10px] text-[var(--color-text-dim)] mt-1">{subValue}</p>}
+    <div className="stat-card fulfillment-kpi-card">
+      <div className="fulfillment-kpi-card__top">
+        <div className="fulfillment-kpi-card__icon" style={{ background: `${color}18`, color }}>
+          <JetGlyph iconClass={iconClass} className="fulfillment-kpi-card__glyph" />
+        </div>
+        <span className="fulfillment-kpi-card__badge" style={{ borderColor: `${color}33`, color }}>
+          {badge}
+        </span>
+      </div>
+      <div className="fulfillment-kpi-card__copy">
+        <p className="fulfillment-kpi-card__value">{value}</p>
+        <p className="fulfillment-kpi-card__label">{label}</p>
+      </div>
+      <p className="fulfillment-kpi-card__meta">{meta}</p>
     </div>
   );
 }
@@ -791,33 +800,37 @@ DBMS_RLS.ADD_POLICY(
       </div>
 
       {/* ── Stats ── */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <FulfillmentStatCard
+      <div className="fulfillment-kpi-grid">
+        <FulfillmentKpiCard
           iconClass="oj-fwk-icon-grid"
           label="Active Supply Sites"
           value={formatNumber(kpis?.active_supply_site_count ?? (centers || []).length)}
-          subValue="fabs, contract manufacturers, supplier direct, and channel nodes"
+          meta="Fabs, contract manufacturers, supplier-direct, and channel nodes"
+          badge="Supply network"
           color="#437C94"
         />
-        <FulfillmentStatCard
+        <FulfillmentKpiCard
           iconClass="oj-fwk-icon-view"
           label="Available Capacity"
           value={formatNumber(kpis?.available_capacity_units ?? totalUnits)}
-          subValue="units available for order promising"
+          meta="Capacity units available for order promising"
+          badge="Order promising"
           color="#4C825C"
         />
-        <FulfillmentStatCard
+        <FulfillmentKpiCard
           iconClass="oj-fwk-icon-tree-document"
           label="Customer Commitments"
           value={formatNumber(kpis?.customer_commitment_count ?? pendingFulfillmentRoutes)}
-          subValue="pending, confirmed, or processing"
+          meta="Pending, confirmed, or processing commitments"
+          badge="Customer demand"
           color="#AA643B"
         />
-        <FulfillmentStatCard
+        <FulfillmentKpiCard
           iconClass="oj-fwk-icon-message-warning"
           label="Supply Watch Items"
           value={formatNumber(kpis?.component_shortage_alert_count ?? (alerts || []).length)}
-          subValue={`${formatNumber(shortageAlerts.length)} immediate shortages · ${formatNumber(kpis?.constrained_capacity_site_count || 0)} constrained sites`}
+          meta={`${formatNumber(shortageAlerts.length)} immediate shortages · ${formatNumber(kpis?.constrained_capacity_site_count || 0)} constrained sites`}
+          badge="Supply risk"
           color="#C74634"
         />
       </div>

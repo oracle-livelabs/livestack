@@ -1,0 +1,484 @@
+influencer_id,handle,display_name,platform,follower_count,engagement_rate,influence_score,niche,city,region,country,is_verified,created_at
+4541,@signal_mike,Signal Mike,instagram,550509,0.0301,85.7,Mobile Service,New York,New York,US,1,2026-05-27T11:26:09Z
+4542,@signal_jen,Signal Jen,tiktok,5781,0.0722,76.79,Fiber Broadband,Los Angeles,California,US,0,2026-05-27T11:26:09Z
+4543,@signal_alex,Signal Alex,twitter,7668,0.1014,93.33,5G Services,Chicago,Illinois,US,0,2026-05-27T11:26:09Z
+4544,@signal_zoe,Signal Zoe,youtube,11463,0.0687,77.92,Customer Retention,Houston,Texas,US,0,2026-05-27T11:26:09Z
+4545,@signal_marcus,Signal Marcus,threads,7692,0.0342,65.07,Home Internet,Phoenix,Arizona,US,0,2026-05-27T11:26:09Z
+4546,@signal_lily,Signal Lily,instagram,71135,0.0451,84.53,Device Upgrades,San Francisco,California,US,0,2026-05-27T11:26:09Z
+4547,@signal_kai,Signal Kai,tiktok,284421,0.0336,75.58,Roaming Services,Miami,Florida,US,0,2026-05-27T11:26:09Z
+4548,@signal_maya,Signal Maya,twitter,61217,0.0591,93.08,Enterprise Connectivity,Seattle,Washington,US,0,2026-05-27T11:26:09Z
+4549,@signal_tyler,Signal Tyler,youtube,4596,0.097,90.05,IoT Connectivity,Denver,Colorado,US,0,2026-05-27T11:26:09Z
+4550,@signal_ava,Signal Ava,threads,9000,0.0717,80.04,Network Monitoring,Austin,Texas,US,0,2026-05-27T11:26:09Z
+4551,@fiber_jen,Fiber Jen,instagram,1279,0.1193,93.58,Service Assurance,Nashville,Tennessee,US,0,2026-05-27T11:26:09Z
+4552,@fiber_zoe,Fiber Zoe,tiktok,9661,0.1046,98.59,Field Operations,Portland,Oregon,US,0,2026-05-27T11:26:09Z
+4553,@fiber_lily,Fiber Lily,twitter,393583,0.0299,83.01,Family Plans,Boston,Massachusetts,US,0,2026-05-27T11:26:09Z
+4554,@fiber_maya,Fiber Maya,youtube,6458,0.0362,69.24,Connected Life,Atlanta,Georgia,US,0,2026-05-27T11:26:09Z
+4555,@fiber_ava,Fiber Ava,threads,5247,0.0372,71.39,Billing Experience,Dallas,Texas,US,0,2026-05-27T11:26:09Z
+4556,@fiber_nina,Fiber Nina,instagram,62250,0.0747,91.08,Mobile Service,San Diego,California,US,0,2026-05-27T11:26:09Z
+4557,@fiber_ella,Fiber Ella,tiktok,1824,0.0984,89.72,Fiber Broadband,Minneapolis,Minnesota,US,0,2026-05-27T11:26:09Z
+4558,@fiber_aria,Fiber Aria,twitter,28961,0.0676,93.63,5G Services,Detroit,Michigan,US,0,2026-05-27T11:26:09Z
+4559,@fiber_luna,Fiber Luna,youtube,41009,0.0378,81.38,Customer Retention,Las Vegas,Nevada,US,0,2026-05-27T11:26:09Z
+4560,@fiber_mia,Fiber Mia,threads,2022,0.0636,66.52,Home Internet,Brooklyn,New York,US,0,2026-05-27T11:26:09Z
+4561,@5g_alex,5g Alex,instagram,2735,0.037,66.05,Device Upgrades,New York,New York,US,0,2026-05-27T11:26:09Z
+4562,@5g_lily,5g Lily,tiktok,71686,0.048,78.77,Roaming Services,Los Angeles,California,US,0,2026-05-27T11:26:09Z
+4563,@5g_tyler,5g Tyler,twitter,950655,0.0349,93.53,Enterprise Connectivity,Chicago,Illinois,US,1,2026-05-27T11:26:09Z
+4564,@5g_nina,5g Nina,youtube,3400,0.1197,100,IoT Connectivity,Houston,Texas,US,0,2026-05-27T11:26:09Z
+4565,@5g_finn,5g Finn,threads,4075,0.0465,70.23,Network Monitoring,Phoenix,Arizona,US,0,2026-05-27T11:26:09Z
+4566,@5g_luna,5g Luna,instagram,6668,0.0397,63.14,Service Assurance,San Francisco,California,US,0,2026-05-27T11:26:09Z
+4567,@5g_noah,5g Noah,tiktok,3055,0.0601,78.61,Field Operations,Miami,Florida,US,0,2026-05-27T11:26:09Z
+4568,@5g_ruby,5g Ruby,twitter,1113,0.0313,45.82,Family Plans,Seattle,Washington,US,0,2026-05-27T11:26:09Z
+4569,@5g_dane,5g Dane,youtube,12230242,0.025,97.2,Connected Life,Denver,Colorado,US,1,2026-05-27T11:26:09Z
+4570,@5g_hope,5g Hope,threads,271114,0.0277,85.59,Billing Experience,Austin,Texas,US,0,2026-05-27T11:26:09Z
+4571,@mobile_zoe,Mobile Zoe,instagram,79486,0.0328,73.99,Mobile Service,Nashville,Tennessee,US,0,2026-05-27T11:26:09Z
+4572,@mobile_maya,Mobile Maya,tiktok,7320,0.0387,66.42,Fiber Broadband,Portland,Oregon,US,0,2026-05-27T11:26:09Z
+4573,@mobile_nina,Mobile Nina,twitter,7419,0.0333,69.28,5G Services,Boston,Massachusetts,US,0,2026-05-27T11:26:09Z
+4574,@mobile_aria,Mobile Aria,youtube,84061,0.0449,85.51,Customer Retention,Atlanta,Georgia,US,0,2026-05-27T11:26:09Z
+4575,@mobile_mia,Mobile Mia,threads,82373,0.0507,88.48,Home Internet,Dallas,Texas,US,0,2026-05-27T11:26:09Z
+4576,@mobile_ruby,Mobile Ruby,instagram,6943,0.0849,89.77,Device Upgrades,San Diego,California,US,0,2026-05-27T11:26:09Z
+4577,@mobile_faye,Mobile Faye,tiktok,72013,0.0742,91.81,Roaming Services,Minneapolis,Minnesota,US,0,2026-05-27T11:26:09Z
+4578,@mobile_jace,Mobile Jace,twitter,10276,0.067,87.27,Enterprise Connectivity,Detroit,Michigan,US,0,2026-05-27T11:26:09Z
+4579,@mobile_omar,Mobile Omar,youtube,2082,0.0312,60.58,IoT Connectivity,Las Vegas,Nevada,US,0,2026-05-27T11:26:09Z
+4580,@mobile_tess,Mobile Tess,threads,7445,0.0819,89.66,Network Monitoring,Brooklyn,New York,US,0,2026-05-27T11:26:09Z
+4581,@roaming_marcus,Roaming Marcus,instagram,255570,0.0356,80.5,Service Assurance,New York,New York,US,0,2026-05-27T11:26:09Z
+4582,@roaming_ava,Roaming Ava,tiktok,572642,0.0443,84.89,Field Operations,Los Angeles,California,US,1,2026-05-27T11:26:09Z
+4583,@roaming_finn,Roaming Finn,twitter,25378,0.074,85.68,Family Plans,Chicago,Illinois,US,0,2026-05-27T11:26:09Z
+4584,@roaming_mia,Roaming Mia,youtube,637018,0.0237,83.57,Connected Life,Houston,Texas,US,1,2026-05-27T11:26:09Z
+4585,@roaming_max,Roaming Max,threads,5985,0.0526,73.89,Billing Experience,Phoenix,Arizona,US,0,2026-05-27T11:26:09Z
+4586,@roaming_hope,Roaming Hope,instagram,23365,0.0309,74.66,Mobile Service,San Francisco,California,US,0,2026-05-27T11:26:09Z
+4587,@roaming_nora,Roaming Nora,tiktok,96361,0.0788,93.83,Fiber Broadband,Miami,Florida,US,0,2026-05-27T11:26:09Z
+4588,@roaming_tess,Roaming Tess,twitter,248890,0.0381,91.07,5G Services,Seattle,Washington,US,0,2026-05-27T11:26:09Z
+4589,@roaming_yuri,Roaming Yuri,youtube,85511,0.075,93.78,Customer Retention,Denver,Colorado,US,0,2026-05-27T11:26:09Z
+4590,@roaming_sarah,Roaming Sarah,threads,5506,0.038,68.09,Home Internet,Austin,Texas,US,0,2026-05-27T11:26:09Z
+4591,@coverage_lily,Coverage Lily,instagram,76521,0.0742,91.22,Device Upgrades,Nashville,Tennessee,US,0,2026-05-27T11:26:09Z
+4592,@coverage_nina,Coverage Nina,tiktok,80015,0.0354,70.4,Roaming Services,Portland,Oregon,US,0,2026-05-27T11:26:09Z
+4593,@coverage_luna,Coverage Luna,twitter,426643,0.0428,85.58,Enterprise Connectivity,Boston,Massachusetts,US,0,2026-05-27T11:26:09Z
+4594,@coverage_ruby,Coverage Ruby,youtube,1936,0.0518,63.53,IoT Connectivity,Atlanta,Georgia,US,0,2026-05-27T11:26:09Z
+4595,@coverage_hope,Coverage Hope,threads,90065,0.0728,98.75,Network Monitoring,Dallas,Texas,US,0,2026-05-27T11:26:09Z
+4596,@coverage_omar,Coverage Omar,instagram,14781,0.0593,87.61,Service Assurance,San Diego,California,US,0,2026-05-27T11:26:09Z
+4597,@coverage_vince,Coverage Vince,tiktok,1628,0.0723,82.28,Field Operations,Minneapolis,Minnesota,US,0,2026-05-27T11:26:09Z
+4598,@coverage_cass,Coverage Cass,twitter,187641,0.0257,78.78,Family Plans,Detroit,Michigan,US,0,2026-05-27T11:26:09Z
+4599,@coverage_zoe,Coverage Zoe,youtube,7976,0.1142,100,Connected Life,Las Vegas,Nevada,US,0,2026-05-27T11:26:09Z
+4600,@coverage_ava,Coverage Ava,threads,93407,0.0733,90.94,Billing Experience,Brooklyn,New York,US,0,2026-05-27T11:26:09Z
+4601,@outage_kai,Outage Kai,instagram,5271,0.0487,68.55,Mobile Service,New York,New York,US,0,2026-05-27T11:26:09Z
+4602,@outage_ella,Outage Ella,tiktok,3881,0.1017,93.66,Fiber Broadband,Los Angeles,California,US,0,2026-05-27T11:26:09Z
+4603,@outage_noah,Outage Noah,twitter,42440,0.0638,87.07,5G Services,Chicago,Illinois,US,0,2026-05-27T11:26:09Z
+4604,@outage_faye,Outage Faye,youtube,697762,0.0216,86.18,Customer Retention,Houston,Texas,US,1,2026-05-27T11:26:09Z
+4605,@outage_nora,Outage Nora,threads,6810,0.0337,59.42,Home Internet,Phoenix,Arizona,US,0,2026-05-27T11:26:09Z
+4606,@outage_vince,Outage Vince,instagram,4914,0.0841,83.21,Device Upgrades,San Francisco,California,US,0,2026-05-27T11:26:09Z
+4607,@outage_dev,Outage Dev,tiktok,23105,0.0257,64.35,Roaming Services,Miami,Florida,US,0,2026-05-27T11:26:09Z
+4608,@outage_lily,Outage Lily,twitter,244618,0.028,85.95,Enterprise Connectivity,Seattle,Washington,US,0,2026-05-27T11:26:09Z
+4609,@outage_drew,Outage Drew,youtube,70058,0.0521,89.78,IoT Connectivity,Denver,Colorado,US,0,2026-05-27T11:26:09Z
+4610,@outage_mia,Outage Mia,threads,1673,0.0311,48.8,Network Monitoring,Austin,Texas,US,0,2026-05-27T11:26:09Z
+4611,@wifi_maya,Wifi Maya,instagram,24779,0.0685,85.42,Service Assurance,Nashville,Tennessee,US,0,2026-05-27T11:26:09Z
+4612,@wifi_aria,Wifi Aria,tiktok,738956,0.0237,83.11,Field Operations,Portland,Oregon,US,1,2026-05-27T11:26:09Z
+4613,@wifi_ruby,Wifi Ruby,twitter,65020,0.0271,67.63,Family Plans,Boston,Massachusetts,US,0,2026-05-27T11:26:09Z
+4614,@wifi_jace,Wifi Jace,youtube,51943,0.0537,77.61,Connected Life,Atlanta,Georgia,US,0,2026-05-27T11:26:09Z
+4615,@wifi_tess,Wifi Tess,threads,71480,0.0649,93.54,Billing Experience,Dallas,Texas,US,0,2026-05-27T11:26:09Z
+4616,@wifi_cass,Wifi Cass,instagram,7422,0.0523,73.36,Mobile Service,San Diego,California,US,0,2026-05-27T11:26:09Z
+4617,@wifi_lily,Wifi Lily,tiktok,27339,0.0703,87.97,Fiber Broadband,Minneapolis,Minnesota,US,0,2026-05-27T11:26:09Z
+4618,@wifi_ella,Wifi Ella,twitter,7538859,0.0152,93.23,5G Services,Detroit,Michigan,US,1,2026-05-27T11:26:09Z
+4619,@wifi_ivy,Wifi Ivy,youtube,9653,0.0623,83.44,Customer Retention,Las Vegas,Nevada,US,0,2026-05-27T11:26:09Z
+4620,@wifi_hope,Wifi Hope,threads,29223,0.0481,82.64,Home Internet,Brooklyn,New York,US,0,2026-05-27T11:26:09Z
+4621,@broadband_tyler,Broadband Tyler,instagram,13455660,0.0144,96.56,Device Upgrades,New York,New York,US,1,2026-05-27T11:26:09Z
+4622,@broadband_luna,Broadband Luna,tiktok,5824,0.038,63.49,Roaming Services,Los Angeles,California,US,0,2026-05-27T11:26:09Z
+4623,@broadband_dane,Broadband Dane,twitter,8756,0.0925,88.32,Enterprise Connectivity,Chicago,Illinois,US,0,2026-05-27T11:26:09Z
+4624,@broadband_omar,Broadband Omar,youtube,27110,0.0692,93.75,IoT Connectivity,Houston,Texas,US,0,2026-05-27T11:26:09Z
+4625,@broadband_yuri,Broadband Yuri,threads,2393,0.055,69.77,Network Monitoring,Phoenix,Arizona,US,0,2026-05-27T11:26:09Z
+4626,@broadband_zoe,Broadband Zoe,instagram,3564,0.0659,74.96,Service Assurance,San Francisco,California,US,0,2026-05-27T11:26:09Z
+4627,@broadband_drew,Broadband Drew,tiktok,3227,0.1187,96.29,Field Operations,Miami,Florida,US,0,2026-05-27T11:26:09Z
+4628,@broadband_ivy,Broadband Ivy,twitter,52441,0.0562,83.89,Family Plans,Seattle,Washington,US,0,2026-05-27T11:26:09Z
+4629,@broadband_ines,Broadband Ines,youtube,351166,0.0348,88.06,Connected Life,Denver,Colorado,US,0,2026-05-27T11:26:09Z
+4630,@broadband_tess,Broadband Tess,threads,356185,0.0314,81.84,Billing Experience,Austin,Texas,US,0,2026-05-27T11:26:09Z
+4631,@subscriber_ava,Subscriber Ava,instagram,11477122,0.0125,89.89,Mobile Service,Nashville,Tennessee,US,1,2026-05-27T11:26:09Z
+4632,@subscriber_mia,Subscriber Mia,tiktok,5395,0.1035,100,Fiber Broadband,Portland,Oregon,US,0,2026-05-27T11:26:09Z
+4633,@subscriber_hope,Subscriber Hope,twitter,71138,0.0368,77.62,5G Services,Boston,Massachusetts,US,0,2026-05-27T11:26:09Z
+4634,@subscriber_tess,Subscriber Tess,youtube,4333,0.0574,79.66,Customer Retention,Atlanta,Georgia,US,0,2026-05-27T11:26:09Z
+4635,@subscriber_sarah,Subscriber Sarah,threads,1583,0.0724,82.72,Home Internet,Dallas,Texas,US,0,2026-05-27T11:26:09Z
+4641,@device_cole,Device Cole,instagram,1174,0.0829,85.77,Device Upgrades,San Diego,California,US,0,2026-05-27T11:26:09Z
+4642,@device_ivy,Device Ivy,tiktok,7907,0.0575,75.91,Roaming Services,Minneapolis,Minnesota,US,0,2026-05-27T11:26:09Z
+4643,@device_kara,Device Kara,twitter,17437,0.0761,82.58,Enterprise Connectivity,Detroit,Michigan,US,0,2026-05-27T11:26:09Z
+4644,@device_xena,Device Xena,youtube,80947,0.0761,97.27,IoT Connectivity,Las Vegas,Nevada,US,0,2026-05-27T11:26:09Z
+4645,@device_marcus,Device Marcus,threads,4520,0.1174,100,Network Monitoring,Brooklyn,New York,US,0,2026-05-27T11:26:09Z
+4646,@device_aria,Device Aria,instagram,4713,0.0494,67.9,Service Assurance,New York,New York,US,0,2026-05-27T11:26:09Z
+4647,@device_dane,Device Dane,tiktok,5125,0.0332,69.03,Field Operations,Los Angeles,California,US,0,2026-05-27T11:26:09Z
+4648,@device_reed,Device Reed,twitter,862445,0.0175,75.04,Family Plans,Chicago,Illinois,US,1,2026-05-27T11:26:09Z
+4649,@device_dev,Device Dev,youtube,5065,0.0923,98.69,Connected Life,Houston,Texas,US,0,2026-05-27T11:26:09Z
+4650,@device_ava,Device Ava,threads,8562,0.0416,67.23,Billing Experience,Phoenix,Arizona,US,0,2026-05-27T11:26:09Z
+4651,@iot_nina,Iot Nina,instagram,9755,0.0958,91.53,Mobile Service,San Francisco,California,US,0,2026-05-27T11:26:09Z
+4652,@iot_ruby,Iot Ruby,tiktok,92478,0.0685,94.54,Fiber Broadband,Miami,Florida,US,0,2026-05-27T11:26:09Z
+4653,@iot_omar,Iot Omar,twitter,108260,0.0247,68.59,5G Services,Seattle,Washington,US,0,2026-05-27T11:26:09Z
+4654,@iot_cass,Iot Cass,youtube,903644,0.0176,75.01,Customer Retention,Denver,Colorado,US,1,2026-05-27T11:26:09Z
+4655,@iot_ava,Iot Ava,threads,967097,0.0177,77.21,Home Internet,Austin,Texas,US,1,2026-05-27T11:26:09Z
+4656,@iot_ivy,Iot Ivy,instagram,11361803,0.0158,93.52,Device Upgrades,Nashville,Tennessee,US,1,2026-05-27T11:26:09Z
+4657,@iot_liam,Iot Liam,tiktok,7724,0.0471,66.54,Roaming Services,Portland,Oregon,US,0,2026-05-27T11:26:09Z
+4658,@iot_zara,Iot Zara,twitter,7872,0.1086,100,Enterprise Connectivity,Boston,Massachusetts,US,0,2026-05-27T11:26:09Z
+4659,@iot_maya,Iot Maya,youtube,7972,0.1119,100,IoT Connectivity,Atlanta,Georgia,US,0,2026-05-27T11:26:09Z
+4660,@iot_mia,Iot Mia,threads,1146,0.0541,64.67,Network Monitoring,Dallas,Texas,US,0,2026-05-27T11:26:09Z
+4661,@enterprise_drew,Enterprise Drew,instagram,10547,0.0509,77.59,Service Assurance,San Diego,California,US,0,2026-05-27T11:26:09Z
+4662,@enterprise_cleo,Enterprise Cleo,tiktok,57233,0.0546,88.03,Field Operations,Minneapolis,Minnesota,US,0,2026-05-27T11:26:09Z
+4663,@enterprise_sage,Enterprise Sage,twitter,7728,0.1184,100,Family Plans,Detroit,Michigan,US,0,2026-05-27T11:26:09Z
+4664,@enterprise_jen,Enterprise Jen,youtube,9914,0.1122,100,Connected Life,Las Vegas,Nevada,US,0,2026-05-27T11:26:09Z
+4665,@enterprise_finn,Enterprise Finn,threads,564938,0.0367,90.92,Billing Experience,Brooklyn,New York,US,1,2026-05-27T11:26:09Z
+4666,@enterprise_faye,Enterprise Faye,instagram,526301,0.0174,82.27,Mobile Service,New York,New York,US,1,2026-05-27T11:26:09Z
+4667,@enterprise_uma,Enterprise Uma,tiktok,6837,0.0576,75.62,Fiber Broadband,Los Angeles,California,US,0,2026-05-27T11:26:09Z
+4668,@enterprise_zoe,Enterprise Zoe,twitter,5725,0.1101,97.79,5G Services,Chicago,Illinois,US,0,2026-05-27T11:26:09Z
+4669,@enterprise_owen,Enterprise Owen,youtube,7981,0.0712,77.58,Customer Retention,Houston,Texas,US,0,2026-05-27T11:26:09Z
+4670,@enterprise_hope,Enterprise Hope,threads,3530033,0.0147,82.96,Home Internet,Phoenix,Arizona,US,1,2026-05-27T11:26:09Z
+4671,@edge_ella,Edge Ella,instagram,3048,0.0777,77.95,Device Upgrades,San Francisco,California,US,0,2026-05-27T11:26:09Z
+4672,@edge_faye,Edge Faye,tiktok,36268,0.0465,72.51,Roaming Services,Miami,Florida,US,0,2026-05-27T11:26:09Z
+4673,@edge_vince,Edge Vince,twitter,34349,0.0336,69.01,Enterprise Connectivity,Seattle,Washington,US,0,2026-05-27T11:26:09Z
+4674,@edge_lily,Edge Lily,youtube,49215,0.0737,92.39,IoT Connectivity,Denver,Colorado,US,0,2026-05-27T11:26:09Z
+4675,@edge_mia,Edge Mia,threads,7868,0.119,100,Network Monitoring,Austin,Texas,US,0,2026-05-27T11:26:09Z
+4676,@edge_liam,Edge Liam,instagram,5352,0.11,99.92,Service Assurance,Nashville,Tennessee,US,0,2026-05-27T11:26:09Z
+4677,@edge_cass,Edge Cass,tiktok,6942,0.0934,98.83,Field Operations,Portland,Oregon,US,0,2026-05-27T11:26:09Z
+4678,@edge_nina,Edge Nina,twitter,180659,0.0384,77.17,Family Plans,Boston,Massachusetts,US,0,2026-05-27T11:26:09Z
+4679,@edge_cleo,Edge Cleo,youtube,297586,0.0292,77.06,Connected Life,Atlanta,Georgia,US,0,2026-05-27T11:26:09Z
+4680,@edge_tess,Edge Tess,threads,1903,0.0956,89.43,Billing Experience,Dallas,Texas,US,0,2026-05-27T11:26:09Z
+4681,@retention_finn,Retention Finn,instagram,2147,0.0815,88.72,Mobile Service,San Diego,California,US,0,2026-05-27T11:26:09Z
+4682,@retention_hope,Retention Hope,tiktok,1842,0.0663,79.82,Fiber Broadband,Minneapolis,Minnesota,US,0,2026-05-27T11:26:09Z
+4683,@retention_yuri,Retention Yuri,twitter,46444,0.0472,78.01,5G Services,Detroit,Michigan,US,0,2026-05-27T11:26:09Z
+4684,@retention_ava,Retention Ava,youtube,279801,0.0415,81.36,Customer Retention,Las Vegas,Nevada,US,0,2026-05-27T11:26:09Z
+4685,@retention_max,Retention Max,threads,645094,0.0443,93.12,Home Internet,Brooklyn,New York,US,1,2026-05-27T11:26:09Z
+4686,@retention_tess,Retention Tess,instagram,89117,0.0792,100,Device Upgrades,New York,New York,US,0,2026-05-27T11:26:09Z
+4687,@retention_marcus,Retention Marcus,tiktok,5318,0.0426,62.6,Roaming Services,Los Angeles,California,US,0,2026-05-27T11:26:09Z
+4688,@retention_mia,Retention Mia,twitter,1843,0.0864,80.31,Enterprise Connectivity,Chicago,Illinois,US,0,2026-05-27T11:26:09Z
+4689,@retention_nora,Retention Nora,youtube,8502,0.0678,88.89,IoT Connectivity,Houston,Texas,US,0,2026-05-27T11:26:09Z
+4690,@retention_sarah,Retention Sarah,threads,1449,0.0412,64.74,Network Monitoring,Phoenix,Arizona,US,0,2026-05-27T11:26:09Z
+4691,@billing_aria,Billing Aria,instagram,374868,0.0405,81.8,Service Assurance,San Francisco,California,US,0,2026-05-27T11:26:09Z
+4692,@billing_jace,Billing Jace,tiktok,27053,0.0561,79.2,Field Operations,Miami,Florida,US,0,2026-05-27T11:26:09Z
+4693,@billing_cass,Billing Cass,twitter,8842,0.1143,99.72,Family Plans,Seattle,Washington,US,0,2026-05-27T11:26:09Z
+4694,@billing_ella,Billing Ella,youtube,2895,0.0961,89.49,Connected Life,Denver,Colorado,US,0,2026-05-27T11:26:09Z
+4695,@billing_hope,Billing Hope,threads,3285,0.0301,64.47,Billing Experience,Austin,Texas,US,0,2026-05-27T11:26:09Z
+4696,@billing_zara,Billing Zara,instagram,3951,0.1146,98.66,Mobile Service,Nashville,Tennessee,US,0,2026-05-27T11:26:09Z
+4697,@billing_nina,Billing Nina,tiktok,67119,0.075,97.95,Fiber Broadband,Portland,Oregon,US,0,2026-05-27T11:26:09Z
+4698,@billing_faye,Billing Faye,twitter,49879,0.0551,88.19,5G Services,Boston,Massachusetts,US,0,2026-05-27T11:26:09Z
+4699,@billing_xena,Billing Xena,youtube,76645,0.0325,79.25,Customer Retention,Atlanta,Georgia,US,0,2026-05-27T11:26:09Z
+4700,@billing_ava,Billing Ava,threads,60982,0.0558,90.76,Home Internet,Dallas,Texas,US,0,2026-05-27T11:26:09Z
+4701,@support_owen,Support Owen,instagram,6530,0.0766,84.79,Device Upgrades,San Diego,California,US,0,2026-05-27T11:26:09Z
+4702,@support_liam,Support Liam,tiktok,6476,0.0755,89.32,Roaming Services,Minneapolis,Minnesota,US,0,2026-05-27T11:26:09Z
+4703,@support_mike,Support Mike,twitter,1667,0.0888,80.71,Enterprise Connectivity,Detroit,Michigan,US,0,2026-05-27T11:26:09Z
+4704,@support_luna,Support Luna,youtube,69407,0.0797,92.64,IoT Connectivity,Las Vegas,Nevada,US,0,2026-05-27T11:26:09Z
+4705,@support_nora,Support Nora,threads,8141,0.1105,100,Network Monitoring,Brooklyn,New York,US,0,2026-05-27T11:26:09Z
+4706,@support_jen,Support Jen,instagram,6024,0.0524,71.12,Service Assurance,New York,New York,US,0,2026-05-27T11:26:09Z
+4707,@support_jack,Support Jack,tiktok,71615,0.0278,65.58,Field Operations,Los Angeles,California,US,0,2026-05-27T11:26:09Z
+4708,@support_omar,Support Omar,twitter,9898,0.1033,100,Family Plans,Chicago,Illinois,US,0,2026-05-27T11:26:09Z
+4709,@support_alex,Support Alex,youtube,74692,0.0375,78.16,Connected Life,Houston,Texas,US,0,2026-05-27T11:26:09Z
+4710,@support_mia,Support Mia,threads,46054,0.0474,78.56,Billing Experience,Phoenix,Arizona,US,0,2026-05-27T11:26:09Z
+4711,@fieldops_luna,Fieldops Luna,instagram,12945129,0.0053,93.1,Mobile Service,San Francisco,California,US,1,2026-05-27T11:26:09Z
+4712,@fieldops_omar,Fieldops Omar,tiktok,96803,0.0488,78.04,Fiber Broadband,Miami,Florida,US,0,2026-05-27T11:26:09Z
+4713,@fieldops_zoe,Fieldops Zoe,twitter,84379,0.0428,73.12,5G Services,Seattle,Washington,US,0,2026-05-27T11:26:09Z
+4714,@fieldops_ivy,Fieldops Ivy,youtube,8005,0.0703,76.49,Customer Retention,Denver,Colorado,US,0,2026-05-27T11:26:09Z
+4715,@fieldops_tess,Fieldops Tess,threads,147549,0.0201,67.37,Home Internet,Austin,Texas,US,0,2026-05-27T11:26:09Z
+4716,@fieldops_maya,Fieldops Maya,instagram,8545,0.0451,70.2,Device Upgrades,Nashville,Tennessee,US,0,2026-05-27T11:26:09Z
+4717,@fieldops_cleo,Fieldops Cleo,tiktok,82692,0.0739,93.48,Roaming Services,Portland,Oregon,US,0,2026-05-27T11:26:09Z
+4718,@fieldops_xena,Fieldops Xena,twitter,1995318,0.0165,83.21,Enterprise Connectivity,Boston,Massachusetts,US,1,2026-05-27T11:26:09Z
+4719,@fieldops_nina,Fieldops Nina,youtube,7472,0.1088,99.44,IoT Connectivity,Atlanta,Georgia,US,0,2026-05-27T11:26:09Z
+4720,@fieldops_hope,Fieldops Hope,threads,5446,0.1128,100,Network Monitoring,Dallas,Texas,US,0,2026-05-27T11:26:09Z
+4721,@technician_jack,Technician Jack,instagram,284521,0.037,78.18,Service Assurance,San Diego,California,US,0,2026-05-27T11:26:09Z
+4722,@technician_reed,Technician Reed,tiktok,218736,0.0428,83.33,Field Operations,Minneapolis,Minnesota,US,0,2026-05-27T11:26:09Z
+4723,@technician_kai,Technician Kai,twitter,74428,0.0609,82.08,Family Plans,Detroit,Michigan,US,0,2026-05-27T11:26:09Z
+4724,@technician_cleo,Technician Cleo,youtube,2589,0.0343,60.85,Connected Life,Las Vegas,Nevada,US,0,2026-05-27T11:26:09Z
+4725,@technician_yuri,Technician Yuri,threads,1754,0.099,91.32,Billing Experience,Brooklyn,New York,US,0,2026-05-27T11:26:09Z
+4726,@technician_ella,Technician Ella,instagram,30172,0.0533,80.52,Mobile Service,New York,New York,US,0,2026-05-27T11:26:09Z
+4727,@technician_kara,Technician Kara,tiktok,10054,0.0503,80.64,Fiber Broadband,Los Angeles,California,US,0,2026-05-27T11:26:09Z
+4728,@technician_jen,Technician Jen,twitter,5853,0.0584,70.35,5G Services,Chicago,Illinois,US,0,2026-05-27T11:26:09Z
+4729,@technician_noah,Technician Noah,youtube,4023,0.0981,98.29,Customer Retention,Houston,Texas,US,0,2026-05-27T11:26:09Z
+4730,@technician_tess,Technician Tess,threads,5252,0.0396,72.21,Home Internet,Phoenix,Arizona,US,0,2026-05-27T11:26:09Z
+4731,@smart_home_mia,Smart Home Mia,instagram,5340,0.062,75.52,Device Upgrades,San Francisco,California,US,0,2026-05-27T11:26:09Z
+4732,@smart_home_tess,Smart Home Tess,tiktok,42489,0.0644,82.16,Roaming Services,Miami,Florida,US,0,2026-05-27T11:26:09Z
+4733,@smart_home_ava,Smart Home Ava,twitter,85630,0.0644,89.45,Enterprise Connectivity,Seattle,Washington,US,0,2026-05-27T11:26:09Z
+4734,@smart_home_hope,Smart Home Hope,youtube,2452,0.0678,75.77,IoT Connectivity,Denver,Colorado,US,0,2026-05-27T11:26:09Z
+4735,@smart_home_sarah,Smart Home Sarah,threads,9100,0.0927,96.25,Network Monitoring,Austin,Texas,US,0,2026-05-27T11:26:09Z
+4741,@family_plan_noah,Family Plan Noah,instagram,27138,0.0564,77.23,Service Assurance,Nashville,Tennessee,US,0,2026-05-27T11:26:09Z
+4742,@family_plan_vince,Family Plan Vince,tiktok,9080,0.0774,88.51,Field Operations,Portland,Oregon,US,0,2026-05-27T11:26:09Z
+4743,@family_plan_drew,Family Plan Drew,twitter,764449,0.0252,78.51,Family Plans,Boston,Massachusetts,US,1,2026-05-27T11:26:09Z
+4744,@family_plan_liam,Family Plan Liam,youtube,5556,0.1081,92.47,Connected Life,Atlanta,Georgia,US,0,2026-05-27T11:26:09Z
+4745,@family_plan_marcus,Family Plan Marcus,threads,958571,0.0311,80.54,Billing Experience,Dallas,Texas,US,1,2026-05-27T11:26:09Z
+4746,@family_plan_cleo,Family Plan Cleo,instagram,5162,0.0834,93.77,Mobile Service,San Diego,California,US,0,2026-05-27T11:26:09Z
+4747,@family_plan_beau,Family Plan Beau,tiktok,30238,0.0332,66.03,Fiber Broadband,Minneapolis,Minnesota,US,0,2026-05-27T11:26:09Z
+4748,@family_plan_luna,Family Plan Luna,twitter,64817,0.0273,77.2,5G Services,Detroit,Michigan,US,0,2026-05-27T11:26:09Z
+4749,@family_plan_sage,Family Plan Sage,youtube,54171,0.0547,86.73,Customer Retention,Las Vegas,Nevada,US,0,2026-05-27T11:26:09Z
+4750,@family_plan_ava,Family Plan Ava,threads,28877,0.0395,79.57,Home Internet,Brooklyn,New York,US,0,2026-05-27T11:26:09Z
+4751,@connected_life_ivy,Connected Life Ivy,instagram,81659,0.0723,88.21,Device Upgrades,New York,New York,US,0,2026-05-27T11:26:09Z
+4752,@connected_life_xena,Connected Life Xena,tiktok,66523,0.0434,85.53,Roaming Services,Los Angeles,California,US,0,2026-05-27T11:26:09Z
+4753,@connected_life_aria,Connected Life Aria,twitter,17538,0.0416,72.88,Enterprise Connectivity,Chicago,Illinois,US,0,2026-05-27T11:26:09Z
+4754,@connected_life_reed,Connected Life Reed,youtube,34330,0.0495,73.11,IoT Connectivity,Houston,Texas,US,0,2026-05-27T11:26:09Z
+4755,@connected_life_ava,Connected Life Ava,threads,32650,0.062,90.82,Network Monitoring,Phoenix,Arizona,US,0,2026-05-27T11:26:09Z
+4756,@connected_life_jace,Connected Life Jace,instagram,973547,0.0239,76.21,Service Assurance,San Francisco,California,US,1,2026-05-27T11:26:09Z
+4757,@connected_life_zoe,Connected Life Zoe,tiktok,4131016,0.021,83.27,Field Operations,Miami,Florida,US,1,2026-05-27T11:26:09Z
+4758,@connected_life_cleo,Connected Life Cleo,twitter,78749,0.0796,91.24,Family Plans,Seattle,Washington,US,0,2026-05-27T11:26:09Z
+4759,@connected_life_cass,Connected Life Cass,youtube,2860,0.0598,77.98,Connected Life,Denver,Colorado,US,0,2026-05-27T11:26:09Z
+4760,@connected_life_mia,Connected Life Mia,threads,9768,0.1199,100,Billing Experience,Austin,Texas,US,0,2026-05-27T11:26:09Z
+4761,@sim_swap_leo,Sim Swap Leo,instagram,578785,0.0417,92.79,Mobile Service,Nashville,Tennessee,US,1,2026-05-27T11:26:09Z
+4762,@sim_swap_zara,Sim Swap Zara,tiktok,932028,0.0257,90.01,Fiber Broadband,Portland,Oregon,US,1,2026-05-27T11:26:09Z
+4763,@sim_swap_jack,Sim Swap Jack,twitter,3335,0.0786,88.72,5G Services,Boston,Massachusetts,US,0,2026-05-27T11:26:09Z
+4764,@sim_swap_vince,Sim Swap Vince,youtube,72255,0.0261,77.77,Customer Retention,Atlanta,Georgia,US,0,2026-05-27T11:26:09Z
+4765,@sim_swap_finn,Sim Swap Finn,threads,82958,0.0334,76.79,Home Internet,Dallas,Texas,US,0,2026-05-27T11:26:09Z
+4766,@sim_swap_reed,Sim Swap Reed,instagram,986940,0.0339,82,Device Upgrades,San Diego,California,US,1,2026-05-27T11:26:09Z
+4767,@sim_swap_cole,Sim Swap Cole,tiktok,556494,0.0346,81.95,Roaming Services,Minneapolis,Minnesota,US,1,2026-05-27T11:26:09Z
+4768,@sim_swap_liam,Sim Swap Liam,twitter,7738,0.1168,100,Enterprise Connectivity,Detroit,Michigan,US,0,2026-05-27T11:26:09Z
+4769,@sim_swap_kai,Sim Swap Kai,youtube,85515,0.0449,85.32,IoT Connectivity,Las Vegas,Nevada,US,0,2026-05-27T11:26:09Z
+4770,@sim_swap_hope,Sim Swap Hope,threads,9454,0.1075,100,Network Monitoring,Brooklyn,New York,US,0,2026-05-27T11:26:09Z
+4771,@latency_ruby,Latency Ruby,instagram,5804,0.0919,84.93,Service Assurance,New York,New York,US,0,2026-05-27T11:26:09Z
+4772,@latency_cass,Latency Cass,tiktok,8822,0.0721,77.35,Field Operations,Los Angeles,California,US,0,2026-05-27T11:26:09Z
+4773,@latency_ivy,Latency Ivy,twitter,2511,0.0503,61.47,Family Plans,Chicago,Illinois,US,0,2026-05-27T11:26:09Z
+4774,@latency_zara,Latency Zara,youtube,16380,0.0627,82.61,Connected Life,Houston,Texas,US,0,2026-05-27T11:26:09Z
+4775,@latency_mia,Latency Mia,threads,74830,0.0294,78.51,Billing Experience,Phoenix,Arizona,US,0,2026-05-27T11:26:09Z
+4776,@latency_xena,Latency Xena,instagram,61164,0.0273,68.86,Mobile Service,San Francisco,California,US,0,2026-05-27T11:26:09Z
+4777,@latency_luna,Latency Luna,tiktok,18671,0.059,80.15,Fiber Broadband,Miami,Florida,US,0,2026-05-27T11:26:09Z
+4778,@latency_vince,Latency Vince,twitter,80687,0.0254,73,5G Services,Seattle,Washington,US,0,2026-05-27T11:26:09Z
+4779,@latency_aria,Latency Aria,youtube,2739,0.0309,58.22,Customer Retention,Denver,Colorado,US,0,2026-05-27T11:26:09Z
+4780,@latency_tess,Latency Tess,threads,6719295,0.0052,87.38,Home Internet,Austin,Texas,US,1,2026-05-27T11:26:09Z
+4781,@network_max,Network Max,instagram,7028,0.0616,80.01,Device Upgrades,Nashville,Tennessee,US,0,2026-05-27T11:26:09Z
+4782,@network_sarah,Network Sarah,tiktok,79307,0.0479,87.5,Roaming Services,Portland,Oregon,US,0,2026-05-27T11:26:09Z
+4791,@tower_cleo,Tower Cleo,twitter,9054,0.0976,100,Enterprise Connectivity,Boston,Massachusetts,US,0,2026-05-27T11:26:09Z
+4792,@tower_jen,Tower Jen,youtube,3847,0.032,65.75,IoT Connectivity,Atlanta,Georgia,US,0,2026-05-27T11:26:09Z
+4793,@tower_faye,Tower Faye,threads,89499,0.0498,91.36,Network Monitoring,Dallas,Texas,US,0,2026-05-27T11:26:09Z
+4794,@tower_zoe,Tower Zoe,instagram,66856,0.052,90.92,Service Assurance,San Diego,California,US,0,2026-05-27T11:26:09Z
+4795,@tower_hope,Tower Hope,tiktok,33098,0.0762,92.08,Field Operations,Minneapolis,Minnesota,US,0,2026-05-27T11:26:09Z
+4796,@tower_lily,Tower Lily,twitter,27481,0.0609,88.66,Family Plans,Detroit,Michigan,US,0,2026-05-27T11:26:09Z
+4797,@tower_jace,Tower Jace,youtube,37126,0.0751,89.56,Connected Life,Las Vegas,Nevada,US,0,2026-05-27T11:26:09Z
+4798,@tower_maya,Tower Maya,threads,1343,0.0714,71.49,Billing Experience,Brooklyn,New York,US,0,2026-05-27T11:26:09Z
+4799,@tower_liam,Tower Liam,instagram,2199,0.0524,69.56,Mobile Service,New York,New York,US,0,2026-05-27T11:26:09Z
+4800,@tower_ava,Tower Ava,tiktok,87988,0.0333,78.81,Fiber Broadband,Los Angeles,California,US,0,2026-05-27T11:26:09Z
+4801,@smallcell_dane,Smallcell Dane,twitter,97815,0.0531,89.13,5G Services,Chicago,Illinois,US,0,2026-05-27T11:26:09Z
+4802,@smallcell_zoe,Smallcell Zoe,youtube,3806,0.0466,64.97,Customer Retention,Houston,Texas,US,0,2026-05-27T11:26:09Z
+4803,@smallcell_ines,Smallcell Ines,threads,9046,0.0903,99.96,Home Internet,Phoenix,Arizona,US,0,2026-05-27T11:26:09Z
+4804,@smallcell_maya,Smallcell Maya,instagram,9257,0.0651,75.9,Device Upgrades,San Francisco,California,US,0,2026-05-27T11:26:09Z
+4805,@smallcell_nora,Smallcell Nora,tiktok,26927,0.0283,72.22,Roaming Services,Miami,Florida,US,0,2026-05-27T11:26:09Z
+4806,@smallcell_nina,Smallcell Nina,twitter,339495,0.0276,76.63,Enterprise Connectivity,Seattle,Washington,US,0,2026-05-27T11:26:09Z
+4807,@smallcell_sage,Smallcell Sage,youtube,31634,0.0395,71.81,IoT Connectivity,Denver,Colorado,US,0,2026-05-27T11:26:09Z
+4808,@smallcell_aria,Smallcell Aria,threads,5521,0.0852,81.09,Network Monitoring,Austin,Texas,US,0,2026-05-27T11:26:09Z
+4809,@smallcell_wren,Smallcell Wren,instagram,77393,0.0734,99.74,Service Assurance,Nashville,Tennessee,US,0,2026-05-27T11:26:09Z
+4810,@smallcell_mia,Smallcell Mia,tiktok,33356,0.0664,82.73,Field Operations,Portland,Oregon,US,0,2026-05-27T11:26:09Z
+4811,@hotspot_faye,Hotspot Faye,twitter,34523,0.066,91.25,Family Plans,Boston,Massachusetts,US,0,2026-05-27T11:26:09Z
+4812,@hotspot_lily,Hotspot Lily,youtube,90735,0.0313,70.1,Connected Life,Atlanta,Georgia,US,0,2026-05-27T11:26:09Z
+4813,@hotspot_liam,Hotspot Liam,threads,9343493,0.0241,91.71,Billing Experience,Dallas,Texas,US,1,2026-05-27T11:26:09Z
+4814,@hotspot_nina,Hotspot Nina,instagram,1874,0.0958,93.74,Mobile Service,San Diego,California,US,0,2026-05-27T11:26:09Z
+4815,@hotspot_tess,Hotspot Tess,tiktok,860338,0.0254,81.28,Fiber Broadband,Minneapolis,Minnesota,US,1,2026-05-27T11:26:09Z
+4816,@hotspot_luna,Hotspot Luna,twitter,49685,0.0797,95.64,5G Services,Detroit,Michigan,US,0,2026-05-27T11:26:09Z
+4817,@hotspot_zara,Hotspot Zara,youtube,17484,0.0309,66.3,Customer Retention,Las Vegas,Nevada,US,0,2026-05-27T11:26:09Z
+4818,@hotspot_ruby,Hotspot Ruby,threads,2668,0.1144,94.73,Home Internet,Brooklyn,New York,US,0,2026-05-27T11:26:09Z
+4819,@hotspot_jen,Hotspot Jen,instagram,322092,0.0244,84.99,Device Upgrades,New York,New York,US,0,2026-05-27T11:26:09Z
+4820,@hotspot_hope,Hotspot Hope,tiktok,223402,0.041,80.55,Roaming Services,Los Angeles,California,US,0,2026-05-27T11:26:09Z
+4821,@streaming_gus,Streaming Gus,twitter,7046,0.0545,80.15,Enterprise Connectivity,Chicago,Illinois,US,0,2026-05-27T11:26:09Z
+4822,@streaming_maya,Streaming Maya,youtube,2140,0.0865,79.12,IoT Connectivity,Houston,Texas,US,0,2026-05-27T11:26:09Z
+4823,@streaming_pia,Streaming Pia,threads,9810,0.099,94.34,Network Monitoring,Phoenix,Arizona,US,0,2026-05-27T11:26:09Z
+4824,@streaming_aria,Streaming Aria,instagram,942762,0.0428,87.52,Service Assurance,San Francisco,California,US,1,2026-05-27T11:26:09Z
+4825,@streaming_yuri,Streaming Yuri,tiktok,37798,0.0535,84.39,Field Operations,Miami,Florida,US,0,2026-05-27T11:26:09Z
+4826,@streaming_ruby,Streaming Ruby,twitter,10409160,0.0132,86.49,Family Plans,Seattle,Washington,US,1,2026-05-27T11:26:09Z
+4827,@streaming_alex,Streaming Alex,youtube,99078,0.0255,68.97,Connected Life,Denver,Colorado,US,0,2026-05-27T11:26:09Z
+4828,@streaming_jace,Streaming Jace,threads,41848,0.0273,75.48,Billing Experience,Austin,Texas,US,0,2026-05-27T11:26:09Z
+4829,@streaming_cole,Streaming Cole,instagram,112390,0.0322,77.67,Mobile Service,Nashville,Tennessee,US,0,2026-05-27T11:26:09Z
+4830,@streaming_tess,Streaming Tess,tiktok,158375,0.0156,70.84,Fiber Broadband,Portland,Oregon,US,0,2026-05-27T11:26:09Z
+4831,@gaming_hope,Gaming Hope,twitter,868999,0.0207,87.74,5G Services,Boston,Massachusetts,US,1,2026-05-27T11:26:09Z
+4832,@gaming_ava,Gaming Ava,youtube,95226,0.0746,100,Customer Retention,Atlanta,Georgia,US,0,2026-05-27T11:26:09Z
+4833,@gaming_tess,Gaming Tess,threads,741380,0.0351,85.2,Home Internet,Dallas,Texas,US,1,2026-05-27T11:26:09Z
+4834,@gaming_mia,Gaming Mia,instagram,1685,0.106,91.18,Device Upgrades,San Diego,California,US,0,2026-05-27T11:26:09Z
+4835,@gaming_sarah,Gaming Sarah,tiktok,8794,0.0572,77.63,Roaming Services,Minneapolis,Minnesota,US,0,2026-05-27T11:26:09Z
+4841,@firstnet_ines,Firstnet Ines,twitter,1053,0.1013,83.08,Enterprise Connectivity,Detroit,Michigan,US,0,2026-05-27T11:26:09Z
+4842,@firstnet_nina,Firstnet Nina,youtube,70060,0.0265,68.5,IoT Connectivity,Las Vegas,Nevada,US,0,2026-05-27T11:26:09Z
+4843,@firstnet_wren,Firstnet Wren,threads,8049,0.0985,92.36,Network Monitoring,Brooklyn,New York,US,0,2026-05-27T11:26:09Z
+4844,@firstnet_ruby,Firstnet Ruby,instagram,6712,0.1129,100,Service Assurance,New York,New York,US,0,2026-05-27T11:26:09Z
+4845,@firstnet_marcus,Firstnet Marcus,tiktok,33349,0.03,66.5,Field Operations,Los Angeles,California,US,0,2026-05-27T11:26:09Z
+4846,@firstnet_omar,Firstnet Omar,twitter,89102,0.0768,96.04,Family Plans,Chicago,Illinois,US,0,2026-05-27T11:26:09Z
+4847,@firstnet_owen,Firstnet Owen,youtube,4209,0.0725,75.4,Connected Life,Houston,Texas,US,0,2026-05-27T11:26:09Z
+4848,@firstnet_cass,Firstnet Cass,threads,12527,0.0784,85.56,Billing Experience,Phoenix,Arizona,US,0,2026-05-27T11:26:09Z
+4849,@firstnet_gus,Firstnet Gus,instagram,76212,0.0529,81.11,Mobile Service,San Francisco,California,US,0,2026-05-27T11:26:09Z
+4850,@firstnet_ava,Firstnet Ava,tiktok,87124,0.0396,84.91,Fiber Broadband,Miami,Florida,US,0,2026-05-27T11:26:09Z
+4851,@rural_jace,Rural Jace,twitter,39615,0.055,89.97,5G Services,Seattle,Washington,US,0,2026-05-27T11:26:09Z
+4852,@rural_ella,Rural Ella,youtube,71265,0.0327,70.71,Customer Retention,Denver,Colorado,US,0,2026-05-27T11:26:09Z
+4853,@rural_zara,Rural Zara,threads,5858,0.0897,96.62,Home Internet,Austin,Texas,US,0,2026-05-27T11:26:09Z
+4854,@rural_faye,Rural Faye,instagram,2887,0.1196,100,Device Upgrades,Nashville,Tennessee,US,0,2026-05-27T11:26:09Z
+4855,@rural_ava,Rural Ava,tiktok,44365,0.0655,84.35,Roaming Services,Portland,Oregon,US,0,2026-05-27T11:26:09Z
+4856,@rural_vince,Rural Vince,twitter,465287,0.0233,82.19,Enterprise Connectivity,Boston,Massachusetts,US,0,2026-05-27T11:26:09Z
+4857,@rural_ruby,Rural Ruby,youtube,2831011,0.0168,92.26,IoT Connectivity,Atlanta,Georgia,US,1,2026-05-27T11:26:09Z
+4858,@rural_lily,Rural Lily,threads,56061,0.0608,91.32,Network Monitoring,Dallas,Texas,US,0,2026-05-27T11:26:09Z
+4859,@rural_reed,Rural Reed,instagram,21074,0.0274,61.19,Service Assurance,San Diego,California,US,0,2026-05-27T11:26:09Z
+4860,@rural_mia,Rural Mia,tiktok,334449,0.0294,88.23,Field Operations,Minneapolis,Minnesota,US,0,2026-05-27T11:26:09Z
+4861,@urban_kara,Urban Kara,twitter,3539,0.0458,72.76,Family Plans,Detroit,Michigan,US,0,2026-05-27T11:26:09Z
+4862,@urban_aria,Urban Aria,youtube,8429,0.0526,74.03,Connected Life,Las Vegas,Nevada,US,0,2026-05-27T11:26:09Z
+4863,@urban_dev,Urban Dev,threads,4344,0.0304,54.71,Billing Experience,Brooklyn,New York,US,0,2026-05-27T11:26:09Z
+4864,@urban_jace,Urban Jace,instagram,34357,0.0673,90.59,Mobile Service,New York,New York,US,0,2026-05-27T11:26:09Z
+4865,@urban_finn,Urban Finn,tiktok,8222,0.072,87.18,Fiber Broadband,Los Angeles,California,US,0,2026-05-27T11:26:09Z
+4866,@urban_cass,Urban Cass,twitter,4568,0.057,70.23,5G Services,Chicago,Illinois,US,0,2026-05-27T11:26:09Z
+4867,@urban_ines,Urban Ines,youtube,70040,0.0765,100,Customer Retention,Houston,Texas,US,0,2026-05-27T11:26:09Z
+4868,@urban_ella,Urban Ella,threads,2065,0.0788,74.47,Home Internet,Phoenix,Arizona,US,0,2026-05-27T11:26:09Z
+4869,@urban_beau,Urban Beau,instagram,1828,0.0778,75.2,Device Upgrades,San Francisco,California,US,0,2026-05-27T11:26:09Z
+4870,@urban_hope,Urban Hope,tiktok,25750,0.0297,70.27,Roaming Services,Miami,Florida,US,0,2026-05-27T11:26:09Z
+4871,@mvno_liam,Mvno Liam,twitter,8824,0.05,73.69,Enterprise Connectivity,Seattle,Washington,US,0,2026-05-27T11:26:09Z
+4872,@mvno_luna,Mvno Luna,youtube,8667,0.0335,71.2,IoT Connectivity,Denver,Colorado,US,0,2026-05-27T11:26:09Z
+4873,@mvno_jen,Mvno Jen,threads,65185,0.0464,78.29,Network Monitoring,Austin,Texas,US,0,2026-05-27T11:26:09Z
+4874,@mvno_omar,Mvno Omar,instagram,981532,0.0191,86.95,Service Assurance,Nashville,Tennessee,US,1,2026-05-27T11:26:09Z
+4875,@mvno_mia,Mvno Mia,tiktok,3585,0.0337,61.35,Field Operations,Portland,Oregon,US,0,2026-05-27T11:26:09Z
+4876,@mvno_zoe,Mvno Zoe,twitter,68628,0.0608,89.13,Family Plans,Boston,Massachusetts,US,0,2026-05-27T11:26:09Z
+4877,@mvno_reed,Mvno Reed,youtube,3056,0.042,70.68,Connected Life,Atlanta,Georgia,US,0,2026-05-27T11:26:09Z
+4878,@mvno_ivy,Mvno Ivy,threads,240048,0.0432,93.41,Billing Experience,Dallas,Texas,US,0,2026-05-27T11:26:09Z
+4879,@mvno_lily,Mvno Lily,instagram,4768,0.0654,71.69,Mobile Service,San Diego,California,US,0,2026-05-27T11:26:09Z
+4880,@mvno_tess,Mvno Tess,tiktok,6973,0.084,95.17,Fiber Broadband,Minneapolis,Minnesota,US,0,2026-05-27T11:26:09Z
+4881,@prepaid_nora,Prepaid Nora,twitter,7821,0.0932,89.37,5G Services,Detroit,Michigan,US,0,2026-05-27T11:26:09Z
+4882,@prepaid_mia,Prepaid Mia,youtube,32620,0.048,79.15,Customer Retention,Las Vegas,Nevada,US,0,2026-05-27T11:26:09Z
+4883,@prepaid_marcus,Prepaid Marcus,threads,8595,0.0477,77.92,Home Internet,Brooklyn,New York,US,0,2026-05-27T11:26:09Z
+4884,@prepaid_tess,Prepaid Tess,instagram,5956,0.0426,69.97,Device Upgrades,New York,New York,US,0,2026-05-27T11:26:09Z
+4885,@prepaid_max,Prepaid Max,tiktok,63114,0.0725,90.28,Roaming Services,Los Angeles,California,US,0,2026-05-27T11:26:09Z
+4886,@prepaid_ava,Prepaid Ava,twitter,3248,0.0948,96.79,Enterprise Connectivity,Chicago,Illinois,US,0,2026-05-27T11:26:09Z
+4887,@prepaid_yuri,Prepaid Yuri,youtube,25183,0.0474,74.72,IoT Connectivity,Houston,Texas,US,0,2026-05-27T11:26:09Z
+4888,@prepaid_hope,Prepaid Hope,threads,50780,0.0394,77.72,Network Monitoring,Phoenix,Arizona,US,0,2026-05-27T11:26:09Z
+4889,@prepaid_finn,Prepaid Finn,instagram,7180254,0.0166,90.62,Service Assurance,San Francisco,California,US,1,2026-05-27T11:26:09Z
+4890,@prepaid_sarah,Prepaid Sarah,tiktok,1543,0.091,81.71,Field Operations,Miami,Florida,US,0,2026-05-27T11:26:09Z
+4891,@postpaid_omar,Postpaid Omar,twitter,1723,0.032,49.05,Family Plans,Seattle,Washington,US,0,2026-05-27T11:26:09Z
+4892,@postpaid_ivy,Postpaid Ivy,youtube,529098,0.0173,82.02,Connected Life,Denver,Colorado,US,1,2026-05-27T11:26:09Z
+4893,@postpaid_maya,Postpaid Maya,threads,1176366,0.0171,77.57,Billing Experience,Austin,Texas,US,1,2026-05-27T11:26:09Z
+4894,@postpaid_xena,Postpaid Xena,instagram,278143,0.0151,71.26,Mobile Service,Nashville,Tennessee,US,0,2026-05-27T11:26:09Z
+4895,@postpaid_hope,Postpaid Hope,tiktok,94877,0.0332,70.08,Fiber Broadband,Portland,Oregon,US,0,2026-05-27T11:26:09Z
+4896,@postpaid_aria,Postpaid Aria,twitter,6674,0.0795,79.8,5G Services,Boston,Massachusetts,US,0,2026-05-27T11:26:09Z
+4897,@postpaid_jen,Postpaid Jen,youtube,2607,0.0499,72.9,Customer Retention,Atlanta,Georgia,US,0,2026-05-27T11:26:09Z
+4898,@postpaid_reed,Postpaid Reed,threads,574325,0.0183,77.98,Home Internet,Dallas,Texas,US,1,2026-05-27T11:26:09Z
+4899,@postpaid_ruby,Postpaid Ruby,instagram,19644,0.0597,85.64,Device Upgrades,San Diego,California,US,0,2026-05-27T11:26:09Z
+4900,@postpaid_ava,Postpaid Ava,tiktok,890899,0.0221,74.6,Roaming Services,Minneapolis,Minnesota,US,1,2026-05-27T11:26:09Z
+4901,@cx_pia,Cx Pia,twitter,4937,0.0541,72.51,Enterprise Connectivity,Detroit,Michigan,US,0,2026-05-27T11:26:09Z
+4902,@cx_ruby,Cx Ruby,youtube,285199,0.0442,92.69,IoT Connectivity,Las Vegas,Nevada,US,0,2026-05-27T11:26:09Z
+4903,@cx_cole,Cx Cole,threads,56040,0.0674,93.56,Network Monitoring,Brooklyn,New York,US,0,2026-05-27T11:26:09Z
+4904,@cx_cass,Cx Cass,instagram,7097,0.0717,82.41,Service Assurance,New York,New York,US,0,2026-05-27T11:26:09Z
+4905,@cx_nora,Cx Nora,tiktok,3668,0.0418,57.93,Field Operations,Los Angeles,California,US,0,2026-05-27T11:26:09Z
+4906,@cx_ivy,Cx Ivy,twitter,6090,0.0427,63.14,Family Plans,Chicago,Illinois,US,0,2026-05-27T11:26:09Z
+4907,@cx_tyler,Cx Tyler,youtube,9631,0.093,100,Connected Life,Houston,Texas,US,0,2026-05-27T11:26:09Z
+4908,@cx_zara,Cx Zara,threads,5583,0.0934,85.94,Billing Experience,Phoenix,Arizona,US,0,2026-05-27T11:26:09Z
+4909,@cx_kara,Cx Kara,instagram,75149,0.07,91.26,Mobile Service,San Francisco,California,US,0,2026-05-27T11:26:09Z
+4910,@cx_mia,Cx Mia,tiktok,4638,0.1147,100,Fiber Broadband,Miami,Florida,US,0,2026-05-27T11:26:09Z
+4911,@nps_reed,Nps Reed,twitter,85968,0.0674,87.24,5G Services,Seattle,Washington,US,0,2026-05-27T11:26:09Z
+4912,@nps_cleo,Nps Cleo,youtube,2249,0.0724,76.85,Customer Retention,Denver,Colorado,US,0,2026-05-27T11:26:09Z
+4913,@nps_ella,Nps Ella,threads,3113,0.0468,61.13,Home Internet,Austin,Texas,US,0,2026-05-27T11:26:09Z
+4914,@nps_jen,Nps Jen,instagram,9758,0.0318,71.08,Device Upgrades,Nashville,Tennessee,US,0,2026-05-27T11:26:09Z
+4915,@nps_tess,Nps Tess,tiktok,64844,0.0783,90.79,Roaming Services,Portland,Oregon,US,0,2026-05-27T11:26:09Z
+4916,@nps_faye,Nps Faye,twitter,2999,0.1023,93.26,Enterprise Connectivity,Boston,Massachusetts,US,0,2026-05-27T11:26:09Z
+4917,@nps_aria,Nps Aria,youtube,6981,0.0883,86.03,IoT Connectivity,Atlanta,Georgia,US,0,2026-05-27T11:26:09Z
+4918,@nps_zoe,Nps Zoe,threads,88407,0.0777,90.89,Network Monitoring,Dallas,Texas,US,0,2026-05-27T11:26:09Z
+4919,@nps_vince,Nps Vince,instagram,6378,0.064,85.22,Service Assurance,San Diego,California,US,0,2026-05-27T11:26:09Z
+4920,@nps_hope,Nps Hope,tiktok,4491,0.0708,83.57,Field Operations,Minneapolis,Minnesota,US,0,2026-05-27T11:26:09Z
+4921,@churn_sage,Churn Sage,twitter,92658,0.0449,78.74,Family Plans,Detroit,Michigan,US,0,2026-05-27T11:26:09Z
+4922,@churn_faye,Churn Faye,youtube,5545,0.1109,100,Connected Life,Las Vegas,Nevada,US,0,2026-05-27T11:26:09Z
+4923,@churn_owen,Churn Owen,threads,705874,0.0434,96.7,Billing Experience,Brooklyn,New York,US,1,2026-05-27T11:26:09Z
+4924,@churn_lily,Churn Lily,instagram,7661,0.0954,90.52,Mobile Service,New York,New York,US,0,2026-05-27T11:26:09Z
+4925,@churn_yuri,Churn Yuri,tiktok,372217,0.0419,90.93,Fiber Broadband,Los Angeles,California,US,0,2026-05-27T11:26:09Z
+4926,@churn_liam,Churn Liam,twitter,37058,0.0414,69.18,5G Services,Chicago,Illinois,US,0,2026-05-27T11:26:09Z
+4927,@churn_leo,Churn Leo,youtube,504233,0.0296,78.81,Customer Retention,Houston,Texas,US,1,2026-05-27T11:26:09Z
+4928,@churn_nina,Churn Nina,threads,8567,0.1067,99.25,Home Internet,Phoenix,Arizona,US,0,2026-05-27T11:26:09Z
+4929,@churn_mike,Churn Mike,instagram,94642,0.0511,87.72,Device Upgrades,San Francisco,California,US,0,2026-05-27T11:26:09Z
+4930,@churn_tess,Churn Tess,tiktok,694388,0.0177,74.73,Roaming Services,Miami,Florida,US,1,2026-05-27T11:26:09Z
+4931,@upgrade_tess,Upgrade Tess,twitter,9739,0.0777,82.11,Enterprise Connectivity,Seattle,Washington,US,0,2026-05-27T11:26:09Z
+4932,@upgrade_hope,Upgrade Hope,youtube,5341,0.106,100,IoT Connectivity,Denver,Colorado,US,0,2026-05-27T11:26:09Z
+4933,@upgrade_mia,Upgrade Mia,threads,2985,0.1053,99.61,Network Monitoring,Austin,Texas,US,0,2026-05-27T11:26:09Z
+4934,@upgrade_ava,Upgrade Ava,instagram,150215,0.0376,81.94,Service Assurance,Nashville,Tennessee,US,0,2026-05-27T11:26:09Z
+4935,@upgrade_sarah,Upgrade Sarah,tiktok,2832,0.0952,96.1,Field Operations,Portland,Oregon,US,0,2026-05-27T11:26:09Z
+4941,@activation_uma,Activation Uma,twitter,2368,0.1089,98.91,Family Plans,Boston,Massachusetts,US,0,2026-05-27T11:26:09Z
+4942,@activation_jace,Activation Jace,youtube,27183,0.0685,82.71,Connected Life,Atlanta,Georgia,US,0,2026-05-27T11:26:09Z
+4943,@activation_leo,Activation Leo,threads,1691,0.0554,72.08,Billing Experience,Dallas,Texas,US,0,2026-05-27T11:26:09Z
+4944,@activation_ella,Activation Ella,instagram,11667447,0.006,94.11,Mobile Service,San Diego,California,US,1,2026-05-27T11:26:09Z
+4945,@activation_marcus,Activation Marcus,tiktok,96393,0.0673,91.74,Fiber Broadband,Minneapolis,Minnesota,US,0,2026-05-27T11:26:09Z
+4946,@activation_zara,Activation Zara,twitter,708449,0.0278,77.77,5G Services,Detroit,Michigan,US,1,2026-05-27T11:26:09Z
+4947,@activation_pia,Activation Pia,youtube,1427,0.0759,75.52,Customer Retention,Las Vegas,Nevada,US,0,2026-05-27T11:26:09Z
+4948,@activation_faye,Activation Faye,threads,6427,0.116,100,Home Internet,Brooklyn,New York,US,0,2026-05-27T11:26:09Z
+4949,@activation_jack,Activation Jack,instagram,3038,0.0902,95.01,Device Upgrades,New York,New York,US,0,2026-05-27T11:26:09Z
+4950,@activation_ava,Activation Ava,tiktok,6317,0.0999,94.97,Roaming Services,Los Angeles,California,US,0,2026-05-27T11:26:09Z
+4951,@portin_vince,Portin Vince,twitter,7993,0.075,80.42,Enterprise Connectivity,Chicago,Illinois,US,0,2026-05-27T11:26:09Z
+4952,@portin_liam,Portin Liam,youtube,293493,0.0443,83.47,IoT Connectivity,Houston,Texas,US,0,2026-05-27T11:26:09Z
+4953,@portin_cleo,Portin Cleo,threads,72880,0.0617,91.05,Network Monitoring,Phoenix,Arizona,US,0,2026-05-27T11:26:09Z
+4954,@portin_luna,Portin Luna,instagram,5238,0.0612,76.76,Service Assurance,San Francisco,California,US,0,2026-05-27T11:26:09Z
+4955,@portin_ava,Portin Ava,tiktok,92114,0.0643,88.31,Field Operations,Miami,Florida,US,0,2026-05-27T11:26:09Z
+4956,@portin_jen,Portin Jen,twitter,96177,0.0698,99.64,Family Plans,Seattle,Washington,US,0,2026-05-27T11:26:09Z
+4957,@portin_xena,Portin Xena,youtube,9621683,0.0155,90.87,Connected Life,Denver,Colorado,US,1,2026-05-27T11:26:09Z
+4958,@portin_omar,Portin Omar,threads,77103,0.0622,96.48,Billing Experience,Austin,Texas,US,0,2026-05-27T11:26:09Z
+4959,@portin_faye,Portin Faye,instagram,73460,0.0682,94.4,Mobile Service,Nashville,Tennessee,US,0,2026-05-27T11:26:09Z
+4960,@portin_mia,Portin Mia,tiktok,14253,0.0326,72.54,Fiber Broadband,Portland,Oregon,US,0,2026-05-27T11:26:09Z
+4961,@plan_wren,Plan Wren,twitter,4629,0.1066,96.29,5G Services,Boston,Massachusetts,US,0,2026-05-27T11:26:09Z
+4962,@plan_omar,Plan Omar,youtube,10130,0.0496,77.82,Customer Retention,Atlanta,Georgia,US,0,2026-05-27T11:26:09Z
+4963,@plan_gus,Plan Gus,threads,90775,0.0552,87.23,Home Internet,Dallas,Texas,US,0,2026-05-27T11:26:09Z
+4964,@plan_ivy,Plan Ivy,instagram,9218,0.0715,78.58,Device Upgrades,San Diego,California,US,0,2026-05-27T11:26:09Z
+4965,@plan_finn,Plan Finn,tiktok,58321,0.0562,84.35,Roaming Services,Minneapolis,Minnesota,US,0,2026-05-27T11:26:09Z
+4966,@plan_maya,Plan Maya,twitter,79968,0.0261,70.13,Enterprise Connectivity,Detroit,Michigan,US,0,2026-05-27T11:26:09Z
+4967,@plan_mike,Plan Mike,youtube,30699,0.0661,81.56,IoT Connectivity,Las Vegas,Nevada,US,0,2026-05-27T11:26:09Z
+4968,@plan_xena,Plan Xena,threads,5309,0.0842,85,Network Monitoring,Brooklyn,New York,US,0,2026-05-27T11:26:09Z
+4969,@plan_pia,Plan Pia,instagram,8042,0.1164,100,Service Assurance,New York,New York,US,0,2026-05-27T11:26:09Z
+4970,@plan_hope,Plan Hope,tiktok,7175529,0.0114,94.22,Field Operations,Los Angeles,California,US,1,2026-05-27T11:26:09Z
+4971,@bundle_xena,Bundle Xena,twitter,1218,0.0764,74.21,Family Plans,Chicago,Illinois,US,0,2026-05-27T11:26:09Z
+4972,@bundle_reed,Bundle Reed,youtube,20296,0.0787,92.45,Connected Life,Houston,Texas,US,0,2026-05-27T11:26:09Z
+4973,@bundle_jace,Bundle Jace,threads,2322,0.1076,88.74,Billing Experience,Phoenix,Arizona,US,0,2026-05-27T11:26:09Z
+4974,@bundle_cleo,Bundle Cleo,instagram,532200,0.0346,83.57,Mobile Service,San Francisco,California,US,1,2026-05-27T11:26:09Z
+4975,@bundle_mia,Bundle Mia,tiktok,1217,0.1103,88.15,Fiber Broadband,Miami,Florida,US,0,2026-05-27T11:26:09Z
+4976,@bundle_ella,Bundle Ella,twitter,8141,0.0941,91.05,5G Services,Seattle,Washington,US,0,2026-05-27T11:26:09Z
+4977,@bundle_maya,Bundle Maya,youtube,6308,0.1114,100,Customer Retention,Denver,Colorado,US,0,2026-05-27T11:26:09Z
+4978,@bundle_jen,Bundle Jen,threads,757116,0.0339,90.86,Home Internet,Austin,Texas,US,1,2026-05-27T11:26:09Z
+4979,@bundle_zara,Bundle Zara,instagram,4172,0.0896,89.29,Device Upgrades,Nashville,Tennessee,US,0,2026-05-27T11:26:09Z
+4980,@bundle_tess,Bundle Tess,tiktok,3336,0.115,100,Roaming Services,Portland,Oregon,US,0,2026-05-27T11:26:09Z
+4981,@metro_yuri,Metro Yuri,twitter,57578,0.0484,88.44,Enterprise Connectivity,Boston,Massachusetts,US,0,2026-05-27T11:26:09Z
+4982,@metro_tess,Metro Tess,youtube,7506,0.104,94.86,IoT Connectivity,Atlanta,Georgia,US,0,2026-05-27T11:26:09Z
+4983,@metro_nora,Metro Nora,threads,4943,0.1015,89.95,Network Monitoring,Dallas,Texas,US,0,2026-05-27T11:26:09Z
+4984,@metro_hope,Metro Hope,instagram,945381,0.0204,87.19,Service Assurance,San Diego,California,US,1,2026-05-27T11:26:09Z
+4985,@metro_max,Metro Max,tiktok,38166,0.045,73.53,Field Operations,Minneapolis,Minnesota,US,0,2026-05-27T11:26:09Z
+4986,@metro_mia,Metro Mia,twitter,61262,0.0578,79.83,Family Plans,Detroit,Michigan,US,0,2026-05-27T11:26:09Z
+4987,@metro_finn,Metro Finn,youtube,13130623,0.0111,95.19,Connected Life,Las Vegas,Nevada,US,1,2026-05-27T11:26:09Z
+4988,@metro_ava,Metro Ava,threads,9676,0.0952,98.08,Billing Experience,Brooklyn,New York,US,0,2026-05-27T11:26:09Z
+4989,@metro_marcus,Metro Marcus,instagram,6684,0.0746,86.95,Mobile Service,New York,New York,US,0,2026-05-27T11:26:09Z
+4990,@metro_sarah,Metro Sarah,tiktok,5704,0.0596,82.16,Fiber Broadband,Los Angeles,California,US,0,2026-05-27T11:26:09Z
+4991,@homeconnect_zara,Homeconnect Zara,twitter,7308,0.0638,77.71,5G Services,Chicago,Illinois,US,0,2026-05-27T11:26:09Z
+4992,@homeconnect_vince,Homeconnect Vince,youtube,5479343,0.0225,87.31,Customer Retention,Houston,Texas,US,1,2026-05-27T11:26:09Z
+4993,@homeconnect_reed,Homeconnect Reed,threads,9458,0.0522,75.34,Home Internet,Phoenix,Arizona,US,0,2026-05-27T11:26:09Z
+4994,@homeconnect_liam,Homeconnect Liam,instagram,7538,0.0903,86.94,Device Upgrades,San Francisco,California,US,0,2026-05-27T11:26:09Z
+4995,@homeconnect_hope,Homeconnect Hope,tiktok,11563794,0.0054,92.75,Roaming Services,Miami,Florida,US,1,2026-05-27T11:26:09Z
+4996,@homeconnect_cleo,Homeconnect Cleo,twitter,55866,0.0531,89.88,Enterprise Connectivity,Seattle,Washington,US,0,2026-05-27T11:26:09Z
+4997,@homeconnect_ivy,Homeconnect Ivy,youtube,7127,0.0541,74.31,IoT Connectivity,Denver,Colorado,US,0,2026-05-27T11:26:09Z
+4998,@homeconnect_luna,Homeconnect Luna,threads,67794,0.0407,72.1,Network Monitoring,Austin,Texas,US,0,2026-05-27T11:26:09Z
+4999,@homeconnect_ella,Homeconnect Ella,instagram,87420,0.0504,79.06,Service Assurance,Nashville,Tennessee,US,0,2026-05-27T11:26:09Z
+5000,@homeconnect_ava,Homeconnect Ava,tiktok,4353,0.0926,88.22,Field Operations,Portland,Oregon,US,0,2026-05-27T11:26:09Z
+5001,@signalbridge_beau,Signalbridge Beau,twitter,50153,0.0762,95.25,Family Plans,Boston,Massachusetts,US,0,2026-05-27T11:26:09Z
+5002,@signalbridge_xena,Signalbridge Xena,youtube,5362,0.0595,79.64,Connected Life,Atlanta,Georgia,US,0,2026-05-27T11:26:09Z
+5003,@signalbridge_uma,Signalbridge Uma,threads,905942,0.0318,85.45,Billing Experience,Dallas,Texas,US,1,2026-05-27T11:26:09Z
+5004,@signalbridge_reed,Signalbridge Reed,instagram,8628,0.0516,75.34,Mobile Service,San Diego,California,US,0,2026-05-27T11:26:09Z
+5005,@signalbridge_nora,Signalbridge Nora,tiktok,843661,0.0167,82.64,Fiber Broadband,Minneapolis,Minnesota,US,1,2026-05-27T11:26:09Z
+5006,@signalbridge_jace,Signalbridge Jace,twitter,77837,0.0781,100,5G Services,Detroit,Michigan,US,0,2026-05-27T11:26:09Z
+5007,@signalbridge_gus,Signalbridge Gus,youtube,10409,0.0335,59.33,Customer Retention,Las Vegas,Nevada,US,0,2026-05-27T11:26:09Z
+5008,@signalbridge_cleo,Signalbridge Cleo,threads,2774,0.0952,83.62,Home Internet,Brooklyn,New York,US,0,2026-05-27T11:26:09Z
+5009,@signalbridge_leo,Signalbridge Leo,instagram,9718,0.1106,100,Device Upgrades,New York,New York,US,0,2026-05-27T11:26:09Z
+5010,@signalbridge_mia,Signalbridge Mia,tiktok,8690,0.0418,66.07,Roaming Services,Los Angeles,California,US,0,2026-05-27T11:26:09Z
+5011,@fiberpath_cass,Fiberpath Cass,twitter,5301,0.0819,91.69,Enterprise Connectivity,Chicago,Illinois,US,0,2026-05-27T11:26:09Z
+5012,@fiberpath_zara,Fiberpath Zara,youtube,5760,0.0322,55.14,IoT Connectivity,Houston,Texas,US,0,2026-05-27T11:26:09Z
+5013,@fiberpath_xena,Fiberpath Xena,threads,7069,0.0838,89.79,Network Monitoring,Phoenix,Arizona,US,0,2026-05-27T11:26:09Z
+5014,@fiberpath_vince,Fiberpath Vince,instagram,408831,0.0163,79.68,Service Assurance,San Francisco,California,US,0,2026-05-27T11:26:09Z
+5015,@fiberpath_tess,Fiberpath Tess,tiktok,5642,0.0358,65.21,Field Operations,Miami,Florida,US,0,2026-05-27T11:26:09Z
+5016,@fiberpath_reed,Fiberpath Reed,twitter,11089,0.0692,83.41,Family Plans,Seattle,Washington,US,0,2026-05-27T11:26:09Z
+5017,@fiberpath_omar,Fiberpath Omar,youtube,1611,0.1081,96.87,Connected Life,Denver,Colorado,US,0,2026-05-27T11:26:09Z
+5018,@fiberpath_liam,Fiberpath Liam,threads,163993,0.0265,75.4,Billing Experience,Austin,Texas,US,0,2026-05-27T11:26:09Z
+5019,@fiberpath_jace,Fiberpath Jace,instagram,95056,0.044,76.72,Mobile Service,Nashville,Tennessee,US,0,2026-05-27T11:26:09Z
+5020,@fiberpath_hope,Fiberpath Hope,tiktok,49121,0.042,73.86,Fiber Broadband,Portland,Oregon,US,0,2026-05-27T11:26:09Z
+5021,@roamflow_dev,Roamflow Dev,twitter,5215,0.0988,87.31,5G Services,Boston,Massachusetts,US,0,2026-05-27T11:26:09Z
+5022,@roamflow_cass,Roamflow Cass,youtube,6364,0.117,100,Customer Retention,Atlanta,Georgia,US,0,2026-05-27T11:26:09Z
+5023,@roamflow_beau,Roamflow Beau,threads,52633,0.0309,75.72,Home Internet,Dallas,Texas,US,0,2026-05-27T11:26:09Z
+5024,@roamflow_zara,Roamflow Zara,instagram,4031,0.0696,84.24,Device Upgrades,San Diego,California,US,0,2026-05-27T11:26:09Z
+5025,@roamflow_yuri,Roamflow Yuri,tiktok,48390,0.066,86.75,Roaming Services,Minneapolis,Minnesota,US,0,2026-05-27T11:26:09Z
+5026,@roamflow_xena,Roamflow Xena,twitter,925174,0.042,98.36,Enterprise Connectivity,Detroit,Michigan,US,1,2026-05-27T11:26:09Z
+5027,@roamflow_wren,Roamflow Wren,youtube,33041,0.0757,94.89,IoT Connectivity,Las Vegas,Nevada,US,0,2026-05-27T11:26:09Z
+5028,@roamflow_vince,Roamflow Vince,threads,267199,0.0395,83.32,Network Monitoring,Brooklyn,New York,US,0,2026-05-27T11:26:09Z
+5029,@roamflow_uma,Roamflow Uma,instagram,4735,0.0627,79.47,Service Assurance,New York,New York,US,0,2026-05-27T11:26:09Z
+5030,@roamflow_tess,Roamflow Tess,tiktok,79034,0.063,97.51,Field Operations,Los Angeles,California,US,0,2026-05-27T11:26:09Z
+5031,@wavefirst_sarah,Wavefirst Sarah,twitter,45343,0.0542,86.18,Family Plans,Chicago,Illinois,US,0,2026-05-27T11:26:09Z
+5041,@enterpriseedge_mike,Enterpriseedge Mike,youtube,71598,0.0647,92.6,Connected Life,Houston,Texas,US,0,2026-05-27T11:26:09Z
+5042,@enterpriseedge_jen,Enterpriseedge Jen,threads,94369,0.042,87.34,Billing Experience,Phoenix,Arizona,US,0,2026-05-27T11:26:09Z
+5043,@enterpriseedge_alex,Enterpriseedge Alex,instagram,7066,0.0789,79.99,Mobile Service,San Francisco,California,US,0,2026-05-27T11:26:09Z
+5044,@enterpriseedge_zoe,Enterpriseedge Zoe,tiktok,12804,0.0622,82.59,Fiber Broadband,Miami,Florida,US,0,2026-05-27T11:26:09Z
+5045,@enterpriseedge_marcus,Enterpriseedge Marcus,twitter,86305,0.0453,83.52,5G Services,Seattle,Washington,US,0,2026-05-27T11:26:09Z
+5046,@enterpriseedge_lily,Enterpriseedge Lily,youtube,2553910,0.0235,88.51,Customer Retention,Denver,Colorado,US,1,2026-05-27T11:26:09Z
+5047,@enterpriseedge_kai,Enterpriseedge Kai,threads,305394,0.016,71.35,Home Internet,Austin,Texas,US,0,2026-05-27T11:26:09Z
+5048,@enterpriseedge_maya,Enterpriseedge Maya,instagram,90165,0.0369,77.21,Device Upgrades,Nashville,Tennessee,US,0,2026-05-27T11:26:09Z
+5049,@enterpriseedge_tyler,Enterpriseedge Tyler,tiktok,9663,0.0738,88.76,Roaming Services,Portland,Oregon,US,0,2026-05-27T11:26:09Z
+5050,@enterpriseedge_ava,Enterpriseedge Ava,twitter,167790,0.0206,80.39,Enterprise Connectivity,Boston,Massachusetts,US,0,2026-05-27T11:26:09Z
+5051,@pulsepoint5g_jen,Pulsepoint5g Jen,youtube,1820,0.0504,70.59,IoT Connectivity,Atlanta,Georgia,US,0,2026-05-27T11:26:09Z
+5052,@pulsepoint5g_zoe,Pulsepoint5g Zoe,threads,3019,0.0353,59.56,Network Monitoring,Dallas,Texas,US,0,2026-05-27T11:26:09Z
+5053,@pulsepoint5g_lily,Pulsepoint5g Lily,instagram,555557,0.0363,84.69,Service Assurance,San Diego,California,US,1,2026-05-27T11:26:09Z
+5054,@pulsepoint5g_maya,Pulsepoint5g Maya,tiktok,3442,0.1163,100,Field Operations,Minneapolis,Minnesota,US,0,2026-05-27T11:26:09Z
+5055,@pulsepoint5g_ava,Pulsepoint5g Ava,twitter,1182,0.0684,74.75,Family Plans,Detroit,Michigan,US,0,2026-05-27T11:26:09Z
+5056,@pulsepoint5g_nina,Pulsepoint5g Nina,youtube,507881,0.0191,76.94,Connected Life,Las Vegas,Nevada,US,1,2026-05-27T11:26:09Z
+5057,@pulsepoint5g_ella,Pulsepoint5g Ella,threads,8399,0.0998,99.62,Billing Experience,Brooklyn,New York,US,0,2026-05-27T11:26:09Z
+5058,@pulsepoint5g_aria,Pulsepoint5g Aria,instagram,9503,0.0582,81.72,Mobile Service,New York,New York,US,0,2026-05-27T11:26:09Z
+5059,@pulsepoint5g_luna,Pulsepoint5g Luna,tiktok,38904,0.0663,85.93,Fiber Broadband,Los Angeles,California,US,0,2026-05-27T11:26:09Z
+5060,@pulsepoint5g_mia,Pulsepoint5g Mia,twitter,11883166,0.0176,88.75,5G Services,Chicago,Illinois,US,1,2026-05-27T11:26:09Z

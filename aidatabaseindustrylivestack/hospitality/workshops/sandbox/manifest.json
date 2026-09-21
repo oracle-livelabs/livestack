@@ -1,0 +1,66 @@
+{
+  "workshoptitle": "Oracle AI Database 26ai Hospitality LiveStack Guide",
+  "help": "livelabs-help-database_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Get Started",
+      "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs-livestacks.md"
+    },
+    {
+      "title": "Introduction",
+      "filename": "../../introduction/introduction.md"
+    },
+    {
+      "title": "Scene 1: Data Foundation",
+      "filename": "../../scene-1-data-foundation/scene-1-data-foundation.md"
+    },
+    {
+      "title": "Scene 2: Property Performance Command Center",
+      "filename": "../../scene-2-property-performance-command-center/scene-2-property-performance-command-center.md"
+    },
+    {
+      "title": "Scene 3: Guest and Demand Signal Intelligence",
+      "filename": "../../scene-3-guest-and-demand-signal-intelligence/scene-3-guest-and-demand-signal-intelligence.md"
+    },
+    {
+      "title": "Scene 4: Guest Experience Network Graph",
+      "filename": "../../scene-4-guest-experience-network-graph/scene-4-guest-experience-network-graph.md"
+    },
+    {
+      "title": "Scene 5: Housekeeping and Maintenance Coverage Map",
+      "filename": "../../scene-5-housekeeping-and-maintenance-coverage-map/scene-5-housekeeping-and-maintenance-coverage-map.md"
+    },
+    {
+      "title": "Scene 6: Reservation and Folio Operations",
+      "filename": "../../scene-6-reservation-and-folio-operations/scene-6-reservation-and-folio-operations.md"
+    },
+    {
+      "title": "Scene 7: OML Occupancy Revenue and Labor Analytics",
+      "filename": "../../scene-7-oml-occupancy-revenue-and-labor-analytics/scene-7-oml-occupancy-revenue-and-labor-analytics.md"
+    },
+    {
+      "title": "Scene 8: Ask Hospitality Data",
+      "filename": "../../scene-8-ask-hospitality-data/scene-8-ask-hospitality-data.md"
+    },
+    {
+      "title": "Scene 9: Hospitality Agent Console",
+      "filename": "../../scene-9-hospitality-agent-console/scene-9-hospitality-agent-console.md"
+    },
+    {
+      "title": "Scene 10: Owner Financial Validation Workbench",
+      "filename": "../../scene-10-owner-financial-validation-workbench/scene-10-owner-financial-validation-workbench.md"
+    },
+    {
+      "title": "Take It Home",
+      "filename": "../../take-it-home/download-livestack-take-it-home.md"
+    },
+    {
+      "title": "Take It Home OCI: Deploy with Resource Manager",
+      "filename": "../../deploy-livestack-terraform/deploy-livestack-terraform.md"
+    },
+    {
+      "title": "Need Help?",
+      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+    }
+  ]
+}

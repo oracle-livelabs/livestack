@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "applicationId": "livestack-retail",
+  "sourceRoot": "output/wave2-parity-pilot/retail",
+  "manifestSha256": "30fd060ddcd9eed23c68745ef15aad81d6e2729e202d7695fadbda928529696c",
+  "fileCount": 8298,
+  "sourceBytes": 115596233,
+  "manifestBytes": 1216650,
+  "databaseSourceSha256": "9e7bfc7c738186c1a4bea0a50534f8644b73a094cdd12e70baac28646dc03cf4",
+  "schemaGeneration": "retail-schema-2026.07.30.13"
+}

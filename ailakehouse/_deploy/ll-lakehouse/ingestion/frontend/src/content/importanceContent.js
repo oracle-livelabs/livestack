@@ -63,6 +63,22 @@ export const IMPORTANCE_CONTENT = {
     ],
     value: 'PeakGear accelerates source onboarding and reduces data trust issues by standardizing raw intake inside the governed AI Lakehouse.',
   },
+  dataCatalog: {
+    titleId: 'data-catalog-importance-title',
+    title: 'Why Data Catalog matters',
+    closeLabel: 'Close Data Catalog explanation',
+    beneficiary: 'Data product owners, analysts, and application teams',
+    builder: 'Data engineers and platform teams connecting operational sources to the AI Lakehouse',
+    lead: 'The business outcome is governed access to operational source data, so users can discover and query PostgreSQL, MySQL, and MongoDB without creating one-off connections.',
+    example: 'PeakGear can register its product, loyalty, and catalog sources once, then use the same Data Studio session to inspect each source alongside AI Lakehouse data.',
+    steps: [
+      { title: 'Source access is repeatable', body: 'The connection details and database-link action give workshop users one approved path to each operational source.' },
+      { title: 'Data stays where it operates', body: 'Database links let users query source data without copying it first into a separate staging system.' },
+      { title: 'Discovery starts from shared context', body: 'Users can compare source data with the AI Lakehouse using the same PG Data Studio session and credentials.' },
+      { title: 'New data products move faster', body: 'Teams can validate operational data and decide what to ingest or transform without rebuilding connectivity.' },
+    ],
+    value: 'PeakGear makes operational source data easier to discover and reuse while preserving one governed route into the AI Lakehouse.',
+  },
   silverProcess: {
     titleId: 'silver-importance-title',
     title: 'Why Silver processing matters',

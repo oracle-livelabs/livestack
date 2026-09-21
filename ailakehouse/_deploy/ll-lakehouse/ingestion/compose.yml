@@ -18,6 +18,9 @@ volumes:
   frontend-dist:
   signal-generator-node-modules:
   gravitino-logs:
+  postgres-source-data:
+  loyalty-mysql-data:
+  mongodb-catalog-data:
 
 networks:
   default: {}
@@ -82,6 +85,85 @@ services:
       start_period: 180s
     restart: unless-stopped
 
+  # Source system for sportswear orders, returns, inventory, and locations.
+  # Federation and seed data are intentionally added in later phases.
+  postgres-source:
+    hostname: postgres-source
+    image: ${POSTGRES_SOURCE_IMAGE:-docker.io/library/postgres:17.11-bookworm}
+    environment:
+      POSTGRES_DB: ${POSTGRES_SOURCE_DB:-sportswear}
+      POSTGRES_USER: ${POSTGRES_SOURCE_USER:-PG}
+      POSTGRES_PASSWORD: ${DBPASSWORD:-peakgear}
+    ports:
+      - "${POSTGRES_SOURCE_PORT:-8504}:5432"
+    volumes:
+      - postgres-source-data:/var/lib/postgresql/data
+      - ./source-databases/postgres:/docker-entrypoint-initdb.d:ro,z
+    networks:
+      default:
+        aliases:
+          - postgres-source
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U \"$${POSTGRES_USER}\" -d \"$${POSTGRES_DB}\""]
+      interval: 15s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
+    restart: unless-stopped
+
+  # Source system for the later Loyalty Benefits tutorial extension.
+  loyalty-mysql:
+    hostname: loyalty-mysql
+    image: ${LOYALTY_MYSQL_IMAGE:-docker.io/library/mysql:8.4.11}
+    environment:
+      MYSQL_DATABASE: ${LOYALTY_MYSQL_DATABASE:-loyalty}
+      MYSQL_USER: ${LOYALTY_MYSQL_USER:-PG}
+      MYSQL_PASSWORD: ${DBPASSWORD:-peakgear}
+      MYSQL_ROOT_PASSWORD: ${DBPASSWORD:-peakgear}
+    ports:
+      - "${LOYALTY_MYSQL_PORT:-8503}:3306"
+    volumes:
+      - loyalty-mysql-data:/var/lib/mysql
+      - ./source-databases/mysql:/docker-entrypoint-initdb.d:ro,z
+    networks:
+      default:
+        aliases:
+          - loyalty-mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -u \"$${MYSQL_USER}\" -p\"$${MYSQL_PASSWORD}\" --silent"]
+      interval: 15s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
+    restart: unless-stopped
+
+  # Source system for the product catalogue and product specifications.
+  mongodb-catalog:
+    hostname: mongodb-catalog
+    image: ${MONGODB_CATALOG_IMAGE:-docker.io/library/mongo:8.0.29}
+    profiles:
+      - aihub
+    environment:
+      MONGO_INITDB_DATABASE: ${MONGODB_CATALOG_DATABASE:-catalog}
+      MONGO_INITDB_ROOT_USERNAME: ${MONGODB_CATALOG_ROOT_USERNAME:-PG}
+      MONGO_INITDB_ROOT_PASSWORD: ${DBPASSWORD:-peakgear}
+    ports:
+      - "${MONGODB_CATALOG_PORT:-8888}:27017"
+    volumes:
+      - mongodb-catalog-data:/data/db
+      - ./source-databases/mongodb:/docker-entrypoint-initdb.d:ro,z
+    networks:
+      default:
+        aliases:
+          - mongodb-catalog
+    healthcheck:
+      test: ["CMD-SHELL", "test \"$$(mongosh --quiet --username \"$${MONGO_INITDB_ROOT_USERNAME}\" --password=\"$${MONGO_INITDB_ROOT_PASSWORD}\" --authenticationDatabase admin --eval 'db.runCommand({ ping: 1 }).ok')\" = 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
+    restart: unless-stopped
+
   ords:
     hostname: ords
     image: ${ORDS_IMAGE:-container-registry.oracle.com/database/ords:latest}
@@ -91,6 +173,7 @@ services:
       DBPORT: 1521
       DBSERVICENAME: FREEPDB1
       ORACLE_PWD: ${ORACLE_PWD:-oracle}
+      ORACLE_USER_PWD: ${ORACLE_PWD:-oracle}
     ports:
       - 8181:8080
     volumes:
@@ -459,7 +542,7 @@ services:
     environment:
       NODE_ENV: production
       PORT: 3001
-      FRONTEND_URL: http://localhost:${APP_PORT:-8505}
+      FRONTEND_URL: ${FRONTEND_URL:-http://localhost:8505}
       ORACLE_USER: PG
       ORACLE_PASSWORD: ${DBPASSWORD:-peakgear}
       ORACLE_CONNECTION_STRING: db:1521/FREEPDB1
@@ -475,6 +558,28 @@ services:
       ADB_WALLET_PASSWORD: ${ADB_WALLET_PASSWORD:-}
       ADB_SERVICE_NAME: ${SERVICE_NAME:-}
       ADB_DB_ACTIONS_URL: ${ORDSURL:-}
+      DBPASSWORD: ${DBPASSWORD:-}
+      AIHUB: ${AIHUB:-false}
+      SOURCE_PUBLIC_HOST: ${SOURCE_PUBLIC_HOST:-}
+      PUBLIC_HOST: ${PUBLIC_HOST:-}
+      PUBLIC_IP: ${PUBLIC_IP:-}
+      POSTGRES_SOURCE_PORT: ${POSTGRES_SOURCE_PORT:-8504}
+      POSTGRES_CATALOG_PORT: ${POSTGRES_CATALOG_PORT:-5432}
+      POSTGRES_SOURCE_DB: ${POSTGRES_SOURCE_DB:-sportswear}
+      POSTGRES_SOURCE_USER: ${POSTGRES_SOURCE_USER:-PG}
+      LOYALTY_MYSQL_PORT: ${LOYALTY_MYSQL_PORT:-8503}
+      LOYALTY_MYSQL_CATALOG_PORT: ${LOYALTY_MYSQL_CATALOG_PORT:-3306}
+      LOYALTY_MYSQL_DATABASE: ${LOYALTY_MYSQL_DATABASE:-loyalty}
+      LOYALTY_MYSQL_USER: ${LOYALTY_MYSQL_USER:-PG}
+      MONGODB_CATALOG_PORT: ${MONGODB_CATALOG_PORT:-8888}
+      MONGODB_CATALOG_LINK_PORT: ${MONGODB_CATALOG_LINK_PORT:-27017}
+      MONGODB_CATALOG_DATABASE: ${MONGODB_CATALOG_DATABASE:-catalog}
+      MONGODB_CATALOG_ROOT_USERNAME: ${MONGODB_CATALOG_ROOT_USERNAME:-PG}
+      DATA_TRANSFORMS_ICEBERG_PUBLIC_HOST: ${DATA_TRANSFORMS_ICEBERG_PUBLIC_HOST:-}
+      DATA_TRANSFORMS_ICEBERG_REST_URL: ${DATA_TRANSFORMS_ICEBERG_REST_URL:-}
+      DATA_TRANSFORMS_ICEBERG_REST_PATH: ${DATA_TRANSFORMS_ICEBERG_REST_PATH:-/iceberg}
+      GRAVITINO_REST_PORT: ${GRAVITINO_REST_PORT:-1525}
+      GRAVITINO_HTTP_PORT: ${GRAVITINO_HTTP_PORT:-1525}
       OSA_API_BASE_URL: ${OSA_API_BASE_URL:-}
       OSA_PUBLIC_URL: ${OSA_PUBLIC_URL:-}
       GGSA_OSA_HTTPS_PORT: ${GGSA_OSA_HTTPS_PORT:-8085}

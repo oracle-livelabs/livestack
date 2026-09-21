@@ -1,7 +1,7 @@
 [Unit]
 Description=Podman Compose App
-After=network-online.target adb-wallet.service adb-load.service
-Wants=network-online.target adb-wallet.service adb-load.service
+After=network-online.target adb-wallet.service adb-load.service pg-ai-data-catalog.service
+Wants=network-online.target adb-wallet.service adb-load.service pg-ai-data-catalog.service
 
 [Service]
 Type=simple
@@ -14,11 +14,11 @@ WorkingDirectory=/home/opc/ingestion
 
 ExecStartPre=/bin/bash -c '/home/opc/init/setenv.sh'
 
-ExecStartPre=/usr/local/bin/podman-compose down
+ExecStartPre=/bin/bash -lc 'set -a; source /home/opc/ingestion/.env; set +a; compose_files=(-f compose.yml); if [[ "$${SOURCE_DATABASE_TLS_ENABLED:-false}" == "true" ]]; then compose_files+=(-f compose.source-tls.yml); fi; /usr/local/bin/podman-compose "$${compose_files[@]}" down'
 #ExecStartPre=/usr/bin/podman-compose down
 
 # Start the compose app
-ExecStart=/usr/local/bin/podman-compose up
+ExecStart=/bin/bash -lc 'set -a; source /home/opc/ingestion/.env; set +a; compose_files=(-f compose.yml); if [[ "$${SOURCE_DATABASE_TLS_ENABLED:-false}" == "true" ]]; then compose_files+=(-f compose.source-tls.yml); fi; if [[ "$${AIHUB:-false}" == "true" ]]; then exec /usr/local/bin/podman-compose "$${compose_files[@]}" --profile aihub up; fi; exec /usr/local/bin/podman-compose "$${compose_files[@]}" up'
 #ExecStart=/usr/bin/podman-compose up
 
 [Install]

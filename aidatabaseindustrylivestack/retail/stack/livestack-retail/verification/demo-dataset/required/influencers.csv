@@ -1,0 +1,484 @@
+influencer_id,handle,display_name,platform,follower_count,engagement_rate,influence_score,niche,city,region,country,is_verified,created_at
+1,@trail_maya_1,Trail Maya,instagram,29787,0.0419,71.62,Outdoor,New York,New York,US,0,2026-04-13T09:16:47Z
+2,@summit_alex_2,Summit Alex,tiktok,40474,0.0457,78.45,Trail Running,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+3,@hike_jen_3,Hike Jen,twitter,289825,0.0381,84.35,Hiking,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+4,@run_cole_4,Run Cole,youtube,4845,0.0496,69.43,Fitness,Houston,Texas,US,0,2026-04-13T09:16:47Z
+5,@cycle_zoe_5,Cycle Zoe,threads,8767,0.0365,62.32,Cycling,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+6,@camp_marcus_6,Camp Marcus,instagram,8757,0.0618,73.6,Camping,San Francisco,California,US,0,2026-04-13T09:16:47Z
+7,@climb_lily_7,Climb Lily,tiktok,82123,0.0767,100,Team Sports,Miami,Florida,US,0,2026-04-13T09:16:47Z
+8,@gear_kai_8,Gear Kai,twitter,48455,0.0488,74.64,Water Sports,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+9,@fit_tyler_9,Fit Tyler,youtube,9410,0.0775,79.81,Sports Tech,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+10,@outdoor_ava_10,Outdoor Ava,threads,5314,0.0358,60.18,Recovery,Austin,Texas,US,0,2026-04-13T09:16:47Z
+11,@endurance_nina_11,Endurance Nina,instagram,1884,0.0335,59.83,Sports Nutrition,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+12,@terrain_drew_12,Terrain Drew,tiktok,2955,0.0311,61.13,Climbing,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+13,@hydration_ella_13,Hydration Ella,twitter,62427,0.072,95.97,Footwear Reviews,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+14,@recovery_finn_14,Recovery Finn,youtube,6305,0.1018,98.65,Gear Testing,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+15,@coach_aria_15,Coach Aria,threads,6623,0.0607,75.6,Training,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+16,@field_owen_16,Field Owen,instagram,21942,0.0745,96.91,Outdoor,San Diego,California,US,0,2026-04-13T09:16:47Z
+17,@route_luna_17,Route Luna,tiktok,1845,0.088,83.27,Trail Running,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+18,@alpine_mia_18,Alpine Mia,twitter,9976,0.0765,85.02,Hiking,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+19,@river_noah_19,River Noah,youtube,9123,0.0362,71.62,Fitness,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+20,@stadium_ivy_20,Stadium Ivy,threads,9026,0.0951,93.79,Cycling,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+21,@trail_leo_21,Trail Leo,instagram,3774,0.0615,80.61,Camping,New York,New York,US,0,2026-04-13T09:16:47Z
+22,@summit_ruby_22,Summit Ruby,tiktok,83369,0.0622,90.24,Team Sports,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+23,@hike_max_23,Hike Max,twitter,85062,0.0573,85.12,Water Sports,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+24,@run_cleo_24,Run Cleo,youtube,9133,0.0775,85.5,Sports Tech,Houston,Texas,US,0,2026-04-13T09:16:47Z
+25,@cycle_dane_25,Cycle Dane,threads,26237,0.0264,68.42,Recovery,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+26,@camp_faye_26,Camp Faye,instagram,17305,0.0471,82.26,Sports Nutrition,San Francisco,California,US,0,2026-04-13T09:16:47Z
+27,@climb_gus_27,Climb Gus,tiktok,8926,0.1031,94.94,Climbing,Miami,Florida,US,0,2026-04-13T09:16:47Z
+28,@gear_hope_28,Gear Hope,twitter,37898,0.0655,90.3,Footwear Reviews,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+29,@fit_jace_29,Fit Jace,youtube,4482,0.1016,91.6,Gear Testing,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+30,@outdoor_kara_30,Outdoor Kara,threads,63731,0.0519,81.88,Training,Austin,Texas,US,0,2026-04-13T09:16:47Z
+31,@endurance_maya_31,Endurance Maya,instagram,536083,0.0277,88.26,Outdoor,Nashville,Tennessee,US,1,2026-04-13T09:16:47Z
+32,@terrain_alex_32,Terrain Alex,tiktok,8576,0.1177,100,Trail Running,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+33,@hydration_jen_33,Hydration Jen,twitter,7341,0.0926,89.01,Hiking,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+34,@recovery_cole_34,Recovery Cole,youtube,509575,0.0215,84.22,Fitness,Atlanta,Georgia,US,1,2026-04-13T09:16:47Z
+35,@coach_zoe_35,Coach Zoe,threads,2336,0.032,60.49,Cycling,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+36,@field_marcus_36,Field Marcus,instagram,90248,0.0539,80.52,Camping,San Diego,California,US,0,2026-04-13T09:16:47Z
+37,@route_lily_37,Route Lily,tiktok,43754,0.0371,81.17,Team Sports,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+38,@alpine_kai_38,Alpine Kai,twitter,71571,0.0657,90.66,Water Sports,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+39,@river_tyler_39,River Tyler,youtube,563253,0.0407,94.21,Sports Tech,Las Vegas,Nevada,US,1,2026-04-13T09:16:47Z
+40,@stadium_ava_40,Stadium Ava,threads,27525,0.0475,72.77,Recovery,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+41,@trail_nina_41,Trail Nina,instagram,617113,0.0441,96.66,Sports Nutrition,New York,New York,US,1,2026-04-13T09:16:47Z
+42,@summit_drew_42,Summit Drew,tiktok,11615,0.031,69.01,Climbing,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+43,@hike_ella_43,Hike Ella,twitter,5486,0.0944,87.07,Footwear Reviews,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+44,@run_finn_44,Run Finn,youtube,68500,0.0706,91.8,Gear Testing,Houston,Texas,US,0,2026-04-13T09:16:47Z
+45,@cycle_aria_45,Cycle Aria,threads,13113440,0.01,83.84,Training,Phoenix,Arizona,US,1,2026-04-13T09:16:47Z
+46,@camp_owen_46,Camp Owen,instagram,74785,0.0584,86.91,Outdoor,San Francisco,California,US,0,2026-04-13T09:16:47Z
+47,@climb_luna_47,Climb Luna,tiktok,60707,0.0423,76.63,Trail Running,Miami,Florida,US,0,2026-04-13T09:16:47Z
+48,@gear_mia_48,Gear Mia,twitter,9805,0.0647,84.17,Hiking,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+49,@fit_noah_49,Fit Noah,youtube,9843,0.074,89.37,Fitness,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+50,@outdoor_ivy_50,Outdoor Ivy,threads,816891,0.0209,79.09,Cycling,Austin,Texas,US,1,2026-04-13T09:16:47Z
+51,@endurance_leo_51,Endurance Leo,instagram,4838,0.088,82.74,Camping,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+52,@terrain_ruby_52,Terrain Ruby,tiktok,12017,0.0512,74.88,Team Sports,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+53,@hydration_max_53,Hydration Max,twitter,35610,0.0582,90.5,Water Sports,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+54,@recovery_cleo_54,Recovery Cleo,youtube,65652,0.079,100,Sports Tech,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+55,@coach_dane_55,Coach Dane,threads,6292,0.0387,71.86,Recovery,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+56,@field_faye_56,Field Faye,instagram,2430,0.0898,81.99,Sports Nutrition,San Diego,California,US,0,2026-04-13T09:16:47Z
+57,@route_gus_57,Route Gus,tiktok,934165,0.0317,86.89,Climbing,Minneapolis,Minnesota,US,1,2026-04-13T09:16:47Z
+58,@alpine_hope_58,Alpine Hope,twitter,4304,0.0673,74.41,Footwear Reviews,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+59,@river_jace_59,River Jace,youtube,1725,0.0626,69.79,Gear Testing,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+60,@stadium_kara_60,Stadium Kara,threads,62836,0.0564,78.66,Training,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+61,@trail_maya_61,Trail Maya,instagram,696723,0.0234,79.61,Outdoor,New York,New York,US,1,2026-04-13T09:16:47Z
+62,@summit_alex_62,Summit Alex,tiktok,725374,0.0257,88.88,Trail Running,Los Angeles,California,US,1,2026-04-13T09:16:47Z
+63,@hike_jen_63,Hike Jen,twitter,44952,0.0563,77.54,Hiking,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+64,@run_cole_64,Run Cole,youtube,319361,0.028,74.74,Fitness,Houston,Texas,US,0,2026-04-13T09:16:47Z
+65,@cycle_zoe_65,Cycle Zoe,threads,5602,0.0388,60.54,Cycling,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+66,@camp_marcus_66,Camp Marcus,instagram,7110,0.1153,100,Camping,San Francisco,California,US,0,2026-04-13T09:16:47Z
+67,@climb_lily_67,Climb Lily,tiktok,7014,0.0837,89.64,Team Sports,Miami,Florida,US,0,2026-04-13T09:16:47Z
+68,@gear_kai_68,Gear Kai,twitter,4793904,0.0155,81.19,Water Sports,Seattle,Washington,US,1,2026-04-13T09:16:47Z
+69,@fit_tyler_69,Fit Tyler,youtube,22221,0.0287,66.12,Sports Tech,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+70,@outdoor_ava_70,Outdoor Ava,threads,93758,0.0417,87.56,Recovery,Austin,Texas,US,0,2026-04-13T09:16:47Z
+71,@endurance_nina_71,Endurance Nina,instagram,875656,0.0217,88.48,Sports Nutrition,Nashville,Tennessee,US,1,2026-04-13T09:16:47Z
+72,@terrain_drew_72,Terrain Drew,tiktok,7898,0.085,87.16,Climbing,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+73,@hydration_ella_73,Hydration Ella,twitter,2234,0.0385,67.44,Footwear Reviews,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+74,@recovery_finn_74,Recovery Finn,youtube,97139,0.0454,88.16,Gear Testing,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+75,@coach_aria_75,Coach Aria,threads,14434057,0.0154,97.91,Training,Dallas,Texas,US,1,2026-04-13T09:16:47Z
+76,@field_owen_76,Field Owen,instagram,67907,0.036,76.32,Outdoor,San Diego,California,US,0,2026-04-13T09:16:47Z
+77,@route_luna_77,Route Luna,tiktok,6207,0.0675,75.57,Trail Running,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+78,@alpine_mia_78,Alpine Mia,twitter,8857,0.0692,86.97,Hiking,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+79,@river_noah_79,River Noah,youtube,10699,0.0673,86.5,Fitness,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+80,@stadium_ivy_80,Stadium Ivy,threads,98266,0.0366,80.17,Cycling,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+81,@trail_leo_81,Trail Leo,instagram,9487,0.0717,89.28,Camping,New York,New York,US,0,2026-04-13T09:16:47Z
+82,@summit_ruby_82,Summit Ruby,tiktok,6852,0.0604,75.38,Team Sports,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+83,@hike_max_83,Hike Max,twitter,4650,0.0497,70.27,Water Sports,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+84,@run_cleo_84,Run Cleo,youtube,15251,0.0782,86.63,Sports Tech,Houston,Texas,US,0,2026-04-13T09:16:47Z
+85,@cycle_dane_85,Cycle Dane,threads,2854,0.0862,84.05,Recovery,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+86,@camp_faye_86,Camp Faye,instagram,3956,0.077,88.11,Sports Nutrition,San Francisco,California,US,0,2026-04-13T09:16:47Z
+87,@climb_gus_87,Climb Gus,tiktok,156670,0.0329,79.11,Climbing,Miami,Florida,US,0,2026-04-13T09:16:47Z
+88,@gear_hope_88,Gear Hope,twitter,2163,0.111,95.1,Footwear Reviews,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+89,@fit_jace_89,Fit Jace,youtube,85246,0.04,72.35,Gear Testing,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+90,@outdoor_kara_90,Outdoor Kara,threads,92349,0.0389,73.85,Training,Austin,Texas,US,0,2026-04-13T09:16:47Z
+91,@endurance_maya_91,Endurance Maya,instagram,5177,0.0869,95.89,Outdoor,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+92,@terrain_alex_92,Terrain Alex,tiktok,9852,0.1129,97.49,Trail Running,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+93,@hydration_jen_93,Hydration Jen,twitter,1417,0.0506,70.96,Hiking,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+94,@recovery_cole_94,Recovery Cole,youtube,5299,0.0875,88.81,Fitness,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+95,@coach_zoe_95,Coach Zoe,threads,65292,0.0687,93.5,Cycling,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+101,@field_marcus_101,Field Marcus,instagram,73658,0.0517,83.61,Camping,San Diego,California,US,0,2026-04-13T09:16:47Z
+102,@route_lily_102,Route Lily,tiktok,4916,0.1162,100,Team Sports,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+103,@alpine_kai_103,Alpine Kai,twitter,60145,0.0495,82.6,Water Sports,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+104,@river_tyler_104,River Tyler,youtube,32849,0.073,86.31,Sports Tech,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+105,@stadium_ava_105,Stadium Ava,threads,2363,0.1179,100,Recovery,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+106,@trail_nina_106,Trail Nina,instagram,245920,0.0367,84.7,Sports Nutrition,New York,New York,US,0,2026-04-13T09:16:47Z
+107,@summit_drew_107,Summit Drew,tiktok,9762,0.0823,88.13,Climbing,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+108,@hike_ella_108,Hike Ella,twitter,4217,0.0485,73.21,Footwear Reviews,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+109,@run_finn_109,Run Finn,youtube,4704,0.1195,100,Gear Testing,Houston,Texas,US,0,2026-04-13T09:16:47Z
+110,@cycle_aria_110,Cycle Aria,threads,84601,0.0781,100,Training,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+111,@camp_owen_111,Camp Owen,instagram,901538,0.0242,77.36,Outdoor,San Francisco,California,US,1,2026-04-13T09:16:47Z
+112,@climb_luna_112,Climb Luna,tiktok,1435,0.0704,81.28,Trail Running,Miami,Florida,US,0,2026-04-13T09:16:47Z
+113,@gear_mia_113,Gear Mia,twitter,84089,0.0491,83.86,Hiking,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+114,@fit_noah_114,Fit Noah,youtube,89858,0.0749,91.43,Fitness,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+115,@outdoor_ivy_115,Outdoor Ivy,threads,3431,0.0386,69.87,Cycling,Austin,Texas,US,0,2026-04-13T09:16:47Z
+116,@endurance_leo_116,Endurance Leo,instagram,39057,0.0548,79.46,Camping,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+117,@terrain_ruby_117,Terrain Ruby,tiktok,8048,0.1043,100,Team Sports,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+118,@hydration_max_118,Hydration Max,twitter,7988,0.0688,87.07,Water Sports,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+119,@recovery_cleo_119,Recovery Cleo,youtube,6754,0.1129,100,Sports Tech,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+120,@coach_dane_120,Coach Dane,threads,250289,0.0333,76.21,Recovery,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+121,@field_faye_121,Field Faye,instagram,865261,0.0167,71.72,Sports Nutrition,San Diego,California,US,1,2026-04-13T09:16:47Z
+122,@route_gus_122,Route Gus,tiktok,84982,0.0477,87.31,Climbing,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+123,@alpine_hope_123,Alpine Hope,twitter,68341,0.0603,91.51,Footwear Reviews,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+124,@river_jace_124,River Jace,youtube,6828,0.1104,97.28,Gear Testing,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+125,@stadium_kara_125,Stadium Kara,threads,754246,0.0386,89.21,Training,Brooklyn,New York,US,1,2026-04-13T09:16:47Z
+126,@trail_maya_126,Trail Maya,instagram,7136,0.1019,96.51,Outdoor,New York,New York,US,0,2026-04-13T09:16:47Z
+127,@summit_alex_127,Summit Alex,tiktok,81812,0.0498,88.26,Trail Running,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+128,@hike_jen_128,Hike Jen,twitter,20073,0.0699,92.03,Hiking,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+129,@run_cole_129,Run Cole,youtube,1668,0.0368,60.28,Fitness,Houston,Texas,US,0,2026-04-13T09:16:47Z
+130,@cycle_zoe_130,Cycle Zoe,threads,47675,0.0707,93.77,Cycling,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+131,@camp_marcus_131,Camp Marcus,instagram,72439,0.0769,98.89,Camping,San Francisco,California,US,0,2026-04-13T09:16:47Z
+132,@climb_lily_132,Climb Lily,tiktok,51330,0.0312,66.31,Team Sports,Miami,Florida,US,0,2026-04-13T09:16:47Z
+133,@gear_kai_133,Gear Kai,twitter,43850,0.03,70.4,Water Sports,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+134,@fit_tyler_134,Fit Tyler,youtube,64111,0.0691,97.82,Sports Tech,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+135,@outdoor_ava_135,Outdoor Ava,threads,7956,0.039,68.87,Recovery,Austin,Texas,US,0,2026-04-13T09:16:47Z
+136,@endurance_nina_136,Endurance Nina,instagram,111378,0.03,75.48,Sports Nutrition,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+137,@terrain_drew_137,Terrain Drew,tiktok,8309,0.0685,82.94,Climbing,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+138,@hydration_ella_138,Hydration Ella,twitter,2495,0.1025,92.12,Footwear Reviews,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+139,@recovery_finn_139,Recovery Finn,youtube,810707,0.0235,79.77,Gear Testing,Atlanta,Georgia,US,1,2026-04-13T09:16:47Z
+140,@coach_aria_140,Coach Aria,threads,9857127,0.015,93.11,Training,Dallas,Texas,US,1,2026-04-13T09:16:47Z
+141,@field_owen_141,Field Owen,instagram,520064,0.0163,72.9,Outdoor,San Diego,California,US,1,2026-04-13T09:16:47Z
+142,@route_luna_142,Route Luna,tiktok,9643,0.0843,90.43,Trail Running,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+143,@alpine_mia_143,Alpine Mia,twitter,82395,0.0614,88.18,Hiking,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+144,@river_noah_144,River Noah,youtube,4665,0.0526,63.96,Fitness,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+145,@stadium_ivy_145,Stadium Ivy,threads,119177,0.0182,64.35,Cycling,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+146,@trail_leo_146,Trail Leo,instagram,5760,0.0791,92.22,Camping,New York,New York,US,0,2026-04-13T09:16:47Z
+147,@summit_ruby_147,Summit Ruby,tiktok,1710,0.1048,92.59,Team Sports,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+148,@hike_max_148,Hike Max,twitter,9139,0.1056,97.22,Water Sports,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+149,@run_cleo_149,Run Cleo,youtube,5194,0.0985,93.43,Sports Tech,Houston,Texas,US,0,2026-04-13T09:16:47Z
+150,@cycle_dane_150,Cycle Dane,threads,6344,0.0359,65.31,Recovery,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+151,@camp_faye_151,Camp Faye,instagram,9563,0.1139,100,Sports Nutrition,San Francisco,California,US,0,2026-04-13T09:16:47Z
+152,@climb_gus_152,Climb Gus,tiktok,5848,0.0401,67.96,Climbing,Miami,Florida,US,0,2026-04-13T09:16:47Z
+153,@gear_hope_153,Gear Hope,twitter,76624,0.0433,76.58,Footwear Reviews,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+154,@fit_jace_154,Fit Jace,youtube,5788,0.0739,88.28,Gear Testing,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+155,@outdoor_kara_155,Outdoor Kara,threads,169138,0.0333,73.68,Training,Austin,Texas,US,0,2026-04-13T09:16:47Z
+156,@endurance_maya_156,Endurance Maya,instagram,2878,0.0503,60.43,Outdoor,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+157,@terrain_alex_157,Terrain Alex,tiktok,184973,0.0259,69.88,Trail Running,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+158,@hydration_jen_158,Hydration Jen,twitter,1196,0.0689,73.11,Hiking,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+159,@recovery_cole_159,Recovery Cole,youtube,706439,0.0267,81.44,Fitness,Atlanta,Georgia,US,1,2026-04-13T09:16:47Z
+160,@coach_zoe_160,Coach Zoe,threads,597559,0.0282,86.29,Cycling,Dallas,Texas,US,1,2026-04-13T09:16:47Z
+161,@field_marcus_161,Field Marcus,instagram,1493,0.0405,53.19,Camping,San Diego,California,US,0,2026-04-13T09:16:47Z
+162,@route_lily_162,Route Lily,tiktok,2285,0.0659,70.08,Team Sports,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+163,@alpine_kai_163,Alpine Kai,twitter,7386557,0.0215,96.47,Water Sports,Detroit,Michigan,US,1,2026-04-13T09:16:47Z
+164,@river_tyler_164,River Tyler,youtube,2718,0.0373,63.59,Sports Tech,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+165,@stadium_ava_165,Stadium Ava,threads,5144,0.0562,69.56,Recovery,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+166,@trail_nina_166,Trail Nina,instagram,89451,0.065,93.36,Sports Nutrition,New York,New York,US,0,2026-04-13T09:16:47Z
+167,@summit_drew_167,Summit Drew,tiktok,90976,0.0703,90.35,Climbing,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+168,@hike_ella_168,Hike Ella,twitter,50566,0.0253,62.29,Footwear Reviews,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+169,@run_finn_169,Run Finn,youtube,3355,0.1086,92.99,Gear Testing,Houston,Texas,US,0,2026-04-13T09:16:47Z
+170,@cycle_aria_170,Cycle Aria,threads,2909,0.1166,100,Training,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+171,@camp_owen_171,Camp Owen,instagram,86899,0.0592,88.84,Outdoor,San Francisco,California,US,0,2026-04-13T09:16:47Z
+172,@climb_luna_172,Climb Luna,tiktok,28555,0.0446,78.36,Trail Running,Miami,Florida,US,0,2026-04-13T09:16:47Z
+173,@gear_mia_173,Gear Mia,twitter,2177,0.0878,78.61,Hiking,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+174,@fit_noah_174,Fit Noah,youtube,39296,0.0647,82.71,Fitness,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+175,@outdoor_ivy_175,Outdoor Ivy,threads,32550,0.0302,72.4,Cycling,Austin,Texas,US,0,2026-04-13T09:16:47Z
+176,@endurance_leo_176,Endurance Leo,instagram,490373,0.0225,83.08,Camping,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+177,@terrain_ruby_177,Terrain Ruby,tiktok,5568,0.0873,91.63,Team Sports,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+178,@hydration_max_178,Hydration Max,twitter,2494,0.0727,76.35,Water Sports,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+179,@recovery_cleo_179,Recovery Cleo,youtube,3105,0.0325,59.52,Sports Tech,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+180,@coach_dane_180,Coach Dane,threads,782810,0.0357,87.24,Recovery,Dallas,Texas,US,1,2026-04-13T09:16:47Z
+181,@field_faye_181,Field Faye,instagram,25754,0.0437,79.91,Sports Nutrition,San Diego,California,US,0,2026-04-13T09:16:47Z
+182,@route_gus_182,Route Gus,tiktok,186874,0.0355,75.27,Climbing,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+183,@alpine_hope_183,Alpine Hope,twitter,50165,0.0475,83.17,Footwear Reviews,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+184,@river_jace_184,River Jace,youtube,71195,0.0661,89.66,Gear Testing,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+185,@stadium_kara_185,Stadium Kara,threads,4367,0.0712,85.72,Training,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+186,@trail_maya_186,Trail Maya,instagram,2460,0.1092,88.69,Outdoor,New York,New York,US,0,2026-04-13T09:16:47Z
+187,@summit_alex_187,Summit Alex,tiktok,52375,0.0679,91.33,Trail Running,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+188,@hike_jen_188,Hike Jen,twitter,83252,0.0656,90.18,Hiking,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+189,@run_cole_189,Run Cole,youtube,81932,0.0633,90.81,Fitness,Houston,Texas,US,0,2026-04-13T09:16:47Z
+190,@cycle_zoe_190,Cycle Zoe,threads,444724,0.0255,81.11,Cycling,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+191,@camp_marcus_191,Camp Marcus,instagram,2303,0.1172,96.19,Camping,San Francisco,California,US,0,2026-04-13T09:16:47Z
+192,@climb_lily_192,Climb Lily,tiktok,137541,0.0217,71.21,Team Sports,Miami,Florida,US,0,2026-04-13T09:16:47Z
+193,@gear_kai_193,Gear Kai,twitter,59271,0.0508,79.48,Water Sports,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+194,@fit_tyler_194,Fit Tyler,youtube,5739,0.0809,93.27,Sports Tech,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+195,@outdoor_ava_195,Outdoor Ava,threads,27744,0.0651,82.34,Recovery,Austin,Texas,US,0,2026-04-13T09:16:47Z
+201,@endurance_nina_201,Endurance Nina,instagram,79290,0.0799,100,Sports Nutrition,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+202,@terrain_drew_202,Terrain Drew,tiktok,4215,0.0505,66.83,Climbing,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+203,@hydration_ella_203,Hydration Ella,twitter,7488,0.0427,65.99,Footwear Reviews,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+204,@recovery_finn_204,Recovery Finn,youtube,3230,0.0609,71.53,Gear Testing,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+205,@coach_aria_205,Coach Aria,threads,5161709,0.0088,89.13,Training,Dallas,Texas,US,1,2026-04-13T09:16:47Z
+206,@field_owen_206,Field Owen,instagram,5833,0.042,69.13,Outdoor,San Diego,California,US,0,2026-04-13T09:16:47Z
+207,@route_luna_207,Route Luna,tiktok,255801,0.0396,77.13,Trail Running,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+208,@alpine_mia_208,Alpine Mia,twitter,818423,0.029,89.5,Hiking,Detroit,Michigan,US,1,2026-04-13T09:16:47Z
+209,@river_noah_209,River Noah,youtube,2197,0.0457,59.91,Fitness,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+210,@stadium_ivy_210,Stadium Ivy,threads,978841,0.0189,88.2,Cycling,Brooklyn,New York,US,1,2026-04-13T09:16:47Z
+211,@trail_leo_211,Trail Leo,instagram,6398,0.0446,63.86,Camping,New York,New York,US,0,2026-04-13T09:16:47Z
+212,@summit_ruby_212,Summit Ruby,tiktok,1079,0.0332,52.82,Team Sports,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+213,@hike_max_213,Hike Max,twitter,6583,0.0439,62.92,Water Sports,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+214,@run_cleo_214,Run Cleo,youtube,9832,0.0528,75.04,Sports Tech,Houston,Texas,US,0,2026-04-13T09:16:47Z
+215,@cycle_dane_215,Cycle Dane,threads,9319,0.0426,70.27,Recovery,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+216,@camp_faye_216,Camp Faye,instagram,14826,0.0474,70.6,Sports Nutrition,San Francisco,California,US,0,2026-04-13T09:16:47Z
+217,@climb_gus_217,Climb Gus,tiktok,73437,0.0262,76.63,Climbing,Miami,Florida,US,0,2026-04-13T09:16:47Z
+218,@gear_hope_218,Gear Hope,twitter,4575,0.0778,80.35,Footwear Reviews,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+219,@fit_jace_219,Fit Jace,youtube,8690,0.1162,100,Gear Testing,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+220,@outdoor_kara_220,Outdoor Kara,threads,9467,0.0772,83.91,Training,Austin,Texas,US,0,2026-04-13T09:16:47Z
+221,@endurance_maya_221,Endurance Maya,instagram,1984,0.0356,57.42,Outdoor,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+222,@terrain_alex_222,Terrain Alex,tiktok,8439,0.0593,72.49,Trail Running,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+223,@hydration_jen_223,Hydration Jen,twitter,210156,0.0373,80.61,Hiking,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+224,@recovery_cole_224,Recovery Cole,youtube,9228,0.0374,71.03,Fitness,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+225,@coach_zoe_225,Coach Zoe,threads,18590,0.0256,71.87,Cycling,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+226,@field_marcus_226,Field Marcus,instagram,14112,0.0268,68.39,Camping,San Diego,California,US,0,2026-04-13T09:16:47Z
+227,@route_lily_227,Route Lily,tiktok,4748,0.0826,81.99,Team Sports,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+228,@alpine_kai_228,Alpine Kai,twitter,46296,0.0616,88.47,Water Sports,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+229,@river_tyler_229,River Tyler,youtube,91080,0.0592,82.04,Sports Tech,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+230,@stadium_ava_230,Stadium Ava,threads,6385,0.1169,99.07,Recovery,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+231,@trail_nina_231,Trail Nina,instagram,62037,0.0606,93.36,Sports Nutrition,New York,New York,US,0,2026-04-13T09:16:47Z
+232,@summit_drew_232,Summit Drew,tiktok,63273,0.0546,82.48,Climbing,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+233,@hike_ella_233,Hike Ella,twitter,81377,0.0425,83.99,Footwear Reviews,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+234,@run_finn_234,Run Finn,youtube,50533,0.0798,98.55,Gear Testing,Houston,Texas,US,0,2026-04-13T09:16:47Z
+235,@cycle_aria_235,Cycle Aria,threads,4297643,0.0242,94.83,Training,Phoenix,Arizona,US,1,2026-04-13T09:16:47Z
+236,@camp_owen_236,Camp Owen,instagram,2270,0.0888,90.13,Outdoor,San Francisco,California,US,0,2026-04-13T09:16:47Z
+237,@climb_luna_237,Climb Luna,tiktok,99614,0.0648,92.77,Trail Running,Miami,Florida,US,0,2026-04-13T09:16:47Z
+238,@gear_mia_238,Gear Mia,twitter,9452,0.1028,100,Hiking,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+239,@fit_noah_239,Fit Noah,youtube,7114,0.1052,100,Fitness,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+240,@outdoor_ivy_240,Outdoor Ivy,threads,14460915,0.0201,88.6,Cycling,Austin,Texas,US,1,2026-04-13T09:16:47Z
+241,@endurance_leo_241,Endurance Leo,instagram,36186,0.0721,84.65,Camping,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+242,@terrain_ruby_242,Terrain Ruby,tiktok,58014,0.0557,87.98,Team Sports,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+251,@hydration_max_251,Hydration Max,twitter,2480,0.0665,80.29,Water Sports,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+252,@recovery_cleo_252,Recovery Cleo,youtube,1969,0.0962,91.62,Sports Tech,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+253,@coach_dane_253,Coach Dane,threads,4211,0.0792,86.81,Recovery,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+254,@field_faye_254,Field Faye,instagram,1053,0.0488,65.41,Sports Nutrition,San Diego,California,US,0,2026-04-13T09:16:47Z
+255,@route_gus_255,Route Gus,tiktok,169228,0.0388,74.68,Climbing,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+256,@alpine_hope_256,Alpine Hope,twitter,8508,0.0966,97.32,Footwear Reviews,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+257,@river_jace_257,River Jace,youtube,3251,0.0438,67.05,Gear Testing,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+258,@stadium_kara_258,Stadium Kara,threads,7848,0.0487,64.76,Training,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+259,@trail_maya_259,Trail Maya,instagram,43333,0.0482,72.54,Outdoor,New York,New York,US,0,2026-04-13T09:16:47Z
+260,@summit_alex_260,Summit Alex,tiktok,8021,0.0924,100,Trail Running,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+261,@hike_jen_261,Hike Jen,twitter,626272,0.0264,83.06,Hiking,Chicago,Illinois,US,1,2026-04-13T09:16:47Z
+262,@run_cole_262,Run Cole,youtube,3617,0.0608,70.1,Fitness,Houston,Texas,US,0,2026-04-13T09:16:47Z
+263,@cycle_zoe_263,Cycle Zoe,threads,8045,0.1128,100,Cycling,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+264,@camp_marcus_264,Camp Marcus,instagram,96547,0.0342,76.2,Camping,San Francisco,California,US,0,2026-04-13T09:16:47Z
+265,@climb_lily_265,Climb Lily,tiktok,339661,0.0221,72.47,Team Sports,Miami,Florida,US,0,2026-04-13T09:16:47Z
+266,@gear_kai_266,Gear Kai,twitter,2892,0.0893,81.68,Water Sports,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+267,@fit_tyler_267,Fit Tyler,youtube,1578,0.0717,78.2,Sports Tech,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+268,@outdoor_ava_268,Outdoor Ava,threads,8155,0.1014,100,Recovery,Austin,Texas,US,0,2026-04-13T09:16:47Z
+269,@endurance_nina_269,Endurance Nina,instagram,296216,0.0246,71.5,Sports Nutrition,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+270,@terrain_drew_270,Terrain Drew,tiktok,25238,0.0482,74.64,Climbing,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+271,@hydration_ella_271,Hydration Ella,twitter,35355,0.0724,94.29,Footwear Reviews,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+272,@recovery_finn_272,Recovery Finn,youtube,2834,0.0921,88.4,Gear Testing,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+273,@coach_aria_273,Coach Aria,threads,7036,0.1016,92.26,Training,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+274,@field_owen_274,Field Owen,instagram,763640,0.0237,78,Outdoor,San Diego,California,US,1,2026-04-13T09:16:47Z
+275,@route_luna_275,Route Luna,tiktok,6062,0.0817,90.06,Trail Running,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+276,@alpine_mia_276,Alpine Mia,twitter,2753,0.1065,99.51,Hiking,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+277,@river_noah_277,River Noah,youtube,6314,0.0603,80.18,Fitness,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+278,@stadium_ivy_278,Stadium Ivy,threads,92039,0.0709,100,Cycling,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+279,@trail_leo_279,Trail Leo,instagram,14540,0.0733,86.45,Camping,New York,New York,US,0,2026-04-13T09:16:47Z
+280,@summit_ruby_280,Summit Ruby,tiktok,22119,0.0645,90.11,Team Sports,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+281,@hike_max_281,Hike Max,twitter,5091,0.0367,56.83,Water Sports,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+282,@run_cleo_282,Run Cleo,youtube,3459,0.0614,66.56,Sports Tech,Houston,Texas,US,0,2026-04-13T09:16:47Z
+283,@cycle_dane_283,Cycle Dane,threads,35463,0.0607,79.59,Recovery,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+284,@camp_faye_284,Camp Faye,instagram,7430,0.0852,88.95,Sports Nutrition,San Francisco,California,US,0,2026-04-13T09:16:47Z
+285,@climb_gus_285,Climb Gus,tiktok,1959,0.0597,71.28,Climbing,Miami,Florida,US,0,2026-04-13T09:16:47Z
+286,@gear_hope_286,Gear Hope,twitter,6266,0.0341,61.94,Footwear Reviews,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+287,@fit_jace_287,Fit Jace,youtube,6445,0.0466,64.91,Gear Testing,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+288,@outdoor_kara_288,Outdoor Kara,threads,2787,0.06,72.57,Training,Austin,Texas,US,0,2026-04-13T09:16:47Z
+289,@endurance_maya_289,Endurance Maya,instagram,7137,0.1064,97.54,Outdoor,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+290,@terrain_alex_290,Terrain Alex,tiktok,8437,0.0805,86.52,Trail Running,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+291,@hydration_jen_291,Hydration Jen,twitter,939813,0.0435,98.39,Hiking,Boston,Massachusetts,US,1,2026-04-13T09:16:47Z
+292,@recovery_cole_292,Recovery Cole,youtube,62239,0.0684,97.71,Fitness,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+293,@coach_zoe_293,Coach Zoe,threads,42621,0.0468,85.4,Cycling,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+294,@field_marcus_294,Field Marcus,instagram,1405,0.0754,80.77,Camping,San Diego,California,US,0,2026-04-13T09:16:47Z
+295,@route_lily_295,Route Lily,tiktok,3182,0.0436,63.3,Team Sports,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+301,@alpine_kai_301,Alpine Kai,twitter,3458048,0.007,77.83,Water Sports,Detroit,Michigan,US,1,2026-04-13T09:16:47Z
+302,@river_tyler_302,River Tyler,youtube,4295973,0.0206,91.15,Sports Tech,Las Vegas,Nevada,US,1,2026-04-13T09:16:47Z
+303,@stadium_ava_303,Stadium Ava,threads,8964,0.0596,75.95,Recovery,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+304,@trail_nina_304,Trail Nina,instagram,40615,0.0603,90.56,Sports Nutrition,New York,New York,US,0,2026-04-13T09:16:47Z
+305,@summit_drew_305,Summit Drew,tiktok,2596,0.0507,70.71,Climbing,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+306,@hike_ella_306,Hike Ella,twitter,4591,0.1155,96.33,Footwear Reviews,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+307,@run_finn_307,Run Finn,youtube,61995,0.0553,89.74,Gear Testing,Houston,Texas,US,0,2026-04-13T09:16:47Z
+308,@cycle_aria_308,Cycle Aria,threads,3140,0.0997,86.71,Training,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+309,@camp_owen_309,Camp Owen,instagram,5008,0.0865,82.89,Outdoor,San Francisco,California,US,0,2026-04-13T09:16:47Z
+310,@climb_luna_310,Climb Luna,tiktok,57153,0.0635,85.6,Trail Running,Miami,Florida,US,0,2026-04-13T09:16:47Z
+311,@gear_mia_311,Gear Mia,twitter,96076,0.0599,93.27,Hiking,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+312,@fit_noah_312,Fit Noah,youtube,27122,0.0504,84.44,Fitness,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+313,@outdoor_ivy_313,Outdoor Ivy,threads,84833,0.0568,86.39,Cycling,Austin,Texas,US,0,2026-04-13T09:16:47Z
+314,@endurance_leo_314,Endurance Leo,instagram,6435,0.0861,94.77,Camping,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+315,@terrain_ruby_315,Terrain Ruby,tiktok,2551,0.1131,100,Team Sports,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+316,@hydration_max_316,Hydration Max,twitter,3923,0.0781,78.21,Water Sports,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+317,@recovery_cleo_317,Recovery Cleo,youtube,7851,0.0685,77.65,Sports Tech,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+318,@coach_dane_318,Coach Dane,threads,1061,0.0549,60.38,Recovery,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+319,@field_faye_319,Field Faye,instagram,9915,0.0415,66.59,Sports Nutrition,San Diego,California,US,0,2026-04-13T09:16:47Z
+320,@route_gus_320,Route Gus,tiktok,60470,0.0321,74.46,Climbing,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+321,@alpine_hope_321,Alpine Hope,twitter,147700,0.0353,79.89,Footwear Reviews,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+322,@river_jace_322,River Jace,youtube,725608,0.0357,81.6,Gear Testing,Las Vegas,Nevada,US,1,2026-04-13T09:16:47Z
+323,@stadium_kara_323,Stadium Kara,threads,688268,0.0425,88.67,Training,Brooklyn,New York,US,1,2026-04-13T09:16:47Z
+324,@trail_maya_324,Trail Maya,instagram,1576,0.0683,77.09,Outdoor,New York,New York,US,0,2026-04-13T09:16:47Z
+325,@summit_alex_325,Summit Alex,tiktok,97421,0.0524,86.75,Trail Running,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+326,@hike_jen_326,Hike Jen,twitter,7687,0.1113,100,Hiking,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+327,@run_cole_327,Run Cole,youtube,3106,0.0347,55.79,Fitness,Houston,Texas,US,0,2026-04-13T09:16:47Z
+328,@cycle_zoe_328,Cycle Zoe,threads,882662,0.0214,77.25,Cycling,Phoenix,Arizona,US,1,2026-04-13T09:16:47Z
+329,@camp_marcus_329,Camp Marcus,instagram,7648,0.05,67.63,Camping,San Francisco,California,US,0,2026-04-13T09:16:47Z
+330,@climb_lily_330,Climb Lily,tiktok,3626,0.0847,83.59,Team Sports,Miami,Florida,US,0,2026-04-13T09:16:47Z
+331,@gear_kai_331,Gear Kai,twitter,4606,0.0894,94.01,Water Sports,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+332,@fit_tyler_332,Fit Tyler,youtube,1268,0.1154,100,Sports Tech,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+333,@outdoor_ava_333,Outdoor Ava,threads,73237,0.0673,88.8,Recovery,Austin,Texas,US,0,2026-04-13T09:16:47Z
+334,@endurance_nina_334,Endurance Nina,instagram,248504,0.037,87.46,Sports Nutrition,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+335,@terrain_drew_335,Terrain Drew,tiktok,8209,0.0867,97.74,Climbing,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+336,@hydration_ella_336,Hydration Ella,twitter,4492,0.1138,99.11,Footwear Reviews,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+337,@recovery_finn_337,Recovery Finn,youtube,1659,0.1174,100,Gear Testing,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+338,@coach_aria_338,Coach Aria,threads,379830,0.0313,84.52,Training,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+339,@field_owen_339,Field Owen,instagram,8595,0.0359,71.88,Outdoor,San Diego,California,US,0,2026-04-13T09:16:47Z
+340,@route_luna_340,Route Luna,tiktok,6569046,0.0159,85.7,Trail Running,Minneapolis,Minnesota,US,1,2026-04-13T09:16:47Z
+341,@alpine_mia_341,Alpine Mia,twitter,65305,0.0338,80.13,Hiking,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+342,@river_noah_342,River Noah,youtube,3638,0.1003,98.6,Fitness,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+343,@stadium_ivy_343,Stadium Ivy,threads,706258,0.0351,86.45,Cycling,Brooklyn,New York,US,1,2026-04-13T09:16:47Z
+344,@trail_leo_344,Trail Leo,instagram,4371,0.0508,65.08,Camping,New York,New York,US,0,2026-04-13T09:16:47Z
+345,@summit_ruby_345,Summit Ruby,tiktok,5850,0.1181,100,Team Sports,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+346,@hike_max_346,Hike Max,twitter,3046,0.0637,74.58,Water Sports,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+347,@run_cleo_347,Run Cleo,youtube,10341044,0.0076,83.13,Sports Tech,Houston,Texas,US,1,2026-04-13T09:16:47Z
+348,@cycle_dane_348,Cycle Dane,threads,2273,0.113,100,Recovery,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+349,@camp_faye_349,Camp Faye,instagram,6130,0.0714,83.59,Sports Nutrition,San Francisco,California,US,0,2026-04-13T09:16:47Z
+350,@climb_gus_350,Climb Gus,tiktok,5023,0.1149,97.5,Climbing,Miami,Florida,US,0,2026-04-13T09:16:47Z
+351,@gear_hope_351,Gear Hope,twitter,6857,0.1041,91.25,Footwear Reviews,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+352,@fit_jace_352,Fit Jace,youtube,86646,0.0274,69.73,Gear Testing,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+353,@outdoor_kara_353,Outdoor Kara,threads,6412,0.0782,87.4,Training,Austin,Texas,US,0,2026-04-13T09:16:47Z
+354,@endurance_maya_354,Endurance Maya,instagram,1641,0.045,59.42,Outdoor,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+355,@terrain_alex_355,Terrain Alex,tiktok,57351,0.0366,78.26,Trail Running,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+356,@hydration_jen_356,Hydration Jen,twitter,93709,0.0425,87.81,Hiking,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+357,@recovery_cole_357,Recovery Cole,youtube,209800,0.02,81.17,Fitness,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+358,@coach_zoe_358,Coach Zoe,threads,124157,0.0207,76,Cycling,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+359,@field_marcus_359,Field Marcus,instagram,60595,0.0786,97.95,Camping,San Diego,California,US,0,2026-04-13T09:16:47Z
+360,@route_lily_360,Route Lily,tiktok,540568,0.0368,93.96,Team Sports,Minneapolis,Minnesota,US,1,2026-04-13T09:16:47Z
+361,@alpine_kai_361,Alpine Kai,twitter,71249,0.0568,88.44,Water Sports,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+362,@river_tyler_362,River Tyler,youtube,31012,0.0334,72.1,Sports Tech,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+363,@stadium_ava_363,Stadium Ava,threads,11729995,0.0156,93.16,Recovery,Brooklyn,New York,US,1,2026-04-13T09:16:47Z
+364,@trail_nina_364,Trail Nina,instagram,88466,0.0436,78.59,Sports Nutrition,New York,New York,US,0,2026-04-13T09:16:47Z
+365,@summit_drew_365,Summit Drew,tiktok,18871,0.0651,88.61,Climbing,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+366,@hike_ella_366,Hike Ella,twitter,29519,0.0522,87.4,Footwear Reviews,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+367,@run_finn_367,Run Finn,youtube,6006,0.0997,93.29,Gear Testing,Houston,Texas,US,0,2026-04-13T09:16:47Z
+368,@cycle_aria_368,Cycle Aria,threads,8331,0.1144,100,Training,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+369,@camp_owen_369,Camp Owen,instagram,64567,0.0465,80.36,Outdoor,San Francisco,California,US,0,2026-04-13T09:16:47Z
+370,@climb_luna_370,Climb Luna,tiktok,919215,0.0342,84.89,Trail Running,Miami,Florida,US,1,2026-04-13T09:16:47Z
+371,@gear_mia_371,Gear Mia,twitter,3541,0.0717,86.69,Hiking,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+372,@fit_noah_372,Fit Noah,youtube,28705,0.0661,84.22,Fitness,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+373,@outdoor_ivy_373,Outdoor Ivy,threads,5966,0.1023,99.92,Cycling,Austin,Texas,US,0,2026-04-13T09:16:47Z
+374,@endurance_leo_374,Endurance Leo,instagram,75948,0.0635,93.51,Camping,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+375,@terrain_ruby_375,Terrain Ruby,tiktok,8257,0.1184,100,Team Sports,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+376,@hydration_max_376,Hydration Max,twitter,17790,0.0259,57.18,Water Sports,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+377,@recovery_cleo_377,Recovery Cleo,youtube,3269,0.1179,100,Sports Tech,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+378,@coach_dane_378,Coach Dane,threads,3926,0.1109,97.96,Recovery,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+379,@field_faye_379,Field Faye,instagram,4525,0.0879,86.12,Sports Nutrition,San Diego,California,US,0,2026-04-13T09:16:47Z
+380,@route_gus_380,Route Gus,tiktok,2349,0.038,59.5,Climbing,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+381,@alpine_hope_381,Alpine Hope,twitter,5170,0.0565,77.45,Footwear Reviews,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+382,@river_jace_382,River Jace,youtube,202478,0.0167,76.5,Gear Testing,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+383,@stadium_kara_383,Stadium Kara,threads,7084,0.0329,56.65,Training,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+384,@trail_maya_384,Trail Maya,instagram,276769,0.0439,84.88,Outdoor,New York,New York,US,0,2026-04-13T09:16:47Z
+385,@summit_alex_385,Summit Alex,tiktok,77591,0.06,82.75,Trail Running,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+386,@hike_jen_386,Hike Jen,twitter,519168,0.0338,89.93,Hiking,Chicago,Illinois,US,1,2026-04-13T09:16:47Z
+387,@run_cole_387,Run Cole,youtube,39278,0.0582,90.58,Fitness,Houston,Texas,US,0,2026-04-13T09:16:47Z
+388,@cycle_zoe_388,Cycle Zoe,threads,2699,0.0593,68.07,Cycling,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+389,@camp_marcus_389,Camp Marcus,instagram,9442,0.0385,61.22,Camping,San Francisco,California,US,0,2026-04-13T09:16:47Z
+390,@climb_lily_390,Climb Lily,tiktok,16428,0.0277,63.07,Team Sports,Miami,Florida,US,0,2026-04-13T09:16:47Z
+391,@gear_kai_391,Gear Kai,twitter,8808,0.1027,100,Water Sports,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+392,@fit_tyler_392,Fit Tyler,youtube,1458,0.0817,74.37,Sports Tech,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+393,@outdoor_ava_393,Outdoor Ava,threads,3720,0.0573,72.58,Recovery,Austin,Texas,US,0,2026-04-13T09:16:47Z
+394,@endurance_nina_394,Endurance Nina,instagram,3937,0.042,70.07,Sports Nutrition,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+395,@terrain_drew_395,Terrain Drew,tiktok,4521,0.0783,86.4,Climbing,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+401,@hydration_ella_401,Hydration Ella,twitter,70065,0.0688,97.98,Footwear Reviews,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+402,@recovery_finn_402,Recovery Finn,youtube,76556,0.0456,81.9,Gear Testing,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+403,@coach_aria_403,Coach Aria,threads,6451,0.117,100,Training,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+404,@field_owen_404,Field Owen,instagram,69278,0.076,93.23,Outdoor,San Diego,California,US,0,2026-04-13T09:16:47Z
+405,@route_luna_405,Route Luna,tiktok,4975,0.0842,80.73,Trail Running,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+406,@alpine_mia_406,Alpine Mia,twitter,9472,0.0843,83.21,Hiking,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+407,@river_noah_407,River Noah,youtube,1993,0.0376,59.5,Fitness,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+408,@stadium_ivy_408,Stadium Ivy,threads,56546,0.0687,97.2,Cycling,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+409,@trail_leo_409,Trail Leo,instagram,6832,0.1187,100,Camping,New York,New York,US,0,2026-04-13T09:16:47Z
+410,@summit_ruby_410,Summit Ruby,tiktok,58797,0.031,71.39,Team Sports,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+411,@hike_max_411,Hike Max,twitter,26803,0.0624,91.85,Water Sports,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+412,@run_cleo_412,Run Cleo,youtube,61915,0.0644,83.14,Sports Tech,Houston,Texas,US,0,2026-04-13T09:16:47Z
+413,@cycle_dane_413,Cycle Dane,threads,264343,0.0252,72.66,Recovery,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+414,@camp_faye_414,Camp Faye,instagram,4755,0.1098,93.58,Sports Nutrition,San Francisco,California,US,0,2026-04-13T09:16:47Z
+415,@climb_gus_415,Climb Gus,tiktok,13347,0.0381,68.8,Climbing,Miami,Florida,US,0,2026-04-13T09:16:47Z
+416,@gear_hope_416,Gear Hope,twitter,89649,0.0393,76.12,Footwear Reviews,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+417,@fit_jace_417,Fit Jace,youtube,61765,0.031,67.07,Gear Testing,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+418,@outdoor_kara_418,Outdoor Kara,threads,7256,0.0885,98.54,Training,Austin,Texas,US,0,2026-04-13T09:16:47Z
+419,@endurance_maya_419,Endurance Maya,instagram,1712,0.0895,83.41,Outdoor,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+420,@terrain_alex_420,Terrain Alex,tiktok,30662,0.044,75.03,Trail Running,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+421,@hydration_jen_421,Hydration Jen,twitter,6870,0.1175,100,Hiking,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+422,@recovery_cole_422,Recovery Cole,youtube,12433622,0.0144,90.6,Fitness,Atlanta,Georgia,US,1,2026-04-13T09:16:47Z
+423,@coach_zoe_423,Coach Zoe,threads,31121,0.0306,71.67,Cycling,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+424,@field_marcus_424,Field Marcus,instagram,77424,0.0354,80.16,Camping,San Diego,California,US,0,2026-04-13T09:16:47Z
+425,@route_lily_425,Route Lily,tiktok,9201,0.0663,76.93,Team Sports,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+426,@alpine_kai_426,Alpine Kai,twitter,9368,0.0464,67.97,Water Sports,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+427,@river_tyler_427,River Tyler,youtube,937827,0.0307,90.26,Sports Tech,Las Vegas,Nevada,US,1,2026-04-13T09:16:47Z
+428,@stadium_ava_428,Stadium Ava,threads,467075,0.0282,80.84,Recovery,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+429,@trail_nina_429,Trail Nina,instagram,7965,0.1169,100,Sports Nutrition,New York,New York,US,0,2026-04-13T09:16:47Z
+430,@summit_drew_430,Summit Drew,tiktok,5153,0.0592,68.49,Climbing,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+431,@hike_ella_431,Hike Ella,twitter,1780,0.0698,78.35,Footwear Reviews,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+432,@run_finn_432,Run Finn,youtube,9867,0.078,83,Gear Testing,Houston,Texas,US,0,2026-04-13T09:16:47Z
+433,@cycle_aria_433,Cycle Aria,threads,3299,0.115,100,Training,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+434,@camp_owen_434,Camp Owen,instagram,8544,0.0906,98.73,Outdoor,San Francisco,California,US,0,2026-04-13T09:16:47Z
+435,@climb_luna_435,Climb Luna,tiktok,631427,0.0177,71.63,Trail Running,Miami,Florida,US,1,2026-04-13T09:16:47Z
+436,@gear_mia_436,Gear Mia,twitter,1093247,0.0207,84.38,Hiking,Seattle,Washington,US,1,2026-04-13T09:16:47Z
+437,@fit_noah_437,Fit Noah,youtube,33381,0.0519,87.6,Fitness,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+438,@outdoor_ivy_438,Outdoor Ivy,threads,6685,0.1123,100,Cycling,Austin,Texas,US,0,2026-04-13T09:16:47Z
+439,@endurance_leo_439,Endurance Leo,instagram,918783,0.0389,96.84,Camping,Nashville,Tennessee,US,1,2026-04-13T09:16:47Z
+440,@terrain_ruby_440,Terrain Ruby,tiktok,99863,0.0775,100,Team Sports,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+441,@hydration_max_441,Hydration Max,twitter,55779,0.068,94.94,Water Sports,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+442,@recovery_cleo_442,Recovery Cleo,youtube,73181,0.0566,79.59,Sports Tech,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+443,@coach_dane_443,Coach Dane,threads,40383,0.0521,86.26,Recovery,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+444,@field_faye_444,Field Faye,instagram,7328,0.1009,100,Sports Nutrition,San Diego,California,US,0,2026-04-13T09:16:47Z
+445,@route_gus_445,Route Gus,tiktok,4297,0.0341,68.29,Climbing,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+446,@alpine_hope_446,Alpine Hope,twitter,587476,0.0253,87.29,Footwear Reviews,Detroit,Michigan,US,1,2026-04-13T09:16:47Z
+447,@river_jace_447,River Jace,youtube,4405032,0.0132,81.26,Gear Testing,Las Vegas,Nevada,US,1,2026-04-13T09:16:47Z
+448,@stadium_kara_448,Stadium Kara,threads,93991,0.026,74.42,Training,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+449,@trail_maya_449,Trail Maya,instagram,75488,0.079,100,Outdoor,New York,New York,US,0,2026-04-13T09:16:47Z
+450,@summit_alex_450,Summit Alex,tiktok,7996,0.0802,91.54,Trail Running,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+451,@hike_jen_451,Hike Jen,twitter,7428,0.0312,62.48,Hiking,Chicago,Illinois,US,0,2026-04-13T09:16:47Z
+452,@run_cole_452,Run Cole,youtube,509830,0.0168,77.79,Fitness,Houston,Texas,US,1,2026-04-13T09:16:47Z
+453,@cycle_zoe_453,Cycle Zoe,threads,2521,0.0316,52.82,Cycling,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+454,@camp_marcus_454,Camp Marcus,instagram,863390,0.016,75.5,Camping,San Francisco,California,US,1,2026-04-13T09:16:47Z
+455,@climb_lily_455,Climb Lily,tiktok,2669,0.0972,93.59,Team Sports,Miami,Florida,US,0,2026-04-13T09:16:47Z
+456,@gear_kai_456,Gear Kai,twitter,24913,0.0666,91.95,Water Sports,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+457,@fit_tyler_457,Fit Tyler,youtube,1755,0.095,89.76,Sports Tech,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+458,@outdoor_ava_458,Outdoor Ava,threads,5244,0.0347,62.07,Recovery,Austin,Texas,US,0,2026-04-13T09:16:47Z
+459,@endurance_nina_459,Endurance Nina,instagram,95463,0.0552,91.58,Sports Nutrition,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+460,@terrain_drew_460,Terrain Drew,tiktok,35671,0.0283,70.17,Climbing,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+461,@hydration_ella_461,Hydration Ella,twitter,93250,0.0367,73.75,Footwear Reviews,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+462,@recovery_finn_462,Recovery Finn,youtube,1224,0.11,98.92,Gear Testing,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+463,@coach_aria_463,Coach Aria,threads,1736,0.0588,63.01,Training,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+464,@field_owen_464,Field Owen,instagram,6074,0.0422,64.11,Outdoor,San Diego,California,US,0,2026-04-13T09:16:47Z
+465,@route_luna_465,Route Luna,tiktok,43532,0.0498,85.57,Trail Running,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+466,@alpine_mia_466,Alpine Mia,twitter,8926,0.0308,69.91,Hiking,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+467,@river_noah_467,River Noah,youtube,74381,0.0523,91.36,Fitness,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+468,@stadium_ivy_468,Stadium Ivy,threads,97840,0.0267,78.85,Cycling,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+469,@trail_leo_469,Trail Leo,instagram,5798,0.1064,94.46,Camping,New York,New York,US,0,2026-04-13T09:16:47Z
+470,@summit_ruby_470,Summit Ruby,tiktok,2959,0.0568,73.31,Team Sports,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+471,@hike_max_471,Hike Max,twitter,6226785,0.0232,93.13,Water Sports,Chicago,Illinois,US,1,2026-04-13T09:16:47Z
+472,@run_cleo_472,Run Cleo,youtube,5959,0.0398,58.49,Sports Tech,Houston,Texas,US,0,2026-04-13T09:16:47Z
+473,@cycle_dane_473,Cycle Dane,threads,17980,0.0773,95.04,Recovery,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+474,@camp_faye_474,Camp Faye,instagram,40859,0.0359,79.59,Sports Nutrition,San Francisco,California,US,0,2026-04-13T09:16:47Z
+475,@climb_gus_475,Climb Gus,tiktok,38292,0.0399,76.16,Climbing,Miami,Florida,US,0,2026-04-13T09:16:47Z
+476,@gear_hope_476,Gear Hope,twitter,9120,0.0568,69.63,Footwear Reviews,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+477,@fit_jace_477,Fit Jace,youtube,2600,0.1177,100,Gear Testing,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+478,@outdoor_kara_478,Outdoor Kara,threads,9037,0.1093,100,Training,Austin,Texas,US,0,2026-04-13T09:16:47Z
+479,@endurance_maya_479,Endurance Maya,instagram,13373,0.0381,76.14,Outdoor,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+480,@terrain_alex_480,Terrain Alex,tiktok,1380,0.0919,79.82,Trail Running,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+481,@hydration_jen_481,Hydration Jen,twitter,284343,0.0277,78.44,Hiking,Boston,Massachusetts,US,0,2026-04-13T09:16:47Z
+482,@recovery_cole_482,Recovery Cole,youtube,159739,0.0216,78.75,Fitness,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+483,@coach_zoe_483,Coach Zoe,threads,57195,0.0797,100,Cycling,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+484,@field_marcus_484,Field Marcus,instagram,750284,0.023,84.47,Camping,San Diego,California,US,1,2026-04-13T09:16:47Z
+485,@route_lily_485,Route Lily,tiktok,5815,0.0498,70.89,Team Sports,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+486,@alpine_kai_486,Alpine Kai,twitter,3015,0.0647,73.5,Water Sports,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+487,@river_tyler_487,River Tyler,youtube,9434170,0.0135,95.14,Sports Tech,Las Vegas,Nevada,US,1,2026-04-13T09:16:47Z
+488,@stadium_ava_488,Stadium Ava,threads,13529171,0.0231,100,Recovery,Brooklyn,New York,US,1,2026-04-13T09:16:47Z
+489,@trail_nina_489,Trail Nina,instagram,9218,0.0622,85.1,Sports Nutrition,New York,New York,US,0,2026-04-13T09:16:47Z
+490,@summit_drew_490,Summit Drew,tiktok,859551,0.0291,87.65,Climbing,Los Angeles,California,US,1,2026-04-13T09:16:47Z
+491,@hike_ella_491,Hike Ella,twitter,721604,0.0346,83.1,Footwear Reviews,Chicago,Illinois,US,1,2026-04-13T09:16:47Z
+501,@run_finn_501,Run Finn,youtube,78376,0.0479,78.14,Gear Testing,Houston,Texas,US,0,2026-04-13T09:16:47Z
+502,@cycle_aria_502,Cycle Aria,threads,5117,0.046,67.17,Training,Phoenix,Arizona,US,0,2026-04-13T09:16:47Z
+503,@camp_owen_503,Camp Owen,instagram,70818,0.0384,78.47,Outdoor,San Francisco,California,US,0,2026-04-13T09:16:47Z
+504,@climb_luna_504,Climb Luna,tiktok,981743,0.0417,91.7,Trail Running,Miami,Florida,US,1,2026-04-13T09:16:47Z
+505,@gear_mia_505,Gear Mia,twitter,52089,0.0532,80.5,Hiking,Seattle,Washington,US,0,2026-04-13T09:16:47Z
+506,@fit_noah_506,Fit Noah,youtube,5084,0.1009,96.89,Fitness,Denver,Colorado,US,0,2026-04-13T09:16:47Z
+507,@outdoor_ivy_507,Outdoor Ivy,threads,8071,0.0616,77.88,Cycling,Austin,Texas,US,0,2026-04-13T09:16:47Z
+508,@endurance_leo_508,Endurance Leo,instagram,53615,0.0765,89.94,Camping,Nashville,Tennessee,US,0,2026-04-13T09:16:47Z
+509,@terrain_ruby_509,Terrain Ruby,tiktok,39662,0.0321,66.56,Team Sports,Portland,Oregon,US,0,2026-04-13T09:16:47Z
+510,@hydration_max_510,Hydration Max,twitter,695453,0.0169,80.72,Water Sports,Boston,Massachusetts,US,1,2026-04-13T09:16:47Z
+511,@recovery_cleo_511,Recovery Cleo,youtube,7900,0.0456,64.6,Sports Tech,Atlanta,Georgia,US,0,2026-04-13T09:16:47Z
+512,@coach_dane_512,Coach Dane,threads,43517,0.0291,64.06,Recovery,Dallas,Texas,US,0,2026-04-13T09:16:47Z
+513,@field_faye_513,Field Faye,instagram,11033944,0.0217,100,Sports Nutrition,San Diego,California,US,1,2026-04-13T09:16:47Z
+514,@route_gus_514,Route Gus,tiktok,6465,0.0649,75.01,Climbing,Minneapolis,Minnesota,US,0,2026-04-13T09:16:47Z
+515,@alpine_hope_515,Alpine Hope,twitter,5296,0.0951,91.14,Footwear Reviews,Detroit,Michigan,US,0,2026-04-13T09:16:47Z
+516,@river_jace_516,River Jace,youtube,8708,0.0663,77.72,Gear Testing,Las Vegas,Nevada,US,0,2026-04-13T09:16:47Z
+517,@stadium_kara_517,Stadium Kara,threads,7474,0.0332,61.64,Training,Brooklyn,New York,US,0,2026-04-13T09:16:47Z
+518,@trail_maya_518,Trail Maya,instagram,25893,0.0381,75.48,Outdoor,New York,New York,US,0,2026-04-13T09:16:47Z
+519,@summit_alex_519,Summit Alex,tiktok,9968,0.0966,96.72,Trail Running,Los Angeles,California,US,0,2026-04-13T09:16:47Z
+520,@hike_jen_520,Hike Jen,twitter,9217,0.048,72.18,Hiking,Chicago,Illinois,US,0,2026-04-13T09:16:47Z

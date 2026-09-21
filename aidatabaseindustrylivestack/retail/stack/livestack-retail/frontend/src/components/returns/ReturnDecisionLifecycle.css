@@ -1,0 +1,143 @@
+.return-decision-lifecycle .return-decision-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
+  gap: 1rem;
+}
+
+.return-decision-lifecycle .return-decision-panel {
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  background: color-mix(in srgb, var(--color-bg) 62%, transparent);
+  padding: 1rem;
+}
+
+.return-decision-lifecycle .return-decision-recommendation {
+  border-left: 3px solid #796087;
+}
+
+.return-decision-lifecycle .return-decision-status {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.return-decision-lifecycle textarea,
+.return-decision-lifecycle select {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: 0.65rem;
+  background: var(--color-surface);
+  color: inherit;
+  transition: border-color 140ms ease, box-shadow 140ms ease, background-color 140ms ease;
+}
+
+.return-decision-lifecycle textarea:not(:disabled),
+.return-decision-lifecycle select:not(:disabled) {
+  border-color: color-mix(in srgb, var(--color-accent) 44%, var(--color-border));
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-accent) 10%, transparent);
+}
+
+.return-decision-lifecycle textarea:not(:disabled):hover,
+.return-decision-lifecycle select:not(:disabled):hover {
+  border-color: var(--color-accent);
+}
+
+.return-decision-lifecycle textarea:not(:disabled):focus,
+.return-decision-lifecycle select:not(:disabled):focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(199, 70, 52, 0.14);
+  outline: none;
+}
+
+.return-decision-lifecycle textarea:disabled,
+.return-decision-lifecycle select:disabled {
+  background: var(--color-surface-muted);
+  cursor: not-allowed;
+  opacity: 0.66;
+}
+
+.return-decision-lifecycle textarea {
+  min-height: 128px;
+  padding: 0.75rem;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.return-decision-lifecycle select {
+  min-height: 44px;
+  padding: 0 0.75rem;
+}
+
+.return-decision-lifecycle .return-decision-editable-hint {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.9rem;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid color-mix(in srgb, var(--color-accent-alt) 34%, var(--color-border));
+  border-radius: 0.6rem;
+  background: color-mix(in srgb, var(--color-accent-alt) 8%, var(--color-surface));
+  color: var(--color-text-dim);
+  font-size: 0.72rem;
+  line-height: 1.45;
+}
+
+.return-decision-lifecycle .return-decision-editable-hint strong {
+  color: var(--color-text);
+}
+
+.return-decision-lifecycle .return-decision-editable-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-top: 0.28rem;
+  flex: 0 0 auto;
+  border-radius: 999px;
+  background: var(--color-success);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-success) 16%, transparent);
+}
+
+.return-decision-lifecycle .return-decision-alert {
+  border: 1px solid color-mix(in srgb, #aa643b 55%, var(--color-border));
+  border-radius: 0.75rem;
+  background: color-mix(in srgb, #aa643b 9%, var(--color-bg));
+  padding: 0.85rem;
+}
+
+.return-decision-lifecycle .return-decision-alert[data-tone='danger'] {
+  border-color: color-mix(in srgb, #c74634 60%, var(--color-border));
+  background: color-mix(in srgb, #c74634 9%, var(--color-bg));
+}
+
+.return-decision-lifecycle .return-decision-timeline {
+  border-left: 1px solid var(--color-border);
+  margin-left: 0.35rem;
+  padding-left: 1rem;
+}
+
+.return-decision-lifecycle .return-decision-timeline-item {
+  position: relative;
+  padding-bottom: 0.9rem;
+}
+
+.return-decision-lifecycle .return-decision-timeline-item::before {
+  background: var(--color-accent);
+  border-radius: 999px;
+  content: '';
+  height: 0.5rem;
+  left: -1.28rem;
+  position: absolute;
+  top: 0.3rem;
+  width: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .return-decision-lifecycle .return-decision-grid {
+    grid-template-columns: 1fr;
+  }
+}

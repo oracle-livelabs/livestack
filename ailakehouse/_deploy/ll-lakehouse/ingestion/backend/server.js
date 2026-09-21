@@ -47,7 +47,7 @@ app.use(express.json({ limit: '10mb' }));
 // Reads X-Demo-User header and attaches to req for VPD filtering
 app.use((req, res, next) => {
   req.demoUser = req.headers['x-demo-user'] || null;
-  next();
+  db.runAsUser(req.demoUser, next);
 });
 
 // ── API Routes ─────────────────────────────────────────────
@@ -68,7 +68,9 @@ const webshopRoutes = require('./routes/webshop');
 const streamingAnalyticsRoutes = require('./routes/streamingAnalytics');
 const streamingIngestRoutes = require('./routes/streamingIngest');
 const customerCdcRoutes = require('./routes/customerCdc');
-const icebergCatalogRoutes = require('./routes/icebergCatalog');
+const dataSourcesRoutes = require('./routes/dataSources');
+const awsGlueRoutes = require('./routes/awsGlue');
+const sourceCatalogsRoutes = require('./routes/sourceCatalogs');
 
 app.use('/api/dashboard', dashboardRoutes);
 app.use('/api/social', socialRoutes);
@@ -87,7 +89,9 @@ app.use('/api/webshop', webshopRoutes);
 app.use('/api/streaming-analytics', streamingAnalyticsRoutes);
 app.use('/api/streaming-ingest', streamingIngestRoutes);
 app.use('/api/customer-cdc', customerCdcRoutes);
-app.use('/api/iceberg-catalog', icebergCatalogRoutes);
+app.use('/api/data-sources', dataSourcesRoutes);
+app.use('/api/aws-glue', awsGlueRoutes);
+app.use('/api/source-catalogs', sourceCatalogsRoutes);
 
 // ── Health Check ───────────────────────────────────────────
 app.get('/api/health', async (req, res) => {

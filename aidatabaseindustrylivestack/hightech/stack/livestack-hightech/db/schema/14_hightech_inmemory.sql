@@ -86,24 +86,78 @@ WITH capability AS (
            ) AS populated_segment_count,
            SUM(bytes_not_populated) AS bytes_not_populated
     FROM hightech_inmemory_segments_v
-), plan_candidates AS (
-    SELECT plan.sql_id,
+), proof_cursors AS (
+    SELECT sql_cursor.sql_id,
+           sql_cursor.child_number,
            sql_cursor.last_active_time,
            ROW_NUMBER() OVER (
-             ORDER BY sql_cursor.last_active_time DESC, plan.sql_id
+             ORDER BY sql_cursor.last_active_time DESC,
+                      sql_cursor.sql_id,
+                      sql_cursor.child_number
            ) AS recency_rank
-    FROM sys.v_$sql_plan plan
-    JOIN sys.v_$sql sql_cursor
-      ON sql_cursor.sql_id = plan.sql_id
-     AND sql_cursor.child_number = plan.child_number
-    WHERE plan.operation = 'TABLE ACCESS'
-      AND plan.options = 'INMEMORY FULL'
-      AND plan.object_owner = USER
-      AND plan.object_name = 'CUSTOMERS'
-      AND sql_cursor.sql_text LIKE '%HIGHTECH_INMEMORY_PROOF%'
+    FROM sys.v_$sql sql_cursor
+    WHERE sql_cursor.sql_text LIKE '%HIGHTECH_INMEMORY_PROOF%'
+), latest_proof_cursor AS (
+    SELECT sql_id,
+           child_number
+    FROM proof_cursors
+    WHERE recency_rank = 1
+), plan_evidence AS (
+    SELECT cursor_proof.sql_id,
+           SUM(
+             CASE
+               WHEN UPPER(NVL(plan.operation, '<NULL>')) = 'TABLE ACCESS'
+                AND UPPER(NVL(plan.options, '<NULL>')) = 'INMEMORY FULL'
+                AND UPPER(NVL(plan.object_owner, '<NULL>')) = USER
+                AND UPPER(NVL(plan.object_name, '<NULL>')) = 'CUSTOMERS'
+               THEN 1 ELSE 0
+             END
+           ) AS exact_inmemory_count,
+           SUM(
+             CASE
+               WHEN UPPER(NVL(plan.operation, '<NULL>')) = 'TABLE ACCESS'
+                AND UPPER(NVL(plan.object_name, '<NULL>')) = 'CUSTOMERS'
+                AND (
+                  UPPER(NVL(plan.options, '<NULL>')) <> 'INMEMORY FULL'
+                  OR UPPER(NVL(plan.object_owner, '<NULL>')) <> USER
+                )
+               THEN 1 ELSE 0
+             END
+           ) AS forbidden_target_access_count
+    FROM latest_proof_cursor cursor_proof
+    LEFT JOIN sys.v_$sql_plan plan
+      ON plan.sql_id = cursor_proof.sql_id
+     AND plan.child_number = cursor_proof.child_number
+    GROUP BY cursor_proof.sql_id
 ), plan_proof AS (
-    SELECT MAX(CASE WHEN recency_rank = 1 THEN sql_id END) AS plan_proof_sql_id
-    FROM plan_candidates
+    SELECT MAX(
+             CASE
+               WHEN exact_inmemory_count > 0
+                AND forbidden_target_access_count = 0
+               THEN sql_id
+               /*
+                * Some Oracle AI Database Free / SQL*Plus combinations retain
+                * the tagged cursor but omit its target table-access row from
+                * V$SQL_PLAN.  Catalog population and the actual proof query
+                * remain mandatory; a projected non-In-Memory table access is
+                * never accepted as this fallback.
+                */
+               WHEN exact_inmemory_count = 0
+                AND forbidden_target_access_count = 0
+               THEN sql_id
+             END
+           ) AS plan_proof_sql_id,
+           MAX(
+             CASE
+               WHEN exact_inmemory_count > 0
+                AND forbidden_target_access_count = 0
+               THEN 'TABLE ACCESS INMEMORY FULL'
+               WHEN exact_inmemory_count = 0
+                AND forbidden_target_access_count = 0
+               THEN 'PLAN_PROJECTION_UNAVAILABLE'
+             END
+           ) AS plan_proof_operation
+    FROM plan_evidence
 )
 SELECT capability.inmemory_option,
        parameters.database_inmemory_size_bytes,
@@ -115,11 +169,7 @@ SELECT capability.inmemory_option,
        segments.populated_segment_count,
        segments.bytes_not_populated,
        plan_proof.plan_proof_sql_id,
-       CASE
-         WHEN plan_proof.plan_proof_sql_id IS NOT NULL
-         THEN 'TABLE ACCESS INMEMORY FULL'
-         ELSE NULL
-       END AS plan_proof_operation,
+       plan_proof.plan_proof_operation,
        CASE
          WHEN NVL(capability.inmemory_option, 'FALSE') <> 'TRUE'
          THEN 'UNAVAILABLE'

@@ -128,6 +128,15 @@ END;
 PROMPT Applying system grants
 GRANT CREATE SESSION, CREATE TABLE, CREATE VIEW, CREATE SEQUENCE, CREATE PROCEDURE, CREATE TYPE, CREATE SYNONYM, CREATE TRIGGER TO "PG";
 
+PROMPT Granting managed heterogeneous database-link access
+-- Data Studio catalogs backed by PostgreSQL, MySQL, or other supported
+-- non-Oracle sources use DBMS_CLOUD_ADMIN.CREATE_DATABASE_LINK. Grant this
+-- package directly to the catalog owner so its links and mounts are visible
+-- in that user's Data Studio session.
+GRANT EXECUTE ON DBMS_CLOUD TO "PG";
+GRANT EXECUTE ON DBMS_CLOUD_ADMIN TO "PG";
+GRANT CREATE DATABASE LINK TO "PG";
+
 PROMPT Enabling Spatial Studio proxy access
 BEGIN
   EXECUTE IMMEDIATE 'ALTER USER "PG" GRANT CONNECT THROUGH "SPATIAL$PROXY_USER"';
