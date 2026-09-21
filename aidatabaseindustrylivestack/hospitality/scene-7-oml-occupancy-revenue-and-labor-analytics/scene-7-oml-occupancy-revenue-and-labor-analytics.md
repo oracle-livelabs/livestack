@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The reservation and folio records establish what has happened. Marcus and Dev now assess what may happen next by comparing OML forecasts with booking pace, cancellation risk, occupancy pressure, ADR opportunity, labor capacity, and service workload. They must keep every forecast tied to its supporting facts and avoid treating a prediction as a posted result.
+Marcus knows what has happened. Now he and Dev look ahead. They compare occupancy and revenue forecasts with booking pace, cancellations, staffing, and service workload without mistaking a prediction for posted revenue.
 
 Estimated time: 10 minutes.
 
@@ -19,7 +19,7 @@ Review predictive hospitality outputs without separating model features, results
 1. Select **OML Occupancy, Revenue & Labor Analytics** from the navigation menu.
 2. Review the model and segmentation indicators.
 3. Review the available analytics views: Booking Pace, Guest Value, Revenue Forecast, Room Cohorts, and Service Capacity.
-4. Use **Booking Pace** to compare the forecast with its operational-risk evidence. Treat the forecast as a prediction, not a posted financial result.
+4. Use **Booking Pace** to compare the forecast with the operating data behind it. Treat the forecast as a prediction, not a posted financial result.
 
 ## Task 2 Review property and capacity exposure
 

@@ -2,15 +2,15 @@
 
 ## Introduction
 
-The team has now reviewed dashboards, signals, relationships, service capacity, operating records, and forecasts. Dev uses Ask Hospitality Data to bring those domains into one governed conversation. A follow-up question can build on the prior result, while the user can choose an explanation, inspect generated SQL, or run an authorized query.
+Dev needs an answer that crosses dashboards, reservations, and forecasts. He asks the database directly, reviews the generated SQL, then asks a follow-up without starting over.
 
 Estimated time: 10 minutes.
 
-![Dev demonstrates a governed hospitality data conversation with persistent follow-up context](images/story-ask-hospitality-data.png)
+![Dev asks a follow-up question while keeping the first result in context](images/story-ask-hospitality-data.png)
 
 ### Objectives
 
-Ask an operating question, inspect the reasoning path that the interface exposes, and keep follow-up analysis grounded in governed Oracle data.
+Ask an operating question, review how the application reached its answer, and continue with a follow-up based on the same Oracle data.
 
 ## Task 1 Ask an operating question
 

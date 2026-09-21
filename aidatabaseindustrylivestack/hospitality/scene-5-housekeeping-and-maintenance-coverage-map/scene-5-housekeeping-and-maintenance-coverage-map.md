@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The graph connects the guest signal to a room-readiness issue at a property with upcoming arrivals. Theo now compares service zones, crew capacity, out-of-order rooms, event setup work, and arrival pressure. He must route housekeeping or engineering capacity without creating a new risk elsewhere in the portfolio.
+The graph points to a room-readiness problem before a busy arrival window. Theo compares nearby crews, out-of-order rooms, and event work, then decides where to send housekeeping or engineering support.
 
 Estimated time: 8 minutes.
 
@@ -10,7 +10,7 @@ Estimated time: 8 minutes.
 
 ### Objectives
 
-Use geographic and capacity evidence to decide where housekeeping, engineering, and event setup work can be routed without worsening arrival risk.
+Use location and capacity data to decide where housekeeping, engineering, and event crews can help without leaving another hotel short-staffed.
 
 ## Task 1 Review coverage priorities
 

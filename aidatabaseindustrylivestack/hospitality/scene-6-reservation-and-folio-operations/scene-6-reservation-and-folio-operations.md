@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The service response protects the arrival, but Marcus and Elena Park still need the operating and financial record behind the decision. They inspect the reservation, stay details, room assignment, group context, and posted folio activity. Their review keeps booked value separate from realized room revenue while showing the same stay through relational and JSON views.
+The arrival is covered. Marcus and Elena now check the reservation and posted folio. They compare the booked amount with room revenue and review the same stay as rows and a JSON document.
 
 Estimated time: 10 minutes.
 
@@ -14,13 +14,13 @@ Inspect the operational record behind a guest, revenue, service, or event decisi
 
 ## Task 1 Filter the operating record
 
-![Reservation navigation, VPD count, status filter, operating table, and signal-linked reservation highlighted](images/reservation-list.png)
+![Reservation navigation, VPD count, status filter, operating table, and linked guest record highlighted](images/reservation-list.png)
 
 1. Select **Reservation & Folio Operations** from the navigation menu.
 2. Confirm the reservation count visible under the active VPD context.
 3. Use **All Reservation Statuses** to narrow the operating list.
-4. Review the reservation table for guest, location, status, item count, total value, signal linkage, property hotel, and timestamp.
-5. Select reservation **#71974**, which is linked to a guest signal.
+4. Review the reservation table for guest, location, status, item count, total value, linked guest activity, property hotel, and timestamp.
+5. Select reservation **#71974**, which is linked to a guest issue.
 
 ## Task 2 Inspect reservation and folio detail
 

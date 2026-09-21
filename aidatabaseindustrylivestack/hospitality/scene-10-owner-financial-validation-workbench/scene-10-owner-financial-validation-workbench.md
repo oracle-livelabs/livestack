@@ -2,15 +2,15 @@
 
 ## Introduction
 
-Operations has acted, but Elena must still close the financial loop. She reviews an owner-close exception against its versioned rule, reservation and folio evidence, JSON detail, and recorded rationale. The scene ends when she records an explicit decision that the next close review can trace to its source.
+Before the owner close, Elena checks one exception against the rule, reservation, folio, and JSON record. She records the decision so the next reviewer can see exactly what happened.
 
 Estimated time: 10 minutes.
 
-![Elena traces an owner-close exception from its rule and source evidence to a retained decision](images/story-owner-validation.png)
+![Elena traces an owner-close exception from its rule and source records to a retained decision](images/story-owner-validation.png)
 
 ### Objectives
 
-Validate a close exception from its rule and source evidence through its owner decision and durable audit record.
+Check a close exception against its rule and source records, then save the owner decision in the audit trail.
 
 ## Task 1 Filter the close population
 
@@ -21,14 +21,14 @@ Validate a close exception from its rule and source evidence through its owner d
 3. Set the tolerance threshold used to display exceptions.
 4. Review the submitted room revenue, Oracle expected room revenue, variance, exception count, validation status, and close-readiness summary.
 
-## Task 2 Inspect validation evidence
+## Task 2 Inspect the supporting records
 
-![Owner exception header, financial values, validation rule, and supporting evidence controls highlighted](images/validation-evidence.png)
+![Owner exception header, financial values, validation rule, and supporting record controls highlighted](images/validation-evidence.png)
 
 1. Open the **Summit Resort ROOM_REVENUE** exception.
-2. Compare the submitted amount, Oracle expected amount, variance, status, and evidence count.
+2. Compare the submitted amount, Oracle expected amount, variance, status, and number of supporting items.
 3. Review the versioned validation rule and rationale.
-4. Open the formula, fee rule, AI rationale, Oracle evidence, or owner attestation needed for the decision.
+4. Open the formula, fee rule, AI rationale, Oracle source record, or owner attestation needed for the decision.
 
 All owner close records in this scene are synthetic demo data and do not describe a real property or owner.
 

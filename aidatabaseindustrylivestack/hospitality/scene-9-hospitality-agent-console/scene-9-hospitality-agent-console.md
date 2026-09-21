@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The conversational analysis identifies properties that need coordinated guest care, housekeeping, and engineering attention. Sofia brings Amara and Theo into the Hospitality Agent Console to turn that evidence into a scoped response. They review the specialist routing, refine the question through follow-ups, and confirm that the recommendation and tool activity are retained in the audit trail.
+The answer points to properties that need guest care, housekeeping, and engineering. Sofia, Amara, and Theo use the Agent Console to assign the right specialists, refine the request, and check the action log.
 
 Estimated time: 8 minutes.
 

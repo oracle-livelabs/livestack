@@ -4,9 +4,9 @@
 
 ## Introduction
 
-On Monday morning, Sofia Ramirez is preparing for the portfolio review when a group-demand surge begins to collide with an important arrival window. Several room types are gaining revenue opportunity, but room readiness and service capacity are tightening at the same time.
+Monday's portfolio review has barely started when Sofia Ramirez spots a problem. Group bookings are climbing, but several hotels are short on ready rooms and service staff for the next arrival wave.
 
-Sofia brings together revenue strategy, guest experience, room operations, owner finance, and data specialists. They need to determine where demand is changing, which guests and rooms are exposed, how to deploy service teams, what the reservation and folio records show, what may happen next, and how to close the owner record. Every decision uses the same Oracle AI Database 26ai foundation.
+She pulls in the revenue, guest experience, room operations, finance, and data teams. Together they follow the issue from the portfolio dashboard to the owner close, with Oracle AI Database 26ai holding the data throughout.
 
 Estimated demo time: 90 minutes.
 
@@ -14,26 +14,26 @@ Estimated demo time: 90 minutes.
 
 ### Meet the Hospitality Team
 
-The runbook uses six fictional personas to make responsibility and handoffs clear.
+Six fictional team members carry the story:
 
 ![The hospitality portfolio, guest operations, finance, and data teams work together](images/story-meet-hospitality-team.png)
 
 - **Sofia Ramirez, VP Portfolio Operations:** leads the portfolio review and coordinates the final response.
 - **Marcus Chen, Director Revenue Strategy:** evaluates demand, occupancy, ADR, RevPAR, and revenue exposure.
-- **Amara Okafor, Director Guest Experience and Loyalty:** reviews guest, loyalty, channel, and service signals.
+- **Amara Okafor, Director Guest Experience and Loyalty:** reviews guest feedback, loyalty activity, booking channels, and service issues.
 - **Theo Brooks, Rooms Operations and Engineering Manager:** manages room readiness, housekeeping, maintenance, and arrival capacity.
-- **Elena Park, Owner Finance Controller:** reconciles reservation, folio, owner-close, and audit evidence.
+- **Elena Park, Owner Finance Controller:** reconciles reservations, folios, owner-close records, and the audit trail.
 - **Dev Shah, Oracle Data and AI Architect:** connects the workflow to Oracle AI Database 26ai data, analytics, and SQL.
 
 ### The Hospitality LiveStack
 
-The team works in one application backed by the same hospitality data foundation used throughout the ten scenes.
+The team works in one application, using the same hotel data from start to finish.
 
 ![Hospitality LiveStack welcome page](images/hospitality-livestack-welcome.png)
 
 ### Objectives
 
-In this LiveStack demo, you will see how hospitality leaders can use the same trusted Oracle data to improve occupancy, ADR, RevPAR, guest experience, room readiness, service capacity, revenue assurance, and owner reporting.
+Follow the team as they work through occupancy, ADR, RevPAR, guest experience, room readiness, service capacity, revenue assurance, and owner reporting.
 
 ### Prerequisites
 

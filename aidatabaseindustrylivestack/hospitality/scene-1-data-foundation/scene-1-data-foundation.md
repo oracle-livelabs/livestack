@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Before the portfolio review begins, Sofia Ramirez asks Dev Shah to reset the demo environment so every team starts from the same data. Dev restores the synthetic hospitality portfolio in Oracle AI Database 26ai. Sofia then checks the live counts for properties, room types, guest signals, reservations, vector indexes, and signal-room links. Once the counts reconcile, the team can investigate property performance, guest demand, service operations, revenue, and owner value without loading separate datasets for each scene.
+Sofia wants everyone working from the same numbers. Dev restores the synthetic hotel portfolio, and Sofia checks the record counts before the review begins.
 
 Estimated time: 8 minutes.
 
@@ -21,7 +21,7 @@ Restore the data before you begin the remaining scenes.
 ![Prepare the Dataset panel with the restore action and reconciled live counts highlighted](images/prepare-dataset.png)
 
 1. Select **Restore Demo Data**.
-2. Wait for the progress indicator to reach 100%. Confirm that the page shows **187** properties and room types, **5,000** guest signals, **3,000** reservations, **187** room-type index records, **5,000** guest-signal index records, and **1,422** signal-room links.
+2. Wait for the progress indicator to reach 100%. Confirm that the page shows **187** properties and room types, **5,000 Guest Signals**, **3,000 Reservations**, **187** room-type index records, **5,000** guest-record index entries, and **1,422** guest-to-room links.
 
 Oracle AI Database 26ai supports relational, JSON, spatial, graph, and vector models in one converged database. The button starts one coordinated SQL and PL/SQL workflow that replaces the demo records, rebuilds the spatial and vector objects, and commits the restored dataset. The application also records a restore telemetry event.
 
@@ -31,7 +31,7 @@ Review the six data groups loaded by the restore.
 
 ![What Gets Loaded carousel with the data-domain cards and next control highlighted](images/what-gets-loaded.png)
 
-1. Review the first three groups: reservation records, guest and demand signals, and graph relationships.
+1. Review the first three groups: reservation records, guest and demand activity, and graph relationships.
 2. Select the right carousel control.
 3. Review the remaining groups: housekeeping and maintenance coverage, reservation documents, and occupancy forecasts.
 

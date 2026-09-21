@@ -2,11 +2,11 @@
 
 ## Introduction
 
-Amara finds a guest signal that appears across more than one operational record. She asks Theo Brooks to trace how it connects to reservations, rooms, service requests, maintenance events, channels, and properties. The graph helps them isolate the relationship path that matters before an operations team is dispatched.
+One guest issue touches several records. Amara and Theo use the graph to follow it through the reservation, room, service request, maintenance work, booking channel, and property.
 
 Estimated time: 8 minutes.
 
-![Amara and Theo trace a guest signal through reservations, rooms, service work, and the property](images/story-guest-network.png)
+![Amara and Theo trace a guest issue through reservations, rooms, service work, and the property](images/story-guest-network.png)
 
 ### Objectives
 
