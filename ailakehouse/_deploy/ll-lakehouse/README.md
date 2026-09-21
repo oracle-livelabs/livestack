@@ -82,8 +82,11 @@ The build script recreates `build_dev.zip` with runtime state, local build outpu
 Archive upload is enabled by default. Provide the write-capable PAR prefix as
 `BUILD_ARCHIVE_UPLOAD_URL_PREFIX` in the ignored `.env.kev` file or the process
 environment. An explicitly exported value takes precedence over `.env.kev`.
-Set `UPLOAD_ARCHIVE=false` for a local-only build. Never commit the PAR URL to
-this repository or store it in the custom image.
+Set `UPLOAD_ARCHIVE=false` for a local-only build. Never commit a PAR URL to
+this repository or store it in the custom image. Uploading only writes the ZIP:
+for a standalone `inst.sh` run, the VM's `/home/opc/.env` must separately
+provide `BUILD_ARCHIVE_URL`, a read-capable URL for `build_dev.zip`. Terraform
+deployments instead provide the `build_archive_url` instance-metadata key.
 
 
 

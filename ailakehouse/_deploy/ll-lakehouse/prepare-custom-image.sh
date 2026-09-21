@@ -34,6 +34,7 @@ SYSTEMCTL_BIN="${SYSTEMCTL_BIN:-}"
 USER_PODMAN_SERVICE="${USER_PODMAN_SERVICE:-user-podman.service}"
 PG_ICEBERG_CONNECTION_SERVICE="${PG_ICEBERG_CONNECTION_SERVICE:-pg-iceberg-connection.service}"
 PG_AI_DATA_CATALOG_SERVICE="${PG_AI_DATA_CATALOG_SERVICE:-pg-ai-data-catalog.service}"
+PG_AI_CATALOG_BRONZE_SERVICE="${PG_AI_CATALOG_BRONZE_SERVICE:-pg-ai-catalog-bronze.service}"
 ICEBERG_SEED_SERVICE="${ICEBERG_SEED_SERVICE:-iceberg-seed.service}"
 COMPOSE_PROJECT=""
 PRESERVED_OFFLINE_VOLUME_KEYS=(
@@ -312,7 +313,7 @@ stop_image_capture_services() {
     return 0
   fi
 
-  for service in "${ICEBERG_SEED_SERVICE}" "${PG_ICEBERG_CONNECTION_SERVICE}" "${PG_AI_DATA_CATALOG_SERVICE}" "${USER_PODMAN_SERVICE}"; do
+  for service in "${PG_AI_CATALOG_BRONZE_SERVICE}" "${ICEBERG_SEED_SERVICE}" "${PG_ICEBERG_CONNECTION_SERVICE}" "${PG_AI_DATA_CATALOG_SERVICE}" "${USER_PODMAN_SERVICE}"; do
     if ! "${SYSTEMCTL_BIN}" --user cat "${service}" >/dev/null 2>&1; then
       echo "No ${service} user service found; continuing."
       continue

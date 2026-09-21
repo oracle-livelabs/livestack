@@ -1846,6 +1846,23 @@ async function resetLakehouseAppDataObjects({ connectString, schemaPassword, wal
 }
 
 async function fetchLakehouseGoldDataStatus(pgConnection) {
+  // This is a dedicated provisioning connection, not a demo-user request.
+  // Without context VPD hides populated tables and can trigger a destructive
+  // reseed. A genuinely new schema has no security package yet.
+  const security = await pgConnection.execute(
+    `SELECT COUNT(*) AS package_count FROM user_objects
+     WHERE object_name = 'SC_SECURITY_CTX' AND object_type = 'PACKAGE'`,
+    {},
+    { outFormat: oracledb.OUT_FORMAT_OBJECT }
+  );
+  if (Number(security.rows?.[0]?.PACKAGE_COUNT || 0) > 0) {
+    await pgConnection.execute(`BEGIN
+      sc_security_ctx.set_user_context('admin_jess');
+      IF NVL(sc_security_ctx.get_role(), 'unknown') <> 'admin' THEN
+        RAISE_APPLICATION_ERROR(-20002, 'ADB readiness requires the active admin_jess seed user.');
+      END IF;
+    END;`);
+  }
   const tableBinds = Object.fromEntries(LAKEHOUSE_GOLD_DATA_REQUIRED_TABLES.map((name, index) => [`t${index}`, name]));
   const tableList = LAKEHOUSE_GOLD_DATA_REQUIRED_TABLES.map((_, index) => `:t${index}`).join(',');
   const tableResult = await pgConnection.execute(

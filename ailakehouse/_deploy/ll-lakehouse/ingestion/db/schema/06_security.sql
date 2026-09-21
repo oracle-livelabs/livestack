@@ -121,6 +121,7 @@ CREATE OR REPLACE PACKAGE sc_security_ctx AS
     PROCEDURE set_user_context(p_username IN VARCHAR2);
     FUNCTION get_region RETURN VARCHAR2;
     FUNCTION get_role RETURN VARCHAR2;
+    FUNCTION get_social_region RETURN VARCHAR2;
 END sc_security_ctx;
 /
 
@@ -137,7 +138,7 @@ CREATE OR REPLACE PACKAGE BODY sc_security_ctx AS
     EXCEPTION
         WHEN NO_DATA_FOUND THEN
             g_region := NULL;
-            g_role := 'viewer';
+            g_role := 'unknown';
     END;
 
     FUNCTION get_region RETURN VARCHAR2 IS
@@ -148,6 +149,12 @@ CREATE OR REPLACE PACKAGE BODY sc_security_ctx AS
     FUNCTION get_role RETURN VARCHAR2 IS
     BEGIN
         RETURN g_role;
+    END;
+    FUNCTION get_social_region RETURN VARCHAR2 IS
+    BEGIN
+        -- Store regions use US state codes; social sources use continents.
+        IF g_region IN ('CA', 'PA', 'TX') THEN RETURN 'NA'; END IF;
+        RETURN NULL;
     END;
 END sc_security_ctx;
 /
@@ -163,6 +170,11 @@ AS
 BEGIN
     v_role := sc_security_ctx.get_role();
     v_region := sc_security_ctx.get_region();
+
+    IF v_role IS NULL OR v_role = 'unknown' OR
+       (v_role = 'fulfillment_mgr' AND v_region IS NULL) THEN
+        RETURN '1=0';
+    END IF;
 
     -- Admins and analysts see everything
     IF v_role IN ('admin', 'analyst') THEN
@@ -228,6 +240,11 @@ BEGIN
     v_role := sc_security_ctx.get_role();
     v_region := sc_security_ctx.get_region();
 
+    IF v_role IS NULL OR v_role = 'unknown' OR
+       (v_role = 'fulfillment_mgr' AND v_region IS NULL) THEN
+        RETURN '1=0';
+    END IF;
+
     -- Admins and analysts see everything
     IF v_role IN ('admin', 'analyst') THEN
         RETURN NULL;
@@ -291,7 +308,12 @@ AS
     v_region VARCHAR2(100);
 BEGIN
     v_role   := sc_security_ctx.get_role();
-    v_region := sc_security_ctx.get_region();
+    v_region := sc_security_ctx.get_social_region();
+
+    IF v_role IS NULL OR v_role = 'unknown' OR
+       (v_role = 'fulfillment_mgr' AND v_region IS NULL) THEN
+        RETURN '1=0';
+    END IF;
 
     -- Admins and analysts see everything
     IF v_role IN ('admin', 'analyst') THEN
@@ -318,7 +340,12 @@ AS
     v_region VARCHAR2(100);
 BEGIN
     v_role   := sc_security_ctx.get_role();
-    v_region := sc_security_ctx.get_region();
+    v_region := sc_security_ctx.get_social_region();
+
+    IF v_role IS NULL OR v_role = 'unknown' OR
+       (v_role = 'fulfillment_mgr' AND v_region IS NULL) THEN
+        RETURN '1=0';
+    END IF;
 
     IF v_role IN ('admin', 'analyst') THEN
         RETURN NULL;
@@ -342,7 +369,12 @@ AS
     v_region VARCHAR2(100);
 BEGIN
     v_role   := sc_security_ctx.get_role();
-    v_region := sc_security_ctx.get_region();
+    v_region := sc_security_ctx.get_social_region();
+
+    IF v_role IS NULL OR v_role = 'unknown' OR
+       (v_role = 'fulfillment_mgr' AND v_region IS NULL) THEN
+        RETURN '1=0';
+    END IF;
 
     IF v_role IN ('admin', 'analyst') THEN
         RETURN NULL;
@@ -368,7 +400,12 @@ AS
     v_region VARCHAR2(100);
 BEGIN
     v_role   := sc_security_ctx.get_role();
-    v_region := sc_security_ctx.get_region();
+    v_region := sc_security_ctx.get_social_region();
+
+    IF v_role IS NULL OR v_role = 'unknown' OR
+       (v_role = 'fulfillment_mgr' AND v_region IS NULL) THEN
+        RETURN '1=0';
+    END IF;
 
     IF v_role IN ('admin', 'analyst') THEN
         RETURN NULL;
@@ -392,7 +429,12 @@ AS
     v_region VARCHAR2(100);
 BEGIN
     v_role   := sc_security_ctx.get_role();
-    v_region := sc_security_ctx.get_region();
+    v_region := sc_security_ctx.get_social_region();
+
+    IF v_role IS NULL OR v_role = 'unknown' OR
+       (v_role = 'fulfillment_mgr' AND v_region IS NULL) THEN
+        RETURN '1=0';
+    END IF;
 
     IF v_role IN ('admin', 'analyst') THEN
         RETURN NULL;

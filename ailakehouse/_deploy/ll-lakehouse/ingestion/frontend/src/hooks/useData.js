@@ -1,26 +1,34 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
+import { useUser } from '../context/UserContext';
+import { getApiUser } from '../utils/api';
 
 export function useData(fetchFn, deps = [], options = {}) {
+  const { currentUser } = useUser();
+  const requestId = useRef(0);
   const { autoFetch = true, initialData = null } = options;
   const [data, setData] = useState(initialData);
   const [loading, setLoading] = useState(autoFetch);
   const [error, setError] = useState(null);
 
   const refetch = useCallback(async () => {
+    const id = ++requestId.current;
+    const username = getApiUser();
     setLoading(true);
     setError(null);
     try {
       const result = await fetchFn();
-      setData(result);
+      if (id === requestId.current && username === getApiUser()) setData(result);
     } catch (err) {
-      setError(err.message);
+      if (id === requestId.current && username === getApiUser()) setError(err.message);
     } finally {
-      setLoading(false);
+      if (id === requestId.current && username === getApiUser()) setLoading(false);
     }
-  }, deps);
+  }, [currentUser?.USERNAME, ...deps]);
 
   useEffect(() => {
+    setData(initialData);
     if (autoFetch) refetch();
+    return () => { requestId.current += 1; };
   }, [refetch, autoFetch]);
 
   return { data, loading, error, refetch, setData };

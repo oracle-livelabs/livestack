@@ -699,6 +699,7 @@ WHENEVER SQLERROR EXIT SQL.SQLCODE
 ${PROFILE_SQL}
 
 PROMPT Verifying required ADB demo tables...
+@"${INGESTION_DIR}/db/data/bootstrap_context.sql"
 DECLARE
   v_count NUMBER;
   v_missing VARCHAR2(32767) := '';

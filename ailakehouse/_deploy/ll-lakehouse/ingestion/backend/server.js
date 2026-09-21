@@ -47,7 +47,7 @@ app.use(express.json({ limit: '10mb' }));
 // Reads X-Demo-User header and attaches to req for VPD filtering
 app.use((req, res, next) => {
   req.demoUser = req.headers['x-demo-user'] || null;
-  next();
+  db.runAsUser(req.demoUser, next);
 });
 
 // ── API Routes ─────────────────────────────────────────────

@@ -12,6 +12,12 @@ DEFAULT_CATALOG_NAME="default"
 DEFAULT_CATALOG_PROVIDER="genericrestcatalog"
 DEFAULT_CATALOG_TYPE="REST"
 DEFAULT_STORAGE_TYPE="OCIObjectStorage"
+DEFAULT_AICAT_CONNECTION_NAME="pg-aicat"
+DEFAULT_AICAT_CATALOG_NAME="oadc_iceberg_rest_catalog"
+DEFAULT_AICAT_CATALOG_PROVIDER="oracleaidatacatalog"
+DEFAULT_AICAT_CATALOG_TYPE="REST"
+DEFAULT_AICAT_CATALOG_AUTH="Basic"
+DEFAULT_AICAT_WAREHOUSE_NAME="oadc_iceberg_rest_catalog"
 DEFAULT_GRAVITINO_PATH="/iceberg"
 DEFAULT_GRAVITINO_PORT="1525"
 DEFAULT_API_PREFIX="/odi/odi-rest/v1"
@@ -36,6 +42,10 @@ log() {
 
 is_disabled() {
   [[ "${1:-}" =~ ^([Ff][Aa][Ll][Ss][Ee]|0|[Nn][Oo])$ ]]
+}
+
+is_enabled() {
+  [[ "${1:-}" =~ ^([Tt][Rr][Uu][Ee]|1|[Yy][Ee][Ss])$ ]]
 }
 
 cleanup() {
@@ -253,6 +263,19 @@ derive_iceberg_rest_url() {
   [[ "${path}" == /* ]] || path="/${path}"
 
   printf 'http://%s:%s%s' "${host}" "${port}" "${path}"
+}
+
+derive_aicat_rest_url() {
+  local value="${DATA_TRANSFORMS_AICAT_URL:-${AI_DATA_CATALOG_URL:-}}"
+
+  [[ -n "${value}" ]] || return 1
+  trim_trailing_slash "${value}"
+}
+
+aicat_connection_is_available() {
+  is_enabled "${AI_DATA_CATALOG_ENABLED:-false}" || return 1
+  AICAT_REST_URL="$(derive_aicat_rest_url)" || return 1
+  AICAT_REST_URL="$(trim_trailing_slash "${AICAT_REST_URL}")"
 }
 
 local_gravitino_ready() {
@@ -779,6 +802,87 @@ with open(sys.argv[1], "w", encoding="utf-8") as handle:
 PY
 }
 
+build_aicat_connection_payload() {
+  local output_file="$1"
+  local global_id="${2:-}"
+  local s3_access_id="${DATA_TRANSFORMS_AICAT_S3_ACCESS_ID:-${GRAVITINO_S3_ACCESS_KEY_ID:-}}"
+  local s3_secret_key="${DATA_TRANSFORMS_AICAT_S3_SECRET_KEY:-${GRAVITINO_S3_SECRET_ACCESS_KEY:-}}"
+  local username="${DATA_TRANSFORMS_AICAT_USERNAME:-${DEFAULT_ADB_USERNAME}}"
+  local password="${DATA_TRANSFORMS_AICAT_PASSWORD:-${DBPASSWORD:-}}"
+
+  if [[ -z "${AICAT_REST_URL:-}" ]]; then
+    log "Data Transforms AI Data Catalog URL is required."
+    return 1
+  fi
+  if [[ -z "${username}" || -z "${password}" ]]; then
+    log "Data Transforms AI Data Catalog username and password are required."
+    return 1
+  fi
+  if [[ -z "${s3_access_id}" || -z "${s3_secret_key}" ]]; then
+    log "Data Transforms AI Data Catalog storage credentials are not configured."
+    return 1
+  fi
+
+  CONNECTION_GLOBAL_ID="${global_id}" \
+    CONNECTION_NAME="${DATA_TRANSFORMS_AICAT_CONNECTION_NAME:-${DEFAULT_AICAT_CONNECTION_NAME}}" \
+    AICAT_REST_URL="${AICAT_REST_URL}" \
+    AICAT_CATALOG_NAME="${DATA_TRANSFORMS_AICAT_CATALOG_NAME:-${DEFAULT_AICAT_CATALOG_NAME}}" \
+    AICAT_CATALOG_PROVIDER="${DATA_TRANSFORMS_AICAT_CATALOG_PROVIDER:-${DEFAULT_AICAT_CATALOG_PROVIDER}}" \
+    AICAT_CATALOG_TYPE="${DATA_TRANSFORMS_AICAT_CATALOG_TYPE:-${DEFAULT_AICAT_CATALOG_TYPE}}" \
+    AICAT_CATALOG_AUTH="${DATA_TRANSFORMS_AICAT_CATALOG_AUTH:-${DEFAULT_AICAT_CATALOG_AUTH}}" \
+    AICAT_WAREHOUSE_NAME="${DATA_TRANSFORMS_AICAT_WAREHOUSE_NAME:-${DEFAULT_AICAT_WAREHOUSE_NAME}}" \
+    AICAT_USERNAME="${username}" \
+    AICAT_PASSWORD="${password}" \
+    S3_ACCESS_ID="${s3_access_id}" \
+    S3_SECRET_KEY="${s3_secret_key}" \
+    "${PYTHON_BIN}" - "${output_file}" <<'PY'
+import base64
+import json
+import os
+import sys
+
+payload = {
+    "name": os.environ["CONNECTION_NAME"],
+    "technology": "APACHE_ICEBERG",
+    "connectionProperties": {
+        "jdbcBatchUpdateSize": 5000,
+        "passwordSecretId": None,
+        "tokenSecretId": None,
+        "useSecret": "false",
+        "dataServerProperties": {
+            "azureAccountKey": None,
+            "azureClientId": None,
+            "azureClientSecret": None,
+            "catalogAuth": os.environ["AICAT_CATALOG_AUTH"],
+            "catalogName": os.environ["AICAT_CATALOG_NAME"],
+            "catalogProvider": os.environ["AICAT_CATALOG_PROVIDER"],
+            "catalogType": os.environ["AICAT_CATALOG_TYPE"],
+            "clientId": None,
+            "clientSecret": None,
+            "enableCredentialVending": "false",
+            "restPasswd": base64.b64encode(
+                os.environ["AICAT_PASSWORD"].encode("utf-8")
+            ).decode("ascii"),
+            "restUri": os.environ["AICAT_REST_URL"],
+            "restUser": os.environ["AICAT_USERNAME"],
+            "s3AccessID": os.environ["S3_ACCESS_ID"],
+            "s3SecretKey": os.environ["S3_SECRET_KEY"],
+            "storageType": "OCIObjectStorage",
+            "tokenUri": f'{os.environ["AICAT_REST_URL"]}/v1/auth/token',
+            "warehouseName": os.environ["AICAT_WAREHOUSE_NAME"],
+        },
+    },
+}
+
+global_id = os.environ.get("CONNECTION_GLOBAL_ID", "")
+if global_id:
+    payload["globalId"] = global_id
+
+with open(sys.argv[1], "w", encoding="utf-8") as handle:
+    json.dump(payload, handle, separators=(",", ":"))
+PY
+}
+
 extract_first_agent_name() {
   local json_file="$1"
 
@@ -965,7 +1069,8 @@ PY
 
 upsert_connection() {
   local api_prefix="$1"
-  local connection_name="${DATA_TRANSFORMS_ICEBERG_CONNECTION_NAME:-${DEFAULT_CONNECTION_NAME}}"
+  local connection_name="${2:-${DATA_TRANSFORMS_ICEBERG_CONNECTION_NAME:-${DEFAULT_CONNECTION_NAME}}}"
+  local payload_builder="${3:-build_connection_payload}"
   local existing_id payload_file response_file connection_id
 
   existing_id="$(find_connection_id "${connection_name}" "${api_prefix}" || true)"
@@ -974,14 +1079,14 @@ upsert_connection() {
 
   if [[ -n "${existing_id}" ]]; then
     connection_id="${existing_id}"
-    build_connection_payload "${payload_file}" "${connection_id}"
+    "${payload_builder}" "${payload_file}" "${connection_id}"
     if ! api_request "PUT" "${api_prefix}/dataservers" "${payload_file}" "${response_file}"; then
       log "Failed to update ${connection_name}; Data Transforms returned HTTP ${API_STATUS}: $(summarize_response "${response_file}")"
       return 1
     fi
     log "Updated existing Data Transforms connection ${connection_name}."
   else
-    build_connection_payload "${payload_file}" "" create
+    "${payload_builder}" "${payload_file}" "" create
     if ! api_request "POST" "${api_prefix}/dataservers" "${payload_file}" "${response_file}"; then
       log "Failed to create ${connection_name}; Data Transforms returned HTTP ${API_STATUS}: $(summarize_response "${response_file}")"
       return 1
@@ -1673,12 +1778,13 @@ PY
 }
 
 attempt_once() {
-  local api_prefix adb_enabled iceberg_enabled demo_enabled demo_reset_enabled connection_id
+  local api_prefix adb_enabled iceberg_enabled aicat_enabled demo_enabled demo_reset_enabled connection_id
 
   load_env
   api_prefix="${DATA_TRANSFORMS_API_PREFIX:-${DEFAULT_API_PREFIX}}"
   adb_enabled=true
   iceberg_enabled=true
+  aicat_enabled=true
   demo_enabled=true
   demo_reset_enabled=true
 
@@ -1688,13 +1794,16 @@ attempt_once() {
   if is_disabled "${DATA_TRANSFORMS_ICEBERG_AUTO_CREATE:-true}"; then
     iceberg_enabled=false
   fi
+  if is_disabled "${DATA_TRANSFORMS_AICAT_AUTO_CREATE:-true}"; then
+    aicat_enabled=false
+  fi
   if is_disabled "${DATA_TRANSFORMS_DEMO_AUTO_CREATE:-true}"; then
     demo_enabled=false
   fi
   if is_disabled "${DATA_TRANSFORMS_DEMO_RESET:-true}"; then
     demo_reset_enabled=false
   fi
-  if [[ "${adb_enabled}" == false && "${iceberg_enabled}" == false && "${demo_enabled}" == false ]]; then
+  if [[ "${adb_enabled}" == false && "${iceberg_enabled}" == false && "${aicat_enabled}" == false && "${demo_enabled}" == false ]]; then
     log "Automatic Data Transforms provisioning is disabled."
     return 0
   fi
@@ -1747,6 +1856,23 @@ attempt_once() {
     test_connection "${api_prefix}" "${connection_id}" "${DATA_TRANSFORMS_ICEBERG_CONNECTION_NAME:-${DEFAULT_CONNECTION_NAME}}" || return 1
   else
     log "Automatic Data Transforms Iceberg connection creation is disabled."
+  fi
+
+  if [[ "${aicat_enabled}" == true ]] && aicat_connection_is_available; then
+    log "Creating or updating ${DATA_TRANSFORMS_AICAT_CONNECTION_NAME:-${DEFAULT_AICAT_CONNECTION_NAME}} with AI Data Catalog URL ${AICAT_REST_URL}."
+    upsert_connection \
+      "${api_prefix}" \
+      "${DATA_TRANSFORMS_AICAT_CONNECTION_NAME:-${DEFAULT_AICAT_CONNECTION_NAME}}" \
+      build_aicat_connection_payload || return 1
+    connection_id="$(<"${WORK_DIR}/connection-id")"
+    test_connection \
+      "${api_prefix}" \
+      "${connection_id}" \
+      "${DATA_TRANSFORMS_AICAT_CONNECTION_NAME:-${DEFAULT_AICAT_CONNECTION_NAME}}" || return 1
+  elif [[ "${aicat_enabled}" == true ]]; then
+    log "AI Data Catalog is disabled or its service URL is unavailable; skipping Data Transforms AI Catalog connection."
+  else
+    log "Automatic Data Transforms AI Catalog connection creation is disabled."
   fi
 
   if [[ "${demo_enabled}" == true ]]; then

@@ -252,6 +252,62 @@ assert properties["s3AccessID"] == "example-access-id"
 assert properties["s3SecretKey"] == "example-secret-key"
 PY
 
+AICAT_REST_URL="https://catalog.example.invalid/catalog"
+AI_DATA_CATALOG_ENABLED=true
+DBPASSWORD="${test_password}"
+DATA_TRANSFORMS_AICAT_CONNECTION_NAME="pg-aicat"
+DATA_TRANSFORMS_AICAT_CATALOG_NAME="oadc_iceberg_rest_catalog"
+DATA_TRANSFORMS_AICAT_USERNAME="PG"
+build_aicat_connection_payload "${TEST_ROOT}/aicat-connection-payload.json"
+TEST_PASSWORD="${test_password}" "${PYTHON_BIN}" - "${TEST_ROOT}/aicat-connection-payload.json" <<'PY'
+import base64
+import json
+import os
+import sys
+
+with open(sys.argv[1], encoding="utf-8") as handle:
+    payload = json.load(handle)
+
+assert payload["name"] == "pg-aicat"
+assert payload["technology"] == "APACHE_ICEBERG"
+properties = payload["connectionProperties"]["dataServerProperties"]
+assert properties["catalogProvider"] == "oracleaidatacatalog"
+assert properties["catalogAuth"] == "Basic"
+assert properties["catalogName"] == "oadc_iceberg_rest_catalog"
+assert properties["warehouseName"] == "oadc_iceberg_rest_catalog"
+assert properties["restUri"] == "https://catalog.example.invalid/catalog"
+assert properties["tokenUri"] == "https://catalog.example.invalid/catalog/v1/auth/token"
+assert properties["restUser"] == "PG"
+assert base64.b64decode(properties["restPasswd"]).decode("utf-8") == os.environ["TEST_PASSWORD"]
+assert properties["storageType"] == "OCIObjectStorage"
+assert properties["s3AccessID"] == "example-access-id"
+assert properties["s3SecretKey"] == "example-secret-key"
+assert properties["enableCredentialVending"] == "false"
+assert "s3Region" not in properties
+PY
+
+AI_DATA_CATALOG_URL="https://catalog.example.invalid/catalog/"
+derived_aicat_url="$(derive_aicat_rest_url)"
+[[ "${derived_aicat_url}" == "https://catalog.example.invalid/catalog" ]] \
+  || fail "AI Data Catalog URL derivation did not trim the trailing slash."
+
+AI_DATA_CATALOG_ENABLED=false
+set +e
+aicat_connection_is_available
+aicat_disabled_status=$?
+set -e
+[[ "${aicat_disabled_status}" -ne 0 ]] \
+  || fail "A disabled AI Data Catalog must not create a Data Transforms connection."
+
+AI_DATA_CATALOG_ENABLED=true
+unset AI_DATA_CATALOG_URL AICAT_REST_URL
+set +e
+aicat_connection_is_available
+aicat_missing_url_status=$?
+set -e
+[[ "${aicat_missing_url_status}" -ne 0 ]] \
+  || fail "An AI Data Catalog without a service URL must be skipped."
+
 unset GRAVITINO_S3_ACCESS_KEY_ID GRAVITINO_S3_SECRET_ACCESS_KEY
 set +e
 missing_storage_credentials_output="$(build_connection_payload "${TEST_ROOT}/missing-storage-credentials.json" 2>&1)"

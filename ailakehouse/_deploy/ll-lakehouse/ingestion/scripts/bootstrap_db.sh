@@ -503,10 +503,11 @@ else
   echo ">>> Core schema already present. Skipping base bootstrap."
 fi
 
-cat > /tmp/check_seed_data.sql <<'SQL'
+cat > /tmp/check_seed_data.sql <<SQL
 WHENEVER OSERROR EXIT FAILURE
 WHENEVER SQLERROR EXIT SQL.SQLCODE
 SET HEADING OFF FEEDBACK OFF VERIFY OFF PAGES 0 ECHO OFF
+@${APP_DIR}/db/data/bootstrap_context.sql
 SELECT CASE
          WHEN (SELECT COUNT(*) FROM brands) > 0
           AND (SELECT COUNT(*) FROM products) > 0
@@ -544,6 +545,7 @@ cat > /tmp/hydrate.sql <<SQL
 WHENEVER OSERROR EXIT FAILURE
 WHENEVER SQLERROR EXIT SQL.SQLCODE
 SET SERVEROUTPUT ON
+@${APP_DIR}/db/data/bootstrap_context.sql
 @${APP_DIR}/db/schema/12_oml_models.sql
 DECLARE
   v_count NUMBER;
@@ -655,10 +657,11 @@ if [ "$RETURNS_GRAPH_READY" != "yes" ]; then
 fi
 
 CORE_DATA_READY="$(
-  sqlplus -L -s "$APP_CONNECT" <<'SQL'
+  sqlplus -L -s "$APP_CONNECT" <<SQL
 WHENEVER OSERROR EXIT FAILURE
 WHENEVER SQLERROR EXIT SQL.SQLCODE
 SET HEADING OFF FEEDBACK OFF VERIFY OFF PAGES 0 ECHO OFF
+@${APP_DIR}/db/data/bootstrap_context.sql
 SELECT CASE
          WHEN (SELECT COUNT(*) FROM brands) > 0
           AND (SELECT COUNT(*) FROM products) > 0

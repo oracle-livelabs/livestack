@@ -362,7 +362,7 @@ FETCH FIRST 5 ROWS ONLY;
             <JetGlyph iconClass="oj-fwk-icon-message-info" className="askdata-page-glyph tone-teal" /> Ask Your Data
           </h2>
           <p className="text-sm text-[var(--color-text-dim)] mt-1">
-            Ask questions in plain English. <span className="tone-plum">{activeRuntimeLabel}</span> generates and executes SQL on your live data.
+            Ask questions in natural language. <span className="tone-plum">{activeRuntimeLabel}</span> generates and executes SQL on your live data.
           </p>
         </div>
         <ImportanceButton onClick={() => setShowImportance(true)} />
@@ -442,7 +442,7 @@ FETCH FIRST 5 ROWS ONLY;
             <div className="space-y-4 py-6">
               <div className="text-center mb-4">
                 <JetGlyph iconClass="oj-fwk-icon-magnifier" className="askdata-empty-glyph tone-teal" />
-                <p className="text-sm text-[var(--color-text-dim)]">Ask questions about your data in plain English</p>
+                <p className="text-sm text-[var(--color-text-dim)]">Ask questions about your data in natural language</p>
                 <p className="text-[10px] text-[var(--color-text-dim)] mt-1">
                   {activeRuntimeLabel} generates and executes SQL against your database data, and the app displays the results
                 </p>
