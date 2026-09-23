@@ -10,6 +10,11 @@ Oracle AI Database helps address that challenge by keeping relational data, JSON
 
 Estimated Time: 5 minutes
 
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack%2FVideos%2FHigher%20Education%2FSeer%20Higher%20Education_Scene-1_with-CC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 ![Data Foundation page with restore action and loaded-data metrics highlighted](images/data-foundation.png)
 
 ### Objectives

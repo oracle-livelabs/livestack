@@ -10,6 +10,11 @@ Oracle AI Database helps address these challenges by keeping query execution gro
 
 Estimated Time: 10 minutes
 
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack%2FVideos%2FHigher%20Education%2FSeer%20Higher%20Education_Scene-8_with-CC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 ![Ask Seer Higher Ed Data workspace with modes and retention question highlighted](images/ask-seer-higher-ed-data.png)
 
 ### Objectives

@@ -10,6 +10,11 @@ Oracle AI Database helps address that challenge by keeping SQL tools, PL/SQL too
 
 Estimated Time: 10 minutes
 
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack%2FVideos%2FHigher%20Education%2FSeer%20Higher%20Education_Scene-9_with-CC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 ![Student Success Agent Console with agent chat and action log highlighted](images/student-success-agent-console.png)
 
 ### Objectives
@@ -37,6 +42,11 @@ Ask a trend-oriented question to show how the agent routes work to the right tea
 4. Explain that the system uses AI for reasoning but keeps data access, tool execution, and audit evidence inside the governed Oracle-backed application.
 
 You have completed the Seer Higher Education Student Success LiveStack Demo.
+
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack%2FVideos%2FHigher%20Education%2FSeer%20Higher%20Education_Conclusion_with-CC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
