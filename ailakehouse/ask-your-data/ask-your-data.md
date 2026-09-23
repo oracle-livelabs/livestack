@@ -10,6 +10,8 @@ PeakGear business users need answers about revenue, inventory, and demand withou
 
 The result is a business answer tied to database data, with the generated SQL available for review.
 
+[](video:https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/Videos/peakgear/ask-your-data.mp4:medium)
+
 Estimated Time: **10 minutes**
 
 ### Objectives

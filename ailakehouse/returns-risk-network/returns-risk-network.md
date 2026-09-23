@@ -8,7 +8,9 @@ A single return may look normal on its own. Related records can show a different
 
 **Returns Risk Network** presents those relationships in a graph. A graph shows records as nodes and their relationships as connections, making related cases easier to review.
 
-**Oracle Spatial and Graph** models these relationships, and graph queries rank cases for review.
+**Oracle Graph** models these relationships, and graph queries rank cases for review.
+
+[](video:https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/Videos/peakgear/graph.mp4:medium)
 
 Estimated Time: **10 minutes**
 

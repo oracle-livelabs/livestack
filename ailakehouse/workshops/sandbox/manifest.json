@@ -23,10 +23,6 @@
       "filename": "../../extended/extended.md"
     },
     {
-      "title": "Catalog: Add an Apache Iceberg Catalog Server",
-      "filename": "../../add-catalog-server/add-catalog-server.md"
-    },
-    {
       "title": "Catalog: Data Catalog and AI Table Explain",
       "filename": "../../data-catalog/data-catalog.md"
     },

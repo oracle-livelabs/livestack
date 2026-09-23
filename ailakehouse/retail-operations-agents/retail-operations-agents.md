@@ -10,6 +10,8 @@ Oracle AI Database Select AI Agent routes each question to the appropriate agent
 
 The result is a faster way to review demand changes and coordinate the next operational step.
 
+[](video:https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/Videos/peakgear/select-ai-agent.mp4:medium)
+
 Estimated Time: **10 minutes**
 
 ### Objectives

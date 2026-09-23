@@ -10,6 +10,8 @@ Retail demand can shift before planning reports catch up. Signals from social ac
 
 **Oracle AI Vector Search** supports this search with embeddings for products and demand signals.
 
+[](video:https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/Videos/peakgear/vector.mp4:medium)
+
 Estimated Time: **10 minutes**
 
 ### Objectives

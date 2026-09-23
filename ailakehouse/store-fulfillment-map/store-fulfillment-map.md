@@ -10,6 +10,8 @@ A product may be available somewhere in the network, but planners also need to k
 
 **Oracle Spatial** keeps location data with the operational data, while H3 density grids show regional patterns.
 
+[](video:https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/Videos/peakgear/spatial.mp4:medium)
+
 Estimated Time: **10 minutes**
 
 ### Objectives

@@ -10,6 +10,8 @@ PeakGear needs to know which products may see a demand surge, how revenue is tre
 
 The page presents **Oracle Machine Learning** output as demand risk, revenue forecasts, and inventory exposure.
 
+[](video:https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/Videos/peakgear/oml.mp4:medium)
+
 Estimated Time: **10 minutes**
 
 ### Objectives

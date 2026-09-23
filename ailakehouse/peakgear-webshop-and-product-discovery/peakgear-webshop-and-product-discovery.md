@@ -10,6 +10,8 @@ These features help shoppers find relevant products and give support teams order
 
 **Oracle AI Vector Search** uses in-database embeddings for text and image searches. **Ask PeakGear** uses the prepared product and order data to suggest a replacement.
 
+[](video:https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/Videos/peakgear/peakgear-webshop.mp4:medium)
+
 Estimated Time: **10 minutes**
 
 ### Objectives
