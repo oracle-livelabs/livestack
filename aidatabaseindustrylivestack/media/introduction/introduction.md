@@ -11,6 +11,11 @@ In the demo, Seer Media follows the **Midnight Harbor** launch weekend. Business
 
 Estimated Demo Time: **90 minutes**
 
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/Videos/Media/00_Media-and-entertainment_Demo_Intro_with-CC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 Each scene is designed to take between **5 and 10 minutes**.
 
 ![Seer Media LiveStack welcome page](images/welcome-and-demo-orientation.png)

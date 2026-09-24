@@ -10,7 +10,10 @@ Media teams struggle when rights, coverage, activation, and audience demand data
 
 Estimated Time: **10 minutes**
 
-![Rights, Capacity and Live Event Coverage page with spatial map and coverage table](images/rights-distribution-coverage.png)
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/Videos/Media/05_Media-and-entertainment_Demo_Scene-5_with-CC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### Objectives
 

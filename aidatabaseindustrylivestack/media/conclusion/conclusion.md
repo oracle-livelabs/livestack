@@ -6,6 +6,11 @@ This closing section connects the individual workflows into a single operating m
 
 Estimated Time: **10 minutes**
 
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/Videos/Media/10_Media-and-entertainment_Demo_Conclusion_with-CC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 ### Objectives
 
 In this section, you will connect each workflow to a business outcome and explain how the combined experience supports faster, more confident media decisions.
