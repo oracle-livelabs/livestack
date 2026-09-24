@@ -10,6 +10,11 @@ This is difficult to implement when AI agents operate as black boxes outside the
 
 Estimated Time: **10 minutes**
 
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/Videos/Manufacturing/Seer%20Manufacturg_Scene-9_with-CC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 ![Manufacturing Agent Console overview with agent examples and recent actions](images/scene-10-manufacturing-agent-console.png)
 
 ### Objectives
@@ -65,6 +70,11 @@ The governance point is that agent decisions should remain observable after the 
 The value of Oracle AI Database is that the agent workflow stays connected to governed operational data. The AI runtime can reason and orchestrate, while Oracle remains responsible for data access, SQL and PL/SQL execution, spatial and operational calculations, and durable audit records.
 
 You can move to the next scene.
+
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/Videos/Manufacturing/Seer%20Manufacturg_Conclusion_with-CC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team

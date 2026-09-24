@@ -10,6 +10,11 @@ Natural-language data access can create governance risk if the language model ge
 
 Estimated Time: **10 minutes**
 
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/Videos/Manufacturing/Seer%20Manufacturg_Scene-8_with-CC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 ![Ask Manufacturing Data workspace with modes, schema metadata, and example questions](images/scene-9-ask-manufacturing-data.png)
 
 ### Objectives

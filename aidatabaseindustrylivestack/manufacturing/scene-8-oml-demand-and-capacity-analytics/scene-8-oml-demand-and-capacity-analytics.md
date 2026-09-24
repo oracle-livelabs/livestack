@@ -10,6 +10,11 @@ This is difficult when predictive work is split across notebooks, exported CSV f
 
 Estimated Time: **12 minutes**
 
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/Videos/Manufacturing/Seer%20Manufacturg_Scene-7_with-CC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 ![OML Demand and Capacity Analytics page with KPI cards and five analytics tabs](images/scene-8-oml-demand-and-capacity-analytics.png)
 
 ### Objectives
