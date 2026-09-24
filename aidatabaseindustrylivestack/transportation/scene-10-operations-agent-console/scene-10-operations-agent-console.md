@@ -10,7 +10,10 @@ Oracle AI Database helps by keeping operational data, SQL tools, PL/SQL actions,
 
 Estimated Time: 10 minutes
 
-![Operations Agent Console overview with runtime profile, examples, and action summary highlighted](images/operations-agent-console-overview.png)
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack%2FVideos%2FTransportation%2FSeer_Transportation_Scene-9_with-CC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### Objectives
 
@@ -51,6 +54,11 @@ Use the agent output as the final scene in the logistics journey.
 2. Review the action type, routed team, confidence, status, and timestamp.
 3. Focus on the **chat_query** rows for surge-risk or freight-value questions.
 4. Explain that Oracle stores the action payload and execution status so the recommendation path remains reviewable.
+
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack%2FVideos%2FTransportation%2FSeer_Transportation_Conclusion_with-CC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
