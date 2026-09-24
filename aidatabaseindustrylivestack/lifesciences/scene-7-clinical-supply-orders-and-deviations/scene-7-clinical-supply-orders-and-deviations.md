@@ -12,7 +12,10 @@ The page helps the user decide whether to investigate the order, contact a site,
 
 Estimated Time: **10 minutes**
 
-![Clinical Supply Orders table with filter, order rows, and selected order area highlighted](images/orders-deviations.png)
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack%2FVideos%2FLife%20Sciences%2FClinical%20Supply%20Orders%20and%20Deviations.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### Objectives
 

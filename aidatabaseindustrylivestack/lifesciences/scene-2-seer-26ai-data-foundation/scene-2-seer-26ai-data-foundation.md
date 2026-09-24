@@ -10,7 +10,10 @@ On this page, the connected dataset is validated before the risk journey continu
 
 Estimated Time: **5 minutes**
 
-![Data Foundation page with restore action, record counts, and loaded data domains highlighted](images/data-foundation.png)
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack%2FVideos%2FLife%20Sciences%2FData%20Foundation.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### Objectives
 

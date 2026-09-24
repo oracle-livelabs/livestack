@@ -12,7 +12,10 @@ In this LiveStack demo, the app sends the business question and schema context t
 
 Estimated Time: **10 minutes**
 
-![Ask Seer Regulated Supply Data workspace with modes, schema context, and example questions highlighted](images/ask-data.png)
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack%2FVideos%2FLife%20Sciences%2FAsk%20Seer%20Regulated%20Supply%20Data.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### Objectives
 

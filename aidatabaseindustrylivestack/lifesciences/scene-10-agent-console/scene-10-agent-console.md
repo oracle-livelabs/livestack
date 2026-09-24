@@ -10,7 +10,10 @@ The page helps the user decide whether an AI-assisted recommendation is ready fo
 
 Estimated Time: **10 minutes**
 
-![Governed Agent Console workspace with runtime, example questions, and recent actions highlighted](images/agent-console.png)
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack%2FVideos%2FLife%20Sciences%2FGoverned%20Agent%20Console.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### Objectives
 
@@ -71,6 +74,11 @@ Perform the following set of steps to review the audit trail and confirm how the
 This is the compliance moment in the scene. Regulated organizations can use AI-assisted workflows only when the actions, tool paths, and decision evidence are reviewable. The takeaway is speed with control: the AI-assisted path helps the user move faster, while the evidence and audit activity remain visible.
 
 **Congratulations!** *You have completed the Seer Lifesciences Clinical Supply LiveStack Demo.*
+
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack%2FVideos%2FLife%20Sciences%2FConclusion.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
