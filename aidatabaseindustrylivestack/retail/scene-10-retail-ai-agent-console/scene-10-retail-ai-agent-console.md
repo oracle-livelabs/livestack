@@ -14,7 +14,10 @@ In this LiveStack Demo, the app orchestrates the agent workflow, Ollama provides
 
 Estimated Time: **10 minutes**
 
-![Retail AI Agent Console overview with runtime profile, examples, and recent actions highlighted](images/retail-ai-agent-console-overview.png)
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/Videos/Retail/Seer%20Sporting%20Goods_Retail_Scene-10_with-CC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### Objectives
 
@@ -83,6 +86,11 @@ This is the governance point of the scene: agent decisions should be observable 
 The value of Oracle AI Database is that the agent workflow stays connected to governed operational data. The AI runtime can reason and orchestrate, while Oracle remains responsible for data access, SQL and PL/SQL execution, spatial calculations, and durable audit records.
 
 *You can move to the next scene.*
+
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/Videos/Retail/Seer%20Sporting%20Goods_Retail_Conclusion_with-CC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team

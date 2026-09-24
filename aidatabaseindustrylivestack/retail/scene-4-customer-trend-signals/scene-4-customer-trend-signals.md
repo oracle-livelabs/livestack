@@ -12,7 +12,10 @@ Oracle Vector Search can embed a business query, compare it against product or p
 
 Estimated Time: **10 minutes**
 
-![Customer Trend Signals page with Semantic Product Discovery, Customer Demand Intelligence, and the Oracle Internals sidebar collapsed](images/customer-trend-signals.png)
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/Videos/Retail/Seer%20Sporting%20Goods_Retail_Scene-3_with-CC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### Objectives
 

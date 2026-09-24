@@ -11,9 +11,12 @@ In the demo, Seer Sporting Goods uses Oracle AI Database to connect inventory, p
 
 Estimated Demo Time: **90 minutes**
 
-Each scene is designed to take between **5 and 10 minutes**.
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/Videos/Retail/Seer%20Sporting%20Goods_Retail_Intro_with-CC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
-![Retail LiveStack welcome page](images/welcome-and-demo-orientation.png)
+Each scene is designed to take between **5 and 10 minutes**.
 
 ### Objectives
 

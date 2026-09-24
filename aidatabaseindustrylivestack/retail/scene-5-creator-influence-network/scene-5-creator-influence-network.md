@@ -10,7 +10,10 @@ Oracle AI Database helps address these challenges by modeling creator, brand, pr
 
 Estimated Time: **10 minutes**
 
-![Creator Influence Network page with the graph workspace highlighted](images/creator-influence-network.png)
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/Videos/Retail/Seer%20Sporting%20Goods_Retail_Scene-4_with-CC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### Objectives
 

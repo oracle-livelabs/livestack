@@ -10,7 +10,10 @@ Oracle AI Database helps address these challenges by keeping query execution gro
 
 Estimated Time: **10 minutes**
 
-![Ask Retail Data workspace with modes and example question highlighted](images/ask-retail-data-overview.png)
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/Videos/Retail/Seer%20Sporting%20Goods_Retail_Scene-9_with-CC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### Objectives
 
