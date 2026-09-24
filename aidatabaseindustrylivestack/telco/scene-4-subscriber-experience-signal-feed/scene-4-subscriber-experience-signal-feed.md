@@ -12,7 +12,10 @@ In this scene, Oracle AI Database can create embeddings inside the database, so 
 
 Estimated Time: **10 minutes**
 
-![Subscriber Experience Signal Feed with signal search, filters, and signal cards](images/subscriber-experience-signal-feed.png)
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/Videos/Telecommunication/Seer%20Telecommunication_Scene-3_with-CC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### Objectives
 

@@ -10,7 +10,10 @@ Oracle AI Database helps address these challenges by keeping the source data, SQ
 
 Estimated Time: **10 minutes**
 
-![AI-Assisted Service Assurance console with runtime profile, examples, and recent actions](images/ai-assisted-service-assurance.png)
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/Videos/Telecommunication/Seer%20Telecommunication_Scene-9_with-CC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### Objectives
 
@@ -79,6 +82,11 @@ The business value is that teams can make the decision from connected, governed 
 **Congratulations! You have completed the LiveStack demo!** 
 
 The walkthrough showed how connected telecom data can support service-impact detection, subscriber signal triage, impact investigation, field capacity planning, service-order visibility, predictive assurance, governed data access, and AI-assisted action.
+
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/Videos/Telecommunication/Seer%20Telecommunication_Conclusion_with-CC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team

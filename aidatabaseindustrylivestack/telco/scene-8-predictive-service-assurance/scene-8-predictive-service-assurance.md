@@ -10,15 +10,16 @@ Oracle AI Database helps address these challenges by keeping machine learning cl
 
 Estimated Time: **10 minutes**
 
-![Predictive Service Assurance summary cards and mode tabs](images/predictive-service-assurance.png)
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/Videos/Telecommunication/Seer%20Telecommunication_Scene-7_with-CC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### Objectives
 
 In this scene, you will learn what telecom decision the page supports, what evidence the user should inspect, and what action the team may take next.
 
 ## Task 1: Review the predictive assurance workspace
-
-![Predictive Service Assurance summary cards and mode tabs](images/predictive-summary-and-tabs.png)
 
 Review the predictive assurance workspace as a set of decision tools for service-impact risk, retention, revenue forecasting, service behavior grouping, and network access risk.
 

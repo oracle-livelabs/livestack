@@ -12,7 +12,10 @@ The user can inspect generated SQL before execution, run the SQL to return rows,
 
 Estimated Time: **10 minutes**
 
-![Ask Telecom Operations Data workspace with modes and example questions](images/ask-telecom-operations-data.png)
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/Videos/Telecommunication/Seer%20Telecommunication_Scene-8_with-CC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### Objectives
 
