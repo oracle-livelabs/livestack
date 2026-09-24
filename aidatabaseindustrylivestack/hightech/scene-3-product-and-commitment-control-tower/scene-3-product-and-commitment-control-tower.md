@@ -8,6 +8,11 @@ Instead of treating every signal as a separate alert, the control tower combines
 
 Estimated Time: **10 minutes**
 
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack%2FVideos%2FHigh-Tech%2FSeer%20High%20Tech_Scene-2_With-CC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 ![Product and Commitment Intelligence Control Tower showing launch-constraint guidance, KPIs, and demand charts](images/scene-3-product-and-commitment-control-tower.png)
 
 ### Objectives

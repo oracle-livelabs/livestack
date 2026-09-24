@@ -8,6 +8,11 @@ The **AI Agent Console** shows how AI assistance can support **High Tech** opera
 
 Estimated Time: **10 minutes**
 
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack%2FVideos%2FHigh-Tech%2FSeer%20High%20Tech_Scene-9_With-CC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 ![AI Agent Console overview with example questions and recent actions](images/scene-10-ai-agent-console.png)
 
 ### Objectives
@@ -64,6 +69,11 @@ The governance point is that agent decisions should remain observable after the 
 This closes the story: Seer Tech detected launch pressure, explained the signals, traced lifecycle dependencies, identified supply options, inspected customer promises, predicted the next constraint, interrogated the evidence, and recorded an auditable agent-assisted response.
 
 *You can move to the next scene.*
+
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack%2FVideos%2FHigh-Tech%2FSeer%20High%20Tech_Conclusion_With-CC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
