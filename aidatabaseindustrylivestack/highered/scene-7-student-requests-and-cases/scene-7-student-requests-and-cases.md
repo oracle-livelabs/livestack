@@ -15,8 +15,6 @@ Estimated Time: 10 minutes
   Your browser does not support the video tag.
 </video>
 
-![Student Requests and Cases table with request controls highlighted](images/student-requests-cases.png)
-
 ### Objectives
 
 In this scene, you will learn how to move from institutional metrics to a specific student request and inspect both relational and JSON views.

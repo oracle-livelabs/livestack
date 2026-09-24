@@ -15,8 +15,6 @@ Estimated Time: **10 minutes**
   Your browser does not support the video tag.
 </video>
 
-![Manufacturing Agent Console overview with agent examples and recent actions](images/scene-10-manufacturing-agent-console.png)
-
 ### Objectives
 
 In this scene, you will learn what manufacturing decision the agent console supports, what evidence the user should inspect, and what action the team may take next.

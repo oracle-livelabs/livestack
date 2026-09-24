@@ -15,8 +15,6 @@ Estimated Time: 10 minutes
   Your browser does not support the video tag.
 </video>
 
-![Predictive Student Success Analytics workspace with model actions highlighted](images/predictive-student-success-analytics.png)
-
 ### Objectives
 
 In this scene, you will learn how in-database machine learning helps identify demand pressure, student engagement patterns, and service risk.

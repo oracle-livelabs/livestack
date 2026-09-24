@@ -17,8 +17,6 @@ Estimated Time: 10 minutes
   Your browser does not support the video tag.
 </video>
 
-![Student Success Command Center dashboard with KPI cards highlighted](images/student-success-command-center.png)
-
 ### Objectives
 
 In this scene, you will learn what institutional decision the page supports, what evidence the user should inspect, and what action the business may take next.

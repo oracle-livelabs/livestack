@@ -10,7 +10,10 @@ Semantic search is difficult when bulletins, sensor notes, asset descriptions, p
 
 Estimated Time: **10 minutes**
 
-![Reliability, Production & Compliance Signals page with semantic search controls and signal feed](images/scene-04-outage-signals.png)
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack%2FVideos%2FUtilities%2F03_Seer-Utility_Demo_scene-3_with-CC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### Objectives
 

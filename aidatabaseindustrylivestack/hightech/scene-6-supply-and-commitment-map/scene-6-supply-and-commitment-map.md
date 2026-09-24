@@ -13,8 +13,6 @@ Estimated Time: **10 minutes**
   Your browser does not support the video tag.
 </video>
 
-![Supply and Commitment Control Tower with Inventory Load guidance, spatial map, and selected site](images/scene-6-supply-and-commitment-map.png)
-
 ### Objectives
 
 In this scene, you will learn how Inventory Load is calculated, how spatial layers support allocation, how site-level actions protect commitments, and how Immediate Shortages differ from watchlist monitoring.

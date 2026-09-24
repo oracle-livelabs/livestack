@@ -17,8 +17,6 @@ Estimated Demo Time: 90 minutes
 
 Each scene is designed to take between 5 and 10 minutes.
 
-![Higher Education LiveStack welcome page](images/welcome-and-demo-orientation.png)
-
 ### Objectives
 
 In this LiveStack demo, you will see how a college, university, community college, public system, private institution, online learning provider, or student success team can use connected data and AI-assisted workflows to improve enrollment, retention, advising, student support, service access, and institutional performance.

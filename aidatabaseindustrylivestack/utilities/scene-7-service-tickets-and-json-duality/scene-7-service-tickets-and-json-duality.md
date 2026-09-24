@@ -8,7 +8,10 @@
 
 Estimated Time: **10 minutes**
 
-![Utility Service Requests page with VPD banner, status filter, and request table](images/scene-07-service-tickets.png)
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack%2FVideos%2FUtilities%2F06_Seer-Utility_Demo_scene-6_with-CC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### Objectives
 

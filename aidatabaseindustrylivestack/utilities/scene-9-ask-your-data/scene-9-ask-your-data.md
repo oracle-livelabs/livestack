@@ -10,7 +10,10 @@ Natural-language data access can create governance risk if the language model ge
 
 Estimated Time: **10 minutes**
 
-![Ask Energy & Utilities Data workspace with modes, schema metadata, and example questions](images/scene-09-ask-data.png)
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack%2FVideos%2FUtilities%2F08_Seer-Utility_Demo_scene-8_with-CC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### Objectives
 

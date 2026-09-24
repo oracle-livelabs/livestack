@@ -15,8 +15,6 @@ Estimated Time: **10 minutes**
   Your browser does not support the video tag.
 </video>
 
-![Supplier and Production-Risk Graph page with graph depth controls and manufacturing nodes](images/scene-5-supplier-and-signal-network-graph.png)
-
 ### Objectives
 
 In this scene, you will learn what manufacturing relationship decision the graph supports, what evidence the user should inspect, and what action the team may take next.

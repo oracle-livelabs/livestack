@@ -15,8 +15,6 @@ Estimated Time: **8 minutes**
   Your browser does not support the video tag.
 </video>
 
-![Data Foundation page with restore controls and live High Tech record counts](images/scene-2-seer-tech-26ai-data-foundation.png)
-
 ### Objectives
 
 In this scene, you will confirm that the demo has a governed baseline for the product, manufacturing, supply, customer commitment, lifecycle, quality, warranty, connected-product, service, vector search, graph, analytics, **Ask Data**, and agent workflows that follow.

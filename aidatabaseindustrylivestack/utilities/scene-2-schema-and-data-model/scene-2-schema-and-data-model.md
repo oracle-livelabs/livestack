@@ -10,7 +10,10 @@ This page makes clear that the runbook is a connected end-to-end workflow, not a
 
 Estimated Time: **5 minutes**
 
-![Energy and Utilities Data Foundation page with dataset restore controls and cross-sector data domains](images/scene-02-schema-data.png)
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack%2FVideos%2FUtilities%2F01_Seer-Utility_Demo_scene-1_with-CC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### Objectives
 

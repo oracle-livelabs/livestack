@@ -13,8 +13,6 @@ Estimated Time: **10 minutes**
   Your browser does not support the video tag.
 </video>
 
-![Product Signal Graph with risk guidance, graph-depth controls, and lifecycle network](images/scene-5-product-signal-graph.png)
-
 ### Objectives
 
 In this scene, you will learn how risk scores prioritize lifecycle paths, why graph hops matter, how the Edge Legend explains relationships, and how a business user can run a focused lifecycle query without interpreting raw internal identifiers.

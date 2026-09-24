@@ -21,8 +21,6 @@ Estimated Workshop Time: **90 minutes**
 
 Each scene is designed to take between **5 and 10 minutes**.
 
-![Seer Tech High Tech LiveStack welcome page](images/welcome-and-demo-orientation.png)
-
 ### Objectives
 
 In this **LiveStack** demo, you will learn how **Oracle AI Database** supports product-launch resilience across component availability, manufacturing coordination, product lifecycle governance, customer commitment management, quality and warranty intelligence, predictive analytics, governed data questions, and AI-assisted operating action.

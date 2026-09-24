@@ -15,8 +15,6 @@ Estimated Time: 5 minutes
   Your browser does not support the video tag.
 </video>
 
-![Data Foundation page with restore action and loaded-data metrics highlighted](images/data-foundation.png)
-
 ### Objectives
 
 In this scene, you will confirm that the demo has valid data loaded and explain how the data foundation supports the rest of the student-success journey.

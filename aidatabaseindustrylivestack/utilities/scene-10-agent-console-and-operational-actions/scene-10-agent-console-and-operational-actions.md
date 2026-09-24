@@ -8,7 +8,10 @@
 
 Estimated Time: **10 minutes**
 
-![Energy & Utilities AI Agent Console page showing runtime, specialist examples, chat, and action audit controls](images/scene-10-agent-console.png)
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack%2FVideos%2FUtilities%2F09_Seer-Utility_Demo_scene-9_with-CC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### Objectives
 
@@ -64,6 +67,11 @@ The governance point is that agent decisions should remain observable after the 
 The business value is that teams can make the decision from connected, governed data. **Oracle AI Database** provides the shared foundation that keeps operational data, analytics, graph evidence, SQL tools, PL/SQL actions, and AI workflows aligned.
 
 *You can move to the next scene.*
+
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack%2FVideos%2FUtilities%2F10_Seer-Utility_Demo_conclusion_with-CC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team

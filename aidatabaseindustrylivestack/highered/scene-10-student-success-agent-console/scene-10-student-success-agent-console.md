@@ -15,8 +15,6 @@ Estimated Time: 10 minutes
   Your browser does not support the video tag.
 </video>
 
-![Student Success Agent Console with agent chat and action log highlighted](images/student-success-agent-console.png)
-
 ### Objectives
 
 In this scene, you will learn how agent-assisted workflows can help student success teams analyze signals, service capacity, and request impact while keeping actions traceable.

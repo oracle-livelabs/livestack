@@ -15,8 +15,6 @@ Estimated Time: **10 minutes**
   Your browser does not support the video tag.
 </video>
 
-![Ask Manufacturing Data workspace with modes, schema metadata, and example questions](images/scene-9-ask-manufacturing-data.png)
-
 ### Objectives
 
 In this scene, you will learn what manufacturing decision natural-language analytics supports, what evidence the user should inspect, and what action the team may take next.

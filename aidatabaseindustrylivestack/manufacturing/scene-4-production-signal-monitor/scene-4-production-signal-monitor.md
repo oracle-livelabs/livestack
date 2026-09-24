@@ -15,8 +15,6 @@ Estimated Time: **10 minutes**
   Your browser does not support the video tag.
 </video>
 
-![Production Signal Monitor page with semantic search controls and signal feed](images/scene-4-production-signal-monitor.png)
-
 ### Objectives
 
 In this scene, you will learn what manufacturing decision semantic search supports, what evidence the user should inspect, and what action the team may take next.

@@ -8,7 +8,10 @@ Energy and Utilities teams struggle when the information needed for one decision
 
 Estimated Time: **10 minutes**
 
-![Operational Event Graph page with graph depth controls and cross-sector event nodes](images/scene-05-field-crew-graph.png)
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack%2FVideos%2FUtilities%2F04_Seer-Utility_Demo_scene-4_with-CC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### Objectives
 

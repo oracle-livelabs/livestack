@@ -17,8 +17,6 @@ Estimated Time: **10 minutes**
   Your browser does not support the video tag.
 </video>
 
-![Enterprise Buyer Signal Monitor with product-signal search and signal summary](images/scene-4-enterprise-buyer-signal-monitor.png)
-
 ### Objectives
 
 In this scene, you will learn how to interpret product-signal search results, distinguish unit price from business impact, understand match percentages, and carry the strongest evidence into the product lifecycle graph.

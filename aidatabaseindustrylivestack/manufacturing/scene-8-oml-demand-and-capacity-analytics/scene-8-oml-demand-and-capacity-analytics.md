@@ -15,8 +15,6 @@ Estimated Time: **12 minutes**
   Your browser does not support the video tag.
 </video>
 
-![OML Demand and Capacity Analytics page with KPI cards and five analytics tabs](images/scene-8-oml-demand-and-capacity-analytics.png)
-
 ### Objectives
 
 In this scene, you will learn what planning decision the analytics workspace supports, what evidence the user should inspect, and what action the team may take next.

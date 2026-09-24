@@ -19,8 +19,6 @@ Estimated Demo Time: **90 minutes**
 
 Each scene is designed to take between **5 and 10 minutes**.
 
-![Manufacturing LiveStack welcome page](images/welcome-and-demo-orientation.png)
-
 ### Objectives
 
 In this LiveStack demo, you will see how connected manufacturing data helps teams identify production pressure, trace supplier and quality risk, evaluate plant capacity, analyze work orders, forecast demand and capacity constraints, and apply AI-assisted workflows with stronger governance.

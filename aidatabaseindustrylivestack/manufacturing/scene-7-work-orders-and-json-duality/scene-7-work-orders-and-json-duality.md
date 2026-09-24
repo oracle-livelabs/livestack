@@ -15,8 +15,6 @@ Estimated Time: **10 minutes**
   Your browser does not support the video tag.
 </video>
 
-![Work Orders page with VPD banner, status filter, and work-order table](images/scene-7-work-orders-and-json-duality.png)
-
 ### Objectives
 
 In this scene, you will learn what operational decision the Work Orders page supports, what evidence the user should inspect, and what action the team may take next.

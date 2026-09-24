@@ -13,8 +13,6 @@ Estimated Time: **10 minutes**
   Your browser does not support the video tag.
 </video>
 
-![Product and Commitment Intelligence Control Tower showing launch-constraint guidance, KPIs, and demand charts](images/scene-3-product-and-commitment-control-tower.png)
-
 ### Objectives
 
 In this scene, you will learn how Seer Tech detects a launch constraint, validates the demand trend over different time horizons, and identifies the products with the greatest constraint exposure.

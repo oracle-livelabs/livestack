@@ -13,8 +13,6 @@ Estimated Time: **10 minutes**
   Your browser does not support the video tag.
 </video>
 
-![Customer Commitments workspace with completion dates and cancellation context](images/scene-7-customer-commitments.png)
-
 ### Objectives
 
 In this scene, you will learn how target and actual completion dates improve commitment triage, how cancellation reasons add business context, and how relational, JSON, and spatial views remain connected.

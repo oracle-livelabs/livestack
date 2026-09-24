@@ -15,8 +15,6 @@ Estimated Time: **10 minutes**
   Your browser does not support the video tag.
 </video>
 
-![Operations Command Center with KPI cards, signal velocity, order value, and high-demand parts](images/scene-3-operations-command-center.png)
-
 ### Objectives
 
 In this scene, you will learn what manufacturing decision the command center supports, what evidence the user should inspect, and what action the team may take next.

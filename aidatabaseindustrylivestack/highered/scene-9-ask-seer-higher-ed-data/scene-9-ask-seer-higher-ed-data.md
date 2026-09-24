@@ -15,8 +15,6 @@ Estimated Time: 10 minutes
   Your browser does not support the video tag.
 </video>
 
-![Ask Seer Higher Ed Data workspace with modes and retention question highlighted](images/ask-seer-higher-ed-data.png)
-
 ### Objectives
 
 In this scene, you will learn how natural-language analytics can support student success while keeping the SQL path visible and governed.

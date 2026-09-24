@@ -13,8 +13,6 @@ Estimated Time: **5 minutes**
   Your browser does not support the video tag.
 </video>
 
-![Manufacturing Data Foundation page with dataset restore controls and loaded data domains](images/scene-2-manufacturing-data-foundation.png)
-
 ### Objectives
 
 In this scene, you will learn what data powers the demo, what evidence confirms the environment is ready, and how the connected data foundation supports the later manufacturing workflows.

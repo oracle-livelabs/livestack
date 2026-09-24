@@ -15,8 +15,6 @@ Estimated Time: 10 minutes
   Your browser does not support the video tag.
 </video>
 
-![Campus Service Coverage map with key spatial layers highlighted](images/campus-service-coverage.png)
-
 ### Objectives
 
 In this scene, you will learn how spatial data helps teams evaluate student access, service capacity, and regional demand pressure.

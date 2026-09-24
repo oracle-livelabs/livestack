@@ -15,8 +15,6 @@ Estimated Time: 10 minutes
   Your browser does not support the video tag.
 </video>
 
-![Student Intent and Support Signals page with vector search and filters highlighted](images/student-intent-support-signals.png)
-
 ### Objectives
 
 In this scene, you will learn how semantic search and signal monitoring help teams detect student needs and connect them to student services.

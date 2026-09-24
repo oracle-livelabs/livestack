@@ -15,8 +15,6 @@ Estimated Time: **10 minutes**
   Your browser does not support the video tag.
 </video>
 
-![Plant Capacity and Routing Map with spatial layers, capacity cards, and plant table](images/scene-6-plant-capacity-and-routing-map.png)
-
 ### Objectives
 
 In this scene, you will learn what location-aware manufacturing decision the map supports, what evidence the user should inspect, and what action the team may take next.

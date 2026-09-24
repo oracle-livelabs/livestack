@@ -10,9 +10,12 @@ The runbook is a story-led walkthrough, not a feature checklist. Each scene show
 
 Estimated Workshop Time: **90 minutes**
 
-Each scene is designed to take between **5 and 10 minutes**.
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack%2FVideos%2FUtilities%2F00_Seer-Utility_Demo_Intro_with-CC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
-![Energy and Utilities LiveStack welcome page with the cross-sector resilience story](images/scene-01-welcome.png)
+Each scene is designed to take between **5 and 10 minutes**.
 
 ### Objectives
 

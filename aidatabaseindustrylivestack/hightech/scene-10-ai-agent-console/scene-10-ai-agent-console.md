@@ -13,8 +13,6 @@ Estimated Time: **10 minutes**
   Your browser does not support the video tag.
 </video>
 
-![AI Agent Console overview with example questions and recent actions](images/scene-10-ai-agent-console.png)
-
 ### Objectives
 
 In this scene, you will learn how specialist agents turn product, capacity, signal, quality, and commitment findings into auditable operating actions.

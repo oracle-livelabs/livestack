@@ -13,8 +13,6 @@ Estimated Time: **12 minutes**
   Your browser does not support the video tag.
 </video>
 
-![Predictive Product and Commitment Analytics with Prediction Readiness and current model results](images/scene-8-oml-product-intelligence.png)
-
 ### Objectives
 
 In this scene, you will learn how **Virality**, **Demand Uplift**,**Predicted Orders**, value opportunity, and confidence are interpreted; how forecasts lead product details; and how related predictive views support customer, signal, and capacity decisions.

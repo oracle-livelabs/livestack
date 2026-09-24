@@ -15,8 +15,6 @@ Estimated Time: **10 minutes**
   Your browser does not support the video tag.
 </video>
 
-![Ask Seer Tech Data workspace with modes, schema metadata, and example questions](images/scene-9-ask-seer-tech-data.png)
-
 ### Objectives
 
 In this scene, you will learn how governed natural-language SQL can support **High Tech** operating questions while keeping the query path visible.

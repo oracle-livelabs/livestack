@@ -15,8 +15,6 @@ Estimated Time: 10 minutes
   Your browser does not support the video tag.
 </video>
 
-![Advisor, Program, and Support Network graph with advocate list highlighted](images/advisor-program-support-network.png)
-
 ### Objectives
 
 In this scene, you will learn how graph analysis helps identify support paths, cross-channel advocates, and program relationships that matter to student success.
