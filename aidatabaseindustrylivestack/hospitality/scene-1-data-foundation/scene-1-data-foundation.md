@@ -6,6 +6,11 @@ Sofia wants everyone working from the same numbers. Dev restores the synthetic h
 
 Estimated time: 8 minutes.
 
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack%2FVideos%2FHospitality%2FScene%201%20-%20Data%20Foundation.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 ![Dev restores the hospitality dataset while Sofia verifies the shared Oracle AI Database 26ai foundation](images/story-data-foundation.png)
 
 ![Data Foundation with Hospitality LiveStack dataset](images/data-foundation.png)

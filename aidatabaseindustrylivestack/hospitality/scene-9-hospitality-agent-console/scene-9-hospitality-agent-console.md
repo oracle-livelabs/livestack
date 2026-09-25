@@ -6,6 +6,11 @@ The answer points to properties that need guest care, housekeeping, and engineer
 
 Estimated time: 8 minutes.
 
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack%2FVideos%2FHospitality%2FScene%209%20-%20Hospitality%20Agent%20Console.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 ![Sofia, Amara, and Theo coordinate specialist actions and verify the retained audit record](images/story-agent-coordination.png)
 
 ### Objectives

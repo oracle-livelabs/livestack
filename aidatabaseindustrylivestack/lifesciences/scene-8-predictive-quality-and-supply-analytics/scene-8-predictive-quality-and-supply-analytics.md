@@ -10,7 +10,10 @@ The page helps users decide where to focus planning, replenishment, site support
 
 Estimated Time: **10 minutes**
 
-![Predictive Quality and Supply Analytics workspace with summary cards, tabs, and release risk results highlighted](images/predictive-analytics.png)
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack%2FVideos%2FLife%20Sciences%2FPredictive%20Quality%20and%20Supply%20Analytics.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### Objectives
 

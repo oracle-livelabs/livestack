@@ -6,6 +6,11 @@ Marcus knows what has happened. Now he and Dev look ahead. They compare occupanc
 
 Estimated time: 10 minutes.
 
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack%2FVideos%2FHospitality%2FScene%207%20-%20Occupancy%20Revenue%20and%20Labor%20Analytics.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 ![Marcus and Dev compare a hospitality forecast with the facts that support it](images/story-oml-analytics.png)
 
 ### Objectives

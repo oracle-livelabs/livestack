@@ -12,7 +12,10 @@ The **Labeling Change Impact Review** row provides a clear opening example. A re
 
 Estimated Time: **10 minutes**
 
-![Quality and Supply Operations Dashboard with KPI cards, charts, and products under watch highlighted](images/operations-dashboard.png)
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack%2FVideos%2FLife%20Sciences%2FQuality%20and%20Supply%20Operations%20Dashboard.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### Objectives
 
