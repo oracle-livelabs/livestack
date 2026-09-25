@@ -6,6 +6,11 @@ One guest issue touches several records. Amara and Theo use the graph to follow 
 
 Estimated time: 8 minutes.
 
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack%2FVideos%2FHospitality%2FScene%204%20-%20Guest%20Experience%20Network.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 ![Amara and Theo trace a guest issue through reservations, rooms, service work, and the property](images/story-guest-network.png)
 
 ### Objectives

@@ -6,6 +6,11 @@ Before the owner close, Elena checks one exception against the rule, reservation
 
 Estimated time: 10 minutes.
 
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack%2FVideos%2FHospitality%2FScene%2010%20-%20Owner%20Financial%20Validation%20Workbench.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 ![Elena traces an owner-close exception from its rule and source records to a retained decision](images/story-owner-validation.png)
 
 ### Objectives
@@ -41,6 +46,11 @@ All owner close records in this scene are synthetic demo data and do not describ
 3. Confirm that **Action history** records the decision for the next close review.
 
 **Next:** Return to the runbook introduction or close the demo after completing the owner review.
+
+<video controls width="100%">
+  <source src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack%2FVideos%2FHospitality%2FConclusion.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## Credits and Build Notes
 
