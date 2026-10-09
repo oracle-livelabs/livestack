@@ -1,6 +1,7 @@
 [Unit]
 Description=Configure Data Transforms ADB and pg-iceberg connections
-After=network-online.target adb-wallet.service adb-load.service user-podman.service
+After=network-online.target adb-wallet.service adb-load.service user-podman.service iceberg-seed.service
+Requires=iceberg-seed.service
 Wants=network-online.target user-podman.service
 StartLimitIntervalSec=0
 

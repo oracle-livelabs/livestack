@@ -188,10 +188,20 @@ END;
 EXIT SUCCESS
 SQL
 
-  if ! sql -L /nolog @"${WORK_DIR}/register-storage.sql" > "${WORK_DIR}/register-storage.out" 2>&1; then
-    sed -E 's/(CLIENT_SECRET|p_secret_key|password)[[:space:]]*=>[[:space:]]*[^,)]*/\1 => [REDACTED]/Ig' "${WORK_DIR}/register-storage.out" >&2
-    fail "AI Data Catalog storage registration failed"
-  fi
+  # Fresh OCI credentials may not be usable immediately during first boot.
+  # Retry this prerequisite once; never mark failed registration as complete.
+  for storage_attempt in 1 2; do
+    log "Registering AI Data Catalog storage (attempt ${storage_attempt}/2)."
+    if sql -L /nolog @"${WORK_DIR}/register-storage.sql" > "${WORK_DIR}/register-storage.out" 2>&1; then
+      break
+    fi
+    if [[ "${storage_attempt}" == 2 ]]; then
+      sed -E 's/(CLIENT_SECRET|p_secret_key|password)[[:space:]]*=>[[:space:]]*[^,)]*/\1 => [REDACTED]/Ig' "${WORK_DIR}/register-storage.out" >&2
+      fail "AI Data Catalog storage registration failed after 2 attempts"
+    fi
+    log "Storage registration failed; waiting 60 seconds before one final attempt."
+    sleep 60
+  done
   cat "${WORK_DIR}/register-storage.out"
   printf 'registered_at=%s\nwarehouse=%s\n' "$(date -Is)" "${AI_DATA_CATALOG_WAREHOUSE}" > "${STORAGE_MARKER_FILE}"
   chmod 600 "${STORAGE_MARKER_FILE}"

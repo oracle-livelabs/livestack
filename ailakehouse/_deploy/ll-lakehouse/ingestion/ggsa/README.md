@@ -303,5 +303,13 @@ If OSA seems up but the UI still does not work correctly, check:
 
 ### Validation history
 
+The image includes an OSA WebSocket compatibility agent. It finds the `Bearer`
+login cookie anywhere in the request cookie header and retains OSA's token
+validation. Preview origins are restricted to the configured public hostname
+and the VM's discovered public IPv4 address, with the configured OSA protocol
+and port. If public-IP discovery fails, hostname access remains available.
+The agent is loaded by OSA startup and does not change Spark or Kafka JVM options.
+Rebuild the GGSA image to include this patch in new deployments.
+
 - The image has been exercised on Apple Silicon with Rancher Desktop using an amd64 build.
 - The helper scripts in this repository are aimed at Linux environments with a Docker-compatible CLI.

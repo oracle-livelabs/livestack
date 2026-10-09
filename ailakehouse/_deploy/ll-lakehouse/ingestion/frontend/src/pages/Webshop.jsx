@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import {
   Bot,
   Image as ImageIcon,
@@ -144,6 +144,7 @@ export default function Webshop() {
   const [askLoading, setAskLoading] = useState(false);
   const [askError, setAskError] = useState('');
   const [showSearchImportance, setShowSearchImportance] = useState(false);
+  const skipNextQuerySearch = useRef(false);
 
   const cartTotal = useMemo(
     () => cart.reduce((sum, item) => sum + Number(item.unitPrice || 0) * item.quantity, 0),
@@ -190,6 +191,11 @@ export default function Webshop() {
   }, [imagePreviewUrl]);
 
   useEffect(() => {
+    if (skipNextQuerySearch.current) {
+      skipNextQuerySearch.current = false;
+      return undefined;
+    }
+
     let isMounted = true;
     async function runSearch() {
       setLoading(true);
@@ -261,7 +267,10 @@ export default function Webshop() {
       const searchableImage = await convertPngToJpegFile(imageFile, 'shopper-image');
       const data = await api.webshop.imageSearch(searchableImage, 16);
       setResults(data.results || []);
-      setQuery('');
+      if (query) {
+        skipNextQuerySearch.current = true;
+        setQuery('');
+      }
       setQueryInput('');
       setImageSearch(data.upload ? { ...data.upload, lakehouse: data.lakehouse || null, warning: data.warning || null } : null);
       setStatus((current) => ({

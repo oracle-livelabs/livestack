@@ -51,10 +51,6 @@
       "filename": "../../scene-10-owner-financial-validation-workbench/scene-10-owner-financial-validation-workbench.md"
     },
     {
-      "title": "Take It Home",
-      "filename": "../../take-it-home/download-livestack-take-it-home.md"
-    },
-    {
       "title": "Take It Home OCI: Deploy with Resource Manager",
       "filename": "../../deploy-livestack-terraform/deploy-livestack-terraform.md"
     },

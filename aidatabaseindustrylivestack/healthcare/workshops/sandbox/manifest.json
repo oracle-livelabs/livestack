@@ -55,10 +55,6 @@
       "filename": "../../scene-11-bring-your-own-healthcare-data/scene-11-bring-your-own-healthcare-data.md"
     },
     {
-      "title": "Take it home",
-      "filename": "../../download-livestack-take-it-home/download-livestack-take-it-home.md"
-    },
-    {
       "title": "Take It Home (OCI): Deploy with Resource Manager",
       "filename": "../../deploy-livestack-terraform/deploy-livestack-terraform.md"
     },

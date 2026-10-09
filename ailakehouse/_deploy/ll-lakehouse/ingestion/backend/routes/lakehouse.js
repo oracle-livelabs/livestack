@@ -182,6 +182,12 @@ const LAKEHOUSE_WAREHOUSE_GOLD_DATA_INVENTORY = readWarehouseGoldDataInventory(
 const LAKEHOUSE_WAREHOUSE_GOLD_DATA_TABLES = LAKEHOUSE_WAREHOUSE_GOLD_DATA_INVENTORY.tables;
 const LAKEHOUSE_WAREHOUSE_STALE_GOLD_DATA_TABLE_NAMES = LAKEHOUSE_WAREHOUSE_GOLD_DATA_INVENTORY.staleTableNames;
 const LAKEHOUSE_WAREHOUSE_GOLD_DATA_TABLE_NAMES = LAKEHOUSE_WAREHOUSE_GOLD_DATA_TABLES.map(({ tableName }) => tableName);
+// Keep optional warehouse exports available without making them a readiness prerequisite.
+const DEMO_WAREHOUSE_TABLE_NAMES = [
+  'DIM_PRODUCT', 'CUSTOMER_ORDER_STATUS', 'PRODUCT_MANUALS_SOURCE', 'PRODUCT_VECTOR_STORE',
+];
+const DEMO_WAREHOUSE_TABLES = LAKEHOUSE_WAREHOUSE_GOLD_DATA_TABLES
+  .filter(({ tableName }) => DEMO_WAREHOUSE_TABLE_NAMES.includes(tableName));
 const LAKEHOUSE_APP_GOLD_DATA_TABLE_NAMES = [
   'BRANDS',
   'PRODUCTS',
@@ -208,7 +214,7 @@ const LAKEHOUSE_APP_GOLD_DATA_TABLE_NAMES = [
   'RETURNS_CASE_ENTITIES',
 ];
 const LAKEHOUSE_GOLD_DATA_REQUIRED_TABLES = [
-  ...LAKEHOUSE_WAREHOUSE_GOLD_DATA_TABLE_NAMES,
+  ...DEMO_WAREHOUSE_TABLE_NAMES,
   ...LAKEHOUSE_APP_GOLD_DATA_TABLE_NAMES,
 ];
 const LAKEHOUSE_GOLD_DATA_EXPECTED_ROWS = new Map([
@@ -645,7 +651,13 @@ function prepareGoldSchemaStatements(statements) {
 
   for (const statement of statements) {
     const normalized = normalizeGoldSchemaStatement(statement);
-    if (isGoldSchemaDdl(normalized)) {
+    const target = normalized.match(/^CREATE\s+TABLE\s+"?([A-Z0-9_$#]+)"?/i)
+      || normalized.match(/^CREATE\s+(?:UNIQUE\s+)?INDEX\s+\S+\s+ON\s+"?([A-Z0-9_$#]+)"?/i);
+    // CSV-backed tables use the export manifest's lossless text schema.
+    // Do not first create the older typed draft of those same tables.
+    if (target && LAKEHOUSE_WAREHOUSE_GOLD_DATA_TABLE_NAMES.includes(target[1].toUpperCase())) {
+      skipped += 1;
+    } else if (isGoldSchemaDdl(normalized)) {
       runnable.push(normalized);
     } else {
       skipped += 1;
@@ -1738,24 +1750,28 @@ async function loadWarehouseGoldData({ connectString, schemaPassword, walletOpti
       ...walletOptions,
     });
 
-    const resetResults = [];
-    const warehouseTablesToDrop = [
-      ...new Set([
-        ...LAKEHOUSE_WAREHOUSE_GOLD_DATA_TABLE_NAMES,
-        ...LAKEHOUSE_WAREHOUSE_STALE_GOLD_DATA_TABLE_NAMES,
-      ]),
-    ];
-    for (const tableName of warehouseTablesToDrop) {
-      resetResults.push({ tableName, ...(await dropTableWithRetry(pgConnection, tableName)) });
-    }
-
     const createResults = [];
     for (const table of LAKEHOUSE_WAREHOUSE_GOLD_DATA_TABLES) {
-      createResults.push(await createWarehouseGoldDataTable(pgConnection, table));
+      const existing = await pgConnection.execute(
+        'SELECT COUNT(*) AS cnt FROM user_tables WHERE table_name = :name',
+        { name: table.tableName }, { outFormat: oracledb.OUT_FORMAT_OBJECT }
+      );
+      if (!Number(existing.rows?.[0]?.CNT || 0)) {
+        createResults.push(await createWarehouseGoldDataTable(pgConnection, table));
+      }
     }
 
     const tables = [];
-    for (const { tableName, csvFile } of LAKEHOUSE_WAREHOUSE_GOLD_DATA_TABLES) {
+    for (const { tableName, csvFile } of DEMO_WAREHOUSE_TABLES) {
+      const rowCount = await fetchTableRowCount(pgConnection, tableName);
+      const expectedRows = Number(LAKEHOUSE_GOLD_DATA_EXPECTED_ROWS.get(tableName) || 0);
+      if (rowCount > 0 && rowCount < expectedRows) {
+        throw new Error(`${tableName} has only ${rowCount} of ${expectedRows} required demo rows. Existing data was preserved; repair the incomplete provisioning load before continuing.`);
+      }
+      if (rowCount > 0) {
+        tables.push({ tableName, rowsLoaded: 0, skipped: true });
+        continue;
+      }
       tables.push(await loadCsvFileIntoTable({
         connection: pgConnection,
         tableName,
@@ -1765,7 +1781,7 @@ async function loadWarehouseGoldData({ connectString, schemaPassword, walletOpti
 
     return {
       tables,
-      reset: resetResults,
+      reset: [],
       create: createResults,
       rowsLoaded: tables.reduce((sum, table) => sum + Number(table.rowsLoaded || 0), 0),
     };
@@ -1896,6 +1912,10 @@ async function fetchLakehouseGoldDataStatus(pgConnection) {
         && expectedRows > 0
         && Number(counts[tableName] || 0) === 0;
     });
+  const incompleteTables = DEMO_WAREHOUSE_TABLE_NAMES.filter((tableName) =>
+    existingTables.has(tableName)
+    && Number(counts[tableName] || 0) < Number(LAKEHOUSE_GOLD_DATA_EXPECTED_ROWS.get(tableName) || 0)
+  );
   let staleWarehouseTables = [];
   if (LAKEHOUSE_WAREHOUSE_STALE_GOLD_DATA_TABLE_NAMES.length) {
     const staleBinds = Object.fromEntries(
@@ -1913,11 +1933,12 @@ async function fetchLakehouseGoldDataStatus(pgConnection) {
   }
 
   return {
-    loaded: missingTables.length === 0 && emptyTables.length === 0 && staleWarehouseTables.length === 0,
+    loaded: missingTables.length === 0 && emptyTables.length === 0 && incompleteTables.length === 0,
     requiredTables: LAKEHOUSE_GOLD_DATA_REQUIRED_TABLES.length,
     existingTables: existingTables.size,
     missingTables,
     emptyTables,
+    incompleteTables,
     staleWarehouseTables,
     counts,
     expectedRows: Object.fromEntries(LAKEHOUSE_GOLD_DATA_EXPECTED_ROWS),
@@ -1929,7 +1950,8 @@ function areGoldDataTablesLoaded(status, tableNames) {
   return tableNames.every((tableName) => {
     const count = status.counts[tableName];
     const expectedRows = Number(LAKEHOUSE_GOLD_DATA_EXPECTED_ROWS.get(tableName) ?? 1);
-    return count !== null && count !== undefined && (expectedRows === 0 || Number(count || 0) > 0);
+    const minimumRows = DEMO_WAREHOUSE_TABLE_NAMES.includes(tableName) ? expectedRows : Math.min(expectedRows, 1);
+    return count !== null && count !== undefined && Number(count || 0) >= minimumRows;
   });
 }
 
@@ -1960,8 +1982,7 @@ async function loadLakehouseGoldData({
     ? await runGoldSchemaScript({ connectString, schemaPassword, walletOptions })
     : null;
   const initialStatus = await getLakehouseGoldDataStatusForConnection({ connectString, schemaPassword, walletOptions });
-  const warehouseLoaded = areGoldDataTablesLoaded(initialStatus, LAKEHOUSE_WAREHOUSE_GOLD_DATA_TABLE_NAMES)
-    && !(initialStatus.staleWarehouseTables || []).length;
+  const warehouseLoaded = areGoldDataTablesLoaded(initialStatus, DEMO_WAREHOUSE_TABLE_NAMES);
   const appLoaded = areGoldDataTablesLoaded(initialStatus, LAKEHOUSE_APP_GOLD_DATA_TABLE_NAMES);
 
   const warehouseGoldResult = warehouseLoaded
@@ -2397,6 +2418,20 @@ function getAutoLakehouseConfig() {
   };
 }
 
+// The optional bulk import always uses the provisioned ADB, never the local demo DB.
+async function getAutoLakehousePgConnection() {
+  const config = getAutoLakehouseConfig();
+  if (!config) throw createHttpError(503, 'The provisioned Autonomous Database is not configured.');
+  const wallet = await useWalletDirectory(config.walletDir, config.walletPassword);
+  if (!wallet) throw createHttpError(503, 'The Autonomous Database wallet is not available.');
+  return oracledb.getConnection({
+    user: LAKEHOUSE_SCHEMA_USERNAME,
+    password: resolveLakehouseSchemaPassword({ adminPassword: config.password }),
+    connectString: config.connectionString,
+    ...wallet.connectionOptions,
+  });
+}
+
 async function ensureAutoLakehouseImpl() {
   const config = getAutoLakehouseConfig();
   if (!config) {
@@ -2563,6 +2598,8 @@ router._private = {
   resolvePgAiProfileConfig,
   extractServiceName,
   getAutoLakehouseConfig,
+  getAutoLakehousePgConnection,
+  loadWarehouseGoldData,
   getLakehouseSchemaStatus,
   loadLakehouseGoldData,
   normalizeDbActionsHost,

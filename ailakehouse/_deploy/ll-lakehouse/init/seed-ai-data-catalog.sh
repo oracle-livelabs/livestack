@@ -7,7 +7,7 @@ ENV_FILE="${ENV_FILE:-/home/opc/ingestion/.env}"
 INGESTION_DIR="${INGESTION_DIR:-/home/opc/ingestion}"
 WALLET_DIR="${WALLET_DIR:-${INGESTION_DIR}/wallet}"
 log() { printf '[aicat-bronze] %s\n' "$*"; }
-[[ -r "${ENV_FILE}" ]] || { log 'Environment unavailable; skipping.'; exit 0; }
+[[ -r "${ENV_FILE}" ]] || { log 'Environment unavailable; retry required.'; exit 1; }
 set +u
 set -a
 source "${ENV_FILE}"
@@ -17,11 +17,11 @@ case "${AI_DATA_CATALOG_ENABLED:-false}" in
   true|TRUE|1|yes|on) ;;
   *) log 'AI Catalog disabled; skipping.'; exit 0 ;;
 esac
-[[ -n "${AI_DATA_CATALOG_URL:-}" ]] || { log 'AI Catalog URL unavailable; skipping.'; exit 0; }
+[[ -n "${AI_DATA_CATALOG_URL:-}" ]] || { log 'Enabled AI Catalog URL unavailable.'; exit 1; }
 
 # Serialize manual/service reruns on this VM.
 exec 9>"${INGESTION_DIR}/.ai_catalog_bronze.lock"
-flock -n 9 || { log 'Another seed is running; skipping.'; exit 0; }
+flock -n 9 || { log 'Another seed is running; retry after it finishes.'; exit 1; }
 WORK_DIR="$(mktemp -d /tmp/peakgear-aicat-bronze.XXXXXX)"
 trap 'rm -rf "${WORK_DIR}"' EXIT
 
@@ -39,7 +39,7 @@ main() {
     -v "${INGESTION_DIR}/demodata/aicat-sources:/sources:ro,z" \
     -v "${WORK_DIR}:/output:Z" --entrypoint python \
     localhost/iceberg-seeder:latest /workspace/seeder/seed_ai_catalog.py || return 1
-  [[ -s "${WORK_DIR}/external-tables.sql" ]] || return 0
+  [[ -s "${WORK_DIR}/external-tables.sql" ]] || return 1
 
   [[ "${SERVICE_NAME:-}" =~ ^[A-Za-z0-9_]+$ ]] || return 1
   [[ "${AI_DATA_CATALOG_SCHEMA:-PG}" =~ ^[A-Za-z][A-Za-z0-9_]*$ ]] || return 1
@@ -71,8 +71,6 @@ SQL
 }
 
 if ! main; then
-  log 'WARNING: optional bronze seed incomplete; provisioning continues. Rerun this script after resolving catalog/storage access.'
-  # Manual verification can opt into a failing exit code. Boot never depends on
-  # the optional catalog; systemd also orders this job after the main stack.
-  [[ "${AI_CATALOG_SEED_STRICT:-false}" != true ]] || exit 1
+  log 'ERROR: enabled AI Catalog bronze seed incomplete; retry required.'
+  exit 1
 fi

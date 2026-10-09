@@ -32,17 +32,21 @@ class BronzeTests(unittest.TestCase):
         self.assertEqual(len({row["txn_id"] for row in sales}), 63031)
 
     def test_disabled_and_missing_url_do_not_connect(self):
-        for env in ({}, {"AI_DATA_CATALOG_ENABLED": "false"}, {"AI_DATA_CATALOG_ENABLED": "true"}):
+        for env in ({}, {"AI_DATA_CATALOG_ENABLED": "false"}):
             with patch.dict(os.environ, env, clear=True), patch.object(seed, "authenticate") as auth:
                 self.assertEqual(seed.main(), 0)
                 auth.assert_not_called()
 
-    def test_unavailable_is_bounded_and_skips(self):
+    def test_enabled_missing_url_fails(self):
+        with patch.dict(os.environ, {"AI_DATA_CATALOG_ENABLED": "true"}, clear=True):
+            self.assertEqual(seed.main(), 1)
+
+    def test_unavailable_is_bounded_and_fails(self):
         with patch.object(seed.urllib.request, "urlopen", side_effect=HTTPError("url", 503, "offline", {}, None)) as request, patch.object(seed.time, "sleep"):
             self.assertIsNone(seed.authenticate("https://example.test/catalog", "PG", "secret"))
             self.assertEqual(request.call_count, 3)
         with patch.dict(os.environ, {"AI_DATA_CATALOG_ENABLED": "true", "AI_DATA_CATALOG_URL": "https://example.test/catalog", "DBPASSWORD": "test"}, clear=True), patch.object(seed, "authenticate", return_value=None):
-            self.assertEqual(seed.main(), 0)
+            self.assertEqual(seed.main(), 1)
 
     def test_bad_auth_is_not_reported_as_disabled(self):
         with patch.object(seed.urllib.request, "urlopen", side_effect=HTTPError("url", 401, "bad", {}, None)):

@@ -18,6 +18,7 @@ fi
 
 ONNX_MODEL_URL="${ONNX_MODEL_URL:-}"
 ONNX_MODEL_FILENAME="${ONNX_MODEL_FILENAME:-all_MiniLM_L12_v2.onnx}"
+WAREHOUSE_DATA_PROFILE="${ADB_WAREHOUSE_DATA_PROFILE:-demo}"
 WORK_DIR=""
 
 if [[ -z "${ONNX_MODEL_URL}" || "${ONNX_MODEL_URL}" == *"<"* ]]; then
@@ -34,6 +35,17 @@ exec >> "${LOG_FILE}" 2>&1
 log() {
   printf '[adb-load] %s\n' "$*"
 }
+
+WAREHOUSE_DATA_PROFILE_NORMALIZED="$(printf '%s' "${WAREHOUSE_DATA_PROFILE}" | tr '[:upper:]' '[:lower:]')"
+case "${WAREHOUSE_DATA_PROFILE_NORMALIZED}" in
+  demo|full)
+    WAREHOUSE_DATA_PROFILE="${WAREHOUSE_DATA_PROFILE_NORMALIZED}"
+    ;;
+  *)
+    log "Invalid ADB_WAREHOUSE_DATA_PROFILE=${WAREHOUSE_DATA_PROFILE}; expected demo or full."
+    exit 1
+    ;;
+esac
 
 is_enabled() {
   local value="${1:-}"
@@ -71,6 +83,7 @@ generate_warehouse_sql() {
     WAREHOUSE_CREATE_SQL="${WORK_DIR}/warehouse_create.sql" \
     WAREHOUSE_LOAD_SQL="${WORK_DIR}/warehouse_load.sql" \
     WAREHOUSE_CHECK_SQL="${WORK_DIR}/warehouse_check.sql" \
+    WAREHOUSE_DATA_PROFILE="${WAREHOUSE_DATA_PROFILE}" \
     python3 <<'PY'
 import json
 import os
@@ -80,6 +93,13 @@ from pathlib import Path
 
 gold_data_dir = Path(os.environ["GOLD_DATA_DIR"])
 manifest_file = Path(os.environ["MANIFEST_FILE"])
+warehouse_data_profile = os.environ.get("WAREHOUSE_DATA_PROFILE", "demo").strip().lower()
+demo_table_names = {
+    "CUSTOMER_ORDER_STATUS",
+    "DIM_PRODUCT",
+    "PRODUCT_MANUALS_SOURCE",
+    "PRODUCT_VECTOR_STORE",
+}
 
 def quote_identifier(value):
     text = str(value or "").strip()
@@ -163,10 +183,15 @@ stale_table_names = sorted({
     if table_name and table_name not in active_table_names
 })
 
+load_entries = entries if warehouse_data_profile == "full" else [
+    entry for entry in entries
+    if str(entry["table_name"]).strip().upper() in demo_table_names
+]
+
 drop_lines = ["PROMPT Dropping warehouse gold-data CSV tables..."]
 create_lines = ["PROMPT Creating warehouse gold-data CSV tables..."]
 load_lines = [
-    "PROMPT Loading warehouse gold-data CSV tables...",
+    f"PROMPT Loading warehouse gold-data CSV tables ({warehouse_data_profile} profile)...",
     "SET LOAD DEFAULT",
     "SET LOAD BATCH_ROWS 5000 BATCHES_PER_COMMIT 1 SCAN 5000 CLEAN_NAMES TRANSFORM",
 ]
@@ -185,6 +210,8 @@ for entry in entries:
         column_defs.append(f"  {quote_identifier(column_name)} {normalized_type(column.get('data_type'))}")
     create_lines.append(f"CREATE TABLE {table_sql} (\n" + ",\n".join(column_defs) + "\n);")
 
+for entry in load_entries:
+    table_sql = quote_identifier(entry["table_name"])
     load_lines.append(f"LOAD TABLE {load_identifier(entry['table_name'])} {entry['csv_path']}")
     check_lines.append(f"  check_table({sql_string(table_sql)}, {entry['expected']});")
 
@@ -194,6 +221,15 @@ Path(os.environ["WAREHOUSE_LOAD_SQL"]).write_text("\n".join(load_lines) + "\n")
 Path(os.environ["WAREHOUSE_CHECK_SQL"]).write_text("\n".join(check_lines) + "\n")
 PY
     return 0
+  fi
+
+  if [[ "${WAREHOUSE_DATA_PROFILE}" == "demo" ]]; then
+    if ! command -v python3 >/dev/null 2>&1; then
+      log "Cannot use demo warehouse data profile because python3 is unavailable; set ADB_WAREHOUSE_DATA_PROFILE=full to use the legacy loader."
+    else
+      log "Cannot use demo warehouse data profile because ${manifest_file} is unavailable; set ADB_WAREHOUSE_DATA_PROFILE=full to use the legacy loader."
+    fi
+    exit 1
   fi
 
   : > "${WORK_DIR}/warehouse_drop.sql"
@@ -209,6 +245,12 @@ PY
       table_name="${csv_file%.csv}"
       table_name="$(printf '%s' "${table_name}" | tr '[:lower:]' '[:upper:]' | sed -E 's/[^A-Z0-9_$#]+/_/g')"
       printf 'DROP TABLE "%s" PURGE;\n' "${table_name}" >> "${WORK_DIR}/warehouse_drop.sql"
+      if [[ "${WAREHOUSE_DATA_PROFILE}" != "full" ]]; then
+        case "${table_name}" in
+          CUSTOMER_ORDER_STATUS|DIM_PRODUCT|PRODUCT_MANUALS_SOURCE|PRODUCT_VECTOR_STORE) ;;
+          *) continue ;;
+        esac
+      fi
       if [[ "${table_name}" =~ ^[A-Z][A-Z0-9_\$#]{0,127}$ ]]; then
         printf 'LOAD TABLE %s %s NEW\n' "${table_name}" "${csv_path}"
       else
@@ -325,6 +367,7 @@ fi
 log "Starting one-time ADB SQLcl bootstrap for schema ${APP_SCHEMA}."
 log "Using wallet directory ${WALLET_DIR}."
 log "Using SQLcl wallet copy ${SQLCL_WALLET_DIR}."
+log "Using warehouse data profile ${WAREHOUSE_DATA_PROFILE}."
 
 awk_password="$(printf '%s' "${APP_PASSWORD}" | sed 's/[\\&]/\\&/g; s/"/""/g')"
 awk -v pass="${awk_password}" '
@@ -458,6 +501,7 @@ run_sql "${WORK_DIR}/admin.sql"
 PG_AI_ENABLED="${PG_AI_PROFILE_AUTO_SETUP:-true}"
 OCI_AUTH="${OCI_AUTH_TYPE:-api_key}"
 OCI_REGION_VALUE="${OCI_REGION:-${AI_ENDPOINT_REGION:-${REGION_IDENTIFIER:-}}}"
+OCI_GENAI_REGION_VALUE="${AI_ENDPOINT_REGION:-${OCI_REGION_VALUE}}"
 OCI_COMPARTMENT_VALUE="${OCI_COMPARTMENT_ID:-${COMPARTMENT_OCID:-}}"
 OCI_USER_VALUE="${OCI_USER_OCID:-${USER_OCID:-${user:-}}}"
 OCI_TENANCY_VALUE="${OCI_TENANCY_OCID:-${TENANCY_OCID:-${tenancy:-}}}"
@@ -466,6 +510,7 @@ OCI_PRIVATE_KEY_VALUE="${OCI_PRIVATE_KEY:-${PEM_SINGLE_LINE:-${PEM_KEY:-}}}"
 OCI_PRIVATE_KEY_VALUE="$(printf '%b' "${OCI_PRIVATE_KEY_VALUE}")"
 OCI_PROFILE_NAME="${OCI_AI_PROFILE_NAME:-PG_GENAI_PROFILE}"
 OCI_RETURN_AGENT_PROFILE_NAME="${WEBSHOP_RETURN_AGENT_PROFILE_NAME:-PG_RETURN_AGENT_PROFILE}"
+OCI_DATASTUDIO_PROFILE_NAME="DATASTUDIO_PROFILE"
 OCI_CREDENTIAL_NAME="${OCI_GENAI_CREDENTIAL_NAME:-PG_OCI_GENAI_CRED}"
 OCI_MODEL_VALUE="${OCI_GENAI_MODEL:-cohere.command-a-03-2025}"
 OCI_EMBEDDING_MODEL_VALUE="${OCI_GENAI_EMBEDDING_MODEL:-cohere.embed-v4.0}"
@@ -487,6 +532,7 @@ if is_enabled "${PG_AI_ENABLED}" && [[ "${OCI_AUTH,,}" == "api_key" ]]; then
   if [[ ${#missing[@]} -eq 0 ]]; then
     PROFILE_ATTRIBUTES="{\"provider\":\"oci\",\"credential_name\":\"${OCI_CREDENTIAL_NAME}\",\"comments\":true,\"oci_compartment_id\":\"${OCI_COMPARTMENT_VALUE}\",\"region\":\"${OCI_REGION_VALUE}\",\"model\":\"${OCI_MODEL_VALUE}\",\"embedding_model\":\"${OCI_EMBEDDING_MODEL_VALUE}\",\"oci_apiformat\":\"COHERE\",\"temperature\":0,\"object_list\":[{\"owner\":\"${APP_SCHEMA}\"}]}"
     RETURN_AGENT_PROFILE_ATTRIBUTES="{\"provider\":\"oci\",\"credential_name\":\"${OCI_CREDENTIAL_NAME}\",\"comments\":true,\"oci_compartment_id\":\"${OCI_COMPARTMENT_VALUE}\",\"region\":\"${OCI_REGION_VALUE}\",\"model\":\"${OCI_MODEL_VALUE}\",\"oci_apiformat\":\"COHERE\",\"temperature\":0,\"object_list\":[{\"owner\":\"${APP_SCHEMA}\",\"name\":\"DIM_PRODUCT\"},{\"owner\":\"${APP_SCHEMA}\",\"name\":\"PRODUCT_MANUALS_SOURCE\"},{\"owner\":\"${APP_SCHEMA}\",\"name\":\"CUSTOMER_ORDER_STATUS\"}]}"
+    DATASTUDIO_PROFILE_ATTRIBUTES="{\"provider\":\"oci\",\"credential_name\":\"${OCI_CREDENTIAL_NAME}\",\"model\":\"xai.grok-4.3\",\"object_list\":[{\"owner\":\"${APP_SCHEMA}\"}],\"oci_apiformat\":\"GENERIC\",\"oci_compartment_id\":\"${OCI_COMPARTMENT_VALUE}\",\"region\":\"${OCI_GENAI_REGION_VALUE}\",\"comments\":true,\"temperature\":0}"
     cat > "${WORK_DIR}/admin_ai.sql" <<SQL
 SET ECHO OFF
 SET DEFINE OFF
@@ -569,6 +615,7 @@ SQL
     PRIVATE_KEY_LITERAL="$(q_literal "${OCI_PRIVATE_KEY_VALUE}")"
     PROFILE_ATTRIBUTES_LITERAL="$(q_literal "${PROFILE_ATTRIBUTES}")"
     RETURN_AGENT_PROFILE_ATTRIBUTES_LITERAL="$(q_literal "${RETURN_AGENT_PROFILE_ATTRIBUTES}")"
+    DATASTUDIO_PROFILE_ATTRIBUTES_LITERAL="$(q_literal "${DATASTUDIO_PROFILE_ATTRIBUTES}")"
     PROFILE_SQL=$(cat <<SQL
 PROMPT Creating ${APP_SCHEMA} DBMS_CLOUD_AI profile...
 WHENEVER SQLERROR CONTINUE
@@ -622,6 +669,20 @@ BEGIN
   EXCEPTION
     WHEN OTHERS THEN NULL;
   END;
+END;
+/
+
+PROMPT Creating Data Studio DBMS_CLOUD_AI profile...
+BEGIN
+  BEGIN
+    DBMS_CLOUD_AI.DROP_PROFILE(profile_name => '$(sql_literal "${OCI_DATASTUDIO_PROFILE_NAME}")', force => TRUE);
+  EXCEPTION
+    WHEN OTHERS THEN NULL;
+  END;
+  DBMS_CLOUD_AI.CREATE_PROFILE(
+    profile_name => '$(sql_literal "${OCI_DATASTUDIO_PROFILE_NAME}")',
+    attributes   => ${DATASTUDIO_PROFILE_ATTRIBUTES_LITERAL}
+  );
 END;
 /
 
@@ -801,6 +862,7 @@ run_sql "${WORK_DIR}/security_verify.sql"
   echo "loaded_at=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
   echo "schema=${APP_SCHEMA}"
   echo "connect_target=${CONNECT_TARGET}"
+  echo "warehouse_data_profile=${WAREHOUSE_DATA_PROFILE}"
 } > "${MARKER_FILE}"
 chmod 600 "${MARKER_FILE}"
 

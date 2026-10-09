@@ -119,6 +119,16 @@ RUN mkdir -p /tmp/jdbc-wallet-compat-agent /u01/osa/osa-base/compat \
 
 ENV JAVA_TOOL_OPTIONS="--add-exports=java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED -javaagent:/u01/osa/osa-base/compat/jdbc-wallet-compat-agent.jar"
 
+COPY container/OsaWebsocketCompatAgent.java /tmp/OsaWebsocketCompatAgent.java
+RUN mkdir -p /tmp/osa-websocket-compat-agent \
+ && javac --add-exports java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED \
+      -d /tmp/osa-websocket-compat-agent /tmp/OsaWebsocketCompatAgent.java \
+ && printf 'Premain-Class: com.oracle.livelabs.osa.OsaWebsocketCompatAgent\nAgent-Class: com.oracle.livelabs.osa.OsaWebsocketCompatAgent\nCan-Retransform-Classes: true\n' \
+      > /tmp/osa-websocket-compat-agent.mf \
+ && jar --create --file /u01/osa/osa-base/compat/osa-websocket-compat-agent.jar \
+      --manifest /tmp/osa-websocket-compat-agent.mf -C /tmp/osa-websocket-compat-agent . \
+ && rm -rf /tmp/osa-websocket-compat-agent /tmp/OsaWebsocketCompatAgent.java /tmp/osa-websocket-compat-agent.mf
+
 WORKDIR /u01/osa/osa-base
 
 VOLUME ["/var/lib/mysql", "/var/lib/kafka/data", "/var/lib/spark-events", "/u01/app/osa/deployedpipelines"]

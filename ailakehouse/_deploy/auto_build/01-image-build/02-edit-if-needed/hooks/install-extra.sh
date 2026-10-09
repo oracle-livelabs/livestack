@@ -21,6 +21,9 @@ install_application() {
   install -m 0755 -o opc -g opc \
     "${service_source}/create-pg-iceberg-connection.sh" \
     "${init_source}/create-pg-iceberg-connection.sh"
+  install -m 0755 -o opc -g opc \
+    "${service_source}/retry-provision-step.sh" \
+    "${init_source}/retry-provision-step.sh"
   find "${init_source}" -maxdepth 1 -type f -name '*.sh' -exec chmod 0755 {} +
   install -m 0644 -o opc -g opc \
     "${service_source}/peakgear-pg-iceberg.service" \

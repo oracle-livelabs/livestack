@@ -2,6 +2,11 @@
 set -euo pipefail
 # This script prepares the environment variables (.env) for each app container
 
+# Multiple systemd services invoke this script concurrently. Keep the lock for
+# the whole run: certificates and the runtime environment must agree.
+exec 9>/home/opc/init/.setenv.lock
+flock -x 9
+
 # source the variable file
 source /home/opc/init/variable.sh
 
@@ -19,43 +24,66 @@ mkdir -p "$APP_DIR"
 
 SOURCE_TLS_DIR="$APP_DIR/source-tls"
 mkdir -p "$SOURCE_TLS_DIR"
-rm -f "$SOURCE_TLS_DIR/server.crt" "$SOURCE_TLS_DIR/server.key" \
-  "$SOURCE_TLS_DIR/server.pem" "$SOURCE_TLS_DIR/ca.crt"
 
 secure_source_tls_files() {
-  cat "$SOURCE_TLS_DIR/server.crt" "$SOURCE_TLS_DIR/server.key" > "$SOURCE_TLS_DIR/server.pem"
-  chmod 700 "$SOURCE_TLS_DIR"
-  chmod 600 "$SOURCE_TLS_DIR/server.key" "$SOURCE_TLS_DIR/server.pem"
-  chmod 644 "$SOURCE_TLS_DIR/server.crt" "$SOURCE_TLS_DIR/ca.crt"
+  local tls_dir="$1"
+  chmod 700 "$tls_dir"
+  chmod 600 "$tls_dir/server.key" "$tls_dir/server.pem"
+  chmod 644 "$tls_dir/server.crt" "$tls_dir/ca.crt"
   if command -v podman >/dev/null 2>&1 && command -v setfacl >/dev/null 2>&1; then
-    podman unshare setfacl -m 'u:999:rx' "$SOURCE_TLS_DIR" || true
-    podman unshare setfacl -m 'u:999:r' "$SOURCE_TLS_DIR/server.crt" "$SOURCE_TLS_DIR/server.key" "$SOURCE_TLS_DIR/server.pem" "$SOURCE_TLS_DIR/ca.crt" || true
+    podman unshare setfacl -m 'u:999:rx' "$tls_dir"
+    podman unshare setfacl -m 'u:999:r' "$tls_dir/server.crt" "$tls_dir/server.key" "$tls_dir/server.pem" "$tls_dir/ca.crt"
   fi
 }
 
-source_tls_san="DNS:postgres-source,DNS:mongodb-catalog,DNS:localhost,IP:127.0.0.1"
-if [[ "$PUBLIC_ENDPOINT_HOST" =~ ^([0-9]{1,3}\.){3}[0-9]{1,3}$ ]]; then
-  source_tls_san="${source_tls_san},IP:${PUBLIC_ENDPOINT_HOST}"
-elif [[ "$PUBLIC_ENDPOINT_HOST" == *.* ]]; then
-  source_tls_san="${source_tls_san},DNS:${PUBLIC_ENDPOINT_HOST}"
-fi
-if openssl req -x509 -newkey rsa:2048 -sha256 -days 3650 -nodes \
-  -keyout "$SOURCE_TLS_DIR/server.key" \
-  -out "$SOURCE_TLS_DIR/server.crt" \
-  -subj "/CN=${PUBLIC_ENDPOINT_HOST}" \
-  -addext "subjectAltName=${source_tls_san}" >/dev/null 2>&1 \
-  && cp "$SOURCE_TLS_DIR/server.crt" "$SOURCE_TLS_DIR/ca.crt" \
-  && openssl x509 -in "$SOURCE_TLS_DIR/server.crt" -noout \
-  && openssl pkey -in "$SOURCE_TLS_DIR/server.key" -noout; then
-  secure_source_tls_files
-  source_tls_enabled=true
-  echo "Source database TLS certificate generated for ${PUBLIC_ENDPOINT_HOST}."
+valid_source_tls_files() {
+  local tls_dir="$1" cert_public_key key_public_key
+  openssl x509 -in "$tls_dir/server.crt" -checkend 0 -noout >/dev/null 2>&1 || return 1
+  cert_public_key="$(openssl x509 -in "$tls_dir/server.crt" -pubkey -noout 2>/dev/null)" || return 1
+  key_public_key="$(openssl pkey -in "$tls_dir/server.key" -pubout 2>/dev/null)" || return 1
+  [[ "$cert_public_key" == "$key_public_key" ]] || return 1
+  cmp -s "$tls_dir/server.crt" "$tls_dir/ca.crt" || return 1
+  cmp -s <(cat "$tls_dir/server.crt" "$tls_dir/server.key") "$tls_dir/server.pem"
+}
+
+# Reuse a complete valid bundle. Image preparation removes it before capture,
+# so each new VM still gets its own certificate on first boot.
+if valid_source_tls_files "$SOURCE_TLS_DIR"; then
+  secure_source_tls_files "$SOURCE_TLS_DIR"
+  echo "Reusing source database TLS certificate."
 else
-  source_tls_enabled=false
-  echo "Source database TLS is disabled: unable to generate a certificate." >&2
-  rm -f "$SOURCE_TLS_DIR/server.crt" "$SOURCE_TLS_DIR/server.key" \
-    "$SOURCE_TLS_DIR/server.pem" "$SOURCE_TLS_DIR/ca.crt"
+  # Stage on the same filesystem; never delete the live bundle on failure.
+  source_tls_stage="$(mktemp -d "$APP_DIR/.source-tls.XXXXXX")"
+  trap 'rm -rf -- "$source_tls_stage"' EXIT
+  source_tls_san="DNS:postgres-source,DNS:mongodb-catalog,DNS:localhost,IP:127.0.0.1,DNS:loyalty-mysql"
+  if [[ "$PUBLIC_ENDPOINT_HOST" =~ ^([0-9]{1,3}\.){3}[0-9]{1,3}$ ]]; then
+    source_tls_san="${source_tls_san},IP:${PUBLIC_ENDPOINT_HOST}"
+  elif [[ "$PUBLIC_ENDPOINT_HOST" == *.* ]]; then
+    source_tls_san="${source_tls_san},DNS:${PUBLIC_ENDPOINT_HOST}"
+  fi
+  if ! openssl req -x509 -newkey rsa:2048 -sha256 -days 3650 -nodes \
+    -keyout "$source_tls_stage/server.key" \
+    -out "$source_tls_stage/server.crt" \
+    -subj "/CN=${PUBLIC_ENDPOINT_HOST}" \
+    -addext "subjectAltName=${source_tls_san}" >/dev/null 2>&1; then
+    echo "Unable to generate source database TLS certificate; existing files preserved." >&2
+    exit 1
+  fi
+  cp "$source_tls_stage/server.crt" "$source_tls_stage/ca.crt"
+  cat "$source_tls_stage/server.crt" "$source_tls_stage/server.key" > "$source_tls_stage/server.pem"
+  valid_source_tls_files "$source_tls_stage"
+  secure_source_tls_files "$source_tls_stage"
+  # Preserve the bind-mounted directory inode. Each rename publishes a complete
+  # file, with permissions already applied, while other setup callers are locked.
+  for source_tls_file in server.key server.crt ca.crt server.pem; do
+    mv -f "$source_tls_stage/$source_tls_file" "$SOURCE_TLS_DIR/$source_tls_file"
+  done
+  secure_source_tls_files "$SOURCE_TLS_DIR"
+  rmdir "$source_tls_stage"
+  trap - EXIT
+  echo "Source database TLS certificate generated for ${PUBLIC_ENDPOINT_HOST}."
 fi
+source_tls_enabled=true
 
 
 # clean up existing things

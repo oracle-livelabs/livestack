@@ -4,10 +4,13 @@ import json
 import os
 from pathlib import Path
 import re
+import sys
+import tempfile
 import unittest
 from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / 'init'))
 spec = importlib.util.spec_from_file_location('medallion', ROOT / 'init/provision-medallion.py')
 m = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(m)
@@ -19,6 +22,7 @@ CATALOG = {'globalId': 'fresh-catalog', 'name': 'pg-aicat', 'schemas': [
 
 
 class FakeApi:
+    base = 'https://test.invalid'
     def __init__(self):
         self.project = None
         self.writes = []
@@ -50,6 +54,48 @@ class FakeApi:
 
 
 class Tests(unittest.TestCase):
+    def setUp(self):
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        env = patch.dict(os.environ, {'DATA_TRANSFORMS_IMPORT_STATE_DIR': tmp.name})
+        env.start()
+        self.addCleanup(env.stop)
+
+    def test_missing_store_uses_resumable_import(self):
+        api = FakeApi()
+        store = api.items['datastores'].pop()
+        api.items['models'] = [{'modelCode': 'PEAKGEAR_MEDALLION_PG', 'schema': SCHEMA}]
+        def imported(client, payload, resume_only=False):
+            if resume_only:
+                return
+            self.assertIs(client, api)
+            self.assertEqual(payload['reverseObjList'], "'" + store['name'] + "'")
+            api.items['datastores'].append(store)
+        with patch.object(m, 'import_model', side_effect=imported) as wait:
+            result = m.ensure_stores(api, BUNDLE, ORACLE, SCHEMA, 'test-agent')
+        self.assertEqual(wait.call_count, 2)
+        self.assertIn(store['name'], result)
+
+    def test_one_import_discovers_all_entities_without_redundant_jobs(self):
+        api = FakeApi()
+        stores = api.items['datastores']
+        api.items['datastores'] = []
+        api.items['models'] = [{'modelCode': 'PEAKGEAR_MEDALLION_PG', 'schema': SCHEMA}]
+        def imported(client, payload, resume_only=False):
+            if not resume_only:
+                api.items['datastores'] = stores
+        with patch.object(m, 'import_model', side_effect=imported) as wait:
+            result = m.ensure_stores(api, BUNDLE, ORACLE, SCHEMA, 'test-agent')
+        self.assertEqual(wait.call_count, 2)  # resume check, then exactly one new import
+        self.assertEqual(set(result), m.required_stores(BUNDLE))
+
+    def test_visible_entities_still_wait_for_outstanding_import(self):
+        api = FakeApi()
+        with patch.object(m, 'import_model', side_effect=RuntimeError('still running')):
+            with self.assertRaisesRegex(RuntimeError, 'still running'):
+                m.ensure_stores(api, BUNDLE, ORACLE, SCHEMA, 'test-agent')
+        self.assertEqual(api.writes, [])
+
     def test_complete_manifest_and_portability(self):
         self.assertEqual([len(BUNDLE[k]) for k in ('mappings', 'bulkload', 'packages', 'variables', 'databaseObjects')],
                          [3, 1, 4, 2, 8])

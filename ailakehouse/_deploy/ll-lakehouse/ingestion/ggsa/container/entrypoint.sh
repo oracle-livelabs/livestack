@@ -157,7 +157,27 @@ detect_public_host() {
     fi
   done
 
+  [[ "${1:-}" == "public-only" ]] && return 1
   hostname -I 2>/dev/null | awk '{ print $1 }'
+}
+
+osa_websocket_origins() {
+  local scheme="https" port="${OSA_API_SERVER_SPORT}" ip="" octet
+  if [[ "${OSA_ENABLE_SSL,,}" != "true" ]]; then
+    scheme="http"
+    port="${OSA_API_SERVER_PORT}"
+  fi
+  printf '%s://%s:%s' "${scheme}" "${OSA_PUBLIC_HOST}" "${port}"
+  # Resolve the VM address even when its advertised host is a LiveLabs DNS name.
+  ip="$(detect_public_host public-only || true)"
+  if [[ "${ip}" != "${OSA_PUBLIC_HOST}" && "${ip}" =~ ^([0-9]{1,3}\.){3}[0-9]{1,3}$ ]]; then
+    local -a octets
+    IFS=. read -r -a octets <<< "${ip}"
+    for octet in "${octets[@]}"; do
+      (( 10#${octet} <= 255 )) || return 0
+    done
+    printf ',%s://%s:%s' "${scheme}" "${ip}" "${port}"
+  fi
 }
 
 persist_public_host_env() {
@@ -716,6 +736,8 @@ start_osa() {
 
   log "Starting Oracle Stream Analytics"
   (
+    # Scope the WebSocket patch to OSA; Spark and Kafka keep their existing JVM options.
+    export JAVA_TOOL_OPTIONS="${JAVA_TOOL_OPTIONS:-} -javaagent:${OSA_BASE}/compat/osa-websocket-compat-agent.jar=$(osa_websocket_origins)"
     cd "${OSA_BASE}/bin"
 
     hostname() {

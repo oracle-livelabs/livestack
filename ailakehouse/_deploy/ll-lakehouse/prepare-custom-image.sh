@@ -314,7 +314,7 @@ stop_image_capture_services() {
     return 0
   fi
 
-  for service in "${PG_MEDALLION_PROJECT_SERVICE}" "${PG_AI_CATALOG_BRONZE_SERVICE}" "${ICEBERG_SEED_SERVICE}" "${PG_ICEBERG_CONNECTION_SERVICE}" "${PG_AI_DATA_CATALOG_SERVICE}" "${USER_PODMAN_SERVICE}"; do
+  for service in demo-setup-control.service "${PG_MEDALLION_PROJECT_SERVICE}" "${PG_AI_CATALOG_BRONZE_SERVICE}" "${ICEBERG_SEED_SERVICE}" "${PG_ICEBERG_CONNECTION_SERVICE}" "${PG_AI_DATA_CATALOG_SERVICE}" "${USER_PODMAN_SERVICE}"; do
     if ! "${SYSTEMCTL_BIN}" --user cat "${service}" >/dev/null 2>&1; then
       echo "No ${service} user service found; continuing."
       continue
@@ -573,6 +573,8 @@ fi
 preflight_offline_artifacts
 remove_crowdstrike_sensor
 stop_image_capture_services
+# Never carry a retry request or a previous VM readiness report into an image.
+rm -f "${INGESTION_DIR}/.demo-setup/retry.request" "${INGESTION_DIR}/.demo-setup/status.json" "${INGESTION_DIR}/.demo-setup/status.tmp"
 remove_compose_runtime_state
 
 mkdir -p "${WALLET_DIR}"

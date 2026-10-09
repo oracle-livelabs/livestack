@@ -48,13 +48,44 @@ The startup order is:
 2. `adb-wallet.service` downloads and unpacks the ADB wallet once.
 3. `adb-load.sh` runs SQLcl on the host once, before Podman Compose starts. It is invoked after the wallet download and is also available as `adb-load.service` for intentional reruns.
 4. `user-podman.service` starts the compose stack.
-5. `pg-iceberg-connection.service` updates the platform-created Data Transforms
+5. `iceberg-seed.service` seeds the Iceberg product table and creates/verifies
+   `PG.PRODUCT_MASTER_RAW_ICEBERG_EXT` and `PG.GOLD_PRODUCTS`. The seed and PG
+   setup share a 20-minute retry window, with 30 seconds between failed attempts.
+   The parallel `pg-ai-catalog-bronze.service` has its own 20-minute window.
+   Both stop immediately on success and preserve existing data with default settings.
+   The deadline includes running commands; five seconds are allowed for forced
+   cleanup, with a 30-second systemd safety margin. Enabled catalog failures
+   return an error; a deliberately disabled catalog still skips successfully.
+6. `pg-iceberg-connection.service` waits for successful Iceberg seed/table setup,
+   then updates the platform-created Data Transforms
    Oracle connection to use `PG` with the current `dbpassword`, verifies `PG`
    as its default schema, creates or updates the Apache Iceberg connection named
    `pg-iceberg` with REST URL `http://<public-ip>:1525/iceberg`, and verifies
    both connections through the Data Transforms agent.
+7. `pg-medallion-project.service` waits for successful connection setup and
+   AI Catalog bronze seeding before creating the Medallion objects. An exhausted
+   seed window leaves the dependent setup blocked and logs the failed prerequisite;
+   it does not start a fresh retry window automatically. Inspect the failed seed
+   with `journalctl --user -u iceberg-seed.service -u pg-ai-catalog-bronze.service`.
 
-`adb-load.service` runs `/home/opc/init/adb-load.sh`. The script connects to ADB with SQLcl, recreates the `PG` user, creates the Bronze and Silver objects, creates the application schema objects, loads the warehouse CSV exports from `/home/opc/ingestion/gold-data`, loads the app seed data, and verifies that all required demo tables contain rows.
+`adb-load.service` runs `/home/opc/init/adb-load.sh`. The script connects to ADB with SQLcl, recreates the `PG` user, creates the Bronze and Silver objects, creates the application schema objects, creates the warehouse CSV table schemas, loads the four demo-required exports (`DIM_PRODUCT`, `CUSTOMER_ORDER_STATUS`, `PRODUCT_MANUALS_SOURCE`, and `PRODUCT_VECTOR_STORE`), loads the app seed data, and verifies that all required demo tables contain rows. All CSV files remain packaged in `/home/opc/ingestion/gold-data`. The default demo profile represents approximately 49,836 base rows before generated embeddings and runtime activity.
+
+In **LiveStack Configuration**, **Retry demo setup** resumes incomplete or failed
+catalog seeding and Data Transforms provisioning. The page shows each setup step
+and polls progress every five seconds. The button is disabled while setup is
+running, already ready, or its status cannot be confirmed. It does not reset PG,
+execute demo workflows, or run the optional full data import.
+
+`demo-setup-control.service` runs as `opc` and publishes a small status file in
+`ingestion/.demo-setup`. The backend places an exclusive retry-request file there;
+the controller starts only its fixed list of existing provisioning services.
+The container gets no systemd socket, host shell endpoint, or additional privilege.
+Image preparation stops the controller and clears status and pending requests.
+For an existing VM, install/enable this new service along with the updated retry
+scripts and units before deploying the updated backend/frontend. Without the host
+controller, the page reports setup status as unavailable and disables retry.
+
+In **LiveStack Configuration**, **Load full data set** imports the deferred warehouse CSVs into the provisioned ADB in the background. It preserves the demo tables and records progress in ADB so a failed or interrupted import can resume from its last completed table. Closing the browser does not stop the job. Optional warehouse tables are not prerequisites for demo readiness. This action is separate from **Verify & Refresh Demo**, which prepares application data and embeddings.
 
 The Data Sources page creates `PG`-owned Data Studio catalogs through the
 Terraform load balancer after the compose stack is healthy. Terraform supplies
