@@ -175,16 +175,16 @@ def main():
         return 0
     root = os.environ.get("AI_DATA_CATALOG_URL", "").rstrip("/")
     if not root:
-        log("AI Catalog URL unavailable; skipping.")
-        return 0
+        log("Enabled AI Catalog URL unavailable.")
+        return 1
     if not re.fullmatch(r"https://[^/\s]+/catalog", root):
         raise ValueError("AI_DATA_CATALOG_URL must be https://<host>/catalog")
     schema = os.environ.get("AI_DATA_CATALOG_SCHEMA", "PG").upper()
     password = os.environ.get("ADB_STREAM_SCHEMA_PASSWORD") or os.environ["DBPASSWORD"]
     token = authenticate(root, schema, password)
     if token is None:
-        log("AI Catalog unavailable after bounded retries; skipping (no completion marker).")
-        return 0
+        log("AI Catalog authentication failed; seed incomplete, retry required.")
+        return 1
 
     import pyarrow as pa
     from pyiceberg.catalog import load_catalog

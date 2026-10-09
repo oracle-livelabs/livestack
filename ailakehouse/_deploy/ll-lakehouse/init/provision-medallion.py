@@ -7,8 +7,9 @@ import os
 from pathlib import Path
 import subprocess
 import sys
-import time
 import uuid
+
+from data_transform_import import import_model
 
 
 class ProvisionError(RuntimeError):
@@ -136,10 +137,15 @@ def ensure_stores(api, bundle, oracle, schema, agent):
                 if s.get('dataServerGlobalId') == cid and s.get('schemaName') == 'PG'
                 and s.get('name') in needed}
 
+    model_code = 'PEAKGEAR_MEDALLION_PG'
+    # Finish an outstanding import before using metadata that may be visible early.
+    try:
+        import_model(api, {'modelCode': model_code}, resume_only=True)
+    except RuntimeError as error:
+        raise ProvisionError(str(error)) from error
     stores = read()
     if needed <= stores.keys():
         return stores
-    model_code = 'PEAKGEAR_MEDALLION_PG'
     models = api.request('GET', '/models')
     model = next((m for m in models if m.get('modelCode') == model_code), None)
     if model is not None and model.get('schema', {}).get('globalId') != schema['globalId']:
@@ -149,22 +155,18 @@ def ensure_stores(api, bundle, oracle, schema, agent):
             'modelName': model_code, 'modelCode': model_code, 'parentFolder': 'DefaultFolder',
             'technologyCode': 'ORACLE', 'schema': schema})
     for name in sorted(needed - stores.keys()):
+        # A reverse job may discover more than its requested entity.
+        if name in read():
+            continue
+        log('Importing metadata for ' + name)
         payload = copy.deepcopy(model)
         payload.update(reverseType='CUSTOMIZED', reverseAgent=agent, reverseContext='GLOBAL',
                        reverseMask='%', reverseObjectTypes=['TABLE', 'VIEW'], reverseObjList="'" + name + "'")
-        job = api.request('POST', '/models/reverse/custom', payload)
-        session = job.get('sessionId')
-        if not session:
-            raise ProvisionError('Reverse-engineering job missing session ID')
-        for _ in range(36):
-            status = api.request('GET', f'/jobs/sessionId/{session}').get('status')
-            if status == 'DONE':
-                break
-            if status in ('ERROR', 'FAILED'):
-                raise ProvisionError('Data entity import failed: ' + name)
-            time.sleep(5)
-        else:
-            raise ProvisionError('Data entity import timed out: ' + name)
+        try:
+            import_model(api, payload)
+            log('Metadata import completed for ' + name)
+        except RuntimeError as error:
+            raise ProvisionError(str(error)) from error
     stores = read()
     if not needed <= stores.keys():
         raise ProvisionError('Required PG data entities are missing after import')

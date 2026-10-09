@@ -286,6 +286,7 @@ cp /home/opc/init/pg-ai-catalog-bronze.service /home/opc/.config/systemd/user/.
 cp /home/opc/init/pg-iceberg-connection.service /home/opc/.config/systemd/user/.
 cp /home/opc/init/pg-medallion-project.service /home/opc/.config/systemd/user/.
 cp /home/opc/init/iceberg-seed.service /home/opc/.config/systemd/user/.
+cp /home/opc/init/demo-setup-control.service /home/opc/.config/systemd/user/.
 chmod +x /home/opc/init/create-iceberg-adb-external-table.sh
 chmod +x /home/opc/init/configure-ai-data-catalog.sh
 ##########
@@ -313,10 +314,10 @@ systemctl --user enable pg-ai-data-catalog.service
 systemctl --user enable pg-ai-catalog-bronze.service
 systemctl --user enable pg-iceberg-connection.service
 systemctl --user enable pg-medallion-project.service
-systemctl --user enable iceberg-seed.service
+systemctl --user enable iceberg-seed.service demo-setup-control.service
 systemctl --user start user-podman
 systemctl --user start --no-block pg-iceberg-connection.service
-systemctl --user start --no-block iceberg-seed.service
+systemctl --user start --no-block iceberg-seed.service demo-setup-control.service
 systemctl --user start --no-block pg-ai-catalog-bronze.service
 systemctl --user start --no-block pg-medallion-project.service
 

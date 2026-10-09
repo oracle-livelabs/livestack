@@ -4748,6 +4748,55 @@ textarea {
   cursor: wait;
 }
 
+.lakehouse-full-data-card {
+  display: grid;
+  gap: 1rem;
+}
+
+.lakehouse-full-data-card__body {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.lakehouse-full-data-button {
+  background: linear-gradient(135deg, #437c94, #4f7d7b);
+  box-shadow: 0 4px 24px rgba(67, 124, 148, 0.2);
+}
+
+.lakehouse-full-data-card.is-complete .lakehouse-full-data-button {
+  background: #4c825c;
+}
+
+.lakehouse-full-data-card.is-error .lakehouse-full-data-button {
+  background: linear-gradient(135deg, #c74634, #aa643b);
+}
+
+.lakehouse-full-data-status {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.lakehouse-full-data-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  color: var(--color-text-dim);
+  font-size: 0.72rem;
+}
+
+.lakehouse-full-data-metrics span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.35rem;
+  padding: 0.2rem 0.48rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+}
+
 .social-vector-search-panel__spark {
   flex-shrink: 0;
 }

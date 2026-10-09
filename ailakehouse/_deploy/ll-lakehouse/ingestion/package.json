@@ -11,6 +11,7 @@
     "verify:brand-colors": "node verification/check-brand-colors.js",
     "verify:contrast": "node verification/check-contrast.js",
     "verify:focus-semantics": "node verification/check-focus-semantics.js",
+    "test:backend": "node --test backend/test/*.test.js",
     "start": "node backend/server.js",
     "start:prod": "NODE_ENV=production pm2 start backend/server.js --name peakgear-sporting-goods"
   },

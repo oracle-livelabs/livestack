@@ -5,8 +5,9 @@ Wants=network-online.target pg-ai-data-catalog.service
 
 [Service]
 Type=oneshot
-TimeoutStartSec=900
-ExecStart=/bin/bash /home/opc/init/seed-ai-data-catalog.sh
+TimeoutStartSec=1230
+ExecStart=/bin/bash /home/opc/init/retry-provision-step.sh ai-catalog-bronze /bin/bash /home/opc/init/seed-ai-data-catalog.sh
+RemainAfterExit=yes
 
 [Install]
 WantedBy=default.target

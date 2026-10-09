@@ -31,6 +31,7 @@ const source = route.slice(route.indexOf('async function fetchLakehouseGoldDataS
 const fetchStatus = vm.runInNewContext(`(${source})`, {
   oracledb: { OUT_FORMAT_OBJECT: 1 },
   LAKEHOUSE_GOLD_DATA_REQUIRED_TABLES: ['ORDERS'],
+  DEMO_WAREHOUSE_TABLE_NAMES: [],
   LAKEHOUSE_GOLD_DATA_EXPECTED_ROWS: new Map([['ORDERS', 1]]),
   LAKEHOUSE_WAREHOUSE_STALE_GOLD_DATA_TABLE_NAMES: [],
   quoteOracleIdentifier: name => `"${name}"`,

@@ -69,6 +69,23 @@ function writeStoredState(connections, activeConnectionId) {
   window.dispatchEvent(new CustomEvent('lakehouse-connections-changed'));
 }
 
+
+async function readJsonResponse(response, fallbackMessage) {
+  let payload = null;
+  try {
+    payload = await response.json();
+  } catch {
+    payload = null;
+  }
+
+  if (!response.ok) {
+    const message = payload?.message || payload?.error || fallbackMessage || `Request failed with HTTP ${response.status}`;
+    throw new Error(message);
+  }
+
+  return payload || {};
+}
+
 function createConnectionId() {
   if (typeof crypto !== 'undefined' && crypto.randomUUID) return crypto.randomUUID();
   return `adb-${Date.now()}-${Math.random().toString(16).slice(2)}`;
@@ -387,6 +404,206 @@ function LiveStackDemoDataSection({
   );
 }
 
+const SETUP_STATUS_LABELS = {
+  ready: 'Ready',
+  running: 'In progress',
+  failed: 'Failed',
+  incomplete: 'Incomplete',
+  unavailable: 'Unavailable',
+};
+const SETUP_STEP_LABELS = { ready: 'Ready', running: 'In progress', failed: 'Failed', waiting: 'Waiting' };
+
+function DemoSetupCard() {
+  const [status, setStatus] = useState(null);
+  const [starting, setStarting] = useState(false);
+  const [error, setError] = useState('');
+  const mounted = useRef(false);
+  const requestController = useRef(null);
+  const retryPending = useRef(false);
+
+  const requestStatus = useCallback(async (retry = false) => {
+    // A retry supersedes any older poll; polls never overlap another request.
+    if (retry && retryPending.current) return;
+    if (requestController.current && !retry) return;
+    requestController.current?.abort();
+    const controller = new AbortController();
+    requestController.current = controller;
+    const timeout = window.setTimeout(() => controller.abort(), 30000);
+    if (retry) {
+      retryPending.current = true;
+      setStarting(true);
+      setError('');
+    }
+    try {
+      const response = await fetch(`/api/demo/setup/${retry ? 'retry' : 'status'}`, {
+        method: retry ? 'POST' : 'GET',
+        signal: controller.signal,
+      });
+      const data = await readJsonResponse(response, 'Unable to check demo setup.');
+      if (!Object.hasOwn(SETUP_STATUS_LABELS, data.status) || !Array.isArray(data.steps)) {
+        throw new Error('Demo setup returned an invalid status.');
+      }
+      if (mounted.current && requestController.current === controller) {
+        setStatus(data);
+        setError('');
+      }
+    } catch (err) {
+      if (mounted.current && requestController.current === controller) {
+        const detail = err.name === 'AbortError' ? 'The request timed out.' : err.message;
+        setError(`${detail} Reconnecting to check progress before another retry.`);
+      }
+    } finally {
+      window.clearTimeout(timeout);
+      if (requestController.current === controller) {
+        requestController.current = null;
+        retryPending.current = false;
+        if (mounted.current) setStarting(false);
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    mounted.current = true;
+    requestStatus();
+    const timer = window.setInterval(requestStatus, 5000);
+    return () => {
+      mounted.current = false;
+      window.clearInterval(timer);
+      requestController.current?.abort();
+      requestController.current = null;
+      retryPending.current = false;
+    };
+  }, [requestStatus]);
+
+  const running = starting || status?.status === 'running';
+  const ready = status?.status === 'ready';
+  const failed = status?.status === 'failed';
+  const canRetry = !starting && !error && ['failed', 'incomplete'].includes(status?.status);
+
+  return (
+    <section className={`glass-card p-5 lakehouse-full-data-card ${ready ? 'is-complete' : ''} ${failed ? 'is-error' : ''}`} aria-labelledby="lakehouse-demo-setup-title">
+      <div className="lakehouse-full-data-card__body">
+        <div>
+          <p className="section-kicker">Demo setup</p>
+          <h3 id="lakehouse-demo-setup-title" className="text-lg font-bold flex items-center gap-2 mt-1">
+            <RefreshCw size={18} className="text-[var(--color-accent)]" />
+            Lakehouse demo readiness
+          </h3>
+          <p className="text-sm text-[var(--color-text-dim)] mt-1">
+            Resume unfinished catalog and Data Transforms setup, including the Medallion project. Existing data and completed steps are preserved. Each seed step can retry for up to 20 minutes.
+          </p>
+        </div>
+        <button
+          type="button"
+          className="data-model-demo-button lakehouse-full-data-button"
+          disabled={!canRetry}
+          onClick={() => { if (canRetry && !starting) requestStatus(true); }}
+        >
+          {running ? <Loader2 size={16} className="animate-spin" /> : ready ? <CheckCircle2 size={16} /> : <RefreshCw size={16} />}
+          <span>Retry demo setup</span>
+        </button>
+      </div>
+      <div className="lakehouse-full-data-status" role="status" aria-live="polite">
+        <strong className="text-sm">{starting ? 'Starting retry' : error ? 'Checking connection' : SETUP_STATUS_LABELS[status?.status] || 'Checking setup'}</strong>
+        <p className="text-sm text-[var(--color-text-dim)]">
+          {starting ? 'Starting demo setup. Progress will appear here.' : status?.message || 'Checking catalog and Data Transforms setup progress…'}
+        </p>
+        {error ? <p className="livestack-maintenance-message is-error">{error}</p> : null}
+        {status?.steps?.length ? (
+          <ul className="space-y-2 text-sm" aria-label="Demo setup steps">
+            {status.steps.map((step) => (
+              <li key={step.id} className="flex items-center justify-between gap-3">
+                <span>{step.label}</span>
+                <span className="flex items-center gap-2 text-[var(--color-text-dim)]">
+                  {step.status === 'running' ? <Loader2 size={14} className="animate-spin" aria-hidden="true" /> : step.status === 'ready' ? <CheckCircle2 size={14} aria-hidden="true" /> : step.status === 'failed' ? <AlertTriangle size={14} aria-hidden="true" /> : null}
+                  {SETUP_STEP_LABELS[step.status] || 'Unknown'}
+                </span>
+              </li>
+            ))}
+          </ul>
+        ) : null}
+      </div>
+    </section>
+  );
+}
+
+function FullDataSetCard({ status, loading, onStart }) {
+  const jobStatus = status?.status || 'demo';
+  const running = jobStatus === 'running' || loading;
+  const complete = jobStatus === 'complete';
+  const errored = jobStatus === 'error';
+  const progress = Number(status?.progress || 0);
+  const completedTables = Number(status?.completedTables || 0);
+  const totalTables = Number(status?.totalTables || 0);
+  const rowsLoaded = Number(status?.rowsLoaded || 0);
+  const message = status?.message || 'The standard data set is ready. This optional import targets the provisioned Autonomous Database used by the runtime.';
+
+  return (
+    <section className={`glass-card p-5 lakehouse-full-data-card ${complete ? 'is-complete' : ''} ${errored ? 'is-error' : ''}`} aria-labelledby="lakehouse-full-data-title">
+      <div className="lakehouse-full-data-card__body">
+        <div>
+          <p className="section-kicker">Optional Warehouse Data</p>
+          <h3 id="lakehouse-full-data-title" className="text-lg font-bold flex items-center gap-2 mt-1">
+            <Database size={18} className="text-[var(--color-accent)]" />
+            Full data set
+          </h3>
+          <p className="text-sm text-[var(--color-text-dim)] mt-1">
+            The standard data set supports the recommended runbook demos. Load the complete warehouse data into the provisioned Autonomous Database for further exploration.
+          </p>
+        </div>
+        <button
+          type="button"
+          className="data-model-demo-button lakehouse-full-data-button"
+          onClick={onStart}
+          disabled={running || complete}
+        >
+          {running ? <Loader2 size={16} className="animate-spin" /> : complete ? <CheckCircle2 size={16} /> : <Database size={16} />}
+          <span>Load full data set</span>
+        </button>
+      </div>
+      <div
+        className="lakehouse-full-data-status"
+        role="status"
+        aria-live="polite"
+        aria-busy={running ? 'true' : 'false'}
+      >
+        <div className="flex items-center justify-between gap-3">
+          <span className="text-xs text-[var(--color-text-dim)]">{message}</span>
+          <span className="text-xs font-mono font-semibold">{Math.min(100, Math.max(0, progress))}%</span>
+        </div>
+        <div
+          className="h-2 rounded-full bg-[var(--color-border)]/30 overflow-hidden"
+          role="progressbar"
+          aria-label="Full data set load progress"
+          aria-valuemin={0}
+          aria-valuemax={100}
+          aria-valuenow={Math.min(100, Math.max(0, progress))}
+        >
+          <div
+            className="h-full rounded-full transition-all duration-500"
+            style={{
+              width: `${Math.min(100, Math.max(0, progress))}%`,
+              background: complete
+                ? '#4C825C'
+                : errored
+                  ? '#A83232'
+                  : 'linear-gradient(135deg, #437C94, #4F7D7B)',
+            }}
+          />
+        </div>
+        <div className="lakehouse-full-data-metrics">
+          <span>{completedTables.toLocaleString()} / {totalTables.toLocaleString()} tables</span>
+          <span>{rowsLoaded.toLocaleString()} optional rows in ADB</span>
+          {status?.currentTable ? <span>Current: {status.currentTable}</span> : null}
+        </div>
+        {errored && status?.error ? (
+          <p className="livestack-maintenance-message is-error">{status.error}</p>
+        ) : null}
+      </div>
+    </section>
+  );
+}
+
 function LiveStackMaintenanceSection({
   cleaning,
   cleanupResult,
@@ -451,6 +668,8 @@ export default function AIDataLakehouse({ liveStackReadiness, liveStackStatus })
   const [demoDone, setDemoDone] = useState(false);
   const [demoProgress, setDemoProgress] = useState(0);
   const [demoMessage, setDemoMessage] = useState('');
+  const [fullDataStatus, setFullDataStatus] = useState(null);
+  const [fullDataStarting, setFullDataStarting] = useState(false);
   const [showImportance, setShowImportance] = useState(false);
   const eventSourceRef = useRef(null);
 
@@ -530,8 +749,44 @@ export default function AIDataLakehouse({ liveStackReadiness, liveStackStatus })
     };
   }, []);
 
+  const refreshFullDataStatus = useCallback(() => {
+    return fetch('/api/demo/full-data/status')
+      .then((response) => readJsonResponse(response, 'Could not read full warehouse data status.'))
+      .then((data) => {
+        setFullDataStatus(data);
+        return data;
+      })
+      .catch((err) => {
+        let nextStatus;
+        setFullDataStatus((current) => {
+          if (current?.status === 'running') {
+            nextStatus = {
+              ...current,
+              message: 'Reconnecting to check full data load progress...',
+              pollingError: err.message,
+            };
+            return nextStatus;
+          }
+
+          nextStatus = {
+            status: 'error',
+            progress: 0,
+            message: 'Could not read full warehouse data status.',
+            completedTables: 0,
+            totalTables: 0,
+            rowsLoaded: 0,
+            currentTable: null,
+            error: err.message,
+          };
+          return nextStatus;
+        });
+        return nextStatus;
+      });
+  }, []);
+
   useEffect(() => {
     refreshDemoStatus();
+    refreshFullDataStatus();
 
     return () => {
       if (eventSourceRef.current) {
@@ -539,7 +794,13 @@ export default function AIDataLakehouse({ liveStackReadiness, liveStackStatus })
         eventSourceRef.current = null;
       }
     };
-  }, [refreshDemoStatus]);
+  }, [refreshDemoStatus, refreshFullDataStatus]);
+
+  useEffect(() => {
+    if (fullDataStatus?.status !== 'running') return undefined;
+    const timer = window.setInterval(refreshFullDataStatus, 3000);
+    return () => window.clearInterval(timer);
+  }, [fullDataStatus?.status, refreshFullDataStatus]);
 
   useEffect(() => {
     const nextActiveConnectionId = connections.some((connection) => connection.id === activeConnectionId)
@@ -661,6 +922,40 @@ export default function AIDataLakehouse({ liveStackReadiness, liveStackStatus })
       refreshDemoStatus();
     };
   }, [demoHasData, demoRunning, refreshDemoStatus]);
+
+  const startFullDataLoad = useCallback(async () => {
+    if (fullDataStarting || fullDataStatus?.status === 'running' || fullDataStatus?.status === 'complete') return;
+
+    setFullDataStarting(true);
+    setFullDataStatus((current) => ({
+      status: 'running',
+      progress: current?.progress || 0,
+      message: 'Starting full warehouse data load...',
+      completedTables: current?.completedTables || 0,
+      totalTables: current?.totalTables || 0,
+      rowsLoaded: current?.rowsLoaded || 0,
+      currentTable: current?.currentTable || null,
+    }));
+
+    try {
+      const response = await fetch('/api/demo/full-data', { method: 'POST' });
+      const data = await readJsonResponse(response, 'Full warehouse data load could not start.');
+      setFullDataStatus(data);
+    } catch (err) {
+      setFullDataStatus({
+        status: 'error',
+        progress: 0,
+        message: 'Full warehouse data load could not start.',
+        completedTables: 0,
+        totalTables: 0,
+        rowsLoaded: 0,
+        currentTable: null,
+        error: err.message,
+      });
+    } finally {
+      setFullDataStarting(false);
+    }
+  }, [fullDataStarting, fullDataStatus?.status]);
 
   function resetForm() {
     setEditingConnectionId(null);
@@ -1172,6 +1467,12 @@ FROM dual;`}
         progress={demoProgress}
         message={demoMessage}
         onStart={startDemoRefresh}
+      />
+      <DemoSetupCard />
+      <FullDataSetCard
+        status={fullDataStatus}
+        loading={fullDataStarting}
+        onStart={startFullDataLoad}
       />
       <LiveStackMaintenanceSection
         cleaning={cleaningReturnConversation}

@@ -8,6 +8,21 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../config/database');
+const { getDemoSetupStatus, retryDemoSetup } = require('../lib/demoSetupService');
+
+router.get('/setup/status', async (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  res.json(await getDemoSetupStatus());
+});
+
+router.post('/setup/retry', async (req, res) => {
+  try {
+    res.status(202).json(await retryDemoSetup());
+  } catch {
+    res.status(503).json({ error: 'Could not request demo setup. Check that the host setup service is running.' });
+  }
+});
+const { getFullDataLoadStatus, startFullDataLoad } = require('../lib/fullDataLoadService');
 
 // ── Helper: get count from a table ──────────────────────────────────────────
 async function tableCount(table) {
@@ -60,6 +75,49 @@ router.get('/status', async (req, res) => {
   } catch (err) {
     console.error('Demo status error:', err);
     res.status(500).json({ error: err.message });
+  }
+});
+
+router.get('/full-data/status', async (req, res) => {
+  try {
+    res.json(await getFullDataLoadStatus());
+  } catch (err) {
+    res.status(503).json({
+      status: 'error',
+      progress: 0,
+      message: err.message || 'Could not read full warehouse data status.',
+      completedTables: 0,
+      totalTables: 0,
+      rowsLoaded: 0,
+      currentTable: null,
+      error: err.message,
+    });
+  }
+});
+
+router.post('/full-data', async (req, res) => {
+  try {
+    startFullDataLoad();
+    res.status(202).json({
+      status: 'running',
+      progress: 0,
+      message: 'Starting full warehouse data load...',
+      completedTables: 0,
+      totalTables: 0,
+      rowsLoaded: 0,
+      currentTable: null,
+    });
+  } catch (err) {
+    res.status(503).json({
+      status: 'error',
+      progress: 0,
+      message: err.message || 'Could not start full warehouse data load.',
+      completedTables: 0,
+      totalTables: 0,
+      rowsLoaded: 0,
+      currentTable: null,
+      error: err.message,
+    });
   }
 });
 

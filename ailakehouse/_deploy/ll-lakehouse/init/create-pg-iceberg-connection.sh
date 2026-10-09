@@ -1433,13 +1433,15 @@ PY
   [[ -n "${schema_id}" ]] || return 1
   log "Created Data Transforms Iceberg schema ${connection_name}.gold."
   printf '%s' "${schema_id}" > "${WORK_DIR}/iceberg-gold-schema-id"
+  # The data-load builder consumes this file; refresh the pre-create snapshot.
+  api_request "GET" "${api_prefix}/dataservers/id/${connection_id}" "" "${detail_file}" || return 1
 }
 
 ensure_demo_data_entities() {
   local api_prefix="$1"
   local source_table="${DATA_TRANSFORMS_DEMO_DATA_FLOW_SOURCE_TABLE:-PRODUCT_MASTER_RAW_ICEBERG_EXT}"
   local target_table="${DATA_TRANSFORMS_DEMO_DATA_FLOW_TARGET_TABLE:-GOLD_PRODUCTS}"
-  local connection_id detail_file schema_file schema_response models_file model_file model_response stores_file missing session_id job_file attempt agent_name
+  local connection_id detail_file schema_file schema_response models_file model_file model_response stores_file missing agent_name
 
   stores_file="${WORK_DIR}/demo-datastores.json"
   api_request "GET" "${api_prefix}/datastores" "" "${stores_file}" || return 1
@@ -1514,35 +1516,22 @@ model=json.load(open(os.environ["DEMO_MODEL_FILE"], encoding="utf-8"))
 model.update(reverseType="CUSTOMIZED",reverseAgent=os.environ["DEMO_REVERSE_AGENT"],reverseContext="GLOBAL",reverseMask="%",reverseObjectTypes=["TABLE"],reverseObjList=os.environ["DEMO_DATASTORE_NAME"])
 json.dump(model, open(sys.argv[1], "w", encoding="utf-8"), separators=(",", ":"))
 PY
-    api_request "POST" "${api_prefix}/models/reverse/custom" "${WORK_DIR}/demo-reverse-${missing}.json" "${WORK_DIR}/demo-reverse-response.json" || return 1
-    session_id="$("${PYTHON_BIN}" - "${WORK_DIR}/demo-reverse-response.json" <<'PY'
-import json,sys
-print(json.load(open(sys.argv[1], encoding="utf-8")).get("sessionId", ""))
+    DT_BASE_URL="${DT_BASE_URL}" CURL_AUTH_CONFIG="${CURL_AUTH_CONFIG}" COOKIE_JAR="${COOKIE_JAR}" \
+      DATA_TRANSFORMS_API_PREFIX="${api_prefix}" \
+      "${PYTHON_BIN}" - "$(dirname "${BASH_SOURCE[0]}")" "${WORK_DIR}/demo-reverse-${missing}.json" <<'PY' || return 1
+import importlib.util, json, sys
+sys.path.insert(0, sys.argv[1])
+from data_transform_import import import_model
+spec = importlib.util.spec_from_file_location('medallion_api', sys.argv[1] + '/provision-medallion.py')
+module = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(module)
+try:
+    import_model(module.Api(), json.load(open(sys.argv[2], encoding='utf-8')))
+except Exception as error:
+    print('[data-transforms] ' + str(error), file=sys.stderr)
+    sys.exit(1)
 PY
-)"
-    [[ -n "${session_id}" ]] || return 1
-    job_file="${WORK_DIR}/demo-reverse-${missing}-job.json"
-    for attempt in {1..24}; do
-      api_request "GET" "${api_prefix}/jobs/sessionId/${session_id}" "" "${job_file}" || return 1
-      if "${PYTHON_BIN}" - "${job_file}" <<'PY'
-import json,sys
-status=json.load(open(sys.argv[1], encoding="utf-8")).get("status")
-sys.exit(0 if status == "DONE" else 1)
-PY
-      then
-        break
-      fi
-      sleep 5
-    done
-    if ! "${PYTHON_BIN}" - "${job_file}" <<'PY'
-import json,sys
-sys.exit(0 if json.load(open(sys.argv[1], encoding="utf-8")).get("status") == "DONE" else 1)
-PY
-    then
-      log "Data Transforms import for ${missing} did not complete within two minutes."
-      return 1
-    fi
-    log "Imported Data Transforms entity ${missing}."
+    log "Metadata import job completed for ${missing}; checking that the required entities are present."
   done
   api_request "GET" "${api_prefix}/datastores" "" "${stores_file}" || return 1
   missing="$(DEMO_STORES_FILE="${stores_file}" DEMO_SOURCE_TABLE="${source_table}" DEMO_TARGET_TABLE="${target_table}" "${PYTHON_BIN}" - <<'PY'
@@ -1552,7 +1541,10 @@ names={str(x.get("name", "")).casefold() for x in stores if isinstance(x, dict)}
 print(" ".join(name for name in (os.environ["DEMO_SOURCE_TABLE"], os.environ["DEMO_TARGET_TABLE"]) if name.casefold() not in names))
 PY
 )"
-  [[ -z "${missing}" ]]
+  if [[ -n "${missing}" ]]; then
+    log "Required PG entities still missing after metadata import: ${missing}. Check iceberg-seed.service and its PG table setup."
+    return 1
+  fi
 }
 
 ensure_demo_data_flow() {
@@ -1698,7 +1690,7 @@ ensure_demo_data_load() {
     return 1
   fi
   DEMO_DATA_LOAD_NAME="${load_name}" DEMO_DATA_LOAD_SOURCE_TABLE="${source_table}" \
-    "${PYTHON_BIN}" - "${project_file}" "${oracle_file}" "${iceberg_file}" "${payload_file}" <<'PY'
+    "${PYTHON_BIN}" - "${project_file}" "${oracle_file}" "${iceberg_file}" "${payload_file}" <<'PY' || return 1
 import json
 import os
 import sys
@@ -1718,6 +1710,7 @@ payload = {"bulkLoadName": os.environ["DEMO_DATA_LOAD_NAME"], "parentProjectID":
            "sourceTables": [{"sourceTableName": os.environ["DEMO_DATA_LOAD_SOURCE_TABLE"], "targetPreloadAction": "APPEND"}]}
 json.dump(payload, open(sys.argv[4], "w", encoding="utf-8"), separators=(",", ":"))
 PY
+  [[ -s "${payload_file}" ]] || return 1
   if ! api_request "POST" "${api_prefix}/bulkload" "${payload_file}" "${response_file}"; then
     log "Failed to create Data Transforms demo data load ${load_name}; HTTP ${API_STATUS}: $(summarize_response "${response_file}")"
     return 1

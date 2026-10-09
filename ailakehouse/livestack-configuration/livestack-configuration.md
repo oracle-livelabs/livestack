@@ -16,6 +16,7 @@ In this scene, you will:
 
 - Confirm that the required services are connected.
 - Refresh the demo data before starting the business scenes.
+- Keep the recommended demo baseline loaded, and optionally load the full CSV-backed warehouse data set.
 - Reset the Ask PeakGear conversation only when you need to replay the return and exchange scenario.
 
 ## Task 1: Double-check LiveStack Configuration
@@ -33,13 +34,13 @@ Check the LiveStack service connections before starting the business walkthrough
    - **GoldenGate Stream Analytics** shows **Connected**.
    - **OCI GenAI** shows **Connected**.
 
-## Task 2: Refresh and load demo data
+## Task 2: Refresh and verify the demo baseline
 
 **Important:** Complete this step before running the demo.
 
 ![Demo Maintenance section with Verify & Refresh Demo highlighted](images/task-3-demo-maintenance-refresh.png)
 
-Refresh and load the demo data before running the scenes:
+Refresh and verify the demo baseline before running the scenes:
 
 1. In **LiveStack Configuration**, go to **Demo Maintenance**.
 2. Click **Verify & Refresh Demo** or **Load Demo Data**, depending on the button label shown by the current environment.
@@ -49,7 +50,18 @@ Refresh and load the demo data before running the scenes:
 
 **Note:** Sample values may change after data refreshes or rebuilds. Focus on the expected result pattern and the business takeaway, not the exact values.
 
-## Task 3: Reset the return workflow only when needed
+## Task 3: Load the full CSV-backed warehouse data set only when needed
+
+The provisioned environment loads the standard demo data set by default. That data set is enough for the recommended PeakGear runbook demos and keeps VM provisioning faster.
+
+Load the full data set when you want every available warehouse CSV table in ADB:
+
+1. In **LiveStack Configuration**, go to **Optional Warehouse Data**.
+2. Click **Load full data set**.
+3. Keep working in the app or leave the page open while the import runs. Returning to this page shows the latest progress.
+4. Confirm that the card reports the full data set as loaded before running ad hoc warehouse exploration against every CSV-backed table.
+
+## Task 4: Reset the return workflow only when needed
 
 ![Ask PeakGear conversation reset section with Clear Return Conversation highlighted](images/task-4-return-reset.png)
 

@@ -74,6 +74,7 @@ zip -qr "${TMP_ZIP}" . \
   -x './build_dev.zip.bak-*' \
   -x './.git/*' \
   -x './.omx/*' \
+  -x './ingestion/.demo-setup/*' \
   -x './.env*' \
   -x './**/.env*' \
   -x './Wallet_*.zip' \
@@ -107,6 +108,7 @@ zip -qr "${TMP_ZIP}" . \
   -x './ingestion/signal-generator/node_modules/*' \
   -x './ingestion/gravitino/dist/*' \
   -x './**/__pycache__/*' \
+  -x './**/.dt-import-jobs/*' \
   -x './**/*.pyc' \
   -x './**/.DS_Store' \
   -x './**/*.done' \

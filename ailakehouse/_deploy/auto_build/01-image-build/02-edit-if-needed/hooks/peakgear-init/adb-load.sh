@@ -18,6 +18,7 @@ fi
 
 ONNX_MODEL_URL="${ONNX_MODEL_URL:-}"
 ONNX_MODEL_FILENAME="${ONNX_MODEL_FILENAME:-all_MiniLM_L12_v2.onnx}"
+WAREHOUSE_DATA_PROFILE="${ADB_WAREHOUSE_DATA_PROFILE:-demo}"
 WORK_DIR=""
 
 if [[ -z "${ONNX_MODEL_URL}" || "${ONNX_MODEL_URL}" == *"<"* ]]; then
@@ -34,6 +35,17 @@ exec >> "${LOG_FILE}" 2>&1
 log() {
   printf '[adb-load] %s\n' "$*"
 }
+
+WAREHOUSE_DATA_PROFILE_NORMALIZED="$(printf '%s' "${WAREHOUSE_DATA_PROFILE}" | tr '[:upper:]' '[:lower:]')"
+case "${WAREHOUSE_DATA_PROFILE_NORMALIZED}" in
+  demo|full)
+    WAREHOUSE_DATA_PROFILE="${WAREHOUSE_DATA_PROFILE_NORMALIZED}"
+    ;;
+  *)
+    log "Invalid ADB_WAREHOUSE_DATA_PROFILE=${WAREHOUSE_DATA_PROFILE}; expected demo or full."
+    exit 1
+    ;;
+esac
 
 is_enabled() {
   local value="${1:-}"
@@ -71,6 +83,7 @@ generate_warehouse_sql() {
     WAREHOUSE_CREATE_SQL="${WORK_DIR}/warehouse_create.sql" \
     WAREHOUSE_LOAD_SQL="${WORK_DIR}/warehouse_load.sql" \
     WAREHOUSE_CHECK_SQL="${WORK_DIR}/warehouse_check.sql" \
+    WAREHOUSE_DATA_PROFILE="${WAREHOUSE_DATA_PROFILE}" \
     python3 <<'PY'
 import json
 import os
@@ -80,6 +93,13 @@ from pathlib import Path
 
 gold_data_dir = Path(os.environ["GOLD_DATA_DIR"])
 manifest_file = Path(os.environ["MANIFEST_FILE"])
+warehouse_data_profile = os.environ.get("WAREHOUSE_DATA_PROFILE", "demo").strip().lower()
+demo_table_names = {
+    "CUSTOMER_ORDER_STATUS",
+    "DIM_PRODUCT",
+    "PRODUCT_MANUALS_SOURCE",
+    "PRODUCT_VECTOR_STORE",
+}
 
 def quote_identifier(value):
     text = str(value or "").strip()
@@ -163,10 +183,15 @@ stale_table_names = sorted({
     if table_name and table_name not in active_table_names
 })
 
+load_entries = entries if warehouse_data_profile == "full" else [
+    entry for entry in entries
+    if str(entry["table_name"]).strip().upper() in demo_table_names
+]
+
 drop_lines = ["PROMPT Dropping warehouse gold-data CSV tables..."]
 create_lines = ["PROMPT Creating warehouse gold-data CSV tables..."]
 load_lines = [
-    "PROMPT Loading warehouse gold-data CSV tables...",
+    f"PROMPT Loading warehouse gold-data CSV tables ({warehouse_data_profile} profile)...",
     "SET LOAD DEFAULT",
     "SET LOAD BATCH_ROWS 5000 BATCHES_PER_COMMIT 1 SCAN 5000 CLEAN_NAMES TRANSFORM",
 ]
@@ -185,6 +210,8 @@ for entry in entries:
         column_defs.append(f"  {quote_identifier(column_name)} {normalized_type(column.get('data_type'))}")
     create_lines.append(f"CREATE TABLE {table_sql} (\n" + ",\n".join(column_defs) + "\n);")
 
+for entry in load_entries:
+    table_sql = quote_identifier(entry["table_name"])
     load_lines.append(f"LOAD TABLE {load_identifier(entry['table_name'])} {entry['csv_path']}")
     check_lines.append(f"  check_table({sql_string(table_sql)}, {entry['expected']});")
 
@@ -194,6 +221,15 @@ Path(os.environ["WAREHOUSE_LOAD_SQL"]).write_text("\n".join(load_lines) + "\n")
 Path(os.environ["WAREHOUSE_CHECK_SQL"]).write_text("\n".join(check_lines) + "\n")
 PY
     return 0
+  fi
+
+  if [[ "${WAREHOUSE_DATA_PROFILE}" == "demo" ]]; then
+    if ! command -v python3 >/dev/null 2>&1; then
+      log "Cannot use demo warehouse data profile because python3 is unavailable; set ADB_WAREHOUSE_DATA_PROFILE=full to use the legacy loader."
+    else
+      log "Cannot use demo warehouse data profile because ${manifest_file} is unavailable; set ADB_WAREHOUSE_DATA_PROFILE=full to use the legacy loader."
+    fi
+    exit 1
   fi
 
   : > "${WORK_DIR}/warehouse_drop.sql"
@@ -209,6 +245,12 @@ PY
       table_name="${csv_file%.csv}"
       table_name="$(printf '%s' "${table_name}" | tr '[:lower:]' '[:upper:]' | sed -E 's/[^A-Z0-9_$#]+/_/g')"
       printf 'DROP TABLE "%s" PURGE;\n' "${table_name}" >> "${WORK_DIR}/warehouse_drop.sql"
+      if [[ "${WAREHOUSE_DATA_PROFILE}" != "full" ]]; then
+        case "${table_name}" in
+          CUSTOMER_ORDER_STATUS|DIM_PRODUCT|PRODUCT_MANUALS_SOURCE|PRODUCT_VECTOR_STORE) ;;
+          *) continue ;;
+        esac
+      fi
       if [[ "${table_name}" =~ ^[A-Z][A-Z0-9_\$#]{0,127}$ ]]; then
         printf 'LOAD TABLE %s %s NEW\n' "${table_name}" "${csv_path}"
       else
@@ -325,6 +367,7 @@ fi
 log "Starting one-time ADB SQLcl bootstrap for schema ${APP_SCHEMA}."
 log "Using wallet directory ${WALLET_DIR}."
 log "Using SQLcl wallet copy ${SQLCL_WALLET_DIR}."
+log "Using warehouse data profile ${WAREHOUSE_DATA_PROFILE}."
 
 awk_password="$(printf '%s' "${APP_PASSWORD}" | sed 's/[\\&]/\\&/g; s/"/""/g')"
 awk -v pass="${awk_password}" '
@@ -819,6 +862,7 @@ run_sql "${WORK_DIR}/security_verify.sql"
   echo "loaded_at=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
   echo "schema=${APP_SCHEMA}"
   echo "connect_target=${CONNECT_TARGET}"
+  echo "warehouse_data_profile=${WAREHOUSE_DATA_PROFILE}"
 } > "${MARKER_FILE}"
 chmod 600 "${MARKER_FILE}"
 

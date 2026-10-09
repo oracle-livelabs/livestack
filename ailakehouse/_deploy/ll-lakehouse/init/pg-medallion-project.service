@@ -1,7 +1,7 @@
 [Unit]
 Description=Provision additional PeakGear medallion Data Transforms project
 After=network-online.target pg-iceberg-connection.service pg-ai-catalog-bronze.service
-Requires=pg-iceberg-connection.service
+Requires=pg-iceberg-connection.service pg-ai-catalog-bronze.service
 Wants=pg-ai-catalog-bronze.service
 StartLimitIntervalSec=0
 
