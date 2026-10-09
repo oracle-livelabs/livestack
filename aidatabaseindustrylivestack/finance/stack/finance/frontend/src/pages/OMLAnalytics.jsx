@@ -190,36 +190,13 @@ function DemandOraclePanel() {
         <FeatureBadge label="12 Training Features" color="green" />
         <FeatureBadge label="In-DB Model Persistence" color="purple" />
       </div>
-      <SqlBlock code={`-- Step 1: Train the model once, if it does not already exist.
--- This standalone example uses a separate model name so it does not
--- collide with the application's persisted DEMAND_SURGE_MODEL.
-DECLARE
-  v_model_count NUMBER;
-BEGIN
-  SELECT COUNT(*) INTO v_model_count
-  FROM user_mining_models
-  WHERE model_name = 'DEMAND_SURGE_DEMO_MODEL';
-
-  IF v_model_count = 0 THEN
-    DBMS_DATA_MINING.CREATE_MODEL(
-      model_name          => 'DEMAND_SURGE_DEMO_MODEL',
-      mining_function     => DBMS_DATA_MINING.CLASSIFICATION,
-      data_table_name     => 'OML_DEMAND_TRAINING_V',
-      case_id_column_name => 'PRODUCT_ID',
-      target_column_name  => 'SURGE_LABEL',
-      settings_table_name => 'OML_DEMAND_SETTINGS'
-    );
-  END IF;
-END;
-/
-
--- Step 2: Score the real training features against live products.
--- OML_DEMAND_TRAINING_V supplies all 12 attributes expected by the model.
+      <SqlBlock code={`-- Read-only query. DEMAND_SURGE_MODEL is provisioned during database bootstrap.
+-- OML_DEMAND_TRAINING_V supplies the 12 attributes expected by the model.
 SELECT p.product_id,
        p.product_name,
        p.category,
        p.unit_price,
-       PREDICTION(DEMAND_SURGE_DEMO_MODEL USING
+       PREDICTION(DEMAND_SURGE_MODEL USING
          f.category      AS category,
          f.unit_price    AS unit_price,
          f.total_posts   AS total_posts,
@@ -233,7 +210,7 @@ SELECT p.product_id,
          f.units_sold    AS units_sold,
          f.revenue       AS revenue
        ) AS predicted_surge,
-       ROUND(PREDICTION_PROBABILITY(DEMAND_SURGE_DEMO_MODEL, 'SURGE' USING
+       ROUND(PREDICTION_PROBABILITY(DEMAND_SURGE_MODEL, 'SURGE' USING
          f.category      AS category,
          f.unit_price    AS unit_price,
          f.total_posts   AS total_posts,
@@ -289,43 +266,34 @@ function RFMOraclePanel() {
         <FeatureBadge label="NTILE(4) RFM Labels" color="purple" />
         <FeatureBadge label="Churn Risk Scoring" color="red" />
       </div>
-      <SqlBlock code={`-- Step 1: Train K-Means model (one-time)
-BEGIN
-  DBMS_DATA_MINING.CREATE_MODEL(
-    model_name      => 'CUSTOMER_SEGMENT_MODEL',
-    mining_function => DBMS_DATA_MINING.CLUSTERING,
-    data_table_name => 'OML_CUSTOMER_RFM_V',
-    case_id_column_name => 'CUSTOMER_ID',
-    settings_table_name => 'CUST_SEGMENT_SETTINGS'
-    -- ALGO_KMEANS, 4 clusters, PREP_AUTO_ON
-  );
-END;
-
--- Step 2: Score clients with CLUSTER_ID()
+      <SqlBlock code={`-- Read-only query. CUSTOMER_SEGMENT_MODEL is provisioned during database bootstrap.
 SELECT c.first_name || ' ' || c.last_name AS full_name,
-
-  -- K-Means cluster assignment
-  CLUSTER_ID(CUSTOMER_SEGMENT_MODEL USING
-    cm.lifetime_value, cm.recency_days,
-    cm.frequency, cm.monetary,
-    cm.avg_order_value, cm.total_items
+       CLUSTER_ID(CUSTOMER_SEGMENT_MODEL USING
+         cs.lifetime_value  AS lifetime_value,
+         cs.recency_days    AS recency_days,
+         cs.frequency       AS frequency,
+         cs.monetary        AS monetary,
+         cs.avg_order_value AS avg_order_value,
+         cs.total_items     AS total_items
   ) AS oml_cluster_id,
-
-  -- Cluster membership probability
-  ROUND(CLUSTER_PROBABILITY(
-    CUSTOMER_SEGMENT_MODEL USING ...
-  ), 3) AS cluster_probability,
-
-  -- RFM quartile labels layered on top
-  NTILE(4) OVER (ORDER BY recency ASC)  AS R,
-  NTILE(4) OVER (ORDER BY frequency DESC) AS F,
-  NTILE(4) OVER (ORDER BY monetary DESC)  AS M
-
-FROM customer_metrics cm
-ORDER BY total_spent DESC;`} />
+       ROUND(CLUSTER_PROBABILITY(CUSTOMER_SEGMENT_MODEL USING
+         cs.lifetime_value  AS lifetime_value,
+         cs.recency_days    AS recency_days,
+         cs.frequency       AS frequency,
+         cs.monetary        AS monetary,
+         cs.avg_order_value AS avg_order_value,
+         cs.total_items     AS total_items
+       ), 3) AS cluster_probability,
+       NTILE(4) OVER (ORDER BY cs.recency_days ASC) AS recency_quartile,
+       NTILE(4) OVER (ORDER BY cs.frequency DESC) AS frequency_quartile,
+       NTILE(4) OVER (ORDER BY cs.monetary DESC) AS monetary_quartile
+FROM oml_customer_segment_v cs
+JOIN customers c ON c.customer_id = cs.customer_id
+ORDER BY cs.monetary DESC
+FETCH FIRST 50 ROWS ONLY;`} />
       <div className="oml-model-flow">
         <div className="text-[9px] text-center text-[var(--color-text)] font-bold mb-1">DBMS_DATA_MINING K-Means Pipeline</div>
-        <DiagramBox label="OML_CUSTOMER_RFM_V (2,000 clients)" sub="6 features: LTV, recency, frequency, monetary, AOV, items" color="#C74634" />
+        <DiagramBox label="OML_CUSTOMER_SEGMENT_V (2,000 clients)" sub="6 features: LTV, recency, frequency, monetary, AOV, items" color="#C74634" />
         <div className="text-center text-[10px] text-[var(--color-text-dim)]">↓ CREATE_MODEL</div>
         <DiagramBox label="CUSTOMER_SEGMENT_MODEL (K-Means)" sub="ALGO_KMEANS · 4 clusters · PREP_AUTO" color="#796087" />
         <div className="text-center text-[10px] text-[var(--color-text-dim)]">↓ CLUSTER_ID()</div>
@@ -361,20 +329,7 @@ function ForecastOraclePanel() {
         <FeatureBadge label="7-Day Moving Average" color="cyan" />
         <FeatureBadge label="Confidence Intervals" color="purple" />
       </div>
-      <SqlBlock code={`-- Step 1: Train GLM model (one-time)
-BEGIN
-  DBMS_DATA_MINING.CREATE_MODEL(
-    model_name      => 'REVENUE_PREDICT_MODEL',
-    mining_function => DBMS_DATA_MINING.REGRESSION,
-    data_table_name => 'OML_REVENUE_TRAINING_V',
-    case_id_column_name => 'ORDER_ID',
-    target_column_name  => 'TARGET_REVENUE',
-    settings_table_name => 'REVENUE_PREDICT_SETTINGS'
-    -- ALGO_GENERALIZED_LINEAR_MODEL, PREP_AUTO_ON
-  );
-END;
-
--- Step 2: Score orders + time-series trend
+      <SqlBlock code={`-- Read-only query. REVENUE_PREDICT_MODEL is provisioned during database bootstrap.
 WITH daily_rev AS (
   SELECT TRUNC(CAST(created_at AS DATE)) AS day,
     SUM(order_total) AS revenue,
@@ -397,7 +352,8 @@ glm_stats AS (
 )
 SELECT day, revenue, slope * rn + intercept AS trend,
   r2, avg_predicted
-FROM daily_rev CROSS JOIN params CROSS JOIN glm_stats;`} />
+FROM daily_rev CROSS JOIN params CROSS JOIN glm_stats
+ORDER BY day;`} />
       <div className="oml-model-flow">
         <div className="text-[9px] text-center text-[var(--color-text)] font-bold mb-1">Dual Model Pipeline</div>
         <DiagramBox label="OML_REVENUE_TRAINING_V (3,000 orders)" sub="features: tier, LTV, demand_score, items, avg_price" color="#4C825C" />
@@ -438,42 +394,32 @@ function ClustersOraclePanel() {
         <FeatureBadge label="ONNX Embeddings Available" color="orange" />
         <FeatureBadge label="In-DB Model Persistence" color="yellow" />
       </div>
-      <SqlBlock code={`-- Step 1: Train K-Means model (one-time)
-BEGIN
-  DBMS_DATA_MINING.CREATE_MODEL(
-    model_name      => 'PRODUCT_CLUSTER_MODEL',
-    mining_function => DBMS_DATA_MINING.CLUSTERING,
-    data_table_name => 'OML_PRODUCT_CLUSTER_V',
-    case_id_column_name => 'PRODUCT_ID',
-    settings_table_name => 'PROD_CLUSTER_SETTINGS'
-    -- ALGO_KMEANS, 5 clusters, PREP_AUTO_ON
-  );
-END;
-
--- Step 2: Score financial products with CLUSTER_ID()
+      <SqlBlock code={`-- Read-only query. PRODUCT_CLUSTER_MODEL is provisioned during database bootstrap.
 SELECT p.product_name, p.category, p.unit_price,
-
-  -- K-Means cluster assignment
-  CLUSTER_ID(PRODUCT_CLUSTER_MODEL USING
-    pcv.unit_price, pcv.weight_kg,
-    pcv.units_sold, pcv.revenue,
-    pcv.order_count, pcv.total_engagement,
-    pcv.avg_sentiment, pcv.avg_virality
+       CLUSTER_ID(PRODUCT_CLUSTER_MODEL USING
+         pcv.unit_price       AS unit_price,
+         pcv.weight_kg        AS weight_kg,
+         pcv.units_sold       AS units_sold,
+         pcv.revenue          AS revenue,
+         pcv.order_count      AS order_count,
+         pcv.total_engagement AS total_engagement,
+         pcv.avg_sentiment    AS avg_sentiment,
+         pcv.avg_virality     AS avg_virality
   ) AS cluster_id,
-
-  -- Membership probability (0.0 – 1.0)
-  ROUND(CLUSTER_PROBABILITY(
-    PRODUCT_CLUSTER_MODEL USING *
-  ), 4) AS cluster_prob
-
+       ROUND(CLUSTER_PROBABILITY(PRODUCT_CLUSTER_MODEL USING
+         pcv.unit_price       AS unit_price,
+         pcv.weight_kg        AS weight_kg,
+         pcv.units_sold       AS units_sold,
+         pcv.revenue          AS revenue,
+         pcv.order_count      AS order_count,
+         pcv.total_engagement AS total_engagement,
+         pcv.avg_sentiment    AS avg_sentiment,
+         pcv.avg_virality     AS avg_virality
+       ), 4) AS cluster_prob
 FROM OML_PRODUCT_CLUSTER_V pcv
 JOIN products p ON pcv.PRODUCT_ID = p.PRODUCT_ID
-ORDER BY cluster_id, cluster_prob DESC;
-
--- Training view features:
--- unit_price, weight_kg, units_sold, revenue,
--- order_count, total_engagement, avg_sentiment,
--- avg_virality`} />
+ORDER BY cluster_id, cluster_prob DESC
+FETCH FIRST 50 ROWS ONLY;`} />
       <div className="oml-model-flow">
         <div className="text-[9px] text-center text-[var(--color-text)] font-bold mb-1">DBMS_DATA_MINING K-Means Pipeline</div>
         <DiagramBox label="OML_PRODUCT_CLUSTER_V (187 financial products)" sub="8 features: price, sales, signal engagement, sentiment" color="#4F7D7B" />
@@ -511,39 +457,71 @@ function InventoryOraclePanel() {
         <FeatureBadge label="Revenue Impact" color="red" />
         <FeatureBadge label="Days of Coverage" color="green" />
       </div>
-      <SqlBlock code={`-- OML Capacity Intelligence (actual query)
-SELECT p.product_name, fc.center_name,
-  i.quantity_on_hand, i.reorder_point,
-  df.predicted_demand, df.social_factor AS social_factor,
-
-  -- Real-time OML scoring
-  PREDICTION(DEMAND_SURGE_MODEL USING
-    p.category, p.unit_price,
-    eng.total_posts, eng.avg_sentiment, ...
-  ) AS oml_surge_prediction,
-
-  ROUND(PREDICTION_PROBABILITY(
-    DEMAND_SURGE_MODEL, 'SURGE' USING ...
-  ) * 100, 1) AS oml_surge_probability,
-
-  -- Availability risk metrics
-  CASE WHEN qty = 0 THEN 'OUT_OF_STOCK'
-       WHEN qty < reorder * 0.5 THEN 'CRITICAL'
-       WHEN qty < predicted_demand THEN 'AT_RISK'
-  END AS capacity_status,
-
-  -- Days of coverage at predicted consumption rate
-  ROUND(qty / (predicted_demand / 7), 1)
-    AS days_of_supply,
-
-  -- Revenue at risk from capacity shortfall
-  (predicted_demand - qty) * unit_price
-    AS revenue_at_risk
-
-	FROM inventory i
-	JOIN forecast_rollup df ON df.product_id = p.product_id
-	  -- forecast_rollup uses MIN(forecast_date) >= TRUNC(SYSDATE)
-	ORDER BY oml_surge_probability DESC;`} />
+      <SqlBlock code={`-- Read-only query. The OML model and forecasts are provisioned during database bootstrap.
+WITH selected_forecast_date AS (
+  SELECT COALESCE(
+    MIN(CASE WHEN forecast_date >= TRUNC(SYSDATE) THEN forecast_date END),
+    MAX(forecast_date)
+  ) AS forecast_date
+  FROM demand_forecasts
+),
+forecast_rollup AS (
+  SELECT df.product_id,
+         ROUND(SUM(df.predicted_demand), 0) AS predicted_demand,
+         ROUND(MAX(df.social_factor), 2) AS social_factor
+  FROM demand_forecasts df
+  JOIN selected_forecast_date s ON s.forecast_date = df.forecast_date
+  GROUP BY df.product_id
+),
+scored_products AS (
+  SELECT f.product_id,
+         PREDICTION(DEMAND_SURGE_MODEL USING
+           f.category AS category, f.unit_price AS unit_price,
+           f.total_posts AS total_posts, f.avg_sentiment AS avg_sentiment,
+           f.total_likes AS total_likes, f.total_shares AS total_shares,
+           f.total_views AS total_views, f.avg_virality AS avg_virality,
+           f.viral_posts AS viral_posts, f.rising_posts AS rising_posts,
+           f.units_sold AS units_sold, f.revenue AS revenue
+         ) AS oml_surge_prediction,
+         ROUND(PREDICTION_PROBABILITY(DEMAND_SURGE_MODEL, 'SURGE' USING
+           f.category AS category, f.unit_price AS unit_price,
+           f.total_posts AS total_posts, f.avg_sentiment AS avg_sentiment,
+           f.total_likes AS total_likes, f.total_shares AS total_shares,
+           f.total_views AS total_views, f.avg_virality AS avg_virality,
+           f.viral_posts AS viral_posts, f.rising_posts AS rising_posts,
+           f.units_sold AS units_sold, f.revenue AS revenue
+         ) * 100, 1) AS oml_surge_probability
+  FROM oml_demand_training_v f
+)
+SELECT p.product_name,
+       fc.center_name,
+       i.quantity_on_hand,
+       i.reorder_point,
+       NVL(df.predicted_demand, 0) AS predicted_demand,
+       NVL(df.social_factor, 1) AS social_factor,
+       sp.oml_surge_prediction,
+       sp.oml_surge_probability,
+       CASE
+         WHEN i.quantity_on_hand = 0 THEN 'OUT_OF_STOCK'
+         WHEN i.quantity_on_hand < i.reorder_point * 0.5 THEN 'CRITICAL'
+         WHEN i.quantity_on_hand < NVL(df.predicted_demand, i.reorder_point) THEN 'AT_RISK'
+         ELSE 'ADEQUATE'
+       END AS capacity_status,
+       CASE WHEN NVL(df.predicted_demand, 0) > 0
+         THEN ROUND(i.quantity_on_hand / (df.predicted_demand / 7), 1)
+       END AS days_of_supply,
+       CASE WHEN i.quantity_on_hand < NVL(df.predicted_demand, 0)
+         THEN ROUND((df.predicted_demand - i.quantity_on_hand) * p.unit_price, 2)
+         ELSE 0
+       END AS revenue_at_risk
+FROM inventory i
+JOIN products p ON p.product_id = i.product_id
+JOIN fulfillment_centers fc ON fc.center_id = i.center_id
+LEFT JOIN forecast_rollup df ON df.product_id = p.product_id
+LEFT JOIN scored_products sp ON sp.product_id = p.product_id
+WHERE fc.is_active = 1
+ORDER BY sp.oml_surge_probability DESC, i.quantity_on_hand ASC
+FETCH FIRST 100 ROWS ONLY;`} />
       <div className="oml-model-flow">
         <div className="text-[9px] text-center text-[var(--color-text)] font-bold mb-1">Capacity Intelligence Pipeline</div>
         <DiagramBox label="DEMAND_SURGE_MODEL (Random Forest)" sub="PREDICTION_PROBABILITY('SURGE') per financial product" color="#796087" />
