@@ -1,0 +1,3 @@
+# Generated Python bytecode does not belong in the workshop package.
+__pycache__/
+*.py[cod]
