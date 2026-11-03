@@ -1,0 +1,154 @@
+title: IncidentData LiveStack — full demo candidate
+description: New ADB, React/API/media VM, nine synthetic cities and authenticated public APEX. Review Plan and cost before Apply.
+schemaVersion: 1.1.0
+version: '2026.10.28'
+locale: en
+informationalText: After Apply succeeds, open application_credentials_url from the job's Output tab while signed into OCI. Download the exact application_credentials_file object from that private bucket to get the operator password. Bucket/object read permissions are required. No password is printed in normal Terraform outputs or logs.
+variableGroups:
+  - title: Destination
+    variables: [tenancy_ocid, compartment_ocid, region, availability_domain, stack_name]
+  - title: Operator access
+    variables: [ssh_public_key, ssh_ingress_cidr]
+  - title: Versioned release
+    visible: false
+    variables: [release_namespace, release_bucket, release_prefix, release_download_base_url, ollama_image, release_manifest_path]
+  - title: Capacity and AI region
+    variables: [vm_shape, vm_ocpus, vm_memory_gbs, boot_volume_gbs, adb_compute_count, adb_storage_gbs, genai_region]
+variables:
+  tenancy_ocid:
+    type: string
+    required: true
+    visible: false
+  compartment_ocid:
+    type: oci:identity:compartment:id
+    required: true
+    title: Destination compartment
+  region:
+    type: oci:identity:region:name
+    required: true
+    default: us-ashburn-1
+  availability_domain:
+    type: oci:identity:availabilitydomain:name
+    required: true
+    dependsOn:
+      compartmentId: compartment_ocid
+  stack_name:
+    type: string
+    default: incidentdata-walkthrough
+  ssh_public_key:
+    type: string
+    required: false
+    default: ''
+    title: Operator SSH public key
+    description: Optional; only needed for operator SSH access. Leave blank to disable SSH.
+  ssh_ingress_cidr:
+    type: string
+    default: ''
+    title: Trusted operator IPv4 CIDR (blank disables SSH)
+    description: SSH opens only when both a public key and a trusted CIDR are supplied.
+  public_hostname:
+    type: string
+    default: ''
+    visible: false
+    title: Optional hostname; blank uses reserved public IP
+  release_namespace:
+    type: string
+    required: true
+    visible: false
+    default: "c4u04"
+  release_bucket:
+    type: string
+    required: true
+    visible: false
+    default: "livelabsfiles"
+  release_prefix:
+    type: string
+    required: true
+    visible: false
+    default: "livestack/crime-and-incident-network/releases/team-20261102-f76416e0fcca"
+  release_download_base_url:
+    type: string
+    required: false
+    visible: false
+    default: "https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/crime-and-incident-network/releases/team-20261102-f76416e0fcca/"
+    title: Approved release download base
+    description: Optional read-only OCI PAR URL for non-secret release payloads only. Bootstrap credentials and status stay in the deployment's private bucket.
+  ollama_image:
+    type: string
+    visible: false
+    default: docker.io/ollama/ollama@sha256:b88c73ace3e115f8ec53dc8761ae1c0aabfa675406e3681786b98757ce050f42
+  release_manifest_path:
+    type: string
+    default: release-manifest.json
+    visible: false
+  vm_shape:
+    type: string
+    default: VM.Standard.E4.Flex
+    enum: [VM.Standard.E4.Flex, VM.Standard.E5.Flex, VM.Standard.E6.Flex]
+  vm_ocpus:
+    type: integer
+    default: 4
+    minimum: 4
+    maximum: 16
+  vm_memory_gbs:
+    type: integer
+    default: 32
+    minimum: 32
+    maximum: 128
+  boot_volume_gbs:
+    type: integer
+    default: 100
+  adb_compute_count:
+    type: integer
+    default: 2
+  adb_storage_gbs:
+    type: integer
+    default: 100
+  genai_region:
+    type: string
+    default: us-chicago-1
+    title: AI inference region (separate from infrastructure region)
+outputs:
+  application_url:
+    type: link
+    title: IncidentData application
+    displayText: Open IncidentData
+    description: Open after Apply succeeds. Get the operator password using the private credentials location below.
+  application_username:
+    type: copyableString
+    title: Application username
+    description: Browser login for the statewide administrator demo account.
+  application_credentials_url:
+    type: link
+    title: Application credentials (OCI sign-in required)
+    displayText: Open private login storage
+    description: Opens this deployment's private bucket in the OCI Console, not a public download URL. Find and download the exact file named below.
+  application_credentials_file:
+    type: copyableString
+    title: Login file to download
+    description: Exact private object name. Select its Actions menu, View object details, then Download.
+  application_credentials_instructions:
+    type: string
+    title: How to get the password
+  apex_service_urls:
+    type: list
+    title: Managed APEX/ORDS service URLs
+  participant_accounts:
+    type: list
+    sensitive: true
+    title: All participant accounts (authorised operator only)
+    description: Advanced protected output containing all five fixed-persona accounts. For the operator browser login, use the private file above. The Console Output tab masks sensitive values; authorised state access can retrieve this advanced list.
+  database_id:
+    type: ocid
+    title: Autonomous Database
+  deployment_acceptance:
+    type: string
+    title: Deployment readiness acceptance
+outputGroups:
+  - title: Application access
+    outputs: [application_url, application_username, application_credentials_url, application_credentials_file, application_credentials_instructions]
+  - title: Additional participant accounts
+    outputs: [participant_accounts]
+  - title: Deployment details
+    outputs: [apex_service_urls, database_id, deployment_acceptance]
+primaryOutputButton: application_url
