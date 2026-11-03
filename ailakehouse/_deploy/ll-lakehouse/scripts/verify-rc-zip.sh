@@ -162,7 +162,7 @@ done < <(grep -E '(^|/)(Dockerfile|[^/]+\.(sh|service|py|ya?ml))$' <<< "${ZIP_EN
 
 echo "Checking excluded runtime/build artifacts..."
 forbidden_entries="$(
-  grep -Ei '(^|/)(node_modules|__pycache__|\.git|\.omx|tmp|output)/|^ingestion/frontend/dist/|^ingestion/dist/|\.pyc$|\.done$|oradata|build_dev\.zip|\.bak-|(^|/)(Wallet[^/]*\.zip|wallet\.zip|goldengate-studio-wallet\.zip|cwallet\.sso|ewallet\.p12|ewallet\.pem|ojdbc\.properties|tnsnames\.ora|sqlnet\.ora|keystore\.jks|truststore\.jks)$' <<< "${ZIP_ENTRIES}" || true
+  grep -Ei '(^|/)(node_modules|__pycache__|\.git|\.omx|\.operator(-shared)?|tmp|output)/|^ingestion/frontend/dist/|^ingestion/dist/|\.pyc$|\.done$|oradata|build_dev\.zip|\.bak-|(^|/)(Wallet[^/]*\.zip|wallet\.zip|goldengate-studio-wallet\.zip|cwallet\.sso|ewallet\.p12|ewallet\.pem|ojdbc\.properties|tnsnames\.ora|sqlnet\.ora|keystore\.jks|truststore\.jks)$' <<< "${ZIP_ENTRIES}" || true
 )"
 if [[ -n "${forbidden_entries}" ]]; then
   echo "Forbidden archive entries found:" >&2

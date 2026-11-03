@@ -74,6 +74,12 @@ zip -qr "${TMP_ZIP}" . \
   -x './build_dev.zip.bak-*' \
   -x './.git/*' \
   -x './.omx/*' \
+  -x './.operator' \
+  -x './.operator/' \
+  -x './.operator/*' \
+  -x './.operator-shared' \
+  -x './.operator-shared/' \
+  -x './.operator-shared/*' \
   -x './ingestion/.demo-setup/*' \
   -x './.env*' \
   -x './**/.env*' \
