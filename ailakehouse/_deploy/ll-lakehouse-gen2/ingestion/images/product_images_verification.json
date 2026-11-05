@@ -1,0 +1,14 @@
+{
+  "catalog_rows": 650,
+  "manifest_rows": 650,
+  "image_files": 650,
+  "unique_image_hashes": 650,
+  "dimension_failures": [],
+  "duplicate_groups": [],
+  "render_failures": [],
+  "cores": 56,
+  "source_names": {
+    "duckduckgo-remote": 650
+  },
+  "output_dir": "/Users/klazarz/Documents/GitHub/livelabs/demo-code/livestacks/apac/lakehouse/images"
+}

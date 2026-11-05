@@ -1,0 +1,2 @@
+product_id,brand_id,sku,product_name,description,category,subcategory,unit_price,unit_cost,weight_kg,is_active,launch_date,tags,created_at,updated_at
+1,1,PG-00001,SummitStride Trail Runner,"Footwear item for PeakGear stores, e-commerce, and B2B partners; tracked for demand forecasting, dynamic price match, inventory, and customer propensity workflows.",Footwear,Trail Running,149.99,72,0.68,1,2024-09-01,"trail-running,footwear,grip,demand-forecast",2026-04-01T08:00:00Z,2026-04-12T14:00:00Z

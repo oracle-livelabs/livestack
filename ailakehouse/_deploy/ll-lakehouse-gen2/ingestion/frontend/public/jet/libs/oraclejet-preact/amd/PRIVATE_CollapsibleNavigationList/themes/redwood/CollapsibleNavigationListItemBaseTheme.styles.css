@@ -1,0 +1,20 @@
+.CollapsibleNavigationListItemBaseTheme_baseTheme__3jk9pr0 {
+  --oj-c-navigation-list-child-item-padding: calc(5 * var(--oj-c-size-units, 0.25rem));
+  --fontSize__ibpjpp0: var(--oj-c-body-md-font-size);
+  --fontWeight__ibpjpp1: var(--oj-c-body-md-font-weight-semibold);
+  --minHeight__ibpjpp3: calc(12 * var(--oj-c-size-units, 0.25rem));
+  --borderWidth__ibpjpp4: 3px;
+  --borderHeight__ibpjpp5: calc(10 * var(--oj-c-size-units, 0.25rem));
+  --iconSize__ibpjpp2: calc(5 * var(--oj-c-size-units, 0.25rem));
+  --paddingHorizontal__ibpjpp6: calc(4 * var(--oj-c-size-units, 0.25rem));
+  --labelColor__ibpjpp7: var(--oj-c-text-icon-secondary);
+  --labelColorHover__ibpjpp8: var(--oj-c-text-icon-primary);
+  --backgroundColorHover__ibpjpp9: var(--oj-c-overlay-hover);
+  --borderColorHover__ibpjppa: transparent;
+  --labelColorSelected__ibpjppb: var(--oj-c-text-icon-primary);
+  --backgroundColorSelected__ibpjppc: transparent;
+  --borderColorSelected__ibpjppd: var(--oj-c-text-icon-primary);
+  --backgroundColorActive__ibpjppe: transparent;
+  --labelColorActive__ibpjppf: var(--oj-c-text-icon-primary);
+  --borderColorActive__ibpjppg: transparent;
+}

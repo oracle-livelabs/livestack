@@ -21,7 +21,8 @@ async function getDemoSetupStatus() {
 async function retryDemoSetup() {
   const status = await getDemoSetupStatus();
   if (status.status === 'unavailable') throw new Error(status.message);
-  if (['running', 'ready'].includes(status.status)) return status;
+  const hasFailedStep = status.steps.some(step => step.status === 'failed');
+  if (status.status === 'ready' || (status.status === 'running' && !hasFailedStep)) return status;
   // Exclusive creation deduplicates simultaneous clicks, including across workers.
   try {
     await fs.writeFile(path.join(directory, 'retry.request'), '', { flag: 'wx', mode: 0o644 });

@@ -76,11 +76,15 @@ def tick():
     status = snapshot()
     request = DIRECTORY / 'retry.request'
     if request.exists():
-        if status['status'] in ('failed', 'incomplete'):
-            # Start (never restart) preserves active jobs and completed oneshots.
+        step_states = {step['id']: step['status'] for step in status['steps']}
+        failed = [unit for unit, _ in STEPS if step_states.get(unit) == 'failed']
+        pending = [unit for unit, _ in STEPS if step_states.get(unit) in ('failed', 'waiting')]
+        if pending:
+            # Never interrupt running jobs or restart completed oneshots.
             # Fixed unit names only; the request file's contents are never executed.
-            systemctl('reset-failed', *[unit for unit, _ in STEPS])
-            systemctl('start', '--no-block', *[unit for unit, _ in STEPS])
+            if failed:
+                systemctl('reset-failed', *failed)
+            systemctl('start', '--no-block', *pending)
             status = snapshot()
             status.update(status='running', message='Resuming demo setup…')
         publish(status)

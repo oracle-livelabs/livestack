@@ -1,0 +1,11 @@
+.ListCellStyles_listCellStyles_base__19pmd750 {
+  align-self: center;
+  box-sizing: border-box;
+  color: var(--oj-c-text-icon-primary);
+  flex: 1 1 auto;
+  font-size: var(--oj-c-body-md-font-size);
+  position: relative;
+}
+.ListCellStyles_listCellStyles_base__19pmd750:focus {
+  outline-style: none;
+}

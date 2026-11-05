@@ -1,0 +1,62 @@
+.StyledSwitchStyles_root__12d1fig0 {
+  display: inline-block;
+  -webkit-tap-highlight-color: transparent;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+}
+.StyledSwitchStyles_container__12d1fig1 {
+  position: relative;
+  min-height: 36px;
+  min-width: 36px;
+  width: calc(9 * var(--oj-c-size-units, 0.25rem));
+}
+.StyledSwitchStyles_containerReadonly__12d1fig2 {
+  min-height: calc(5 * var(--oj-c-size-units, 0.25rem));
+}
+.StyledSwitchStyles_track__12d1fig3 {
+  position: absolute;
+  top: 50%;
+  border-style: solid;
+  border-width: 1px;
+  height: calc(5 * var(--oj-c-size-units, 0.25rem));
+  width: calc(9 * var(--oj-c-size-units, 0.25rem));
+  box-sizing: border-box;
+  transform: translate3d(0, -50%, 0);
+  border-radius: var(--oj-c-border-radius-lg);
+  transition-property: background-color, opacity, border-color;
+  transition-duration: var(--oj-c-duration-lg);
+  transition-timing-function: var(--oj-c-easing-linear);
+}
+.StyledSwitchStyles_track__12d1fig3:focus-visible {
+  outline-style: dotted;
+  outline-offset: 1px;
+  outline-width: 1px;
+  outline-color: var(--oj-c-border-keyboard-focus);
+}
+.StyledSwitchStyles_thumb__12d1fig4 {
+  position: absolute;
+  top: 50%;
+  border-style: solid;
+  border-width: 1px;
+  height: calc(4 * var(--oj-c-size-units, 0.25rem));
+  width: calc(4 * var(--oj-c-size-units, 0.25rem));
+  line-height: calc(4 * var(--oj-c-size-units, 0.25rem));
+  box-sizing: border-box;
+  transform: translate3d(0, -50%, 0);
+  border-radius: var(--oj-c-border-radius-md);
+  background-color: var(--oj-c-measure-thumb-surface);
+  border-color: transparent;
+  transition-property: height, width, inset-inline-start, inset-inline-end;
+  transition-duration: var(--oj-c-duration-2xl);
+  transition-timing-function: var(--oj-c-easing-persist);
+}
+.StyledSwitchStyles_trackHoverPseudoclass__12d1fig5:hover {
+  background-image: linear-gradient(var(--oj-c-overlay-hover), var(--oj-c-overlay-hover));
+}
+.StyledSwitchStyles_trackActivePseudoclass__12d1fig6:active {
+  background-image: linear-gradient(var(--oj-c-overlay-active), var(--oj-c-overlay-active));
+}
+.StyledSwitchStyles_trackActiveStyle__12d1fig7 {
+  background-image: linear-gradient(var(--oj-c-overlay-active), var(--oj-c-overlay-active));
+}

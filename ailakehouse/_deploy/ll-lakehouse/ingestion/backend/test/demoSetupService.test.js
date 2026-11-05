@@ -10,7 +10,7 @@ test('setup status and retries are bounded by host readiness and deduplicated', 
   const { getDemoSetupStatus, retryDemoSetup } = require('../lib/demoSetupService');
   const statusFile = path.join(directory, 'status.json');
   const requestFile = path.join(directory, 'retry.request');
-  const status = (state, time = Date.now()) => fs.writeFile(statusFile, JSON.stringify({ status: state, updatedAt: new Date(time).toISOString(), steps: [] }));
+  const status = (state, time = Date.now(), steps = []) => fs.writeFile(statusFile, JSON.stringify({ status: state, updatedAt: new Date(time).toISOString(), steps }));
   try {
     assert.equal((await getDemoSetupStatus()).status, 'unavailable');
     await assert.rejects(retryDemoSetup);
@@ -20,6 +20,10 @@ test('setup status and retries are bounded by host readiness and deduplicated', 
     await status('running');
     assert.equal((await retryDemoSetup()).status, 'running');
     await assert.rejects(fs.access(requestFile));
+    await status('running', Date.now(), [{ id: 'pg-ai-catalog-bronze.service', status: 'failed' }, { id: 'pg-iceberg-connection.service', status: 'running' }]);
+    assert.equal((await retryDemoSetup()).status, 'running');
+    assert.equal(await fs.readFile(requestFile, 'utf8'), '');
+    await fs.unlink(requestFile);
     await status('failed');
     const requests = await Promise.all(Array.from({ length: 10 }, () => retryDemoSetup()));
     assert.ok(requests.every(item => item.status === 'running'));

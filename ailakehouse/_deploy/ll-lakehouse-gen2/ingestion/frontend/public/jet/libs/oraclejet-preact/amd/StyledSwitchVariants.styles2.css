@@ -1,0 +1,31 @@
+.StyledSwitchVariants_multiVariantStyles_compound_1__14hmaj6b {
+  background-color: rgb(var(--oj-c-palette-brand-100));
+  border-color: transparent;
+}
+.StyledSwitchVariants_multiVariantStyles_compound_2__14hmaj6c {
+  background-color: rgb(var(--oj-c-palette-neutral-90));
+  border-color: transparent;
+}
+.StyledSwitchVariants_multiVariantStyles_compound_3__14hmaj6d {
+  background-color: var(--oj-c-measure-track-disabled);
+  border-color: transparent;
+}
+.StyledSwitchVariants_multiVariantStyles_compound_4__14hmaj6e {
+  background-color: transparent;
+  border-width: 0;
+}
+.StyledSwitchVariants_multiVariantStyles_compound_5__14hmaj6f {
+  inset-inline-start: auto;
+  inset-inline-end: 0.0625rem;
+}
+.StyledSwitchVariants_multiVariantStyles_compound_6__14hmaj6g {
+  inset-inline-start: 0.0625rem;
+  inset-inline-end: auto;
+}
+.StyledSwitchVariants_multiVariantStyles_compound_7__14hmaj6h {
+  inset-inline-start: auto;
+  inset-inline-end: auto;
+  background-color: transparent;
+  border-width: 0;
+  box-shadow: none;
+}

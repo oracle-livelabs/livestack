@@ -1,0 +1,2 @@
+define(['exports'], (function(i){"use strict";i.densityVars={itemHeight:"var(--oj-c-list-item-height)",itemPaddingVertical:"var(--oj-c-list-item-padding-vertical)",itemPaddingHorizontal:"var(--oj-c-list-item-padding-horizontal)"},i.listVars={itemHeight:"var(--oj-c-list-item-height)",itemPaddingVertical:"var(--oj-c-list-item-padding-vertical)",itemPaddingHorizontal:"var(--oj-c-list-item-padding-horizontal)"},Object.defineProperty(i,"__esModule",{value:!0})}));
+//# sourceMappingURL=ListContract.css.js.map

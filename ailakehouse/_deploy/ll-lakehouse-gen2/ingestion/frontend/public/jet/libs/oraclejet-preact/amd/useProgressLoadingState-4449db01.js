@@ -1,0 +1,2 @@
+define(['exports', 'preact/hooks'], (function(e,t){"use strict";e.useProgressLoadingState=function(e){const[u,r]=t.useState(!1),[n,s]=t.useState(!1),c=t.useRef(null);return t.useEffect((()=>(e&&!u&&s(!0),!e&&n&&(r(!0),s(!1),c.current=setTimeout((()=>{r(!1)}),500)),()=>{c.current&&(clearTimeout(c.current),c.current=null)})),[e,u,n]),{loaded:u}}}));
+//# sourceMappingURL=useProgressLoadingState-4449db01.js.map

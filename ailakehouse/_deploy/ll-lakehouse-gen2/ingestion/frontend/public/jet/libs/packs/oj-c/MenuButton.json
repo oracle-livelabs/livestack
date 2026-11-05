@@ -1,0 +1,1350 @@
+[
+  {
+    "id": "oj-c.MenuButton",
+    "name": "MenuButton",
+    "memberof": "oj-c",
+    "kind": "class",
+    "meta": {
+      "filename": "menu-button.tsx",
+      "path": "web/components/oj-c/menu-button"
+    },
+    "ojcomponent": true,
+    "isvcomponent": true,
+    "since": "16.0.0",
+    "longname": "oj-c.MenuButton",
+    "pack": "oj-c",
+    "classdesc": "<h3 id=\"MenuButtonOverview-section\">\n  JET Menu Button\n  <a class=\"bookmarkable-link\" title=\"Bookmarkable Link\" href=\"#buttonOverview-section\"></a>\n</h3>\n\n<p>Description: A menu button launches a menu when clicked.\n\n<pre class=\"prettyprint\"><code>&lt;oj-c-menu-button label=\"Copy\" items=\"[[items]]\">\n&lt;/oj-c-menu-button>\n</code></pre>\n\n<h3 id=\"touch-section\">\n  Touch End User Information\n  <a class=\"bookmarkable-link\" title=\"Bookmarkable Link\" href=\"#touch-section\"></a>\n</h3>\n\n<h3 id=\"keyboard-section\">\n  Keyboard End User Information\n  <a class=\"bookmarkable-link\" title=\"Bookmarkable Link\" href=\"#keyboard-section\"></a>\n</h3>\n\n<table class=\"keyboard-table\">\n  <thead>\n    <tr>\n      <th>Target</th>\n      <th>Key</th>\n      <th>Action</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Menu Button</td>\n      <td><kbd>Enter</kbd> or <kbd>Space</kbd> or <kbd>Down Arrow</kbd></td>\n      <td>Invoke the Button menu.</td>\n    </tr>\n  </tbody>\n</table>\n\n<h3 id=\"a11y-section\">\n  Accessibility\n  <a class=\"bookmarkable-link\" title=\"Bookmarkable Link\" href=\"#a11y-section\"></a>\n</h3>\n\n<p>For accessibility, the label and suffix are used as the accessible aria label.  This is required\nas persistent menu buttons or suffixes modify the label depending on the last menu item selection.\n\n<p>oj-c-menu-button follows the ARIA Authoring Practices Guide patterns for\n<a href=\"https://www.w3.org/WAI/ARIA/apg/patterns/menubar/\">menu</a> and\n<a href=\"https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/\">menu button</a>.\nNote that this is an implementation detail that may change in the future.\n\n<p>\nDisabled content: JET supports an accessible luminosity contrast ratio,\nas specified in <a href=\"http://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast\">WCAG 2.0 - Section 1.4.3 \"Contrast\"</a>,\nin the themes that are accessible.  (See the \"Theming\" chapter of the JET Developer Guide for more information on which\nthemes are accessible.)  Note that Section 1.4.3 says that text or images of text that are part of an inactive user\ninterface component have no contrast requirement.  Because disabled content may not meet the minimum contrast ratio\nrequired of enabled content, it cannot be used to convey meaningful information.\n</p>",
+    "scope": "static",
+    "tagWithoutBrackets": "oj-c-menu-button",
+    "tagWithBrackets": "<oj-c-menu-button>",
+    "domInterface": "CMenuButtonElement",
+    "ojPageTitle": "&lt;oj-c-menu-button>",
+    "camelCaseName": "MenuButton",
+    "ojPageTitlePrefix": "Element: ",
+    "ojtsvcomponent": true,
+    "tstype": {
+      "target": "Type",
+      "value": "interface CMenuButtonElement extends JetElement<MenuButtonElementSettableProperties>"
+    },
+    "ojsignature": [
+      {
+        "target": "Type",
+        "value": "interface CMenuButtonElement extends JetElement<MenuButtonElementSettableProperties>"
+      }
+    ],
+    "tsdeprecated": [
+      {
+        "type": "supersedes",
+        "since": "16.0.0",
+        "value": [
+          "oj-menu-button",
+          "oj-menu-select-many"
+        ]
+      }
+    ],
+    "extension": {
+      "catalog": {
+        "category": "Controls"
+      },
+      "vbdt": {
+        "module": "oj-c/menu-button",
+        "pi": {
+          "events": {
+            "suggestions": [
+              {
+                "type": "component",
+                "name": "ojMenuAction",
+                "mappings": [
+                  {
+                    "variableName": "menuItemKey",
+                    "expression": "{{$event.detail.key}}",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "type": "component",
+                "name": "onOjMenuSelection",
+                "mappings": [
+                  {
+                    "variableName": "menuSelectionValue",
+                    "expression": "{{$event.detail.value}}",
+                    "type": "string"
+                  },
+                  {
+                    "variableName": "menuSelectionGroupKey",
+                    "expression": "{{$event.detail.menuSelectionGroupKey}}",
+                    "type": "string"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "oracle": {
+        "icon": "oj-ux-ico-menu-button",
+        "uxSpecs": [
+          "menu-button"
+        ]
+      }
+    },
+    "ojmodule": "menu-button"
+  },
+  {
+    "id": "oj-c.MenuButton#label",
+    "name": "label",
+    "memberof": "oj-c.MenuButton",
+    "meta": {
+      "filename": "menu-button.tsx",
+      "path": "web/components/oj-c/menu-button"
+    },
+    "kind": "member",
+    "longname": "oj-c.MenuButton#label",
+    "scope": "instance",
+    "type": {
+      "names": [
+        "string"
+      ]
+    },
+    "optional": false,
+    "ojshortdesc": "Text to show in the button.",
+    "description": "Text to show in the button.",
+    "defaultvalue": "''"
+  },
+  {
+    "id": "oj-c.MenuButton#suffix",
+    "name": "suffix",
+    "memberof": "oj-c.MenuButton",
+    "meta": {
+      "filename": "menu-button.tsx",
+      "path": "web/components/oj-c/menu-button"
+    },
+    "kind": "member",
+    "longname": "oj-c.MenuButton#suffix",
+    "scope": "instance",
+    "type": {
+      "names": [
+        "string"
+      ]
+    },
+    "optional": true,
+    "ojshortdesc": "Suffix appended to menu label to indicate last selection.",
+    "description": "Suffix appended to menu label to indicate last selection."
+  },
+  {
+    "id": "oj-c.MenuButton#tooltip",
+    "name": "tooltip",
+    "memberof": "oj-c.MenuButton",
+    "meta": {
+      "filename": "menu-button.tsx",
+      "path": "web/components/oj-c/menu-button"
+    },
+    "kind": "member",
+    "longname": "oj-c.MenuButton#tooltip",
+    "scope": "instance",
+    "type": {
+      "names": [
+        "string"
+      ]
+    },
+    "optional": true,
+    "ojshortdesc": "Text to show in the tooltip. This overrides the default tooltip that renders the label when in icon mode.",
+    "description": "Text to show in the tooltip. This overrides the default tooltip that renders the label when in icon mode."
+  },
+  {
+    "id": "oj-c.MenuButton#items",
+    "name": "items",
+    "memberof": "oj-c.MenuButton",
+    "meta": {
+      "filename": "menu-button.tsx",
+      "path": "web/components/oj-c/menu-button"
+    },
+    "kind": "member",
+    "longname": "oj-c.MenuButton#items",
+    "scope": "instance",
+    "type": {
+      "names": [
+        "Array<object>"
+      ]
+    },
+    "optional": true,
+    "ojshortdesc": "Items describe the menu items rendered by the menu button.",
+    "description": "Items describe the menu items rendered by the menu button.",
+    "defaultvalue": "[]",
+    "tstype": [
+      {
+        "target": "Type",
+        "value": "Array<oj-c.MenuButton.MenuItems>",
+        "jsdocOverride": true
+      }
+    ]
+  },
+  {
+    "id": "oj-c.MenuButton#selection",
+    "name": "selection",
+    "memberof": "oj-c.MenuButton",
+    "meta": {
+      "filename": "menu-button.tsx",
+      "path": "web/components/oj-c/menu-button"
+    },
+    "kind": "member",
+    "longname": "oj-c.MenuButton#selection",
+    "scope": "instance",
+    "type": {
+      "names": [
+        "object"
+      ]
+    },
+    "optional": true,
+    "ojwriteback": true,
+    "description": "An array containing key/value objects for menu selection groups.",
+    "tstype": [
+      {
+        "target": "Type",
+        "value": "Record<string, string|Array<string>>",
+        "jsdocOverride": true
+      }
+    ]
+  },
+  {
+    "id": "oj-c.MenuButton#display",
+    "name": "display",
+    "memberof": "oj-c.MenuButton",
+    "meta": {
+      "filename": "menu-button.tsx",
+      "path": "web/components/oj-c/menu-button"
+    },
+    "kind": "member",
+    "longname": "oj-c.MenuButton#display",
+    "scope": "instance",
+    "type": {
+      "names": [
+        "\"all\"",
+        "\"label\"",
+        "\"icons\""
+      ]
+    },
+    "optional": true,
+    "ojshortdesc": "Display just the label, the icons, or all. Label is used as tooltip and should be set in all cases.",
+    "description": "Display just the label, the icons, or all. Label is used as tooltip and should be set in all cases.",
+    "ojvalues": [
+      {
+        "name": "all",
+        "description": "Display both the label and icons.",
+        "displayName": "All",
+        "type": {
+          "names": [
+            "string"
+          ]
+        }
+      },
+      {
+        "name": "icons",
+        "description": "Display only the icons.",
+        "displayName": "Icons",
+        "type": {
+          "names": [
+            "string"
+          ]
+        }
+      },
+      {
+        "name": "label",
+        "description": "Display only the text label.",
+        "displayName": "label",
+        "type": {
+          "names": [
+            "string"
+          ]
+        }
+      }
+    ],
+    "ojvalueskeeporder": true,
+    "defaultvalue": "'all'"
+  },
+  {
+    "id": "oj-c.MenuButton#disabled",
+    "name": "disabled",
+    "memberof": "oj-c.MenuButton",
+    "meta": {
+      "filename": "menu-button.tsx",
+      "path": "web/components/oj-c/menu-button"
+    },
+    "kind": "member",
+    "longname": "oj-c.MenuButton#disabled",
+    "scope": "instance",
+    "type": {
+      "names": [
+        "boolean"
+      ]
+    },
+    "optional": true,
+    "ojdisplayname": "disabled",
+    "ojshortdesc": "Specifies that the button element should be disabled.",
+    "description": "Specifies that the button element should be disabled.",
+    "defaultvalue": false
+  },
+  {
+    "id": "oj-c.MenuButton#size",
+    "name": "size",
+    "memberof": "oj-c.MenuButton",
+    "meta": {
+      "filename": "menu-button.tsx",
+      "path": "web/components/oj-c/menu-button"
+    },
+    "kind": "member",
+    "longname": "oj-c.MenuButton#size",
+    "scope": "instance",
+    "type": {
+      "names": [
+        "\"xs\"",
+        "\"sm\"",
+        "\"md\"",
+        "\"lg\""
+      ]
+    },
+    "optional": true,
+    "ojshortdesc": "Size of button",
+    "description": "Size of button",
+    "ojvalues": [
+      {
+        "name": "xs",
+        "description": "Display an extra small button.  Only supported for component developers with ghost chroming in icon display mode.",
+        "displayName": "Extra Small",
+        "type": {
+          "names": [
+            "string"
+          ]
+        }
+      },
+      {
+        "name": "sm",
+        "description": "Display a small button.",
+        "displayName": "Small",
+        "type": {
+          "names": [
+            "string"
+          ]
+        }
+      },
+      {
+        "name": "md",
+        "description": "Display a default size button.",
+        "displayName": "Medium",
+        "type": {
+          "names": [
+            "string"
+          ]
+        }
+      },
+      {
+        "name": "lg",
+        "description": "Display a large button.",
+        "displayName": "Large",
+        "type": {
+          "names": [
+            "string"
+          ]
+        }
+      }
+    ],
+    "ojvalueskeeporder": true,
+    "defaultvalue": "'md'"
+  },
+  {
+    "id": "oj-c.MenuButton#width",
+    "name": "width",
+    "memberof": "oj-c.MenuButton",
+    "meta": {
+      "filename": "menu-button.tsx",
+      "path": "web/components/oj-c/menu-button"
+    },
+    "kind": "member",
+    "longname": "oj-c.MenuButton#width",
+    "scope": "instance",
+    "type": {
+      "names": [
+        "number|string"
+      ]
+    },
+    "optional": true,
+    "ojdisplayname": "width",
+    "ojshortdesc": "Specifies that the button style width",
+    "description": "Specifies that the button style width"
+  },
+  {
+    "id": "oj-c.MenuButton#chroming",
+    "name": "chroming",
+    "memberof": "oj-c.MenuButton",
+    "meta": {
+      "filename": "menu-button.tsx",
+      "path": "web/components/oj-c/menu-button"
+    },
+    "kind": "member",
+    "longname": "oj-c.MenuButton#chroming",
+    "scope": "instance",
+    "type": {
+      "names": [
+        "\"solid\"",
+        "\"ghost\"",
+        "\"borderless\"",
+        "\"outlined\""
+      ]
+    },
+    "optional": true,
+    "ojdisplayname": "chroming",
+    "ojshortdesc": "Indicates in what states the button has chromings in background and border.",
+    "description": "Indicates in what states the button has chromings in background and border.",
+    "ojvalues": [
+      {
+        "name": "ghost",
+        "description": "Ghost buttons are the least prominent variation. Ghost buttons are useful for performing low-priority tasks, such as manipulating the UI.",
+        "displayName": "Ghost",
+        "type": {
+          "names": [
+            "string"
+          ]
+        }
+      },
+      {
+        "name": "borderless",
+        "description": "Borderless buttons are a more prominent variation. Borderless buttons are useful for supplemental actions that require minimal emphasis.",
+        "displayName": "Borderless",
+        "type": {
+          "names": [
+            "string"
+          ]
+        }
+      },
+      {
+        "name": "outlined",
+        "description": "Outlined buttons are salient, but lighter weight than solid buttons. Outlined buttons are useful for secondary actions.",
+        "displayName": "Outlined",
+        "type": {
+          "names": [
+            "string"
+          ]
+        }
+      },
+      {
+        "name": "solid",
+        "description": "Solid buttons stand out, and direct the user's attention to the most important actions in the UI.",
+        "displayName": "Solid",
+        "type": {
+          "names": [
+            "string"
+          ]
+        }
+      }
+    ],
+    "ojvalueskeeporder": true,
+    "defaultvalue": "'outlined'"
+  },
+  {
+    "id": "oj-c.MenuButton#focus",
+    "name": "focus",
+    "memberof": "oj-c.MenuButton",
+    "meta": {
+      "filename": "menu-button.tsx",
+      "path": "web/components/oj-c/menu-button"
+    },
+    "kind": "function",
+    "longname": "oj-c.MenuButton#focus",
+    "scope": "instance",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "void"
+          ]
+        }
+      }
+    ],
+    "description": ""
+  },
+  {
+    "id": "oj-c.MenuButton#blur",
+    "name": "blur",
+    "memberof": "oj-c.MenuButton",
+    "meta": {
+      "filename": "menu-button.tsx",
+      "path": "web/components/oj-c/menu-button"
+    },
+    "kind": "function",
+    "longname": "oj-c.MenuButton#blur",
+    "scope": "instance",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "void"
+          ]
+        }
+      }
+    ],
+    "description": ""
+  },
+  {
+    "id": "oj-c.MenuButton#click",
+    "name": "click",
+    "memberof": "oj-c.MenuButton",
+    "meta": {
+      "filename": "menu-button.tsx",
+      "path": "web/components/oj-c/menu-button"
+    },
+    "kind": "function",
+    "longname": "oj-c.MenuButton#click",
+    "scope": "instance",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "void"
+          ]
+        }
+      }
+    ],
+    "description": ""
+  },
+  {
+    "id": "oj-c.MenuButton#setProperty",
+    "name": "setProperty",
+    "memberof": "oj-c.MenuButton",
+    "meta": {
+      "filename": "menu-button.tsx",
+      "path": "web/components/oj-c/menu-button"
+    },
+    "kind": "function",
+    "longname": "oj-c.MenuButton#setProperty",
+    "scope": "instance",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "void"
+          ]
+        }
+      }
+    ],
+    "ojshortdesc": "Sets a property or a single subproperty for complex properties and notifies the component of the change, triggering a corresponding event.",
+    "description": "Sets a property or a single subproperty for complex properties and notifies the component of the change, triggering a corresponding event.",
+    "params": [
+      {
+        "name": "property",
+        "description": "The property name to set. Supports dot notation for subproperty access.",
+        "type": {
+          "names": [
+            "string"
+          ]
+        }
+      },
+      {
+        "name": "value",
+        "description": "The new value to set the property to.",
+        "type": {
+          "names": [
+            "any"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "oj-c.MenuButton#getProperty",
+    "name": "getProperty",
+    "memberof": "oj-c.MenuButton",
+    "meta": {
+      "filename": "menu-button.tsx",
+      "path": "web/components/oj-c/menu-button"
+    },
+    "kind": "function",
+    "longname": "oj-c.MenuButton#getProperty",
+    "scope": "instance",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "any"
+          ]
+        }
+      }
+    ],
+    "ojshortdesc": "Retrieves the value of a property or a subproperty.",
+    "description": "Retrieves the value of a property or a subproperty.",
+    "params": [
+      {
+        "name": "property",
+        "description": "The property name to get. Supports dot notation for subproperty access.",
+        "type": {
+          "names": [
+            "string"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "oj-c.MenuButton#setProperties",
+    "name": "setProperties",
+    "memberof": "oj-c.MenuButton",
+    "meta": {
+      "filename": "menu-button.tsx",
+      "path": "web/components/oj-c/menu-button"
+    },
+    "kind": "function",
+    "longname": "oj-c.MenuButton#setProperties",
+    "scope": "instance",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "void"
+          ]
+        }
+      }
+    ],
+    "ojshortdesc": "Performs a batch set of properties.",
+    "description": "Performs a batch set of properties.",
+    "params": [
+      {
+        "name": "properties",
+        "description": "An object containing the property and value pairs to set.",
+        "type": {
+          "names": [
+            "object"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "oj-c.MenuButton#event:ojMenuAction",
+    "name": "ojMenuAction",
+    "kind": "event",
+    "memberof": "oj-c.MenuButton",
+    "meta": {
+      "filename": "menu-button.tsx",
+      "path": "web/components/oj-c/menu-button"
+    },
+    "longname": "oj-c.MenuButton#event:ojMenuAction",
+    "scope": "instance",
+    "bubbles": true,
+    "ojshortdesc": "Triggered when a menu item is clicked, whether by keyboard, mouse, or touch events. Detail indicates which menu item was clicked.",
+    "description": "<p style=\"background-color: RGB(var(--oj-palette-info-rgb-30)); border: 2px solid #ddd\"><strong>Note:</strong> The event detail contains the following properties: [oj-c.MenuButton.MenuItemSelectionDetail]{@link oj-c.MenuButton.MenuItemSelectionDetail}</p>Triggered when a menu item is clicked, whether by keyboard, mouse, or touch events. Detail indicates which menu item was clicked."
+  },
+  {
+    "id": "oj-c.MenuButton#event:ojMenuSelection",
+    "name": "ojMenuSelection",
+    "kind": "event",
+    "memberof": "oj-c.MenuButton",
+    "meta": {
+      "filename": "menu-button.tsx",
+      "path": "web/components/oj-c/menu-button"
+    },
+    "longname": "oj-c.MenuButton#event:ojMenuSelection",
+    "scope": "instance",
+    "bubbles": true,
+    "ojshortdesc": "Triggered when a menu selection group item is clicked, whether by keyboard, mouse, or touch events. Detail indicates new selection value for group.",
+    "description": "Triggered when a menu selection group item is clicked, whether by keyboard, mouse, or touch events. Detail indicates new selection value for group.",
+    "properties": [
+      {
+        "name": "value",
+        "optional": false,
+        "type": {
+          "names": [
+            "string|Array<string>"
+          ]
+        }
+      },
+      {
+        "name": "menuSelectionGroupKey",
+        "optional": false,
+        "type": {
+          "names": [
+            "string"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "oj-c.MenuButton#startIcon",
+    "name": "startIcon",
+    "memberof": "oj-c.MenuButton",
+    "meta": {
+      "filename": "menu-button.tsx",
+      "path": "web/components/oj-c/menu-button"
+    },
+    "kind": "member",
+    "longname": "oj-c.MenuButton#startIcon",
+    "scope": "instance",
+    "ojdisplayname": "startIcon",
+    "description": "The startIcon slot is the button's start icon. The oj-c-menu-button element accepts DOM nodes as children with the startIcon slot.",
+    "ojshortdesc": "The startIcon slot is the button's start icon. The oj-c-menu-button element accepts DOM nodes as children with the startIcon slot.",
+    "ojslot": true
+  },
+  {
+    "id": "oj-c.MenuButton#endIcon",
+    "name": "endIcon",
+    "memberof": "oj-c.MenuButton",
+    "meta": {
+      "filename": "menu-button.tsx",
+      "path": "web/components/oj-c/menu-button"
+    },
+    "kind": "member",
+    "longname": "oj-c.MenuButton#endIcon",
+    "scope": "instance",
+    "description": "The endIcon slot is the button's end icon. The oj-c-menu-button element accepts DOM nodes as children with the endIcon slot.",
+    "ojshortdesc": "The endIcon slot is the button's end icon. The oj-c-menu-button element accepts DOM nodes as children with the endIcon slot.",
+    "ojslot": true
+  },
+  {
+    "id": "oj-c.MenuButton.touchDoc",
+    "name": "touchDoc",
+    "kind": "member",
+    "longname": "oj-c.MenuButton.touchDoc",
+    "description": "<table class=\"keyboard-table\">\n  <thead>\n    <tr>\n      <th>Target</th>\n      <th>Key</th>\n      <th>Action</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Menu Button</td>\n      <td><kbd>Enter</kbd> or <kbd>Space</kbd> or <kbd>Down Arrow</kbd></td>\n      <td>Invoke the Button menu.</td>\n    </tr>\n  </tbody>\n</table>",
+    "memberof": "oj-c.MenuButton",
+    "meta": {
+      "filename": "menu-button.tsx",
+      "path": "web/components/oj-c/menu-button"
+    },
+    "ojfragment": true
+  },
+  {
+    "id": "oj-c.MenuButton.keyboardDoc",
+    "name": "keyboardDoc",
+    "kind": "member",
+    "longname": "oj-c.MenuButton.keyboardDoc",
+    "description": "<table class=\"keyboard-table\">\n  <thead>\n    <tr>\n      <th>Target</th>\n      <th>Key</th>\n      <th>Action</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Menu Button</td>\n      <td><kbd>Enter</kbd> or <kbd>Space</kbd> or <kbd>Down Arrow</kbd></td>\n      <td>Invoke the Button menu.</td>\n    </tr>\n  </tbody>\n</table>",
+    "memberof": "oj-c.MenuButton",
+    "meta": {
+      "filename": "menu-button.tsx",
+      "path": "web/components/oj-c/menu-button"
+    },
+    "ojfragment": true
+  },
+  {
+    "id": "oj-c.MenuButton.MenuSeparator",
+    "name": "MenuSeparator",
+    "kind": "typedef",
+    "memberof": "oj-c.MenuButton",
+    "meta": {
+      "filename": "menu-button.tsx",
+      "path": "web/components/oj-c/menu-button"
+    },
+    "longname": "oj-c.MenuButton.MenuSeparator",
+    "type": {
+      "names": [
+        "Object"
+      ]
+    },
+    "scope": "static",
+    "description": "Specifies a menu separator:  <code>{ type: \"separator\" }</code>.",
+    "properties": [
+      {
+        "name": "type",
+        "description": "Specifies a separator menu item.",
+        "optional": false,
+        "type": {
+          "names": [
+            "\"separator\"",
+            "\"divider\""
+          ]
+        },
+        "tsdeprecated": [
+          {
+            "type": "deprecated",
+            "since": "17.0.0",
+            "target": "propertyValue",
+            "value": [
+              "divider"
+            ],
+            "description": "Use 'separator' instead."
+          }
+        ],
+        "ojshortdesc": "Specifies a separator menu item."
+      }
+    ]
+  },
+  {
+    "id": "oj-c.MenuButton.MenuItem",
+    "name": "MenuItem",
+    "kind": "typedef",
+    "memberof": "oj-c.MenuButton",
+    "meta": {
+      "filename": "menu-button.tsx",
+      "path": "web/components/oj-c/menu-button"
+    },
+    "longname": "oj-c.MenuButton.MenuItem",
+    "type": {
+      "names": [
+        "Object"
+      ]
+    },
+    "scope": "static",
+    "description": "Specifies a standard menu item.",
+    "properties": [
+      {
+        "name": "type",
+        "description": "Specifies a standard menu item.",
+        "optional": true,
+        "type": {
+          "names": [
+            "\"item\""
+          ]
+        },
+        "ojshortdesc": "Specifies a standard menu item."
+      },
+      {
+        "name": "label",
+        "description": "The menu item label.",
+        "optional": false,
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "ojshortdesc": "The menu item label."
+      },
+      {
+        "name": "key",
+        "description": "A unique key associated with the menu item.",
+        "optional": false,
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "ojshortdesc": "A unique key associated with the menu item."
+      },
+      {
+        "name": "disabled",
+        "description": "Specifies if the menu item is disabled (enabled by default).",
+        "optional": true,
+        "type": {
+          "names": [
+            "boolean"
+          ]
+        },
+        "ojshortdesc": "Specifies if the menu item is disabled (enabled by default)."
+      },
+      {
+        "name": "onAction",
+        "description": "Optional callback function associated with the menu item.",
+        "optional": true,
+        "type": {
+          "names": [
+            "function"
+          ]
+        },
+        "ojshortdesc": "Optional callback function associated with the menu item."
+      },
+      {
+        "name": "startIcon",
+        "description": "Optional icon to render at the start of the menu item.",
+        "optional": true,
+        "type": {
+          "names": [
+            "object"
+          ]
+        },
+        "tstype": [
+          {
+            "target": "Type",
+            "value": "{ type?: 'class'; class: string; }|{ type: 'img'; src: string; }",
+            "jsdocOverride": true,
+            "for": "startIcon"
+          }
+        ],
+        "ojshortdesc": "Optional icon to render at the start of the menu item."
+      },
+      {
+        "name": "endIcon",
+        "description": "Optional icon to render at the end of the menu item.",
+        "optional": true,
+        "type": {
+          "names": [
+            "object"
+          ]
+        },
+        "tstype": [
+          {
+            "target": "Type",
+            "value": "{ type?: 'class'; class: string; }|{ type: 'img'; src: string; }",
+            "jsdocOverride": true,
+            "for": "endIcon"
+          }
+        ],
+        "ojshortdesc": "Optional icon to render at the end of the menu item."
+      },
+      {
+        "name": "variant",
+        "description": "Specifies the menu item behavior.",
+        "optional": true,
+        "type": {
+          "names": [
+            "\"standard\"",
+            "\"destructive\""
+          ]
+        },
+        "ojshortdesc": "Specifies the menu item behavior."
+      }
+    ]
+  },
+  {
+    "id": "oj-c.MenuButton.MenuSubMenu",
+    "name": "MenuSubMenu",
+    "kind": "typedef",
+    "memberof": "oj-c.MenuButton",
+    "meta": {
+      "filename": "menu-button.tsx",
+      "path": "web/components/oj-c/menu-button"
+    },
+    "longname": "oj-c.MenuButton.MenuSubMenu",
+    "type": {
+      "names": [
+        "Object"
+      ]
+    },
+    "scope": "static",
+    "description": "Specifies a menu item representing a submenu.",
+    "properties": [
+      {
+        "name": "key",
+        "description": "A unique key associated with the submenu menu item.",
+        "optional": true,
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "ojshortdesc": "A unique key associated with the submenu menu item."
+      },
+      {
+        "name": "type",
+        "description": "Specifies a submenu menu item.",
+        "optional": false,
+        "type": {
+          "names": [
+            "\"submenu\""
+          ]
+        },
+        "ojshortdesc": "Specifies a submenu menu item."
+      },
+      {
+        "name": "label",
+        "description": "The submenu label.",
+        "optional": true,
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "ojshortdesc": "The submenu label."
+      },
+      {
+        "name": "disabled",
+        "description": "Specifies if the submenu is disabled (enabled by default).",
+        "optional": true,
+        "type": {
+          "names": [
+            "boolean"
+          ]
+        },
+        "ojshortdesc": "Specifies if the submenu is disabled (enabled by default)."
+      },
+      {
+        "name": "startIcon",
+        "description": "Optional icon to render at the start of the submenu.",
+        "optional": true,
+        "type": {
+          "names": [
+            "object"
+          ]
+        },
+        "tstype": [
+          {
+            "target": "Type",
+            "value": "{ type?: 'class'; class: string; }|{ type: 'img'; src: string; }",
+            "jsdocOverride": true,
+            "for": "startIcon"
+          }
+        ],
+        "ojshortdesc": "Optional icon to render at the start of the submenu."
+      },
+      {
+        "name": "items",
+        "description": "Specifies the array of menu items that make up the submenu.",
+        "optional": true,
+        "type": {
+          "names": [
+            "Array<object>"
+          ]
+        },
+        "tstype": [
+          {
+            "target": "Type",
+            "value": "Array<oj-c.MenuButton.MenuItems>",
+            "jsdocOverride": true,
+            "for": "items"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "oj-c.MenuButton.MenuSelectItem",
+    "name": "MenuSelectItem",
+    "kind": "typedef",
+    "memberof": "oj-c.MenuButton",
+    "meta": {
+      "filename": "menu-button.tsx",
+      "path": "web/components/oj-c/menu-button"
+    },
+    "longname": "oj-c.MenuButton.MenuSelectItem",
+    "type": {
+      "names": [
+        "Object"
+      ]
+    },
+    "scope": "static",
+    "description": "Specifies a selectable item in a menu item.",
+    "properties": [
+      {
+        "name": "label",
+        "description": "The selectable item label.",
+        "optional": false,
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "ojshortdesc": "The selectable item label."
+      },
+      {
+        "name": "disabled",
+        "description": "Specifies if the selectable item is disabled (enabled by default).",
+        "optional": true,
+        "type": {
+          "names": [
+            "boolean"
+          ]
+        },
+        "ojshortdesc": "Specifies if the selectable item is disabled (enabled by default)."
+      },
+      {
+        "name": "startIcon",
+        "description": "Optional icon to render at the start of the selectable item.",
+        "optional": true,
+        "type": {
+          "names": [
+            "object"
+          ]
+        },
+        "tstype": [
+          {
+            "target": "Type",
+            "value": "{ type?: 'class'; class: string; }|{ type: 'img'; src: string; }",
+            "jsdocOverride": true,
+            "for": "startIcon"
+          }
+        ],
+        "ojshortdesc": "Optional icon to render at the start of the selectable item."
+      },
+      {
+        "name": "endIcon",
+        "description": "Optional icon to render at the end of the selectable item.",
+        "optional": true,
+        "type": {
+          "names": [
+            "object"
+          ]
+        },
+        "tstype": [
+          {
+            "target": "Type",
+            "value": "{ type?: 'class'; class: string; }|{ type: 'img'; src: string; }",
+            "jsdocOverride": true,
+            "for": "endIcon"
+          }
+        ],
+        "ojshortdesc": "Optional icon to render at the end of the selectable item."
+      },
+      {
+        "name": "value",
+        "description": "The value associated with the selectable item.",
+        "optional": false,
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "ojshortdesc": "The value associated with the selectable item."
+      }
+    ]
+  },
+  {
+    "id": "oj-c.MenuButton.MenuSelectSingle",
+    "name": "MenuSelectSingle",
+    "kind": "typedef",
+    "memberof": "oj-c.MenuButton",
+    "meta": {
+      "filename": "menu-button.tsx",
+      "path": "web/components/oj-c/menu-button"
+    },
+    "longname": "oj-c.MenuButton.MenuSelectSingle",
+    "type": {
+      "names": [
+        "Object"
+      ]
+    },
+    "scope": "static",
+    "description": "Specifies a menu item representing a select single.",
+    "properties": [
+      {
+        "name": "type",
+        "description": "Specifies a select single menu item.",
+        "optional": false,
+        "type": {
+          "names": [
+            "\"selectsingle\""
+          ]
+        },
+        "ojshortdesc": "Specifies a select single menu item."
+      },
+      {
+        "name": "key",
+        "description": "A unique key associated with the select single.",
+        "optional": false,
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "ojshortdesc": "A unique key associated with the select single."
+      },
+      {
+        "name": "items",
+        "description": "Specifies the array of select items that make up the select single.",
+        "optional": true,
+        "type": {
+          "names": [
+            "Array<object>"
+          ]
+        },
+        "tstype": [
+          {
+            "target": "Type",
+            "value": "Array<oj-c.MenuButton.MenuSelectItem>",
+            "jsdocOverride": true,
+            "for": "items"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "oj-c.MenuButton.MenuSelectMultiple",
+    "name": "MenuSelectMultiple",
+    "kind": "typedef",
+    "memberof": "oj-c.MenuButton",
+    "meta": {
+      "filename": "menu-button.tsx",
+      "path": "web/components/oj-c/menu-button"
+    },
+    "longname": "oj-c.MenuButton.MenuSelectMultiple",
+    "type": {
+      "names": [
+        "Object"
+      ]
+    },
+    "scope": "static",
+    "description": "Specifies a menu item representing a select multiple.",
+    "properties": [
+      {
+        "name": "type",
+        "description": "Specifies a select multiple menu item.",
+        "optional": false,
+        "type": {
+          "names": [
+            "\"selectmultiple\""
+          ]
+        },
+        "ojshortdesc": "Specifies a select multiple menu item."
+      },
+      {
+        "name": "key",
+        "description": "A unique key associated with the select multiple.",
+        "optional": false,
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "ojshortdesc": "A unique key associated with the select multiple."
+      },
+      {
+        "name": "items",
+        "description": "Specifies the array of select items that make up the select multiple.",
+        "optional": true,
+        "type": {
+          "names": [
+            "Array<object>"
+          ]
+        },
+        "tstype": [
+          {
+            "target": "Type",
+            "value": "Array<oj-c.MenuButton.MenuSelectItem>",
+            "jsdocOverride": true,
+            "for": "items"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "oj-c.MenuButton.MenuItems",
+    "name": "MenuItems",
+    "kind": "typedef",
+    "memberof": "oj-c.MenuButton",
+    "meta": {
+      "filename": "menu-button.tsx",
+      "path": "web/components/oj-c/menu-button"
+    },
+    "longname": "oj-c.MenuButton.MenuItems",
+    "type": {
+      "names": [
+        "Object"
+      ]
+    },
+    "scope": "static",
+    "description": "",
+    "tstype": [
+      {
+        "target": "Type",
+        "value": "oj-c.MenuButton.MenuSeparator|oj-c.MenuButton.MenuItem|oj-c.MenuButton.MenuSubMenu|oj-c.MenuButton.MenuSelectSingle|oj-c.MenuButton.MenuSelectMultiple",
+        "jsdocOverride": true
+      }
+    ]
+  },
+  {
+    "id": "oj-c.MenuButton.MenuItemSelectionDetail",
+    "name": "MenuItemSelectionDetail",
+    "kind": "typedef",
+    "memberof": "oj-c.MenuButton",
+    "meta": {
+      "filename": "menu-button.tsx",
+      "path": "web/components/oj-c/menu-button"
+    },
+    "longname": "oj-c.MenuButton.MenuItemSelectionDetail",
+    "type": {
+      "names": [
+        "Object"
+      ]
+    },
+    "scope": "static",
+    "description": "",
+    "properties": [
+      {
+        "name": "key",
+        "optional": false,
+        "type": {
+          "names": [
+            "string"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "oj-c.MenuButton.MenuSelection",
+    "name": "MenuSelection",
+    "kind": "typedef",
+    "memberof": "oj-c.MenuButton",
+    "meta": {
+      "filename": "menu-button.tsx",
+      "path": "web/components/oj-c/menu-button"
+    },
+    "longname": "oj-c.MenuButton.MenuSelection",
+    "type": {
+      "names": [
+        "Object"
+      ]
+    },
+    "scope": "static",
+    "description": "",
+    "properties": [
+      {
+        "name": "at",
+        "optional": false,
+        "type": {
+          "names": [
+            "function"
+          ]
+        },
+        "tstype": [
+          {
+            "target": "Type",
+            "value": "(index: number) => string | undefined",
+            "jsdocOverride": true,
+            "for": "at"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "oj-c.MenuButton.SelectMenuItemDetail",
+    "name": "SelectMenuItemDetail",
+    "kind": "typedef",
+    "memberof": "oj-c.MenuButton",
+    "meta": {
+      "filename": "menu-button.tsx",
+      "path": "web/components/oj-c/menu-button"
+    },
+    "longname": "oj-c.MenuButton.SelectMenuItemDetail",
+    "type": {
+      "names": [
+        "Object"
+      ]
+    },
+    "scope": "static",
+    "description": "",
+    "tsgenerictype": {
+      "target": "Type",
+      "value": "<T extends oj-c.MenuButton.MenuSelection>",
+      "for": "genericTypeParameters"
+    },
+    "properties": [
+      {
+        "name": "value",
+        "optional": false,
+        "type": {
+          "names": [
+            "any"
+          ]
+        },
+        "tstype": [
+          {
+            "target": "Type",
+            "value": "T",
+            "jsdocOverride": true,
+            "for": "value"
+          }
+        ]
+      },
+      {
+        "name": "menuSelectionGroupKey",
+        "optional": false,
+        "type": {
+          "names": [
+            "string"
+          ]
+        }
+      }
+    ]
+  }
+]

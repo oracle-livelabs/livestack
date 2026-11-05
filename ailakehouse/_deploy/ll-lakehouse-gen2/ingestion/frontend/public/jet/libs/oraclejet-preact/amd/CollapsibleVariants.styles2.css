@@ -1,0 +1,13 @@
+.CollapsibleVariants_multiVariantStyles_disabled_isDisabled__b7rfjp2 {
+  cursor: auto;
+  color: var(--oj-c-text-icon-disabled);
+}
+.CollapsibleVariants_multiVariantStyles_divider_hasDivider__b7rfjp4 {
+  padding-bottom: calc(2 * var(--oj-c-size-units, 0.25rem));
+}
+.CollapsibleVariants_multiVariantStyles_focused_isFocused__b7rfjp6 {
+  outline-style: dotted;
+  outline-offset: 0px;
+  outline-width: 1px;
+  outline-color: var(--oj-c-border-keyboard-focus);
+}

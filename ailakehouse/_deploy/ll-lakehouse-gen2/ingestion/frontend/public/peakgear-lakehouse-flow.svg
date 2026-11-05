@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 1152" role="img" aria-labelledby="title desc">
+  <title id="title">Oracle AI Lakehouse for smarter sporting goods retail</title>
+  <desc id="desc">PeakGear customer signals flow through retail challenges into Bronze, Silver, Gold and AI layers, producing smarter retail operations.</desc>
+  <rect width="2048" height="1152" fill="#fff"/>
+  <style>
+    .kicker{font:700 28px Arial,sans-serif;fill:#05708d}
+    .title{font:800 46px Arial,sans-serif;fill:#050505}
+    .label{font:800 30px Arial,sans-serif;fill:#050505}
+    .body{font:400 26px Arial,sans-serif;fill:#050505}
+    .small{font:400 19px Arial,sans-serif;fill:#222}
+    .strong{font:800 25px Arial,sans-serif;fill:#050505}
+    .banner{font:800 34px Arial,sans-serif;fill:#064e62}
+  </style>
+
+  <text x="102" y="134" class="kicker">Peak-gear Demo Story</text>
+  <text x="102" y="190" class="title">Oracle AI Lakehouse for Smarter Sporting Goods Retail</text>
+
+  <text x="102" y="264" class="label">1. Customer</text>
+  <rect x="102" y="290" width="342" height="494" rx="16" fill="#fff" stroke="#80c342" stroke-width="4"/>
+  <circle cx="205" cy="386" r="55" fill="#397015"/>
+  <path d="M170 353h14l9 57h48l10-38h-54" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="201" cy="423" r="6" fill="#fff"/>
+  <circle cx="234" cy="423" r="6" fill="#fff"/>
+  <path d="M199 382h43M203 397h35M212 371v37M229 371v37" stroke="#fff" stroke-width="4"/>
+  <text x="148" y="512" class="strong">PeakGear Sporting</text>
+  <text x="148" y="548" class="strong">Goods</text>
+  <rect x="148" y="612" width="238" height="47" rx="5" fill="#eee"/>
+  <path d="M174 626h18v18h-18zM178 622h10M180 645h4M188 645h4" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round"/>
+  <text x="206" y="642" class="small">Retail demo customer</text>
+  <path d="M302 690c36-66 75-83 121-56l34 47c-55 49-111 69-174 61-18-2-25-20-11-34z" fill="#477249"/>
+  <path d="M281 717c61 17 116-6 176-36l31 41c-45 48-118 78-200 48-33-12-34-62-7-53z" fill="#f2c94c"/>
+  <path d="M341 615l37 68M361 617l32 57M386 624l28 43" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+  <text x="104" y="856" class="small">Fast-moving webshop + fulfillment</text>
+  <text x="104" y="878" class="small">network</text>
+
+  <path d="M444 575h83" stroke="#777" stroke-width="3"/>
+  <path d="M527 575l-12-10v20z" fill="#777"/>
+  <circle cx="444" cy="575" r="6" fill="#777"/>
+
+  <text x="527" y="264" class="label">2. Retail Challenges</text>
+  <rect x="527" y="290" width="478" height="600" rx="16" fill="#fff" stroke="#d84532" stroke-width="4"/>
+  <g transform="translate(620 386)">
+    <circle r="56" fill="#f2493e"/>
+    <path d="M0-43v86M-43 0h86M-30-30l30-30 30 30M-30 30l30 30 30-30M-30-30l-30 30 30 30M30-30l30 30-30 30" fill="none" stroke="#fff" stroke-width="4"/>
+    <circle r="17" fill="none" stroke="#fff" stroke-width="4"/>
+    <text x="-7" y="9" font="700 28px Arial" fill="#fff">?</text>
+  </g>
+  <text x="708" y="384" class="strong">Demand shifts</text>
+  <text x="708" y="416" class="body">Trends move faster</text>
+  <text x="708" y="448" class="body">than plans</text>
+
+  <g transform="translate(620 580)">
+    <circle r="56" fill="#f2493e"/>
+    <path d="M-34 34h70M-30 34v-58M-18 34v-34M-6 34v-12M6 34v-44M18 34v-22M30 34v-66" fill="none" stroke="#fff" stroke-width="4"/>
+    <path d="M-30 18l12 7 12-17 12 8 12-22 12-9" fill="none" stroke="#fff" stroke-width="4"/>
+  </g>
+  <text x="708" y="568" class="strong">Inventory risk</text>
+  <text x="708" y="600" class="body">Stockout, capacity,</text>
+  <text x="708" y="632" class="body">revenue at risk</text>
+
+  <g transform="translate(620 780)">
+    <circle r="56" fill="#f2493e"/>
+    <circle r="34" fill="none" stroke="#fff" stroke-width="4"/>
+    <path d="M-49 0h98M0-49v98M-27-27c16 10 38 10 54 0M-27 27c16-10 38-10 54 0" fill="none" stroke="#fff" stroke-width="4"/>
+    <path d="M-42-15c-12 0-18 11-11 21l11 18 11-18c7-10 1-21-11-21zM43-11c-10 0-15 9-9 18l9 14 9-14c6-9 1-18-9-18zM0 20c-11 0-17 10-10 19l10 17 10-17c7-9 1-19-10-19z" fill="none" stroke="#fff" stroke-width="4"/>
+  </g>
+  <text x="708" y="756" class="strong">Service pressure</text>
+  <text x="708" y="788" class="body">Route orders across</text>
+  <text x="708" y="820" class="body">locations</text>
+
+  <path d="M1005 575h83" stroke="#777" stroke-width="3"/>
+  <path d="M1088 575l-12-10v20z" fill="#777"/>
+  <circle cx="1005" cy="575" r="6" fill="#777"/>
+
+  <text x="1087" y="264" class="label">3. AI Lakehouse Lifecycle</text>
+  <rect x="1087" y="290" width="478" height="600" rx="16" fill="#fff" stroke="#0a7895" stroke-width="4"/>
+  <g transform="translate(1180 386)">
+    <circle r="56" fill="#05708d"/>
+    <path d="M0-31l8 9 12-2 3 13 11 7-7 11 2 13-13 3-7 11-11-7-13 2-3-13-11-7 7-11-2-13 13-3z" fill="none" stroke="#fff" stroke-width="4"/>
+    <circle r="17" fill="none" stroke="#fff" stroke-width="4"/>
+  </g>
+  <text x="1255" y="384" class="strong">Bronze</text>
+  <text x="1255" y="416" class="body">Ingest raw operations</text>
+
+  <g transform="translate(1180 562)">
+    <circle r="56" fill="#05708d"/>
+    <path d="M-23-23l7 7 10-2 2 11 9 5-6 9 1 10-10 2-5 9-9-6-10 1-2-10-9-5 6-9-1-10 10-2zM24-7l7 7 10-2 2 11 9 5-6 9 1 10-10 2-5 9-9-6-10 1-2-10-9-5 6-9-1-10 10-2z" fill="none" stroke="#fff" stroke-width="4"/>
+    <circle cx="-20" cy="-3" r="16" fill="none" stroke="#fff" stroke-width="4"/>
+    <circle cx="27" cy="20" r="16" fill="none" stroke="#fff" stroke-width="4"/>
+  </g>
+  <text x="1255" y="552" class="strong">Silver</text>
+  <text x="1255" y="584" class="body">Standardize, govern</text>
+
+  <g transform="translate(1180 732)">
+    <circle r="56" fill="#05708d"/>
+    <path d="M-29-8l7 7 10-2 2 11 9 5-6 9 1 10-10 2-5 9-9-6-10 1-2-10-9-5 6-9-1-10 10-2zM12-30l7 7 10-2 2 11 9 5-6 9 1 10-10 2-5 9-9-6-10 1-2-10-9-5 6-9-1-10 10-2zM25 24l7 7 10-2 2 11 9 5-6 9 1 10-10 2-5 9-9-6-10 1-2-10-9-5 6-9-1-10 10-2z" fill="none" stroke="#fff" stroke-width="4"/>
+  </g>
+  <text x="1255" y="726" class="strong">Gold + AI</text>
+  <text x="1255" y="758" class="body">Apps, analytics, search,</text>
+  <text x="1255" y="790" class="body">agents</text>
+
+  <path d="M1565 575h82" stroke="#777" stroke-width="3"/>
+  <path d="M1647 575l-12-10v20z" fill="#777"/>
+  <circle cx="1565" cy="575" r="6" fill="#777"/>
+
+  <text x="1644" y="264" class="label">4. Final Output</text>
+  <rect x="1644" y="290" width="344" height="600" rx="16" fill="#fff" stroke="#80c342" stroke-width="4"/>
+  <circle cx="1816" cy="386" r="72" fill="#d4efbf"/>
+  <circle cx="1816" cy="386" r="56" fill="#397015"/>
+  <path d="M1768 385l35 35 62-63" fill="none" stroke="#fff" stroke-width="7"/>
+  <text x="1700" y="538" class="strong">Smarter Retail Ops</text>
+  <ellipse cx="1806" cy="738" rx="82" ry="115" fill="#727da1"/>
+  <path d="M1814 786h-55l-9-86h73z" fill="#d9e2ef" stroke="#9aa8be" stroke-width="4"/>
+  <path d="M1763 698c26-9 42-9 61 0" fill="none" stroke="#9aa8be" stroke-width="6"/>
+  <path d="M1782 690c21-63 59-93 111-91-20 46-55 75-111 91zM1801 706c39-38 77-45 116-24-36 31-74 41-116 24z" fill="#9bd68c"/>
+  <path d="M1780 735c-20 9-31 27-24 41 8 13 31 17 52 8 20-9 31-27 24-41-8-14-31-17-52-8zM1835 752c-20 9-31 27-24 41 8 13 31 17 52 8 20-9 31-27 24-41-8-14-31-17-52-8z" fill="#f1c46b" stroke="#b5894c" stroke-width="4"/>
+
+  <rect x="102" y="952" width="1886" height="110" rx="16" fill="#d6edf4"/>
+  <circle cx="156" cy="1007" r="55" fill="#69aac0"/>
+  <path d="M128 1028l20-72 18 20 18-20 18 20 18-20 20 72M139 1010h54M146 995h40" fill="none" stroke="#fff" stroke-width="5" stroke-linejoin="round"/>
+  <text x="282" y="1004" class="banner">Oracle AI Lakehouse turns fragmented retail signals into governed data products and AI-powered decisions</text>
+  <text x="282" y="1046" class="banner">across the full PeakGear operating model.</text>
+</svg>

@@ -37,15 +37,32 @@ class ControlTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory, patch.object(control, 'DIRECTORY', Path(directory)), patch.object(control, 'systemctl') as call:
             request = Path(directory) / 'retry.request'
             request.write_text('rm -rf anything; restart adb-load.service')
-            with patch.object(control, 'snapshot', side_effect=[{'status': 'failed'}, {'status': 'running', 'steps': []}]):
+            first = control.summarize({**units(), control.STEPS[1][0]: {'LoadState': 'loaded', 'ActiveState': 'failed', 'Result': 'exit-code', 'Job': ''}})
+            with patch.object(control, 'snapshot', side_effect=[first, {'status': 'running', 'steps': []}]):
                 control.tick()
-            names = [unit for unit, _ in control.STEPS]
-            self.assertEqual(call.call_args_list[0].args, ('reset-failed', *names))
-            self.assertEqual(call.call_args_list[1].args, ('start', '--no-block', *names))
+            failed_unit = control.STEPS[1][0]
+            self.assertEqual(call.call_args_list[0].args, ('reset-failed', failed_unit))
+            self.assertEqual(call.call_args_list[1].args, ('start', '--no-block', failed_unit))
             self.assertFalse(request.exists())
-            self.assertNotIn('adb-load.service', names)
+            self.assertNotIn('adb-load.service', call.call_args_list[1].args)
 
-    def test_running_and_ready_requests_do_not_restart(self):
+    def test_failed_step_retries_while_another_step_runs(self):
+        data = units()
+        failed_unit = control.STEPS[2][0]
+        running_unit = control.STEPS[3][0]
+        waiting_unit = control.STEPS[4][0]
+        data[failed_unit].update(ActiveState='failed', Result='exit-code')
+        data[running_unit].update(ActiveState='activating')
+        data[waiting_unit].update(ActiveState='inactive', Result='success')
+        first = control.summarize(data)
+        self.assertEqual(first['status'], 'running')
+        with tempfile.TemporaryDirectory() as directory, patch.object(control, 'DIRECTORY', Path(directory)), patch.object(control, 'systemctl') as call, patch.object(control, 'snapshot', side_effect=[first, first]):
+            (Path(directory) / 'retry.request').touch()
+            control.tick()
+            self.assertEqual(call.call_args_list[0].args, ('reset-failed', failed_unit))
+            self.assertEqual(call.call_args_list[1].args, ('start', '--no-block', failed_unit, waiting_unit))
+
+    def test_running_and_ready_requests_without_failed_steps_do_not_restart(self):
         for state in ['running', 'ready']:
             with tempfile.TemporaryDirectory() as directory, patch.object(control, 'DIRECTORY', Path(directory)), patch.object(control, 'systemctl') as call, patch.object(control, 'snapshot', return_value={'status': state, 'steps': []}):
                 (Path(directory) / 'retry.request').touch()

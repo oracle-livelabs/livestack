@@ -1,0 +1,2 @@
+define(['exports', '../StyledSwitchStyles.css', './StyledSwitchVariants.css', 'css!./../../../StyledSwitchStyles.styles.css', 'css!./../../../StyledSwitchVariants.styles2.css', '../../../vanilla-extract-recipes-createRuntimeFn.esm-d881c69a'], (function(t,e,s,i,l,a){"use strict";const c={multiVariantStyles:s.multiVariantStyles,variants:e.variants,styles:e.styles};t.StyledSwitchStableTheme=c,Object.defineProperty(t,"__esModule",{value:!0})}));
+//# sourceMappingURL=StyledSwitchTheme.js.map

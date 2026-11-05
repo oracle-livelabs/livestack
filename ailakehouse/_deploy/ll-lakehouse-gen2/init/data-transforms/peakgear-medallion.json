@@ -1,0 +1,3305 @@
+{
+  "project": {
+    "name": "peakgear_medallion",
+    "code": "PEAKGEAR_MEDALLION"
+  },
+  "mappings": [
+    {
+      "name": "df_01_enriched_sales_expressions",
+      "projectName": "peakgear_medallion",
+      "projectCode": "PEAKGEAR_MEDALLION",
+      "parentFolder": "DefaultFolder",
+      "sources": [
+        {
+          "name": "ailh_store_sales_bronze_v",
+          "type": "DATASTORE",
+          "uiCoordinates": "50,50",
+          "connectedTo": [
+            "Join"
+          ],
+          "boundToDataStoreName": "ailh_store_sales_bronze_v",
+          "boundToDataStoreType": "VIEW",
+          "schemaName": "PG",
+          "technology": "ORACLE",
+          "syncState": "IN_SYNC",
+          "attributes": [
+            {
+              "name": "TXN_ID",
+              "position": 1,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 20,
+              "scale": 0,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "SALE_TIMESTAMP",
+              "position": 2,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "STORE_ID",
+              "position": 3,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 20,
+              "scale": 0,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "PRODUCT_ID",
+              "position": 4,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 20,
+              "scale": 0,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "QTY_SOLD",
+              "position": 5,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 20,
+              "scale": 0,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "TOTAL_SALE_AMOUNT",
+              "position": 6,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 18,
+              "scale": 2,
+              "syncState": "IN_SYNC"
+            }
+          ],
+          "deprecated": false
+        },
+        {
+          "name": "ailh_store_locations_bronze_v",
+          "type": "DATASTORE",
+          "uiCoordinates": "250,250",
+          "connectedTo": [
+            "Join1"
+          ],
+          "boundToDataStoreName": "ailh_store_locations_bronze_v",
+          "boundToDataStoreType": "VIEW",
+          "schemaName": "PG",
+          "technology": "ORACLE",
+          "syncState": "IN_SYNC",
+          "attributes": [
+            {
+              "name": "STORE_ID",
+              "position": 1,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 20,
+              "scale": 0,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "LOCATION",
+              "position": 2,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "MANAGER",
+              "position": 3,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "OPENED_DATE",
+              "position": 4,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "CHANNEL_TYPE",
+              "position": 5,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "STORE_TYPE",
+              "position": 6,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "syncState": "IN_SYNC"
+            }
+          ],
+          "deprecated": false
+        },
+        {
+          "name": "ailh_products_bronze_v",
+          "type": "DATASTORE",
+          "uiCoordinates": "50,150",
+          "connectedTo": [
+            "Join"
+          ],
+          "boundToDataStoreName": "ailh_products_bronze_v",
+          "boundToDataStoreType": "VIEW",
+          "schemaName": "PG",
+          "technology": "ORACLE",
+          "syncState": "IN_SYNC",
+          "attributes": [
+            {
+              "name": "PRODUCT_ID",
+              "position": 1,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 20,
+              "scale": 0,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "PRODUCT_NAME",
+              "position": 2,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "CATEGORY",
+              "position": 3,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "COST_PRICE",
+              "position": 4,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 18,
+              "scale": 2,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "RETAIL_PRICE",
+              "position": 5,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 18,
+              "scale": 2,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "SKU",
+              "position": 6,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "syncState": "IN_SYNC"
+            }
+          ],
+          "deprecated": false
+        }
+      ],
+      "targets": [
+        {
+          "name": "ailh_enriched_sales_stage",
+          "type": "DATASTORE",
+          "uiCoordinates": "850,50",
+          "connectedFrom": [
+            "Expression"
+          ],
+          "boundToDataStoreName": "ailh_enriched_sales_stage",
+          "boundToDataStoreType": "TABLE",
+          "schemaName": "PG",
+          "technology": "ORACLE",
+          "syncState": "IN_SYNC",
+          "integrationType": "CONTROL_APPEND",
+          "isMaxErrorsAsPercentage": false,
+          "attributes": [
+            {
+              "name": "STORE_ID",
+              "position": 1,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 20,
+              "scale": 0,
+              "expressions": {
+                "INPUT1": "Expression.STORE_ID"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "TXN_ID",
+              "position": 2,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 20,
+              "scale": 0,
+              "expressions": {
+                "INPUT1": "Expression.TXN_ID"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "PRODUCT_ID",
+              "position": 3,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 20,
+              "scale": 0,
+              "expressions": {
+                "INPUT1": "Expression.PRODUCT_ID"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "LOCATION",
+              "position": 4,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "Expression.LOCATION"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "SALE_TIMESTAMP",
+              "position": 5,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "Expression.SALE_TIMESTAMP"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "PRODUCT_NAME",
+              "position": 6,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "Expression.PRODUCT_NAME"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "MANAGER",
+              "position": 7,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "Expression.MANAGER"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "CATEGORY",
+              "position": 8,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "Expression.CATEGORY"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "OPENED_DATE",
+              "position": 9,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "Expression.OPENED_DATE"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "COST_PRICE",
+              "position": 10,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 18,
+              "scale": 2,
+              "expressions": {
+                "INPUT1": "Expression.COST_PRICE"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "CHANNEL_TYPE",
+              "position": 11,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "Expression.CHANNEL_TYPE"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "QTY_SOLD",
+              "position": 12,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 20,
+              "scale": 0,
+              "expressions": {
+                "INPUT1": "Expression.QTY_SOLD"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "RETAIL_PRICE",
+              "position": 13,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 18,
+              "scale": 2,
+              "expressions": {
+                "INPUT1": "Expression.RETAIL_PRICE"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "TOTAL_SALE_AMOUNT",
+              "position": 14,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 18,
+              "scale": 2,
+              "expressions": {
+                "INPUT1": "Expression.TOTAL_SALE_AMOUNT"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "SKU",
+              "position": 15,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "Expression.SKU"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "STORE_TYPE",
+              "position": 16,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "Expression.STORE_TYPE"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "SALE_MONTH",
+              "position": 17,
+              "dataType": "DATE",
+              "dataTypeCode": "DATE",
+              "length": 7,
+              "expressions": {
+                "INPUT1": "Expression.SALE_MONTH"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "CITY",
+              "position": 18,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "Expression.CITY"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "STATE",
+              "position": 19,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "Expression.STATE"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "COUNTRY",
+              "position": 20,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "Expression.COUNTRY"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "SALES_REGION",
+              "position": 21,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "Expression.SALES_REGION"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "ESTIMATED_COST",
+              "position": 22,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 30,
+              "scale": 10,
+              "expressions": {
+                "INPUT1": "Expression.ESTIMATED_COST"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "ESTIMATED_GROSS_MARGIN",
+              "position": 23,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 30,
+              "scale": 10,
+              "expressions": {
+                "INPUT1": "Expression.ESTIMATED_GROSS_MARGIN"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "ESTIMATED_MARGIN_PCT",
+              "position": 24,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 30,
+              "scale": 10,
+              "expressions": {
+                "INPUT1": "Expression.ESTIMATED_MARGIN_PCT"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            }
+          ],
+          "options": [
+            {
+              "kmName": "IKM Oracle Insert",
+              "kmOptions": [
+                {
+                  "optionName": "DROP_AND_CREATE_TARGET_TABLE",
+                  "optionValue": "true",
+                  "optionType": "CHECKBOX",
+                  "setAsDefault": false,
+                  "description": "Drop and create the target table",
+                  "defaultValue": "false"
+                },
+                {
+                  "optionName": "INSERT_HINT",
+                  "optionValue": "APPEND PARALLEL",
+                  "optionType": "LONG_TEXT",
+                  "setAsDefault": true,
+                  "description": "Oracle DML loading hint for loading integration table",
+                  "defaultValue": "APPEND PARALLEL"
+                },
+                {
+                  "optionName": "SELECT_HINT",
+                  "optionValue": " ",
+                  "optionType": "LONG_TEXT",
+                  "setAsDefault": true,
+                  "description": "Oracle extraction hint for querying source tables",
+                  "defaultValue": " "
+                },
+                {
+                  "optionName": "CONSTRAINTS",
+                  "optionValue": "None",
+                  "optionType": "CHOICE",
+                  "setAsDefault": true,
+                  "description": "Disable/enable constraints before/after the data is loaded into target table",
+                  "help": "Select the appropriate value to disable/enable constraints before/after the data is loaded into target table",
+                  "defaultValue": "None",
+                  "choiceValues": [
+                    "None",
+                    "Disable",
+                    "Enable",
+                    "Disable and Enable"
+                  ]
+                },
+                {
+                  "optionName": "CREATE_TARGET_TABLE",
+                  "optionValue": "true",
+                  "optionType": "CHECKBOX",
+                  "setAsDefault": false,
+                  "description": "Create the target table",
+                  "defaultValue": "false"
+                },
+                {
+                  "optionName": "PERSIST_ANNOTATIONS",
+                  "optionValue": "false",
+                  "optionType": "CHECKBOX",
+                  "setAsDefault": true,
+                  "description": "Persist annotations",
+                  "defaultValue": "false"
+                },
+                {
+                  "optionName": "INDEXES",
+                  "optionValue": "None",
+                  "optionType": "CHOICE",
+                  "setAsDefault": true,
+                  "description": "Disable/enable indexes before/after the data is loaded into target table",
+                  "help": "Select the appropriate value to disable/enable indexes before/after the data is loaded into target table",
+                  "defaultValue": "None",
+                  "choiceValues": [
+                    "None",
+                    "Disable",
+                    "Enable",
+                    "Enable Rebuild Online",
+                    "Disable and Enable",
+                    "Disable and Enable Rebuild Online"
+                  ]
+                },
+                {
+                  "optionName": "TRUNCATE_TARGET_TABLE",
+                  "optionValue": "false",
+                  "optionType": "CHECKBOX",
+                  "setAsDefault": true,
+                  "description": "Truncate the target table",
+                  "defaultValue": "false"
+                },
+                {
+                  "optionName": "DELETE_ALL",
+                  "optionValue": "false",
+                  "optionType": "CHECKBOX",
+                  "setAsDefault": true,
+                  "description": "Delete all rows",
+                  "defaultValue": "false"
+                }
+              ]
+            }
+          ],
+          "deprecated": false
+        }
+      ],
+      "joins": [
+        {
+          "name": "Join1",
+          "type": "JOIN",
+          "uiCoordinates": "450,50",
+          "connectedFrom": [
+            "ailh_store_locations_bronze_v",
+            "Join"
+          ],
+          "connectedTo": [
+            "Expression"
+          ],
+          "joinCondition": "ailh_store_locations_bronze_v.STORE_ID=ailh_store_sales_bronze_v.STORE_ID",
+          "joinType": "LEFT_OUTER",
+          "generateANSIsyntax": true,
+          "joinSources": [
+            {
+              "inputConnectorPoint": "INPUT1",
+              "inputComponentName": "ailh_store_locations_bronze_v",
+              "sourceSide": "LEFT"
+            },
+            {
+              "inputConnectorPoint": "INPUT2",
+              "inputComponentName": "Join",
+              "sourceSide": "RIGHT"
+            }
+          ],
+          "deprecated": false
+        },
+        {
+          "name": "Join",
+          "type": "JOIN",
+          "uiCoordinates": "250,50",
+          "connectedFrom": [
+            "ailh_store_sales_bronze_v",
+            "ailh_products_bronze_v"
+          ],
+          "connectedTo": [
+            "Join1"
+          ],
+          "joinCondition": "ailh_store_sales_bronze_v.PRODUCT_ID=ailh_products_bronze_v.PRODUCT_ID",
+          "joinType": "LEFT_OUTER",
+          "generateANSIsyntax": true,
+          "joinSources": [
+            {
+              "inputConnectorPoint": "INPUT1",
+              "inputComponentName": "ailh_store_sales_bronze_v",
+              "sourceSide": "LEFT"
+            },
+            {
+              "inputConnectorPoint": "INPUT2",
+              "inputComponentName": "ailh_products_bronze_v",
+              "sourceSide": "RIGHT"
+            }
+          ],
+          "deprecated": false
+        }
+      ],
+      "expressions": [
+        {
+          "name": "Expression",
+          "type": "EXPRESSION",
+          "uiCoordinates": "650,50",
+          "connectedFrom": [
+            "Join1"
+          ],
+          "connectedTo": [
+            "ailh_enriched_sales_stage"
+          ],
+          "attributes": [
+            {
+              "name": "STORE_ID",
+              "position": 0,
+              "dataType": "NUMERIC",
+              "dataTypeCode": "NUMERIC",
+              "length": 20,
+              "scale": 0,
+              "expressions": {
+                "INPUT1": "ailh_store_sales_bronze_v.STORE_ID"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_store_sales_bronze_v.STORE_ID"
+              ]
+            },
+            {
+              "name": "TXN_ID",
+              "position": 1,
+              "dataType": "NUMERIC",
+              "dataTypeCode": "NUMERIC",
+              "length": 20,
+              "scale": 0,
+              "expressions": {
+                "INPUT1": "ailh_store_sales_bronze_v.TXN_ID"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_store_sales_bronze_v.TXN_ID"
+              ]
+            },
+            {
+              "name": "PRODUCT_ID",
+              "position": 2,
+              "dataType": "NUMERIC",
+              "dataTypeCode": "NUMERIC",
+              "length": 20,
+              "scale": 0,
+              "expressions": {
+                "INPUT1": "ailh_store_sales_bronze_v.PRODUCT_ID"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_store_sales_bronze_v.PRODUCT_ID"
+              ]
+            },
+            {
+              "name": "LOCATION",
+              "position": 3,
+              "dataType": "VARCHAR",
+              "dataTypeCode": "VARCHAR",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "ailh_store_locations_bronze_v.LOCATION"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_store_locations_bronze_v.LOCATION"
+              ]
+            },
+            {
+              "name": "SALE_TIMESTAMP",
+              "position": 4,
+              "dataType": "VARCHAR",
+              "dataTypeCode": "VARCHAR",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "CASE    WHEN ailh_store_sales_bronze_v.SALE_TIMESTAMP IS NULL      OR TRIM(ailh_store_sales_bronze_v.SALE_TIMESTAMP)          IN ('', 'null', 'N/A')    THEN NULL    ELSE TO_TIMESTAMP(        '2025-01-01 00:' ||        TRIM(ailh_store_sales_bronze_v.SALE_TIMESTAMP),        'YYYY-MM-DD HH24:MI:SS.FF'    )END"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_store_sales_bronze_v.SALE_TIMESTAMP"
+              ]
+            },
+            {
+              "name": "PRODUCT_NAME",
+              "position": 5,
+              "dataType": "VARCHAR",
+              "dataTypeCode": "VARCHAR",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "ailh_products_bronze_v.PRODUCT_NAME"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_products_bronze_v.PRODUCT_NAME"
+              ]
+            },
+            {
+              "name": "MANAGER",
+              "position": 6,
+              "dataType": "VARCHAR",
+              "dataTypeCode": "VARCHAR",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "ailh_store_locations_bronze_v.MANAGER"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_store_locations_bronze_v.MANAGER"
+              ]
+            },
+            {
+              "name": "CATEGORY",
+              "position": 7,
+              "dataType": "VARCHAR",
+              "dataTypeCode": "VARCHAR",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "CASE    WHEN ailh_products_bronze_v.CATEGORY IS NULL      OR TRIM(ailh_products_bronze_v.CATEGORY) = ''      OR LOWER(TRIM(ailh_products_bronze_v.CATEGORY))          IN ('n/a', 'na', 'null')    THEN 'Unknown'    ELSE INITCAP(        TRIM(            REGEXP_REPLACE(                ailh_products_bronze_v.CATEGORY,                '[[:space:]]',                ' '            )        )    )END"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_products_bronze_v.CATEGORY"
+              ]
+            },
+            {
+              "name": "OPENED_DATE",
+              "position": 8,
+              "dataType": "VARCHAR",
+              "dataTypeCode": "VARCHAR",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "ailh_store_locations_bronze_v.OPENED_DATE"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_store_locations_bronze_v.OPENED_DATE"
+              ]
+            },
+            {
+              "name": "COST_PRICE",
+              "position": 9,
+              "dataType": "NUMERIC",
+              "dataTypeCode": "NUMERIC",
+              "length": 18,
+              "scale": 2,
+              "expressions": {
+                "INPUT1": "ailh_products_bronze_v.COST_PRICE"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_products_bronze_v.COST_PRICE"
+              ]
+            },
+            {
+              "name": "CHANNEL_TYPE",
+              "position": 10,
+              "dataType": "VARCHAR",
+              "dataTypeCode": "VARCHAR",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "ailh_store_locations_bronze_v.CHANNEL_TYPE"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_store_locations_bronze_v.CHANNEL_TYPE"
+              ]
+            },
+            {
+              "name": "QTY_SOLD",
+              "position": 11,
+              "dataType": "NUMERIC",
+              "dataTypeCode": "NUMERIC",
+              "length": 20,
+              "scale": 0,
+              "expressions": {
+                "INPUT1": "ailh_store_sales_bronze_v.QTY_SOLD"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_store_sales_bronze_v.QTY_SOLD"
+              ]
+            },
+            {
+              "name": "RETAIL_PRICE",
+              "position": 12,
+              "dataType": "NUMERIC",
+              "dataTypeCode": "NUMERIC",
+              "length": 18,
+              "scale": 2,
+              "expressions": {
+                "INPUT1": "ailh_products_bronze_v.RETAIL_PRICE"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_products_bronze_v.RETAIL_PRICE"
+              ]
+            },
+            {
+              "name": "TOTAL_SALE_AMOUNT",
+              "position": 13,
+              "dataType": "NUMERIC",
+              "dataTypeCode": "NUMERIC",
+              "length": 18,
+              "scale": 2,
+              "expressions": {
+                "INPUT1": "ailh_store_sales_bronze_v.TOTAL_SALE_AMOUNT"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_store_sales_bronze_v.TOTAL_SALE_AMOUNT"
+              ]
+            },
+            {
+              "name": "SKU",
+              "position": 14,
+              "dataType": "VARCHAR",
+              "dataTypeCode": "VARCHAR",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "ailh_products_bronze_v.SKU"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_products_bronze_v.SKU"
+              ]
+            },
+            {
+              "name": "STORE_TYPE",
+              "position": 15,
+              "dataType": "VARCHAR",
+              "dataTypeCode": "VARCHAR",
+              "expressions": {
+                "INPUT1": "ailh_store_locations_bronze_v.STORE_TYPE"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_store_locations_bronze_v.STORE_TYPE"
+              ]
+            },
+            {
+              "name": "SALE_MONTH",
+              "position": 16,
+              "dataType": "DATE",
+              "dataTypeCode": "DATE",
+              "expressions": {
+                "INPUT1": "TRUNC(     CAST(         CASE             WHEN ailh_store_sales_bronze_v.SALE_TIMESTAMP IS NULL             THEN NULL             ELSE TO_TIMESTAMP(                 '2025-01-01 00:' ||                 TRIM(ailh_store_sales_bronze_v.SALE_TIMESTAMP),                 'YYYY-MM-DD HH24:MI:SS.FF'             )         END         AS DATE     ),     'MM' )"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_store_sales_bronze_v.SALE_TIMESTAMP"
+              ]
+            },
+            {
+              "name": "CITY",
+              "position": 17,
+              "dataType": "VARCHAR",
+              "dataTypeCode": "VARCHAR",
+              "expressions": {
+                "INPUT1": "CASE     WHEN ailh_store_locations_bronze_v.LOCATION IS NULL     THEN 'Unknown'     ELSE INITCAP(         TRIM(             REGEXP_SUBSTR(                 ailh_store_locations_bronze_v.LOCATION,                 '[^,]+',                 1,                 2             )         )     ) END"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_store_locations_bronze_v.LOCATION"
+              ]
+            },
+            {
+              "name": "STATE",
+              "position": 18,
+              "dataType": "VARCHAR",
+              "dataTypeCode": "VARCHAR",
+              "expressions": {
+                "INPUT1": "CASE     WHEN ailh_store_locations_bronze_v.LOCATION IS NULL     THEN 'Unknown'     ELSE UPPER(         SUBSTR(             TRIM(                 REGEXP_SUBSTR(                     ailh_store_locations_bronze_v.LOCATION,                     '[^,]+',                     1,                     3                 )             ),             1,             2         )     ) END"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_store_locations_bronze_v.LOCATION"
+              ]
+            },
+            {
+              "name": "COUNTRY",
+              "position": 19,
+              "dataType": "VARCHAR",
+              "dataTypeCode": "VARCHAR",
+              "expressions": {
+                "INPUT1": "'US'"
+              },
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "SALES_REGION",
+              "position": 20,
+              "dataType": "VARCHAR",
+              "dataTypeCode": "VARCHAR",
+              "expressions": {
+                "INPUT1": "CASE     WHEN ailh_store_locations_bronze_v.LOCATION IS NULL       OR LOWER(             TRIM(ailh_store_locations_bronze_v.LOCATION)           ) IN ('null', 'n/a', 'na')     THEN 'Unknown'      WHEN UPPER(             SUBSTR(                 TRIM(                     REGEXP_SUBSTR(                         ailh_store_locations_bronze_v.LOCATION,                         '[^,]+',                         1,                         3                     )                 ),                 1,                 2             )           ) IN (             'AK','AZ','CA','CO','HI','ID','MT',             'NV','NM','OR','UT','WA','WY'           )     THEN 'West'      ELSE 'Other' END"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_store_locations_bronze_v.LOCATION"
+              ]
+            },
+            {
+              "name": "ESTIMATED_COST",
+              "position": 21,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 30,
+              "scale": 10,
+              "expressions": {
+                "INPUT1": "CASE    WHEN ailh_store_sales_bronze_v.QTY_SOLD IS NULL      OR ailh_products_bronze_v.COST_PRICE IS NULL    THEN NULL    ELSE        ailh_store_sales_bronze_v.QTY_SOLD        * ailh_products_bronze_v.COST_PRICE END"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_store_sales_bronze_v.QTY_SOLD",
+                "ailh_products_bronze_v.COST_PRICE"
+              ]
+            },
+            {
+              "name": "ESTIMATED_GROSS_MARGIN",
+              "position": 22,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 30,
+              "scale": 10,
+              "expressions": {
+                "INPUT1": "CASE    WHEN ailh_store_sales_bronze_v.TOTAL_SALE_AMOUNT IS NULL      OR ailh_store_sales_bronze_v.QTY_SOLD IS NULL      OR ailh_products_bronze_v.COST_PRICE IS NULL    THEN NULL    ELSE        ailh_store_sales_bronze_v.TOTAL_SALE_AMOUNT        - (            ailh_store_sales_bronze_v.QTY_SOLD            * ailh_products_bronze_v.COST_PRICE          )END"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_store_sales_bronze_v.TOTAL_SALE_AMOUNT",
+                "ailh_store_sales_bronze_v.QTY_SOLD",
+                "ailh_products_bronze_v.COST_PRICE"
+              ]
+            },
+            {
+              "name": "ESTIMATED_MARGIN_PCT",
+              "position": 23,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 30,
+              "scale": 10,
+              "expressions": {
+                "INPUT1": "CASE    WHEN ailh_store_sales_bronze_v.TOTAL_SALE_AMOUNT IS NULL      OR ailh_store_sales_bronze_v.TOTAL_SALE_AMOUNT = 0      OR ailh_store_sales_bronze_v.QTY_SOLD IS NULL      OR ailh_products_bronze_v.COST_PRICE IS NULL    THEN NULL    ELSE        (            (                ailh_store_sales_bronze_v.TOTAL_SALE_AMOUNT                - (                    ailh_store_sales_bronze_v.QTY_SOLD                    * ailh_products_bronze_v.COST_PRICE                  )            )            / ailh_store_sales_bronze_v.TOTAL_SALE_AMOUNT        ) * 100 END"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_store_sales_bronze_v.TOTAL_SALE_AMOUNT",
+                "ailh_store_sales_bronze_v.QTY_SOLD",
+                "ailh_products_bronze_v.COST_PRICE"
+              ]
+            }
+          ],
+          "deprecated": false
+        }
+      ],
+      "syncState": "IN_SYNC",
+      "cleanupOnError": false
+    },
+    {
+      "name": "df_03_gold_west_product_performance",
+      "projectName": "peakgear_medallion",
+      "projectCode": "PEAKGEAR_MEDALLION",
+      "parentFolder": "DefaultFolder",
+      "sources": [
+        {
+          "name": "ailh_enriched_sales_v",
+          "type": "DATASTORE",
+          "uiCoordinates": "96,84",
+          "connectedTo": [
+            "Filter"
+          ],
+          "boundToDataStoreName": "ailh_enriched_sales_v",
+          "boundToDataStoreType": "VIEW",
+          "schemaName": "PG",
+          "technology": "ORACLE",
+          "syncState": "IN_SYNC",
+          "attributes": [
+            {
+              "name": "SALE_MONTH",
+              "position": 1,
+              "dataType": "DATE",
+              "dataTypeCode": "DATE",
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "PRODUCT_ID",
+              "position": 2,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 20,
+              "scale": 0,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "PRODUCT_NAME",
+              "position": 3,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "CATEGORY",
+              "position": 4,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "STATE",
+              "position": 5,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "CHANNEL_TYPE",
+              "position": 6,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "SALES_REGION",
+              "position": 7,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "QTY_SOLD",
+              "position": 8,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 20,
+              "scale": 0,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "TOTAL_SALE_AMOUNT",
+              "position": 9,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 18,
+              "scale": 2,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "ESTIMATED_COST",
+              "position": 10,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 30,
+              "scale": 10,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "ESTIMATED_GROSS_MARGIN",
+              "position": 11,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 30,
+              "scale": 10,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "TXN_ID",
+              "position": 12,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 20,
+              "scale": 0,
+              "syncState": "IN_SYNC"
+            }
+          ],
+          "deprecated": false
+        }
+      ],
+      "targets": [
+        {
+          "name": "ailh_gold_west_product_performance",
+          "type": "DATASTORE",
+          "uiCoordinates": "668,84",
+          "connectedFrom": [
+            "Aggregate"
+          ],
+          "boundToDataStoreName": "ailh_gold_west_product_performance",
+          "boundToDataStoreType": "TABLE",
+          "schemaName": "PG",
+          "technology": "ORACLE",
+          "syncState": "IN_SYNC",
+          "integrationType": "CONTROL_APPEND",
+          "isMaxErrorsAsPercentage": false,
+          "attributes": [
+            {
+              "name": "SALE_MONTH",
+              "position": 1,
+              "dataType": "DATE",
+              "dataTypeCode": "DATE",
+              "length": 7,
+              "expressions": {
+                "INPUT1": "Aggregate.SALE_MONTH"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "PRODUCT_ID",
+              "position": 2,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 20,
+              "scale": 0,
+              "expressions": {
+                "INPUT1": "Aggregate.PRODUCT_ID"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "PRODUCT_NAME",
+              "position": 3,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "Aggregate.PRODUCT_NAME"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "CATEGORY",
+              "position": 4,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "Aggregate.CATEGORY"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "STATE",
+              "position": 5,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "Aggregate.STATE"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "CHANNEL_TYPE",
+              "position": 6,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "Aggregate.CHANNEL_TYPE"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "SALES_REGION",
+              "position": 7,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "Aggregate.SALES_REGION"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "QTY_SOLD",
+              "position": 8,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 20,
+              "scale": 0,
+              "expressions": {
+                "INPUT1": "Aggregate.QTY_SOLD"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "TOTAL_SALE_AMOUNT",
+              "position": 9,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 18,
+              "scale": 2,
+              "expressions": {
+                "INPUT1": "Aggregate.TOTAL_SALE_AMOUNT"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "ESTIMATED_COST",
+              "position": 10,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 30,
+              "scale": 10,
+              "expressions": {
+                "INPUT1": "Aggregate.ESTIMATED_COST"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "ESTIMATED_GROSS_MARGIN",
+              "position": 11,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 30,
+              "scale": 10,
+              "expressions": {
+                "INPUT1": "Aggregate.ESTIMATED_GROSS_MARGIN"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "TXN_ID",
+              "position": 12,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 20,
+              "scale": 0,
+              "expressions": {
+                "INPUT1": "Aggregate.TXN_ID"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "ESTIMATED_MARGIN_PCT",
+              "position": 13,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 30,
+              "scale": 10,
+              "expressions": {
+                "INPUT1": "Aggregate.ESTIMATED_MARGIN_PCT"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            }
+          ],
+          "options": [
+            {
+              "kmName": "IKM Oracle Insert",
+              "kmOptions": [
+                {
+                  "optionName": "DROP_AND_CREATE_TARGET_TABLE",
+                  "optionValue": "true",
+                  "optionType": "CHECKBOX",
+                  "setAsDefault": false,
+                  "description": "Drop and create the target table",
+                  "defaultValue": "false"
+                },
+                {
+                  "optionName": "INSERT_HINT",
+                  "optionValue": "APPEND PARALLEL",
+                  "optionType": "LONG_TEXT",
+                  "setAsDefault": true,
+                  "description": "Oracle DML loading hint for loading integration table",
+                  "defaultValue": "APPEND PARALLEL"
+                },
+                {
+                  "optionName": "SELECT_HINT",
+                  "optionValue": " ",
+                  "optionType": "LONG_TEXT",
+                  "setAsDefault": true,
+                  "description": "Oracle extraction hint for querying source tables",
+                  "defaultValue": " "
+                },
+                {
+                  "optionName": "CONSTRAINTS",
+                  "optionValue": "None",
+                  "optionType": "CHOICE",
+                  "setAsDefault": true,
+                  "description": "Disable/enable constraints before/after the data is loaded into target table",
+                  "help": "Select the appropriate value to disable/enable constraints before/after the data is loaded into target table",
+                  "defaultValue": "None",
+                  "choiceValues": [
+                    "None",
+                    "Disable",
+                    "Enable",
+                    "Disable and Enable"
+                  ]
+                },
+                {
+                  "optionName": "CREATE_TARGET_TABLE",
+                  "optionValue": "true",
+                  "optionType": "CHECKBOX",
+                  "setAsDefault": false,
+                  "description": "Create the target table",
+                  "defaultValue": "false"
+                },
+                {
+                  "optionName": "PERSIST_ANNOTATIONS",
+                  "optionValue": "false",
+                  "optionType": "CHECKBOX",
+                  "setAsDefault": true,
+                  "description": "Persist annotations",
+                  "defaultValue": "false"
+                },
+                {
+                  "optionName": "INDEXES",
+                  "optionValue": "None",
+                  "optionType": "CHOICE",
+                  "setAsDefault": true,
+                  "description": "Disable/enable indexes before/after the data is loaded into target table",
+                  "help": "Select the appropriate value to disable/enable indexes before/after the data is loaded into target table",
+                  "defaultValue": "None",
+                  "choiceValues": [
+                    "None",
+                    "Disable",
+                    "Enable",
+                    "Enable Rebuild Online",
+                    "Disable and Enable",
+                    "Disable and Enable Rebuild Online"
+                  ]
+                },
+                {
+                  "optionName": "TRUNCATE_TARGET_TABLE",
+                  "optionValue": "false",
+                  "optionType": "CHECKBOX",
+                  "setAsDefault": true,
+                  "description": "Truncate the target table",
+                  "defaultValue": "false"
+                },
+                {
+                  "optionName": "DELETE_ALL",
+                  "optionValue": "false",
+                  "optionType": "CHECKBOX",
+                  "setAsDefault": true,
+                  "description": "Delete all rows",
+                  "defaultValue": "false"
+                }
+              ]
+            }
+          ],
+          "deprecated": false
+        }
+      ],
+      "filters": [
+        {
+          "name": "Filter",
+          "type": "FILTER",
+          "uiCoordinates": "336,84",
+          "connectedFrom": [
+            "ailh_enriched_sales_v"
+          ],
+          "connectedTo": [
+            "Aggregate"
+          ],
+          "filterCondition": "UPPER(TRIM(ailh_enriched_sales_v.SALES_REGION)) = 'WEST' ",
+          "deprecated": false
+        }
+      ],
+      "aggregations": [
+        {
+          "name": "Aggregate",
+          "type": "AGGREGATE",
+          "uiCoordinates": "468,84",
+          "connectedFrom": [
+            "Filter"
+          ],
+          "connectedTo": [
+            "ailh_gold_west_product_performance"
+          ],
+          "groupByAttributes": [
+            {
+              "name": "SALE_MONTH",
+              "position": 0,
+              "dataType": "DATE",
+              "dataTypeCode": "DATE",
+              "expressions": {
+                "INPUT1": "ailh_enriched_sales_v.SALE_MONTH"
+              },
+              "syncState": "IN_SYNC",
+              "isGroupBy": "YES"
+            },
+            {
+              "name": "PRODUCT_ID",
+              "position": 1,
+              "dataType": "NUMERIC",
+              "dataTypeCode": "NUMERIC",
+              "length": 20,
+              "scale": 0,
+              "expressions": {
+                "INPUT1": "ailh_enriched_sales_v.PRODUCT_ID"
+              },
+              "syncState": "IN_SYNC",
+              "isGroupBy": "YES"
+            },
+            {
+              "name": "PRODUCT_NAME",
+              "position": 2,
+              "dataType": "VARCHAR",
+              "dataTypeCode": "VARCHAR",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "ailh_enriched_sales_v.PRODUCT_NAME"
+              },
+              "syncState": "IN_SYNC",
+              "isGroupBy": "YES"
+            },
+            {
+              "name": "CATEGORY",
+              "position": 3,
+              "dataType": "VARCHAR",
+              "dataTypeCode": "VARCHAR",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "ailh_enriched_sales_v.CATEGORY"
+              },
+              "syncState": "IN_SYNC",
+              "isGroupBy": "YES"
+            },
+            {
+              "name": "STATE",
+              "position": 4,
+              "dataType": "VARCHAR",
+              "dataTypeCode": "VARCHAR",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "ailh_enriched_sales_v.STATE"
+              },
+              "syncState": "IN_SYNC",
+              "isGroupBy": "YES"
+            },
+            {
+              "name": "CHANNEL_TYPE",
+              "position": 5,
+              "dataType": "VARCHAR",
+              "dataTypeCode": "VARCHAR",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "ailh_enriched_sales_v.CHANNEL_TYPE"
+              },
+              "syncState": "IN_SYNC",
+              "isGroupBy": "YES"
+            },
+            {
+              "name": "SALES_REGION",
+              "position": 6,
+              "dataType": "VARCHAR",
+              "dataTypeCode": "VARCHAR",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "ailh_enriched_sales_v.SALES_REGION"
+              },
+              "syncState": "IN_SYNC",
+              "isGroupBy": "YES"
+            }
+          ],
+          "aggregateAttributes": [
+            {
+              "name": "QTY_SOLD",
+              "position": 7,
+              "dataType": "NUMERIC",
+              "dataTypeCode": "NUMERIC",
+              "length": 20,
+              "scale": 0,
+              "expressions": {
+                "INPUT1": "SUM(ailh_enriched_sales_v.QTY_SOLD)"
+              },
+              "syncState": "IN_SYNC",
+              "isGroupBy": "NO"
+            },
+            {
+              "name": "TOTAL_SALE_AMOUNT",
+              "position": 8,
+              "dataType": "NUMERIC",
+              "dataTypeCode": "NUMERIC",
+              "length": 18,
+              "scale": 2,
+              "expressions": {
+                "INPUT1": "SUM(ailh_enriched_sales_v.TOTAL_SALE_AMOUNT)"
+              },
+              "syncState": "IN_SYNC",
+              "isGroupBy": "NO"
+            },
+            {
+              "name": "ESTIMATED_COST",
+              "position": 9,
+              "dataType": "NUMERIC",
+              "dataTypeCode": "NUMERIC",
+              "length": 30,
+              "scale": 10,
+              "expressions": {
+                "INPUT1": "SUM(ailh_enriched_sales_v.ESTIMATED_COST)"
+              },
+              "syncState": "IN_SYNC",
+              "isGroupBy": "NO"
+            },
+            {
+              "name": "ESTIMATED_GROSS_MARGIN",
+              "position": 10,
+              "dataType": "NUMERIC",
+              "dataTypeCode": "NUMERIC",
+              "length": 30,
+              "scale": 10,
+              "expressions": {
+                "INPUT1": "SUM(ailh_enriched_sales_v.ESTIMATED_GROSS_MARGIN)"
+              },
+              "syncState": "IN_SYNC",
+              "isGroupBy": "NO"
+            },
+            {
+              "name": "TXN_ID",
+              "position": 11,
+              "dataType": "NUMERIC",
+              "dataTypeCode": "NUMERIC",
+              "length": 20,
+              "scale": 0,
+              "expressions": {
+                "INPUT1": "COUNT(ailh_enriched_sales_v.TXN_ID)"
+              },
+              "syncState": "IN_SYNC",
+              "isGroupBy": "NO"
+            },
+            {
+              "name": "ESTIMATED_MARGIN_PCT",
+              "position": 12,
+              "dataType": "NUMERIC",
+              "dataTypeCode": "NUMERIC",
+              "length": 30,
+              "scale": 10,
+              "expressions": {
+                "INPUT1": "CASE      WHEN SUM(ailh_enriched_sales_v.TOTAL_SALE_AMOUNT) IS NULL        OR SUM(ailh_enriched_sales_v.TOTAL_SALE_AMOUNT) = 0      THEN NULL      ELSE          (              SUM(ailh_enriched_sales_v.ESTIMATED_GROSS_MARGIN)              / SUM(ailh_enriched_sales_v.TOTAL_SALE_AMOUNT)          ) * 100  END"
+              },
+              "syncState": "IN_SYNC",
+              "isGroupBy": "NO"
+            }
+          ],
+          "deprecated": false
+        }
+      ],
+      "syncState": "IN_SYNC",
+      "cleanupOnError": false
+    },
+    {
+      "name": "df_02_enriched_sales_cleanse",
+      "projectName": "peakgear_medallion",
+      "projectCode": "PEAKGEAR_MEDALLION",
+      "parentFolder": "DefaultFolder",
+      "sources": [
+        {
+          "name": "ailh_enriched_sales_stage",
+          "type": "DATASTORE",
+          "uiCoordinates": "84,60",
+          "connectedTo": [
+            "DataCleanse"
+          ],
+          "boundToDataStoreName": "ailh_enriched_sales_stage",
+          "boundToDataStoreType": "TABLE",
+          "schemaName": "PG",
+          "technology": "ORACLE",
+          "syncState": "IN_SYNC",
+          "attributes": [
+            {
+              "name": "STORE_ID",
+              "position": 1,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 20,
+              "scale": 0,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "TXN_ID",
+              "position": 2,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 20,
+              "scale": 0,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "PRODUCT_ID",
+              "position": 3,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 20,
+              "scale": 0,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "LOCATION",
+              "position": 4,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "SALE_TIMESTAMP",
+              "position": 5,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "PRODUCT_NAME",
+              "position": 6,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "MANAGER",
+              "position": 7,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "CATEGORY",
+              "position": 8,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "OPENED_DATE",
+              "position": 9,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "COST_PRICE",
+              "position": 10,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 18,
+              "scale": 2,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "CHANNEL_TYPE",
+              "position": 11,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "QTY_SOLD",
+              "position": 12,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 20,
+              "scale": 0,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "RETAIL_PRICE",
+              "position": 13,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 18,
+              "scale": 2,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "TOTAL_SALE_AMOUNT",
+              "position": 14,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 18,
+              "scale": 2,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "SKU",
+              "position": 15,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "STORE_TYPE",
+              "position": 16,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "SALE_MONTH",
+              "position": 17,
+              "dataType": "DATE",
+              "dataTypeCode": "DATE",
+              "length": 7,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "CITY",
+              "position": 18,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "STATE",
+              "position": 19,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "COUNTRY",
+              "position": 20,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "SALES_REGION",
+              "position": 21,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "ESTIMATED_COST",
+              "position": 22,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 30,
+              "scale": 10,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "ESTIMATED_GROSS_MARGIN",
+              "position": 23,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 30,
+              "scale": 10,
+              "syncState": "IN_SYNC"
+            },
+            {
+              "name": "ESTIMATED_MARGIN_PCT",
+              "position": 24,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 30,
+              "scale": 10,
+              "syncState": "IN_SYNC"
+            }
+          ],
+          "deprecated": false
+        }
+      ],
+      "targets": [
+        {
+          "name": "ailh_enriched_sales",
+          "type": "DATASTORE",
+          "uiCoordinates": "548,60",
+          "connectedFrom": [
+            "DataCleanse"
+          ],
+          "boundToDataStoreName": "ailh_enriched_sales",
+          "boundToDataStoreType": "TABLE",
+          "schemaName": "PG",
+          "technology": "ORACLE",
+          "syncState": "IN_SYNC",
+          "integrationType": "CONTROL_APPEND",
+          "isMaxErrorsAsPercentage": false,
+          "attributes": [
+            {
+              "name": "STORE_ID",
+              "position": 1,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 20,
+              "scale": 0,
+              "expressions": {
+                "INPUT1": "DataCleanse.STORE_ID"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "TXN_ID",
+              "position": 2,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 20,
+              "scale": 0,
+              "expressions": {
+                "INPUT1": "DataCleanse.TXN_ID"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "PRODUCT_ID",
+              "position": 3,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 20,
+              "scale": 0,
+              "expressions": {
+                "INPUT1": "DataCleanse.PRODUCT_ID"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "LOCATION",
+              "position": 4,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "DataCleanse.LOCATION"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "SALE_TIMESTAMP",
+              "position": 5,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "DataCleanse.SALE_TIMESTAMP"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "PRODUCT_NAME",
+              "position": 6,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "DataCleanse.PRODUCT_NAME"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "MANAGER",
+              "position": 7,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "DataCleanse.MANAGER"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "CATEGORY",
+              "position": 8,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "DataCleanse.CATEGORY"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "OPENED_DATE",
+              "position": 9,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "DataCleanse.OPENED_DATE"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "COST_PRICE",
+              "position": 10,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 18,
+              "scale": 2,
+              "expressions": {
+                "INPUT1": "DataCleanse.COST_PRICE"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "CHANNEL_TYPE",
+              "position": 11,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "DataCleanse.CHANNEL_TYPE"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "QTY_SOLD",
+              "position": 12,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 20,
+              "scale": 0,
+              "expressions": {
+                "INPUT1": "DataCleanse.QTY_SOLD"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "RETAIL_PRICE",
+              "position": 13,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 18,
+              "scale": 2,
+              "expressions": {
+                "INPUT1": "DataCleanse.RETAIL_PRICE"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "TOTAL_SALE_AMOUNT",
+              "position": 14,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 18,
+              "scale": 2,
+              "expressions": {
+                "INPUT1": "DataCleanse.TOTAL_SALE_AMOUNT"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "SKU",
+              "position": 15,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "DataCleanse.SKU"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "STORE_TYPE",
+              "position": 16,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "DataCleanse.STORE_TYPE"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "SALE_MONTH",
+              "position": 17,
+              "dataType": "DATE",
+              "dataTypeCode": "DATE",
+              "length": 7,
+              "expressions": {
+                "INPUT1": "DataCleanse.SALE_MONTH"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "CITY",
+              "position": 18,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "DataCleanse.CITY"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "STATE",
+              "position": 19,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "DataCleanse.STATE"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "COUNTRY",
+              "position": 20,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "DataCleanse.COUNTRY"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "SALES_REGION",
+              "position": 21,
+              "dataType": "VARCHAR2",
+              "dataTypeCode": "VARCHAR2",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "DataCleanse.SALES_REGION"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "ESTIMATED_COST",
+              "position": 22,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 30,
+              "scale": 10,
+              "expressions": {
+                "INPUT1": "DataCleanse.ESTIMATED_COST"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "ESTIMATED_GROSS_MARGIN",
+              "position": 23,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 30,
+              "scale": 10,
+              "expressions": {
+                "INPUT1": "DataCleanse.ESTIMATED_GROSS_MARGIN"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            },
+            {
+              "name": "ESTIMATED_MARGIN_PCT",
+              "position": 24,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 30,
+              "scale": 10,
+              "expressions": {
+                "INPUT1": "DataCleanse.ESTIMATED_MARGIN_PCT"
+              },
+              "syncState": "IN_SYNC",
+              "executeOnHint": "NO_HINT",
+              "insert": true,
+              "update": true,
+              "checkNotNull": false,
+              "key": false,
+              "active": true
+            }
+          ],
+          "options": [
+            {
+              "kmName": "IKM Oracle Insert",
+              "kmOptions": [
+                {
+                  "optionName": "DROP_AND_CREATE_TARGET_TABLE",
+                  "optionValue": "true",
+                  "optionType": "CHECKBOX",
+                  "setAsDefault": false,
+                  "description": "Drop and create the target table",
+                  "defaultValue": "false"
+                },
+                {
+                  "optionName": "INSERT_HINT",
+                  "optionValue": "APPEND PARALLEL",
+                  "optionType": "LONG_TEXT",
+                  "setAsDefault": true,
+                  "description": "Oracle DML loading hint for loading integration table",
+                  "defaultValue": "APPEND PARALLEL"
+                },
+                {
+                  "optionName": "SELECT_HINT",
+                  "optionValue": " ",
+                  "optionType": "LONG_TEXT",
+                  "setAsDefault": true,
+                  "description": "Oracle extraction hint for querying source tables",
+                  "defaultValue": " "
+                },
+                {
+                  "optionName": "CONSTRAINTS",
+                  "optionValue": "None",
+                  "optionType": "CHOICE",
+                  "setAsDefault": true,
+                  "description": "Disable/enable constraints before/after the data is loaded into target table",
+                  "help": "Select the appropriate value to disable/enable constraints before/after the data is loaded into target table",
+                  "defaultValue": "None",
+                  "choiceValues": [
+                    "None",
+                    "Disable",
+                    "Enable",
+                    "Disable and Enable"
+                  ]
+                },
+                {
+                  "optionName": "CREATE_TARGET_TABLE",
+                  "optionValue": "false",
+                  "optionType": "CHECKBOX",
+                  "setAsDefault": true,
+                  "description": "Create the target table",
+                  "defaultValue": "false"
+                },
+                {
+                  "optionName": "PERSIST_ANNOTATIONS",
+                  "optionValue": "false",
+                  "optionType": "CHECKBOX",
+                  "setAsDefault": true,
+                  "description": "Persist annotations",
+                  "defaultValue": "false"
+                },
+                {
+                  "optionName": "INDEXES",
+                  "optionValue": "None",
+                  "optionType": "CHOICE",
+                  "setAsDefault": true,
+                  "description": "Disable/enable indexes before/after the data is loaded into target table",
+                  "help": "Select the appropriate value to disable/enable indexes before/after the data is loaded into target table",
+                  "defaultValue": "None",
+                  "choiceValues": [
+                    "None",
+                    "Disable",
+                    "Enable",
+                    "Enable Rebuild Online",
+                    "Disable and Enable",
+                    "Disable and Enable Rebuild Online"
+                  ]
+                },
+                {
+                  "optionName": "TRUNCATE_TARGET_TABLE",
+                  "optionValue": "false",
+                  "optionType": "CHECKBOX",
+                  "setAsDefault": true,
+                  "description": "Truncate the target table",
+                  "defaultValue": "false"
+                },
+                {
+                  "optionName": "DELETE_ALL",
+                  "optionValue": "false",
+                  "optionType": "CHECKBOX",
+                  "setAsDefault": true,
+                  "description": "Delete all rows",
+                  "defaultValue": "false"
+                }
+              ]
+            }
+          ],
+          "deprecated": false
+        }
+      ],
+      "dbfunc_datacleanses": [
+        {
+          "name": "DataCleanse",
+          "type": "EXPRESSION",
+          "uiCoordinates": "348,60",
+          "connectedFrom": [
+            "ailh_enriched_sales_stage"
+          ],
+          "connectedTo": [
+            "ailh_enriched_sales"
+          ],
+          "attributes": [
+            {
+              "name": "STORE_ID",
+              "position": 0,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 20,
+              "scale": 0,
+              "expressions": {
+                "INPUT1": "ailh_enriched_sales_stage.STORE_ID"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_enriched_sales_stage.STORE_ID"
+              ],
+              "includeForCleanse": false
+            },
+            {
+              "name": "TXN_ID",
+              "position": 1,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 20,
+              "scale": 0,
+              "expressions": {
+                "INPUT1": "ailh_enriched_sales_stage.TXN_ID"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_enriched_sales_stage.TXN_ID"
+              ],
+              "includeForCleanse": false
+            },
+            {
+              "name": "PRODUCT_ID",
+              "position": 2,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 20,
+              "scale": 0,
+              "expressions": {
+                "INPUT1": "ailh_enriched_sales_stage.PRODUCT_ID"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_enriched_sales_stage.PRODUCT_ID"
+              ],
+              "includeForCleanse": false
+            },
+            {
+              "name": "LOCATION",
+              "position": 3,
+              "dataType": "VARCHAR",
+              "dataTypeCode": "VARCHAR",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "REGEXP_REPLACE(TRIM(REGEXP_REPLACE(TRIM(ailh_enriched_sales_stage.LOCATION), '[[:space:]]', ' ')), '[[:space:]]', ' ')"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_enriched_sales_stage.LOCATION"
+              ],
+              "includeForCleanse": true
+            },
+            {
+              "name": "SALE_TIMESTAMP",
+              "position": 4,
+              "dataType": "VARCHAR",
+              "dataTypeCode": "VARCHAR",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "ailh_enriched_sales_stage.SALE_TIMESTAMP"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_enriched_sales_stage.SALE_TIMESTAMP"
+              ],
+              "includeForCleanse": false
+            },
+            {
+              "name": "PRODUCT_NAME",
+              "position": 5,
+              "dataType": "VARCHAR",
+              "dataTypeCode": "VARCHAR",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "REGEXP_REPLACE(TRIM(REGEXP_REPLACE(TRIM(ailh_enriched_sales_stage.PRODUCT_NAME), '[[:space:]]', ' ')), '[[:space:]]', ' ')"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_enriched_sales_stage.PRODUCT_NAME"
+              ],
+              "includeForCleanse": true
+            },
+            {
+              "name": "MANAGER",
+              "position": 6,
+              "dataType": "VARCHAR",
+              "dataTypeCode": "VARCHAR",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "REGEXP_REPLACE(TRIM(REGEXP_REPLACE(TRIM(ailh_enriched_sales_stage.MANAGER), '[[:space:]]', ' ')), '[[:space:]]', ' ')"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_enriched_sales_stage.MANAGER"
+              ],
+              "includeForCleanse": true
+            },
+            {
+              "name": "CATEGORY",
+              "position": 7,
+              "dataType": "VARCHAR",
+              "dataTypeCode": "VARCHAR",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "REGEXP_REPLACE(TRIM(REGEXP_REPLACE(TRIM(ailh_enriched_sales_stage.CATEGORY), '[[:space:]]', ' ')), '[[:space:]]', ' ')"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_enriched_sales_stage.CATEGORY"
+              ],
+              "includeForCleanse": true
+            },
+            {
+              "name": "OPENED_DATE",
+              "position": 8,
+              "dataType": "VARCHAR",
+              "dataTypeCode": "VARCHAR",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "ailh_enriched_sales_stage.OPENED_DATE"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_enriched_sales_stage.OPENED_DATE"
+              ],
+              "includeForCleanse": false
+            },
+            {
+              "name": "COST_PRICE",
+              "position": 9,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 18,
+              "scale": 2,
+              "expressions": {
+                "INPUT1": "ailh_enriched_sales_stage.COST_PRICE"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_enriched_sales_stage.COST_PRICE"
+              ],
+              "includeForCleanse": false
+            },
+            {
+              "name": "CHANNEL_TYPE",
+              "position": 10,
+              "dataType": "VARCHAR",
+              "dataTypeCode": "VARCHAR",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "ailh_enriched_sales_stage.CHANNEL_TYPE"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_enriched_sales_stage.CHANNEL_TYPE"
+              ],
+              "includeForCleanse": false
+            },
+            {
+              "name": "QTY_SOLD",
+              "position": 11,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 20,
+              "scale": 0,
+              "expressions": {
+                "INPUT1": "ailh_enriched_sales_stage.QTY_SOLD"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_enriched_sales_stage.QTY_SOLD"
+              ],
+              "includeForCleanse": false
+            },
+            {
+              "name": "RETAIL_PRICE",
+              "position": 12,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 18,
+              "scale": 2,
+              "expressions": {
+                "INPUT1": "ailh_enriched_sales_stage.RETAIL_PRICE"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_enriched_sales_stage.RETAIL_PRICE"
+              ],
+              "includeForCleanse": false
+            },
+            {
+              "name": "TOTAL_SALE_AMOUNT",
+              "position": 13,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 18,
+              "scale": 2,
+              "expressions": {
+                "INPUT1": "ailh_enriched_sales_stage.TOTAL_SALE_AMOUNT"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_enriched_sales_stage.TOTAL_SALE_AMOUNT"
+              ],
+              "includeForCleanse": false
+            },
+            {
+              "name": "SKU",
+              "position": 14,
+              "dataType": "VARCHAR",
+              "dataTypeCode": "VARCHAR",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "REGEXP_REPLACE(TRIM(REGEXP_REPLACE(TRIM(ailh_enriched_sales_stage.SKU), '[[:space:]]', ' ')), '[[:space:]]', ' ')"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_enriched_sales_stage.SKU"
+              ],
+              "includeForCleanse": true
+            },
+            {
+              "name": "STORE_TYPE",
+              "position": 15,
+              "dataType": "VARCHAR",
+              "dataTypeCode": "VARCHAR",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "ailh_enriched_sales_stage.STORE_TYPE"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_enriched_sales_stage.STORE_TYPE"
+              ],
+              "includeForCleanse": false
+            },
+            {
+              "name": "SALE_MONTH",
+              "position": 16,
+              "dataType": "DATE",
+              "dataTypeCode": "DATE",
+              "expressions": {
+                "INPUT1": "ailh_enriched_sales_stage.SALE_MONTH"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_enriched_sales_stage.SALE_MONTH"
+              ],
+              "includeForCleanse": false
+            },
+            {
+              "name": "CITY",
+              "position": 17,
+              "dataType": "VARCHAR",
+              "dataTypeCode": "VARCHAR",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "ailh_enriched_sales_stage.CITY"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_enriched_sales_stage.CITY"
+              ],
+              "includeForCleanse": false
+            },
+            {
+              "name": "STATE",
+              "position": 18,
+              "dataType": "VARCHAR",
+              "dataTypeCode": "VARCHAR",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "ailh_enriched_sales_stage.STATE"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_enriched_sales_stage.STATE"
+              ],
+              "includeForCleanse": false
+            },
+            {
+              "name": "COUNTRY",
+              "position": 19,
+              "dataType": "VARCHAR",
+              "dataTypeCode": "VARCHAR",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "ailh_enriched_sales_stage.COUNTRY"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_enriched_sales_stage.COUNTRY"
+              ],
+              "includeForCleanse": false
+            },
+            {
+              "name": "SALES_REGION",
+              "position": 20,
+              "dataType": "VARCHAR",
+              "dataTypeCode": "VARCHAR",
+              "length": 4000,
+              "expressions": {
+                "INPUT1": "ailh_enriched_sales_stage.SALES_REGION"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_enriched_sales_stage.SALES_REGION"
+              ],
+              "includeForCleanse": false
+            },
+            {
+              "name": "ESTIMATED_COST",
+              "position": 21,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 30,
+              "scale": 10,
+              "expressions": {
+                "INPUT1": "ailh_enriched_sales_stage.ESTIMATED_COST"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_enriched_sales_stage.ESTIMATED_COST"
+              ],
+              "includeForCleanse": false
+            },
+            {
+              "name": "ESTIMATED_GROSS_MARGIN",
+              "position": 22,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 30,
+              "scale": 10,
+              "expressions": {
+                "INPUT1": "ailh_enriched_sales_stage.ESTIMATED_GROSS_MARGIN"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_enriched_sales_stage.ESTIMATED_GROSS_MARGIN"
+              ],
+              "includeForCleanse": false
+            },
+            {
+              "name": "ESTIMATED_MARGIN_PCT",
+              "position": 23,
+              "dataType": "NUMBER",
+              "dataTypeCode": "NUMBER",
+              "length": 30,
+              "scale": 10,
+              "expressions": {
+                "INPUT1": "ailh_enriched_sales_stage.ESTIMATED_MARGIN_PCT"
+              },
+              "syncState": "IN_SYNC",
+              "connectedFrom": [
+                "ailh_enriched_sales_stage.ESTIMATED_MARGIN_PCT"
+              ],
+              "includeForCleanse": false
+            }
+          ],
+          "cleansingOptions": {
+            "Replace Null Strings with blanks (\"\")": false,
+            "Replace Null Numeric Fields with 0": false,
+            "Replace Null Numeric Fields with Mean": false,
+            "Replace Null Numeric Fields with Median": false,
+            "Leading and Trailing Whitespace": true,
+            "Tabs, Linebreaks and duplicate Whitespace": true,
+            "All Whitespace": false,
+            "Letters": false,
+            "Numbers": false,
+            "Punctuation": false,
+            "Uppercase": false,
+            "Lowercase": false,
+            "Title Case": false
+          },
+          "deprecated": false
+        }
+      ],
+      "syncState": "IN_SYNC",
+      "cleanupOnError": false
+    }
+  ],
+  "packages": [
+    {
+      "name": "wf_02_bronze_to_silver",
+      "projectName": "peakgear_medallion",
+      "projectCode": "PEAKGEAR_MEDALLION",
+      "parentFolder": "DefaultFolder",
+      "packType": "Sequential",
+      "mappingSteps": [
+        {
+          "name": "df_01_enriched_sales_expressions",
+          "isFirstStep": true,
+          "nextStepAfterSuccess": "df_02_enriched_sales_cleanse",
+          "failureRetryNumber": 3,
+          "failureRetryDelay": 30,
+          "logLevel": "ALWAYS",
+          "stepType": "StepMapping",
+          "coordinates": {
+            "pos_x": 72,
+            "pos_y": 72
+          },
+          "mappingName": "df_01_enriched_sales_expressions",
+          "mappingFolder": "DefaultFolder",
+          "mappingProject": "PEAKGEAR_MEDALLION",
+          "synchronous": true
+        },
+        {
+          "name": "df_02_enriched_sales_cleanse",
+          "isFirstStep": false,
+          "nextStepAfterSuccess": "Clear Silver table",
+          "failureRetryNumber": 3,
+          "failureRetryDelay": 30,
+          "logLevel": "ALWAYS",
+          "stepType": "StepMapping",
+          "coordinates": {
+            "pos_x": 300,
+            "pos_y": 72
+          },
+          "mappingName": "df_02_enriched_sales_cleanse",
+          "mappingFolder": "DefaultFolder",
+          "mappingProject": "PEAKGEAR_MEDALLION",
+          "synchronous": true
+        }
+      ],
+      "bulkLoadSteps": [
+        {
+          "name": "dl_silver_enriched_sales_stage",
+          "isFirstStep": false,
+          "failureRetryNumber": 3,
+          "failureRetryDelay": 30,
+          "logLevel": "ALWAYS",
+          "stepType": "StepBulkLoad",
+          "coordinates": {
+            "pos_x": 732,
+            "pos_y": 72
+          },
+          "bulkLoadName": "dl_silver_enriched_sales"
+        }
+      ],
+      "sqlSteps": [
+        {
+          "name": "Clear Silver table",
+          "isFirstStep": false,
+          "nextStepAfterSuccess": "dl_silver_enriched_sales_stage",
+          "failureRetryNumber": 3,
+          "failureRetryDelay": 30,
+          "logLevel": "ALWAYS",
+          "stepType": "StepSql",
+          "coordinates": {
+            "pos_x": 528,
+            "pos_y": 72
+          },
+          "procedureFolder": "DefaultFolder",
+          "procedureProject": "PEAKGEAR_MEDALLION",
+          "synchronous": true,
+          "schema": "PG",
+          "sqlText": "DECLARE\n    l_base_url CONSTANT VARCHAR2(4000) :=\n        '#PEAKGEAR_MEDALLION.v_pg_aicat_catalog_url';\n\n    l_client_secret CONSTANT VARCHAR2(4000) :=\n        '#PEAKGEAR_MEDALLION.v_pg_password';\n\n    l_auth_url CONSTANT VARCHAR2(4000) :=\n        l_base_url || '/v1/auth/token';\n\n    l_delete_url CONSTANT VARCHAR2(4000) :=\n        l_base_url\n        || '/v1/namespaces/silver/tables/ailh_enriched_sales';\n\n    l_request        UTL_HTTP.REQ;\n    l_response       UTL_HTTP.RESP;\n    l_chunk          VARCHAR2(32767);\n    l_auth_body      VARCHAR2(32767);\n    l_request_body   VARCHAR2(32767);\n    l_token          VARCHAR2(32767);\n    l_status         NUMBER;\nBEGIN\n    ------------------------------------------------------------------\n    -- Request AI Catalog access token\n    ------------------------------------------------------------------\n    l_request_body :=\n        'grant_type=client_credentials'\n        || '&client_id=' || UTL_URL.ESCAPE('PG')\n        || '&client_secret=' || UTL_URL.ESCAPE(l_client_secret)\n        || '&scope=PRINCIPAL_ROLE%3AALL';\n\n    l_request := UTL_HTTP.BEGIN_REQUEST(\n        l_auth_url,\n        'POST',\n        'HTTP/1.1'\n    );\n\n    UTL_HTTP.SET_HEADER(\n        l_request,\n        'Content-Type',\n        'application/x-www-form-urlencoded'\n    );\n\n    UTL_HTTP.SET_HEADER(\n        l_request,\n        'Content-Length',\n        LENGTH(l_request_body)\n    );\n\n    UTL_HTTP.WRITE_TEXT(\n        l_request,\n        l_request_body\n    );\n\n    l_response := UTL_HTTP.GET_RESPONSE(l_request);\n\n    BEGIN\n        LOOP\n            UTL_HTTP.READ_TEXT(\n                l_response,\n                l_chunk,\n                32767\n            );\n\n            l_auth_body := l_auth_body || l_chunk;\n        END LOOP;\n    EXCEPTION\n        WHEN UTL_HTTP.END_OF_BODY THEN\n            UTL_HTTP.END_RESPONSE(l_response);\n    END;\n\n    l_token := JSON_VALUE(\n        l_auth_body,\n        '$.access_token'\n    );\n\n    IF l_token IS NULL THEN\n        RAISE_APPLICATION_ERROR(\n            -20001,\n            'Unable to obtain AI Catalog access token.'\n        );\n    END IF;\n\n    ------------------------------------------------------------------\n    -- Delete Silver Iceberg table\n    ------------------------------------------------------------------\n    l_request := UTL_HTTP.BEGIN_REQUEST(\n        l_delete_url,\n        'DELETE',\n        'HTTP/1.1'\n    );\n\n    UTL_HTTP.SET_HEADER(\n        l_request,\n        'Authorization',\n        'Bearer ' || l_token\n    );\n\n    l_response := UTL_HTTP.GET_RESPONSE(l_request);\n    l_status := l_response.STATUS_CODE;\n\n    DBMS_OUTPUT.PUT_LINE(\n        'DELETE silver/ailh_enriched_sales - HTTP status: '\n        || l_status\n    );\n\n    UTL_HTTP.END_RESPONSE(l_response);\n\n    IF l_status NOT IN (200, 202, 204, 404) THEN\n        RAISE_APPLICATION_ERROR(\n            -20002,\n            'Failed to delete silver/ailh_enriched_sales. HTTP status: '\n            || l_status\n    );\n    END IF;\nEND;"
+        }
+      ]
+    },
+    {
+      "name": "wf_03_silver_to_gold",
+      "projectName": "peakgear_medallion",
+      "projectCode": "PEAKGEAR_MEDALLION",
+      "parentFolder": "DefaultFolder",
+      "packType": "Sequential",
+      "mappingSteps": [
+        {
+          "name": "df_03_gold_west_product_performance",
+          "isFirstStep": false,
+          "failureRetryNumber": 3,
+          "failureRetryDelay": 30,
+          "logLevel": "ALWAYS",
+          "stepType": "StepMapping",
+          "coordinates": {
+            "pos_x": 492,
+            "pos_y": 60
+          },
+          "mappingName": "df_03_gold_west_product_performance",
+          "mappingFolder": "DefaultFolder",
+          "mappingProject": "PEAKGEAR_MEDALLION",
+          "synchronous": true
+        }
+      ],
+      "sqlSteps": [
+        {
+          "name": "Create Silver View",
+          "isFirstStep": true,
+          "nextStepAfterSuccess": "df_03_gold_west_product_performance",
+          "failureRetryNumber": 3,
+          "failureRetryDelay": 30,
+          "logLevel": "ALWAYS",
+          "stepType": "StepSql",
+          "coordinates": {
+            "pos_x": 228,
+            "pos_y": 60
+          },
+          "procedureFolder": "DefaultFolder",
+          "procedureProject": "PEAKGEAR_MEDALLION",
+          "synchronous": true,
+          "schema": "PG",
+          "sqlText": "BEGIN\n    EXECUTE IMMEDIATE q'[\n        CREATE OR REPLACE VIEW PG.\"ailh_enriched_sales_v\" AS\n        SELECT\n            \"SALE_MONTH\",\n            \"PRODUCT_ID\",\n            \"PRODUCT_NAME\",\n            \"CATEGORY\",\n            \"STATE\",\n            \"CHANNEL_TYPE\",\n            \"SALES_REGION\",\n            \"QTY_SOLD\",\n            \"TOTAL_SALE_AMOUNT\",\n            \"ESTIMATED_COST\",\n            \"ESTIMATED_GROSS_MARGIN\",\n            \"TXN_ID\",\n            \"ESTIMATED_MARGIN_PCT\"\n        FROM \"silver\".\"AILH_ENRICHED_SALES\"@\"PG_AICAT\"\n    ]';\nEND;\n"
+        }
+      ]
+    },
+    {
+      "name": "wf_medallion_architecture",
+      "projectName": "peakgear_medallion",
+      "projectCode": "PEAKGEAR_MEDALLION",
+      "parentFolder": "DefaultFolder",
+      "packType": "Sequential",
+      "packageSteps": [
+        {
+          "name": "wf_01_raw_to_bronze",
+          "isFirstStep": true,
+          "nextStepAfterSuccess": "wf_02_bronze_to_silver",
+          "failureRetryNumber": 3,
+          "failureRetryDelay": 30,
+          "logLevel": "ALWAYS",
+          "stepType": "StepPackage",
+          "coordinates": {
+            "pos_x": 84,
+            "pos_y": 84
+          },
+          "packageName": "wf_01_raw_to_bronze",
+          "packageFolder": "DefaultFolder",
+          "packageProject": "PEAKGEAR_MEDALLION",
+          "synchronous": true,
+          "packType": "Sequential"
+        },
+        {
+          "name": "wf_02_bronze_to_silver",
+          "isFirstStep": false,
+          "nextStepAfterSuccess": "wf_03_silver_to_gold",
+          "failureRetryNumber": 3,
+          "failureRetryDelay": 30,
+          "logLevel": "ALWAYS",
+          "stepType": "StepPackage",
+          "coordinates": {
+            "pos_x": 336,
+            "pos_y": 84
+          },
+          "packageName": "wf_02_bronze_to_silver",
+          "packageFolder": "DefaultFolder",
+          "packageProject": "PEAKGEAR_MEDALLION",
+          "synchronous": true,
+          "packType": "Sequential"
+        },
+        {
+          "name": "wf_03_silver_to_gold",
+          "isFirstStep": false,
+          "failureRetryNumber": 3,
+          "failureRetryDelay": 30,
+          "logLevel": "ALWAYS",
+          "stepType": "StepPackage",
+          "coordinates": {
+            "pos_x": 588,
+            "pos_y": 84
+          },
+          "packageName": "wf_03_silver_to_gold",
+          "packageFolder": "DefaultFolder",
+          "packageProject": "PEAKGEAR_MEDALLION",
+          "synchronous": true,
+          "packType": "Sequential"
+        }
+      ]
+    },
+    {
+      "name": "wf_01_raw_to_bronze",
+      "projectName": "peakgear_medallion",
+      "projectCode": "PEAKGEAR_MEDALLION",
+      "parentFolder": "DefaultFolder",
+      "packType": "Sequential",
+      "sqlSteps": [
+        {
+          "name": "Create Bronze Views",
+          "isFirstStep": true,
+          "failureRetryNumber": 3,
+          "failureRetryDelay": 30,
+          "logLevel": "ALWAYS",
+          "stepType": "StepSql",
+          "coordinates": {
+            "pos_x": 189,
+            "pos_y": 83
+          },
+          "procedureFolder": "DefaultFolder",
+          "procedureProject": "PEAKGEAR_MEDALLION",
+          "synchronous": true,
+          "schema": "PG",
+          "sqlText": "BEGIN\n    EXECUTE IMMEDIATE q'[\n        CREATE OR REPLACE VIEW PG.\"ailh_products_bronze_v\" AS\n        SELECT\n            \"PRODUCT_ID\",\n            \"PRODUCT_NAME\",\n            \"CATEGORY\",\n            \"COST_PRICE\",\n            \"RETAIL_PRICE\",\n            \"SKU\"\n        FROM \"bronze\".\"products\"@\"PG_AICAT\"\n    ]';\n\n    EXECUTE IMMEDIATE q'[\n        CREATE OR REPLACE VIEW PG.\"ailh_store_locations_bronze_v\" AS\n        SELECT\n            \"STORE_ID\",\n            \"LOCATION\",\n            \"MANAGER\",\n            \"OPENED_DATE\",\n            \"CHANNEL_TYPE\",\n            \"STORE_TYPE\"\n        FROM \"bronze\".\"store_locations\"@\"PG_AICAT\"\n    ]';\n\n    EXECUTE IMMEDIATE q'[\n        CREATE OR REPLACE VIEW PG.\"ailh_store_sales_bronze_v\" AS\n        SELECT\n            \"TXN_ID\",\n            \"SALE_TIMESTAMP\",\n            \"STORE_ID\",\n            \"PRODUCT_ID\",\n            \"QTY_SOLD\",\n            \"TOTAL_SALE_AMOUNT\"\n        FROM \"bronze\".\"store_sales_transactions\"@\"PG_AICAT\"\n    ]';\n\n    EXECUTE IMMEDIATE q'[\n        CREATE OR REPLACE VIEW PG.\"ailh_store_inventory_bronze_v\" AS\n        SELECT\n            \"STORE_ID\",\n            \"PRODUCT_ID\",\n            \"STOCK_ON_HAND\",\n            \"LAST_STOCK_UPDATE\",\n            \"REORDER_LEVEL\",\n            \"AVAILABLE_TO_PROMISE_QTY\",\n            \"INVENTORY_STATUS\"\n        FROM \"bronze\".\"store_inventory\"@\"PG_AICAT\"\n    ]';\nEND;"
+        }
+      ]
+    }
+  ],
+  "variables": [
+    {
+      "variableName": "v_pg_aicat_catalog_url",
+      "projectName": "peakgear_medallion",
+      "projectCode": "PEAKGEAR_MEDALLION",
+      "qualifiedName": "PEAKGEAR_MEDALLION.v_pg_aicat_catalog_url",
+      "variableType": "LONG_TEXT",
+      "defaultValue": "${AI_DATA_CATALOG_URL}",
+      "valuePersistence": "LATEST_VALUE",
+      "global": false
+    },
+    {
+      "variableName": "v_pg_password",
+      "projectName": "peakgear_medallion",
+      "projectCode": "PEAKGEAR_MEDALLION",
+      "qualifiedName": "PEAKGEAR_MEDALLION.v_pg_password",
+      "variableType": "LONG_TEXT",
+      "defaultValue": "${PG_PASSWORD}",
+      "valuePersistence": "LATEST_VALUE",
+      "global": false
+    }
+  ],
+  "bulkload": [
+    {
+      "bulkLoadName": "dl_silver_enriched_sales",
+      "bulkLoadMode": "ICEBERG_INCREMENTAL",
+      "sourceTechno": "ORACLE",
+      "targetTechno": "APACHE_ICEBERG",
+      "parentFolder": "DefaultFolder",
+      "chunkSize": 5,
+      "dataLoadOptions": {
+        "namingConvention": "UPPERCASE",
+        "reservedWords": "UPPERCASE_DELIMIT",
+        "auditing": {
+          "AUDIT$_OPERATION": {
+            "enabled": false,
+            "description": "'I' - insert, 'U' - Update."
+          },
+          "AUDIT$_JOB_ID": {
+            "enabled": false,
+            "description": "Job ID for record processing."
+          },
+          "AUDIT$_TIMESTAMP": {
+            "enabled": false,
+            "description": "Timestamp the record was loaded into the target."
+          }
+        }
+      },
+      "sourceTables": [
+        {
+          "sourceTableName": "ailh_enriched_sales",
+          "targetPreloadAction": "APPEND"
+        }
+      ]
+    }
+  ],
+  "databaseObjects": [
+    {
+      "name": "ailh_enriched_sales",
+      "type": "TABLE",
+      "ddl": "CREATE TABLE \"PG\".\"ailh_enriched_sales\" \n   (\t\"STORE_ID\" NUMBER(20,0), \n\t\"TXN_ID\" NUMBER(20,0), \n\t\"PRODUCT_ID\" NUMBER(20,0), \n\t\"LOCATION\" VARCHAR2(4000 CHAR), \n\t\"SALE_TIMESTAMP\" VARCHAR2(4000 CHAR), \n\t\"PRODUCT_NAME\" VARCHAR2(4000 CHAR), \n\t\"MANAGER\" VARCHAR2(4000 CHAR), \n\t\"CATEGORY\" VARCHAR2(4000 CHAR), \n\t\"OPENED_DATE\" VARCHAR2(4000 CHAR), \n\t\"COST_PRICE\" NUMBER(18,2), \n\t\"CHANNEL_TYPE\" VARCHAR2(4000 CHAR), \n\t\"QTY_SOLD\" NUMBER(20,0), \n\t\"RETAIL_PRICE\" NUMBER(18,2), \n\t\"TOTAL_SALE_AMOUNT\" NUMBER(18,2), \n\t\"SKU\" VARCHAR2(4000 CHAR), \n\t\"STORE_TYPE\" VARCHAR2(4000 CHAR), \n\t\"SALE_MONTH\" DATE, \n\t\"CITY\" VARCHAR2(4000 CHAR), \n\t\"STATE\" VARCHAR2(4000 CHAR), \n\t\"COUNTRY\" VARCHAR2(4000 CHAR), \n\t\"SALES_REGION\" VARCHAR2(4000 CHAR), \n\t\"ESTIMATED_COST\" NUMBER(30,10), \n\t\"ESTIMATED_GROSS_MARGIN\" NUMBER(30,10), \n\t\"ESTIMATED_MARGIN_PCT\" NUMBER(30,10)\n   )"
+    },
+    {
+      "name": "ailh_enriched_sales_stage",
+      "type": "TABLE",
+      "ddl": "CREATE TABLE \"PG\".\"ailh_enriched_sales_stage\" \n   (\t\"STORE_ID\" NUMBER(20,0), \n\t\"TXN_ID\" NUMBER(20,0), \n\t\"PRODUCT_ID\" NUMBER(20,0), \n\t\"LOCATION\" VARCHAR2(4000 CHAR), \n\t\"SALE_TIMESTAMP\" VARCHAR2(4000 CHAR), \n\t\"PRODUCT_NAME\" VARCHAR2(4000 CHAR), \n\t\"MANAGER\" VARCHAR2(4000 CHAR), \n\t\"CATEGORY\" VARCHAR2(4000 CHAR), \n\t\"OPENED_DATE\" VARCHAR2(4000 CHAR), \n\t\"COST_PRICE\" NUMBER(18,2), \n\t\"CHANNEL_TYPE\" VARCHAR2(4000 CHAR), \n\t\"QTY_SOLD\" NUMBER(20,0), \n\t\"RETAIL_PRICE\" NUMBER(18,2), \n\t\"TOTAL_SALE_AMOUNT\" NUMBER(18,2), \n\t\"SKU\" VARCHAR2(4000 CHAR), \n\t\"STORE_TYPE\" VARCHAR2(4000 CHAR), \n\t\"SALE_MONTH\" DATE, \n\t\"CITY\" VARCHAR2(4000 CHAR), \n\t\"STATE\" VARCHAR2(4000 CHAR), \n\t\"COUNTRY\" VARCHAR2(4000 CHAR), \n\t\"SALES_REGION\" VARCHAR2(4000 CHAR), \n\t\"ESTIMATED_COST\" NUMBER(30,10), \n\t\"ESTIMATED_GROSS_MARGIN\" NUMBER(30,10), \n\t\"ESTIMATED_MARGIN_PCT\" NUMBER(30,10)\n   )"
+    },
+    {
+      "name": "ailh_gold_west_product_performance",
+      "type": "TABLE",
+      "ddl": "CREATE TABLE \"PG\".\"ailh_gold_west_product_performance\" \n   (\t\"SALE_MONTH\" DATE, \n\t\"PRODUCT_ID\" NUMBER(20,0), \n\t\"PRODUCT_NAME\" VARCHAR2(4000 CHAR), \n\t\"CATEGORY\" VARCHAR2(4000 CHAR), \n\t\"STATE\" VARCHAR2(4000 CHAR), \n\t\"CHANNEL_TYPE\" VARCHAR2(4000 CHAR), \n\t\"SALES_REGION\" VARCHAR2(4000 CHAR), \n\t\"QTY_SOLD\" NUMBER(20,0), \n\t\"TOTAL_SALE_AMOUNT\" NUMBER(18,2), \n\t\"ESTIMATED_COST\" NUMBER(30,10), \n\t\"ESTIMATED_GROSS_MARGIN\" NUMBER(30,10), \n\t\"TXN_ID\" NUMBER(20,0), \n\t\"ESTIMATED_MARGIN_PCT\" NUMBER(30,10)\n   )"
+    },
+    {
+      "name": "ailh_enriched_sales_v",
+      "type": "VIEW",
+      "ddl": "CREATE VIEW \"PG\".\"ailh_enriched_sales_v\" (\"SALE_MONTH\", \"PRODUCT_ID\", \"PRODUCT_NAME\", \"CATEGORY\", \"STATE\", \"CHANNEL_TYPE\", \"SALES_REGION\", \"QTY_SOLD\", \"TOTAL_SALE_AMOUNT\", \"ESTIMATED_COST\", \"ESTIMATED_GROSS_MARGIN\", \"TXN_ID\", \"ESTIMATED_MARGIN_PCT\") AS \n  SELECT\n            \"SALE_MONTH\",\n            \"PRODUCT_ID\",\n            \"PRODUCT_NAME\",\n            \"CATEGORY\",\n            \"STATE\",\n            \"CHANNEL_TYPE\",\n            \"SALES_REGION\",\n            \"QTY_SOLD\",\n            \"TOTAL_SALE_AMOUNT\",\n            \"ESTIMATED_COST\",\n            \"ESTIMATED_GROSS_MARGIN\",\n            \"TXN_ID\",\n            \"ESTIMATED_MARGIN_PCT\"\n        FROM \"PG\".\"ailh_enriched_sales\"\n    "
+    },
+    {
+      "name": "ailh_products_bronze_v",
+      "type": "VIEW",
+      "ddl": "CREATE VIEW \"PG\".\"ailh_products_bronze_v\" (\"PRODUCT_ID\", \"PRODUCT_NAME\", \"CATEGORY\", \"COST_PRICE\", \"RETAIL_PRICE\", \"SKU\") AS \n  SELECT\n            \"PRODUCT_ID\",\n            \"PRODUCT_NAME\",\n            \"CATEGORY\",\n            \"COST_PRICE\",\n            \"RETAIL_PRICE\",\n            \"SKU\"\n        FROM \"bronze\".\"products\"@\"PG_AICAT\"\n    "
+    },
+    {
+      "name": "ailh_store_inventory_bronze_v",
+      "type": "VIEW",
+      "ddl": "CREATE VIEW \"PG\".\"ailh_store_inventory_bronze_v\" (\"STORE_ID\", \"PRODUCT_ID\", \"STOCK_ON_HAND\", \"LAST_STOCK_UPDATE\", \"REORDER_LEVEL\", \"AVAILABLE_TO_PROMISE_QTY\", \"INVENTORY_STATUS\") AS \n  SELECT\n            \"STORE_ID\",\n            \"PRODUCT_ID\",\n            \"STOCK_ON_HAND\",\n            \"LAST_STOCK_UPDATE\",\n            \"REORDER_LEVEL\",\n            \"AVAILABLE_TO_PROMISE_QTY\",\n            \"INVENTORY_STATUS\"\n        FROM \"bronze\".\"store_inventory\"@\"PG_AICAT\"\n    "
+    },
+    {
+      "name": "ailh_store_locations_bronze_v",
+      "type": "VIEW",
+      "ddl": "CREATE VIEW \"PG\".\"ailh_store_locations_bronze_v\" (\"STORE_ID\", \"LOCATION\", \"MANAGER\", \"OPENED_DATE\", \"CHANNEL_TYPE\", \"STORE_TYPE\") AS \n  SELECT\n            \"STORE_ID\",\n            \"LOCATION\",\n            \"MANAGER\",\n            \"OPENED_DATE\",\n            \"CHANNEL_TYPE\",\n            \"STORE_TYPE\"\n        FROM \"bronze\".\"store_locations\"@\"PG_AICAT\"\n    "
+    },
+    {
+      "name": "ailh_store_sales_bronze_v",
+      "type": "VIEW",
+      "ddl": "CREATE VIEW \"PG\".\"ailh_store_sales_bronze_v\" (\"TXN_ID\", \"SALE_TIMESTAMP\", \"STORE_ID\", \"PRODUCT_ID\", \"QTY_SOLD\", \"TOTAL_SALE_AMOUNT\") AS \n  SELECT\n            \"TXN_ID\",\n            \"SALE_TIMESTAMP\",\n            \"STORE_ID\",\n            \"PRODUCT_ID\",\n            \"QTY_SOLD\",\n            \"TOTAL_SALE_AMOUNT\"\n        FROM \"bronze\".\"store_sales_transactions\"@\"PG_AICAT\"\n    "
+    }
+  ]
+}

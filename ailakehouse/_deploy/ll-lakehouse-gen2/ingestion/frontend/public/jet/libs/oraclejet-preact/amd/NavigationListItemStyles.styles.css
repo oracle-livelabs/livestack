@@ -1,0 +1,68 @@
+.NavigationListItemStyles_baseStyle__1l143kw0 {
+  min-height: var(--minHeight__ibpjpp3);
+  cursor: var(--oj-c-cursor-clickable);
+  box-sizing: border-box;
+  outline-style: none;
+  display: flex;
+  gap: var(--oj-c-size-units, 0.25rem);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  color: var(--labelColor__ibpjpp7);
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  padding-inline-start: calc(var(--paddingHorizontal__ibpjpp6));
+  padding-inline-end: var(--paddingHorizontal__ibpjpp6);
+}
+.NavigationListItemStyles_iconLabelContainer__1l143kw1 {
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.NavigationListItemStyles_iconContainer__1l143kw2 {
+  font-size: var(--iconSize__ibpjpp2);
+}
+.NavigationListItemStyles_navigationItemMetadata__1l143kw3 {
+  color: var(--oj-c-text-icon-secondary);
+  display: inline-flex;
+}
+.NavigationListItemStyles_selectedStyle__1l143kw4 {
+  background-color: var(--backgroundColorSelected__ibpjppc);
+  color: var(--labelColorSelected__ibpjppb);
+  position: relative;
+}
+.NavigationListItemStyles_selectedStyle__1l143kw4::before {
+  content: '';
+  position: absolute;
+  top: calc(50% - var(--borderHeight__ibpjpp5)/2);
+  height: var(--borderHeight__ibpjpp5);
+  width: var(--borderWidth__ibpjpp4);
+  background-color: var(--borderColorSelected__ibpjppd);
+  inset-inline-start: 0;
+  clip-path: polygon(0 0, 100% var(--borderWidth__ibpjpp4), 100% calc(var(--borderHeight__ibpjpp5) - var(--borderWidth__ibpjpp4)), 0 100%);
+}
+.NavigationListItemStyles_selectedStyleRtl__1l143kw5::before {
+  clip-path: polygon(100% 0, 0 var(--borderWidth__ibpjpp4), 0 calc(var(--borderHeight__ibpjpp5) - var(--borderWidth__ibpjpp4)), 100% 100%);
+}
+.NavigationListItemStyles_labelContainerClasses__1l143kw6 {
+  padding: calc(0.75 * var(--oj-c-size-units, 0.25rem)) 0;
+  font-size: var(--fontSize__ibpjpp0);
+  font-weight: var(--fontWeight__ibpjpp1);
+  line-height: normal;
+}
+.NavigationListItemStyles_navigationListItemLink__1l143kw7 {
+  color: inherit;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  display: flex;
+  width: 100%;
+}
+.NavigationListItemStyles_navigationListItemLink__1l143kw7:hover {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  color: var(--labelColorSelected__ibpjppb);
+}
+.NavigationListItemStyles_navigationListItemLink__1l143kw7:active {
+  color: var(--labelColorSelected__ibpjppb);
+}
