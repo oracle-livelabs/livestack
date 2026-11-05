@@ -1,0 +1,196 @@
+{
+  "version": 2,
+  "status": "candidate",
+  "packaging_verified": true,
+  "database_encryption": "NONE",
+  "bootstrap_verified": false,
+  "destination_restore_tested": false,
+  "acceptance_contract_sha256": "059562bfeb0ef616db3756d04dfac8b6989af397b80a71cccf6cf73e000318d7",
+  "frozen_source_release_sha256": "6b6e65222a3a8c8f4d69438d29da4d6b50f65de2d8732ffcb5afca4271fe11b9",
+  "artifacts": [
+    {
+      "path": "application-source.tar.gz",
+      "sha256": "81db4236e2eb33dcdd0833ca55bdc9375bf3304327a5560946afd7b913f08aca",
+      "bytes": 377791066
+    },
+    {
+      "path": "bootstrap.tar.gz",
+      "sha256": "d39955b8cc977cba8233271d253e0cdae3428bf50338b72f5b9731894dac9b0e",
+      "bytes": 29588
+    },
+    {
+      "path": "acceptance-contract.json",
+      "sha256": "059562bfeb0ef616db3756d04dfac8b6989af397b80a71cccf6cf73e000318d7",
+      "bytes": 2193
+    },
+    {
+      "path": "baseline.json",
+      "sha256": "77c2e5e705f4d3acb9319150baee223eb52c872294c6b5d1e5641d7788b5be06",
+      "bytes": 18353
+    },
+    {
+      "path": "ai/configuration.json",
+      "sha256": "da37e381a0786a471a2217375ed97407bee86976c76d13818c6b937bb3941a97",
+      "bytes": 28013
+    },
+    {
+      "path": "apex/manifest.json",
+      "sha256": "62cd502470e566619545fca01c0c0719f4731a1189a077fb688122065912b852",
+      "bytes": 1180
+    },
+    {
+      "path": "tools/sqlcl.zip",
+      "sha256": "17f89fddf69722f37d7bde0718e66490647b25b295bf52fba92ba0ad042fa256",
+      "bytes": 121421628
+    },
+    {
+      "path": "database/security-baseline.json",
+      "sha256": "851ec60e1a773b1ee711ba19601e9d0ab03a41bce062967135c3b55e80982af5",
+      "bytes": 47689
+    },
+    {
+      "path": "models/kokoro-v1.0.onnx",
+      "sha256": "beb0d1848dee9a49da392cc3df26958d46cfa35d321edf434f52949153f0df3a",
+      "bytes": 325505369
+    },
+    {
+      "path": "models/voices-v1.0.bin",
+      "sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+      "bytes": 28214398
+    },
+    {
+      "path": "apex/f319.sql",
+      "sha256": "634d4aa087480f0228c69ef3d069b52aaf0023d5ddb7c72ee9ce058b7b43bd20",
+      "bytes": 64774780
+    },
+    {
+      "path": "apex/f320.sql",
+      "sha256": "47f08b20a5bbef2417de411b74b7ef85b8898cc75476908388e2d75b3d179c85",
+      "bytes": 72050691
+    },
+    {
+      "path": "apex/f361.sql",
+      "sha256": "a3e00d17d178333e2b83dd4216bd7dc6f4e96d1820ff7298045ce2cc7d0a5774",
+      "bytes": 73802196
+    },
+    {
+      "path": "associations/DR-20261020-68ed95d9-8383-401c.json",
+      "sha256": "702954c5bcc8e777bfa19064883b06bac87c93c0a40d0f4e18ce2c6c9531d9ca",
+      "bytes": 768
+    },
+    {
+      "path": "database/manifest.json",
+      "sha256": "04ffe56ec44b667151f74010b337732f1497ca1ae156e12e8ca73b69a5983c68",
+      "bytes": 5265
+    },
+    {
+      "path": "database/export-audit.json",
+      "sha256": "9c62bd1a42c6afff2fa5594d1539a512988be04ca233c66a392329d9efc47cc1",
+      "bytes": 5372
+    },
+    {
+      "path": "database/ID_RELEASE_MVZDPE4W_01.dmp",
+      "sha256": "286e3bd3d73be526085ad8e928cd24c0bf5c4d573f6753b79809d787a79f1a2f",
+      "bytes": 268435456
+    },
+    {
+      "path": "database/ID_RELEASE_MVZDPE4W_02.dmp",
+      "sha256": "eafc1202be9874970fcf87ce819236473aa61c1031c954e10667ef7f62336d8d",
+      "bytes": 268435456
+    },
+    {
+      "path": "database/ID_RELEASE_MVZDPE4W_03.dmp",
+      "sha256": "9c0a7b7d58777e2453d0413b6eee6e1171dbccf94f91a805fa6035e5efd3f234",
+      "bytes": 268435456
+    },
+    {
+      "path": "database/ID_RELEASE_MVZDPE4W_04.dmp",
+      "sha256": "a3cdd048b310dc797dc8665f46d2b58a579bad1b3e31b1294fe1283f5c3f6c0e",
+      "bytes": 268435456
+    },
+    {
+      "path": "database/ID_RELEASE_MVZDPE4W_05.dmp",
+      "sha256": "1c86643f4d22007a2547a28f9479c5f0ecd03970030845962e16a13a4ea7f53d",
+      "bytes": 268435456
+    },
+    {
+      "path": "database/ID_RELEASE_MVZDPE4W_06.dmp",
+      "sha256": "667b291b5bd74c88f68d2ad54fe63a0ecf4188a3dcade498c704a6481e7de5cd",
+      "bytes": 268435456
+    },
+    {
+      "path": "database/ID_RELEASE_MVZDPE4W_07.dmp",
+      "sha256": "008bc4e2c5219421a4d8ed8b0bed89ae3b909c6ee40e14688fd66f01d88b8921",
+      "bytes": 268435456
+    },
+    {
+      "path": "database/ID_RELEASE_MVZDPE4W_08.dmp",
+      "sha256": "5da331f4213d927ea75528fabc72b25068bd097cbc04af5db41dfd0a313b6a1b",
+      "bytes": 268435456
+    },
+    {
+      "path": "database/ID_RELEASE_MVZDPE4W_09.dmp",
+      "sha256": "2b391d6b347eff68914f9171490ec0517f44cd4aa8caf28fe93377fbda7f4bf4",
+      "bytes": 268435456
+    },
+    {
+      "path": "database/ID_RELEASE_MVZDPE4W_10.dmp",
+      "sha256": "a2f6aa4217e488e179e2b860c5daf036854de5705e502775bf2bfd8f50d9bf55",
+      "bytes": 268435456
+    },
+    {
+      "path": "database/ID_RELEASE_MVZDPE4W_11.dmp",
+      "sha256": "e8ab88dd5cc47c4f4879992175525c9b6866ae93aa04781f5e59e7c461d9da15",
+      "bytes": 268435456
+    },
+    {
+      "path": "database/ID_RELEASE_MVZDPE4W_12.dmp",
+      "sha256": "241b91d9ef9fc623d11e72b4d846f559ef3d84c8906af54a8bf88e45d599e3c8",
+      "bytes": 268435456
+    },
+    {
+      "path": "database/ID_RELEASE_MVZDPE4W_13.dmp",
+      "sha256": "84fd592ff801027f448e91e2b0261f42e8e1f11091cf1588ea43fb2a5a6291a6",
+      "bytes": 268435456
+    },
+    {
+      "path": "database/ID_RELEASE_MVZDPE4W_14.dmp",
+      "sha256": "28010c9e58ee5ede8a6136be2868d0ee5bc0539b72cd8b923e282140d078fdd7",
+      "bytes": 268435456
+    },
+    {
+      "path": "database/ID_RELEASE_MVZDPE4W_15.dmp",
+      "sha256": "e17c15ffee0a3f8a8f672a93eb3fe973b38f862e35824d7b00b33793f65296bc",
+      "bytes": 268435456
+    },
+    {
+      "path": "database/ID_RELEASE_MVZDPE4W_16.dmp",
+      "sha256": "cc2720b99fa505cebeb7bbfd753b0d4bf68e6a61fc661efa68efdab69854e157",
+      "bytes": 268435456
+    },
+    {
+      "path": "database/ID_RELEASE_MVZDPE4W_17.dmp",
+      "sha256": "5c5c512f0ccd907cdca4e4d8699094279414b06bcdc7b629a56c311ead42f8de",
+      "bytes": 268435456
+    },
+    {
+      "path": "database/ID_RELEASE_MVZDPE4W_18.dmp",
+      "sha256": "5229ee4f6dcd656f2cb956001acddf62adf33c160a926d44e97f3d53dbb2192f",
+      "bytes": 268435456
+    },
+    {
+      "path": "database/ID_RELEASE_MVZDPE4W_19.dmp",
+      "sha256": "cc067dae7bd62cf1cb3dfc85a5511249e5e58c1d01fbc73775985945aff5a368",
+      "bytes": 4395008
+    }
+  ],
+  "source_commit": "e448bf64f04bdacc192a86294e089b47a9eaae4e",
+  "source_patch_sha256": "e0897c8a65a3ceeeef7276b9f291bf5ec53f0e3835d1b3bf4167673dfa23f111",
+  "source_snapshot_sha256": "d5540009a092cb20e621022ed8a90c853bbc6a416659fda858b2caa84b4a59df",
+  "database_password_required": false,
+  "database_export_audit": {
+    "path": "database/export-audit.json",
+    "sha256": "9c62bd1a42c6afff2fa5594d1539a512988be04ca233c66a392329d9efc47cc1",
+    "schema_manifest_sha256": "04ffe56ec44b667151f74010b337732f1497ca1ae156e12e8ca73b69a5983c68"
+  }
+}
