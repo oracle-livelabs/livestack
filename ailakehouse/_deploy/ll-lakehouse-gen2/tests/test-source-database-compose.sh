@@ -120,7 +120,7 @@ for seed_file in \
 done
 
 require_service_text "goldengate-runtime" '"${GOLDENGATE_RUNTIME_HTTP_PORT:-8502}:8080"'
-require_service_text "ggsa" '"${GGSA_MYSQL_PORT:-3306}:3306"'
+require_service_text "ggsa" '"127.0.0.1:${GGSA_MYSQL_PORT:-3306}:3306"'
 
 for removed_variable in POSTGRES_SOURCE_PASSWORD LOYALTY_MYSQL_PASSWORD LOYALTY_MYSQL_ROOT_PASSWORD MONGODB_CATALOG_ROOT_PASSWORD; do
   if grep -qF -- "${removed_variable}" "${COMPOSE_FILE}" "${SETENV_FILE}"; then

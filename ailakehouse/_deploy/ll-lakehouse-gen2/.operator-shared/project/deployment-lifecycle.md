@@ -7,6 +7,7 @@ Use the linked guides for procedures. This note records boundaries that are easy
 - OCI metadata and `/home/opc/.env` are both configuration inputs. In `init/variable.sh`, metadata values are preferred where a metadata key is defined; local environment values serve as fallback. Confirm each key's actual resolution before changing it.
 - `AIHUB` is an image-time choice: `inst.sh` writes it to `/home/opc/bootstrap/aihub-image-default.env`, and runtime setup reads that file. It selects the optional MongoDB Compose profile.
 - A reusable image retains its container images and dependency caches. At first boot, the root release service obtains the fixed-name host ZIP URL from OCI instance metadata, validates the ZIP, and installs `init/` and `ingestion/` before user setup units run. Replacing the Object Storage object does not update an already provisioned VM; new VMs receive the current object at boot.
+- The image build uses Node 24 for app dependency caches and the GGSA image pins a patched Kafka build. Kafka and Spark endpoints stay inside the GGSA container; OSA HTTP and its MySQL service bind to host loopback, while OSA HTTPS is published for the demo.
 - ADB wallet provisioning is handled by `init/adb-wallet.sh`; the custom-image marker `.oci_wallet_required` prevents silently substituting a static/local wallet when metadata-driven wallet setup is required.
 - LiveLabs first-boot integration is opt-in through `ENABLE_LIVELABS_FIRSTBOOT` and a trusted `LIVELABS_FIRSTBOOT_URL`; standalone setup does not imply it is enabled.
 
@@ -15,8 +16,8 @@ Use the linked guides for procedures. This note records boundaries that are easy
 The installed user units encode the ordering. Check their current `After=`, `Before=`, and `Requires=` declarations before changing it:
 
 1. `peakgear-release.service` installs the validated host payload; `setenv` resolves configuration; `adb-wallet.service` provisions the wallet; `adb-load.service` prepares the dedicated ADB `PG` schema/data and required OCI GenAI profile.
-2. `user-podman.service` starts the Compose stack after its configured prerequisites.
-3. `iceberg-seed.service` seeds local Iceberg-related data and prepares the ADB external table; `pg-ai-catalog-bronze.service` and `pg-iceberg-connection.service` prepare related integration state.
+2. `user-podman.service` starts the Compose stack after ADB setup. AI Data Catalog configuration waits for the app health endpoint and retries within a bounded window; it does not hold up Compose startup.
+3. `iceberg-seed.service` seeds local Iceberg-related data and prepares the ADB external table; `pg-ai-catalog-bronze.service` runs after AI Data Catalog configuration, and `pg-iceberg-connection.service` prepares related integration state.
 4. `pg-medallion-project.service` depends on the Iceberg connection and AI catalog bronze setup.
 
 The exact order is source-defined, not a promise that every unit runs in every deployment mode. See [`init/`](../../init/) and [`ingestion/compose.yml`](../../ingestion/compose.yml).

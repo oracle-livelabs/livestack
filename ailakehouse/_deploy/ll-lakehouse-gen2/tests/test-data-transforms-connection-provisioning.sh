@@ -280,8 +280,8 @@ assert properties["tokenUri"] == "https://catalog.example.invalid/catalog/v1/aut
 assert properties["restUser"] == "PG"
 assert base64.b64decode(properties["restPasswd"]).decode("utf-8") == os.environ["TEST_PASSWORD"]
 assert properties["storageType"] == "OCIObjectStorage"
-assert properties["s3AccessID"] == "example-access-id"
-assert properties["s3SecretKey"] == "example-secret-key"
+assert base64.b64decode(properties["s3AccessID"]).decode("utf-8") == "example-access-id"
+assert base64.b64decode(properties["s3SecretKey"]).decode("utf-8") == "example-secret-key"
 assert properties["enableCredentialVending"] == "false"
 assert "s3Region" not in properties
 PY

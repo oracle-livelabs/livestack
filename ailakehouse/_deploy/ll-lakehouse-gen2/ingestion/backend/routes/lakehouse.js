@@ -11,6 +11,7 @@ const path = require('path');
 const fs = require('fs/promises');
 const fsSync = require('fs');
 const AdmZip = require('adm-zip');
+const { assertZipEntrySizes } = require('../lib/zipLimits');
 const { parse: parseCsv } = require('csv-parse');
 const { oracledb } = require('../config/database');
 
@@ -904,6 +905,14 @@ async function extractWallet(walletFile) {
     const entries = zip.getEntries();
     if (!entries.length) {
       throw createHttpError(400, 'Wallet ZIP is empty');
+    }
+    try {
+      assertZipEntrySizes(entries, {
+        maxEntryBytes: 16 * 1024 * 1024,
+        maxTotalBytes: 32 * 1024 * 1024,
+      });
+    } catch (err) {
+      throw createHttpError(400, err.message);
     }
 
     for (const entry of entries) {

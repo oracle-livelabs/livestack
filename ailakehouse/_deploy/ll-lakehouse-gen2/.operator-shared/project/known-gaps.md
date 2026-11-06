@@ -4,7 +4,7 @@ This note records user-confirmed rationale, unresolved policy, and evidence-back
 
 ## User-confirmed rationale
 
-- **Container image packaging:** LiveLabs cannot download container images from internet registries at provisioning time, so container images remain baked into the base VM image. Object Storage is always reachable and supplies the fixed-name host payload ZIP at first boot. A live first-boot run remains unverified.
+- **Container image packaging:** LiveLabs cannot download container images from internet registries at provisioning time, so container images remain baked into the base VM image. Object Storage is always reachable and supplies the fixed-name host payload ZIP at first boot.
 - **Gen2 database and AI boundary:** A fresh dedicated ADB hosts the `PG` app and lakehouse tables. Gen2 removes the local app Oracle Free database and Ollama; `netsuite-db` remains the CDC source and Private AI remains for embeddings. OCI GenAI supplies language generation.
 - **OCI GenAI requirement:** Gen2 requires the OCI GenAI profile; absent or unsupported setup configuration fails before the app starts.
 - **`AIHUB` image-time choice:** MongoDB is an image-level opt-in because some users may not want that third-party database included in their deployment.
@@ -16,6 +16,8 @@ The existing design rationales were confirmed on 2026-10-16; Object Storage reac
 ## Unresolved rationale and policy
 
 - The history behind removal of the Iceberg Catalog Server UI route remains unknown.
+- ADB can leave a Retail Operations team execution in `RUNNING` after both tools succeed while the final OCI GenAI response stalls. The app returns a labeled direct-tool response on its own call timeout, but that does not cancel the ADB team execution. Monitor team history if this recurs; a database-side cancellation policy has not been established.
+- The release flow has no complete SBOM and vulnerability scan for baked container images or externally staged Java archives. npm and PyPI advisory checks do not establish that the Oracle, GGSA, and Gravitino image contents are free of known CVEs.
 
 ## Verified documentation/source mismatches
 

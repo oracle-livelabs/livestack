@@ -110,15 +110,11 @@ sudo firewall-cmd --permanent --add-port=8085/tcp #GGSA OSA HTTPS
 sudo firewall-cmd --permanent --add-port=8086/tcp #Sprin2
 sudo firewall-cmd --permanent --add-port=8087/tcp #Sprin3
 sudo firewall-cmd --permanent --add-port=8088/tcp #Sprin4
-sudo firewall-cmd --permanent --add-port=19080/tcp #GGSA OSA HTTP
-sudo firewall-cmd --permanent --add-port=9092/tcp #GGSA Kafka
-sudo firewall-cmd --permanent --add-port=7077/tcp #GGSA Spark master
-sudo firewall-cmd --permanent --add-port=28080/tcp #GGSA Spark master UI
-sudo firewall-cmd --permanent --add-port=28081/tcp #GGSA Spark worker UI
-sudo firewall-cmd --permanent --add-port=28082/tcp #GGSA Spark worker UI
-sudo firewall-cmd --permanent --add-port=28083/tcp #GGSA Spark history UI
-sudo firewall-cmd --permanent --add-port=6066/tcp #GGSA Spark REST
-sudo firewall-cmd --permanent --add-port=4040-4050/tcp #GGSA Spark app UI
+# These GGSA ports serve only same-VM and Compose clients. Close rules inherited
+# from older image builds as well as keeping them closed on a fresh image.
+for internal_port in 19080 9092 7077 28080 28081 28082 28083 6066 4040-4050; do
+  sudo firewall-cmd --permanent --remove-port="${internal_port}/tcp" >/dev/null 2>&1 || true
+done
 
 sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" destination address="10.0.0.0/24" service name="ssh" accept'
 sudo firewall-cmd --reload
@@ -307,11 +303,11 @@ progress 11 "Caching offline container images and dependencies"
     -v /home/opc/ingestion:/workspace/app:z \
     -v ingestion_app-node-modules:/workspace/app/node_modules \
     -v ingestion_frontend-node-modules:/workspace/app/frontend/node_modules \
-    docker.io/node:20-bookworm sh -lc 'npm ci --include=dev && cd frontend && npm ci --include=dev'
+    docker.io/node:24-bookworm sh -lc 'npm ci --include=dev && cd frontend && npm ci --include=dev'
   podman run --rm --workdir /workspace/generator \
     -v /home/opc/ingestion/signal-generator:/workspace/generator:z \
     -v ingestion_signal-generator-node-modules:/workspace/generator/node_modules \
-    docker.io/node:20-bookworm sh -lc 'npm install --omit=dev'
+    docker.io/node:24-bookworm sh -lc 'npm ci --omit=dev'
 )
 
 progress 12 "Installing first-boot release service"

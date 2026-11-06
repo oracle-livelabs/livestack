@@ -147,7 +147,7 @@ class Tests(unittest.TestCase):
     def test_service_and_image_integration(self):
         service = (ROOT / 'init/pg-medallion-project.service').read_text()
         self.assertIn('pg-iceberg-connection.service pg-ai-catalog-bronze.service', service)
-        self.assertIn('pg-medallion-project.service', (ROOT / 'inst.sh').read_text())
+        self.assertIn('pg-medallion-project.service', (ROOT / 'bootstrap/firstboot.py').read_text())
         self.assertIn('PG_MEDALLION_PROJECT_SERVICE', (ROOT / 'prepare-custom-image.sh').read_text())
         self.assertIn('aicat_connection_is_available', (ROOT / 'init/create-medallion-project.sh').read_text())
 

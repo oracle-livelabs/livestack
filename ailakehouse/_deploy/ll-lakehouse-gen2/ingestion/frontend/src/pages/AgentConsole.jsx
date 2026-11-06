@@ -30,19 +30,12 @@ const AGENT_COLORS = {
 };
 
 const TEAM_INFO = {
-  SOCIAL_TREND_TEAM: { label: 'Signal Agent', color: '#AA643B', iconClass: 'oj-fwk-icon-sortrelevancehigh', desc: 'Demand and market signal analysis' },
-  FULFILLMENT_TEAM:  { label: 'Store Fulfillment Agent', color: '#437C94', iconClass: 'oj-fwk-icon-tree-document', desc: 'Inventory, returns audit, and routing' },
-  COMMERCE_TEAM:     { label: 'Orders & Fulfillment Flow Agent', color: '#4C825C', iconClass: 'oj-fwk-icon-grid', desc: 'Orders, margin, and customer demand' },
+  RETAIL_RESPONSE_TEAM: { label: 'Retail Response Team', color: '#4F7D7B', iconClass: 'oj-fwk-icon-sortrelevancehigh', desc: 'Demand signal to stock response' },
 };
 
 const EXAMPLE_QUESTIONS = [
-  { text: 'Which products have the highest risk momentum?', iconClass: 'oj-fwk-icon-sortrelevancehigh', team: 'trends' },
-  { text: 'Show revenue breakdown by product category', iconClass: 'oj-fwk-icon-grid', team: 'commerce' },
-  { text: 'Which products have low inventory?', iconClass: 'oj-fwk-icon-tree-document', team: 'fulfillment' },
-  { text: 'What percentage of orders are signal-driven?', iconClass: 'oj-fwk-icon-info', team: 'commerce' },
-  { text: 'Find urgent demand signals in the last 24 hours', iconClass: 'oj-fwk-icon-sortrelevancehigh', team: 'trends' },
-  { text: 'Check inventory for Hydrawave Cross-Training Shoe 161', iconClass: 'oj-fwk-icon-tree-document', team: 'fulfillment' },
-  { text: 'Find nearest eligible store fulfillment site with SummitStride Trail Runner for a customer in Miami', iconClass: 'oj-fwk-icon-arrowtail-e', team: 'fulfillment' },
+  { text: 'Identify a strong demand signal and recommend a stock response', iconClass: 'oj-fwk-icon-sortrelevancehigh', team: 'Retail response' },
+  { text: 'Which recent product signal should our inventory team review first?', iconClass: 'oj-fwk-icon-tree-document', team: 'Retail response' },
 ];
 
 function getProfileDisplayLabel(name, index = 0) {
@@ -182,6 +175,7 @@ function ChatAgent({ onActionLogged, runtime }) {
         agentUsed: result.agentUsed,
         runtime: result.runtime,
         runtimeLabel: result.runtimeLabel,
+        executionNote: result.executionNote,
         provider: result.provider,
         toolsUsed: result.toolsUsed,
         workflow: result.workflow,
@@ -224,7 +218,7 @@ function ChatAgent({ onActionLogged, runtime }) {
             <JetGlyph iconClass="oj-fwk-icon-message-info" className="tone-teal" />
           </div>
           <div>
-            <h3 className="text-sm font-bold">Chat with AI Agents</h3>
+            <h3 className="text-sm font-bold">Demand to Stock Response</h3>
           </div>
         </div>
         {messages.length > 0 && (
@@ -247,11 +241,11 @@ function ChatAgent({ onActionLogged, runtime }) {
           <div className="space-y-3 py-4">
             <div className="text-center mb-4">
               <JetGlyph iconClass="oj-fwk-icon-users" className="agent-console-empty-glyph tone-teal" />
-              <p className="text-sm text-[var(--color-text-dim)]">Ask me about your PeakGear sporting goods data</p>
+              <p className="text-sm text-[var(--color-text-dim)]">Find a recent demand signal and decide whether stock needs attention</p>
               <p className="text-[10px] text-[var(--color-text-dim)] mt-1">
                 Powered by <span className="font-semibold text-[var(--color-text)]">
                   {nativeAgentActive ? 'Oracle Select AI Agent Framework' : 'Oracle Select AI Agent unavailable'}
-                </span> for reasoning + Oracle SQL and PL/SQL tools
+                </span> for reasoning over two focused Oracle PL/SQL tools
               </p>
             </div>
             <div className="agent-console-example-grid">
@@ -312,9 +306,9 @@ function ChatAgent({ onActionLogged, runtime }) {
                       style={{ background: `${(TEAM_INFO[msg.team] || {}).color || '#C74634'}22`, color: (TEAM_INFO[msg.team] || {}).color || '#C74634' }}>
                       {(TEAM_INFO[msg.team] || {}).label || msg.team}
                     </span>
-                    {msg.agentUsed && (
+                    {(msg.agentUsed || msg.runtime === 'oracle_tool_response') && (
                       <span className="text-[9px] px-1.5 py-0.5 rounded surface-plum-soft tone-plum">
-                        {msg.runtime === 'select_ai_agent' ? 'SELECT AI AGENT' : 'UNAVAILABLE'}
+                        {msg.runtime === 'select_ai_agent' ? 'SELECT AI AGENT' : 'ORACLE TOOLS'}
                       </span>
                     )}
                     <span className="text-[10px] text-[var(--color-text-dim)] ml-auto">{msg.elapsed}ms</span>
@@ -325,6 +319,7 @@ function ChatAgent({ onActionLogged, runtime }) {
                     style={{ background: 'var(--color-surface-muted)', border: '1px solid var(--color-border)' }}>
                     {msg.text}
                   </div>
+                  {msg.executionNote && <p className="text-xs text-[var(--color-text-dim)]">{msg.executionNote}</p>}
 
                   {/* Route map if present */}
                   {msg.data && msg.data.type === 'route' && (
@@ -444,8 +439,8 @@ function ChatAgent({ onActionLogged, runtime }) {
               value={input}
               disabled={sending || !nativeAgentActive}
               elementRef={inputRef}
-              ariaLabel="Ask an agent runtime question"
-              placeholder="Ask the agent runtime a question…"
+              ariaLabel="Request a demand and stock response"
+              placeholder="Ask for a demand-to-stock recommendation…"
               onValueChange={setInput}
             />
           </div>
@@ -537,102 +532,40 @@ export default function AgentConsole() {
       {/* Register Oracle Internals into the right panel */}
       <RegisterOraclePanel title="Retail Operations Agents">
         <div className="space-y-4">
-          <div>
-            <p className="text-xs font-semibold text-[var(--color-text-dim)] uppercase tracking-wider mb-2">What's Happening</p>
-            <p className="text-[var(--color-text)] leading-relaxed">
-              These agent workflows use <span className="font-mono text-[var(--color-text)]">DBMS_CLOUD_AI_AGENT</span> with OCI GenAI.
-              The agent team runs registered SQL and PL/SQL tools against the <span className="font-mono text-[var(--color-text)]">PG</span> schema. Three specialist teams (<code className="text-xs font-semibold" style={{ color: 'var(--color-text)', borderBottom: '1px solid #AA643B' }}>SOCIAL_TREND_TEAM</code>,&nbsp;
-              <code className="text-xs font-semibold" style={{ color: 'var(--color-text)', borderBottom: '1px solid #437C94' }}>FULFILLMENT_TEAM</code>, <code className="text-xs font-semibold" style={{ color: 'var(--color-text)', borderBottom: '1px solid #4C825C' }}>COMMERCE_TEAM</code>) route work across
-              trend analysis, fulfillment, and transaction tasks. Oracle stores the source data, runs the queries, and records decisions in
-              <code className="text-xs font-semibold" style={{ color: 'var(--color-text)', borderBottom: '1px solid #A36472' }}> agent_actions</code> and <code className="text-xs font-semibold" style={{ color: 'var(--color-text)', borderBottom: '1px solid #A36472' }}>event_stream</code>;
-               The database owns the agent tools, action log, and source data.
-            </p>
-          </div>
+          <p className="text-sm text-[var(--color-text)]">
+            One sequential Select AI Agent team uses two PG database tools. The demand scout
+            selects a recent product signal; the stock planner receives that product ID and
+            checks available inventory before recommending an action.
+          </p>
           <div className="flex flex-wrap gap-1.5">
             <FeatureBadge label={nativeAgentActive ? 'Oracle Select AI Agent' : 'Unavailable'} color="purple" />
-            <FeatureBadge label={'OCI GenAI'} color="pink" />
-            <FeatureBadge label="Oracle SQL / PL/SQL Tools" color="orange" />
-            <FeatureBadge label={'DBMS_CLOUD_AI_AGENT'} color="blue" />
-            <FeatureBadge label="agent_actions (Audit Log)" color="blue" />
-            <FeatureBadge label="event_stream (Native JSON)" color="yellow" />
-            <FeatureBadge label="Vector RAG Retrieval" color="cyan" />
-            <FeatureBadge label="In-DB ML Scoring" color="green" />
+            <FeatureBadge label="OCI GenAI" color="pink" />
+            <FeatureBadge label="2 PL/SQL Tools" color="orange" />
+            <FeatureBadge label="PG Schema" color="blue" />
           </div>
-          <SqlBlock code={nativeAgentActive ? `-- Agent runtime: Oracle Select AI Agent + app database PG schema
--- The app resolves intent -> routes to a specialist team -> calls DBMS_CLOUD_AI_AGENT.RUN_TEAM
--- OCI GenAI provides reasoning; Oracle owns the data, tools, and action log
+          <SqlBlock code={`-- RETAIL_RESPONSE_TEAM runs these tasks in order:
+-- DEMAND_SCOUT_TASK -> STOCK_RESPONSE_TASK
+-- The second task receives the first task's result through its input attribute.
+-- The app logs the completed response once in agent_actions.
 
--- Example flow:
--- 1. Classify the request as SOCIAL_TREND_TEAM
--- 2. RUN_TEAM invokes TREND_AGENT and its registered tools
--- 3. SQL and PL/SQL tools query app database PG tables
--- 4. LOG_DECISION_TOOL writes the recommendation to agent_actions
-
-SELECT DBMS_CLOUD_AI_AGENT.RUN_TEAM(
-  team_name   => 'SOCIAL_TREND_TEAM',
-  user_prompt => 'Which products are trending and need attention?'
-) AS response
-FROM dual;` : `-- Oracle Select AI Agent is unavailable.
--- Check the OCI GenAI profile and database connection.`} />
-          {/* Team / Agent / Tools grid */}
-          <div>
-            <p className="text-[10px] font-semibold text-[var(--color-text-dim)] uppercase tracking-wider mb-2">Agent Teams &amp; Tools</p>
-            <div className="grid grid-cols-3 gap-2">
-              {[
-                { team: 'SOCIAL_TREND_TEAM', agent: 'TREND_AGENT', tools: ['TREND_SQL_TOOL', 'DETECT_TRENDS_TOOL', 'INFLUENCER_NETWORK_TOOL', 'LOG_DECISION_TOOL'], color: '#A36472' },
-                { team: 'FULFILLMENT_TEAM', agent: 'FULFILLMENT_AGENT', tools: ['COMMERCE_SQL_TOOL', 'CHECK_INVENTORY_TOOL', 'FULFILLMENT_ROUTE_TOOL', 'LOG_DECISION_TOOL'], color: '#AA643B' },
-                { team: 'COMMERCE_TEAM', agent: 'COMMERCE_AGENT', tools: ['COMMERCE_SQL_TOOL', 'LOG_DECISION_TOOL'], color: '#4C825C' },
-              ].map(t => (
-                <div key={t.team} className="rounded-xl border border-[var(--color-border)] overflow-hidden">
-                  <div className="px-2 py-1.5 text-center" style={{ background: `${t.color}12`, borderBottom: `2px solid ${t.color}44` }}>
-                    <p className="text-[9px] font-semibold font-mono text-[var(--color-text)]">{t.team}</p>
-                  </div>
-                  <div className="p-2 space-y-1.5">
-                    <span className="text-[9px] font-mono font-semibold text-[var(--color-text)]">{t.agent}</span>
-                    <div className="space-y-0.5">
-                      {t.tools.map(tool => (
-                        <div key={tool} className="text-[8px] font-mono px-1.5 py-0.5 rounded bg-[var(--color-surface)] text-[var(--color-text-dim)]">
-                          {tool}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="flex flex-wrap gap-2 text-[9px] text-[var(--color-text-dim)] mt-2">
-              <span><strong className="text-[var(--color-text)]">1</strong> Runtime Profile</span>
-              <span>·</span>
-              <span><strong className="text-[var(--color-text)]">7</strong> Tools</span>
-              <span>·</span>
-              <span><strong className="text-[var(--color-text)]">3</strong> Agents</span>
-              <span>·</span>
-              <span><strong className="text-[var(--color-text)]">3</strong> Tasks</span>
-              <span>·</span>
-              <span><strong className="text-[var(--color-text)]">3</strong> Teams</span>
-            </div>
-          </div>
-
-          {/* Architecture flow */}
-          <div>
-            <p className="text-[10px] font-semibold text-[var(--color-text-dim)] uppercase tracking-wider mb-2">Agent Architecture</p>
-            <div className="space-y-1" style={{ fontSize: 9 }}>
-              <DiagramBox label="Critical Demand Signal Detected" sub="social_posts · virality_score >= 75" color="#AA643B" />
-              <div className="text-center text-[var(--color-text-dim)]">↓</div>
-              <DiagramBox label="SOCIAL_TREND_TEAM" sub={'Select AI Agent + tool routing'} color="#796087" />
-              <div className="text-center text-[var(--color-text-dim)]">↓ calls PL/SQL tool</div>
-              <DiagramBox label="detect_trending_products()" sub="Vector match · brand or partner graph centrality" color="#A36472" />
-              <div className="text-center text-[var(--color-text-dim)]">↓</div>
-              <DiagramBox label="FULFILLMENT_TEAM" sub="Inventory check · reorder logic" color="#437C94" />
-              <div className="text-center text-[var(--color-text-dim)]">↓</div>
-              <DiagramBox label="COMMERCE_TEAM" sub="Pricing · promotions · routing" color="#4C825C" />
-              <div className="text-center text-[var(--color-text-dim)]">↓</div>
-              <DiagramBox label="agent_actions + event_stream" sub="Audit trail · JSON events" color="#4F7D7B" />
-            </div>
-            <div className="rounded-lg p-2 text-[9px] mt-2" style={{ background: 'rgba(121,96,135,0.08)', border: '1px dashed rgba(121,96,135,0.3)', color: 'var(--color-text)' }}>
-              <span className="font-semibold">Why keep Oracle in the loop?</span><br/>
-              Oracle runs the native agent team, owns the live data, executes SQL and PL/SQL tools, and stores the durable action log.
-            </div>
+DECLARE
+  conversation_id VARCHAR2(200);
+  response CLOB;
+BEGIN
+  conversation_id := DBMS_CLOUD_AI.CREATE_CONVERSATION();
+  response := DBMS_CLOUD_AI_AGENT.RUN_TEAM(
+    team_name => 'RETAIL_RESPONSE_TEAM',
+    user_prompt => 'Identify a strong demand signal and recommend a stock response',
+    params => JSON_OBJECT('conversation_id' VALUE conversation_id)
+  );
+END;
+/`} />
+          <div className="space-y-1" style={{ fontSize: 9 }}>
+            <DiagramBox label="Demand Scout" sub="get_demand_opportunity() · one product ID and signal evidence" color="#AA643B" />
+            <div className="text-center text-[var(--color-text-dim)]">↓ task result</div>
+            <DiagramBox label="Stock Planner" sub="assess_product_stock(product ID) · available units and low stock sites" color="#437C94" />
+            <div className="text-center text-[var(--color-text-dim)]">↓</div>
+            <DiagramBox label="Retail Response" sub="One evidence-backed recommendation · app audit log" color="#4F7D7B" />
           </div>
         </div>
       </RegisterOraclePanel>
@@ -644,7 +577,7 @@ FROM dual;` : `-- Oracle Select AI Agent is unavailable.
           </h2>
           <p className="text-sm text-[var(--color-text-dim)] mt-1">
             {nativeAgentActive
-              ? 'Agent teams use Oracle Select AI Agent Framework with OCI GenAI against the application database.'
+              ? 'Two agents turn a recent product demand signal into a stock recommendation using the PG database.'
               : 'Oracle Select AI Agent is unavailable. Check the OCI GenAI profile and database connection.'}
           </p>
         </div>

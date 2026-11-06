@@ -190,7 +190,6 @@ PUBLISH_HOST=${PUBLISH_HOST}
 GGSA_PUBLIC_HOST=${GGSA_PUBLIC_HOST}
 OSA_PUBLIC_HOST=${OSA_PUBLIC_HOST}
 SPARK_PUBLIC_DNS=${SPARK_PUBLIC_DNS}
-KAFKA_ADVERTISED_LISTENERS=${KAFKA_ADVERTISED_LISTENERS}
 EOF
 
   cat > "${profile_file}" <<EOF
@@ -200,12 +199,11 @@ export PUBLISH_HOST='${PUBLISH_HOST}'
 export GGSA_PUBLIC_HOST='${GGSA_PUBLIC_HOST}'
 export OSA_PUBLIC_HOST='${OSA_PUBLIC_HOST}'
 export SPARK_PUBLIC_DNS='${SPARK_PUBLIC_DNS}'
-export KAFKA_ADVERTISED_LISTENERS='${KAFKA_ADVERTISED_LISTENERS}'
 EOF
 }
 
 configure_public_host() {
-  local public_host listener_host
+  local public_host
 
   if ! is_auto_public_host "${GGSA_PUBLIC_HOST:-}"; then
     public_host="${GGSA_PUBLIC_HOST}"
@@ -237,16 +235,10 @@ configure_public_host() {
     export SPARK_PUBLIC_DNS="${public_host}"
   fi
 
-  listener_host="${KAFKA_ADVERTISED_LISTENERS#PLAINTEXT://}"
-  listener_host="${listener_host%%:*}"
-  if is_auto_public_host "${KAFKA_ADVERTISED_LISTENERS:-}" || is_auto_public_host "${listener_host}"; then
-    export KAFKA_ADVERTISED_LISTENERS="PLAINTEXT://${public_host}:${KAFKA_BROKER_PORT}"
-  fi
-
   export HOST="${public_host}"
   persist_public_host_env
 
-  log "Using public host ${public_host} for OSA, Spark, and Kafka advertised endpoints"
+  log "Using public host ${public_host} for OSA"
 }
 
 generate_osa_secured_password() {
@@ -523,9 +515,9 @@ process.roles=broker,controller
 node.id=1
 controller.quorum.voters=1@localhost:${KAFKA_CONTROLLER_PORT}
 controller.listener.names=CONTROLLER
-listeners=INTERNAL://127.0.0.1:${KAFKA_INTERNAL_BROKER_PORT},PLAINTEXT://0.0.0.0:${KAFKA_BROKER_PORT},CONTROLLER://0.0.0.0:${KAFKA_CONTROLLER_PORT}
-advertised.listeners=INTERNAL://localhost:${KAFKA_INTERNAL_BROKER_PORT},${KAFKA_ADVERTISED_LISTENERS}
-listener.security.protocol.map=CONTROLLER:PLAINTEXT,INTERNAL:PLAINTEXT,PLAINTEXT:PLAINTEXT
+listeners=INTERNAL://127.0.0.1:${KAFKA_INTERNAL_BROKER_PORT},CONTROLLER://127.0.0.1:${KAFKA_CONTROLLER_PORT}
+advertised.listeners=INTERNAL://localhost:${KAFKA_INTERNAL_BROKER_PORT}
+listener.security.protocol.map=CONTROLLER:PLAINTEXT,INTERNAL:PLAINTEXT
 inter.broker.listener.name=INTERNAL
 num.partitions=3
 offsets.topic.replication.factor=1
@@ -1143,14 +1135,12 @@ main() {
   export OSA_API_SERVER_SPORT="${OSA_API_SERVER_SPORT:-9443}"
   export OSA_LOAD_SAMPLES="${OSA_LOAD_SAMPLES:-false}"
   export KAFKA_INTERNAL_BROKER_PORT="${KAFKA_INTERNAL_BROKER_PORT:-19092}"
-  export KAFKA_BROKER_PORT="${KAFKA_BROKER_PORT:-9092}"
   export KAFKA_CONTROLLER_PORT="${KAFKA_CONTROLLER_PORT:-9093}"
-  export KAFKA_ADVERTISED_LISTENERS="${KAFKA_ADVERTISED_LISTENERS:-PLAINTEXT://localhost:${KAFKA_BROKER_PORT}}"
   export SPARK_MASTER_HOST="${SPARK_MASTER_HOST:-localhost}"
   export SPARK_MASTER_PORT="${SPARK_MASTER_PORT:-7077}"
   export SPARK_MASTER_REST_ENABLED="${SPARK_MASTER_REST_ENABLED:-true}"
   export SPARK_MASTER_REST_PORT="${SPARK_MASTER_REST_PORT:-6066}"
-  export SPARK_MASTER_REST_HOST="${SPARK_MASTER_REST_HOST:-}"
+  export SPARK_MASTER_REST_HOST="${SPARK_MASTER_REST_HOST:-127.0.0.1}"
   export SPARK_MASTER_WEBUI_PORT="${SPARK_MASTER_WEBUI_PORT:-28080}"
   export SPARK_WORKER_WEBUI_PORT="${SPARK_WORKER_WEBUI_PORT:-28081}"
   export SPARK_PUBLIC_DNS="${SPARK_PUBLIC_DNS:-${OSA_PUBLIC_HOST}}"
@@ -1186,12 +1176,11 @@ main() {
   else
     log "OSA UI: http://${OSA_PUBLIC_HOST}:${OSA_API_SERVER_PORT}/osa/index.html"
   fi
-  log "Spark UI: http://${OSA_PUBLIC_HOST}:${SPARK_MASTER_WEBUI_PORT}"
+  log "Spark UI (Compose network): http://ggsa:${SPARK_MASTER_WEBUI_PORT}"
   if [[ "${SPARK_MASTER_REST_ENABLED,,}" == "true" ]]; then
-    log "Spark REST submissions: http://${OSA_PUBLIC_HOST}:${SPARK_MASTER_REST_PORT}/v1/submissions/create"
+    log "Spark REST submissions (container only): http://127.0.0.1:${SPARK_MASTER_REST_PORT}/v1/submissions/create"
   fi
   log "Kafka internal bootstrap: localhost:${KAFKA_INTERNAL_BROKER_PORT}"
-  log "Kafka public bootstrap: ${KAFKA_ADVERTISED_LISTENERS#PLAINTEXT://}"
   log "MySQL database: ${MYSQL_DATABASE} on port ${MYSQL_TCP_PORT}"
 
   monitor_services

@@ -1,4 +1,5 @@
 const AdmZip = require('adm-zip');
+const { assertZipEntrySizes } = require('./zipLimits');
 const { parse: parseCsvSync } = require('csv-parse/sync');
 const db = require('../config/database');
 const {
@@ -27,6 +28,8 @@ const {
 } = require('./datasetOperationLock');
 
 const MAX_ARCHIVE_SIZE_BYTES = 25 * 1024 * 1024;
+const MAX_EXPANDED_ARCHIVE_SIZE_BYTES = 128 * 1024 * 1024;
+const MAX_EXPANDED_ENTRY_SIZE_BYTES = 64 * 1024 * 1024;
 const VECTOR_MODEL_NAME = 'ALL_MINILM_L12_V2';
 const INSERT_SQL_CACHE = new Map();
 let cachedBundledDemoDataset = null;
@@ -141,6 +144,9 @@ function getArchiveBufferFromRequest({ req, body }) {
 
   if (body?.archiveBase64) {
     const buffer = Buffer.from(String(body.archiveBase64), 'base64');
+    if (buffer.length > MAX_ARCHIVE_SIZE_BYTES) {
+      throw new ImportError('ZIP file exceeds the 25 MB limit.');
+    }
     return {
       buffer,
       fileName: body.fileName || 'dataset.zip',
@@ -154,6 +160,9 @@ function loadArchive(buffer) {
   if (!Buffer.isBuffer(buffer) || buffer.length === 0) {
     throw new ImportError('Uploaded file is empty or missing.');
   }
+  if (buffer.length > MAX_ARCHIVE_SIZE_BYTES) {
+    throw new ImportError('ZIP file exceeds the 25 MB limit.');
+  }
 
   try {
     return new AdmZip(buffer);
@@ -164,7 +173,16 @@ function loadArchive(buffer) {
 
 function listArchiveFiles(zip) {
   const files = new Map();
-  for (const entry of zip.getEntries()) {
+  const entries = zip.getEntries();
+  try {
+    assertZipEntrySizes(entries, {
+      maxEntryBytes: MAX_EXPANDED_ENTRY_SIZE_BYTES,
+      maxTotalBytes: MAX_EXPANDED_ARCHIVE_SIZE_BYTES,
+    });
+  } catch (err) {
+    throw new ImportError(err.message);
+  }
+  for (const entry of entries) {
     if (entry.isDirectory) continue;
     const baseName = normalizeZipBaseName(entry.entryName);
     if (!baseName) continue;

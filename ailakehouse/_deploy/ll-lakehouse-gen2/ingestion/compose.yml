@@ -253,7 +253,6 @@ services:
       OSA_PUBLIC_HOST: ${GGSA_PUBLIC_HOST:-auto}
       OSA_API_SERVER_SPORT: ${GGSA_OSA_HTTPS_PORT:-8085}
       SPARK_PUBLIC_DNS: ${GGSA_PUBLIC_HOST:-auto}
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://${GGSA_PUBLIC_HOST:-auto}:${GGSA_KAFKA_PORT:-9092}
       OSA_KAFKA_URL: ${OSA_KAFKA_URL:-localhost:19092}
       SPARK_WORKER_INSTANCES: ${GGSA_SPARK_WORKER_INSTANCES:-2}
       SPARK_WORKER_CORES: ${GGSA_SPARK_WORKER_CORES:-8}
@@ -267,17 +266,9 @@ services:
       OSA_ADB_PASSWORD: ${DBPASSWORD:-}
       OSA_ADB_SERVICE_NAME: ${SERVICE_NAME:-}
     ports:
-      - "${GGSA_MYSQL_PORT:-3306}:3306"
-      - "${GGSA_SPARK_APP_PORT_RANGE:-4040-4050}:4040-4050"
-      - "${GGSA_SPARK_REST_PORT:-6066}:6066"
-      - "${GGSA_SPARK_MASTER_PORT:-7077}:7077"
-      - "${GGSA_SPARK_MASTER_UI_PORT:-28080}:28080"
-      - "${GGSA_SPARK_WORKER_UI_PORT:-28081}:28081"
-      - "${GGSA_SPARK_WORKER_UI_PORT_2:-28082}:28082"
-      - "${GGSA_SPARK_HISTORY_PORT:-28083}:28083"
+      - "127.0.0.1:${GGSA_MYSQL_PORT:-3306}:3306"
       - "${GGSA_OSA_HTTPS_PORT:-8085}:${GGSA_OSA_HTTPS_PORT:-8085}"
-      - "${GGSA_OSA_HTTP_PORT:-19080}:9080"
-      - "${GGSA_KAFKA_PORT:-9092}:9092"
+      - "127.0.0.1:${GGSA_OSA_HTTP_PORT:-19080}:9080"
     volumes:
       - ggsa-mysql:/var/lib/mysql
       - ggsa-kafka:/var/lib/kafka/data
@@ -299,7 +290,7 @@ services:
 
   signal-generator:
     hostname: signal-generator
-    image: docker.io/node:20-bookworm
+    image: docker.io/node:24-bookworm
     working_dir: /workspace/generator
     network_mode: "service:ggsa"
     volumes:
@@ -316,7 +307,7 @@ services:
       - -lc
       - |
         set -euo pipefail
-        [ -d node_modules/kafkajs ] || npm install --omit=dev
+        [ -d node_modules/kafkajs ] || npm ci --omit=dev
         npm start
     depends_on:
       ggsa:
@@ -418,7 +409,7 @@ services:
 
   app:
     hostname: app
-    image: docker.io/node:20-bookworm
+    image: docker.io/node:24-bookworm
     working_dir: /workspace/app
     volumes:
       - ./:/workspace/app:z

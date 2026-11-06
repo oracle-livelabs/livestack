@@ -113,9 +113,8 @@ GRANT AUDIT_ADMIN            TO pg;
 GRANT EXECUTE ON DBMS_VECTOR             TO pg;
 GRANT READ, WRITE ON DIRECTORY data_pump_dir TO pg;
 
--- Select AI / AI Agent framework (app auto-setup + 08_agents.sql)
--- The app-driven setup creates the active DBMS_CLOUD_AI profile when
--- PG_AI_PROFILE_AUTO_SETUP is enabled; these grants keep optional AI workflows available.
+-- Select AI / AI Agent framework. The ADB loader creates the OCI profile,
+-- then runs 08_agents.sql to register the tools, agents, tasks, and teams.
 BEGIN
     FOR stmt IN (
         SELECT 'GRANT EXECUTE ON DBMS_CLOUD_AI TO pg' AS sql_stmt FROM dual UNION ALL
