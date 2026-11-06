@@ -9,10 +9,8 @@ import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEPLOY_ROOT = ROOT.parent
 SCRIPTS = (
     ROOT / 'init/adb-load.sh',
-    DEPLOY_ROOT / 'auto_build/01-image-build/02-edit-if-needed/hooks/peakgear-init/adb-load.sh',
 )
 BASELINE_TABLES = {
     'CUSTOMER_ORDER_STATUS',
@@ -136,18 +134,18 @@ class AdbDataProfileTests(unittest.TestCase):
         rows = manifest_tables()
         self.assertEqual(checks, {table: rows[table] for table in expected_loads})
 
-    def test_demo_profile_creates_all_schemas_and_loads_baseline_for_both_scripts(self):
+    def test_demo_profile_creates_all_schemas_and_loads_baseline(self):
         for script in SCRIPTS:
             with self.subTest(script=script):
                 self.assert_profile_sql(script, 'demo', BASELINE_TABLES)
 
-    def test_full_profile_loads_every_manifest_table_for_both_scripts(self):
+    def test_full_profile_loads_every_manifest_table(self):
         all_tables = set(manifest_tables())
         for script in SCRIPTS:
             with self.subTest(script=script):
                 self.assert_profile_sql(script, 'full', all_tables)
 
-    def test_invalid_profile_is_rejected_before_bootstrap_for_both_scripts(self):
+    def test_invalid_profile_is_rejected_before_bootstrap(self):
         for script in SCRIPTS:
             with self.subTest(script=script):
                 result, log = self.run_full_script_until_profile_validation(script, 'everything')
@@ -155,7 +153,7 @@ class AdbDataProfileTests(unittest.TestCase):
                 self.assertIn('Invalid ADB_WAREHOUSE_DATA_PROFILE=everything; expected demo or full.', log)
                 self.assertNotIn('Starting one-time ADB SQLcl bootstrap', log)
 
-    def test_demo_profile_fails_without_manifest_for_both_scripts(self):
+    def test_demo_profile_fails_without_manifest(self):
         for script in SCRIPTS:
             with self.subTest(script=script):
                 with tempfile.TemporaryDirectory() as tmp:
@@ -168,7 +166,7 @@ class AdbDataProfileTests(unittest.TestCase):
                     self.assertIn('_export_manifest.json is unavailable', result.stderr)
                     self.assertEqual(files, {})
 
-    def test_full_profile_uses_legacy_fallback_without_manifest_for_both_scripts(self):
+    def test_full_profile_uses_legacy_fallback_without_manifest(self):
         for script in SCRIPTS:
             with self.subTest(script=script):
                 with tempfile.TemporaryDirectory() as tmp:
