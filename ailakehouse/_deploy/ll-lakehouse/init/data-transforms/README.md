@@ -1,7 +1,9 @@
 # Packaged Data Transforms projects
 
-`peakgear-medallion.json` captures the `peakgear_medallion` project exported from
-the PG Data Transforms environment on 2026-09-25. It contains:
+`peakgear-medallion.json` is a portable version of the `peakgear_medallion`
+project exported from the PG Data Transforms environment on 2026-09-25, with
+the five updated cleanse expressions and Gold source attribute selection from
+the 2026-10-19 XML export. It contains:
 
 - Three flows: `df_01_enriched_sales_expressions`, `df_02_enriched_sales_cleanse`,
   `df_03_gold_west_product_performance`.

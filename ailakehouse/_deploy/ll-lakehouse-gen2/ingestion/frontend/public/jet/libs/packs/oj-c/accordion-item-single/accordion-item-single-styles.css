@@ -1,0 +1,13 @@
+oj-c-accordion-item-single:not(.oj-complete){
+  visibility: hidden;
+}
+
+oj-c-accordion-item-single
+{
+  display: block;
+}
+
+oj-c-accordion-item-single[hidden]
+{
+  display: none;
+}

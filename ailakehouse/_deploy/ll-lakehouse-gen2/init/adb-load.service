@@ -1,0 +1,17 @@
+[Unit]
+Description=Bootstrap ADB lakehouse schema and data once
+After=network-online.target adb-wallet.service
+Wants=network-online.target adb-wallet.service
+Before=user-podman.service
+ConditionPathExists=/home/opc/ingestion/wallet/.wallet_done
+ConditionPathExists=!/home/opc/ingestion/.adb_load_done
+
+[Service]
+Type=oneshot
+TimeoutStartSec=3600
+ExecStartPre=/bin/bash -c '/home/opc/init/setenv.sh'
+ExecStart=/bin/bash -c '/home/opc/init/adb-load.sh'
+RemainAfterExit=yes
+
+[Install]
+WantedBy=default.target

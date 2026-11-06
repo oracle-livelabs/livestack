@@ -1,0 +1,51 @@
+brand_id,brand_name,brand_slug,brand_category,headquarters_city,headquarters_lat,headquarters_lon,founded_year,annual_revenue,social_tier,created_at,updated_at
+1,PeakGear Core,peakgearcore,Retail Sporting Goods,Denver,39.7392,-104.9903,1998,245000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+2,SummitTrail Outfitters,summittrail,Outdoor Gear,Seattle,47.6062,-122.3321,2004,186000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+3,RidgeRunner Performance,ridgerunner,Running and Trail,Portland,45.5152,-122.6784,1987,132000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+4,VelocityFit Devices,velocityfit,Fitness Devices,San Jose,37.3382,-121.8863,2012,221000000,luxury,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+5,AlpineForge Gear,alpineforge,Climbing and Snow,Salt Lake City,40.7608,-111.891,2001,98000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+6,Trailhead Team Sales,trailheadteams,B2B Partnerships,Chicago,41.8781,-87.6298,1979,154000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+7,GearPay Commerce,gearpay,E-Commerce,Austin,30.2672,-97.7431,2016,91000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+8,PackGuard Returns Audit,packguard,Returns and Safety,Boston,42.3601,-71.0589,2011,43000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+9,UrbanCourt Sports,urbancourt,Team Sports,Charlotte,35.2271,-80.8431,1968,275000000,luxury,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+10,EcoPeak Active,ecopeak,Sustainable Activewear,Boulder,40.015,-105.2705,2018,39000000,emerging,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+11,LoyaltyPeak Offers,loyaltypeak,Loyalty and Offers,Raleigh,35.7796,-78.6382,2007,76000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+12,Catalyst Safety Gear,catalystsafety,Protective Equipment,Tulsa,36.154,-95.9928,1996,117000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+13,NorthStar Outdoor Advisors,northstaroutdoor,Outdoor Advisory,Minneapolis,44.9778,-93.265,2005,52000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+14,GulfRun Supply,gulfrun,Supply Planning,Houston,29.7604,-95.3698,1974,203000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+15,Midwest Pickup Network,midwestpickup,Store Pickup,Indianapolis,39.7684,-86.1581,1989,88000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+16,Pacific Commerce Network,pacificcommerce,E-Commerce,Los Angeles,34.0522,-118.2437,1994,143000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+17,ReturnSure Labs,returnsure,Returns Audit,San Diego,32.7157,-117.1611,2012,69000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+18,RouteOne Fulfillment,routeonefulfillment,Store Fulfillment,Memphis,35.1495,-90.049,2009,58000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+19,Waterline Outdoor,waterlineoutdoor,Water Sports,Milwaukee,43.0389,-87.9065,2003,74000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+20,RecoveryFit Wellness,recoveryfit,Recovery and Wellness,Scottsdale,33.4942,-111.9261,2015,46000000,emerging,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+21,ElectraRide Devices,electraride,Connected Bikes,Phoenix,33.4484,-112.074,2019,34000000,emerging,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+22,ReCycle Outdoor Exchange,recycleoutdoor,Circular Commerce,Seattle,47.6062,-122.3321,2021,21000000,emerging,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+23,DemandDesk Analytics,demanddesk,Retail Analytics,New York,40.7128,-74.006,2014,18000000,emerging,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+24,HealthPeak Wearables,healthpeak,Fitness Wearables,Philadelphia,39.9526,-75.1652,1999,112000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+25,CleanTrail Apparel,cleantrail,Activewear,Cincinnati,39.1031,-84.512,2008,65000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+26,BridgeLine B2B Gear,bridgelineb2b,B2B Partnerships,Atlanta,33.749,-84.388,1991,126000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+27,StockGuard Advisors,stockguard,Inventory Intelligence,Dallas,32.7767,-96.797,2013,47000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+28,FinePoint Digital,finepointdigital,Digital Commerce,Raleigh,35.7796,-78.6382,2006,82000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+29,Portside Outdoor Supply,portsideoutdoor,Outdoor Supply,Savannah,32.0809,-81.0912,1985,157000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+30,AltitudeYield Gear,altitudeyield,Premium Outdoor Gear,Kansas City,39.0997,-94.5786,1997,93000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+31,PurePack Travel,purepack,Packs and Travel,St. Louis,38.627,-90.1994,1982,138000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+32,SiliconFit Labs,siliconfit,Fitness Technology,Akron,41.0814,-81.519,2002,71000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+33,CarbonActive Outdoor,carbonactive,Sustainable Outdoor,Pittsburgh,40.4406,-79.9959,1978,99000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+34,ReturnGuard Operations,returnguard,Returns Operations,Tampa,27.9506,-82.4572,1995,61000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+35,GearVault Product Data,gearvault,Product Data,Baltimore,39.2904,-76.6122,2000,55000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+36,Coastal Perimeter Surf,coastalperimeter,Surf and Water,Wilmington,34.2257,-77.9447,1993,104000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+37,CivicSure Team Sports,civicsure,Team Sports,Nashville,36.1627,-86.7816,2006,57000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+38,IPA Direct Equipment,ipadirect,Equipment Leasing,San Antonio,29.4241,-98.4936,1990,118000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+39,ApexOne Outdoors,apexoneoutdoors,Outdoor Performance,Louisville,38.2527,-85.7585,2004,67000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+40,Propel Performance,propelperformance,Performance Training,Omaha,41.2565,-95.9345,1988,149000000,premium,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+41,Continuity Supply Ops,continuitysupply,Supply Continuity,New Orleans,29.9511,-90.0715,2001,59000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+42,BatteryStreet Fitness Tech,batterystreet,Fitness Technology,Austin,30.2672,-97.7431,2020,26000000,emerging,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+43,TrendWatch Market Signals,trendwatch,Market Intelligence,Washington,38.9072,-77.0369,2017,31000000,emerging,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+44,Safety Updates Desk,safetyupdates,Product Safety,Washington,38.9072,-77.0369,2010,44000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+45,MarketPulse Sports Signals,marketpulse,Market Data,Long Beach,33.7701,-118.1937,2018,29000000,emerging,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+46,StoreOps,storeops,Store Operations,Las Vegas,36.1699,-115.1398,2012,51000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+47,AssortmentDesk,assortmentdesk,Assortment Signals,Cleveland,41.4993,-81.6944,2016,37000000,emerging,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+48,LedgerGrade Product Data,ledgergrade,Product Data Services,Salt Lake City,40.7608,-111.891,2009,48000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+49,Specialty Gear Exchange,specialtygear,Marketplace Pricing,Miami,25.7617,-80.1918,2015,63000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z
+50,NorthStar Pickup,northstarpickup,Store Pickup,Fargo,46.8772,-96.7898,2008,54000000,standard,2026-04-13T09:16:47Z,2026-04-13T09:16:47Z

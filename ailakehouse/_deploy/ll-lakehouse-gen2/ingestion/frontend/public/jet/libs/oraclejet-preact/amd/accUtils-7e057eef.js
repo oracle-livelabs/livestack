@@ -1,0 +1,2 @@
+define(['exports', './clientHints-6d361eaa'], (function(e,i){"use strict";const t=i.getClientHints().platform,s="android"===t||"ios"===t;e.generateAriaLabel=(e,i,t)=>[i,[void 0===t.isSelected?"":t.isSelected?e.vis_stateSelected():e.vis_stateUnselected(),t.isDrillable?e.vis_drillable():"",t.isIndirect?e.diagram_promotedLinkAriaDesc():"",t.isExpanded?e.vis_stateExpanded():"",t.isCollapsed?e.vis_stateCollapsed():""].filter(Boolean).join(", ")].filter(Boolean).join(". "),e.supportsMobileScreenReader=s}));
+//# sourceMappingURL=accUtils-7e057eef.js.map

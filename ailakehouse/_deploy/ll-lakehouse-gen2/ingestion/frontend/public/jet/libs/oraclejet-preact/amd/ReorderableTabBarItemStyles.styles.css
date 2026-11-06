@@ -1,0 +1,20 @@
+.ReorderableTabBarItemStyles_itemOverlayFront__x1quu00 {
+  width: calc(50% + calc(3.5 * var(--oj-c-size-units, 0.25rem)));
+  left: calc(-4 * var(--oj-c-size-units, 0.25rem));
+}
+.ReorderableTabBarItemStyles_itemOverlayFrontFirst__x1quu01 {
+  box-sizing: border-box;
+  width: calc(50% + calc(0.5 * var(--oj-c-size-units, 0.25rem)));
+  left: 0;
+}
+.ReorderableTabBarItemStyles_itemOverlayRear__x1quu02 {
+  left: calc(50%);
+}
+.ReorderableTabBarItemStyles_itemOverlayRearLast__x1quu03 {
+  box-sizing: border-box;
+  width: calc(50%);
+  left: calc(50%);
+}
+.ReorderableTabBarItemStyles_itemDragger__x1quu04 {
+  white-space: nowrap;
+}

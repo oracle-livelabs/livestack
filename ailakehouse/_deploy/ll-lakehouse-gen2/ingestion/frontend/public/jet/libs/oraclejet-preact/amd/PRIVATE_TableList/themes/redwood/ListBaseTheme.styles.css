@@ -1,0 +1,8 @@
+.ListBaseTheme_baseTheme__9nal0u0 {
+  --gridlineWidth__63ilwe0: 1px;
+}
+:root, .oj-density-dependent {
+  --oj-c-list-row-height: calc(calc(12 * var(--oj-c-size-units, 0.25rem)) + calc(2 * var(--oj-c-density-units, 0px)));
+  --oj-c-list-cell-padding-vertical: calc(calc(3 * var(--oj-c-size-units, 0.25rem)) + var(--oj-c-density-units, 0px));
+  --oj-c-list-cell-padding-horizontal: calc(calc(4 * var(--oj-c-size-units, 0.25rem)));
+}

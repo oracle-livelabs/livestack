@@ -1,0 +1,51 @@
+STORE_SK,STREET,CITY,REGION,POSTAL_CODE,COUNTRY_CODE
+18,1424 Riverside Pl,Philadelphia,PA,19102,US
+25,3645 Oak St,Philadelphia,PA,19103,US
+9,8974 Lake Way,Philadelphia,PA,19104,US
+16,8822 Lake Ct,Philadelphia,PA,19104,US
+44,694 Birch Way,Charlotte,NC,28206,US
+32,975 Market Ln,Jacksonville,FL,32202,US
+34,4175 Pine Ln,Jacksonville,FL,32206,US
+12,9089 Elm Ct,Columbus,OH,43201,US
+3,1821 Broad Ct,Columbus,OH,43203,US
+11,1747 Spruce Ln,Columbus,OH,43203,US
+5,120 Magnolia Ln,Indianapolis,IN,46202,US
+41,9315 Spring Ln,Indianapolis,IN,46202,US
+31,2339 Spruce Ave,Chicago,IL,60654,US
+1,6769 Sunset Ln,Dallas,TX,75206,US
+29,4743 Cherry Rd,Fort Worth,TX,76102,US
+40,6408 Washington Pl,Fort Worth,TX,76102,US
+33,380 Elm Dr,Fort Worth,TX,76107,US
+37,6078 Magnolia Ct,Houston,TX,77002,US
+48,3342 Forest Ln,Houston,TX,77004,US
+13,1772 Church Blvd,Houston,TX,77007,US
+26,9818 Hawthorn Way,San Antonio,TX,78205,US
+43,5944 Cedar Ln,San Antonio,TX,78230,US
+49,7587 Spring Dr,San Antonio,TX,78230,US
+42,3810 Highland Dr,Austin,TX,78701,US
+46,6875 Chestnut Rd,Austin,TX,78701,US
+4,1906 Oak Blvd,Austin,TX,78702,US
+6,2500 Park St,Austin,TX,78702,US
+20,5466 Center Ave,Austin,TX,78704,US
+23,2423 Cherry Ln,Austin,TX,78704,US
+36,7995 Main Dr,Austin,TX,78704,US
+39,6575 Poplar Ave,Austin,TX,78704,US
+21,9336 Cherry Pl,Phoenix,AZ,85008,US
+19,3820 Hawthorn Dr,Phoenix,AZ,85012,US
+7,973 Spring Way,Phoenix,AZ,85018,US
+50,5283 Cherry Blvd,Phoenix,AZ,85018,US
+10,1099 School Blvd,Los Angeles,CA,90012,US
+45,4974 Elm St,Los Angeles,CA,90012,US
+35,8722 Highland Dr,Los Angeles,CA,90013,US
+28,4089 Forest Ln,San Diego,CA,92101,US
+22,2714 Washington St,San Diego,CA,92102,US
+47,2241 Hill Pl,San Diego,CA,92104,US
+2,6221 Washington Ln,San Diego,CA,92105,US
+14,2213 Chestnut Ave,San Francisco,CA,94103,US
+15,2651 Spring Ave,San Francisco,CA,94109,US
+8,8028 Market Pl,San Jose,CA,95110,US
+17,7641 Elm Dr,San Jose,CA,95113,US
+38,5243 Center Ave,San Jose,CA,95128,US
+24,8637 Main Ln,Seattle,WA,98101,US
+30,7890 Valley Way,Seattle,WA,98101,US
+27,2636 Highland Dr,Seattle,WA,98104,US

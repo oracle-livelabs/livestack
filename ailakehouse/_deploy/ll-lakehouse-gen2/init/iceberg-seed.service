@@ -1,0 +1,16 @@
+[Unit]
+Description=Seed initial Iceberg product table
+After=network-online.target adb-wallet.service adb-load.service user-podman.service
+Wants=network-online.target user-podman.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/opc/ingestion
+Environment=PODMAN_USERNS=keep-id
+TimeoutStartSec=1230
+ExecStartPre=/bin/bash -c '/home/opc/init/setenv.sh'
+ExecStart=/bin/bash /home/opc/init/retry-provision-step.sh iceberg-seed /bin/bash -lc '/usr/local/bin/podman-compose --env-file .env -f compose.yml --profile seed run --rm --no-deps iceberg-seeder && /bin/bash /home/opc/init/create-iceberg-adb-external-table.sh'
+RemainAfterExit=yes
+
+[Install]
+WantedBy=default.target

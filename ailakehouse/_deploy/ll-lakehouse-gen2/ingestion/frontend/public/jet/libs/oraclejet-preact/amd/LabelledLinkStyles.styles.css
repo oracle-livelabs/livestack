@@ -1,0 +1,15 @@
+.LabelledLinkStyles_base__zp0nvj0 {
+  min-height: calc(var(--oj-c-body-md-line-height) * var(--oj-c-body-md-font-size));
+  box-sizing: border-box;
+  width: 100%;
+  outline-width: 0;
+}
+.LabelledLinkStyles_base__zp0nvj0::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.LabelledLinkStyles_base__zp0nvj0 a:focus, .LabelledLinkStyles_base__zp0nvj0 a:active {
+  outline-style: dotted;
+  outline-width: 1px;
+  outline-offset: 1px;
+}

@@ -1,0 +1,42 @@
+oj-c-picto-chart:not(.oj-complete) {
+  visibility: hidden;
+}
+
+oj-c-picto-chart[hidden] {
+  display: none;
+}
+
+oj-c-picto-chart {
+  display: inline-block;
+  position: relative;
+}
+
+.oj-c-picto-chart-content-container { 
+  width: inherit;
+  height: inherit;
+  min-width: inherit;
+  max-width: inherit;
+  min-height: inherit;
+  max-height: inherit;
+  display: flex;
+}
+
+.oj-c-picto-chart-topStart {
+  align-items: start;
+  justify-content: start;
+}
+
+.oj-c-picto-chart-topEnd {
+  align-items: start;
+  justify-content: end;
+}
+
+.oj-c-picto-chart-bottomStart {
+  align-items: end;
+  justify-content: start;
+}
+
+.oj-c-picto-chart-bottomEnd {
+  align-items: end;
+  justify-content: end;
+}

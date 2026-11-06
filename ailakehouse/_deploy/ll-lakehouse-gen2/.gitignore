@@ -1,0 +1,31 @@
+# Local environment configuration. Keep the documented template public.
+.env
+.env.*
+!.env.example
+
+# Database wallets, private keys, and certificate stores.
+/Wallet_*.zip
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.sso
+
+# Local/generated distribution artifacts.
+/build_dev.zip
+/install-peakgear.zip
+/peakgear-host-*.zip
+/peakgear-host.zip
+/.par
+/output/
+# Oracle JET runtime is copied from the locked npm package by the frontend prebuild.
+# Keep vendor source out of the Gen2 host payload; the VM image retains npm dependencies.
+/ingestion/frontend/public/jet/libs/oj/20.0.2/
+
+# Local agent and runtime state.
+.omx/
+ords-config/
+
+# Operating-system metadata.
+.DS_Store
