@@ -72,13 +72,21 @@ if rg -q 'downloads\.apache\.org/kafka|archive\.apache\.org/dist/spark' "${DOCKE
   fail "The GGSA image must not download large Kafka or Spark archives during deployment."
 fi
 
-if ! rg -q '^FROM docker\.io/apache/kafka@sha256:[0-9a-f]{64} AS kafka-runtime$' "${DOCKERFILE}" \
+if ! rg -q '^FROM docker\.io/apache/kafka@sha256:daa39dc85acd37b148fad74d6b22b60fa5f7fa05048a5c8aa3b654140c63dd58 AS kafka-runtime$' "${DOCKERFILE}" \
   || ! rg -q '^FROM docker\.io/apache/spark@sha256:[0-9a-f]{64} AS spark-runtime$' "${DOCKERFILE}" \
   || ! rg -q '^COPY --from=kafka-runtime /opt/kafka /u01/kafka$' "${DOCKERFILE}" \
   || ! rg -q '^COPY --from=spark-runtime /opt/spark /u01/spark$' "${DOCKERFILE}" \
+  || ! rg -q "kafka-topics.sh --version \| grep -F '4.2.2'" "${DOCKERFILE}" \
   || ! rg -q 'install -d -m 0755 /u01/spark/conf' "${DOCKERFILE}" \
   || ! rg -q '"\$\{SPARK_HOME\}/conf"' "${ENTRYPOINT}"; then
   fail "The GGSA image must copy Kafka and Spark from immutable official Apache images."
+fi
+
+RUN_HELPER="${PROJECT_ROOT}/ingestion/ggsa/run.sh"
+if rg -q -- '-p (9092|6066|7077|4040-4050|2808[0-3]):' "${RUN_HELPER}" \
+  || ! rg -q -- '-p 127\.0\.0\.1:3306:3306' "${RUN_HELPER}" \
+  || ! rg -q -- '-p 127\.0\.0\.1:19080:9080' "${RUN_HELPER}"; then
+  fail "The standalone GGSA helper must keep Kafka and Spark internal and bind MySQL and OSA HTTP to loopback."
 fi
 
 agent_classes="${TEST_ROOT}/agent-classes"

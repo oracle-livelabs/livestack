@@ -1,4 +1,5 @@
 const db = require('../config/database');
+const selectAiObjects = require('../../db/schema/select_ai_objects.json');
 
 const DEFAULT_APP_SCHEMA = 'PG';
 const DEFAULT_PROFILE_NAME = 'PG_GENAI_PROFILE';
@@ -61,16 +62,16 @@ function objectListMatchesSchema(value, schemaName) {
 
   try {
     const parsed = JSON.parse(value);
-    const entries = Array.isArray(parsed) ? parsed : [parsed];
-    const owners = entries
-      .map((entry) => cleanText(entry?.owner).toUpperCase())
-      .filter(Boolean);
-    return owners.length > 0 && owners.every((owner) => owner === expectedSchema);
-  } catch (_) {
-    const normalized = cleanText(value).toUpperCase();
-    return normalized.includes(`"OWNER":"${expectedSchema}"`)
-      || normalized.includes(`"OWNER": "${expectedSchema}"`);
-  }
+    if (!Array.isArray(parsed) || parsed.length !== selectAiObjects.length) return false;
+    const actual = new Set(parsed.map((entry) =>
+      `${cleanText(entry?.owner).toUpperCase()}.${cleanText(entry?.name).toUpperCase()}`));
+    return actual.size === selectAiObjects.length
+      && selectAiObjects.every((name) => actual.has(`${expectedSchema}.${name}`));
+  } catch (_) { return false; }
+}
+
+function profileObjectList(schemaName) {
+  return selectAiObjects.map((name) => ({ owner: schemaName, name }));
 }
 
 function resolveSelectAiConfig() {
@@ -317,7 +318,7 @@ async function createOrReplaceProfile(connection, config) {
     embedding_model: config.embeddingModel,
     oci_apiformat: 'COHERE',
     temperature: 0,
-    object_list: [{ owner: config.user }],
+    object_list: profileObjectList(config.user),
   });
 
   await connection.execute(

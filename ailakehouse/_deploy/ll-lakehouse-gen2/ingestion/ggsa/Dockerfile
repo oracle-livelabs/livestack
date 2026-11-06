@@ -1,4 +1,5 @@
-FROM docker.io/apache/kafka@sha256:d50ab7b5df612b3c303f9d8afe8fee59626a5de798addfd626fe1924e3205965 AS kafka-runtime
+# Apache Kafka 4.2.2 linux/amd64 fixes CVE-2026-111108 and CVE-2026-111115.
+FROM docker.io/apache/kafka@sha256:daa39dc85acd37b148fad74d6b22b60fa5f7fa05048a5c8aa3b654140c63dd58 AS kafka-runtime
 FROM docker.io/apache/spark@sha256:989054f2e005c50d4a2f78bd054b0a32de8ee7619a5658e5f4280c61241c9f6d AS spark-runtime
 FROM oraclelinux:8
 
@@ -30,9 +31,8 @@ ENV LANG=C.UTF-8 \
     OSA_API_SERVER_PORT=9080 \
     OSA_API_SERVER_SPORT=9443 \
     OSA_LOAD_SAMPLES=false \
-    KAFKA_BROKER_PORT=9092 \
     KAFKA_CONTROLLER_PORT=9093 \
-    KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092 \
+    KAFKA_INTERNAL_BROKER_PORT=19092 \
     SPARK_MASTER_HOST=localhost \
     SPARK_MASTER_PORT=7077 \
     SPARK_MASTER_REST_ENABLED=true \
@@ -80,6 +80,7 @@ COPY --from=spark-runtime /opt/spark /u01/spark
 RUN test -x /u01/kafka/bin/kafka-server-start.sh \
  && test -x /u01/spark/bin/spark-submit \
  && test -x /u01/spark/sbin/start-master.sh \
+ && /u01/kafka/bin/kafka-topics.sh --version | grep -F '4.2.2' \
  && install -d -m 0755 /u01/spark/conf
 
 COPY ${OSA_ARCHIVE} /tmp/osa.zip
@@ -133,7 +134,7 @@ WORKDIR /u01/osa/osa-base
 
 VOLUME ["/var/lib/mysql", "/var/lib/kafka/data", "/var/lib/spark-events", "/u01/app/osa/deployedpipelines"]
 
-EXPOSE 3306 4040-4050 6066 7077 28080 28081 28082 28083 9080 9092 9443
+EXPOSE 3306 9080 9443
 
 STOPSIGNAL SIGTERM
 

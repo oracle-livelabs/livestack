@@ -8,7 +8,7 @@ VARIABLE_SCRIPT="${PROJECT_ROOT}/init/variable.sh"
 SETENV_SCRIPT="${PROJECT_ROOT}/init/setenv.sh"
 SERVICE_FILE="${PROJECT_ROOT}/init/pg-ai-data-catalog.service"
 PODMAN_SERVICE="${PROJECT_ROOT}/init/user-podman.service"
-INSTALLER="${PROJECT_ROOT}/inst.sh"
+FIRSTBOOT="${PROJECT_ROOT}/bootstrap/firstboot.py"
 IMAGE_PREP="${PROJECT_ROOT}/prepare-custom-image.sh"
 TEMP_DIR="$(mktemp -d "${TMPDIR:-/tmp}/ll-lakehouse-ai-data-catalog.XXXXXX")"
 
@@ -66,12 +66,16 @@ for metadata_key in \
   require_text "${SETENV_SCRIPT}" "\"${metadata_key}="
 done
 
-require_text "${SERVICE_FILE}" "After=network-online.target adb-wallet.service adb-load.service"
-require_text "${SERVICE_FILE}" "Before=user-podman.service"
+require_text "${SERVICE_FILE}" "After=network-online.target adb-wallet.service adb-load.service user-podman.service"
+require_text "${SERVICE_FILE}" "TimeoutStartSec=1230"
+require_text "${SERVICE_FILE}" "retry-provision-step.sh ai-data-catalog"
+require_text "${SERVICE_FILE}" "http://127.0.0.1:8505/api/health"
 require_text "${SERVICE_FILE}" "/home/opc/init/configure-ai-data-catalog.sh"
-require_text "${PODMAN_SERVICE}" "pg-ai-data-catalog.service"
-require_text "${INSTALLER}" "pg-ai-data-catalog.service"
-require_text "${INSTALLER}" "configure-ai-data-catalog.sh"
+require_text "${PODMAN_SERVICE}" "After=network-online.target adb-wallet.service adb-load.service"
+if grep -qF 'pg-ai-data-catalog.service' "${PODMAN_SERVICE}"; then
+  fail "Compose startup must not wait for AI Data Catalog setup"
+fi
+require_text "${FIRSTBOOT}" "'pg-ai-data-catalog.service'"
 require_text "${IMAGE_PREP}" "PG_AI_DATA_CATALOG_SERVICE"
 require_text "${IMAGE_PREP}" ".ai_data_catalog_done"
 require_text "${IMAGE_PREP}" ".ai_data_catalog_storage_registered"

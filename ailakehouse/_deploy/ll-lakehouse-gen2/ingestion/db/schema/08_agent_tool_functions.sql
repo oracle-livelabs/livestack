@@ -1,4 +1,4 @@
--- Select AI Agent PL/SQL tools. Run as PG after the core schema and data load.
+-- PG analysis functions and Select AI Agent tools. Run after the core data load.
 SET SERVEROUTPUT ON
 
 -- Detect critical sporting goods products from retail demand and market signals
@@ -46,6 +46,10 @@ CREATE OR REPLACE FUNCTION check_product_inventory(
     v_count  NUMBER := 0;
     v_total  NUMBER := 0;
 BEGIN
+    -- A missing product name otherwise matches every inventory row and overflows the VARCHAR2 return value.
+    IF TRIM(p_product_name) IS NULL THEN
+        RETURN 'A product name is required for this tool. Use COMMERCE_SQL_TOOL for a general inventory overview.';
+    END IF;
     FOR rec IN (
         SELECT fc.center_name, fc.city, fc.state_province,
                i.quantity_on_hand, i.quantity_reserved, i.reorder_point,
@@ -180,6 +184,101 @@ BEGIN
     );
     COMMIT;
     RETURN 'Decision logged: ' || p_action_type || ' by ' || p_agent_name;
+END;
+/
+
+-- The Retail Operations team uses structured, bounded results. Both functions
+-- read the PG schema through the caller's VPD context.
+CREATE OR REPLACE FUNCTION get_demand_opportunity RETURN CLOB AS
+    v_result CLOB;
+BEGIN
+    SELECT JSON_OBJECT(
+             'status' VALUE 'found',
+             'product_id' VALUE product_id,
+             'product_name' VALUE product_name,
+             'brand_name' VALUE brand_name,
+             'category' VALUE category,
+             'signal_count' VALUE signal_count,
+             'average_score' VALUE average_score,
+             'total_reach' VALUE total_reach
+             RETURNING CLOB)
+      INTO v_result
+      FROM (
+        SELECT p.product_id, p.product_name, b.brand_name, p.category,
+               COUNT(DISTINCT sp.post_id) AS signal_count,
+               ROUND(AVG(sp.virality_score), 1) AS average_score,
+               NVL(SUM(sp.views_count), 0) AS total_reach
+          FROM post_product_mentions ppm
+          JOIN social_posts sp ON sp.post_id = ppm.post_id
+          JOIN products p ON p.product_id = ppm.product_id
+          JOIN brands b ON b.brand_id = p.brand_id
+         WHERE sp.posted_at >= (SELECT MAX(posted_at) FROM social_posts) - INTERVAL '48' HOUR
+           AND sp.virality_score >= 50
+         GROUP BY p.product_id, p.product_name, b.brand_name, p.category
+         ORDER BY average_score DESC, signal_count DESC, p.product_id
+         FETCH FIRST 1 ROW ONLY
+      );
+    RETURN v_result;
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        RETURN '{"status":"no_signal"}';
+END;
+/
+
+CREATE OR REPLACE FUNCTION assess_product_stock(p_product_id NUMBER) RETURN CLOB AS
+    v_product_name products.product_name%TYPE;
+    v_site_count NUMBER;
+    v_on_hand NUMBER;
+    v_reserved NUMBER;
+    v_low_sites NUMBER;
+    v_constrained_site fulfillment_centers.center_name%TYPE;
+    v_result CLOB;
+BEGIN
+    IF p_product_id IS NULL THEN
+        RETURN '{"status":"invalid_product_id"}';
+    END IF;
+
+    SELECT product_name INTO v_product_name
+      FROM products WHERE product_id = p_product_id;
+
+    SELECT COUNT(*), NVL(SUM(i.quantity_on_hand), 0),
+           NVL(SUM(i.quantity_reserved), 0),
+           NVL(SUM(CASE WHEN i.quantity_on_hand - i.quantity_reserved <= i.reorder_point THEN 1 ELSE 0 END), 0)
+      INTO v_site_count, v_on_hand, v_reserved, v_low_sites
+      FROM inventory i
+      JOIN fulfillment_centers fc ON fc.center_id = i.center_id
+     WHERE i.product_id = p_product_id AND fc.is_active = 1;
+
+    BEGIN
+        SELECT center_name INTO v_constrained_site
+          FROM (
+            SELECT fc.center_name
+              FROM inventory i
+              JOIN fulfillment_centers fc ON fc.center_id = i.center_id
+             WHERE i.product_id = p_product_id AND fc.is_active = 1
+             ORDER BY i.quantity_on_hand - i.quantity_reserved ASC, fc.center_name
+          )
+         WHERE ROWNUM = 1;
+    EXCEPTION
+        WHEN NO_DATA_FOUND THEN v_constrained_site := NULL;
+    END;
+
+    SELECT JSON_OBJECT(
+             'status' VALUE 'found',
+             'product_id' VALUE p_product_id,
+             'product_name' VALUE v_product_name,
+             'active_sites' VALUE v_site_count,
+             'on_hand_units' VALUE v_on_hand,
+             'reserved_units' VALUE v_reserved,
+             'available_units' VALUE v_on_hand - v_reserved,
+             'low_stock_sites' VALUE v_low_sites,
+             'most_constrained_site' VALUE v_constrained_site
+             RETURNING CLOB)
+      INTO v_result FROM dual;
+    RETURN v_result;
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        RETURN '{"status":"product_not_found"}';
 END;
 /
 

@@ -8,7 +8,7 @@ set -e
 
 APP_DIR="/opt/peakgear-sporting-goods-demo"
 APP_USER="opc"
-NODE_VERSION="20"
+NODE_VERSION="24"
 
 echo "=================================================="
 echo " PeakGear Sporting Goods Demo — Deployment"

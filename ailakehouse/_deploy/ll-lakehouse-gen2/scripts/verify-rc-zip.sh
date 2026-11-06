@@ -260,7 +260,7 @@ require_text "init/setenv.sh" 'echo "AI_DATA_CATALOG_WAREHOUSE=${AI_DATA_CATALOG
 require_text "init/configure-ai-data-catalog.sh" "DBMS_CATALOG.MOUNT_ICEBERG"
 require_text "init/configure-ai-data-catalog.sh" "ORACLE_AI_DATA_CATALOG.REGISTER_STORAGE_OCI"
 require_text "init/configure-ai-data-catalog.sh" "AI Data Catalog storage registration marker exists"
-require_text "init/pg-ai-data-catalog.service" "Before=user-podman.service"
+require_text "init/pg-ai-data-catalog.service" "After=network-online.target adb-wallet.service adb-load.service user-podman.service"
 require_text "init/pg-iceberg-connection.service" "After=network-online.target adb-wallet.service adb-load.service user-podman.service"
 require_text "init/iceberg-seed.service" "--profile seed"
 require_text "init/iceberg-seed.service" "--profile seed run --rm --no-deps iceberg-seeder"

@@ -47,12 +47,11 @@ are not required for normal PeakGear web-app usage.
 | --- | --- | --- |
 | TCP | 8502 | GoldenGate runtime API |
 | TCP | 1525 | Gravitino Iceberg REST API for Data Transforms |
-| TCP | 9092 | Kafka clients outside the VM |
-| TCP | 7077, 6066, 4040-4050, 28080-28083 | Spark submission and Spark UIs |
-| TCP | 19080 | Non-TLS OSA endpoint; prefer 8085 instead |
-| TCP | 1522, 3306 | NetSuite source database and OSA MySQL; keep private |
+| TCP | 1522 | NetSuite source database; keep private |
 | TCP | 8503, 8504 | Loyalty MySQL and PostgreSQL sources; keep private until the federation phase |
 | TCP | 8888 | Optional MongoDB catalog source in images built with `AIHUB=true`; keep private until the federation phase |
+
+Kafka, Spark submission and UI endpoints, OSA's non-TLS endpoint, and OSA MySQL stay inside the VM or Compose network. They are not public ingress requirements for the Gen2 deployment. Use the HTTPS OSA UI on port 8085 for workshop access.
 
 
 

@@ -7,10 +7,10 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "@faker-js/faker": "8.4.1",
+    "@faker-js/faker": "^10.6.0",
     "kafkajs": "2.2.4"
   },
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=24.0.0"
   }
 }

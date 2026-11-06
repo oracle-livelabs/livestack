@@ -434,8 +434,14 @@ OCI_FINGERPRINT_VALUE="${OCI_FINGERPRINT:-${PEM_KEY_FINGERPRINT:-${fingerprint:-
 OCI_PRIVATE_KEY_VALUE="${OCI_PRIVATE_KEY:-${PEM_SINGLE_LINE:-${PEM_KEY:-}}}"
 OCI_PRIVATE_KEY_VALUE="$(printf '%b' "${OCI_PRIVATE_KEY_VALUE}")"
 OCI_PROFILE_NAME="${OCI_AI_PROFILE_NAME:-PG_GENAI_PROFILE}"
+[[ "${OCI_PROFILE_NAME}" =~ ^[A-Za-z][A-Za-z0-9_]*$ ]] || {
+  log "OCI_AI_PROFILE_NAME must be a simple Oracle profile name."
+  exit 1
+}
+OCI_PROFILE_NAME="${OCI_PROFILE_NAME^^}"
 OCI_RETURN_AGENT_PROFILE_NAME="${WEBSHOP_RETURN_AGENT_PROFILE_NAME:-PG_RETURN_AGENT_PROFILE}"
 OCI_DATASTUDIO_PROFILE_NAME="DATASTUDIO_PROFILE"
+OCI_RETAIL_AGENT_PROFILE_NAME="PG_RETAIL_AGENT_PROFILE"
 OCI_CREDENTIAL_NAME="${OCI_GENAI_CREDENTIAL_NAME:-PG_OCI_GENAI_CRED}"
 OCI_MODEL_VALUE="${OCI_GENAI_MODEL:-cohere.command-a-03-2025}"
 OCI_EMBEDDING_MODEL_VALUE="${OCI_GENAI_EMBEDDING_MODEL:-cohere.embed-v4.0}"
@@ -455,9 +461,19 @@ if is_enabled "${PG_AI_ENABLED}" && [[ "${OCI_AUTH,,}" == "api_key" ]]; then
   [[ -z "${OCI_PRIVATE_KEY_VALUE}" ]] && missing+=("OCI_PRIVATE_KEY")
 
   if [[ ${#missing[@]} -eq 0 ]]; then
-    PROFILE_ATTRIBUTES="{\"provider\":\"oci\",\"credential_name\":\"${OCI_CREDENTIAL_NAME}\",\"comments\":true,\"oci_compartment_id\":\"${OCI_COMPARTMENT_VALUE}\",\"region\":\"${OCI_REGION_VALUE}\",\"model\":\"${OCI_MODEL_VALUE}\",\"embedding_model\":\"${OCI_EMBEDDING_MODEL_VALUE}\",\"oci_apiformat\":\"COHERE\",\"temperature\":0,\"object_list\":[{\"owner\":\"${APP_SCHEMA}\"}]}"
+    PROFILE_OBJECT_LIST="$(python3 - "${INGESTION_DIR}/db/schema/select_ai_objects.json" "${APP_SCHEMA}" <<'PY'
+import json
+import sys
+
+with open(sys.argv[1], encoding='utf-8') as source:
+    names = json.load(source)
+print(json.dumps([{'owner': sys.argv[2], 'name': name} for name in names], separators=(',', ':')))
+PY
+)"
+    PROFILE_ATTRIBUTES="{\"provider\":\"oci\",\"credential_name\":\"${OCI_CREDENTIAL_NAME}\",\"comments\":true,\"oci_compartment_id\":\"${OCI_COMPARTMENT_VALUE}\",\"region\":\"${OCI_REGION_VALUE}\",\"model\":\"${OCI_MODEL_VALUE}\",\"embedding_model\":\"${OCI_EMBEDDING_MODEL_VALUE}\",\"oci_apiformat\":\"COHERE\",\"temperature\":0,\"object_list\":${PROFILE_OBJECT_LIST}}"
     RETURN_AGENT_PROFILE_ATTRIBUTES="{\"provider\":\"oci\",\"credential_name\":\"${OCI_CREDENTIAL_NAME}\",\"comments\":true,\"oci_compartment_id\":\"${OCI_COMPARTMENT_VALUE}\",\"region\":\"${OCI_REGION_VALUE}\",\"model\":\"${OCI_MODEL_VALUE}\",\"oci_apiformat\":\"COHERE\",\"temperature\":0,\"object_list\":[{\"owner\":\"${APP_SCHEMA}\",\"name\":\"DIM_PRODUCT\"},{\"owner\":\"${APP_SCHEMA}\",\"name\":\"PRODUCT_MANUALS_SOURCE\"},{\"owner\":\"${APP_SCHEMA}\",\"name\":\"CUSTOMER_ORDER_STATUS\"}]}"
     DATASTUDIO_PROFILE_ATTRIBUTES="{\"provider\":\"oci\",\"credential_name\":\"${OCI_CREDENTIAL_NAME}\",\"model\":\"xai.grok-4.3\",\"object_list\":[{\"owner\":\"${APP_SCHEMA}\"}],\"oci_apiformat\":\"GENERIC\",\"oci_compartment_id\":\"${OCI_COMPARTMENT_VALUE}\",\"region\":\"${OCI_GENAI_REGION_VALUE}\",\"comments\":true,\"temperature\":0}"
+    RETAIL_AGENT_PROFILE_ATTRIBUTES="{\"provider\":\"oci\",\"credential_name\":\"${OCI_CREDENTIAL_NAME}\",\"model\":\"xai.grok-4.3\",\"object_list\":${PROFILE_OBJECT_LIST},\"oci_apiformat\":\"GENERIC\",\"oci_compartment_id\":\"${OCI_COMPARTMENT_VALUE}\",\"region\":\"${OCI_GENAI_REGION_VALUE}\",\"comments\":true,\"temperature\":0}"
     cat > "${WORK_DIR}/admin_ai.sql" <<SQL
 SET ECHO OFF
 SET DEFINE OFF
@@ -541,6 +557,7 @@ SQL
     PROFILE_ATTRIBUTES_LITERAL="$(q_literal "${PROFILE_ATTRIBUTES}")"
     RETURN_AGENT_PROFILE_ATTRIBUTES_LITERAL="$(q_literal "${RETURN_AGENT_PROFILE_ATTRIBUTES}")"
     DATASTUDIO_PROFILE_ATTRIBUTES_LITERAL="$(q_literal "${DATASTUDIO_PROFILE_ATTRIBUTES}")"
+    RETAIL_AGENT_PROFILE_ATTRIBUTES_LITERAL="$(q_literal "${RETAIL_AGENT_PROFILE_ATTRIBUTES}")"
     PROFILE_SQL=$(cat <<SQL
 PROMPT Creating ${APP_SCHEMA} DBMS_CLOUD_AI profile...
 WHENEVER SQLERROR EXIT SQL.SQLCODE
@@ -572,6 +589,25 @@ BEGIN
   );
   BEGIN
     DBMS_CLOUD_AI.ENABLE_PROFILE('$(sql_literal "${OCI_PROFILE_NAME}")');
+  EXCEPTION
+    WHEN OTHERS THEN NULL;
+  END;
+END;
+/
+
+PROMPT Creating Retail Operations agent DBMS_CLOUD_AI profile...
+BEGIN
+  BEGIN
+    DBMS_CLOUD_AI.DROP_PROFILE(profile_name => '$(sql_literal "${OCI_RETAIL_AGENT_PROFILE_NAME}")', force => TRUE);
+  EXCEPTION
+    WHEN OTHERS THEN NULL;
+  END;
+  DBMS_CLOUD_AI.CREATE_PROFILE(
+    profile_name => '$(sql_literal "${OCI_RETAIL_AGENT_PROFILE_NAME}")',
+    attributes   => ${RETAIL_AGENT_PROFILE_ATTRIBUTES_LITERAL}
+  );
+  BEGIN
+    DBMS_CLOUD_AI.ENABLE_PROFILE('$(sql_literal "${OCI_RETAIL_AGENT_PROFILE_NAME}")');
   EXCEPTION
     WHEN OTHERS THEN NULL;
   END;
@@ -618,10 +654,10 @@ DECLARE
 BEGIN
   SELECT COUNT(*) INTO v_enabled
   FROM user_cloud_ai_profiles
-  WHERE profile_name = '$(sql_literal "${OCI_PROFILE_NAME}")'
+  WHERE profile_name IN ('$(sql_literal "${OCI_PROFILE_NAME}")', '$(sql_literal "${OCI_RETAIL_AGENT_PROFILE_NAME}")')
     AND status = 'ENABLED';
-  IF v_enabled != 1 THEN
-    RAISE_APPLICATION_ERROR(-20002, 'OCI GenAI profile is not enabled');
+  IF v_enabled != 2 THEN
+    RAISE_APPLICATION_ERROR(-20002, 'OCI GenAI or Retail Operations profile is not enabled');
   END IF;
 END;
 /
@@ -714,10 +750,18 @@ WHENEVER SQLERROR EXIT SQL.SQLCODE
 @"${INGESTION_DIR}/db/data/load_fraud_graph.sql"
 @"${INGESTION_DIR}/db/data/seed_fulfillment_zones.sql"
 
+PROMPT Describing the restricted Select AI objects...
+@"${INGESTION_DIR}/db/schema/08_select_ai_comments.sql"
+
 PROMPT Creating Select AI Agent tool functions...
 @"${INGESTION_DIR}/db/schema/08_agent_tool_functions.sql"
 
 ${PROFILE_SQL}
+
+PROMPT Creating Select AI Agent tools, agents, tasks, and teams...
+DEFINE PG_AGENT_PROFILE = ${OCI_RETAIL_AGENT_PROFILE_NAME}
+@"${INGESTION_DIR}/db/schema/08_agents.sql"
+UNDEFINE PG_AGENT_PROFILE
 
 PROMPT Verifying required ADB demo tables...
 @"${INGESTION_DIR}/db/data/bootstrap_context.sql"

@@ -1,7 +1,7 @@
 [Unit]
 Description=Podman Compose App
-After=network-online.target adb-wallet.service adb-load.service pg-ai-data-catalog.service
-Wants=network-online.target adb-wallet.service adb-load.service pg-ai-data-catalog.service
+After=network-online.target adb-wallet.service adb-load.service
+Wants=network-online.target adb-wallet.service adb-load.service
 Requires=adb-wallet.service adb-load.service
 
 [Service]

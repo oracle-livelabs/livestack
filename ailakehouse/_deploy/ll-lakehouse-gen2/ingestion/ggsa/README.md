@@ -3,7 +3,7 @@
 This repository builds a single `linux/amd64` Oracle Linux 8 container that bundles:
 
 - Oracle Stream Analytics 26ai from an OSA distribution archive downloaded from `edelivery.oracle.com`
-- Apache Kafka 4.1.x in single-node KRaft mode
+- Apache Kafka 4.2.2 in single-node KRaft mode
 - Apache Spark 4.0.1 with standalone master, workers, and history server
 - MySQL 8.0 as the OSA metadata store
 
@@ -89,14 +89,10 @@ With the current `run.sh` settings:
 
 - OSA UI: `https://<HOST>:9443/osa/index.html`
 - OSA login: `osaadmin` / `<PASSWORD>`
-- Spark master UI: `http://<HOST>:28080`
-- Spark worker UIs: `http://<HOST>:28081` and `http://<HOST>:28082`
-- Spark history server: `http://<HOST>:28083`
-- Spark master endpoint: `spark://<HOST>:7077`
-- Spark REST submission endpoint: `http://<HOST>:6066/v1/submissions/create`
-- Spark application UI: `http://<HOST>:4040` for the first active application
-- Kafka bootstrap server: `<HOST>:9092`
-- MySQL: `<HOST>:3306`, database `osa`
+- MySQL: `127.0.0.1:3306` from the host, database `osa`
+- OSA HTTP API: `127.0.0.1:19080` from the host
+
+Kafka and Spark endpoints are available inside the container only. Use `docker exec ggsa-osa` for Kafka diagnostics; OSA accesses Kafka at `localhost:19092` and Spark through the container's internal endpoints. The helper does not publish the unauthenticated Kafka broker or Spark submission and UI ports on the host.
 
 The OSA UI uses a self-signed certificate by default, so your browser will usually show a certificate warning on first access.
 
@@ -132,7 +128,7 @@ Besides `build.sh` and `run.sh`, the repository also includes a few small conven
   - equivalent to `docker exec -it ggsa-osa bash`
 - `kafka_topics.sh`
   - lists Kafka topics from inside the container
-  - equivalent to `docker exec ggsa-osa /u01/kafka/bin/kafka-topics.sh --bootstrap-server localhost:9092 --list`
+  - equivalent to `docker exec ggsa-osa /u01/kafka/bin/kafka-topics.sh --bootstrap-server localhost:19092 --list`
 - `kafka_listen.sh`
   - consumes messages from a Kafka topic inside the container
   - usage:
@@ -196,17 +192,9 @@ The current run command is:
 docker run -d \
   --name ggsa-osa \
   --platform linux/amd64 \
-  -p 3306:3306 \
-  -p 4040-4050:4040-4050 \
-  -p 6066:6066 \
-  -p 7077:7077 \
-  -p 28080:28080 \
-  -p 28081:28081 \
-  -p 28082:28082 \
-  -p 28083:28083 \
+  -p 127.0.0.1:3306:3306 \
   -p 9443:9443 \
-  -p 19080:9080 \
-  -p 9092:9092 \
+  -p 127.0.0.1:19080:9080 \
   -v ggsa-mysql:/var/lib/mysql \
   -v ggsa-kafka:/var/lib/kafka/data \
   -v ggsa-spark-events:/var/lib/spark-events \
@@ -244,7 +232,7 @@ docker build --format docker --http-proxy=true --build-arg OSA_ARCHIVE=YourOSAAr
 
 - The image uses `oraclelinux:8` as its base.
 - JDK 21 is installed because OSA 26ai requires it.
-- Kafka 4.1.x and Spark 4.0.1 are downloaded during the image build.
+- Kafka 4.2.2 and Spark 4.0.1 are copied from digest-pinned official Apache images during the image build.
 - MySQL 8.0 is installed in the image and initialized on first container start.
 - The helper build script runs `docker build --format docker`.
 - The Dockerfile default `OSA_ARCHIVE` value is an example filename. If your downloaded archive has a different name, rename it or build manually with `--build-arg OSA_ARCHIVE=...`.
