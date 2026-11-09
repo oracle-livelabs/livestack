@@ -15,6 +15,7 @@
 # Local/generated distribution artifacts.
 /build_dev.zip
 /install-peakgear.zip
+/peakgear-release.zip
 /peakgear-host-*.zip
 /peakgear-host.zip
 /.par
