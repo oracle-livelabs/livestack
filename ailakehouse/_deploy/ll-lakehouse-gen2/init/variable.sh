@@ -183,7 +183,7 @@ fi
 export workshopfiles=$(curl -s -H "Authorization: Bearer Oracle" -L http://169.254.169.254/opc/v2/instance/metadata/workshopfiles)
 
 if [[ ${#workshopfiles} -ne 10 ]]; then
- export workshopfiles="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/firebase-killian-green-button.zip"
+ export workshopfiles="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/947D91JvPa6rhbK2wU8CcNkuaj3J4Mt6AWHCaRj9vRfDCuwSMDtLAVuLURpNPG2N/n/c4u04/b/livelabsfiles/o/livestack/firebase-killian-green-button.zip"
 fi
 
 export ENDPOINT="https://inference.generativeai.${AI_ENDPOINT_REGION}.oci.oraclecloud.com"
