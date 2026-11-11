@@ -627,7 +627,7 @@ export default function Welcome({ onNavigate, hasLakehouseConnection = false }) 
 
                 <figure className="story-detail-modal__architecture-flow">
                   <img
-                    src="https://objectstorage.us-ashburn-1.oraclecloud.com/p/BLGnG9scPeB_z2ruM-xirgDXNfBMuYjTRciZG8jcwgu68oCodk_vFq1vySIDG-F_/n/c4u04/b/ai-lh-build/o/pg-info.png"
+                    src="https://objectstorage.us-ashburn-1.oraclecloud.com/p/CDJLW5K-zyyxZ9r7CG2h1YYlBY7_GUJq9sqRCxf89l9cxkGtqIFHM9WojNDXsx3B/n/c4u04/b/ai-lh-build/o/pg-info.png"
                     alt="Oracle AI Lakehouse flow from PeakGear customer signals through retail challenges, Bronze, Silver, Gold and AI, to smarter retail operations"
                     loading="lazy"
                   />

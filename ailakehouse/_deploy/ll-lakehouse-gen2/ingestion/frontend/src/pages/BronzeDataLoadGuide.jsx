@@ -7,7 +7,7 @@ import LiveLabsMarkdownGuide from '../components/LiveLabsMarkdownGuide';
 import { IMPORTANCE_CONTENT } from '../content/importanceContent';
 
 const PG_USERNAME = 'PG';
-const OBJECT_STORAGE_PREFIX = 'https://objectstorage.us-ashburn-1.oraclecloud.com/p/qGpMGRxKi6wtrlG_dURHlmdUUGZ9euFDDXV12zsI7eEkzAkvXNKJaMbtCnKlfXp_/n/c4u04/b/ai-lh/o/';
+const OBJECT_STORAGE_PREFIX = 'https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/FTUqMcFsw9b1NbRLnU5S_7Yw2_G5DuwFfkzRjqjZCvSTHtn51uBBcwy98m-r1fKW/n/c4u04/b/ai-lh/o/';
 const GUIDE_MARKDOWN_URL = 'https://raw.githubusercontent.com/oracle-livelabs/livestack/refs/heads/main/ailakehouse/batch-and-file-loading/batch-and-file-loading.md';
 const GUIDE_IMAGE_DIRECTORY_URL = 'https://raw.githubusercontent.com/oracle-livelabs/livestack/refs/heads/main/ailakehouse/batch-and-file-loading/images/';
 const GUIDE_SOURCE_URL = 'https://github.com/oracle-livelabs/livestack/blob/main/ailakehouse/batch-and-file-loading/batch-and-file-loading.md';
