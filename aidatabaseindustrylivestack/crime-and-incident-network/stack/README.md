@@ -7,8 +7,8 @@ Use [incidentdata-resource-manager-root.zip](incidentdata-resource-manager-root.
 - Working directory: blank/default (ZIP root). Do not select `terraform`;
   that subfolder does not exist in this ZIP.
 - Terraform family used in the passed deployment: 1.5.x.
-- Size: 28,748 bytes.
-- SHA-256: `884477d2f07b3bb1efe7b2b7084fa228ac1c0b184888bb0b3629a07a673be161`.
+- Size: 28,808 bytes.
+- SHA-256: `d3971a4f859ebec77348b7ca9fa8a455b7caadcdb2d8d942d4cd94b79d2b1ee9`.
 - Expanded source: `resource-manager/`. All 14 ZIP members match this source
   byte-for-byte, including the provider lock file.
 

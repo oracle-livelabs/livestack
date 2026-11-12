@@ -40,8 +40,8 @@ Manager and confirmed that the Versioned release section no longer appears.
 No additional Apply was run for that form-only check. The current ZIP also
 refreshes the bundled maintainer runbook; no runtime files changed.
 
-- Package: `stack/incidentdata-resource-manager-root.zip` (28,748 bytes).
-- SHA-256: `884477d2f07b3bb1efe7b2b7084fa228ac1c0b184888bb0b3629a07a673be161`.
+- Package: `stack/incidentdata-resource-manager-root.zip` (28,808 bytes).
+- SHA-256: `d3971a4f859ebec77348b7ca9fa8a455b7caadcdb2d8d942d4cd94b79d2b1ee9`.
 - Working directory: blank/default (ZIP root), not `terraform`.
 - Terraform family used in the passed deployment: 1.5.x.
 - Local checks passed: YAML/default checks, ZIP integrity, all 14 member byte
