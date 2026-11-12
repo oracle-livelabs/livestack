@@ -1,0 +1,2 @@
+define(['exports', '../useTranslationBundle-e4dd341e', 'preact/hooks', '../LayerHost-0b288129', 'preact', '../index-055933ab', 'preact/jsx-runtime', 'preact/compat', '../UNSAFE_Layer/themes/LayerHostStyles.css', 'css!./../LayerHostStyles.styles.css'], (function(e,s,t,a,r,n,o,l,u,c){"use strict";e.useTranslationBundle=s.useTranslationBundle,Object.defineProperty(e,"__esModule",{value:!0})}));
+//# sourceMappingURL=UNSAFE_useTranslationBundle.js.map

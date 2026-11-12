@@ -1,0 +1,39 @@
+source_system,extract_batch_id,raw_sku,product_name,brand_name,category,subcategory,list_price,cost,weight_kg,launch_date,tags,source_updated_at,record_status
+Databricks,BRZ-PROD-20260520-01,SKU-100001,Velocityworks Baseball Glove 1,Velocityworks,Team Sports,NetSuite,12.03,7.91,0.400,2026-03-29,"gold-data,team-sports,NetSuite",2026-05-20T06:30:00Z,UPSERT
+Databricks,BRZ-PROD-20260520-01,SKU-100003,Velocityworks Training Hoodie 3,Velocityworks,Activewear,NetSuite,162.66,69.10,0.500,2026-03-29,"gold-data,activewear,NetSuite",2026-05-20T06:31:00Z,UPSERT
+Databricks,BRZ-PROD-20260520-01,SKU-100004,Hydrawave Bike Light Set 4,Hydrawave,Cycling,NetSuite,25.07,18.11,0.550,2026-03-29,"gold-data,cycling,NetSuite",2026-05-20T06:31:20Z,UPSERT
+Databricks,BRZ-PROD-20260520-01,SKU-100007,Canyonridge Trail Runner 7,Canyonridge,Footwear,NetSuite,172.10,88.75,0.700,2026-03-29,"gold-data,footwear,NetSuite",2026-05-20T06:32:15Z,UPSERT
+Databricks,BRZ-PROD-20260520-01,SKU-100008,Velocityworks Gps Fitness Watch 8,Velocityworks,Fitness Devices,NetSuite,283.78,183.50,0.750,2026-03-29,"gold-data,fitness-devices,NetSuite",2026-05-20T06:32:25Z,UPSERT
+Databricks,BRZ-PROD-20260520-01,sku-100009,Trailforge Training Hoodie 9,Trailforge,Uncategorized,NetSuite,29.61,13.91,0.800,2026-03-29,"gold-data,uncategorized,NetSuite",2026-05-20T06:32:40Z,UPSERT
+Databricks,BRZ-PROD-20260520-01,SKU-100011,Ironkinetic Kettlebell 11,Ironkinetic,Strength Training,NetSuite,163.13,102.88,0.900,2026-03-29,"gold-data,strength-training,NetSuite",2026-05-20T06:33:05Z,UPSERT
+Databricks,BRZ-PROD-20260520-01,SKU-100013,Peakgear    Foam Roller   13,Peakgear,Running,NetSuite,122.11,55.76,1.000,2026-03-29,"gold-data,running,NetSuite",2026-05-20T06:33:40Z,UPSERT
+Databricks,BRZ-PROD-20260520-01,SKU-100015,Summitpulse Outdoor Jacket 15,Summitpulse,Outdoor,NetSuite,477.90,319.48,1.100,2026-03-29,"gold-data,outdoor,NetSuite",2026-05-20T06:34:10Z,UPSERT
+Databricks,BRZ-PROD-20260520-01,SKU-100016,Ironkinetic Snow Helmet 16,Ironkinetic,Winter Sports,NetSuite,365.59,251.37,1.150,2026-03-29,"gold-data,winter-sports,NetSuite",2026-05-20T06:34:25Z,UPSERT
+Databricks,BRZ-PROD-20260520-01,SKU-100017,Nordcrest Running Shoe 17,Nordcrest,Footwear,NetSuite,41.61,21.33,1.200,2026-03-29,"gold-data,footwear,NetSuite",2026-05-20T06:35:00Z,UPSERT
+Databricks,BRZ-PROD-20260520-01,SKU-100018,Nordcrest Carabiner Set 18,Nordcrest,Climbing,NetSuite,77.98,48.17,1.250,2026-03-29,"gold-data,climbing,NetSuite",2026-05-20T06:35:20Z,UPSERT
+Databricks,BRZ-PROD-20260520-01,SKU-100023,Velocityworks Dry Bag 23,Velocityworks,Water Sports,NetSuite,9.91,6.84,1.500,2026-03-29,"gold-data,water-sports,NetSuite",2026-05-20T06:36:05Z,UPSERT
+Databricks,BRZ-PROD-20260520-01,SKU-100024,Ironkinetic Trekking Poles 24,Ironkinetic,Outdoor,NetSuite,196.20,122.34,1.550,2026-03-29,"gold-data,outdoor,NetSuite",2026-05-20T06:36:20Z,UPSERT
+Databricks,BRZ-PROD-20260520-01,SKU-100025,Summitpulse Basketball 25,Summitpulse,Team Sports,NetSuite,105.01,51.55,1.600,2026-03-29,"gold-data,team-sports,NetSuite",2026-05-20T06:36:40Z,UPSERT
+Databricks,BRZ-PROD-20260520-01,SKU-100029,Trailforge Trail Runner 29,Trailforge,Footwear,NetSuite,191.99,118.23,1.800,2026-03-29,"gold-data,footwear,NetSuite",2026-05-20T06:37:25Z,UPSERT
+Databricks,BRZ-PROD-20260520-01,SKU-100030,Hydrawave Training Hoodie 30,Hydrawave,Activewear,NetSuite,26.27,14.71,1.850,2026-03-29,"gold-data,activewear,NetSuite",2026-05-20T06:37:40Z,UPSERT
+Databricks,BRZ-PROD-20260520-01,SKU-100032,Hydrawave Pickleball Paddle 32,Hydrawave,Racquet Sports,NetSuite,72.97,42.48,1.950,2026-03-29,"gold-data,racquet-sports,NetSuite",2026-05-20T06:38:05Z,UPSERT
+Databricks,BRZ-PROD-20260520-01,SKU-100033,Aerostride  Training   Hoodie  33,Aerostride,Activewear,NetSuite,132.10,59.67,2.000,2026-03-29,"gold-data,activewear,NetSuite",2026-05-20T06:38:25Z,UPSERT
+Databricks,BRZ-PROD-20260520-01,SKU-100041,Velocityworks Dry Bag 41,Velocityworks,Water Sports,NetSuite,138.00,68.13,2.400,2026-03-29,"gold-data,water-sports,NetSuite",2026-05-20T06:39:45Z,UPSERT
+Databricks,BRZ-PROD-20260520-01,SKU-100044,Ironkinetic Cross-Training Shoe 44,Ironkinetic,Footwear,NetSuite,201.84,121.58,2.550,2026-03-29,"gold-data,footwear,NetSuite",2026-05-20T06:40:10Z,UPSERT
+Databricks,BRZ-PROD-20260520-01,SKU-100047,Peakgear Paddle Leash 47,Peakgear,Water Sports,NetSuite,154.45,82.43,2.700,2026-03-29,"gold-data,water-sports,NetSuite",2026-05-20T06:40:35Z,UPSERT
+Databricks,BRZ-PROD-20260520-01,SKU-100055,Aerostride Snow Helmet 55,Aerostride,Uncategorized,NetSuite,112.89,78.66,3.100,2026-03-29,"gold-data,uncategorized,NetSuite",2026-05-20T06:41:20Z,UPSERT
+Databricks,BRZ-PROD-20260520-01,SKU-100064,Peakgear Cross-Training Shoe 64,Peakgear,Footwear,NetSuite,182.06,95.54,3.550,2026-03-29,"gold-data,footwear,NetSuite",2026-05-20T06:42:05Z,UPSERT
+Databricks,BRZ-PROD-20260520-01,SKU-100065,Hydrawave Trekking Poles 65,Hydrawave,Outdoor,NetSuite,535.63,345.56,3.600,2026-03-29,"gold-data,outdoor,NetSuite",2026-05-20T06:42:20Z,UPSERT
+Databricks,BRZ-PROD-20260520-01,SKU-100069,Summitpulse Outdoor Jacket 69,Summitpulse,Outdoor,NetSuite,487.87,345.77,3.800,2026-03-29,"gold-data,outdoor,NetSuite",2026-05-20T06:43:00Z,UPSERT
+Databricks,BRZ-PROD-20260520-01,SKU-100070,Ironkinetic Swim Goggles 70,Ironkinetic,Water Sports,NetSuite,90.22,50.03,3.850,2026-03-29,"gold-data,water-sports,NetSuite",2026-05-20T06:43:15Z,UPSERT
+Databricks,BRZ-PROD-20260520-01,SKU-100072,Peakgear Headlamp 72,Peakgear,Outdoor,NetSuite,566.28,320.13,3.950,2026-03-29,"gold-data,outdoor,NetSuite",2026-05-20T06:43:35Z,UPSERT
+Databricks,BRZ-PROD-20260520-01,SKU-100080,Velocityworks Adjustable Dumbbells 80,Velocityworks,Strength Training,NetSuite,170.35,108.46,0.350,2026-03-29,"gold-data,strength-training,NetSuite",2026-05-20T06:44:45Z,UPSERT
+Databricks,BRZ-PROD-20260520-01,SKU-100083,Ironkinetic Trekking Poles        83,Ironkinetic,OUTDOOR,NetSuite,56.63,32.81,0.500,2026-03-29,"gold-data,outdoor,NetSuite",2026-05-20T06:45:20Z,UPSERT
+Databricks,BRZ-PROD-20260520-01,SKU-100086,Velocityworks Heart Rate Strap 86,Velocityworks,Fitness Devices,NetSuite,86.04,69.81,0.650,2026-03-29,"gold-data,fitness-devices,NetSuite",2026-05-20T06:45:50Z,UPSERT
+Databricks,BRZ-PROD-20260520-01,SKU-100088,Trailforge Climbing Harness 88,Trailforge,Climbing,NetSuite,15.17,8.53,0.750,2026-03-29,"gold-data,climbing,NetSuite",2026-05-20T06:46:10Z,UPSERT
+Databricks,BRZ-PROD-20260520-01,SKU-100090,Canyonridge Headlamp 90,Canyonridge,Outdoor,NetSuite,335.29,234.72,0.850,2026-03-29,"gold-data,outdoor,NetSuite",2026-05-20T06:46:35Z,UPSERT
+Databricks,BRZ-PROD-20260520-01,SKU-100096,Aerostride Cycling Computer 96,Aerostride,Fitness Devices,NetSuite,131.44,88.83,1.150,2026-03-29,"gold-data,fitness-devices,NetSuite",2026-05-20T06:47:30Z,UPSERT
+Databricks,BRZ-PROD-20260520-01,SKU-100097,Peakgear Soccer Ball 97,Peakgear,Team Sports,NetSuite,183.61,87.65,1.200,2026-03-29,"gold-data,team-sports,NetSuite",2026-05-20T06:47:45Z,UPSERT
+PIM_DELTA,BRZ-PROD-20260520-02,SKU-100007,Canyonridge Trail Runner 7,Canyonridge,Footwear,Trail Running,172.10,88.75,0.700,2026-03-29,"gold-data,footwear,trail-running,NetSuite",2026-05-20T08:12:44Z,UPSERT
+PIM_DELTA,BRZ-PROD-20260520-02,SKU-100033,Aerostride Training Hoodie 33,Aerostride,Activewear,Hoodies,132.10,59.67,2.000,2026-03-29,"gold-data,activewear,hoodies,NetSuite",2026-05-20T08:14:11Z,UPSERT
+PIM_DELTA,BRZ-PROD-20260520-02,SKU-100083,Ironkinetic Trekking Poles 83,Ironkinetic,Outdoor,Trekking Poles,56.63,32.81,0.500,2026-03-29,"gold-data,outdoor,trekking-poles,NetSuite",2026-05-20T08:15:30Z,UPSERT

@@ -1,0 +1,2 @@
+define(['exports', 'preact/jsx-runtime', './VisStatusMessage-ac3a90aa', './useTranslationBundle-e4dd341e'], (function(a,e,t,s){"use strict";a.VisNoDataMessage=function(a){const i=s.useTranslationBundle("@oracle/oraclejet-preact").vis_noData();return e.jsx(t.VisStatusMessage,{text:i,width:a.width,height:a.height,"aria-label":a["aria-label"],"aria-describedby":a["aria-describedby"],"aria-labelledby":a["aria-labelledby"]})}}));
+//# sourceMappingURL=VisNoDataMessage-fc41dae3.js.map

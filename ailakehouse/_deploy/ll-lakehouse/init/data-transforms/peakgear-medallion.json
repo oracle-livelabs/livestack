@@ -1283,15 +1283,6 @@
               "length": 20,
               "scale": 0,
               "syncState": "IN_SYNC"
-            },
-            {
-              "name": "ESTIMATED_MARGIN_PCT",
-              "position": 13,
-              "dataType": "NUMBER",
-              "dataTypeCode": "NUMBER",
-              "length": 30,
-              "scale": 10,
-              "syncState": "IN_SYNC"
             }
           ],
           "deprecated": false
@@ -2663,7 +2654,7 @@
               "dataTypeCode": "VARCHAR",
               "length": 4000,
               "expressions": {
-                "INPUT1": "REGEXP_REPLACE(TRIM(ailh_enriched_sales_stage.LOCATION), '[[:space:]]', ' ')"
+                "INPUT1": "REGEXP_REPLACE(TRIM(REGEXP_REPLACE(TRIM(ailh_enriched_sales_stage.LOCATION), '[[:space:]]', ' ')), '[[:space:]]', ' ')"
               },
               "syncState": "IN_SYNC",
               "connectedFrom": [
@@ -2693,7 +2684,7 @@
               "dataTypeCode": "VARCHAR",
               "length": 4000,
               "expressions": {
-                "INPUT1": "REGEXP_REPLACE(TRIM(ailh_enriched_sales_stage.PRODUCT_NAME), '[[:space:]]', ' ')"
+                "INPUT1": "REGEXP_REPLACE(TRIM(REGEXP_REPLACE(TRIM(ailh_enriched_sales_stage.PRODUCT_NAME), '[[:space:]]', ' ')), '[[:space:]]', ' ')"
               },
               "syncState": "IN_SYNC",
               "connectedFrom": [
@@ -2708,7 +2699,7 @@
               "dataTypeCode": "VARCHAR",
               "length": 4000,
               "expressions": {
-                "INPUT1": "REGEXP_REPLACE(TRIM(ailh_enriched_sales_stage.MANAGER), '[[:space:]]', ' ')"
+                "INPUT1": "REGEXP_REPLACE(TRIM(REGEXP_REPLACE(TRIM(ailh_enriched_sales_stage.MANAGER), '[[:space:]]', ' ')), '[[:space:]]', ' ')"
               },
               "syncState": "IN_SYNC",
               "connectedFrom": [
@@ -2723,7 +2714,7 @@
               "dataTypeCode": "VARCHAR",
               "length": 4000,
               "expressions": {
-                "INPUT1": "REGEXP_REPLACE(TRIM(ailh_enriched_sales_stage.CATEGORY), '[[:space:]]', ' ')"
+                "INPUT1": "REGEXP_REPLACE(TRIM(REGEXP_REPLACE(TRIM(ailh_enriched_sales_stage.CATEGORY), '[[:space:]]', ' ')), '[[:space:]]', ' ')"
               },
               "syncState": "IN_SYNC",
               "connectedFrom": [
@@ -2832,7 +2823,7 @@
               "dataTypeCode": "VARCHAR",
               "length": 4000,
               "expressions": {
-                "INPUT1": "REGEXP_REPLACE(TRIM(ailh_enriched_sales_stage.SKU), '[[:space:]]', ' ')"
+                "INPUT1": "REGEXP_REPLACE(TRIM(REGEXP_REPLACE(TRIM(ailh_enriched_sales_stage.SKU), '[[:space:]]', ' ')), '[[:space:]]', ' ')"
               },
               "syncState": "IN_SYNC",
               "connectedFrom": [

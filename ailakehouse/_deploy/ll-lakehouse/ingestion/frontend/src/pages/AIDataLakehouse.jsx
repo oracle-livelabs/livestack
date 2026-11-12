@@ -478,7 +478,8 @@ function DemoSetupCard() {
   const running = starting || status?.status === 'running';
   const ready = status?.status === 'ready';
   const failed = status?.status === 'failed';
-  const canRetry = !starting && !error && ['failed', 'incomplete'].includes(status?.status);
+  const hasFailedStep = status?.steps?.some((step) => step.status === 'failed');
+  const canRetry = !starting && !error && (['failed', 'incomplete'].includes(status?.status) || (status?.status === 'running' && hasFailedStep));
 
   return (
     <section className={`glass-card p-5 lakehouse-full-data-card ${ready ? 'is-complete' : ''} ${failed ? 'is-error' : ''}`} aria-labelledby="lakehouse-demo-setup-title">
@@ -490,7 +491,7 @@ function DemoSetupCard() {
             Lakehouse demo readiness
           </h3>
           <p className="text-sm text-[var(--color-text-dim)] mt-1">
-            Resume unfinished catalog and Data Transforms setup, including the Medallion project. Existing data and completed steps are preserved. Each seed step can retry for up to 20 minutes.
+            Resume unfinished catalog and Data Transforms setup, including the Medallion project. Running and completed steps continue while failed steps retry. Each seed step can retry for up to 20 minutes.
           </p>
         </div>
         <button

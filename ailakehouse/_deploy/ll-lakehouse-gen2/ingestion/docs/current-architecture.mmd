@@ -1,0 +1,52 @@
+%% PeakGear Gen2 deployment and runtime topology
+flowchart LR
+  User[Demo user] --> App[PeakGear browser and Node API]
+
+  subgraph OCI[OCI]
+    TF[Terraform compute and dedicated ADB]
+    Storage[Object Storage release ZIP and Iceberg data]
+    ADB[(Autonomous Database PG schema)]
+    GenAI[OCI Generative AI]
+    Catalog[AI Data Catalog]
+    Transforms[Data Transforms]
+  end
+
+  subgraph VM[Reusable Oracle Linux image]
+    Bootstrap[Root first boot release service]
+    Units[ADB wallet and load user services]
+    Compose[Podman Compose]
+    App
+    PrivateAI[Private AI embeddings]
+    NetSuite[(NetSuite Oracle CDC source)]
+    Sources[Postgres and MySQL sources]
+    GG[GoldenGate Studio and runtime]
+    OSA[GoldenGate Stream Analytics with Kafka and Spark]
+    Signals[Demand signal generator]
+    Gravitino[Gravitino Iceberg REST]
+  end
+
+  TF --> VM
+  TF --> ADB
+  Storage -->|pinned URL and SHA-256| Bootstrap
+  Bootstrap -->|verified init and ingestion payload| Units
+  Units -->|PG schema, data, OCI GenAI profile| ADB
+  Units --> Compose
+  Compose --> App
+  Compose --> PrivateAI
+  Compose --> NetSuite
+  Compose --> Sources
+  Compose --> GG
+  Compose --> OSA
+  Compose --> Signals
+  Compose --> Gravitino
+  App -->|primary SQL and Select AI| ADB
+  App -->|image and text embeddings| PrivateAI
+  ADB -->|model requests| GenAI
+  NetSuite -->|source changes| GG
+  GG -->|CDC target| ADB
+  Signals --> OSA
+  OSA -->|bronze stream| ADB
+  Gravitino -->|Iceberg warehouse| Storage
+  Transforms --> ADB
+  Transforms --> Gravitino
+  Catalog --> ADB

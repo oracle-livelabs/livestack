@@ -1,0 +1,2 @@
+define(['exports', '../TableStyles.css', './TableBaseTheme.css', './TableVariants.css', 'css!./../../../Common.styles.css', 'css!./../../../TableStyles.styles.css', 'module', '../../../vanilla-extract-recipes-createRuntimeFn.esm-d881c69a'], (function(e,s,t,a,l,c,i,n){"use strict";const r={baseTheme:t.baseTheme,multiVariantStyles:a.multiVariantStyles,variants:s.variants,styles:s.tableStyles};e.TableStableTheme=r,Object.defineProperty(e,"__esModule",{value:!0})}));
+//# sourceMappingURL=TableTheme.js.map

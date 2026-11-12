@@ -1,0 +1,12 @@
+[Unit]
+Description=Report and retry PeakGear demo setup
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/opc/init/demo-setup-control.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target

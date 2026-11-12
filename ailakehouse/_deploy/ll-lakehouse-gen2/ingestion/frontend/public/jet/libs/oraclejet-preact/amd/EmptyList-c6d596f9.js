@@ -1,0 +1,2 @@
+define(['exports', 'preact/jsx-runtime', './useId-c9578d26'], (function(e,r,i){"use strict";e.EmptyList=({"aria-label":e,"aria-labelledby":a,children:d})=>{const l=i.useId();return r.jsx("div",{role:"grid","aria-rowcount":0,tabIndex:0,"aria-label":e,"aria-labelledby":a,"aria-activedescendant":l,children:r.jsx("div",{role:"row",children:r.jsx("div",{role:"gridcell",id:l,children:d})})})}}));
+//# sourceMappingURL=EmptyList-c6d596f9.js.map

@@ -1,0 +1,14 @@
+[Unit]
+Description=Configure PG Oracle AI Data Catalog mount
+After=network-online.target adb-wallet.service adb-load.service user-podman.service
+Wants=network-online.target adb-wallet.service adb-load.service user-podman.service
+
+[Service]
+Type=oneshot
+TimeoutStartSec=1230
+ExecStartPre=/bin/bash -c '/home/opc/init/setenv.sh'
+ExecStart=/bin/bash /home/opc/init/retry-provision-step.sh ai-data-catalog /bin/bash -lc 'source /home/opc/ingestion/.env; case "$${AI_DATA_CATALOG_ENABLED,,}" in true|1|yes|on) /usr/bin/curl -fsS --max-time 5 http://127.0.0.1:8505/api/health >/dev/null || exit 1;; esac; exec /bin/bash /home/opc/init/configure-ai-data-catalog.sh'
+RemainAfterExit=yes
+
+[Install]
+WantedBy=default.target

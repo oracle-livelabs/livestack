@@ -1,0 +1,17 @@
+[Unit]
+Description=Install PeakGear Gen2 host payload before user services
+Wants=network-online.target
+After=network-online.target systemd-user-sessions.service
+ConditionPathExists=!/home/opc/.peakgear-release-ready
+
+[Service]
+Type=oneshot
+User=opc
+ExecStart=/usr/bin/python3 /home/opc/bootstrap/firstboot.py
+Restart=on-failure
+RestartSec=30
+StartLimitIntervalSec=0
+TimeoutStartSec=0
+
+[Install]
+WantedBy=multi-user.target

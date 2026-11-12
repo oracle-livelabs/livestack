@@ -1,0 +1,15 @@
+@keyframes SkeletonStyles_skeletonAnimation__19fl8u0 {
+  0% {
+    opacity: var(--opacity-start__1mh02731);
+  }
+  100% {
+    opacity: var(--opacity-end__1mh02732);
+  }
+}
+.SkeletonStyles_skeletonBase__19fl8u1 {
+  animation-name: SkeletonStyles_skeletonAnimation__19fl8u0;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 1.5s;
+  background-color: var(--bgColor-base__1mh02730);
+}

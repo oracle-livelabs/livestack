@@ -1,0 +1,2 @@
+define(['exports', 'preact/hooks', './useBreakpoints-524c5c8b'], (function(e,t,n){"use strict";e.useContainerBreakpoints=function(e=n.defaultBreakpoints){const[s,r]=t.useState(0),o=t.useRef(null),c=t.useMemo((()=>new ResizeObserver((e=>{for(const t of e)r(t.contentRect.width)}))),[]),u=t.useCallback((e=>{const t=o.current;e!=t&&(t&&c.unobserve(t),e&&c.observe(e),o.current=e)}),[c]);return{breakpointMatches:t.useMemo((()=>{const t={};for(const n in e)t[n]=s>=parseInt(e[n]);return t}),[s,e]),ref:u}}}));
+//# sourceMappingURL=useContainerBreakpoints-0a254627.js.map

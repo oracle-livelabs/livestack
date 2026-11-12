@@ -1,0 +1,6 @@
+.SwitchLabelValueLayoutStyles_switchLabelInnerStyles_startSwitch__a7cetq0 {
+  padding-block-start: calc((var(--switchRowHeight__18c4k1l0) - var(--fontSize__kn3t7f9) * var(--lineHeight__kn3t7f1))*0.5);
+}
+.SwitchLabelValueLayoutStyles_switchLabelInnerStyles_insideSwitch__a7cetq1 {
+  padding-block-start: calc((var(--switchRowHeight__18c4k1l0) - var(--fontSize__kn3t7f9) * var(--lineHeight__kn3t7f1))*0.5 + var(--oj-c-density-units, 0px));
+}

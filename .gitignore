@@ -11,3 +11,4 @@ sample-workshop/workshops/.DS_Store
 /.vscode
 /ailakehouse/_deploy/auto_build/terraform/03-automation/.terraform
 *.tfvars
+ailakehouse/_deploy/ll-lakehouse-gen2/.par

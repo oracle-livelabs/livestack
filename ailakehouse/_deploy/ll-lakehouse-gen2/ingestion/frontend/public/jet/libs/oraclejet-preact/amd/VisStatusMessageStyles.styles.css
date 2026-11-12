@@ -1,0 +1,16 @@
+.VisStatusMessageStyles_baseStyles__1jnuzw60 {
+  width: 100%;
+  height: 100%;
+  font-size: var(--oj-c-label-md-font-size);
+  color: var(--oj-c-text-icon-secondary);
+}
+.VisStatusMessageStyles_baseStyles__1jnuzw60:focus-visible {
+  outline-color: var(--oj-c-border-keyboard-focus);
+  outline-style: dotted;
+  outline-width: 1px;
+}
+.VisStatusMessageStyles_userSelectStyles__1jnuzw61 {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}

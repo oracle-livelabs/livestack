@@ -1,0 +1,2 @@
+define(['exports', 'css!./../../../useDatatip.styles.css'], (function(t,e){"use strict";t.styles={borderEnabled:"useDatatip_borderEnabled__susedo1",visDatatipStyle:"useDatatip_visDatatipStyle__susedo0",datatipTable:"useDatatip_datatipTable__susedo2",datatipLabel:"useDatatip_datatipLabel__susedo3",datatipValue:"useDatatip_datatipValue__susedo6",leftAlign:"useDatatip_leftAlign__susedo5",rightAlign:"useDatatip_rightAlign__susedo4"},Object.defineProperty(t,"__esModule",{value:!0})}));
+//# sourceMappingURL=useDatatip.css.js.map

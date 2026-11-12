@@ -1,0 +1,31 @@
+.ListRowStyles_listRowStyles_base__1pe3jam0 {
+  box-sizing: border-box;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+.ListRowStyles_listRowStyles_rowHighlight__1pe3jam1 {
+  background-image: linear-gradient(var(--oj-c-overlay-hover), var(--oj-c-overlay-hover));
+}
+.ListRowStyles_listRowStyles_focused__1pe3jam2::after {
+  content: "";
+  display: block;
+  inset: 0;
+  outline-color: var(--oj-c-border-keyboard-focus);
+  outline-offset: -1px;
+  outline-style: dotted;
+  outline-width: 1px;
+  pointer-events: none;
+  position: absolute;
+}
+.ListRowStyles_listRowStyles_active__1pe3jam3 {
+  background-image: linear-gradient(var(--oj-c-overlay-hover), var(--oj-c-overlay-hover));
+}
+.ListRowStyles_listRowStyles_hover__1pe3jam4:not(:active) {
+  background-image: linear-gradient(var(--oj-c-overlay-hover), var(--oj-c-overlay-hover));
+}
+@media (hover: hover) {
+  .ListRowStyles_listRowStyles_pseudoHover__1pe3jam5:hover:not(:active) {
+    background-image: linear-gradient(var(--oj-c-overlay-hover), var(--oj-c-overlay-hover));
+  }
+}

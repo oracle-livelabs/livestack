@@ -4,13 +4,13 @@ This note records user-confirmed rationale, unresolved policy, and evidence-back
 
 ## User-confirmed rationale
 
-- **Gravitino and Iceberg image packaging:** LiveLabs does not provide full internet access during provisioning, so these components cannot be downloaded at boot. Baking them into the custom image is intentional; rebuilding and redistributing the image to update them is an accepted cost.
+- **Container image packaging:** LiveLabs cannot download container images from internet registries at provisioning time, so container images remain baked into the base VM image. Object Storage is always reachable and may supply versioned `init/`, `ingestion/`, and other host-side deployment files at first boot. That first-boot bundle design has not been implemented or validated.
 - **Local Oracle Free and wallet-backed ADB:** The local Free database already supported the Serve AI and Serve Data demos, and migrating that data was undesirable at the time. The eventual direction is to move the data from Free to ADB and simplify the Compose stack. No migration schedule or exact dataset scope is established.
 - **`AIHUB` image-time choice:** MongoDB is an image-level opt-in because some users may not want that third-party database included in their deployment.
 - **Offline image artifacts:** Cached container images, model files, and dependency artifacts are retained mainly so new LiveLabs VMs can work without internet access.
 - **Object Storage PAR roles:** The Gravitino archive PAR is maintained for development setup and custom-image builds. GGSA is licensed: users obtain its binary from Oracle eDelivery, upload it to their own Object Storage, and provide their own PAR URL. Do not copy any PAR values from `.env.example` into shared notes.
 
-These rationales were confirmed by the user on 2026-10-16. They describe intent and accepted trade-offs; they do not by themselves approve implementation changes.
+The existing design rationales were confirmed on 2026-10-16; Object Storage reachability was clarified on 2026-11-05. They describe intent and accepted trade-offs; they do not by themselves approve implementation changes.
 
 ## Unresolved rationale and policy
 

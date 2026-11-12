@@ -1,0 +1,2 @@
+define(['exports', 'css!./../../TableDisplayStyles.styles.css'], (function(e,l){"use strict";e.tableDisplayStyles={base:"TableDisplayStyles_tableDisplayStyles_base__1vi2mck0",internalScroller:"TableDisplayStyles_tableDisplayStyles_internalScroller__1vi2mck1",externalScroller:"TableDisplayStyles_tableDisplayStyles_externalScroller__1vi2mck2"},Object.defineProperty(e,"__esModule",{value:!0})}));
+//# sourceMappingURL=TableDisplayStyles.css.js.map

@@ -1,0 +1,49 @@
+.RadioStyles_radioBaseStyle__o9of5r0 {
+  line-height: var(--oj-c-body-md-line-height);
+  min-height: var(--rowHeight__11tjnon2);
+  display: inline-flex;
+  align-items: flex-start;
+  gap: var(--iconToTextGap__11tjnon1);
+  position: relative;
+}
+.RadioStyles_radioBaseStyle__o9of5r0:focus {
+  outline: none;
+}
+.RadioStyles_radioBaseStyle__o9of5r0:focus-visible {
+  outline: none;
+}
+.RadioStyles_radioBaseStyle__o9of5r0:hover {
+  cursor: pointer;
+}
+.RadioStyles_valueLabelStyle__o9of5r2 {
+  font-family: inherit;
+  font-weight: inherit;
+  padding-block-start: calc((var(--rowHeight__11tjnon2) - var(--oj-c-body-md-line-height) * var(--oj-c-body-md-font-size) + 1px) * 0.5);
+  padding-block-end: calc((var(--rowHeight__11tjnon2) - var(--oj-c-body-md-line-height) * var(--oj-c-body-md-font-size) - 1px) * 0.5);
+  font-size: var(--oj-c-body-md-font-size);
+}
+.RadioStyles_radioDefaultColor__o9of5r3 {
+  color: var(--oj-c-text-icon-primary);
+}
+.RadioStyles_radioDisabledColor__o9of5r4 {
+  color: var(--oj-c-text-icon-disabled);
+}
+@supports (selector(:has(:focus-visible))) {
+  .RadioStyles_focusRingSelector__o9of5r1:has(input:focus-visible) {
+    outline-style: dotted;
+    outline-width: var(--outlineWidth__11tjnon0);
+    outline-color: var(--oj-c-border-keyboard-focus);
+  }
+  .RadioStyles_focusRingSelector__o9of5r1:has(div:focus) {
+    outline-style: dotted;
+    outline-width: var(--outlineWidth__11tjnon0);
+    outline-color: var(--oj-c-border-keyboard-focus);
+  }
+}
+@supports not (selector(:has(:focus-visible))) {
+  .RadioStyles_focusRingSelector__o9of5r1:focus-within {
+    outline-style: dotted;
+    outline-width: var(--outlineWidth__11tjnon0);
+    outline-color: var(--oj-c-border-keyboard-focus);
+  }
+}

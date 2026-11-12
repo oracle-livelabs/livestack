@@ -1,0 +1,153 @@
+{
+  "name": "accordion-item-single",
+  "version": "20.0.2",
+  "jetVersion": "^20.0.2",
+  "pack": "oj-c",
+  "type": "composite",
+  "dependencyScope": "runtime",
+  "license": "https://opensource.org/licenses/UPL",
+  "implements": [
+    "CAccordionItemSingleElement"
+  ],
+  "description": "An accordion item single component renders collapsible content in a group to support single expansion, when only one of the items in the group can be expanded at a time.",
+  "displayName": "AccordionItemSingle",
+  "extension": {
+    "catalog": {
+      "category": "Layout & Nav"
+    },
+    "vbdt": {
+      "module": "oj-c/accordion-item-single"
+    },
+    "webelement": {
+      "package": "@oracle/oraclejet-core-pack",
+      "version": "20.0.2",
+      "docUrl": "https://www.oracle.com/webfolder/technetwork/jet/cpwdtsdoc/classes/AccordionItemSingleWebElement.html",
+      "export": "findAccordionItemSingle",
+      "main": "@oracle/oraclejet-core-pack/webdriver"
+    }
+  },
+  "help": "oj-c.AccordionItemSingle.html",
+  "since": "20.0.0",
+  "main": "oj-c/accordion-item-single",
+  "status": [
+    {
+      "type": "supersedes",
+      "since": "20.0.0",
+      "value": [
+        "oj-accordion"
+      ]
+    }
+  ],
+  "properties": {
+    "itemKey": {
+      "type": "string|number",
+      "description": "Specifies the item key of each AccordionItemSingle.",
+      "displayName": "Item Key",
+      "help": "#itemKey"
+    },
+    "expandedKey": {
+      "type": "string|number|null",
+      "description": "Specifies the expandedKey.",
+      "displayName": "Expanded Key",
+      "help": "#expandedKey",
+      "writeback": true
+    },
+    "disabled": {
+      "type": "boolean",
+      "description": "Disables the collapsible if set to true.",
+      "displayName": "Disabled",
+      "help": "#disabled"
+    },
+    "iconPosition": {
+      "type": "string",
+      "description": "Changes chevron icon placement at the end of the collapsible header.",
+      "displayName": "Icon Position",
+      "help": "#iconPosition",
+      "enumValues": [
+        "end",
+        "start"
+      ]
+    }
+  },
+  "slots": {
+    "header": {
+      "description": "Collapsible's header. If not specified, the header contains only an open/close icon. The header text is required for accessibility purposes.",
+      "displayName": "Header",
+      "help": "#header"
+    },
+    "": {
+      "description": "Collapsible's content node. Place any content to be shown/hidden inside this property.",
+      "displayName": "Content",
+      "help": "#children"
+    }
+  },
+  "events": {
+    "ojCollapse": {
+      "description": "Triggered after the item has been collapsed (after animation completes).",
+      "help": "#event:collapse",
+      "detail": {
+        "fromKey": {
+          "type": "string|number"
+        },
+        "toKey": {
+          "type": "string|number|null"
+        }
+      }
+    },
+    "ojExpand": {
+      "description": "Triggered after the item has been expanded (after animation completes).",
+      "help": "#event:expand",
+      "detail": {
+        "fromKey": {
+          "type": "string|number"
+        },
+        "toKey": {
+          "type": "string|number|null"
+        }
+      }
+    }
+  },
+  "methods": {
+    "setProperty": {
+      "description": "Sets a property or a single subproperty for complex properties and notifies the component of the change, triggering a corresponding event.",
+      "help": "#setProperty",
+      "params": [
+        {
+          "name": "property",
+          "description": "The property name to set. Supports dot notation for subproperty access.",
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "description": "The new value to set the property to.",
+          "type": "any"
+        }
+      ],
+      "return": "void"
+    },
+    "getProperty": {
+      "description": "Retrieves the value of a property or a subproperty.",
+      "help": "#getProperty",
+      "params": [
+        {
+          "name": "property",
+          "description": "The property name to get. Supports dot notation for subproperty access.",
+          "type": "string"
+        }
+      ],
+      "return": "any"
+    },
+    "setProperties": {
+      "description": "Performs a batch set of properties.",
+      "help": "#setProperties",
+      "params": [
+        {
+          "name": "properties",
+          "description": "An object containing the property and value pairs to set.",
+          "type": "object"
+        }
+      ],
+      "return": "void"
+    }
+  }
+}

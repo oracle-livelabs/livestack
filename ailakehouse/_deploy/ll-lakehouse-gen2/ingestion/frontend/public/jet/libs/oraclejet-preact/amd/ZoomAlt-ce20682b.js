@@ -1,0 +1,2 @@
+define(['exports', 'preact/jsx-runtime', './Icon-234f9eb8'], (function(e,n,o){"use strict";e.SvgZoomAlt=e=>n.jsx(o.Icon,{viewBox:"0 0 24 24",...e,children:n.jsx("g",{fill:"none",children:n.jsx("path",{d:"M15.95 6.05a7 7 0 1 0-9.9 9.9 7 7 0 0 0 9.9-9.9zM4.636 4.636a9 9 0 0 1 13.396 11.982l3.675 3.675-1.414 1.414-3.675-3.675A9.001 9.001 0 0 1 4.636 4.636z",fill:"currentcolor"})})})}));
+//# sourceMappingURL=ZoomAlt-ce20682b.js.map

@@ -1,0 +1,415 @@
+:root {
+  --color-bg: #f8f7f4;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f1efeb;
+  --color-surface-hover: #ece8e2;
+  --color-border: #dedbd2;
+  --color-text: #161513;
+  --color-text-dim: #5f5a55;
+  --color-accent: #c74634;
+  --color-accent-alt: #4f7d7b;
+  --color-warning: #aa643b;
+  --color-success: #5f7d4f;
+  --color-brand-neutral: #7a736e;
+  --color-shadow: none;
+  --color-sidebar: #312d2a;
+  --color-sidebar-muted: #3b3733;
+  --color-sidebar-hover: #47413c;
+  --color-sidebar-border: rgba(255, 255, 255, 0.13);
+  --color-sidebar-text: #f7f4ef;
+  --color-sidebar-text-dim: #c7c0b8;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+}
+
+body {
+  background: #f8f7f4;
+  color: #161513;
+}
+
+.app-topbar {
+  min-height: 4.25rem;
+  background: #ffffff;
+  border-bottom-color: #dedbd2;
+}
+
+.app-topbar-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.app-page-frame {
+  padding: 1.25rem clamp(1rem, 2vw, 2rem) 2rem;
+}
+
+.app-page-frame > .space-y-6 {
+  max-width: 1720px;
+}
+
+.section-kicker {
+  color: #c74634;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.peakgear-story-panel,
+.lakehouse-workflow {
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+.peakgear-story-panel {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(1.25rem, 2.4vw, 2rem);
+  background: #ffffff;
+  border: 1px solid #dedbd2;
+}
+
+.peakgear-story-panel:before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 6px;
+  background: #c74634;
+}
+
+.peakgear-story-panel__header h2 {
+  max-width: 58rem;
+  color: #161513;
+  font-size: clamp(1.6rem, 2.3vw, 2.35rem);
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.peakgear-story-panel__body {
+  grid-template-columns: minmax(0, 0.98fr) minmax(23rem, 1.02fr);
+  gap: clamp(1rem, 2vw, 1.75rem);
+}
+
+.peakgear-story-panel__narrative p,
+.story-detail-modal__narrative p,
+.peakgear-story-panel__lakehouse-summary p,
+.peakgear-story-panel__lakehouse p {
+  color: #312d2a;
+  font-size: 0.98rem;
+}
+
+.peakgear-story-panel__read-more {
+  min-height: 44px;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  border-color: #312d2a;
+  background: #312d2a;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+.peakgear-story-panel__read-more:hover,
+.peakgear-story-panel__read-more:focus-visible {
+  background: #47413c;
+  outline: 2px solid rgba(49, 45, 42, 0.28);
+  outline-offset: 2px;
+}
+
+.peakgear-story-panel__visual {
+  border-radius: 6px;
+  border-color: rgba(170, 100, 59, 0.22);
+  background: #e9e1ca;
+}
+
+.lakehouse-workflow {
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #dedbd2;
+}
+
+.lakehouse-workflow-header {
+  padding: clamp(1.25rem, 2.4vw, 2rem);
+  background: #ffffff;
+  border-bottom: 1px solid #dedbd2;
+  color: #161513;
+}
+
+.lakehouse-workflow-heading h2 {
+  color: #161513;
+  font-size: clamp(1.6rem, 3.7cqw, 2.65rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.lakehouse-workflow-header .section-kicker {
+  color: #c74634;
+}
+
+.lakehouse-workflow-header .section-kicker {
+  opacity: 1;
+}
+
+.lakehouse-workflow-heading p:last-child {
+  max-width: 52rem;
+  color: #5f5a55;
+  opacity: 1;
+}
+
+.lakehouse-workflow-nav {
+  align-self: start;
+  gap: 0.95rem;
+}
+
+.lakehouse-workflow-primary-row,
+.lakehouse-workflow-governance-tiles {
+  gap: 0.55rem;
+}
+
+.lakehouse-workflow-governance-shell {
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "label"
+    "tiles";
+  gap: 0.5rem;
+  align-items: start;
+  padding: 0.75rem 0 0;
+  background: transparent;
+  border-color: #dedbd2;
+  border-width: 1px 0 0;
+  border-radius: 0;
+}
+
+.lakehouse-workflow-governance-tiles {
+  grid-area: tiles;
+}
+
+.lakehouse-workflow-governance-label {
+  grid-area: label;
+  justify-content: flex-start;
+  padding: 0 0.1rem 0.15rem;
+  color: #161513;
+  font-size: 1rem;
+  line-height: 1.35;
+  font-weight: 800;
+  text-align: left;
+}
+
+.lakehouse-workflow-tab {
+  grid-template-columns: 1fr;
+  min-height: 4.25rem;
+  padding: 0.75rem 1rem;
+  border-width: 1px 1px 4px;
+  border-radius: 6px 6px 0 0;
+  background: #ffffff;
+  border-color: #dedbd2;
+  color: #312d2a;
+  box-shadow: none;
+}
+
+.lakehouse-workflow-tab:hover {
+  transform: none;
+  background: #f8f7f4;
+  border-color: #c7c0b8;
+  color: #161513;
+}
+
+.lakehouse-workflow-tab.is-active {
+  background: color-mix(in srgb, var(--tab-accent) 8%, #ffffff);
+  border-color: #dedbd2 #dedbd2 var(--tab-accent);
+  color: #161513;
+  box-shadow: none;
+}
+
+.lakehouse-workflow-step-marker {
+  display: none;
+}
+
+.lakehouse-workflow-step-label {
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.lakehouse-detail-shell {
+  margin: 0;
+  padding: clamp(1.25rem, 2.4vw, 2rem);
+  border: 0;
+  border-radius: 0;
+  background: #ffffff;
+}
+
+.lakehouse-detail-intro {
+  align-items: flex-start;
+  padding: 0 0 1rem;
+  border-bottom: 1px solid #dedbd2;
+}
+
+.lakehouse-detail-icon,
+.lakehouse-capability-icon {
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--workflow-accent) 14%, #ffffff);
+  color: var(--workflow-accent);
+}
+
+.lakehouse-detail-intro h3 {
+  color: #161513;
+  font-size: clamp(1.35rem, 2vw, 1.9rem);
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.lakehouse-detail-intro p {
+  color: #5f5a55;
+  line-height: 1.62;
+}
+
+.lakehouse-capability-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+
+.lakehouse-capability-tile {
+  grid-template-columns: 1fr;
+  align-content: start;
+  justify-items: start;
+  text-align: left;
+  min-height: 12rem;
+  border-radius: 6px;
+  border-color: #dedbd2;
+  background: #ffffff;
+  box-shadow: none;
+}
+
+.lakehouse-capability-tile:hover {
+  border-color: color-mix(in srgb, var(--workflow-accent) 46%, #dedbd2);
+  box-shadow: inset 0 -3px 0 var(--workflow-accent);
+}
+
+.lakehouse-capability-tile > div:not(.lakehouse-capability-icon) {
+  grid-column: 1;
+  min-width: 0;
+}
+
+.lakehouse-capability-tile h4 {
+  color: #161513;
+  font-size: 0.95rem;
+  line-height: 1.22;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.lakehouse-capability-tile p {
+  color: #5f5a55;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  text-align: left;
+}
+
+.lakehouse-capability-tile--demo.is-enabled {
+  cursor: pointer;
+}
+
+.lakehouse-capability-run-tag {
+  border-radius: 2px;
+  background: #c74634;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+}
+
+.lakehouse-outcome-panel {
+  margin-top: 1rem;
+  border-radius: 6px;
+  border-color: color-mix(in srgb, var(--workflow-accent) 30%, #dedbd2);
+  background: color-mix(in srgb, var(--workflow-accent) 8%, #ffffff);
+}
+
+.lakehouse-outcome-panel h4 {
+  color: #161513;
+  letter-spacing: 0;
+}
+
+.story-detail-modal__panel,
+.architecture-modal__panel {
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+.story-detail-modal__close,
+.architecture-modal__close {
+  border-radius: 4px;
+}
+
+@media (max-width: 1450px) {
+  .lakehouse-capability-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1180px) {
+  .lakehouse-workflow-header,
+  .peakgear-story-panel__body {
+    grid-template-columns: 1fr;
+  }
+
+  .peakgear-story-panel__visual {
+    min-height: 15rem;
+  }
+
+  .lakehouse-workflow-governance-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .lakehouse-workflow-governance-label {
+    justify-content: flex-start;
+    text-align: left;
+  }
+}
+
+@media (max-width: 900px) {
+  .app-shell {
+    display: block;
+  }
+
+  .app-sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .lakehouse-workflow-primary-row,
+  .lakehouse-workflow-governance-tiles,
+  .lakehouse-capability-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lakehouse-workflow-tab,
+  .lakehouse-capability-tile {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .app-page-frame {
+    padding: 0.85rem;
+  }
+
+  .peakgear-story-panel,
+  .lakehouse-workflow-header,
+  .lakehouse-detail-shell {
+    padding: 1rem;
+  }
+
+  .app-topbar {
+    padding-inline: 1rem;
+  }
+
+  .peakgear-story-panel__header h2,
+  .lakehouse-workflow-heading h2 {
+    font-size: 1.55rem;
+  }
+}

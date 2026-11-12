@@ -1,0 +1,2 @@
+define(['exports'], (function(e){"use strict";e.monthViewColorSchemeVars={dayOfTheWeek:{color:"var(--oj-c-month-view-day-of-the-week-color)"}},e.monthViewScaleVars={rowGap:"var(--oj-c-month-view-row-gap)",columnGap:"var(--oj-c-month-view-column-gap)",dayOfTheWeek:{lineHeight:"var(--oj-c-month-view-day-of-the-week-line-height)",fontSize:"var(--oj-c-month-view-day-of-the-week-font-size)",fontWeight:"var(--oj-c-month-view-day-of-the-week-font-weight)"}},Object.defineProperty(e,"__esModule",{value:!0})}));
+//# sourceMappingURL=MonthViewContract.css.js.map
