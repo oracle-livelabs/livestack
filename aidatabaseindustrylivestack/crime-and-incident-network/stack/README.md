@@ -17,14 +17,16 @@ The preceding shared-release ZIP, SHA-256
 passed fresh Apply and operator browser login on 3 November 2026. The learner
 wrapper adds five schema visibility lines. The user opened and saved it in
 Resource Manager and confirmed that Versioned release inputs are hidden.
-No additional Apply was run for that form-only check. This ZIP additionally
-refreshes `RUNBOOK.md`; all other members match the preceding local ZIP.
+No additional Apply was run for that form-only check. The earlier documentation
+rebuild additionally refreshed `RUNBOOK.md`; its other members were unchanged.
 
-Local checks passed: YAML parsing, schema/Terraform release-default parity,
-ZIP integrity, and all 14 member byte comparisons. The archive diff confirms
-that only `RUNBOOK.md` changed in this documentation rebuild. The preceding
-folder audit passed Terraform validation in an isolated copy; this rebuild
-does not change Terraform files, provider selections, or runtime code.
+The 12 November PAR refresh replaces the download-prefix defaults in
+`schema.yaml` and `variables.tf` inside the ZIP. Its other 12 members are unchanged.
+ZIP integrity, schema/Terraform default parity, and all 14 source/member byte
+comparisons pass. The size and checksum above identify this refreshed ZIP.
+The release manifest matches the bundled checksum, and all 35 listed artifacts
+pass HTTP access and size checks. No fresh Apply was run for this PAR refresh;
+the earlier deployment test does not establish a fresh deployment result.
 
 ## Deploy and test
 
@@ -68,8 +70,8 @@ that unexpectedly replaces the VM/database or rotates credentials needs review.
 - [resource-manager/RUNBOOK.md](resource-manager/RUNBOOK.md) contains the current
   maintainer notes, including the password-free shared release and hidden inputs.
 
-No runtime rebuild, new database export, or release-asset upload is needed for
-this documentation-only rebuild. Maintenance scripts and historical test receipts
+No application rebuild, new database export, or release-asset upload is needed for
+this PAR refresh. Maintenance scripts and historical test receipts
 are not part of the publishable workshop folder.
 
 ## Verification limits
@@ -78,7 +80,7 @@ The standard case graph and Oracle Graph Explorer loaded in the 3 November
 browser review. The earlier Oracle renderer failure was caused by a temporary
 browser debugger attachment; no source or package change was required.
 
-Apply and browser login passed on the schema-equivalent package. The hidden
+Apply and browser login passed before this PAR refresh. The hidden
 form was separately confirmed. The GitHub button still needs an online launch
 test after publication, and optional AI/APEX workflows and LiveLabs Green Button
 provisioning need their own acceptance checks.

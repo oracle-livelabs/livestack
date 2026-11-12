@@ -37,17 +37,20 @@ The shared-release package passed a fresh Resource Manager Apply and operator
 browser login on 3 November 2026. The learner wrapper hides release inputs
 without changing their pinned defaults. The user opened and saved that wrapper in Resource
 Manager and confirmed that the Versioned release section no longer appears.
-No additional Apply was run for that form-only check. The current ZIP also
-refreshes the bundled maintainer runbook; no runtime files changed.
+No additional Apply was run for that form-only check. That earlier ZIP also
+refreshed the bundled maintainer runbook without changing runtime files.
 
 - Package: `stack/incidentdata-resource-manager-root.zip` (28,808 bytes).
 - SHA-256: `d3971a4f859ebec77348b7ca9fa8a455b7caadcdb2d8d942d4cd94b79d2b1ee9`.
 - Working directory: blank/default (ZIP root), not `terraform`.
 - Terraform family used in the passed deployment: 1.5.x.
-- Local checks passed: YAML/default checks, ZIP integrity, all 14 member byte
-  comparisons, and confirmation that only `RUNBOOK.md` changed in this rebuild.
-- No Terraform, runtime, release-file, credential, or permission change is
-  included in the hidden-inputs wrapper.
+- The 12 November PAR refresh changes only the download-prefix defaults in
+  `schema.yaml` and `variables.tf` inside the ZIP; its other 12 members are unchanged.
+- Current ZIP integrity, source/member parity, and release-default checks pass.
+  The release manifest matches the bundled checksum, and all 35 listed artifacts
+  pass HTTP access and size checks. A fresh Apply was not run for this PAR refresh.
+- No Terraform, runtime, release-file, credential, or permission change was
+  included in the earlier hidden-inputs wrapper.
 
 The ZIP is preconfigured for the approved shared release in `c4u04/livelabsfiles`,
 prefix `livestack/crime-and-incident-network/releases/team-20261102-f76416e0fcca`.
