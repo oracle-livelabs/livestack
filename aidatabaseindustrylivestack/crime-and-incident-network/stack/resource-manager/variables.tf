@@ -103,7 +103,7 @@ variable "release_bucket" {
 }
 variable "release_download_base_url" {
   type        = string
-  default     = "https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/crime-and-incident-network/releases/team-20261102-f76416e0fcca/"
+  default     = "https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/livestack/crime-and-incident-network/releases/team-20261102-f76416e0fcca/"
   description = "Optional approved read-only OCI PAR base for non-secret release payloads, ending with the exact versioned release prefix and a slash. Never used for bootstrap credentials or status."
   validation {
     condition     = var.release_download_base_url == "" || (can(regex("^https://([a-z0-9]+\\.objectstorage\\.[a-z0-9-]+\\.oci\\.customer-oci\\.com|objectstorage\\.[a-z0-9-]+\\.oraclecloud\\.com)/p/[A-Za-z0-9_-]+/n/[a-z0-9]+/b/[A-Za-z0-9_-]+/o/[A-Za-z0-9/_-]+/$", var.release_download_base_url)) && !strcontains(var.release_download_base_url, ".."))
