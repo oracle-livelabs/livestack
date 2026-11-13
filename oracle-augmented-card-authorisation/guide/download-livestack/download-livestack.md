@@ -18,7 +18,7 @@ In this lab, you will:
 ## Task 1: Download the portable package
 
 1. Download the package from:
-    [seer-equities-livestack.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/bsMYTI4pvF7BoZ4zte8oL9E5-i8k1wO3ZQiuzffuBcwolnwF-VDFSuBidpYnZoAY/n/c4u04/b/livelabsfiles/o/livestack/seer-equities-stack.zip)
+    [seer-equities-livestack.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/livestack/seer-equities-stack.zip)
 
 2. Save the file to your machine.
 

@@ -10,7 +10,7 @@ Apache Kafka carries the generated events to **Oracle GoldenGate Stream Analytic
 
 This scene shows the first step in that flow. The live events can later support demand sensing, product discovery, dashboards, predictions, and AI agents after Silver and Gold processing.
 
-[](video:https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/Videos/peakgear/stream.mp4:medium)
+[](video:https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/livestack/Videos/peakgear/stream.mp4:medium)
 
 Estimated Time: **10 minutes**
 
