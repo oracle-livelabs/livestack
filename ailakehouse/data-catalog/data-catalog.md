@@ -10,7 +10,7 @@ In the Catalog stage, **Oracle Data Studio Catalog** adds context to a technical
 
 This scene follows a simple pattern: find a product table, review its contents, create a view with a business column, and confirm that the view is available in Catalog.
 
-[](video:https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/Videos/peakgear/table-assist.mp4:medium)
+[](video:https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/livestack/Videos/peakgear/table-assist.mp4:medium)
 
 Estimated Time: **10 minutes**
 

@@ -70,7 +70,7 @@ variables:
     type: string
     required: false
     visible: false
-    default: "https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/crime-and-incident-network/releases/team-20261102-f76416e0fcca/"
+    default: "https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/livestack/crime-and-incident-network/releases/team-20261102-f76416e0fcca/"
     title: Approved release download base
     description: Optional read-only OCI PAR URL for non-secret release payloads only. Bootstrap credentials and status stay in the deployment's private bucket.
   ollama_image:

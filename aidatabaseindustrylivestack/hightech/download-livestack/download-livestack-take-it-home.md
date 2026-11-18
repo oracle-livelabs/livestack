@@ -126,7 +126,7 @@ If this test fails, fix Podman setup before continuing with LiveStack.
 
 Perform the following set of steps to download the portable **LiveStack** package and make it available as livestack.zip:
 
-1. Download the LiveStack package using this [link](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/livestack-hightech.zip).
+1. Download the LiveStack package using this [link](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/livestack/livestack-hightech.zip).
 
 2. Save or rename the file as `livestack.zip`.
 

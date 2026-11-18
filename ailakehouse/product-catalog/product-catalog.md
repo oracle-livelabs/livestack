@@ -10,7 +10,7 @@ This scene shows a product catalog that combines product data with inventory and
 
 The **Oracle AI Database** serves this Gold product view so dashboards and applications can use the same product context.
 
-[](video:https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/Videos/peakgear/product-catalog.mp4:medium)
+[](video:https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/livestack/Videos/peakgear/product-catalog.mp4:medium)
 
 Estimated Time: **5 minutes**
 
