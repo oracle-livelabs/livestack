@@ -1,13 +1,13 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { CheckCircle2, Clipboard } from 'lucide-react';
 import CopySecretButton from '../components/CopySecretButton';
 import ImportanceModal, { ImportanceButton } from '../components/ImportanceModal';
 import { JetButton } from '../components/JetControls';
 import LiveLabsMarkdownGuide from '../components/LiveLabsMarkdownGuide';
 import { IMPORTANCE_CONTENT } from '../content/importanceContent';
+import { apiFetch } from '../utils/api';
 
 const PG_USERNAME = 'PG';
-const OBJECT_STORAGE_PREFIX = 'https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/FTUqMcFsw9b1NbRLnU5S_7Yw2_G5DuwFfkzRjqjZCvSTHtn51uBBcwy98m-r1fKW/n/c4u04/b/ai-lh/o/';
 const GUIDE_MARKDOWN_URL = 'https://raw.githubusercontent.com/oracle-livelabs/livestack/refs/heads/main/ailakehouse/batch-and-file-loading/batch-and-file-loading.md';
 const GUIDE_IMAGE_DIRECTORY_URL = 'https://raw.githubusercontent.com/oracle-livelabs/livestack/refs/heads/main/ailakehouse/batch-and-file-loading/images/';
 const GUIDE_SOURCE_URL = 'https://github.com/oracle-livelabs/livestack/blob/main/ailakehouse/batch-and-file-loading/batch-and-file-loading.md';
@@ -16,6 +16,17 @@ const GUIDE_SOURCE_DIRECTORY_URL = 'https://github.com/oracle-livelabs/livestack
 export default function BronzeDataLoadGuide({ dataStudioUrl, hasLakehouseConnection, pgPassword }) {
   const [showImportance, setShowImportance] = useState(false);
   const [copiedPrefix, setCopiedPrefix] = useState(false);
+  const [objectStoragePrefix, setObjectStoragePrefix] = useState(null);
+  const [sourceLoading, setSourceLoading] = useState(true);
+  useEffect(() => {
+    let active = true;
+    apiFetch('/bronze/source').then((data) => {
+      if (active) setObjectStoragePrefix(data.url || null);
+    }).catch(() => {}).finally(() => {
+      if (active) setSourceLoading(false);
+    });
+    return () => { active = false; };
+  }, []);
   const seededPgPassword = pgPassword || 'From DBPASSWORD';
   const canCopySeededPgPassword = Boolean(pgPassword);
 
@@ -25,11 +36,12 @@ export default function BronzeDataLoadGuide({ dataStudioUrl, hasLakehouseConnect
   };
 
   const copyObjectStoragePrefix = async () => {
+    if (!objectStoragePrefix) return;
     if (navigator.clipboard?.writeText) {
-      await navigator.clipboard.writeText(OBJECT_STORAGE_PREFIX);
+      await navigator.clipboard.writeText(objectStoragePrefix);
     } else {
       const textArea = document.createElement('textarea');
-      textArea.value = OBJECT_STORAGE_PREFIX;
+      textArea.value = objectStoragePrefix;
       textArea.setAttribute('readonly', '');
       textArea.style.position = 'fixed';
       textArea.style.opacity = '0';
@@ -99,14 +111,15 @@ export default function BronzeDataLoadGuide({ dataStudioUrl, hasLakehouseConnect
         <section className="bronze-guide-source bronze-guide-source--hero" aria-labelledby="bronze-source-title">
           <div>
             <h3 id="bronze-source-title">Object Storage prefix</h3>
-            <p>Paste this URL into the Cloud Store public URL field.</p>
+            <p>Paste this read-only URL into the Cloud Store public URL field. Bronze files may take a few minutes to appear after provisioning. The URL expires 96 hours after it is created.</p>
           </div>
           <div className="bronze-guide-source__url">
-            <code>{OBJECT_STORAGE_PREFIX}</code>
+            <code>{objectStoragePrefix || (sourceLoading ? 'Loading URL…' : 'URL unavailable for this deployment.')}</code>
             <button
               type="button"
               className="bronze-guide-copy-button"
               onClick={copyObjectStoragePrefix}
+              disabled={!objectStoragePrefix}
               aria-label="Copy Object Storage PAR URL"
             >
               {copiedPrefix ? <CheckCircle2 size={15} aria-hidden="true" /> : <Clipboard size={15} aria-hidden="true" />}

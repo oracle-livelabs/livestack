@@ -35,9 +35,7 @@ const IMAGE_MODEL_ID = process.env.PRIVATEAI_IMAGE_MODEL || 'clip-vit-base-patch
 const TEXT_IMAGE_MODEL_ID = process.env.PRIVATEAI_IMAGE_TEXT_MODEL || 'clip-vit-base-patch32-txt';
 const TEXT_CATALOG_MODEL_ID = process.env.PRIVATEAI_TEXT_MODEL || 'all-minilm-l12-v2';
 const PRIVATEAI_BASE_URL = (process.env.PRIVATEAI_BASE_URL || 'http://privateai:8080').replace(/\/$/, '');
-const UPLOAD_PAR_URL = (process.env.WEBSHOP_UPLOAD_PAR_URL || '').trim();
-const UPLOAD_OBJECT_PREFIX = (process.env.WEBSHOP_UPLOAD_OBJECT_PREFIX || 'webshop-uploads')
-  .replace(/^\/+|\/+$/g, '');
+const UPLOAD_DIR = process.env.WEBSHOP_UPLOAD_DIR || '/workspace/webshop-uploads';
 const LAKEHOUSE_SCHEMA_USERNAME = 'PG';
 const DEFAULT_WALLET_DIR = '/wallet';
 const WEBSHOP_RETURN_AGENT_PROFILE_NAME = cleanRuntimeName(process.env.WEBSHOP_RETURN_AGENT_PROFILE_NAME || 'PG_RETURN_AGENT_PROFILE');
@@ -1876,84 +1874,12 @@ function uploadSingleImage(req, res, next) {
   });
 }
 
-function sanitizeObjectSegment(value, fallback = 'upload') {
-  return String(value || fallback)
-    .toLowerCase()
-    .replace(/\.[^.]+$/, '')
-    .replace(/[^a-z0-9._-]+/g, '-')
-    .replace(/^-+|-+$/g, '')
-    .slice(0, 80) || fallback;
-}
-
-function encodeObjectName(objectName) {
-  return objectName.split('/').map(encodeURIComponent).join('/');
-}
-
-function parseObjectStoragePar(parUrl) {
-  if (!parUrl) {
-    throw Object.assign(new Error('WEBSHOP_UPLOAD_PAR_URL is not configured.'), { statusCode: 503 });
-  }
-
-  const url = new URL(parUrl);
-  const match = url.pathname.match(/\/n\/([^/]+)\/b\/([^/]+)\/o(?:\/|$)/);
-  if (!match) {
-    throw Object.assign(new Error('WEBSHOP_UPLOAD_PAR_URL must point to an Object Storage /o/ prefix PAR.'), { statusCode: 500 });
-  }
-
-  return {
-    url,
-    namespace: decodeURIComponent(match[1]),
-    bucket: decodeURIComponent(match[2]),
-  };
-}
-
-function buildUploadObject(file) {
+async function storeUploadedImage(file) {
   const extension = file.mimetype === 'image/png' ? '.png' : '.jpg';
-  const today = new Date().toISOString().slice(0, 10);
-  const baseName = sanitizeObjectSegment(file.originalname, 'shopper-image');
-  const objectName = [
-    UPLOAD_OBJECT_PREFIX || 'webshop-uploads',
-    today,
-    `${crypto.randomUUID()}-${baseName}${extension}`,
-  ].join('/');
-
-  const { url, namespace, bucket } = parseObjectStoragePar(UPLOAD_PAR_URL);
-  const targetUrl = new URL(url.toString());
-  targetUrl.pathname = `${url.pathname.replace(/\/?$/, '/')}${encodeObjectName(objectName)}`;
-
-  return {
-    objectName,
-    objectUri: `oci://${bucket}@${namespace}/${objectName}`,
-    objectUrl: `${url.origin}/n/${encodeURIComponent(namespace)}/b/${encodeURIComponent(bucket)}/o/${encodeObjectName(objectName)}`,
-    targetUrl,
-  };
-}
-
-async function uploadImageToObjectStorage(file) {
-  const object = buildUploadObject(file);
-  const response = await fetch(object.targetUrl, {
-    method: 'PUT',
-    headers: {
-      'Content-Type': file.mimetype,
-      'Content-Length': String(file.size),
-    },
-    body: file.buffer,
-  });
-
-  if (!response.ok) {
-    const detail = await response.text().catch(() => '');
-    throw Object.assign(
-      new Error(`Object Storage upload failed (${response.status}): ${detail.slice(0, 500) || response.statusText}`),
-      { statusCode: 502, object },
-    );
-  }
-
-  return {
-    objectName: object.objectName,
-    objectUri: object.objectUri,
-    objectUrl: object.objectUrl,
-    etag: response.headers.get('etag') || null,
-  };
+  const objectName = `${crypto.randomUUID()}${extension}`;
+  await fsp.mkdir(UPLOAD_DIR, { recursive: true });
+  await fsp.writeFile(path.join(UPLOAD_DIR, objectName), file.buffer, { flag: 'wx', mode: 0o600 });
+  return { objectName, objectUri: null, objectUrl: null, etag: null };
 }
 
 async function embedWithPrivateAI(model, input, options = {}) {
@@ -3026,8 +2952,7 @@ router.get('/status', async (_req, res) => {
       imageModel: IMAGE_MODEL_ID,
       imageTextModel: TEXT_IMAGE_MODEL_ID,
       catalogTextModel: TEXT_CATALOG_MODEL_ID,
-      uploadParConfigured: Boolean(UPLOAD_PAR_URL),
-      uploadObjectPrefix: UPLOAD_OBJECT_PREFIX || 'webshop-uploads',
+      uploadStorage: 'vm',
       maxResults: MAX_LIMIT,
     });
   } catch (err) {
@@ -3134,9 +3059,9 @@ router.post('/image-search', uploadSingleImage, async (req, res) => {
     let objectUploadError = null;
 
     try {
-      objectStorage = await uploadImageToObjectStorage(file);
+      objectStorage = await storeUploadedImage(file);
     } catch (uploadErr) {
-      objectUploadStatus = UPLOAD_PAR_URL ? 'FAILED' : 'NOT_CONFIGURED';
+      objectUploadStatus = 'FAILED';
       objectUploadError = uploadErr.message;
       objectStorage = uploadErr.object ? {
         objectName: uploadErr.object.objectName,

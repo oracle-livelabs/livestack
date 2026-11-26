@@ -94,6 +94,11 @@ app.use('/api/aws-glue', awsGlueRoutes);
 app.use('/api/source-catalogs', sourceCatalogsRoutes);
 
 // ── Health Check ───────────────────────────────────────────
+app.get('/api/bronze/source', (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  res.json({ url: process.env.BRONZE_DATA_PAR_URL || null });
+});
+
 app.get('/api/health', async (req, res) => {
   try {
     const result = await db.execute("SELECT 'connected' AS status, SYSDATE AS db_time FROM dual");

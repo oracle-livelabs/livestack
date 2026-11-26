@@ -67,16 +67,13 @@ Use these helpers from this directory before building a release-candidate image:
 1. `scripts/build-rc-zip.sh`
 2. `scripts/verify-rc-zip.sh`
 
-The build script creates `peakgear-release.zip` for **building the reusable image** and `peakgear-host.zip` for first boot from the same staged files. It excludes environment files, wallets, credentials, dependency folders, and generated runtime state, verifies both archives, then uploads both. Each upload replaces the previous object at that name.
+The build script creates `peakgear-release.zip` for **building the reusable image** and `peakgear-host.zip` for first boot from the same staged files. It excludes environment files, wallets, credentials, dependency folders, and generated runtime state, then verifies both archives. Manually upload both to the `livelabsfiles` bucket under `peakgear/ai-lh-data/`, using those exact filenames.
 
-The host ZIP contains only `init/` and `ingestion/`. A provisioned instance validates it before installing either directory. A later host-only update can use `python3 scripts/build-host-payload-zip.py --upload`, provided its container image and dependency requirements remain compatible with the captured image.
+The host ZIP contains only `init/` and `ingestion/`. A provisioned instance validates it before installing either directory. A later host-only update can use `python3 scripts/build-host-payload-zip.py` and manually upload the resulting ZIP, provided its container image and dependency requirements remain compatible with the captured image.
 
-Archive upload is enabled by default. The release build uses the write-capable
-Object Storage PAR prefix in the ignored `.par` file and reads both uploaded ZIPs
-back to verify they match the local files. Set `PAR_FILE` to use another PAR file.
-Set `UPLOAD_ARCHIVE=false` to build both ZIPs locally without uploading. Never commit a PAR URL to
-this repository or store it in the custom image. Uploading only writes the ZIP:
-for an image build, `/home/opc/.env` or OCI metadata must provide
+The release build does not upload files. Never commit a PAR URL to
+this repository or store it in the custom image. After manual upload,
+`/home/opc/.env` or OCI metadata must provide
 `BUILD_ARCHIVE_URL`, a read-capable URL for the full image-build ZIP. Provisioned
 instances need `release_zip_url` metadata for the host payload ZIP. The URL
 is an HTTPS Object Storage read PAR; keep it out of source control and logs.

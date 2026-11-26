@@ -11,7 +11,7 @@ Keep detailed procedure steps in those files; update this note only when a durab
 
 ## Durable safety contracts
 
-- Build both deployment ZIPs from one staged source snapshot with `scripts/build-rc-zip.sh`. It verifies the full image-build archive and the `init/` plus `ingestion/` host ZIP before uploading through the ignored `.par` prefix, then checks both remote digests. Use `scripts/build-host-payload-zip.py --upload` only for a deliberate host-only update compatible with the captured image.
+- Build both deployment ZIPs from one staged source snapshot with `scripts/build-rc-zip.sh`. It verifies the full image-build archive and the `init/` plus `ingestion/` host ZIP. Upload the resulting ZIPs manually to `peakgear/ai-lh-data/`.
 - Keep environment files, ADB wallet files, OCI credentials, generated keys, and transient runtime state out of release archives and captured images.
 - Stop the user services and complete the cleanup preflight with `/home/opc/prepare-custom-image.sh` before capturing a custom image. The cleanup flow preserves required offline artifacts and aborts before deletion when its preflight fails.
 - The release archive excludes `.operator/` and `.operator-shared/`; `scripts/verify-rc-zip.sh` rejects either partition if it appears in the archive.

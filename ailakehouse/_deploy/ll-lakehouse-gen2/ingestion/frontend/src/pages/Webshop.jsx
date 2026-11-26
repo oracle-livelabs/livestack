@@ -277,7 +277,7 @@ export default function Webshop() {
         ...(current || {}),
         indexedImages: data.index?.indexed ?? current?.indexedImages,
         imageModel: data.models?.image || current?.imageModel,
-        uploadParConfigured: true,
+        uploadStorage: 'vm',
       }));
     } catch (err) {
       setError(err.message);

@@ -199,6 +199,8 @@ if [[ ${#ADB_OCID} -le 5 || ${ADB_OCID} =~ '<html>' ]]; then
 fi
 
 export BUCKET_PAR=$(curl -s -H "Authorization: Bearer Oracle" -L http://169.254.169.254/opc/v2/instance/metadata/bucket_par)
+export_metadata_or_default "BRONZE_DATA_PAR_URL" "bronze_data_par_url" "${BRONZE_DATA_PAR_URL:-}"
+export_metadata_or_default "BRONZE_DATA_BUCKET_NAME" "bronze_data_bucket_name" "${BRONZE_DATA_BUCKET_NAME:-}"
 
 if [[ ${#BUCKET_PAR} -le 5 || ${BUCKET_PAR} =~ '<html>' ]]; then
  export BUCKET_PAR="https://par.par.par"

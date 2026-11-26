@@ -270,7 +270,7 @@ stop_image_capture_services() {
     exit 1
   fi
 
-  for service in demo-setup-control.service "${PG_MEDALLION_PROJECT_SERVICE}" "${PG_AI_CATALOG_BRONZE_SERVICE}" "${ICEBERG_SEED_SERVICE}" "${PG_ICEBERG_CONNECTION_SERVICE}" "${PG_AI_DATA_CATALOG_SERVICE}" "${USER_PODMAN_SERVICE}" adb-load.service adb-wallet.service; do
+  for service in bronze-files-seed.service demo-setup-control.service "${PG_MEDALLION_PROJECT_SERVICE}" "${PG_AI_CATALOG_BRONZE_SERVICE}" "${ICEBERG_SEED_SERVICE}" "${PG_ICEBERG_CONNECTION_SERVICE}" "${PG_AI_DATA_CATALOG_SERVICE}" "${USER_PODMAN_SERVICE}" adb-load.service adb-wallet.service; do
     if ! "${SYSTEMCTL_BIN}" --user cat "${service}" >/dev/null 2>&1; then
       echo "No ${service} user service found; continuing."
       continue
@@ -286,7 +286,7 @@ stop_image_capture_services() {
   done
 
   # No user service may start before the verified release has been installed.
-  for service in adb-wallet.service adb-load.service demo-setup-control.service "${PG_MEDALLION_PROJECT_SERVICE}" "${PG_AI_CATALOG_BRONZE_SERVICE}" "${ICEBERG_SEED_SERVICE}" "${PG_ICEBERG_CONNECTION_SERVICE}" "${PG_AI_DATA_CATALOG_SERVICE}" "${USER_PODMAN_SERVICE}"; do
+  for service in adb-wallet.service adb-load.service bronze-files-seed.service demo-setup-control.service "${PG_MEDALLION_PROJECT_SERVICE}" "${PG_AI_CATALOG_BRONZE_SERVICE}" "${ICEBERG_SEED_SERVICE}" "${PG_ICEBERG_CONNECTION_SERVICE}" "${PG_AI_DATA_CATALOG_SERVICE}" "${USER_PODMAN_SERVICE}"; do
     if "${SYSTEMCTL_BIN}" --user cat "${service}" >/dev/null 2>&1; then
       "${SYSTEMCTL_BIN}" --user disable "${service}"
     fi
