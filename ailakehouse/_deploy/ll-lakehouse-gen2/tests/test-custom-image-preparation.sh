@@ -55,7 +55,7 @@ case " $* " in
     cat <<'CONFIG'
 services:
   app:
-    image: docker.io/node:24-bookworm
+    image: docker.io/node:26-bookworm
   gravitino:
     image: localhost/gravitino-iceberg-rest:adw
   iceberg-seeder:

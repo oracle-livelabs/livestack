@@ -5,6 +5,8 @@
 - The Express application pool targets the local Oracle AI Database Free Compose service (`db:1521/FREEPDB1` in the stack). The app bootstrap creates its application schema/data there.
 - Wallet-backed Autonomous Database is a separate cloud database path. `init/adb-wallet.sh` handles wallet setup; `init/adb-load.sh` uses SQLcl for ADB setup. ADB streaming and analytics configuration consumes its own connection and wallet settings. Do not treat the local app pool and ADB connection as interchangeable.
 - PostgreSQL and MySQL are standard source services in the Compose stack. MongoDB is optional and enabled through the image-time `AIHUB` setting.
+- The Ask PeakGear webshop sends return conversations to the Express API. The backend validates the resolution and updates the existing `PG.CUSTOMER_ORDER_STATUS` row in ADB. `RETURNS_AUDIT_BY_STORE` supplies the seeded returns graph for review scenarios. [Webshop write path](../../ingestion/backend/routes/webshop.js) · [Returns graph seed generator](../../ingestion/scripts/generate_gold_seed.py)
+- The `loyalty-mysql` source seeds a sample `demo_products` catalog. Ask PeakGear return activity is stored in ADB. [MySQL seed](../../ingestion/source-databases/mysql/01-demo-products.sql)
 
 ## PeakGear scenario and lakehouse paths
 

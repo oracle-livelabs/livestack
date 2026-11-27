@@ -165,7 +165,7 @@ done < <(grep -E '(^|/)(Dockerfile|[^/]+\.(sh|service|py|ya?ml))$' <<< "${ZIP_EN
 
 echo "Checking excluded runtime/build artifacts..."
 forbidden_entries="$(
-  grep -Ei '(^|/)(node_modules|__pycache__|\.git|\.omx|\.operator(-shared)?|tmp|output)/|^\.par$|^peakgear-host.*\.zip$|^ingestion/frontend/dist/|^ingestion/frontend/public/jet/libs/oj/20\.0\.2/|^ingestion/dist/|\.pyc$|\.done$|oradata|build_dev\.zip|\.bak-|(^|/)(Wallet[^/]*\.zip|wallet\.zip|goldengate-studio-wallet\.zip|cwallet\.sso|ewallet\.p12|ewallet\.pem|ojdbc\.properties|tnsnames\.ora|sqlnet\.ora|keystore\.jks|truststore\.jks)$' <<< "${ZIP_ENTRIES}" || true
+  grep -Ei '(^|/)(node_modules|__pycache__|\.git|\.omx|\.operator(-shared)?|tmp|output)/|^peakgear-host.*\.zip$|^ingestion/frontend/dist/|^ingestion/frontend/public/jet/libs/oj/20\.0\.2/|^ingestion/dist/|\.pyc$|\.done$|oradata|build_dev\.zip|\.bak-|(^|/)(Wallet[^/]*\.zip|wallet\.zip|goldengate-studio-wallet\.zip|cwallet\.sso|ewallet\.p12|ewallet\.pem|ojdbc\.properties|tnsnames\.ora|sqlnet\.ora|keystore\.jks|truststore\.jks)$' <<< "${ZIP_ENTRIES}" || true
 )"
 if [[ -n "${forbidden_entries}" ]]; then
   echo "Forbidden archive entries found:" >&2
@@ -233,8 +233,6 @@ require_text "init/adb-wallet.sh" "refusing to install the static fallback walle
 require_text "init/adb-wallet.sh" "validate_wallet_password"
 require_text "scripts/build-rc-zip.sh" "ewallet.p12"
 require_text "scripts/build-rc-zip.sh" "ojdbc.properties"
-require_entry "scripts/object_storage_upload.py"
-require_text "scripts/build-rc-zip.sh" "object_storage_upload.py"
 require_text "inst.sh" 'CON_USER'
 require_text "inst.sh" 'CON_TOK'
 require_text "inst.sh" '--password-stdin'

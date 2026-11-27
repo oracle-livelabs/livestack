@@ -4,9 +4,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
-from unittest.mock import patch
 from zipfile import ZipFile
-from scripts import object_storage_upload
 
 
 SCRIPT = Path(__file__).resolve().parents[1] / 'scripts/build-host-payload-zip.py'
@@ -68,36 +66,6 @@ class HostPayloadZipTests(unittest.TestCase):
             with ZipFile(output / 'peakgear-host.zip') as bundle:
                 self.assertEqual(set(bundle.namelist()), set(payload.REQUIRED))
 
-    def test_upload_uses_fixed_name_and_checks_readback(self):
-        class Response:
-            status = 200
-
-            def __init__(self, data=b''):
-                self.data = data
-
-            def __enter__(self):
-                return self
-
-            def __exit__(self, *_):
-                return False
-
-            def read(self, _size):
-                data, self.data = self.data, b''
-                return data
-
-        with tempfile.TemporaryDirectory() as temp:
-            root = Path(temp) / 'source'
-            root.mkdir()
-            self.make_source(root)
-            archive, digest = payload.build(root, Path(temp) / 'output')
-            par = Path(temp) / '.par'
-            par.write_text('https://objectstorage.us-ashburn-1.oraclecloud.com/p/example/n/example/b/example/o/\n')
-            with patch.object(object_storage_upload, 'urlopen', side_effect=[Response(), Response(archive.read_bytes())]) as open_url:
-                payload.upload_and_verify(archive, digest, par)
-            self.assertEqual(open_url.call_count, 2)
-            self.assertEqual(open_url.call_args_list[0].args[0].get_method(), 'PUT')
-            self.assertTrue(open_url.call_args_list[0].args[0].full_url.endswith('/o/peakgear-host.zip'))
-            self.assertEqual(open_url.call_args_list[1].args[0].get_method(), 'GET')
 
 
 if __name__ == '__main__':

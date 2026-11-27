@@ -1,0 +1,14 @@
+[Unit]
+Description=Upload Bronze demo files to Object Storage
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+TimeoutStartSec=1230
+ExecStartPre=/bin/bash /home/opc/init/setenv.sh
+ExecStart=/bin/bash /home/opc/init/retry-provision-step.sh bronze-files /usr/bin/python3.9 /home/opc/init/seed-bronze-files.py
+RemainAfterExit=yes
+
+[Install]
+WantedBy=default.target

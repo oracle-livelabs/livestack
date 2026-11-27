@@ -1,6 +1,6 @@
 # PeakGear Bronze Demo Data
 
-This folder contains small raw landing-zone files for the AI Data Lakehouse demo. The data is intentionally shaped like source extracts that a solution engineer can upload to Object Storage and load into Autonomous Database with Data Studio before processing it into Silver and Gold tables.
+This folder contains small raw landing-zone files for the AI Data Lakehouse demo. Gen2 provisioning uploads these files to a dedicated Object Storage bucket under `bronze/`, preserving existing objects on retries. The Bronze guide displays the deployment's read-only listing URL for loading them into Autonomous Database with Data Studio before processing them into Silver and Gold tables. The URL expires 96 hours after Terraform creates it.
 
 The rows line up with the current PeakGear gold seed data, especially the `SKU-100xxx` products from `pg-stack/db/data/load_gold_seed.sql`. The files keep raw source-system imperfections so the Process step has a realistic job to do.
 

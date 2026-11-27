@@ -13,7 +13,6 @@ from zipfile import ZIP_DEFLATED, ZipFile, ZipInfo
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from bootstrap.firstboot import REQUIRED, extract_payload  # noqa: E402
-from scripts.object_storage_upload import upload_and_verify  # noqa: E402
 
 
 EXCLUDED_DIRS = {
@@ -103,19 +102,11 @@ def main():
     parser.add_argument('--source-dir', type=Path, default=ROOT,
                         help='Directory containing the init/ and ingestion/ payload')
     parser.add_argument('--output-dir', type=Path, default=ROOT)
-    parser.add_argument('--upload', action='store_true', help='Upload to the Object Storage PAR prefix in .par and verify by reading it back')
-    parser.add_argument('--par-file', type=Path, default=ROOT / '.par')
     args = parser.parse_args()
     archive, digest = build(args.source_dir.resolve(), args.output_dir.resolve())
     print(f'Archive: {archive}')
     print(f'SHA-256: {digest}')
     print(f'Size: {archive.stat().st_size:,} bytes')
-    if args.upload:
-        try:
-            upload_and_verify(archive, digest, args.par_file)
-        except RuntimeError as exc:
-            parser.exit(1, f'{exc}\n')
-        print('Uploaded peakgear-host.zip and verified its remote SHA-256.')
     print('Set release_zip_url to the read-only object URL for peakgear-host.zip.')
 
 

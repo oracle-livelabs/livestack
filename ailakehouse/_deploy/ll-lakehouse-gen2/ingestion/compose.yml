@@ -10,6 +10,7 @@ volumes:
   ggsa-kafka:
   ggsa-spark-events:
   ggsa-osa-files:
+  webshop-uploads:
   app-node-modules:
   frontend-node-modules:
   frontend-dist:
@@ -290,7 +291,7 @@ services:
 
   signal-generator:
     hostname: signal-generator
-    image: docker.io/node:24-bookworm
+    image: docker.io/node:26-bookworm
     working_dir: /workspace/generator
     network_mode: "service:ggsa"
     volumes:
@@ -409,13 +410,14 @@ services:
 
   app:
     hostname: app
-    image: docker.io/node:24-bookworm
+    image: docker.io/node:26-bookworm
     working_dir: /workspace/app
     volumes:
       - ./:/workspace/app:z
       - ./gold-data:/workspace/gold-data:ro,z
       - ./wallet:/wallet:ro,z
       - ${PRODUCT_IMAGE_DIR:-./images}:/workspace/app/images:ro,z
+      - webshop-uploads:/workspace/webshop-uploads
       - app-node-modules:/workspace/app/node_modules
       - frontend-node-modules:/workspace/app/frontend/node_modules
       - frontend-dist:/workspace/app/frontend/dist
@@ -425,6 +427,7 @@ services:
           - app
     environment:
       NODE_ENV: production
+      BRONZE_DATA_PAR_URL: ${BRONZE_DATA_PAR_URL:-}
       PORT: 3001
       FRONTEND_URL: ${FRONTEND_URL:-http://localhost:8505}
       ORACLE_USER: PG
@@ -516,8 +519,6 @@ services:
       WEBSHOP_IMAGE_INDEX_WARMUP_DELAY_MS: ${WEBSHOP_IMAGE_INDEX_WARMUP_DELAY_MS:-5000}
       WEBSHOP_IMAGE_INDEX_WARMUP_RETRIES: ${WEBSHOP_IMAGE_INDEX_WARMUP_RETRIES:-12}
       WEBSHOP_IMAGE_INDEX_WARMUP_RETRY_DELAY_MS: ${WEBSHOP_IMAGE_INDEX_WARMUP_RETRY_DELAY_MS:-15000}
-      WEBSHOP_UPLOAD_PAR_URL: ${WEBSHOP_UPLOAD_PAR_URL:-}
-      WEBSHOP_UPLOAD_OBJECT_PREFIX: ${WEBSHOP_UPLOAD_OBJECT_PREFIX:-webshop-uploads}
       PG_AI_PROFILE_AUTO_SETUP: ${PG_AI_PROFILE_AUTO_SETUP:-true}
       OCI_AUTH_TYPE: ${OCI_AUTH_TYPE:-api_key}
       OCI_GENAI_MODEL: ${OCI_GENAI_MODEL:-cohere.command-a-03-2025}

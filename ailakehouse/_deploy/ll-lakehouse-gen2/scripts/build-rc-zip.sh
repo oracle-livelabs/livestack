@@ -4,22 +4,11 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
 ZIP_PATH="${1:-}"
-UPLOAD_ARCHIVE="${UPLOAD_ARCHIVE:-true}"
-PAR_FILE="${PAR_FILE:-${PROJECT_ROOT}/.par}"
 
 if [[ -n "${ZIP_PATH}" && "${ZIP_PATH}" != /* ]]; then
   ZIP_PATH="${PROJECT_ROOT}/${ZIP_PATH}"
 fi
 
-if [[ "${UPLOAD_ARCHIVE}" != true && "${UPLOAD_ARCHIVE}" != false ]]; then
-  echo "UPLOAD_ARCHIVE must be true or false." >&2
-  exit 1
-fi
-
-if [[ "${UPLOAD_ARCHIVE}" == true && ! -f "${PAR_FILE}" ]]; then
-  echo "PAR file is required when UPLOAD_ARCHIVE=true: ${PAR_FILE}" >&2
-  exit 1
-fi
 #
 # `.env.example` is excluded from the generated archive, so it may contain real
 # URLs without affecting the packaged build output.
@@ -51,7 +40,6 @@ zip -qr "${TMP_ZIP}" . \
   -x './peakgear-release.zip' \
   -x './peakgear-release-*.zip' \
   -x './peakgear-host*.zip' \
-  -x './.par' \
   -x './build_dev.zip.bak-*' \
   -x './.git/*' \
   -x './.omx/*' \
@@ -138,10 +126,6 @@ python3 "${SCRIPT_DIR}/build-host-payload-zip.py" \
 ARCHIVE_SHA256="$(hash_file "${TMP_ZIP}")"
 ARCHIVE_NAME="peakgear-release.zip"
 ZIP_PATH="${ZIP_PATH:-${PROJECT_ROOT}/${ARCHIVE_NAME}}"
-if [[ "${UPLOAD_ARCHIVE}" == true && "$(basename "${ZIP_PATH}")" != "${ARCHIVE_NAME}" ]]; then
-  echo "Uploaded release archives must use the filename ${ARCHIVE_NAME}." >&2
-  exit 1
-fi
 mv "${TMP_ZIP}" "${ZIP_PATH}"
 HOST_ZIP_PATH="${PROJECT_ROOT}/peakgear-host.zip"
 mv "${TMP_HOST_DIR}/peakgear-host.zip" "${HOST_ZIP_PATH}"
@@ -155,14 +139,7 @@ echo "build_archive_object_name=${ARCHIVE_NAME}"
 echo "Built ${HOST_ZIP_PATH}"
 ls -lh "${HOST_ZIP_PATH}"
 
-ZIP_NAME="$(basename "${ZIP_PATH}")"
-if [[ "${UPLOAD_ARCHIVE}" == true ]]; then
-  echo "Uploading ${ZIP_NAME} to Object Storage..."
-  python3 "${SCRIPT_DIR}/object_storage_upload.py" "${ZIP_PATH}" --par-file "${PAR_FILE}"
-  echo "Uploading peakgear-host.zip to Object Storage..."
-  python3 "${SCRIPT_DIR}/object_storage_upload.py" "${HOST_ZIP_PATH}" --par-file "${PAR_FILE}"
-  echo "Set BUILD_ARCHIVE_URL to the read-only object URL for ${ZIP_NAME} when building the custom image."
-  echo "Set release_zip_url to the read-only object URL for peakgear-host.zip when provisioning VMs."
-else
-  echo "Skipped both Object Storage uploads because UPLOAD_ARCHIVE=false."
-fi
+echo "Manual upload required to Object Storage bucket livelabsfiles, folder peakgear/ai-lh-data/:"
+echo "  ${ZIP_PATH} -> peakgear/ai-lh-data/peakgear-release.zip"
+echo "  ${HOST_ZIP_PATH} -> peakgear/ai-lh-data/peakgear-host.zip"
+echo "Use the corresponding read-only object URLs for BUILD_ARCHIVE_URL and release_zip_url."

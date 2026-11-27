@@ -93,7 +93,9 @@ trap on_error ERR
 
 ## update
 progress 1 "Updating operating system"
-sudo dnf update -y
+# Keep the installed OCI tuning profile when its matching tuned update lags
+# behind the newest repository version.
+sudo dnf update -y --nobest
 
 ## set firewall rules
 progress 2 "Configuring firewall"
@@ -101,7 +103,7 @@ sudo firewall-cmd --permanent --add-port=1522/tcp #NetSuite source database
 sudo firewall-cmd --permanent --add-port=1525/tcp #Gravitino Iceberg REST API
 sudo firewall-cmd --permanent --add-port=8501/tcp #GoldenGate CDC HTTP
 sudo firewall-cmd --permanent --add-port=8502/tcp #GoldenGate CDC HTTPS
-sudo firewall-cmd --permanent --add-port=8503/tcp #Streamlit
+sudo firewall-cmd --permanent --add-port=8503/tcp #Loyalty MySQL
 sudo firewall-cmd --permanent --add-port=8505/tcp #Streamlit
 sudo firewall-cmd --permanent --add-port=5500/tcp #EM
 sudo firewall-cmd --permanent --add-port=5501/tcp #EM
@@ -127,10 +129,17 @@ sudo /usr/libexec/oci-growfs -y
 progress 4 "Installing system packages"
 sudo dnf install -y oracle-epel-release-el9
 sudo dnf config-manager --enable ol9_developer_EPEL
-sudo dnf install -y container-tools sqlcl jdk-26-headless git openssl
+sudo dnf install -y oracle-java-jdk-release-el9
+# SQLcl is distributed through Oracle Software, which is not enabled on a
+# stock Oracle Linux image. Keep this repository scoped to this transaction.
+sudo dnf install -y \
+  --repofrompath=peakgear-oracle-software,https://yum.oracle.com/repo/OracleLinux/OL9/oracle/software/x86_64/ \
+  --setopt=peakgear-oracle-software.gpgcheck=1 \
+  --setopt=peakgear-oracle-software.gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-oracle \
+  container-tools sqlcl jdk-26-headless git openssl
 sudo dnf install -y podman-compose
 sudo dnf -y install oraclelinux-developer-release-el9
-sudo dnf -y install python39-oci-cli python3.9-pip
+sudo dnf -y --enablerepo=ol9_developer install python39-oci-cli python3.9-pip
 # sudo dnf -y install maven
 
 progress 5 "Installing Python tools"
@@ -221,7 +230,8 @@ mkdir -p /home/opc/.config/systemd/user
 
 progress 9 "Downloading and extracting application files"
 curl --fail --silent --show-error --output /home/opc/build_dev.zip "${BUILD_ARCHIVE_URL}"
-unzip -oq /home/opc/build_dev.zip -d /home/opc/
+# The release includes an installer too; keep the script currently running.
+unzip -oq /home/opc/build_dev.zip -x '*inst.sh' -d /home/opc/
 rm /home/opc/build_dev.zip
 
 # AI Hub is selected when this custom image is built. Persist only this
@@ -303,11 +313,11 @@ progress 11 "Caching offline container images and dependencies"
     -v /home/opc/ingestion:/workspace/app:z \
     -v ingestion_app-node-modules:/workspace/app/node_modules \
     -v ingestion_frontend-node-modules:/workspace/app/frontend/node_modules \
-    docker.io/node:24-bookworm sh -lc 'npm ci --include=dev && cd frontend && npm ci --include=dev'
+    docker.io/node:26-bookworm sh -lc 'npm ci --include=dev && cd frontend && npm ci --include=dev'
   podman run --rm --workdir /workspace/generator \
     -v /home/opc/ingestion/signal-generator:/workspace/generator:z \
     -v ingestion_signal-generator-node-modules:/workspace/generator/node_modules \
-    docker.io/node:24-bookworm sh -lc 'npm ci --omit=dev'
+    docker.io/node:26-bookworm sh -lc 'npm ci --omit=dev'
 )
 
 progress 12 "Installing first-boot release service"

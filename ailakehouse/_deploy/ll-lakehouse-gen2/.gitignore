@@ -13,12 +13,13 @@
 *.sso
 
 # Local/generated distribution artifacts.
+__pycache__/
+*.pyc
 /build_dev.zip
 /install-peakgear.zip
 /peakgear-release.zip
 /peakgear-host-*.zip
 /peakgear-host.zip
-/.par
 /output/
 # Oracle JET runtime is copied from the locked npm package by the frontend prebuild.
 # Keep vendor source out of the Gen2 host payload; the VM image retains npm dependencies.

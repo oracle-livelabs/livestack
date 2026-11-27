@@ -2,6 +2,8 @@
 
 Use the existing procedure owner for operational steps, then inspect the current implementation and the narrow tests that protect it. The private source indexes provide more detailed navigation.
 
+For attendee access, link to the [PeakGear workshop on Oracle LiveLabs](https://livelabs.oracle.com/ords/r/dbpm/livelabs/view-workshop?wid=4420). Use the [learner introduction](../../../../introduction/introduction.md) for the demo paths, timings, and scene descriptions.
+
 | Topic | Procedure or design authority | Implementation | Regression evidence |
 | --- | --- | --- | --- |
 | Project overview and settings | [`README.md`](../../README.md) | `inst.sh`, `init/` | Focused tests under `tests/` |
