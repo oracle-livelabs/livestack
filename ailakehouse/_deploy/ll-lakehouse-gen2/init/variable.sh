@@ -224,11 +224,7 @@ if [[ ${#BUCKET_NAME} -le 5 || ${BUCKET_NAME} =~ '<html>' ]]; then
  export BUCKET_NAME="bucket_name"
 fi
 
-export OBJECT_NAMESPACE=$(curl -s -H "Authorization: Bearer Oracle" -L http://169.254.169.254/opc/v2/instance/metadata/object_namespace)
-
-if [[ ${#OBJECT_NAMESPACE} -le 5 || ${OBJECT_NAMESPACE} =~ '<html>' ]]; then
- export OBJECT_NAMESPACE="ocid567890"
-fi
+export_metadata_or_default "OBJECT_NAMESPACE" "object_namespace" "ocid567890"
 
 GRAVITINO_DEFAULT_S3_ENDPOINT=""
 if [[ -n "${OBJECT_NAMESPACE:-}" && -n "${REGION_IDENTIFIER:-}" && "${OBJECT_NAMESPACE}" != "ocid567890" ]]; then

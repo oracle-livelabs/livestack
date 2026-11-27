@@ -96,7 +96,8 @@ app.use('/api/source-catalogs', sourceCatalogsRoutes);
 // ── Health Check ───────────────────────────────────────────
 app.get('/api/bronze/source', (req, res) => {
   res.set('Cache-Control', 'no-store');
-  res.json({ url: process.env.BRONZE_DATA_PAR_URL || null });
+  const parUrl = process.env.BRONZE_DATA_PAR_URL;
+  res.json({ url: parUrl ? parUrl.replace(/\/o(?:\/bronze)?\/?$/, '/o/bronze/') : null });
 });
 
 app.get('/api/health', async (req, res) => {
